@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationEventsPolicy extends Entity implements Parsable {
     /**
-     * A list of applicable actions to be taken on sign-up.
-     */
-    private java.util.List<AuthenticationListener> onSignupStart;
-    /**
-     * Instantiates a new authenticationEventsPolicy and sets the default values.
+     * Instantiates a new AuthenticationEventsPolicy and sets the default values.
      */
     public AuthenticationEventsPolicy() {
         super();
@@ -21,7 +17,7 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationEventsPolicy
+     * @return a AuthenticationEventsPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationEventsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the onSignupStart property value. A list of applicable actions to be taken on sign-up.
-     * @return a authenticationListener
+     * @return a java.util.List<AuthenticationListener>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationListener> getOnSignupStart() {
-        return this.onSignupStart;
+        return this.BackingStore.get("onSignupStart");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      * @param value Value to set for the onSignupStart property.
      */
     public void setOnSignupStart(@jakarta.annotation.Nullable final java.util.List<AuthenticationListener> value) {
-        this.onSignupStart = value;
+        this.BackingStore.set("onSignupStart", value);
     }
 }

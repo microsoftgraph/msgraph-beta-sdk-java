@@ -4,50 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsable {
+public class DetectedSensitiveContentBase implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The confidence property
-     */
-    private Integer confidence;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The recommendedConfidence property
-     */
-    private Integer recommendedConfidence;
-    /**
-     * The uniqueCount property
-     */
-    private Integer uniqueCount;
-    /**
-     * Instantiates a new detectedSensitiveContentBase and sets the default values.
+     * Instantiates a new DetectedSensitiveContentBase and sets the default values.
      */
     public DetectedSensitiveContentBase() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectedSensitiveContentBase
+     * @return a DetectedSensitiveContentBase
      */
     @jakarta.annotation.Nonnull
     public static DetectedSensitiveContentBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,28 +44,41 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         return new DetectedSensitiveContentBase();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
-        return this.confidence;
+        return this.BackingStore.get("confidence");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -108,31 +101,31 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the recommendedConfidence property value. The recommendedConfidence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRecommendedConfidence() {
-        return this.recommendedConfidence;
+        return this.BackingStore.get("recommendedConfidence");
     }
     /**
      * Gets the uniqueCount property value. The uniqueCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUniqueCount() {
-        return this.uniqueCount;
+        return this.BackingStore.get("uniqueCount");
     }
     /**
      * Serializes information the current object
@@ -149,52 +142,60 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the confidence property value. The confidence property
      * @param value Value to set for the confidence property.
      */
     public void setConfidence(@jakarta.annotation.Nullable final Integer value) {
-        this.confidence = value;
+        this.BackingStore.set("confidence", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the recommendedConfidence property value. The recommendedConfidence property
      * @param value Value to set for the recommendedConfidence property.
      */
     public void setRecommendedConfidence(@jakarta.annotation.Nullable final Integer value) {
-        this.recommendedConfidence = value;
+        this.BackingStore.set("recommendedConfidence", value);
     }
     /**
      * Sets the uniqueCount property value. The uniqueCount property
      * @param value Value to set for the uniqueCount property.
      */
     public void setUniqueCount(@jakarta.annotation.Nullable final Integer value) {
-        this.uniqueCount = value;
+        this.BackingStore.set("uniqueCount", value);
     }
 }

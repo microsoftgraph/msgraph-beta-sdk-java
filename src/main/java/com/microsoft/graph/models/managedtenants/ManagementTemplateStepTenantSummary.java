@@ -11,67 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateStepTenantSummary extends Entity implements Parsable {
     /**
-     * The assignedTenantsCount property
-     */
-    private Integer assignedTenantsCount;
-    /**
-     * The compliantTenantsCount property
-     */
-    private Integer compliantTenantsCount;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The dismissedTenantsCount property
-     */
-    private Integer dismissedTenantsCount;
-    /**
-     * The ineligibleTenantsCount property
-     */
-    private Integer ineligibleTenantsCount;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The managementTemplateCollectionDisplayName property
-     */
-    private String managementTemplateCollectionDisplayName;
-    /**
-     * The managementTemplateCollectionId property
-     */
-    private String managementTemplateCollectionId;
-    /**
-     * The managementTemplateDisplayName property
-     */
-    private String managementTemplateDisplayName;
-    /**
-     * The managementTemplateId property
-     */
-    private String managementTemplateId;
-    /**
-     * The managementTemplateStepDisplayName property
-     */
-    private String managementTemplateStepDisplayName;
-    /**
-     * The managementTemplateStepId property
-     */
-    private String managementTemplateStepId;
-    /**
-     * The notCompliantTenantsCount property
-     */
-    private Integer notCompliantTenantsCount;
-    /**
-     * Instantiates a new managementTemplateStepTenantSummary and sets the default values.
+     * Instantiates a new ManagementTemplateStepTenantSummary and sets the default values.
      */
     public ManagementTemplateStepTenantSummary() {
         super();
@@ -79,7 +19,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStepTenantSummary
+     * @return a ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,27 +28,27 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the assignedTenantsCount property value. The assignedTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedTenantsCount() {
-        return this.assignedTenantsCount;
+        return this.BackingStore.get("assignedTenantsCount");
     }
     /**
      * Gets the compliantTenantsCount property value. The compliantTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantTenantsCount() {
-        return this.compliantTenantsCount;
+        return this.BackingStore.get("compliantTenantsCount");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.BackingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -116,15 +56,15 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the dismissedTenantsCount property value. The dismissedTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDismissedTenantsCount() {
-        return this.dismissedTenantsCount;
+        return this.BackingStore.get("dismissedTenantsCount");
     }
     /**
      * The deserialization information for the current model
@@ -152,19 +92,19 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the ineligibleTenantsCount property value. The ineligibleTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleTenantsCount() {
-        return this.ineligibleTenantsCount;
+        return this.BackingStore.get("ineligibleTenantsCount");
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.BackingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -172,63 +112,63 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.BackingStore.get("lastActionDateTime");
     }
     /**
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
-        return this.managementTemplateCollectionDisplayName;
+        return this.BackingStore.get("managementTemplateCollectionDisplayName");
     }
     /**
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
-        return this.managementTemplateCollectionId;
+        return this.BackingStore.get("managementTemplateCollectionId");
     }
     /**
      * Gets the managementTemplateDisplayName property value. The managementTemplateDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateDisplayName() {
-        return this.managementTemplateDisplayName;
+        return this.BackingStore.get("managementTemplateDisplayName");
     }
     /**
      * Gets the managementTemplateId property value. The managementTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
-        return this.managementTemplateId;
+        return this.BackingStore.get("managementTemplateId");
     }
     /**
      * Gets the managementTemplateStepDisplayName property value. The managementTemplateStepDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateStepDisplayName() {
-        return this.managementTemplateStepDisplayName;
+        return this.BackingStore.get("managementTemplateStepDisplayName");
     }
     /**
      * Gets the managementTemplateStepId property value. The managementTemplateStepId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateStepId() {
-        return this.managementTemplateStepId;
+        return this.BackingStore.get("managementTemplateStepId");
     }
     /**
      * Gets the notCompliantTenantsCount property value. The notCompliantTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotCompliantTenantsCount() {
-        return this.notCompliantTenantsCount;
+        return this.BackingStore.get("notCompliantTenantsCount");
     }
     /**
      * Serializes information the current object
@@ -258,104 +198,104 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the assignedTenantsCount property.
      */
     public void setAssignedTenantsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.assignedTenantsCount = value;
+        this.BackingStore.set("assignedTenantsCount", value);
     }
     /**
      * Sets the compliantTenantsCount property value. The compliantTenantsCount property
      * @param value Value to set for the compliantTenantsCount property.
      */
     public void setCompliantTenantsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantTenantsCount = value;
+        this.BackingStore.set("compliantTenantsCount", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.BackingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the dismissedTenantsCount property value. The dismissedTenantsCount property
      * @param value Value to set for the dismissedTenantsCount property.
      */
     public void setDismissedTenantsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.dismissedTenantsCount = value;
+        this.BackingStore.set("dismissedTenantsCount", value);
     }
     /**
      * Sets the ineligibleTenantsCount property value. The ineligibleTenantsCount property
      * @param value Value to set for the ineligibleTenantsCount property.
      */
     public void setIneligibleTenantsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ineligibleTenantsCount = value;
+        this.BackingStore.set("ineligibleTenantsCount", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.BackingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.BackingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
      * @param value Value to set for the managementTemplateCollectionDisplayName property.
      */
     public void setManagementTemplateCollectionDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateCollectionDisplayName = value;
+        this.BackingStore.set("managementTemplateCollectionDisplayName", value);
     }
     /**
      * Sets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
      * @param value Value to set for the managementTemplateCollectionId property.
      */
     public void setManagementTemplateCollectionId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateCollectionId = value;
+        this.BackingStore.set("managementTemplateCollectionId", value);
     }
     /**
      * Sets the managementTemplateDisplayName property value. The managementTemplateDisplayName property
      * @param value Value to set for the managementTemplateDisplayName property.
      */
     public void setManagementTemplateDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateDisplayName = value;
+        this.BackingStore.set("managementTemplateDisplayName", value);
     }
     /**
      * Sets the managementTemplateId property value. The managementTemplateId property
      * @param value Value to set for the managementTemplateId property.
      */
     public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateId = value;
+        this.BackingStore.set("managementTemplateId", value);
     }
     /**
      * Sets the managementTemplateStepDisplayName property value. The managementTemplateStepDisplayName property
      * @param value Value to set for the managementTemplateStepDisplayName property.
      */
     public void setManagementTemplateStepDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateStepDisplayName = value;
+        this.BackingStore.set("managementTemplateStepDisplayName", value);
     }
     /**
      * Sets the managementTemplateStepId property value. The managementTemplateStepId property
      * @param value Value to set for the managementTemplateStepId property.
      */
     public void setManagementTemplateStepId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateStepId = value;
+        this.BackingStore.set("managementTemplateStepId", value);
     }
     /**
      * Sets the notCompliantTenantsCount property value. The notCompliantTenantsCount property
      * @param value Value to set for the notCompliantTenantsCount property.
      */
     public void setNotCompliantTenantsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notCompliantTenantsCount = value;
+        this.BackingStore.set("notCompliantTenantsCount", value);
     }
 }

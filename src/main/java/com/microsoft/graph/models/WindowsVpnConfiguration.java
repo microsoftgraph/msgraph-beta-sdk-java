@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsVpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Connection name displayed to the user.
-     */
-    private String connectionName;
-    /**
-     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
-     */
-    private byte[] customXml;
-    /**
-     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<VpnServer> servers;
-    /**
-     * Instantiates a new windowsVpnConfiguration and sets the default values.
+     * Instantiates a new WindowsVpnConfiguration and sets the default values.
      */
     public WindowsVpnConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsVpnConfiguration
+     * @return a WindowsVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +39,19 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
-        return this.connectionName;
+        return this.BackingStore.get("connectionName");
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomXml() {
-        return this.customXml;
+        return this.BackingStore.get("customXml");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +67,11 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {
-        return this.servers;
+        return this.BackingStore.get("servers");
     }
     /**
      * Serializes information the current object
@@ -101,20 +89,20 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * @param value Value to set for the connectionName property.
      */
     public void setConnectionName(@jakarta.annotation.Nullable final String value) {
-        this.connectionName = value;
+        this.BackingStore.set("connectionName", value);
     }
     /**
      * Sets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
      * @param value Value to set for the customXml property.
      */
     public void setCustomXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.customXml = value;
+        this.BackingStore.set("customXml", value);
     }
     /**
      * Sets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the servers property.
      */
     public void setServers(@jakarta.annotation.Nullable final java.util.List<VpnServer> value) {
-        this.servers = value;
+        this.BackingStore.set("servers", value);
     }
 }

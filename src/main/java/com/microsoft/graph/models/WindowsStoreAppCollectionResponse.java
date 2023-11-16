@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsStoreAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsStoreApp> value;
-    /**
-     * Instantiates a new windowsStoreAppCollectionResponse and sets the default values.
+     * Instantiates a new WindowsStoreAppCollectionResponse and sets the default values.
      */
     public WindowsStoreAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsStoreAppCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsStoreAppCollectionResponse
+     * @return a WindowsStoreAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsStoreAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsStoreAppCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsStoreApp
+     * @return a java.util.List<WindowsStoreApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsStoreApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsStoreAppCollectionResponse extends BaseCollectionPaginationC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsStoreApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

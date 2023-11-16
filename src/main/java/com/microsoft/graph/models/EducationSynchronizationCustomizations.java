@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationCustomizations extends EducationSynchronizationCustomizationsBase implements Parsable {
     /**
-     * Customizations for School entities.
-     */
-    private EducationSynchronizationCustomization school;
-    /**
-     * Customizations for Section entities.
-     */
-    private EducationSynchronizationCustomization section;
-    /**
-     * Customizations for Student entities.
-     */
-    private EducationSynchronizationCustomization student;
-    /**
-     * Customizations for Student Enrollments.
-     */
-    private EducationSynchronizationCustomization studentEnrollment;
-    /**
-     * Customizations for Teacher entities.
-     */
-    private EducationSynchronizationCustomization teacher;
-    /**
-     * Customizations for Teacher Rosters.
-     */
-    private EducationSynchronizationCustomization teacherRoster;
-    /**
-     * Instantiates a new educationSynchronizationCustomizations and sets the default values.
+     * Instantiates a new EducationSynchronizationCustomizations and sets the default values.
      */
     public EducationSynchronizationCustomizations() {
         super();
@@ -42,7 +18,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationCustomizations
+     * @return a EducationSynchronizationCustomizations
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationCustomizations createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +42,51 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the school property value. Customizations for School entities.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSchool() {
-        return this.school;
+        return this.BackingStore.get("school");
     }
     /**
      * Gets the section property value. Customizations for Section entities.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSection() {
-        return this.section;
+        return this.BackingStore.get("section");
     }
     /**
      * Gets the student property value. Customizations for Student entities.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudent() {
-        return this.student;
+        return this.BackingStore.get("student");
     }
     /**
      * Gets the studentEnrollment property value. Customizations for Student Enrollments.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudentEnrollment() {
-        return this.studentEnrollment;
+        return this.BackingStore.get("studentEnrollment");
     }
     /**
      * Gets the teacher property value. Customizations for Teacher entities.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacher() {
-        return this.teacher;
+        return this.BackingStore.get("teacher");
     }
     /**
      * Gets the teacherRoster property value. Customizations for Teacher Rosters.
-     * @return a educationSynchronizationCustomization
+     * @return a EducationSynchronizationCustomization
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacherRoster() {
-        return this.teacherRoster;
+        return this.BackingStore.get("teacherRoster");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the school property.
      */
     public void setSchool(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.school = value;
+        this.BackingStore.set("school", value);
     }
     /**
      * Sets the section property value. Customizations for Section entities.
      * @param value Value to set for the section property.
      */
     public void setSection(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.section = value;
+        this.BackingStore.set("section", value);
     }
     /**
      * Sets the student property value. Customizations for Student entities.
      * @param value Value to set for the student property.
      */
     public void setStudent(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.student = value;
+        this.BackingStore.set("student", value);
     }
     /**
      * Sets the studentEnrollment property value. Customizations for Student Enrollments.
      * @param value Value to set for the studentEnrollment property.
      */
     public void setStudentEnrollment(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.studentEnrollment = value;
+        this.BackingStore.set("studentEnrollment", value);
     }
     /**
      * Sets the teacher property value. Customizations for Teacher entities.
      * @param value Value to set for the teacher property.
      */
     public void setTeacher(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.teacher = value;
+        this.BackingStore.set("teacher", value);
     }
     /**
      * Sets the teacherRoster property value. Customizations for Teacher Rosters.
      * @param value Value to set for the teacherRoster property.
      */
     public void setTeacherRoster(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
-        this.teacherRoster = value;
+        this.BackingStore.set("teacherRoster", value);
     }
 }

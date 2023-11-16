@@ -4,61 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
+public class ParentLabelDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The color that the user interface should display for the label, if configured.
-     */
-    private String color;
-    /**
-     * The admin-defined description for the label.
-     */
-    private String description;
-    /**
-     * The label ID is a globally unique identifier (GUID).
-     */
-    private String id;
-    /**
-     * Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
-     */
-    private Boolean isActive;
-    /**
-     * The plaintext name of the label.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The parent property
-     */
-    private ParentLabelDetails parent;
-    /**
-     * The sensitivity value of the label, where lower is less sensitive.
-     */
-    private Integer sensitivity;
-    /**
-     * The tooltip that should be displayed for the label in a user interface.
-     */
-    private String tooltip;
-    /**
-     * Instantiates a new parentLabelDetails and sets the default values.
+     * Instantiates a new ParentLabelDetails and sets the default values.
      */
     public ParentLabelDetails() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a parentLabelDetails
+     * @return a ParentLabelDetails
      */
     @jakarta.annotation.Nonnull
     public static ParentLabelDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,28 +41,41 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return new ParentLabelDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the color property value. The color that the user interface should display for the label, if configured.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.BackingStore.get("color");
     }
     /**
      * Gets the description property value. The admin-defined description for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -116,59 +97,59 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The label ID is a globally unique identifier (GUID).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the name property value. The plaintext name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the parent property value. The parent property
-     * @return a parentLabelDetails
+     * @return a ParentLabelDetails
      */
     @jakarta.annotation.Nullable
     public ParentLabelDetails getParent() {
-        return this.parent;
+        return this.BackingStore.get("parent");
     }
     /**
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSensitivity() {
-        return this.sensitivity;
+        return this.BackingStore.get("sensitivity");
     }
     /**
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a user interface.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTooltip() {
-        return this.tooltip;
+        return this.BackingStore.get("tooltip");
     }
     /**
      * Serializes information the current object
@@ -188,73 +169,81 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the color property value. The color that the user interface should display for the label, if configured.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.BackingStore.set("color", value);
     }
     /**
      * Sets the description property value. The admin-defined description for the label.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the id property value. The label ID is a globally unique identifier (GUID).
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the name property value. The plaintext name of the label.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the parent property value. The parent property
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final ParentLabelDetails value) {
-        this.parent = value;
+        this.BackingStore.set("parent", value);
     }
     /**
      * Sets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Integer value) {
-        this.sensitivity = value;
+        this.BackingStore.set("sensitivity", value);
     }
     /**
      * Sets the tooltip property value. The tooltip that should be displayed for the label in a user interface.
      * @param value Value to set for the tooltip property.
      */
     public void setTooltip(@jakarta.annotation.Nullable final String value) {
-        this.tooltip = value;
+        this.BackingStore.set("tooltip", value);
     }
 }

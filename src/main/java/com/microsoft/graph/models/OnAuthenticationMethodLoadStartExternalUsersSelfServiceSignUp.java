@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp extends OnAuthenticationMethodLoadStartHandler implements Parsable {
     /**
-     * The identityProviders property
-     */
-    private java.util.List<IdentityProviderBase> identityProviders;
-    /**
-     * Instantiates a new onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp and sets the default values.
+     * Instantiates a new OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp and sets the default values.
      */
     public OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp() {
         super();
@@ -22,7 +18,7 @@ public class OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp
+     * @return a OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp
      */
     @jakarta.annotation.Nonnull
     public static OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp exten
     }
     /**
      * Gets the identityProviders property value. The identityProviders property
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
-        return this.identityProviders;
+        return this.BackingStore.get("identityProviders");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp exten
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.identityProviders = value;
+        this.BackingStore.set("identityProviders", value);
     }
 }

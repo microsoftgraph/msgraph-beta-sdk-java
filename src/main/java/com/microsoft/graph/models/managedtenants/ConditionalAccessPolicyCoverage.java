@@ -11,23 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /**
-     * The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
-     */
-    private String conditionalAccessPolicyState;
-    /**
-     * The date and time the conditional access policy was last modified. Required. Read-only.
-     */
-    private OffsetDateTime latestPolicyModifiedDateTime;
-    /**
-     * A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
-     */
-    private Boolean requiresDeviceCompliance;
-    /**
-     * The display name for the managed tenant. Required. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * Instantiates a new conditionalAccessPolicyCoverage and sets the default values.
+     * Instantiates a new ConditionalAccessPolicyCoverage and sets the default values.
      */
     public ConditionalAccessPolicyCoverage() {
         super();
@@ -35,7 +19,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessPolicyCoverage
+     * @return a ConditionalAccessPolicyCoverage
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicyCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +28,11 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * Gets the conditionalAccessPolicyState property value. The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConditionalAccessPolicyState() {
-        return this.conditionalAccessPolicyState;
+        return this.BackingStore.get("conditionalAccessPolicyState");
     }
     /**
      * The deserialization information for the current model
@@ -69,23 +53,23 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLatestPolicyModifiedDateTime() {
-        return this.latestPolicyModifiedDateTime;
+        return this.BackingStore.get("latestPolicyModifiedDateTime");
     }
     /**
      * Gets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresDeviceCompliance() {
-        return this.requiresDeviceCompliance;
+        return this.BackingStore.get("requiresDeviceCompliance");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.BackingStore.get("tenantDisplayName");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the conditionalAccessPolicyState property.
      */
     public void setConditionalAccessPolicyState(@jakarta.annotation.Nullable final String value) {
-        this.conditionalAccessPolicyState = value;
+        this.BackingStore.set("conditionalAccessPolicyState", value);
     }
     /**
      * Sets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
      * @param value Value to set for the latestPolicyModifiedDateTime property.
      */
     public void setLatestPolicyModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.latestPolicyModifiedDateTime = value;
+        this.BackingStore.set("latestPolicyModifiedDateTime", value);
     }
     /**
      * Sets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
      * @param value Value to set for the requiresDeviceCompliance property.
      */
     public void setRequiresDeviceCompliance(@jakarta.annotation.Nullable final Boolean value) {
-        this.requiresDeviceCompliance = value;
+        this.BackingStore.set("requiresDeviceCompliance", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.BackingStore.set("tenantDisplayName", value);
     }
 }

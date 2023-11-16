@@ -14,31 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     */
-    private EnumSet<EnrollmentNotificationBrandingOptions> brandingOptions;
-    /**
-     * DefaultLocale for the Enrollment Notification
-     */
-    private String defaultLocale;
-    /**
-     * Notification Message Template Id
-     */
-    private UUID notificationMessageTemplateId;
-    /**
-     * The list of notification data -
-     */
-    private java.util.List<String> notificationTemplates;
-    /**
-     * This enum indicates the platform type for which the enrollment restriction applies.
-     */
-    private EnrollmentRestrictionPlatformType platformType;
-    /**
-     * This enum indicates the Template type for which the enrollment notification applies.
-     */
-    private EnrollmentNotificationTemplateType templateType;
-    /**
-     * Instantiates a new deviceEnrollmentNotificationConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentNotificationConfiguration and sets the default values.
      */
     public DeviceEnrollmentNotificationConfiguration() {
         super();
@@ -47,7 +23,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentNotificationConfiguration
+     * @return a DeviceEnrollmentNotificationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentNotificationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,19 +32,19 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     * @return a enrollmentNotificationBrandingOptions
+     * @return a EnumSet<EnrollmentNotificationBrandingOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EnrollmentNotificationBrandingOptions> getBrandingOptions() {
-        return this.brandingOptions;
+        return this.BackingStore.get("brandingOptions");
     }
     /**
      * Gets the defaultLocale property value. DefaultLocale for the Enrollment Notification
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLocale() {
-        return this.defaultLocale;
+        return this.BackingStore.get("defaultLocale");
     }
     /**
      * The deserialization information for the current model
@@ -91,31 +67,31 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      */
     @jakarta.annotation.Nullable
     public UUID getNotificationMessageTemplateId() {
-        return this.notificationMessageTemplateId;
+        return this.BackingStore.get("notificationMessageTemplateId");
     }
     /**
      * Gets the notificationTemplates property value. The list of notification data -
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationTemplates() {
-        return this.notificationTemplates;
+        return this.BackingStore.get("notificationTemplates");
     }
     /**
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
-     * @return a enrollmentRestrictionPlatformType
+     * @return a EnrollmentRestrictionPlatformType
      */
     @jakarta.annotation.Nullable
     public EnrollmentRestrictionPlatformType getPlatformType() {
-        return this.platformType;
+        return this.BackingStore.get("platformType");
     }
     /**
      * Gets the templateType property value. This enum indicates the Template type for which the enrollment notification applies.
-     * @return a enrollmentNotificationTemplateType
+     * @return a EnrollmentNotificationTemplateType
      */
     @jakarta.annotation.Nullable
     public EnrollmentNotificationTemplateType getTemplateType() {
-        return this.templateType;
+        return this.BackingStore.get("templateType");
     }
     /**
      * Serializes information the current object
@@ -136,41 +112,41 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the brandingOptions property.
      */
     public void setBrandingOptions(@jakarta.annotation.Nullable final EnumSet<EnrollmentNotificationBrandingOptions> value) {
-        this.brandingOptions = value;
+        this.BackingStore.set("brandingOptions", value);
     }
     /**
      * Sets the defaultLocale property value. DefaultLocale for the Enrollment Notification
      * @param value Value to set for the defaultLocale property.
      */
     public void setDefaultLocale(@jakarta.annotation.Nullable final String value) {
-        this.defaultLocale = value;
+        this.BackingStore.set("defaultLocale", value);
     }
     /**
      * Sets the notificationMessageTemplateId property value. Notification Message Template Id
      * @param value Value to set for the notificationMessageTemplateId property.
      */
     public void setNotificationMessageTemplateId(@jakarta.annotation.Nullable final UUID value) {
-        this.notificationMessageTemplateId = value;
+        this.BackingStore.set("notificationMessageTemplateId", value);
     }
     /**
      * Sets the notificationTemplates property value. The list of notification data -
      * @param value Value to set for the notificationTemplates property.
      */
     public void setNotificationTemplates(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.notificationTemplates = value;
+        this.BackingStore.set("notificationTemplates", value);
     }
     /**
      * Sets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
      * @param value Value to set for the platformType property.
      */
     public void setPlatformType(@jakarta.annotation.Nullable final EnrollmentRestrictionPlatformType value) {
-        this.platformType = value;
+        this.BackingStore.set("platformType", value);
     }
     /**
      * Sets the templateType property value. This enum indicates the Template type for which the enrollment notification applies.
      * @param value Value to set for the templateType property.
      */
     public void setTemplateType(@jakarta.annotation.Nullable final EnrollmentNotificationTemplateType value) {
-        this.templateType = value;
+        this.BackingStore.set("templateType", value);
     }
 }

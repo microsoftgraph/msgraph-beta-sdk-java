@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,37 +15,22 @@ import java.util.Objects;
  * Count of devices with malware for each OS version
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OsVersionCount implements AdditionalDataHolder, Parsable {
+public class OsVersionCount implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Count of devices with malware for the OS version
-     */
-    private Integer deviceCount;
-    /**
-     * The Timestamp of the last update for the device count in UTC
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * OS version
-     */
-    private String osVersion;
-    /**
-     * Instantiates a new osVersionCount and sets the default values.
+     * Instantiates a new OsVersionCount and sets the default values.
      */
     public OsVersionCount() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a osVersionCount
+     * @return a OsVersionCount
      */
     @jakarta.annotation.Nonnull
     public static OsVersionCount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +38,33 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
         return new OsVersionCount();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deviceCount property value. Count of devices with malware for the OS version
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
-        return this.deviceCount;
+        return this.BackingStore.get("deviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -84,23 +85,23 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.BackingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the osVersion property value. OS version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Serializes information the current object
@@ -115,38 +116,46 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deviceCount property value. Count of devices with malware for the OS version
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCount = value;
+        this.BackingStore.set("deviceCount", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update for the device count in UTC
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.BackingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the osVersion property value. OS version
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
 }

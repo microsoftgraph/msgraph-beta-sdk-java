@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationProfileStatus extends Entity implements Parsable {
     /**
-     * Number of errors during synchronization.
-     */
-    private Long errorCount;
-    /**
-     * Date and time when most recent changes were observed in the profile.
-     */
-    private OffsetDateTime lastActivityDateTime;
-    /**
-     * Date and time of the most recent successful synchronization.
-     */
-    private OffsetDateTime lastSynchronizationDateTime;
-    /**
-     * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
-     */
-    private EducationSynchronizationStatus status;
-    /**
-     * Status message for the synchronization stage of the current profile.
-     */
-    private String statusMessage;
-    /**
-     * Instantiates a new educationSynchronizationProfileStatus and sets the default values.
+     * Instantiates a new EducationSynchronizationProfileStatus and sets the default values.
      */
     public EducationSynchronizationProfileStatus() {
         super();
@@ -38,7 +18,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationProfileStatus
+     * @return a EducationSynchronizationProfileStatus
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationProfileStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,11 +27,11 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the errorCount property value. Number of errors during synchronization.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getErrorCount() {
-        return this.errorCount;
+        return this.BackingStore.get("errorCount");
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +53,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivityDateTime() {
-        return this.lastActivityDateTime;
+        return this.BackingStore.get("lastActivityDateTime");
     }
     /**
      * Gets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
@@ -81,23 +61,23 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSynchronizationDateTime() {
-        return this.lastSynchronizationDateTime;
+        return this.BackingStore.get("lastSynchronizationDateTime");
     }
     /**
      * Gets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
-     * @return a educationSynchronizationStatus
+     * @return a EducationSynchronizationStatus
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the statusMessage property value. Status message for the synchronization stage of the current profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusMessage() {
-        return this.statusMessage;
+        return this.BackingStore.get("statusMessage");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Long value) {
-        this.errorCount = value;
+        this.BackingStore.set("errorCount", value);
     }
     /**
      * Sets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @param value Value to set for the lastActivityDateTime property.
      */
     public void setLastActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActivityDateTime = value;
+        this.BackingStore.set("lastActivityDateTime", value);
     }
     /**
      * Sets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @param value Value to set for the lastSynchronizationDateTime property.
      */
     public void setLastSynchronizationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSynchronizationDateTime = value;
+        this.BackingStore.set("lastSynchronizationDateTime", value);
     }
     /**
      * Sets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationSynchronizationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @param value Value to set for the statusMessage property.
      */
     public void setStatusMessage(@jakarta.annotation.Nullable final String value) {
-        this.statusMessage = value;
+        this.BackingStore.set("statusMessage", value);
     }
 }

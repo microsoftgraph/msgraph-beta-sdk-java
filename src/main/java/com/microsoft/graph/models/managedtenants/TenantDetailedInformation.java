@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantDetailedInformation extends Entity implements Parsable {
     /**
-     * The city where the managed tenant is located. Optional. Read-only.
-     */
-    private String city;
-    /**
-     * The code for the country where the managed tenant is located. Optional. Read-only.
-     */
-    private String countryCode;
-    /**
-     * The name for the country where the managed tenant is located. Optional. Read-only.
-     */
-    private String countryName;
-    /**
-     * The default domain name for the managed tenant. Optional. Read-only.
-     */
-    private String defaultDomainName;
-    /**
-     * The display name for the managed tenant.
-     */
-    private String displayName;
-    /**
-     * The business industry associated with the managed tenant. Optional. Read-only.
-     */
-    private String industryName;
-    /**
-     * The region where the managed tenant is located. Optional. Read-only.
-     */
-    private String region;
-    /**
-     * The business segment associated with the managed tenant. Optional. Read-only.
-     */
-    private String segmentName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant.
-     */
-    private String tenantId;
-    /**
-     * The vertical associated with the managed tenant. Optional. Read-only.
-     */
-    private String verticalName;
-    /**
-     * Instantiates a new tenantDetailedInformation and sets the default values.
+     * Instantiates a new TenantDetailedInformation and sets the default values.
      */
     public TenantDetailedInformation() {
         super();
@@ -58,7 +18,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantDetailedInformation
+     * @return a TenantDetailedInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantDetailedInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,43 +27,43 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the city property value. The city where the managed tenant is located. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
-        return this.city;
+        return this.BackingStore.get("city");
     }
     /**
      * Gets the countryCode property value. The code for the country where the managed tenant is located. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryCode() {
-        return this.countryCode;
+        return this.BackingStore.get("countryCode");
     }
     /**
      * Gets the countryName property value. The name for the country where the managed tenant is located. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryName() {
-        return this.countryName;
+        return this.BackingStore.get("countryName");
     }
     /**
      * Gets the defaultDomainName property value. The default domain name for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
-        return this.defaultDomainName;
+        return this.BackingStore.get("defaultDomainName");
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -126,43 +86,43 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIndustryName() {
-        return this.industryName;
+        return this.BackingStore.get("industryName");
     }
     /**
      * Gets the region property value. The region where the managed tenant is located. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
-        return this.region;
+        return this.BackingStore.get("region");
     }
     /**
      * Gets the segmentName property value. The business segment associated with the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSegmentName() {
-        return this.segmentName;
+        return this.BackingStore.get("segmentName");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the verticalName property value. The vertical associated with the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVerticalName() {
-        return this.verticalName;
+        return this.BackingStore.get("verticalName");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the city property.
      */
     public void setCity(@jakarta.annotation.Nullable final String value) {
-        this.city = value;
+        this.BackingStore.set("city", value);
     }
     /**
      * Sets the countryCode property value. The code for the country where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the countryCode property.
      */
     public void setCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.countryCode = value;
+        this.BackingStore.set("countryCode", value);
     }
     /**
      * Sets the countryName property value. The name for the country where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the countryName property.
      */
     public void setCountryName(@jakarta.annotation.Nullable final String value) {
-        this.countryName = value;
+        this.BackingStore.set("countryName", value);
     }
     /**
      * Sets the defaultDomainName property value. The default domain name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
-        this.defaultDomainName = value;
+        this.BackingStore.set("defaultDomainName", value);
     }
     /**
      * Sets the displayName property value. The display name for the managed tenant.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the industryName property.
      */
     public void setIndustryName(@jakarta.annotation.Nullable final String value) {
-        this.industryName = value;
+        this.BackingStore.set("industryName", value);
     }
     /**
      * Sets the region property value. The region where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.region = value;
+        this.BackingStore.set("region", value);
     }
     /**
      * Sets the segmentName property value. The business segment associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the segmentName property.
      */
     public void setSegmentName(@jakarta.annotation.Nullable final String value) {
-        this.segmentName = value;
+        this.BackingStore.set("segmentName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the verticalName property value. The vertical associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the verticalName property.
      */
     public void setVerticalName(@jakarta.annotation.Nullable final String value) {
-        this.verticalName = value;
+        this.BackingStore.set("verticalName", value);
     }
 }

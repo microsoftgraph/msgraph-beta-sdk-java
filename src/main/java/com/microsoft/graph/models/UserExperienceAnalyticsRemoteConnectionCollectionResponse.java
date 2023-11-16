@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsRemoteConnectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsRemoteConnection> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsRemoteConnectionCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsRemoteConnectionCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsRemoteConnectionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsRemoteConnectionCollectionResponse extends B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsRemoteConnectionCollectionResponse
+     * @return a UserExperienceAnalyticsRemoteConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsRemoteConnectionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsRemoteConnectionCollectionResponse extends B
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsRemoteConnection
+     * @return a java.util.List<UserExperienceAnalyticsRemoteConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsRemoteConnection> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsRemoteConnectionCollectionResponse extends B
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsRemoteConnection> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

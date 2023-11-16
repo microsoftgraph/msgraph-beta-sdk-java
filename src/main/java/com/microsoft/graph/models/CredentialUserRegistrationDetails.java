@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationDetails extends Entity implements Parsable {
     /**
-     * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
-     */
-    private java.util.List<RegistrationAuthMethod> authMethods;
-    /**
-     * Indicates whether the user is ready to perform self-service password reset or MFA.
-     */
-    private Boolean isCapable;
-    /**
-     * Indicates whether the user enabled to perform self-service password reset.
-     */
-    private Boolean isEnabled;
-    /**
-     * Indicates whether the user is registered for MFA.
-     */
-    private Boolean isMfaRegistered;
-    /**
-     * Indicates whether the user has registered any authentication methods for self-service password reset.
-     */
-    private Boolean isRegistered;
-    /**
-     * Provides the user name of the corresponding user.
-     */
-    private String userDisplayName;
-    /**
-     * Provides the user principal name of the corresponding user.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new credentialUserRegistrationDetails and sets the default values.
+     * Instantiates a new CredentialUserRegistrationDetails and sets the default values.
      */
     public CredentialUserRegistrationDetails() {
         super();
@@ -45,7 +17,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationDetails
+     * @return a CredentialUserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +26,11 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
-     * @return a registrationAuthMethod
+     * @return a java.util.List<RegistrationAuthMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RegistrationAuthMethod> getAuthMethods() {
-        return this.authMethods;
+        return this.BackingStore.get("authMethods");
     }
     /**
      * The deserialization information for the current model
@@ -78,51 +50,51 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isCapable property value. Indicates whether the user is ready to perform self-service password reset or MFA.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCapable() {
-        return this.isCapable;
+        return this.BackingStore.get("isCapable");
     }
     /**
      * Gets the isEnabled property value. Indicates whether the user enabled to perform self-service password reset.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the isMfaRegistered property value. Indicates whether the user is registered for MFA.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaRegistered() {
-        return this.isMfaRegistered;
+        return this.BackingStore.get("isMfaRegistered");
     }
     /**
      * Gets the isRegistered property value. Indicates whether the user has registered any authentication methods for self-service password reset.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistered() {
-        return this.isRegistered;
+        return this.BackingStore.get("isRegistered");
     }
     /**
      * Gets the userDisplayName property value. Provides the user name of the corresponding user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.BackingStore.get("userDisplayName");
     }
     /**
      * Gets the userPrincipalName property value. Provides the user principal name of the corresponding user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
      * @param value Value to set for the authMethods property.
      */
     public void setAuthMethods(@jakarta.annotation.Nullable final java.util.List<RegistrationAuthMethod> value) {
-        this.authMethods = value;
+        this.BackingStore.set("authMethods", value);
     }
     /**
      * Sets the isCapable property value. Indicates whether the user is ready to perform self-service password reset or MFA.
      * @param value Value to set for the isCapable property.
      */
     public void setIsCapable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCapable = value;
+        this.BackingStore.set("isCapable", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the user enabled to perform self-service password reset.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the isMfaRegistered property value. Indicates whether the user is registered for MFA.
      * @param value Value to set for the isMfaRegistered property.
      */
     public void setIsMfaRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMfaRegistered = value;
+        this.BackingStore.set("isMfaRegistered", value);
     }
     /**
      * Sets the isRegistered property value. Indicates whether the user has registered any authentication methods for self-service password reset.
      * @param value Value to set for the isRegistered property.
      */
     public void setIsRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRegistered = value;
+        this.BackingStore.set("isRegistered", value);
     }
     /**
      * Sets the userDisplayName property value. Provides the user name of the corresponding user.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.BackingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userPrincipalName property value. Provides the user principal name of the corresponding user.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

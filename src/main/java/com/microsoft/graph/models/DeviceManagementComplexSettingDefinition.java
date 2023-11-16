@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplexSettingDefinition extends DeviceManagementSettingDefinition implements Parsable {
     /**
-     * The definitions of each property of the complex setting
-     */
-    private java.util.List<String> propertyDefinitionIds;
-    /**
-     * Instantiates a new deviceManagementComplexSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementComplexSettingDefinition and sets the default values.
      */
     public DeviceManagementComplexSettingDefinition() {
         super();
@@ -24,7 +20,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementComplexSettingDefinition
+     * @return a DeviceManagementComplexSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplexSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
     }
     /**
      * Gets the propertyDefinitionIds property value. The definitions of each property of the complex setting
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPropertyDefinitionIds() {
-        return this.propertyDefinitionIds;
+        return this.BackingStore.get("propertyDefinitionIds");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      * @param value Value to set for the propertyDefinitionIds property.
      */
     public void setPropertyDefinitionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.propertyDefinitionIds = value;
+        this.BackingStore.set("propertyDefinitionIds", value);
     }
 }

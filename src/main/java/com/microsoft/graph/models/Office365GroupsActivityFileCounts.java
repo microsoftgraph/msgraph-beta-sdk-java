@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityFileCounts extends Entity implements Parsable {
     /**
-     * The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
-     */
-    private Long active;
-    /**
-     * The date on which a number of files were active in the group's SharePoint site.
-     */
-    private LocalDate reportDate;
-    /**
-     * The number of days the report covers.
-     */
-    private String reportPeriod;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The total number of files in the group's SharePoint document library.
-     */
-    private Long total;
-    /**
-     * Instantiates a new office365GroupsActivityFileCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityFileCounts and sets the default values.
      */
     public Office365GroupsActivityFileCounts() {
         super();
@@ -38,7 +18,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityFileCounts
+     * @return a Office365GroupsActivityFileCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityFileCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,11 +27,11 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the active property value. The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getActive() {
-        return this.active;
+        return this.BackingStore.get("active");
     }
     /**
      * The deserialization information for the current model
@@ -73,15 +53,15 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
-        return this.reportDate;
+        return this.BackingStore.get("reportDate");
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
-        return this.reportPeriod;
+        return this.BackingStore.get("reportPeriod");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -89,15 +69,15 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.BackingStore.get("reportRefreshDate");
     }
     /**
      * Gets the total property value. The total number of files in the group's SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {
-        return this.total;
+        return this.BackingStore.get("total");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      * @param value Value to set for the active property.
      */
     public void setActive(@jakarta.annotation.Nullable final Long value) {
-        this.active = value;
+        this.BackingStore.set("active", value);
     }
     /**
      * Sets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
      * @param value Value to set for the reportDate property.
      */
     public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportDate = value;
+        this.BackingStore.set("reportDate", value);
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      */
     public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
-        this.reportPeriod = value;
+        this.BackingStore.set("reportPeriod", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.BackingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the total property value. The total number of files in the group's SharePoint document library.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Long value) {
-        this.total = value;
+        this.BackingStore.set("total", value);
     }
 }

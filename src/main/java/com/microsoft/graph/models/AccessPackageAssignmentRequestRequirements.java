@@ -4,73 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder, Parsable {
+public class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Answers that have already been provided.
-     */
-    private java.util.List<AccessPackageAnswer> existingAnswers;
-    /**
-     * Indicates whether a request must be approved by an approver.
-     */
-    private Boolean isApprovalRequired;
-    /**
-     * Indicates whether approval is required when a user tries to extend their access.
-     */
-    private Boolean isApprovalRequiredForExtension;
-    /**
-     * Indicates whether the requestor is allowed to set a custom schedule.
-     */
-    private Boolean isCustomAssignmentScheduleAllowed;
-    /**
-     * Indicates whether a requestor must supply justification when submitting an assignment request.
-     */
-    private Boolean isRequestorJustificationRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The description of the policy that the user is trying to request access using.
-     */
-    private String policyDescription;
-    /**
-     * The display name of the policy that the user is trying to request access using.
-     */
-    private String policyDisplayName;
-    /**
-     * The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
-     */
-    private String policyId;
-    /**
-     * Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
-     */
-    private java.util.List<AccessPackageQuestion> questions;
-    /**
-     * Schedule restrictions enforced, if any.
-     */
-    private RequestSchedule schedule;
-    /**
-     * The status of the process to process the verifiable credential, if any.
-     */
-    private VerifiableCredentialRequirementStatus verifiableCredentialRequirementStatus;
-    /**
-     * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestRequirements and sets the default values.
      */
     public AccessPackageAssignmentRequestRequirements() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequestRequirements
+     * @return a AccessPackageAssignmentRequestRequirements
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestRequirements createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,20 +34,33 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         return new AccessPackageAssignmentRequestRequirements();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the existingAnswers property value. Answers that have already been provided.
-     * @return a accessPackageAnswer
+     * @return a java.util.List<AccessPackageAnswer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswer> getExistingAnswers() {
-        return this.existingAnswers;
+        return this.BackingStore.get("existingAnswers");
     }
     /**
      * The deserialization information for the current model
@@ -116,91 +85,91 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether a request must be approved by an approver.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequired() {
-        return this.isApprovalRequired;
+        return this.BackingStore.get("isApprovalRequired");
     }
     /**
      * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required when a user tries to extend their access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForExtension() {
-        return this.isApprovalRequiredForExtension;
+        return this.BackingStore.get("isApprovalRequiredForExtension");
     }
     /**
      * Gets the isCustomAssignmentScheduleAllowed property value. Indicates whether the requestor is allowed to set a custom schedule.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomAssignmentScheduleAllowed() {
-        return this.isCustomAssignmentScheduleAllowed;
+        return this.BackingStore.get("isCustomAssignmentScheduleAllowed");
     }
     /**
      * Gets the isRequestorJustificationRequired property value. Indicates whether a requestor must supply justification when submitting an assignment request.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
-        return this.isRequestorJustificationRequired;
+        return this.BackingStore.get("isRequestorJustificationRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the policyDescription property value. The description of the policy that the user is trying to request access using.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyDescription() {
-        return this.policyDescription;
+        return this.BackingStore.get("policyDescription");
     }
     /**
      * Gets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyDisplayName() {
-        return this.policyDisplayName;
+        return this.BackingStore.get("policyDisplayName");
     }
     /**
      * Gets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
-        return this.policyId;
+        return this.BackingStore.get("policyId");
     }
     /**
      * Gets the questions property value. Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
-        return this.questions;
+        return this.BackingStore.get("questions");
     }
     /**
      * Gets the schedule property value. Schedule restrictions enforced, if any.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the verifiableCredentialRequirementStatus property value. The status of the process to process the verifiable credential, if any.
-     * @return a verifiableCredentialRequirementStatus
+     * @return a VerifiableCredentialRequirementStatus
      */
     @jakarta.annotation.Nullable
     public VerifiableCredentialRequirementStatus getVerifiableCredentialRequirementStatus() {
-        return this.verifiableCredentialRequirementStatus;
+        return this.BackingStore.get("verifiableCredentialRequirementStatus");
     }
     /**
      * Serializes information the current object
@@ -223,94 +192,102 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the existingAnswers property value. Answers that have already been provided.
      * @param value Value to set for the existingAnswers property.
      */
     public void setExistingAnswers(@jakarta.annotation.Nullable final java.util.List<AccessPackageAnswer> value) {
-        this.existingAnswers = value;
+        this.BackingStore.set("existingAnswers", value);
     }
     /**
      * Sets the isApprovalRequired property value. Indicates whether a request must be approved by an approver.
      * @param value Value to set for the isApprovalRequired property.
      */
     public void setIsApprovalRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequired = value;
+        this.BackingStore.set("isApprovalRequired", value);
     }
     /**
      * Sets the isApprovalRequiredForExtension property value. Indicates whether approval is required when a user tries to extend their access.
      * @param value Value to set for the isApprovalRequiredForExtension property.
      */
     public void setIsApprovalRequiredForExtension(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequiredForExtension = value;
+        this.BackingStore.set("isApprovalRequiredForExtension", value);
     }
     /**
      * Sets the isCustomAssignmentScheduleAllowed property value. Indicates whether the requestor is allowed to set a custom schedule.
      * @param value Value to set for the isCustomAssignmentScheduleAllowed property.
      */
     public void setIsCustomAssignmentScheduleAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCustomAssignmentScheduleAllowed = value;
+        this.BackingStore.set("isCustomAssignmentScheduleAllowed", value);
     }
     /**
      * Sets the isRequestorJustificationRequired property value. Indicates whether a requestor must supply justification when submitting an assignment request.
      * @param value Value to set for the isRequestorJustificationRequired property.
      */
     public void setIsRequestorJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequestorJustificationRequired = value;
+        this.BackingStore.set("isRequestorJustificationRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the policyDescription property value. The description of the policy that the user is trying to request access using.
      * @param value Value to set for the policyDescription property.
      */
     public void setPolicyDescription(@jakarta.annotation.Nullable final String value) {
-        this.policyDescription = value;
+        this.BackingStore.set("policyDescription", value);
     }
     /**
      * Sets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
      * @param value Value to set for the policyDisplayName property.
      */
     public void setPolicyDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.policyDisplayName = value;
+        this.BackingStore.set("policyDisplayName", value);
     }
     /**
      * Sets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.policyId = value;
+        this.BackingStore.set("policyId", value);
     }
     /**
      * Sets the questions property value. Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
      * @param value Value to set for the questions property.
      */
     public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
-        this.questions = value;
+        this.BackingStore.set("questions", value);
     }
     /**
      * Sets the schedule property value. Schedule restrictions enforced, if any.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the verifiableCredentialRequirementStatus property value. The status of the process to process the verifiable credential, if any.
      * @param value Value to set for the verifiableCredentialRequirementStatus property.
      */
     public void setVerifiableCredentialRequirementStatus(@jakarta.annotation.Nullable final VerifiableCredentialRequirementStatus value) {
-        this.verifiableCredentialRequirementStatus = value;
+        this.BackingStore.set("verifiableCredentialRequirementStatus", value);
     }
 }

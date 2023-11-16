@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Windows Network Isolation Policy
-     */
-    private WindowsNetworkIsolationPolicy windowsNetworkIsolationPolicy;
-    /**
-     * Instantiates a new windows10NetworkBoundaryConfiguration and sets the default values.
+     * Instantiates a new Windows10NetworkBoundaryConfiguration and sets the default values.
      */
     public Windows10NetworkBoundaryConfiguration() {
         super();
@@ -25,7 +21,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10NetworkBoundaryConfiguration
+     * @return a Windows10NetworkBoundaryConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10NetworkBoundaryConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the windowsNetworkIsolationPolicy property value. Windows Network Isolation Policy
-     * @return a windowsNetworkIsolationPolicy
+     * @return a WindowsNetworkIsolationPolicy
      */
     @jakarta.annotation.Nullable
     public WindowsNetworkIsolationPolicy getWindowsNetworkIsolationPolicy() {
-        return this.windowsNetworkIsolationPolicy;
+        return this.BackingStore.get("windowsNetworkIsolationPolicy");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * @param value Value to set for the windowsNetworkIsolationPolicy property.
      */
     public void setWindowsNetworkIsolationPolicy(@jakarta.annotation.Nullable final WindowsNetworkIsolationPolicy value) {
-        this.windowsNetworkIsolationPolicy = value;
+        this.BackingStore.set("windowsNetworkIsolationPolicy", value);
     }
 }

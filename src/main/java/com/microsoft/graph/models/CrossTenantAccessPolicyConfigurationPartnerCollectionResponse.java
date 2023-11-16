@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CrossTenantAccessPolicyConfigurationPartner> value;
-    /**
-     * Instantiates a new crossTenantAccessPolicyConfigurationPartnerCollectionResponse and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerCollectionResponse and sets the default values.
      */
     public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessPolicyConfigurationPartnerCollectionResponse
+     * @return a CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyConfigurationPartnerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
     }
     /**
      * Gets the value property value. The value property
-     * @return a crossTenantAccessPolicyConfigurationPartner
+     * @return a java.util.List<CrossTenantAccessPolicyConfigurationPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

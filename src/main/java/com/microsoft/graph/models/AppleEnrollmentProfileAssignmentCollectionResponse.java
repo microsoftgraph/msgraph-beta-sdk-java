@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleEnrollmentProfileAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AppleEnrollmentProfileAssignment> value;
-    /**
-     * Instantiates a new appleEnrollmentProfileAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new AppleEnrollmentProfileAssignmentCollectionResponse and sets the default values.
      */
     public AppleEnrollmentProfileAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AppleEnrollmentProfileAssignmentCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleEnrollmentProfileAssignmentCollectionResponse
+     * @return a AppleEnrollmentProfileAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AppleEnrollmentProfileAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AppleEnrollmentProfileAssignmentCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a appleEnrollmentProfileAssignment
+     * @return a java.util.List<AppleEnrollmentProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleEnrollmentProfileAssignment> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AppleEnrollmentProfileAssignmentCollectionResponse extends BaseColl
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AppleEnrollmentProfileAssignment> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

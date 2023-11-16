@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Possible values for the install intent chosen by the admin.
-     */
-    private InstallIntent intent;
-    /**
-     * Settings of the MobileAppPolicySetItem.
-     */
-    private MobileAppAssignmentSettings settings;
-    /**
-     * Instantiates a new mobileAppPolicySetItem and sets the default values.
+     * Instantiates a new MobileAppPolicySetItem and sets the default values.
      */
     public MobileAppPolicySetItem() {
         super();
@@ -29,7 +21,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppPolicySetItem
+     * @return a MobileAppPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static MobileAppPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     }
     /**
      * Gets the intent property value. Possible values for the install intent chosen by the admin.
-     * @return a installIntent
+     * @return a InstallIntent
      */
     @jakarta.annotation.Nullable
     public InstallIntent getIntent() {
-        return this.intent;
+        return this.BackingStore.get("intent");
     }
     /**
      * Gets the settings property value. Settings of the MobileAppPolicySetItem.
-     * @return a mobileAppAssignmentSettings
+     * @return a MobileAppAssignmentSettings
      */
     @jakarta.annotation.Nullable
     public MobileAppAssignmentSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * @param value Value to set for the intent property.
      */
     public void setIntent(@jakarta.annotation.Nullable final InstallIntent value) {
-        this.intent = value;
+        this.BackingStore.set("intent", value);
     }
     /**
      * Sets the settings property value. Settings of the MobileAppPolicySetItem.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final MobileAppAssignmentSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
 }

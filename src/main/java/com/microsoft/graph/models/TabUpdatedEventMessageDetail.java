@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Unique identifier of the tab.
-     */
-    private String tabId;
-    /**
-     * Instantiates a new tabUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
      */
     public TabUpdatedEventMessageDetail() {
         super();
@@ -26,7 +18,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tabUpdatedEventMessageDetail
+     * @return a TabUpdatedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static TabUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Gets the tabId property value. Unique identifier of the tab.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTabId() {
-        return this.tabId;
+        return this.BackingStore.get("tabId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
     /**
      * Sets the tabId property value. Unique identifier of the tab.
      * @param value Value to set for the tabId property.
      */
     public void setTabId(@jakarta.annotation.Nullable final String value) {
-        this.tabId = value;
+        this.BackingStore.set("tabId", value);
     }
 }

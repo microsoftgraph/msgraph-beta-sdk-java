@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineSettingStateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<SecurityBaselineSettingState> value;
-    /**
-     * Instantiates a new securityBaselineSettingStateCollectionResponse and sets the default values.
+     * Instantiates a new SecurityBaselineSettingStateCollectionResponse and sets the default values.
      */
     public SecurityBaselineSettingStateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class SecurityBaselineSettingStateCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineSettingStateCollectionResponse
+     * @return a SecurityBaselineSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineSettingStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class SecurityBaselineSettingStateCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a securityBaselineSettingState
+     * @return a java.util.List<SecurityBaselineSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineSettingState> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class SecurityBaselineSettingStateCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineSettingState> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

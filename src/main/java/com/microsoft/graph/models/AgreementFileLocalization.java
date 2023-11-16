@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-     */
-    private java.util.List<AgreementFileVersion> versions;
-    /**
-     * Instantiates a new agreementFileLocalization and sets the default values.
+     * Instantiates a new AgreementFileLocalization and sets the default values.
      */
     public AgreementFileLocalization() {
         super();
@@ -21,7 +17,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreementFileLocalization
+     * @return a AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public static AgreementFileLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,12 +35,12 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
         return deserializerMap;
     }
     /**
-     * Gets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-     * @return a agreementFileVersion
+     * Gets the versions property value. Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
+     * @return a java.util.List<AgreementFileVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileVersion> getVersions() {
-        return this.versions;
+        return this.BackingStore.get("versions");
     }
     /**
      * Serializes information the current object
@@ -56,10 +52,10 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
     /**
-     * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<AgreementFileVersion> value) {
-        this.versions = value;
+        this.BackingStore.set("versions", value);
     }
 }

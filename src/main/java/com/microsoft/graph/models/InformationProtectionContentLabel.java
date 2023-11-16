@@ -4,42 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InformationProtectionContentLabel implements AdditionalDataHolder, Parsable {
+public class InformationProtectionContentLabel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The assignmentMethod property
-     */
-    private AssignmentMethod assignmentMethod;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime creationDateTime;
-    /**
-     * Details on the label that is currently applied to the file.
-     */
-    private LabelDetails label;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new informationProtectionContentLabel and sets the default values.
+     * Instantiates a new InformationProtectionContentLabel and sets the default values.
      */
     public InformationProtectionContentLabel() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtectionContentLabel
+     * @return a InformationProtectionContentLabel
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionContentLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,20 +35,33 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
         return new InformationProtectionContentLabel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a assignmentMethod
+     * @return a AssignmentMethod
      */
     @jakarta.annotation.Nullable
     public AssignmentMethod getAssignmentMethod() {
-        return this.assignmentMethod;
+        return this.BackingStore.get("assignmentMethod");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the creationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -68,7 +69,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this.creationDateTime;
+        return this.BackingStore.get("creationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +86,19 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the label property value. Details on the label that is currently applied to the file.
-     * @return a labelDetails
+     * @return a LabelDetails
      */
     @jakarta.annotation.Nullable
     public LabelDetails getLabel() {
-        return this.label;
+        return this.BackingStore.get("label");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -112,38 +113,46 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      */
     public void setAssignmentMethod(@jakarta.annotation.Nullable final AssignmentMethod value) {
-        this.assignmentMethod = value;
+        this.BackingStore.set("assignmentMethod", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the creationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the creationDateTime property.
      */
     public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.creationDateTime = value;
+        this.BackingStore.set("creationDateTime", value);
     }
     /**
      * Sets the label property value. Details on the label that is currently applied to the file.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final LabelDetails value) {
-        this.label = value;
+        this.BackingStore.set("label", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

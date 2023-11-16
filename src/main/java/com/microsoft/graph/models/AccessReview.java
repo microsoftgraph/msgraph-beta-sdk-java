@@ -10,63 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReview extends Entity implements Parsable {
     /**
-     * The business flow template identifier. Required on create.  This value is case sensitive.
-     */
-    private String businessFlowTemplateId;
-    /**
-     * The user who created this review.
-     */
-    private UserIdentity createdBy;
-    /**
-     * The collection of decisions for this access review.
-     */
-    private java.util.List<AccessReviewDecision> decisions;
-    /**
-     * The description provided by the access review creator, to show to the reviewers.
-     */
-    private String description;
-    /**
-     * The access review name. Required on create.
-     */
-    private String displayName;
-    /**
-     * The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
-     */
-    private java.util.List<AccessReview> instances;
-    /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
-     */
-    private java.util.List<AccessReviewDecision> myDecisions;
-    /**
-     * The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
-     */
-    private Identity reviewedEntity;
-    /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
-     */
-    private java.util.List<AccessReviewReviewer> reviewers;
-    /**
-     * The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
-     */
-    private String reviewerType;
-    /**
-     * The settings of an accessReview, see type definition below.
-     */
-    private AccessReviewSettings settings;
-    /**
-     * The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
-     */
-    private String status;
-    /**
-     * Instantiates a new accessReview and sets the default values.
+     * Instantiates a new AccessReview and sets the default values.
      */
     public AccessReview() {
         super();
@@ -74,7 +18,7 @@ public class AccessReview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReview
+     * @return a AccessReview
      */
     @jakarta.annotation.Nonnull
     public static AccessReview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,43 +27,43 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the businessFlowTemplateId property value. The business flow template identifier. Required on create.  This value is case sensitive.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBusinessFlowTemplateId() {
-        return this.businessFlowTemplateId;
+        return this.BackingStore.get("businessFlowTemplateId");
     }
     /**
      * Gets the createdBy property value. The user who created this review.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the decisions property value. The collection of decisions for this access review.
-     * @return a accessReviewDecision
+     * @return a java.util.List<AccessReviewDecision>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewDecision> getDecisions() {
-        return this.decisions;
+        return this.BackingStore.get("decisions");
     }
     /**
      * Gets the description property value. The description provided by the access review creator, to show to the reviewers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The access review name. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
@@ -127,7 +71,7 @@ public class AccessReview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -154,51 +98,51 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
-     * @return a accessReview
+     * @return a java.util.List<AccessReview>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReview> getInstances() {
-        return this.instances;
+        return this.BackingStore.get("instances");
     }
     /**
      * Gets the myDecisions property value. The collection of decisions for the caller, if the caller is a reviewer.
-     * @return a accessReviewDecision
+     * @return a java.util.List<AccessReviewDecision>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewDecision> getMyDecisions() {
-        return this.myDecisions;
+        return this.BackingStore.get("myDecisions");
     }
     /**
      * Gets the reviewedEntity property value. The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getReviewedEntity() {
-        return this.reviewedEntity;
+        return this.BackingStore.get("reviewedEntity");
     }
     /**
      * Gets the reviewers property value. The collection of reviewers for an access review, if access review reviewerType is of type delegated.
-     * @return a accessReviewReviewer
+     * @return a java.util.List<AccessReviewReviewer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewer> getReviewers() {
-        return this.reviewers;
+        return this.BackingStore.get("reviewers");
     }
     /**
      * Gets the reviewerType property value. The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewerType() {
-        return this.reviewerType;
+        return this.BackingStore.get("reviewerType");
     }
     /**
      * Gets the settings property value. The settings of an accessReview, see type definition below.
-     * @return a accessReviewSettings
+     * @return a AccessReviewSettings
      */
     @jakarta.annotation.Nullable
     public AccessReviewSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the startDateTime property value. The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
@@ -206,15 +150,15 @@ public class AccessReview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the businessFlowTemplateId property.
      */
     public void setBusinessFlowTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.businessFlowTemplateId = value;
+        this.BackingStore.set("businessFlowTemplateId", value);
     }
     /**
      * Sets the createdBy property value. The user who created this review.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the decisions property value. The collection of decisions for this access review.
      * @param value Value to set for the decisions property.
      */
     public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewDecision> value) {
-        this.decisions = value;
+        this.BackingStore.set("decisions", value);
     }
     /**
      * Sets the description property value. The description provided by the access review creator, to show to the reviewers.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The access review name. Required on create.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReview> value) {
-        this.instances = value;
+        this.BackingStore.set("instances", value);
     }
     /**
      * Sets the myDecisions property value. The collection of decisions for the caller, if the caller is a reviewer.
      * @param value Value to set for the myDecisions property.
      */
     public void setMyDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewDecision> value) {
-        this.myDecisions = value;
+        this.BackingStore.set("myDecisions", value);
     }
     /**
      * Sets the reviewedEntity property value. The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
      * @param value Value to set for the reviewedEntity property.
      */
     public void setReviewedEntity(@jakarta.annotation.Nullable final Identity value) {
-        this.reviewedEntity = value;
+        this.BackingStore.set("reviewedEntity", value);
     }
     /**
      * Sets the reviewers property value. The collection of reviewers for an access review, if access review reviewerType is of type delegated.
      * @param value Value to set for the reviewers property.
      */
     public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewer> value) {
-        this.reviewers = value;
+        this.BackingStore.set("reviewers", value);
     }
     /**
      * Sets the reviewerType property value. The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
      * @param value Value to set for the reviewerType property.
      */
     public void setReviewerType(@jakarta.annotation.Nullable final String value) {
-        this.reviewerType = value;
+        this.BackingStore.set("reviewerType", value);
     }
     /**
      * Sets the settings property value. The settings of an accessReview, see type definition below.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final AccessReviewSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the startDateTime property value. The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

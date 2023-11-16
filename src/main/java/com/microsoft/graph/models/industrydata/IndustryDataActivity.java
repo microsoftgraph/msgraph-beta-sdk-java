@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IndustryDataActivity extends Entity implements Parsable {
     /**
-     * The name of the activity. Maximum supported length is 100 characters.
-     */
-    private String displayName;
-    /**
-     * The readinessStatus property
-     */
-    private ReadinessStatus readinessStatus;
-    /**
-     * Instantiates a new industryDataActivity and sets the default values.
+     * Instantiates a new IndustryDataActivity and sets the default values.
      */
     public IndustryDataActivity() {
         super();
@@ -26,7 +18,7 @@ public class IndustryDataActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataActivity
+     * @return a IndustryDataActivity
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +35,11 @@ public class IndustryDataActivity extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the activity. Maximum supported length is 100 characters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -62,11 +54,11 @@ public class IndustryDataActivity extends Entity implements Parsable {
     }
     /**
      * Gets the readinessStatus property value. The readinessStatus property
-     * @return a readinessStatus
+     * @return a ReadinessStatus
      */
     @jakarta.annotation.Nullable
     public ReadinessStatus getReadinessStatus() {
-        return this.readinessStatus;
+        return this.BackingStore.get("readinessStatus");
     }
     /**
      * Serializes information the current object
@@ -83,13 +75,13 @@ public class IndustryDataActivity extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the readinessStatus property value. The readinessStatus property
      * @param value Value to set for the readinessStatus property.
      */
     public void setReadinessStatus(@jakarta.annotation.Nullable final ReadinessStatus value) {
-        this.readinessStatus = value;
+        this.BackingStore.set("readinessStatus", value);
     }
 }

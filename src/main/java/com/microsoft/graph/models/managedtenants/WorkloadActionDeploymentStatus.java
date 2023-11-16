@@ -5,62 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Parsable {
+public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The unique identifier for the workload action. Required. Read-only.
+     * Stores model information.
      */
-    private String actionId;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The identifier of any policy that was created by applying the workload action. Optional. Read-only.
-     */
-    private String deployedPolicyId;
-    /**
-     * The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
-     */
-    private GenericError error;
-    /**
-     * The excludeGroups property
-     */
-    private java.util.List<String> excludeGroups;
-    /**
-     * The includeAllUsers property
-     */
-    private Boolean includeAllUsers;
-    /**
-     * The includeGroups property
-     */
-    private java.util.List<String> includeGroups;
-    /**
-     * The date and time the workload action was last deployed. Optional.
-     */
-    private OffsetDateTime lastDeploymentDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The status property
-     */
-    private WorkloadActionStatus status;
-    /**
-     * Instantiates a new workloadActionDeploymentStatus and sets the default values.
+     * Instantiates a new WorkloadActionDeploymentStatus and sets the default values.
      */
     public WorkloadActionDeploymentStatus() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workloadActionDeploymentStatus
+     * @return a WorkloadActionDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public static WorkloadActionDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,43 +37,56 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     }
     /**
      * Gets the actionId property value. The unique identifier for the workload action. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionId() {
-        return this.actionId;
+        return this.BackingStore.get("actionId");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deployedPolicyId property value. The identifier of any policy that was created by applying the workload action. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeployedPolicyId() {
-        return this.deployedPolicyId;
+        return this.BackingStore.get("deployedPolicyId");
     }
     /**
      * Gets the error property value. The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
-     * @return a genericError
+     * @return a GenericError
      */
     @jakarta.annotation.Nullable
     public GenericError getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * Gets the excludeGroups property value. The excludeGroups property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
-        return this.excludeGroups;
+        return this.BackingStore.get("excludeGroups");
     }
     /**
      * The deserialization information for the current model
@@ -127,19 +108,19 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     }
     /**
      * Gets the includeAllUsers property value. The includeAllUsers property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeAllUsers() {
-        return this.includeAllUsers;
+        return this.BackingStore.get("includeAllUsers");
     }
     /**
      * Gets the includeGroups property value. The includeGroups property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
-        return this.includeGroups;
+        return this.BackingStore.get("includeGroups");
     }
     /**
      * Gets the lastDeploymentDateTime property value. The date and time the workload action was last deployed. Optional.
@@ -147,23 +128,23 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDeploymentDateTime() {
-        return this.lastDeploymentDateTime;
+        return this.BackingStore.get("lastDeploymentDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the status property value. The status property
-     * @return a workloadActionStatus
+     * @return a WorkloadActionStatus
      */
     @jakarta.annotation.Nullable
     public WorkloadActionStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -187,69 +168,77 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the actionId property.
      */
     public void setActionId(@jakarta.annotation.Nullable final String value) {
-        this.actionId = value;
+        this.BackingStore.set("actionId", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deployedPolicyId property value. The identifier of any policy that was created by applying the workload action. Optional. Read-only.
      * @param value Value to set for the deployedPolicyId property.
      */
     public void setDeployedPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.deployedPolicyId = value;
+        this.BackingStore.set("deployedPolicyId", value);
     }
     /**
      * Sets the error property value. The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final GenericError value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the excludeGroups property value. The excludeGroups property
      * @param value Value to set for the excludeGroups property.
      */
     public void setExcludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeGroups = value;
+        this.BackingStore.set("excludeGroups", value);
     }
     /**
      * Sets the includeAllUsers property value. The includeAllUsers property
      * @param value Value to set for the includeAllUsers property.
      */
     public void setIncludeAllUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.includeAllUsers = value;
+        this.BackingStore.set("includeAllUsers", value);
     }
     /**
      * Sets the includeGroups property value. The includeGroups property
      * @param value Value to set for the includeGroups property.
      */
     public void setIncludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeGroups = value;
+        this.BackingStore.set("includeGroups", value);
     }
     /**
      * Sets the lastDeploymentDateTime property value. The date and time the workload action was last deployed. Optional.
      * @param value Value to set for the lastDeploymentDateTime property.
      */
     public void setLastDeploymentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastDeploymentDateTime = value;
+        this.BackingStore.set("lastDeploymentDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final WorkloadActionStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     /**
-     * The ID of the storage account.
-     */
-    private String storageAccountId;
-    /**
-     * The name of the storage account.
-     */
-    private String storageAccountName;
-    /**
-     * Instantiates a new cloudPcForensicStorageAccount and sets the default values.
+     * Instantiates a new CloudPcForensicStorageAccount and sets the default values.
      */
     public CloudPcForensicStorageAccount() {
         super();
@@ -25,7 +17,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcForensicStorageAccount
+     * @return a CloudPcForensicStorageAccount
      */
     @jakarta.annotation.Nonnull
     public static CloudPcForensicStorageAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     }
     /**
      * Gets the storageAccountId property value. The ID of the storage account.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStorageAccountId() {
-        return this.storageAccountId;
+        return this.BackingStore.get("storageAccountId");
     }
     /**
      * Gets the storageAccountName property value. The name of the storage account.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStorageAccountName() {
-        return this.storageAccountName;
+        return this.BackingStore.get("storageAccountName");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * @param value Value to set for the storageAccountId property.
      */
     public void setStorageAccountId(@jakarta.annotation.Nullable final String value) {
-        this.storageAccountId = value;
+        this.BackingStore.set("storageAccountId", value);
     }
     /**
      * Sets the storageAccountName property value. The name of the storage account.
      * @param value Value to set for the storageAccountName property.
      */
     public void setStorageAccountName(@jakarta.annotation.Nullable final String value) {
-        this.storageAccountName = value;
+        this.BackingStore.set("storageAccountName", value);
     }
 }

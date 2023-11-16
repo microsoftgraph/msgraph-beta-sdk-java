@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationBandwidth implements Parsable {
     /**
-     * Specifies the maximum download bandwidth in KiloBytes/second that the device can use across all concurrent download activities using Delivery Optimization. Valid values 0 to 4294967295
-     */
-    private Long maximumDownloadBandwidthInKilobytesPerSecond;
-    /**
-     * Specifies the maximum upload bandwidth in KiloBytes/second that a device will use across all concurrent upload activity using Delivery Optimization (0-4000000). Valid values 0 to 4000000
-     */
-    private Long maximumUploadBandwidthInKilobytesPerSecond;
-    /**
-     * Instantiates a new deliveryOptimizationBandwidthAbsolute and sets the default values.
+     * Instantiates a new DeliveryOptimizationBandwidthAbsolute and sets the default values.
      */
     public DeliveryOptimizationBandwidthAbsolute() {
         super();
@@ -29,7 +21,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationBandwidthAbsolute
+     * @return a DeliveryOptimizationBandwidthAbsolute
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationBandwidthAbsolute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     }
     /**
      * Gets the maximumDownloadBandwidthInKilobytesPerSecond property value. Specifies the maximum download bandwidth in KiloBytes/second that the device can use across all concurrent download activities using Delivery Optimization. Valid values 0 to 4294967295
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaximumDownloadBandwidthInKilobytesPerSecond() {
-        return this.maximumDownloadBandwidthInKilobytesPerSecond;
+        return this.BackingStore.get("maximumDownloadBandwidthInKilobytesPerSecond");
     }
     /**
      * Gets the maximumUploadBandwidthInKilobytesPerSecond property value. Specifies the maximum upload bandwidth in KiloBytes/second that a device will use across all concurrent upload activity using Delivery Optimization (0-4000000). Valid values 0 to 4000000
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaximumUploadBandwidthInKilobytesPerSecond() {
-        return this.maximumUploadBandwidthInKilobytesPerSecond;
+        return this.BackingStore.get("maximumUploadBandwidthInKilobytesPerSecond");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * @param value Value to set for the maximumDownloadBandwidthInKilobytesPerSecond property.
      */
     public void setMaximumDownloadBandwidthInKilobytesPerSecond(@jakarta.annotation.Nullable final Long value) {
-        this.maximumDownloadBandwidthInKilobytesPerSecond = value;
+        this.BackingStore.set("maximumDownloadBandwidthInKilobytesPerSecond", value);
     }
     /**
      * Sets the maximumUploadBandwidthInKilobytesPerSecond property value. Specifies the maximum upload bandwidth in KiloBytes/second that a device will use across all concurrent upload activity using Delivery Optimization (0-4000000). Valid values 0 to 4000000
      * @param value Value to set for the maximumUploadBandwidthInKilobytesPerSecond property.
      */
     public void setMaximumUploadBandwidthInKilobytesPerSecond(@jakarta.annotation.Nullable final Long value) {
-        this.maximumUploadBandwidthInKilobytesPerSecond = value;
+        this.BackingStore.set("maximumUploadBandwidthInKilobytesPerSecond", value);
     }
 }

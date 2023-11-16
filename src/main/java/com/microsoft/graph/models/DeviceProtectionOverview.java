@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,69 +14,22 @@ import java.util.Objects;
  * Hardware information of a given device.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable {
+public class DeviceProtectionOverview implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Indicates number of devices reporting as clean
-     */
-    private Integer cleanDeviceCount;
-    /**
-     * Indicates number of devices with critical failures
-     */
-    private Integer criticalFailuresDeviceCount;
-    /**
-     * Indicates number of devices with inactive threat agent
-     */
-    private Integer inactiveThreatAgentDeviceCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates number of devices pending full scan
-     */
-    private Integer pendingFullScanDeviceCount;
-    /**
-     * Indicates number of devices with pending manual steps
-     */
-    private Integer pendingManualStepsDeviceCount;
-    /**
-     * Indicates number of pending offline scan devices
-     */
-    private Integer pendingOfflineScanDeviceCount;
-    /**
-     * Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
-     */
-    private Integer pendingQuickScanDeviceCount;
-    /**
-     * Indicates number of devices pending restart
-     */
-    private Integer pendingRestartDeviceCount;
-    /**
-     * Indicates number of devices with an old signature
-     */
-    private Integer pendingSignatureUpdateDeviceCount;
-    /**
-     * Total device count.
-     */
-    private Integer totalReportedDeviceCount;
-    /**
-     * Indicates number of devices with threat agent state as unknown
-     */
-    private Integer unknownStateThreatAgentDeviceCount;
-    /**
-     * Instantiates a new deviceProtectionOverview and sets the default values.
+     * Instantiates a new DeviceProtectionOverview and sets the default values.
      */
     public DeviceProtectionOverview() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceProtectionOverview
+     * @return a DeviceProtectionOverview
      */
     @jakarta.annotation.Nonnull
     public static DeviceProtectionOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,28 +37,41 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
         return new DeviceProtectionOverview();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cleanDeviceCount property value. Indicates number of devices reporting as clean
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCleanDeviceCount() {
-        return this.cleanDeviceCount;
+        return this.BackingStore.get("cleanDeviceCount");
     }
     /**
      * Gets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCriticalFailuresDeviceCount() {
-        return this.criticalFailuresDeviceCount;
+        return this.BackingStore.get("criticalFailuresDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -127,83 +96,83 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInactiveThreatAgentDeviceCount() {
-        return this.inactiveThreatAgentDeviceCount;
+        return this.BackingStore.get("inactiveThreatAgentDeviceCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingFullScanDeviceCount() {
-        return this.pendingFullScanDeviceCount;
+        return this.BackingStore.get("pendingFullScanDeviceCount");
     }
     /**
      * Gets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingManualStepsDeviceCount() {
-        return this.pendingManualStepsDeviceCount;
+        return this.BackingStore.get("pendingManualStepsDeviceCount");
     }
     /**
      * Gets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingOfflineScanDeviceCount() {
-        return this.pendingOfflineScanDeviceCount;
+        return this.BackingStore.get("pendingOfflineScanDeviceCount");
     }
     /**
      * Gets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingQuickScanDeviceCount() {
-        return this.pendingQuickScanDeviceCount;
+        return this.BackingStore.get("pendingQuickScanDeviceCount");
     }
     /**
      * Gets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingRestartDeviceCount() {
-        return this.pendingRestartDeviceCount;
+        return this.BackingStore.get("pendingRestartDeviceCount");
     }
     /**
      * Gets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingSignatureUpdateDeviceCount() {
-        return this.pendingSignatureUpdateDeviceCount;
+        return this.BackingStore.get("pendingSignatureUpdateDeviceCount");
     }
     /**
      * Gets the totalReportedDeviceCount property value. Total device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalReportedDeviceCount() {
-        return this.totalReportedDeviceCount;
+        return this.BackingStore.get("totalReportedDeviceCount");
     }
     /**
      * Gets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownStateThreatAgentDeviceCount() {
-        return this.unknownStateThreatAgentDeviceCount;
+        return this.BackingStore.get("unknownStateThreatAgentDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -226,94 +195,102 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the cleanDeviceCount property value. Indicates number of devices reporting as clean
      * @param value Value to set for the cleanDeviceCount property.
      */
     public void setCleanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.cleanDeviceCount = value;
+        this.BackingStore.set("cleanDeviceCount", value);
     }
     /**
      * Sets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
      * @param value Value to set for the criticalFailuresDeviceCount property.
      */
     public void setCriticalFailuresDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.criticalFailuresDeviceCount = value;
+        this.BackingStore.set("criticalFailuresDeviceCount", value);
     }
     /**
      * Sets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
      * @param value Value to set for the inactiveThreatAgentDeviceCount property.
      */
     public void setInactiveThreatAgentDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.inactiveThreatAgentDeviceCount = value;
+        this.BackingStore.set("inactiveThreatAgentDeviceCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
      * @param value Value to set for the pendingFullScanDeviceCount property.
      */
     public void setPendingFullScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingFullScanDeviceCount = value;
+        this.BackingStore.set("pendingFullScanDeviceCount", value);
     }
     /**
      * Sets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
      * @param value Value to set for the pendingManualStepsDeviceCount property.
      */
     public void setPendingManualStepsDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingManualStepsDeviceCount = value;
+        this.BackingStore.set("pendingManualStepsDeviceCount", value);
     }
     /**
      * Sets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
      * @param value Value to set for the pendingOfflineScanDeviceCount property.
      */
     public void setPendingOfflineScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingOfflineScanDeviceCount = value;
+        this.BackingStore.set("pendingOfflineScanDeviceCount", value);
     }
     /**
      * Sets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
      * @param value Value to set for the pendingQuickScanDeviceCount property.
      */
     public void setPendingQuickScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingQuickScanDeviceCount = value;
+        this.BackingStore.set("pendingQuickScanDeviceCount", value);
     }
     /**
      * Sets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
      * @param value Value to set for the pendingRestartDeviceCount property.
      */
     public void setPendingRestartDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingRestartDeviceCount = value;
+        this.BackingStore.set("pendingRestartDeviceCount", value);
     }
     /**
      * Sets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
      * @param value Value to set for the pendingSignatureUpdateDeviceCount property.
      */
     public void setPendingSignatureUpdateDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingSignatureUpdateDeviceCount = value;
+        this.BackingStore.set("pendingSignatureUpdateDeviceCount", value);
     }
     /**
      * Sets the totalReportedDeviceCount property value. Total device count.
      * @param value Value to set for the totalReportedDeviceCount property.
      */
     public void setTotalReportedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalReportedDeviceCount = value;
+        this.BackingStore.set("totalReportedDeviceCount", value);
     }
     /**
      * Sets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
      * @param value Value to set for the unknownStateThreatAgentDeviceCount property.
      */
     public void setUnknownStateThreatAgentDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownStateThreatAgentDeviceCount = value;
+        this.BackingStore.set("unknownStateThreatAgentDeviceCount", value);
     }
 }

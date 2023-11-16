@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementAssignmentFilterCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceAndAppManagementAssignmentFilter> value;
-    /**
-     * Instantiates a new deviceAndAppManagementAssignmentFilterCollectionResponse and sets the default values.
+     * Instantiates a new DeviceAndAppManagementAssignmentFilterCollectionResponse and sets the default values.
      */
     public DeviceAndAppManagementAssignmentFilterCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceAndAppManagementAssignmentFilterCollectionResponse extends Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementAssignmentFilterCollectionResponse
+     * @return a DeviceAndAppManagementAssignmentFilterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentFilterCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceAndAppManagementAssignmentFilterCollectionResponse extends Ba
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceAndAppManagementAssignmentFilter
+     * @return a java.util.List<DeviceAndAppManagementAssignmentFilter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementAssignmentFilter> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceAndAppManagementAssignmentFilterCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentFilter> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

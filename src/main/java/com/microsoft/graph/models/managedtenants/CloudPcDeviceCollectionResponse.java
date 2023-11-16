@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcDeviceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CloudPcDevice> value;
-    /**
-     * Instantiates a new cloudPcDeviceCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcDeviceCollectionResponse and sets the default values.
      */
     public CloudPcDeviceCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class CloudPcDeviceCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDeviceCollectionResponse
+     * @return a CloudPcDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDeviceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class CloudPcDeviceCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcDevice
+     * @return a java.util.List<CloudPcDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcDevice> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CloudPcDeviceCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CloudPcDevice> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

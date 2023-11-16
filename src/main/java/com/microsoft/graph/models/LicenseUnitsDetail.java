@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
+public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The number of units that are enabled for the active subscription of the service SKU.
-     */
-    private Integer enabled;
-    /**
-     * The number of units that are locked out because the customer canceled their subscription of the service SKU.
-     */
-    private Integer lockedOut;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
-     */
-    private Integer suspended;
-    /**
-     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
-     */
-    private Integer warning;
-    /**
-     * Instantiates a new licenseUnitsDetail and sets the default values.
+     * Instantiates a new LicenseUnitsDetail and sets the default values.
      */
     public LicenseUnitsDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a licenseUnitsDetail
+     * @return a LicenseUnitsDetail
      */
     @jakarta.annotation.Nonnull
     public static LicenseUnitsDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +34,33 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return new LicenseUnitsDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnabled() {
-        return this.enabled;
+        return this.BackingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +78,35 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLockedOut() {
-        return this.lockedOut;
+        return this.BackingStore.get("lockedOut");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuspended() {
-        return this.suspended;
+        return this.BackingStore.get("suspended");
     }
     /**
      * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWarning() {
-        return this.warning;
+        return this.BackingStore.get("warning");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Integer value) {
-        this.enabled = value;
+        this.BackingStore.set("enabled", value);
     }
     /**
      * Sets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      */
     public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
-        this.lockedOut = value;
+        this.BackingStore.set("lockedOut", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @param value Value to set for the suspended property.
      */
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
-        this.suspended = value;
+        this.BackingStore.set("suspended", value);
     }
     /**
      * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @param value Value to set for the warning property.
      */
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {
-        this.warning = value;
+        this.BackingStore.set("warning", value);
     }
 }

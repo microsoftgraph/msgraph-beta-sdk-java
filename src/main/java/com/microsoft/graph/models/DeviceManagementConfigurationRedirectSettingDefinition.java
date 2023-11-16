@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * A deep link that points to the specific location in the Intune console where feature support must be managed from.
-     */
-    private String deepLink;
-    /**
-     * A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
-     */
-    private String redirectMessage;
-    /**
-     * Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
-     */
-    private String redirectReason;
-    /**
-     * Instantiates a new deviceManagementConfigurationRedirectSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationRedirectSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationRedirectSettingDefinition() {
         super();
@@ -29,7 +17,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationRedirectSettingDefinition
+     * @return a DeviceManagementConfigurationRedirectSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationRedirectSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * Gets the deepLink property value. A deep link that points to the specific location in the Intune console where feature support must be managed from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeepLink() {
-        return this.deepLink;
+        return this.BackingStore.get("deepLink");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * Gets the redirectMessage property value. A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRedirectMessage() {
-        return this.redirectMessage;
+        return this.BackingStore.get("redirectMessage");
     }
     /**
      * Gets the redirectReason property value. Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRedirectReason() {
-        return this.redirectReason;
+        return this.BackingStore.get("redirectReason");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param value Value to set for the deepLink property.
      */
     public void setDeepLink(@jakarta.annotation.Nullable final String value) {
-        this.deepLink = value;
+        this.BackingStore.set("deepLink", value);
     }
     /**
      * Sets the redirectMessage property value. A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
      * @param value Value to set for the redirectMessage property.
      */
     public void setRedirectMessage(@jakarta.annotation.Nullable final String value) {
-        this.redirectMessage = value;
+        this.BackingStore.set("redirectMessage", value);
     }
     /**
      * Sets the redirectReason property value. Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
      * @param value Value to set for the redirectReason property.
      */
     public void setRedirectReason(@jakarta.annotation.Nullable final String value) {
-        this.redirectReason = value;
+        this.BackingStore.set("redirectReason", value);
     }
 }

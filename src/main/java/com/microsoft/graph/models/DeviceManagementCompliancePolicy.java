@@ -14,59 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementCompliancePolicy extends Entity implements Parsable {
     /**
-     * Policy assignments
-     */
-    private java.util.List<DeviceManagementConfigurationPolicyAssignment> assignments;
-    /**
-     * Policy creation date and time. This property is read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Policy creation source
-     */
-    private String creationSource;
-    /**
-     * Policy description
-     */
-    private String description;
-    /**
-     * Policy assignment status. This property is read-only.
-     */
-    private Boolean isAssigned;
-    /**
-     * Policy last modification date and time. This property is read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Policy name
-     */
-    private String name;
-    /**
-     * Supported platform types.
-     */
-    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The list of scheduled action for this rule
-     */
-    private java.util.List<DeviceManagementComplianceScheduledActionForRule> scheduledActionsForRule;
-    /**
-     * Number of settings. This property is read-only.
-     */
-    private Integer settingCount;
-    /**
-     * Policy settings
-     */
-    private java.util.List<DeviceManagementConfigurationSetting> settings;
-    /**
-     * Describes which technology this setting can be deployed with
-     */
-    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
-    /**
-     * Instantiates a new deviceManagementCompliancePolicy and sets the default values.
+     * Instantiates a new DeviceManagementCompliancePolicy and sets the default values.
      */
     public DeviceManagementCompliancePolicy() {
         super();
@@ -74,7 +22,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCompliancePolicy
+     * @return a DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,11 +31,11 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the assignments property value. Policy assignments
-     * @return a deviceManagementConfigurationPolicyAssignment
+     * @return a java.util.List<DeviceManagementConfigurationPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. Policy creation date and time. This property is read-only.
@@ -95,23 +43,23 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the creationSource property value. Policy creation source
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreationSource() {
-        return this.creationSource;
+        return this.BackingStore.get("creationSource");
     }
     /**
      * Gets the description property value. Policy description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -137,11 +85,11 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the isAssigned property value. Policy assignment status. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.BackingStore.get("isAssigned");
     }
     /**
      * Gets the lastModifiedDateTime property value. Policy last modification date and time. This property is read-only.
@@ -149,63 +97,63 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. Policy name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
-        return this.platforms;
+        return this.BackingStore.get("platforms");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
-     * @return a deviceManagementComplianceScheduledActionForRule
+     * @return a java.util.List<DeviceManagementComplianceScheduledActionForRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementComplianceScheduledActionForRule> getScheduledActionsForRule() {
-        return this.scheduledActionsForRule;
+        return this.BackingStore.get("scheduledActionsForRule");
     }
     /**
      * Gets the settingCount property value. Number of settings. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
-        return this.settingCount;
+        return this.BackingStore.get("settingCount");
     }
     /**
      * Gets the settings property value. Policy settings
-     * @return a deviceManagementConfigurationSetting
+     * @return a java.util.List<DeviceManagementConfigurationSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
-        return this.technologies;
+        return this.BackingStore.get("technologies");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. Policy creation date and time. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the creationSource property value. Policy creation source
      * @param value Value to set for the creationSource property.
      */
     public void setCreationSource(@jakarta.annotation.Nullable final String value) {
-        this.creationSource = value;
+        this.BackingStore.set("creationSource", value);
     }
     /**
      * Sets the description property value. Policy description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the isAssigned property value. Policy assignment status. This property is read-only.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.BackingStore.set("isAssigned", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Policy last modification date and time. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. Policy name
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      */
     public void setPlatforms(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
-        this.platforms = value;
+        this.BackingStore.set("platforms", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
      * @param value Value to set for the scheduledActionsForRule property.
      */
     public void setScheduledActionsForRule(@jakarta.annotation.Nullable final java.util.List<DeviceManagementComplianceScheduledActionForRule> value) {
-        this.scheduledActionsForRule = value;
+        this.BackingStore.set("scheduledActionsForRule", value);
     }
     /**
      * Sets the settingCount property value. Number of settings. This property is read-only.
      * @param value Value to set for the settingCount property.
      */
     public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.settingCount = value;
+        this.BackingStore.set("settingCount", value);
     }
     /**
      * Sets the settings property value. Policy settings
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
     public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
-        this.technologies = value;
+        this.BackingStore.set("technologies", value);
     }
 }

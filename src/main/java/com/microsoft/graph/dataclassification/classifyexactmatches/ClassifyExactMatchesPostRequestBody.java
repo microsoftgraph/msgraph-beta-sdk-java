@@ -5,41 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The contentClassifications property
-     */
-    private java.util.List<ContentClassification> contentClassifications;
-    /**
-     * The sensitiveTypeIds property
-     */
-    private java.util.List<String> sensitiveTypeIds;
-    /**
-     * The text property
-     */
-    private String text;
-    /**
-     * The timeoutInMs property
-     */
-    private String timeoutInMs;
-    /**
-     * Instantiates a new classifyExactMatchesPostRequestBody and sets the default values.
+     * Instantiates a new ClassifyExactMatchesPostRequestBody and sets the default values.
      */
     public ClassifyExactMatchesPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a classifyExactMatchesPostRequestBody
+     * @return a ClassifyExactMatchesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ClassifyExactMatchesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,20 +35,33 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
         return new ClassifyExactMatchesPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the contentClassifications property value. The contentClassifications property
-     * @return a contentClassification
+     * @return a java.util.List<ContentClassification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentClassification> getContentClassifications() {
-        return this.contentClassifications;
+        return this.BackingStore.get("contentClassifications");
     }
     /**
      * The deserialization information for the current model
@@ -77,27 +78,27 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
-        return this.sensitiveTypeIds;
+        return this.BackingStore.get("sensitiveTypeIds");
     }
     /**
      * Gets the text property value. The text property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the timeoutInMs property value. The timeoutInMs property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeoutInMs() {
-        return this.timeoutInMs;
+        return this.BackingStore.get("timeoutInMs");
     }
     /**
      * Serializes information the current object
@@ -112,38 +113,46 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the contentClassifications property value. The contentClassifications property
      * @param value Value to set for the contentClassifications property.
      */
     public void setContentClassifications(@jakarta.annotation.Nullable final java.util.List<ContentClassification> value) {
-        this.contentClassifications = value;
+        this.BackingStore.set("contentClassifications", value);
     }
     /**
      * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @param value Value to set for the sensitiveTypeIds property.
      */
     public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.sensitiveTypeIds = value;
+        this.BackingStore.set("sensitiveTypeIds", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the timeoutInMs property value. The timeoutInMs property
      * @param value Value to set for the timeoutInMs property.
      */
     public void setTimeoutInMs(@jakarta.annotation.Nullable final String value) {
-        this.timeoutInMs = value;
+        this.BackingStore.set("timeoutInMs", value);
     }
 }

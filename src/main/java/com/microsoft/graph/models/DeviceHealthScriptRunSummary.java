@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     /**
-     * Number of devices on which the detection script execution encountered an error and did not complete
-     */
-    private Integer detectionScriptErrorDeviceCount;
-    /**
-     * Number of devices for which the detection script was not applicable
-     */
-    private Integer detectionScriptNotApplicableDeviceCount;
-    /**
-     * Number of devices which have not yet run the latest version of the device health script
-     */
-    private Integer detectionScriptPendingDeviceCount;
-    /**
-     * Number of devices for which the detection script found an issue
-     */
-    private Integer issueDetectedDeviceCount;
-    /**
-     * Number of devices that were remediated over the last 30 days
-     */
-    private Integer issueRemediatedCumulativeDeviceCount;
-    /**
-     * Number of devices for which the remediation script was able to resolve the detected issue
-     */
-    private Integer issueRemediatedDeviceCount;
-    /**
-     * Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
-     */
-    private Integer issueReoccurredDeviceCount;
-    /**
-     * Last run time for the script across all devices
-     */
-    private OffsetDateTime lastScriptRunDateTime;
-    /**
-     * Number of devices for which the detection script did not find an issue and the device is healthy
-     */
-    private Integer noIssueDetectedDeviceCount;
-    /**
-     * Number of devices for which the remediation script execution encountered an error and did not complete
-     */
-    private Integer remediationScriptErrorDeviceCount;
-    /**
-     * Number of devices for which remediation was skipped
-     */
-    private Integer remediationSkippedDeviceCount;
-    /**
-     * Instantiates a new deviceHealthScriptRunSummary and sets the default values.
+     * Instantiates a new DeviceHealthScriptRunSummary and sets the default values.
      */
     public DeviceHealthScriptRunSummary() {
         super();
@@ -65,7 +21,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptRunSummary
+     * @return a DeviceHealthScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,27 +30,27 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptErrorDeviceCount property value. Number of devices on which the detection script execution encountered an error and did not complete
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptErrorDeviceCount() {
-        return this.detectionScriptErrorDeviceCount;
+        return this.BackingStore.get("detectionScriptErrorDeviceCount");
     }
     /**
      * Gets the detectionScriptNotApplicableDeviceCount property value. Number of devices for which the detection script was not applicable
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptNotApplicableDeviceCount() {
-        return this.detectionScriptNotApplicableDeviceCount;
+        return this.BackingStore.get("detectionScriptNotApplicableDeviceCount");
     }
     /**
      * Gets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device health script
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptPendingDeviceCount() {
-        return this.detectionScriptPendingDeviceCount;
+        return this.BackingStore.get("detectionScriptPendingDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -118,35 +74,35 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIssueDetectedDeviceCount() {
-        return this.issueDetectedDeviceCount;
+        return this.BackingStore.get("issueDetectedDeviceCount");
     }
     /**
      * Gets the issueRemediatedCumulativeDeviceCount property value. Number of devices that were remediated over the last 30 days
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIssueRemediatedCumulativeDeviceCount() {
-        return this.issueRemediatedCumulativeDeviceCount;
+        return this.BackingStore.get("issueRemediatedCumulativeDeviceCount");
     }
     /**
      * Gets the issueRemediatedDeviceCount property value. Number of devices for which the remediation script was able to resolve the detected issue
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIssueRemediatedDeviceCount() {
-        return this.issueRemediatedDeviceCount;
+        return this.BackingStore.get("issueRemediatedDeviceCount");
     }
     /**
      * Gets the issueReoccurredDeviceCount property value. Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIssueReoccurredDeviceCount() {
-        return this.issueReoccurredDeviceCount;
+        return this.BackingStore.get("issueReoccurredDeviceCount");
     }
     /**
      * Gets the lastScriptRunDateTime property value. Last run time for the script across all devices
@@ -154,31 +110,31 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScriptRunDateTime() {
-        return this.lastScriptRunDateTime;
+        return this.BackingStore.get("lastScriptRunDateTime");
     }
     /**
      * Gets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNoIssueDetectedDeviceCount() {
-        return this.noIssueDetectedDeviceCount;
+        return this.BackingStore.get("noIssueDetectedDeviceCount");
     }
     /**
      * Gets the remediationScriptErrorDeviceCount property value. Number of devices for which the remediation script execution encountered an error and did not complete
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediationScriptErrorDeviceCount() {
-        return this.remediationScriptErrorDeviceCount;
+        return this.BackingStore.get("remediationScriptErrorDeviceCount");
     }
     /**
      * Gets the remediationSkippedDeviceCount property value. Number of devices for which remediation was skipped
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediationSkippedDeviceCount() {
-        return this.remediationSkippedDeviceCount;
+        return this.BackingStore.get("remediationSkippedDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
      * @param value Value to set for the detectionScriptErrorDeviceCount property.
      */
     public void setDetectionScriptErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectionScriptErrorDeviceCount = value;
+        this.BackingStore.set("detectionScriptErrorDeviceCount", value);
     }
     /**
      * Sets the detectionScriptNotApplicableDeviceCount property value. Number of devices for which the detection script was not applicable
      * @param value Value to set for the detectionScriptNotApplicableDeviceCount property.
      */
     public void setDetectionScriptNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectionScriptNotApplicableDeviceCount = value;
+        this.BackingStore.set("detectionScriptNotApplicableDeviceCount", value);
     }
     /**
      * Sets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device health script
      * @param value Value to set for the detectionScriptPendingDeviceCount property.
      */
     public void setDetectionScriptPendingDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectionScriptPendingDeviceCount = value;
+        this.BackingStore.set("detectionScriptPendingDeviceCount", value);
     }
     /**
      * Sets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue
      * @param value Value to set for the issueDetectedDeviceCount property.
      */
     public void setIssueDetectedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.issueDetectedDeviceCount = value;
+        this.BackingStore.set("issueDetectedDeviceCount", value);
     }
     /**
      * Sets the issueRemediatedCumulativeDeviceCount property value. Number of devices that were remediated over the last 30 days
      * @param value Value to set for the issueRemediatedCumulativeDeviceCount property.
      */
     public void setIssueRemediatedCumulativeDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.issueRemediatedCumulativeDeviceCount = value;
+        this.BackingStore.set("issueRemediatedCumulativeDeviceCount", value);
     }
     /**
      * Sets the issueRemediatedDeviceCount property value. Number of devices for which the remediation script was able to resolve the detected issue
      * @param value Value to set for the issueRemediatedDeviceCount property.
      */
     public void setIssueRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.issueRemediatedDeviceCount = value;
+        this.BackingStore.set("issueRemediatedDeviceCount", value);
     }
     /**
      * Sets the issueReoccurredDeviceCount property value. Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
      * @param value Value to set for the issueReoccurredDeviceCount property.
      */
     public void setIssueReoccurredDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.issueReoccurredDeviceCount = value;
+        this.BackingStore.set("issueReoccurredDeviceCount", value);
     }
     /**
      * Sets the lastScriptRunDateTime property value. Last run time for the script across all devices
      * @param value Value to set for the lastScriptRunDateTime property.
      */
     public void setLastScriptRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastScriptRunDateTime = value;
+        this.BackingStore.set("lastScriptRunDateTime", value);
     }
     /**
      * Sets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy
      * @param value Value to set for the noIssueDetectedDeviceCount property.
      */
     public void setNoIssueDetectedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.noIssueDetectedDeviceCount = value;
+        this.BackingStore.set("noIssueDetectedDeviceCount", value);
     }
     /**
      * Sets the remediationScriptErrorDeviceCount property value. Number of devices for which the remediation script execution encountered an error and did not complete
      * @param value Value to set for the remediationScriptErrorDeviceCount property.
      */
     public void setRemediationScriptErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediationScriptErrorDeviceCount = value;
+        this.BackingStore.set("remediationScriptErrorDeviceCount", value);
     }
     /**
      * Sets the remediationSkippedDeviceCount property value. Number of devices for which remediation was skipped
      * @param value Value to set for the remediationSkippedDeviceCount property.
      */
     public void setRemediationSkippedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediationSkippedDeviceCount = value;
+        this.BackingStore.set("remediationSkippedDeviceCount", value);
     }
 }

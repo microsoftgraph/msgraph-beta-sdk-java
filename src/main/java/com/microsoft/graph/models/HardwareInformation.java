@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,185 +14,22 @@ import java.util.Objects;
  * Hardware information of a given device.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class HardwareInformation implements AdditionalDataHolder, Parsable {
+public class HardwareInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
-     */
-    private Integer batteryChargeCycles;
-    /**
-     * The devices current batterys health percentage. Valid values 0 to 100
-     */
-    private Integer batteryHealthPercentage;
-    /**
-     * The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
-     */
-    private Double batteryLevelPercentage;
-    /**
-     * The serial number of the devices current battery
-     */
-    private String batterySerialNumber;
-    /**
-     * Cellular technology of the device
-     */
-    private String cellularTechnology;
-    /**
-     * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
-     */
-    private String deviceFullQualifiedDomainName;
-    /**
-     * The deviceGuardLocalSystemAuthorityCredentialGuardState property
-     */
-    private DeviceGuardLocalSystemAuthorityCredentialGuardState deviceGuardLocalSystemAuthorityCredentialGuardState;
-    /**
-     * The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
-     */
-    private DeviceGuardVirtualizationBasedSecurityHardwareRequirementState deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
-    /**
-     * The deviceGuardVirtualizationBasedSecurityState property
-     */
-    private DeviceGuardVirtualizationBasedSecurityState deviceGuardVirtualizationBasedSecurityState;
-    /**
-     * A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
-     */
-    private Integer deviceLicensingLastErrorCode;
-    /**
-     * Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
-     */
-    private String deviceLicensingLastErrorDescription;
-    /**
-     * Indicates the device licensing status after Windows device based subscription has been enabled.
-     */
-    private DeviceLicensingStatus deviceLicensingStatus;
-    /**
-     * eSIM identifier
-     */
-    private String esimIdentifier;
-    /**
-     * Free storage space of the device.
-     */
-    private Long freeStorageSpace;
-    /**
-     * IMEI
-     */
-    private String imei;
-    /**
-     * IPAddressV4
-     */
-    private String ipAddressV4;
-    /**
-     * Encryption status of the device
-     */
-    private Boolean isEncrypted;
-    /**
-     * Shared iPad
-     */
-    private Boolean isSharedDevice;
-    /**
-     * Supervised mode of the device
-     */
-    private Boolean isSupervised;
-    /**
-     * Manufacturer of the device
-     */
-    private String manufacturer;
-    /**
-     * MEID
-     */
-    private String meid;
-    /**
-     * Model of the device
-     */
-    private String model;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * String that specifies the OS edition.
-     */
-    private String operatingSystemEdition;
-    /**
-     * Operating system language of the device
-     */
-    private String operatingSystemLanguage;
-    /**
-     * Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
-     */
-    private Integer operatingSystemProductType;
-    /**
-     * Operating System Build Number on Android device
-     */
-    private String osBuildNumber;
-    /**
-     * Phone number of the device
-     */
-    private String phoneNumber;
-    /**
-     * The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
-     */
-    private String productName;
-    /**
-     * The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
-     */
-    private Integer residentUsersCount;
-    /**
-     * Serial number.
-     */
-    private String serialNumber;
-    /**
-     * All users on the shared Apple device
-     */
-    private java.util.List<SharedAppleDeviceUser> sharedDeviceCachedUsers;
-    /**
-     * SubnetAddress
-     */
-    private String subnetAddress;
-    /**
-     * Subscriber carrier of the device
-     */
-    private String subscriberCarrier;
-    /**
-     * BIOS version as reported by SMBIOS
-     */
-    private String systemManagementBIOSVersion;
-    /**
-     * Total storage space of the device.
-     */
-    private Long totalStorageSpace;
-    /**
-     * The identifying information that uniquely names the TPM manufacturer
-     */
-    private String tpmManufacturer;
-    /**
-     * String that specifies the specification version.
-     */
-    private String tpmSpecificationVersion;
-    /**
-     * The version of the TPM, as specified by the manufacturer
-     */
-    private String tpmVersion;
-    /**
-     * WiFi MAC address of the device
-     */
-    private String wifiMac;
-    /**
-     * A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
-     */
-    private java.util.List<String> wiredIPv4Addresses;
-    /**
-     * Instantiates a new hardwareInformation and sets the default values.
+     * Instantiates a new HardwareInformation and sets the default values.
      */
     public HardwareInformation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hardwareInformation
+     * @return a HardwareInformation
      */
     @jakarta.annotation.Nonnull
     public static HardwareInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -197,116 +37,129 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return new HardwareInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryChargeCycles() {
-        return this.batteryChargeCycles;
+        return this.BackingStore.get("batteryChargeCycles");
     }
     /**
      * Gets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryHealthPercentage() {
-        return this.batteryHealthPercentage;
+        return this.BackingStore.get("batteryHealthPercentage");
     }
     /**
      * Gets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBatteryLevelPercentage() {
-        return this.batteryLevelPercentage;
+        return this.BackingStore.get("batteryLevelPercentage");
     }
     /**
      * Gets the batterySerialNumber property value. The serial number of the devices current battery
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBatterySerialNumber() {
-        return this.batterySerialNumber;
+        return this.BackingStore.get("batterySerialNumber");
     }
     /**
      * Gets the cellularTechnology property value. Cellular technology of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCellularTechnology() {
-        return this.cellularTechnology;
+        return this.BackingStore.get("cellularTechnology");
     }
     /**
      * Gets the deviceFullQualifiedDomainName property value. Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceFullQualifiedDomainName() {
-        return this.deviceFullQualifiedDomainName;
+        return this.BackingStore.get("deviceFullQualifiedDomainName");
     }
     /**
      * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
-     * @return a deviceGuardLocalSystemAuthorityCredentialGuardState
+     * @return a DeviceGuardLocalSystemAuthorityCredentialGuardState
      */
     @jakarta.annotation.Nullable
     public DeviceGuardLocalSystemAuthorityCredentialGuardState getDeviceGuardLocalSystemAuthorityCredentialGuardState() {
-        return this.deviceGuardLocalSystemAuthorityCredentialGuardState;
+        return this.BackingStore.get("deviceGuardLocalSystemAuthorityCredentialGuardState");
     }
     /**
      * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
-     * @return a deviceGuardVirtualizationBasedSecurityHardwareRequirementState
+     * @return a DeviceGuardVirtualizationBasedSecurityHardwareRequirementState
      */
     @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityHardwareRequirementState getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState() {
-        return this.deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
+        return this.BackingStore.get("deviceGuardVirtualizationBasedSecurityHardwareRequirementState");
     }
     /**
      * Gets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
-     * @return a deviceGuardVirtualizationBasedSecurityState
+     * @return a DeviceGuardVirtualizationBasedSecurityState
      */
     @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityState getDeviceGuardVirtualizationBasedSecurityState() {
-        return this.deviceGuardVirtualizationBasedSecurityState;
+        return this.BackingStore.get("deviceGuardVirtualizationBasedSecurityState");
     }
     /**
      * Gets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceLicensingLastErrorCode() {
-        return this.deviceLicensingLastErrorCode;
+        return this.BackingStore.get("deviceLicensingLastErrorCode");
     }
     /**
      * Gets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceLicensingLastErrorDescription() {
-        return this.deviceLicensingLastErrorDescription;
+        return this.BackingStore.get("deviceLicensingLastErrorDescription");
     }
     /**
      * Gets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
-     * @return a deviceLicensingStatus
+     * @return a DeviceLicensingStatus
      */
     @jakarta.annotation.Nullable
     public DeviceLicensingStatus getDeviceLicensingStatus() {
-        return this.deviceLicensingStatus;
+        return this.BackingStore.get("deviceLicensingStatus");
     }
     /**
      * Gets the esimIdentifier property value. eSIM identifier
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEsimIdentifier() {
-        return this.esimIdentifier;
+        return this.BackingStore.get("esimIdentifier");
     }
     /**
      * The deserialization information for the current model
@@ -360,227 +213,227 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the freeStorageSpace property value. Free storage space of the device.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFreeStorageSpace() {
-        return this.freeStorageSpace;
+        return this.BackingStore.get("freeStorageSpace");
     }
     /**
      * Gets the imei property value. IMEI
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImei() {
-        return this.imei;
+        return this.BackingStore.get("imei");
     }
     /**
      * Gets the ipAddressV4 property value. IPAddressV4
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddressV4() {
-        return this.ipAddressV4;
+        return this.BackingStore.get("ipAddressV4");
     }
     /**
      * Gets the isEncrypted property value. Encryption status of the device
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
-        return this.isEncrypted;
+        return this.BackingStore.get("isEncrypted");
     }
     /**
      * Gets the isSharedDevice property value. Shared iPad
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSharedDevice() {
-        return this.isSharedDevice;
+        return this.BackingStore.get("isSharedDevice");
     }
     /**
      * Gets the isSupervised property value. Supervised mode of the device
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
-        return this.isSupervised;
+        return this.BackingStore.get("isSupervised");
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the meid property value. MEID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeid() {
-        return this.meid;
+        return this.BackingStore.get("meid");
     }
     /**
      * Gets the model property value. Model of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the operatingSystemEdition property value. String that specifies the OS edition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemEdition() {
-        return this.operatingSystemEdition;
+        return this.BackingStore.get("operatingSystemEdition");
     }
     /**
      * Gets the operatingSystemLanguage property value. Operating system language of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemLanguage() {
-        return this.operatingSystemLanguage;
+        return this.BackingStore.get("operatingSystemLanguage");
     }
     /**
      * Gets the operatingSystemProductType property value. Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOperatingSystemProductType() {
-        return this.operatingSystemProductType;
+        return this.BackingStore.get("operatingSystemProductType");
     }
     /**
      * Gets the osBuildNumber property value. Operating System Build Number on Android device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
-        return this.osBuildNumber;
+        return this.BackingStore.get("osBuildNumber");
     }
     /**
      * Gets the phoneNumber property value. Phone number of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return this.BackingStore.get("phoneNumber");
     }
     /**
      * Gets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.BackingStore.get("productName");
     }
     /**
      * Gets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getResidentUsersCount() {
-        return this.residentUsersCount;
+        return this.BackingStore.get("residentUsersCount");
     }
     /**
      * Gets the serialNumber property value. Serial number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Gets the sharedDeviceCachedUsers property value. All users on the shared Apple device
-     * @return a sharedAppleDeviceUser
+     * @return a java.util.List<SharedAppleDeviceUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedAppleDeviceUser> getSharedDeviceCachedUsers() {
-        return this.sharedDeviceCachedUsers;
+        return this.BackingStore.get("sharedDeviceCachedUsers");
     }
     /**
      * Gets the subnetAddress property value. SubnetAddress
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubnetAddress() {
-        return this.subnetAddress;
+        return this.BackingStore.get("subnetAddress");
     }
     /**
      * Gets the subscriberCarrier property value. Subscriber carrier of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriberCarrier() {
-        return this.subscriberCarrier;
+        return this.BackingStore.get("subscriberCarrier");
     }
     /**
      * Gets the systemManagementBIOSVersion property value. BIOS version as reported by SMBIOS
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSystemManagementBIOSVersion() {
-        return this.systemManagementBIOSVersion;
+        return this.BackingStore.get("systemManagementBIOSVersion");
     }
     /**
      * Gets the totalStorageSpace property value. Total storage space of the device.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalStorageSpace() {
-        return this.totalStorageSpace;
+        return this.BackingStore.get("totalStorageSpace");
     }
     /**
      * Gets the tpmManufacturer property value. The identifying information that uniquely names the TPM manufacturer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTpmManufacturer() {
-        return this.tpmManufacturer;
+        return this.BackingStore.get("tpmManufacturer");
     }
     /**
      * Gets the tpmSpecificationVersion property value. String that specifies the specification version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTpmSpecificationVersion() {
-        return this.tpmSpecificationVersion;
+        return this.BackingStore.get("tpmSpecificationVersion");
     }
     /**
      * Gets the tpmVersion property value. The version of the TPM, as specified by the manufacturer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
-        return this.tpmVersion;
+        return this.BackingStore.get("tpmVersion");
     }
     /**
      * Gets the wifiMac property value. WiFi MAC address of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiMac() {
-        return this.wifiMac;
+        return this.BackingStore.get("wifiMac");
     }
     /**
      * Gets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getWiredIPv4Addresses() {
-        return this.wiredIPv4Addresses;
+        return this.BackingStore.get("wiredIPv4Addresses");
     }
     /**
      * Serializes information the current object
@@ -632,297 +485,305 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @param value Value to set for the batteryChargeCycles property.
      */
     public void setBatteryChargeCycles(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryChargeCycles = value;
+        this.BackingStore.set("batteryChargeCycles", value);
     }
     /**
      * Sets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @param value Value to set for the batteryHealthPercentage property.
      */
     public void setBatteryHealthPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryHealthPercentage = value;
+        this.BackingStore.set("batteryHealthPercentage", value);
     }
     /**
      * Sets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
      * @param value Value to set for the batteryLevelPercentage property.
      */
     public void setBatteryLevelPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.batteryLevelPercentage = value;
+        this.BackingStore.set("batteryLevelPercentage", value);
     }
     /**
      * Sets the batterySerialNumber property value. The serial number of the devices current battery
      * @param value Value to set for the batterySerialNumber property.
      */
     public void setBatterySerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.batterySerialNumber = value;
+        this.BackingStore.set("batterySerialNumber", value);
     }
     /**
      * Sets the cellularTechnology property value. Cellular technology of the device
      * @param value Value to set for the cellularTechnology property.
      */
     public void setCellularTechnology(@jakarta.annotation.Nullable final String value) {
-        this.cellularTechnology = value;
+        this.BackingStore.set("cellularTechnology", value);
     }
     /**
      * Sets the deviceFullQualifiedDomainName property value. Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
      * @param value Value to set for the deviceFullQualifiedDomainName property.
      */
     public void setDeviceFullQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
-        this.deviceFullQualifiedDomainName = value;
+        this.BackingStore.set("deviceFullQualifiedDomainName", value);
     }
     /**
      * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardState property.
      */
     public void setDeviceGuardLocalSystemAuthorityCredentialGuardState(@jakarta.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardState value) {
-        this.deviceGuardLocalSystemAuthorityCredentialGuardState = value;
+        this.BackingStore.set("deviceGuardLocalSystemAuthorityCredentialGuardState", value);
     }
     /**
      * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property.
      */
     public void setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(@jakarta.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityHardwareRequirementState value) {
-        this.deviceGuardVirtualizationBasedSecurityHardwareRequirementState = value;
+        this.BackingStore.set("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", value);
     }
     /**
      * Sets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityState property.
      */
     public void setDeviceGuardVirtualizationBasedSecurityState(@jakarta.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityState value) {
-        this.deviceGuardVirtualizationBasedSecurityState = value;
+        this.BackingStore.set("deviceGuardVirtualizationBasedSecurityState", value);
     }
     /**
      * Sets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
      * @param value Value to set for the deviceLicensingLastErrorCode property.
      */
     public void setDeviceLicensingLastErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceLicensingLastErrorCode = value;
+        this.BackingStore.set("deviceLicensingLastErrorCode", value);
     }
     /**
      * Sets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
      * @param value Value to set for the deviceLicensingLastErrorDescription property.
      */
     public void setDeviceLicensingLastErrorDescription(@jakarta.annotation.Nullable final String value) {
-        this.deviceLicensingLastErrorDescription = value;
+        this.BackingStore.set("deviceLicensingLastErrorDescription", value);
     }
     /**
      * Sets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
      * @param value Value to set for the deviceLicensingStatus property.
      */
     public void setDeviceLicensingStatus(@jakarta.annotation.Nullable final DeviceLicensingStatus value) {
-        this.deviceLicensingStatus = value;
+        this.BackingStore.set("deviceLicensingStatus", value);
     }
     /**
      * Sets the esimIdentifier property value. eSIM identifier
      * @param value Value to set for the esimIdentifier property.
      */
     public void setEsimIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.esimIdentifier = value;
+        this.BackingStore.set("esimIdentifier", value);
     }
     /**
      * Sets the freeStorageSpace property value. Free storage space of the device.
      * @param value Value to set for the freeStorageSpace property.
      */
     public void setFreeStorageSpace(@jakarta.annotation.Nullable final Long value) {
-        this.freeStorageSpace = value;
+        this.BackingStore.set("freeStorageSpace", value);
     }
     /**
      * Sets the imei property value. IMEI
      * @param value Value to set for the imei property.
      */
     public void setImei(@jakarta.annotation.Nullable final String value) {
-        this.imei = value;
+        this.BackingStore.set("imei", value);
     }
     /**
      * Sets the ipAddressV4 property value. IPAddressV4
      * @param value Value to set for the ipAddressV4 property.
      */
     public void setIpAddressV4(@jakarta.annotation.Nullable final String value) {
-        this.ipAddressV4 = value;
+        this.BackingStore.set("ipAddressV4", value);
     }
     /**
      * Sets the isEncrypted property value. Encryption status of the device
      * @param value Value to set for the isEncrypted property.
      */
     public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEncrypted = value;
+        this.BackingStore.set("isEncrypted", value);
     }
     /**
      * Sets the isSharedDevice property value. Shared iPad
      * @param value Value to set for the isSharedDevice property.
      */
     public void setIsSharedDevice(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSharedDevice = value;
+        this.BackingStore.set("isSharedDevice", value);
     }
     /**
      * Sets the isSupervised property value. Supervised mode of the device
      * @param value Value to set for the isSupervised property.
      */
     public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSupervised = value;
+        this.BackingStore.set("isSupervised", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the meid property value. MEID
      * @param value Value to set for the meid property.
      */
     public void setMeid(@jakarta.annotation.Nullable final String value) {
-        this.meid = value;
+        this.BackingStore.set("meid", value);
     }
     /**
      * Sets the model property value. Model of the device
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the operatingSystemEdition property value. String that specifies the OS edition.
      * @param value Value to set for the operatingSystemEdition property.
      */
     public void setOperatingSystemEdition(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemEdition = value;
+        this.BackingStore.set("operatingSystemEdition", value);
     }
     /**
      * Sets the operatingSystemLanguage property value. Operating system language of the device
      * @param value Value to set for the operatingSystemLanguage property.
      */
     public void setOperatingSystemLanguage(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemLanguage = value;
+        this.BackingStore.set("operatingSystemLanguage", value);
     }
     /**
      * Sets the operatingSystemProductType property value. Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
      * @param value Value to set for the operatingSystemProductType property.
      */
     public void setOperatingSystemProductType(@jakarta.annotation.Nullable final Integer value) {
-        this.operatingSystemProductType = value;
+        this.BackingStore.set("operatingSystemProductType", value);
     }
     /**
      * Sets the osBuildNumber property value. Operating System Build Number on Android device
      * @param value Value to set for the osBuildNumber property.
      */
     public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
-        this.osBuildNumber = value;
+        this.BackingStore.set("osBuildNumber", value);
     }
     /**
      * Sets the phoneNumber property value. Phone number of the device
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.phoneNumber = value;
+        this.BackingStore.set("phoneNumber", value);
     }
     /**
      * Sets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.BackingStore.set("productName", value);
     }
     /**
      * Sets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
      * @param value Value to set for the residentUsersCount property.
      */
     public void setResidentUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.residentUsersCount = value;
+        this.BackingStore.set("residentUsersCount", value);
     }
     /**
      * Sets the serialNumber property value. Serial number.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
     /**
      * Sets the sharedDeviceCachedUsers property value. All users on the shared Apple device
      * @param value Value to set for the sharedDeviceCachedUsers property.
      */
     public void setSharedDeviceCachedUsers(@jakarta.annotation.Nullable final java.util.List<SharedAppleDeviceUser> value) {
-        this.sharedDeviceCachedUsers = value;
+        this.BackingStore.set("sharedDeviceCachedUsers", value);
     }
     /**
      * Sets the subnetAddress property value. SubnetAddress
      * @param value Value to set for the subnetAddress property.
      */
     public void setSubnetAddress(@jakarta.annotation.Nullable final String value) {
-        this.subnetAddress = value;
+        this.BackingStore.set("subnetAddress", value);
     }
     /**
      * Sets the subscriberCarrier property value. Subscriber carrier of the device
      * @param value Value to set for the subscriberCarrier property.
      */
     public void setSubscriberCarrier(@jakarta.annotation.Nullable final String value) {
-        this.subscriberCarrier = value;
+        this.BackingStore.set("subscriberCarrier", value);
     }
     /**
      * Sets the systemManagementBIOSVersion property value. BIOS version as reported by SMBIOS
      * @param value Value to set for the systemManagementBIOSVersion property.
      */
     public void setSystemManagementBIOSVersion(@jakarta.annotation.Nullable final String value) {
-        this.systemManagementBIOSVersion = value;
+        this.BackingStore.set("systemManagementBIOSVersion", value);
     }
     /**
      * Sets the totalStorageSpace property value. Total storage space of the device.
      * @param value Value to set for the totalStorageSpace property.
      */
     public void setTotalStorageSpace(@jakarta.annotation.Nullable final Long value) {
-        this.totalStorageSpace = value;
+        this.BackingStore.set("totalStorageSpace", value);
     }
     /**
      * Sets the tpmManufacturer property value. The identifying information that uniquely names the TPM manufacturer
      * @param value Value to set for the tpmManufacturer property.
      */
     public void setTpmManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.tpmManufacturer = value;
+        this.BackingStore.set("tpmManufacturer", value);
     }
     /**
      * Sets the tpmSpecificationVersion property value. String that specifies the specification version.
      * @param value Value to set for the tpmSpecificationVersion property.
      */
     public void setTpmSpecificationVersion(@jakarta.annotation.Nullable final String value) {
-        this.tpmSpecificationVersion = value;
+        this.BackingStore.set("tpmSpecificationVersion", value);
     }
     /**
      * Sets the tpmVersion property value. The version of the TPM, as specified by the manufacturer
      * @param value Value to set for the tpmVersion property.
      */
     public void setTpmVersion(@jakarta.annotation.Nullable final String value) {
-        this.tpmVersion = value;
+        this.BackingStore.set("tpmVersion", value);
     }
     /**
      * Sets the wifiMac property value. WiFi MAC address of the device
      * @param value Value to set for the wifiMac property.
      */
     public void setWifiMac(@jakarta.annotation.Nullable final String value) {
-        this.wifiMac = value;
+        this.BackingStore.set("wifiMac", value);
     }
     /**
      * Sets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
      * @param value Value to set for the wiredIPv4Addresses property.
      */
     public void setWiredIPv4Addresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.wiredIPv4Addresses = value;
+        this.BackingStore.set("wiredIPv4Addresses", value);
     }
 }

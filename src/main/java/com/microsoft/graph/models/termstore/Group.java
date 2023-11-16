@@ -11,31 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Group extends Entity implements Parsable {
     /**
-     * Date and time of the group creation. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description that gives details on the term usage.
-     */
-    private String description;
-    /**
-     * Name of the group.
-     */
-    private String displayName;
-    /**
-     * ID of the parent site of this group.
-     */
-    private String parentSiteId;
-    /**
-     * Returns the type of the group. Possible values are: global, system, and siteCollection.
-     */
-    private TermGroupScope scope;
-    /**
-     * All sets under the group in a term [store].
-     */
-    private java.util.List<Set> sets;
-    /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
      */
     public Group() {
         super();
@@ -43,7 +19,7 @@ public class Group extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a group
+     * @return a Group
      */
     @jakarta.annotation.Nonnull
     public static Group createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,23 +32,23 @@ public class Group extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Description that gives details on the term usage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Name of the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -91,27 +67,27 @@ public class Group extends Entity implements Parsable {
     }
     /**
      * Gets the parentSiteId property value. ID of the parent site of this group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentSiteId() {
-        return this.parentSiteId;
+        return this.BackingStore.get("parentSiteId");
     }
     /**
      * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     * @return a termGroupScope
+     * @return a TermGroupScope
      */
     @jakarta.annotation.Nullable
     public TermGroupScope getScope() {
-        return this.scope;
+        return this.BackingStore.get("scope");
     }
     /**
      * Gets the sets property value. All sets under the group in a term [store].
-     * @return a set
+     * @return a java.util.List<Set>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Set> getSets() {
-        return this.sets;
+        return this.BackingStore.get("sets");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description that gives details on the term usage.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the group.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the parentSiteId property value. ID of the parent site of this group.
      * @param value Value to set for the parentSiteId property.
      */
     public void setParentSiteId(@jakarta.annotation.Nullable final String value) {
-        this.parentSiteId = value;
+        this.BackingStore.set("parentSiteId", value);
     }
     /**
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final TermGroupScope value) {
-        this.scope = value;
+        this.BackingStore.set("scope", value);
     }
     /**
      * Sets the sets property value. All sets under the group in a term [store].
      * @param value Value to set for the sets property.
      */
     public void setSets(@jakarta.annotation.Nullable final java.util.List<Set> value) {
-        this.sets = value;
+        this.BackingStore.set("sets", value);
     }
 }

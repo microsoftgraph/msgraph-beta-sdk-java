@@ -11,39 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
-     * A collection of authentication method modes that are required be used to satify this authentication strength.
-     */
-    private java.util.List<AuthenticationMethodModes> allowedCombinations;
-    /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     */
-    private java.util.List<AuthenticationCombinationConfiguration> combinationConfigurations;
-    /**
-     * The datetime when this policy was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The human-readable description of this policy.
-     */
-    private String description;
-    /**
-     * The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
-     */
-    private String displayName;
-    /**
-     * The datetime when this policy was last modified.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The policyType property
-     */
-    private AuthenticationStrengthPolicyType policyType;
-    /**
-     * The requirementsSatisfied property
-     */
-    private EnumSet<AuthenticationStrengthRequirements> requirementsSatisfied;
-    /**
-     * Instantiates a new authenticationStrengthPolicy and sets the default values.
+     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
      */
     public AuthenticationStrengthPolicy() {
         super();
@@ -51,7 +19,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationStrengthPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,19 +28,19 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
-        return this.allowedCombinations;
+        return this.BackingStore.get("allowedCombinations");
     }
     /**
      * Gets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     * @return a authenticationCombinationConfiguration
+     * @return a java.util.List<AuthenticationCombinationConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationCombinationConfiguration> getCombinationConfigurations() {
-        return this.combinationConfigurations;
+        return this.BackingStore.get("combinationConfigurations");
     }
     /**
      * Gets the createdDateTime property value. The datetime when this policy was created.
@@ -80,23 +48,23 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The human-readable description of this policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -121,23 +89,23 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.BackingStore.get("modifiedDateTime");
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a authenticationStrengthPolicyType
+     * @return a AuthenticationStrengthPolicyType
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyType getPolicyType() {
-        return this.policyType;
+        return this.BackingStore.get("policyType");
     }
     /**
      * Gets the requirementsSatisfied property value. The requirementsSatisfied property
-     * @return a authenticationStrengthRequirements
+     * @return a EnumSet<AuthenticationStrengthRequirements>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AuthenticationStrengthRequirements> getRequirementsSatisfied() {
-        return this.requirementsSatisfied;
+        return this.BackingStore.get("requirementsSatisfied");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
      * @param value Value to set for the allowedCombinations property.
      */
     public void setAllowedCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.allowedCombinations = value;
+        this.BackingStore.set("allowedCombinations", value);
     }
     /**
      * Sets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param value Value to set for the combinationConfigurations property.
      */
     public void setCombinationConfigurations(@jakarta.annotation.Nullable final java.util.List<AuthenticationCombinationConfiguration> value) {
-        this.combinationConfigurations = value;
+        this.BackingStore.set("combinationConfigurations", value);
     }
     /**
      * Sets the createdDateTime property value. The datetime when this policy was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The human-readable description of this policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the modifiedDateTime property value. The datetime when this policy was last modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.BackingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the policyType property value. The policyType property
      * @param value Value to set for the policyType property.
      */
     public void setPolicyType(@jakarta.annotation.Nullable final AuthenticationStrengthPolicyType value) {
-        this.policyType = value;
+        this.BackingStore.set("policyType", value);
     }
     /**
      * Sets the requirementsSatisfied property value. The requirementsSatisfied property
      * @param value Value to set for the requirementsSatisfied property.
      */
     public void setRequirementsSatisfied(@jakarta.annotation.Nullable final EnumSet<AuthenticationStrengthRequirements> value) {
-        this.requirementsSatisfied = value;
+        this.BackingStore.set("requirementsSatisfied", value);
     }
 }

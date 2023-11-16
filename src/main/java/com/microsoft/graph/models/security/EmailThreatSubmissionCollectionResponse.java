@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<EmailThreatSubmission> value;
-    /**
-     * Instantiates a new emailThreatSubmissionCollectionResponse and sets the default values.
+     * Instantiates a new EmailThreatSubmissionCollectionResponse and sets the default values.
      */
     public EmailThreatSubmissionCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailThreatSubmissionCollectionResponse
+     * @return a EmailThreatSubmissionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EmailThreatSubmissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a emailThreatSubmission
+     * @return a java.util.List<EmailThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<EmailThreatSubmission> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

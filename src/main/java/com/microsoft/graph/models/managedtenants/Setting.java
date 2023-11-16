@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Setting implements AdditionalDataHolder, Parsable {
+public class Setting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The display name for the setting. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The value for the setting serialized as string of JSON. Required. Read-only.
-     */
-    private String jsonValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
-     */
-    private Boolean overwriteAllowed;
-    /**
-     * The settingId property
-     */
-    private String settingId;
-    /**
-     * The valueType property
-     */
-    private ManagementParameterValueType valueType;
-    /**
-     * Instantiates a new setting and sets the default values.
+     * Instantiates a new Setting and sets the default values.
      */
     public Setting() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a setting
+     * @return a Setting
      */
     @jakarta.annotation.Nonnull
     public static Setting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +34,33 @@ public class Setting implements AdditionalDataHolder, Parsable {
         return new Setting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the displayName property value. The display name for the setting. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +79,43 @@ public class Setting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jsonValue property value. The value for the setting serialized as string of JSON. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJsonValue() {
-        return this.jsonValue;
+        return this.BackingStore.get("jsonValue");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOverwriteAllowed() {
-        return this.overwriteAllowed;
+        return this.BackingStore.get("overwriteAllowed");
     }
     /**
      * Gets the settingId property value. The settingId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingId() {
-        return this.settingId;
+        return this.BackingStore.get("settingId");
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a managementParameterValueType
+     * @return a ManagementParameterValueType
      */
     @jakarta.annotation.Nullable
     public ManagementParameterValueType getValueType() {
-        return this.valueType;
+        return this.BackingStore.get("valueType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class Setting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the displayName property value. The display name for the setting. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the jsonValue property value. The value for the setting serialized as string of JSON. Required. Read-only.
      * @param value Value to set for the jsonValue property.
      */
     public void setJsonValue(@jakarta.annotation.Nullable final String value) {
-        this.jsonValue = value;
+        this.BackingStore.set("jsonValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
      * @param value Value to set for the overwriteAllowed property.
      */
     public void setOverwriteAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.overwriteAllowed = value;
+        this.BackingStore.set("overwriteAllowed", value);
     }
     /**
      * Sets the settingId property value. The settingId property
      * @param value Value to set for the settingId property.
      */
     public void setSettingId(@jakarta.annotation.Nullable final String value) {
-        this.settingId = value;
+        this.BackingStore.set("settingId", value);
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final ManagementParameterValueType value) {
-        this.valueType = value;
+        this.BackingStore.set("valueType", value);
     }
 }

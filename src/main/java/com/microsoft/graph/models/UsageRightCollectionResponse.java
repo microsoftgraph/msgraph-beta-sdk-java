@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UsageRightCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UsageRight> value;
-    /**
-     * Instantiates a new usageRightCollectionResponse and sets the default values.
+     * Instantiates a new UsageRightCollectionResponse and sets the default values.
      */
     public UsageRightCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UsageRightCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a usageRightCollectionResponse
+     * @return a UsageRightCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UsageRightCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UsageRightCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a usageRight
+     * @return a java.util.List<UsageRight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UsageRight> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UsageRightCollectionResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UsageRight> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

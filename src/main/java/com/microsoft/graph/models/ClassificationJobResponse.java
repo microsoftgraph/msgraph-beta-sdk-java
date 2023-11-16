@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClassificationJobResponse extends JobResponseBase implements Parsable {
     /**
-     * The result property
-     */
-    private DetectedSensitiveContentWrapper result;
-    /**
-     * Instantiates a new classificationJobResponse and sets the default values.
+     * Instantiates a new ClassificationJobResponse and sets the default values.
      */
     public ClassificationJobResponse() {
         super();
@@ -21,7 +17,7 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a classificationJobResponse
+     * @return a ClassificationJobResponse
      */
     @jakarta.annotation.Nonnull
     public static ClassificationJobResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
     }
     /**
      * Gets the result property value. The result property
-     * @return a detectedSensitiveContentWrapper
+     * @return a DetectedSensitiveContentWrapper
      */
     @jakarta.annotation.Nullable
     public DetectedSensitiveContentWrapper getResult() {
-        return this.result;
+        return this.BackingStore.get("result");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final DetectedSensitiveContentWrapper value) {
-        this.result = value;
+        this.BackingStore.set("result", value);
     }
 }

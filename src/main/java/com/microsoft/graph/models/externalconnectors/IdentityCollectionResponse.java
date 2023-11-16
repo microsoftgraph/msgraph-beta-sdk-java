@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Identity> value;
-    /**
-     * Instantiates a new identityCollectionResponse and sets the default values.
+     * Instantiates a new IdentityCollectionResponse and sets the default values.
      */
     public IdentityCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class IdentityCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityCollectionResponse
+     * @return a IdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IdentityCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class IdentityCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a identity
+     * @return a java.util.List<Identity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Identity> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class IdentityCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Identity> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

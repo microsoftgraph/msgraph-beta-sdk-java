@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderApplicationControlSupplementalPolicyAssignment extends Entity implements Parsable {
     /**
-     * The target group assignment defined by the admin.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyAssignment and sets the default values.
+     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyAssignment and sets the default values.
      */
     public WindowsDefenderApplicationControlSupplementalPolicyAssignment() {
         super();
@@ -24,7 +20,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignment exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignment exten
     }
     /**
      * Gets the target property value. The target group assignment defined by the admin.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignment exten
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
 }

@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     /**
-     * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
-     */
-    private UnifiedRoleManagementAlertConfiguration alertConfiguration;
-    /**
-     * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
-     */
-    private UnifiedRoleManagementAlertDefinition alertDefinition;
-    /**
-     * The identifier of an alert definition. Supports $filter (eq, ne).
-     */
-    private String alertDefinitionId;
-    /**
-     * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
-     */
-    private java.util.List<UnifiedRoleManagementAlertIncident> alertIncidents;
-    /**
-     * The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
-     */
-    private Integer incidentCount;
-    /**
-     * false by default. true if the alert is active.
-     */
-    private Boolean isActive;
-    /**
-     * The date time when the alert configuration was updated or new incidents generated.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The date time when the tenant was last scanned for incidents that trigger this alert.
-     */
-    private OffsetDateTime lastScannedDateTime;
-    /**
-     * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     */
-    private String scopeId;
-    /**
-     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
-     */
-    private String scopeType;
-    /**
-     * Instantiates a new unifiedRoleManagementAlert and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlert and sets the default values.
      */
     public UnifiedRoleManagementAlert() {
         super();
@@ -58,7 +18,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlert
+     * @return a UnifiedRoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,36 +26,36 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
         return new UnifiedRoleManagementAlert();
     }
     /**
-     * Gets the alertConfiguration property value. The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
-     * @return a unifiedRoleManagementAlertConfiguration
+     * Gets the alertConfiguration property value. The configuration of the alert in PIM for Microsoft Entra roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
+     * @return a UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertConfiguration getAlertConfiguration() {
-        return this.alertConfiguration;
+        return this.BackingStore.get("alertConfiguration");
     }
     /**
      * Gets the alertDefinition property value. Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinition getAlertDefinition() {
-        return this.alertDefinition;
+        return this.BackingStore.get("alertDefinition");
     }
     /**
      * Gets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertDefinitionId() {
-        return this.alertDefinitionId;
+        return this.BackingStore.get("alertDefinitionId");
     }
     /**
-     * Gets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
-     * @return a unifiedRoleManagementAlertIncident
+     * Gets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Microsoft Entra roles in the tenant. Supports $expand.
+     * @return a java.util.List<UnifiedRoleManagementAlertIncident>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertIncident> getAlertIncidents() {
-        return this.alertIncidents;
+        return this.BackingStore.get("alertIncidents");
     }
     /**
      * The deserialization information for the current model
@@ -118,19 +78,19 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the incidentCount property value. The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIncidentCount() {
-        return this.incidentCount;
+        return this.BackingStore.get("incidentCount");
     }
     /**
      * Gets the isActive property value. false by default. true if the alert is active.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time when the alert configuration was updated or new incidents generated.
@@ -138,7 +98,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the lastScannedDateTime property value. The date time when the tenant was last scanned for incidents that trigger this alert.
@@ -146,23 +106,23 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScannedDateTime() {
-        return this.lastScannedDateTime;
+        return this.BackingStore.get("lastScannedDateTime");
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
-        return this.scopeId;
+        return this.BackingStore.get("scopeId");
     }
     /**
-     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
-     * @return a string
+     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
-        return this.scopeType;
+        return this.BackingStore.get("scopeType");
     }
     /**
      * Serializes information the current object
@@ -183,73 +143,73 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
         writer.writeStringValue("scopeType", this.getScopeType());
     }
     /**
-     * Sets the alertConfiguration property value. The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
+     * Sets the alertConfiguration property value. The configuration of the alert in PIM for Microsoft Entra roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
      * @param value Value to set for the alertConfiguration property.
      */
     public void setAlertConfiguration(@jakarta.annotation.Nullable final UnifiedRoleManagementAlertConfiguration value) {
-        this.alertConfiguration = value;
+        this.BackingStore.set("alertConfiguration", value);
     }
     /**
      * Sets the alertDefinition property value. Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
      * @param value Value to set for the alertDefinition property.
      */
     public void setAlertDefinition(@jakarta.annotation.Nullable final UnifiedRoleManagementAlertDefinition value) {
-        this.alertDefinition = value;
+        this.BackingStore.set("alertDefinition", value);
     }
     /**
      * Sets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
      * @param value Value to set for the alertDefinitionId property.
      */
     public void setAlertDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.alertDefinitionId = value;
+        this.BackingStore.set("alertDefinitionId", value);
     }
     /**
-     * Sets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+     * Sets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Microsoft Entra roles in the tenant. Supports $expand.
      * @param value Value to set for the alertIncidents property.
      */
     public void setAlertIncidents(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertIncident> value) {
-        this.alertIncidents = value;
+        this.BackingStore.set("alertIncidents", value);
     }
     /**
      * Sets the incidentCount property value. The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
      * @param value Value to set for the incidentCount property.
      */
     public void setIncidentCount(@jakarta.annotation.Nullable final Integer value) {
-        this.incidentCount = value;
+        this.BackingStore.set("incidentCount", value);
     }
     /**
      * Sets the isActive property value. false by default. true if the alert is active.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time when the alert configuration was updated or new incidents generated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the lastScannedDateTime property value. The date time when the tenant was last scanned for incidents that trigger this alert.
      * @param value Value to set for the lastScannedDateTime property.
      */
     public void setLastScannedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastScannedDateTime = value;
+        this.BackingStore.set("lastScannedDateTime", value);
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
-        this.scopeId = value;
+        this.BackingStore.set("scopeId", value);
     }
     /**
-     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
-        this.scopeType = value;
+        this.BackingStore.set("scopeType", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotPolicyStatusDetailCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value;
-    /**
-     * Instantiates a new deviceManagementAutopilotPolicyStatusDetailCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementAutopilotPolicyStatusDetailCollectionResponse and sets the default values.
      */
     public DeviceManagementAutopilotPolicyStatusDetailCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionResponse exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAutopilotPolicyStatusDetailCollectionResponse
+     * @return a DeviceManagementAutopilotPolicyStatusDetailCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotPolicyStatusDetailCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionResponse exten
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementAutopilotPolicyStatusDetail
+     * @return a java.util.List<DeviceManagementAutopilotPolicyStatusDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotPolicyStatusDetail> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionResponse exten
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

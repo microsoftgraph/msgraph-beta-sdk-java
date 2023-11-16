@@ -11,47 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatSubmission extends Entity implements Parsable {
     /**
-     * Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
-     */
-    private SubmissionAdminReview adminReview;
-    /**
-     * The category property
-     */
-    private SubmissionCategory category;
-    /**
-     * Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
-     */
-    private SubmissionClientSource clientSource;
-    /**
-     * Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
-     */
-    private SubmissionContentType contentType;
-    /**
-     * Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
-     */
-    private SubmissionUserIdentity createdBy;
-    /**
-     * Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Specifies the result of the analysis performed by Microsoft.
-     */
-    private SubmissionResult result;
-    /**
-     * Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
-     */
-    private SubmissionSource source;
-    /**
-     * Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
-     */
-    private LongRunningOperationStatus status;
-    /**
-     * Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new threatSubmission and sets the default values.
+     * Instantiates a new ThreatSubmission and sets the default values.
      */
     public ThreatSubmission() {
         super();
@@ -59,7 +19,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatSubmission
+     * @return a ThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public static ThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,44 +40,44 @@ public class ThreatSubmission extends Entity implements Parsable {
         return new ThreatSubmission();
     }
     /**
-     * Gets the adminReview property value. Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
-     * @return a submissionAdminReview
+     * Gets the adminReview property value. Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
+     * @return a SubmissionAdminReview
      */
     @jakarta.annotation.Nullable
     public SubmissionAdminReview getAdminReview() {
-        return this.adminReview;
+        return this.BackingStore.get("adminReview");
     }
     /**
      * Gets the category property value. The category property
-     * @return a submissionCategory
+     * @return a SubmissionCategory
      */
     @jakarta.annotation.Nullable
     public SubmissionCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
-     * @return a submissionClientSource
+     * @return a SubmissionClientSource
      */
     @jakarta.annotation.Nullable
     public SubmissionClientSource getClientSource() {
-        return this.clientSource;
+        return this.BackingStore.get("clientSource");
     }
     /**
      * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
-     * @return a submissionContentType
+     * @return a SubmissionContentType
      */
     @jakarta.annotation.Nullable
     public SubmissionContentType getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
-     * @return a submissionUserIdentity
+     * @return a SubmissionUserIdentity
      */
     @jakarta.annotation.Nullable
     public SubmissionUserIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
@@ -125,7 +85,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -148,35 +108,35 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the result property value. Specifies the result of the analysis performed by Microsoft.
-     * @return a submissionResult
+     * @return a SubmissionResult
      */
     @jakarta.annotation.Nullable
     public SubmissionResult getResult() {
-        return this.result;
+        return this.BackingStore.get("result");
     }
     /**
      * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
-     * @return a submissionSource
+     * @return a SubmissionSource
      */
     @jakarta.annotation.Nullable
     public SubmissionSource getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
-     * @return a longRunningOperationStatus
+     * @return a LongRunningOperationStatus
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
-     * @return a string
+     * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -197,73 +157,73 @@ public class ThreatSubmission extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the adminReview property value. Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
+     * Sets the adminReview property value. Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
      * @param value Value to set for the adminReview property.
      */
     public void setAdminReview(@jakarta.annotation.Nullable final SubmissionAdminReview value) {
-        this.adminReview = value;
+        this.BackingStore.set("adminReview", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final SubmissionCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
      * @param value Value to set for the clientSource property.
      */
     public void setClientSource(@jakarta.annotation.Nullable final SubmissionClientSource value) {
-        this.clientSource = value;
+        this.BackingStore.set("clientSource", value);
     }
     /**
      * Sets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final SubmissionContentType value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final SubmissionUserIdentity value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the result property value. Specifies the result of the analysis performed by Microsoft.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final SubmissionResult value) {
-        this.result = value;
+        this.BackingStore.set("result", value);
     }
     /**
      * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SubmissionSource value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
     /**
      * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
+     * Sets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

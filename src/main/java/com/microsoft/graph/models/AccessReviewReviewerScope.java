@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewReviewerScope extends AccessReviewScope implements Parsable {
     /**
-     * The query specifying who will be the reviewer.
-     */
-    private String query;
-    /**
-     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
-     */
-    private String queryRoot;
-    /**
-     * The type of query. Examples include MicrosoftGraph and ARM.
-     */
-    private String queryType;
-    /**
-     * Instantiates a new accessReviewReviewerScope and sets the default values.
+     * Instantiates a new AccessReviewReviewerScope and sets the default values.
      */
     public AccessReviewReviewerScope() {
         super();
@@ -30,7 +18,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewReviewerScope
+     * @return a AccessReviewReviewerScope
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewReviewerScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
     }
     /**
      * Gets the query property value. The query specifying who will be the reviewer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuery() {
-        return this.query;
+        return this.BackingStore.get("query");
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryRoot() {
-        return this.queryRoot;
+        return this.BackingStore.get("queryRoot");
     }
     /**
      * Gets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryType() {
-        return this.queryType;
+        return this.BackingStore.get("queryType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
      * @param value Value to set for the query property.
      */
     public void setQuery(@jakarta.annotation.Nullable final String value) {
-        this.query = value;
+        this.BackingStore.set("query", value);
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
      * @param value Value to set for the queryRoot property.
      */
     public void setQueryRoot(@jakarta.annotation.Nullable final String value) {
-        this.queryRoot = value;
+        this.BackingStore.set("queryRoot", value);
     }
     /**
      * Sets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
      * @param value Value to set for the queryType property.
      */
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
-        this.queryType = value;
+        this.BackingStore.set("queryType", value);
     }
 }

@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProvider extends Entity implements Parsable {
     /**
-     * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
-     */
-    private String clientId;
-    /**
-     * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
-     */
-    private String clientSecret;
-    /**
-     * The display name of the identity provider. Not nullable.
-     */
-    private String name;
-    /**
-     * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
-     */
-    private String type;
-    /**
-     * Instantiates a new identityProvider and sets the default values.
+     * Instantiates a new IdentityProvider and sets the default values.
      */
     public IdentityProvider() {
         super();
@@ -33,7 +17,7 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityProvider
+     * @return a IdentityProvider
      */
     @jakarta.annotation.Nonnull
     public static IdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +33,19 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
-        return this.clientId;
+        return this.BackingStore.get("clientId");
     }
     /**
      * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
-        return this.clientSecret;
+        return this.BackingStore.get("clientSecret");
     }
     /**
      * The deserialization information for the current model
@@ -78,19 +62,19 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the identity provider. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -109,27 +93,27 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
-        this.clientId = value;
+        this.BackingStore.set("clientId", value);
     }
     /**
      * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
-        this.clientSecret = value;
+        this.BackingStore.set("clientSecret", value);
     }
     /**
      * Sets the name property value. The display name of the identity provider. Not nullable.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LanguageProficiency extends ItemFacet implements Parsable {
     /**
-     * Contains the long-form name for the language.
-     */
-    private String displayName;
-    /**
-     * The proficiency property
-     */
-    private LanguageProficiencyLevel proficiency;
-    /**
-     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     */
-    private LanguageProficiencyLevel reading;
-    /**
-     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     */
-    private LanguageProficiencyLevel spoken;
-    /**
-     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
-     */
-    private String tag;
-    /**
-     * The thumbnailUrl property
-     */
-    private String thumbnailUrl;
-    /**
-     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     */
-    private LanguageProficiencyLevel written;
-    /**
-     * Instantiates a new languageProficiency and sets the default values.
+     * Instantiates a new LanguageProficiency and sets the default values.
      */
     public LanguageProficiency() {
         super();
@@ -46,7 +18,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a languageProficiency
+     * @return a LanguageProficiency
      */
     @jakarta.annotation.Nonnull
     public static LanguageProficiency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains the long-form name for the language.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -79,51 +51,51 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the proficiency property value. The proficiency property
-     * @return a languageProficiencyLevel
+     * @return a LanguageProficiencyLevel
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getProficiency() {
-        return this.proficiency;
+        return this.BackingStore.get("proficiency");
     }
     /**
      * Gets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a languageProficiencyLevel
+     * @return a LanguageProficiencyLevel
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getReading() {
-        return this.reading;
+        return this.BackingStore.get("reading");
     }
     /**
      * Gets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a languageProficiencyLevel
+     * @return a LanguageProficiencyLevel
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getSpoken() {
-        return this.spoken;
+        return this.BackingStore.get("spoken");
     }
     /**
      * Gets the tag property value. Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTag() {
-        return this.tag;
+        return this.BackingStore.get("tag");
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
-        return this.thumbnailUrl;
+        return this.BackingStore.get("thumbnailUrl");
     }
     /**
      * Gets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a languageProficiencyLevel
+     * @return a LanguageProficiencyLevel
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getWritten() {
-        return this.written;
+        return this.BackingStore.get("written");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the proficiency property value. The proficiency property
      * @param value Value to set for the proficiency property.
      */
     public void setProficiency(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
-        this.proficiency = value;
+        this.BackingStore.set("proficiency", value);
     }
     /**
      * Sets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the reading property.
      */
     public void setReading(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
-        this.reading = value;
+        this.BackingStore.set("reading", value);
     }
     /**
      * Sets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the spoken property.
      */
     public void setSpoken(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
-        this.spoken = value;
+        this.BackingStore.set("spoken", value);
     }
     /**
      * Sets the tag property value. Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
      * @param value Value to set for the tag property.
      */
     public void setTag(@jakarta.annotation.Nullable final String value) {
-        this.tag = value;
+        this.BackingStore.set("tag", value);
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      */
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailUrl = value;
+        this.BackingStore.set("thumbnailUrl", value);
     }
     /**
      * Sets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the written property.
      */
     public void setWritten(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
-        this.written = value;
+        this.BackingStore.set("written", value);
     }
 }

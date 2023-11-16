@@ -13,15 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule implements Parsable {
     /**
-     * At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
-     */
-    private LocalTime time;
-    /**
-     * Indicate if the time is Utc or client local time.
-     */
-    private Boolean useUtc;
-    /**
-     * Instantiates a new deviceHealthScriptTimeSchedule and sets the default values.
+     * Instantiates a new DeviceHealthScriptTimeSchedule and sets the default values.
      */
     public DeviceHealthScriptTimeSchedule() {
         super();
@@ -30,7 +22,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptTimeSchedule
+     * @return a DeviceHealthScriptTimeSchedule
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptTimeSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,15 +54,15 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      */
     @jakarta.annotation.Nullable
     public LocalTime getTime() {
-        return this.time;
+        return this.BackingStore.get("time");
     }
     /**
      * Gets the useUtc property value. Indicate if the time is Utc or client local time.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseUtc() {
-        return this.useUtc;
+        return this.BackingStore.get("useUtc");
     }
     /**
      * Serializes information the current object
@@ -87,13 +79,13 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * @param value Value to set for the time property.
      */
     public void setTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.time = value;
+        this.BackingStore.set("time", value);
     }
     /**
      * Sets the useUtc property value. Indicate if the time is Utc or client local time.
      * @param value Value to set for the useUtc property.
      */
     public void setUseUtc(@jakarta.annotation.Nullable final Boolean value) {
-        this.useUtc = value;
+        this.BackingStore.set("useUtc", value);
     }
 }

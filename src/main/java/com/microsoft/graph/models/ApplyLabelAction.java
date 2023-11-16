@@ -10,23 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplyLabelAction extends InformationProtectionAction implements Parsable {
     /**
-     * The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
-     */
-    private java.util.List<InformationProtectionAction> actions;
-    /**
-     * The actionSource property
-     */
-    private ActionSource actionSource;
-    /**
-     * Object that describes the details of the label to apply.
-     */
-    private LabelDetails label;
-    /**
-     * If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
-     */
-    private java.util.List<UUID> responsibleSensitiveTypeIds;
-    /**
-     * Instantiates a new applyLabelAction and sets the default values.
+     * Instantiates a new ApplyLabelAction and sets the default values.
      */
     public ApplyLabelAction() {
         super();
@@ -35,7 +19,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applyLabelAction
+     * @return a ApplyLabelAction
      */
     @jakarta.annotation.Nonnull
     public static ApplyLabelAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,19 +28,19 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the actions property value. The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
-     * @return a informationProtectionAction
+     * @return a java.util.List<InformationProtectionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
-        return this.actions;
+        return this.BackingStore.get("actions");
     }
     /**
      * Gets the actionSource property value. The actionSource property
-     * @return a actionSource
+     * @return a ActionSource
      */
     @jakarta.annotation.Nullable
     public ActionSource getActionSource() {
-        return this.actionSource;
+        return this.BackingStore.get("actionSource");
     }
     /**
      * The deserialization information for the current model
@@ -73,19 +57,19 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the label property value. Object that describes the details of the label to apply.
-     * @return a labelDetails
+     * @return a LabelDetails
      */
     @jakarta.annotation.Nullable
     public LabelDetails getLabel() {
-        return this.label;
+        return this.BackingStore.get("label");
     }
     /**
      * Gets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getResponsibleSensitiveTypeIds() {
-        return this.responsibleSensitiveTypeIds;
+        return this.BackingStore.get("responsibleSensitiveTypeIds");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      * @param value Value to set for the actions property.
      */
     public void setActions(@jakarta.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
-        this.actions = value;
+        this.BackingStore.set("actions", value);
     }
     /**
      * Sets the actionSource property value. The actionSource property
      * @param value Value to set for the actionSource property.
      */
     public void setActionSource(@jakarta.annotation.Nullable final ActionSource value) {
-        this.actionSource = value;
+        this.BackingStore.set("actionSource", value);
     }
     /**
      * Sets the label property value. Object that describes the details of the label to apply.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final LabelDetails value) {
-        this.label = value;
+        this.BackingStore.set("label", value);
     }
     /**
      * Sets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      */
     public void setResponsibleSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.responsibleSensitiveTypeIds = value;
+        this.BackingStore.set("responsibleSensitiveTypeIds", value);
     }
 }

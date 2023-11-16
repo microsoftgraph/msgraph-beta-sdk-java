@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentDeviceState extends Entity implements Parsable {
     /**
-     * Device name that is being reported
-     */
-    private String deviceDisplayName;
-    /**
-     * Device id that is being reported
-     */
-    private String deviceId;
-    /**
-     * Last modified date time of an intent report
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * The user name that is being reported on a device
-     */
-    private String userName;
-    /**
-     * The user principal name that is being reported on a device
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new deviceManagementIntentDeviceState and sets the default values.
+     * Instantiates a new DeviceManagementIntentDeviceState and sets the default values.
      */
     public DeviceManagementIntentDeviceState() {
         super();
@@ -45,7 +21,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentDeviceState
+     * @return a DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +30,19 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the deviceDisplayName property value. Device name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.BackingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. Device id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -89,31 +65,31 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.BackingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the userName property value. The user name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.BackingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.BackingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. Device id that is being reported
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of an intent report
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.BackingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the userName property value. The user name that is being reported on a device
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.BackingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name that is being reported on a device
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

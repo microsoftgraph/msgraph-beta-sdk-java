@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDevicePerformanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsDevicePerformance> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsDevicePerformanceCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDevicePerformanceCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsDevicePerformanceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionResponse extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsDevicePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDevicePerformanceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionResponse extends 
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsDevicePerformance
+     * @return a java.util.List<UserExperienceAnalyticsDevicePerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDevicePerformance> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionResponse extends 
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDevicePerformance> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyTemplate extends Entity implements Parsable {
     /**
-     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
-     */
-    private MultiTenantOrganizationIdentitySyncPolicyTemplate multiTenantOrganizationIdentitySynchronization;
-    /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
-     */
-    private MultiTenantOrganizationPartnerConfigurationTemplate multiTenantOrganizationPartnerConfiguration;
-    /**
-     * Instantiates a new policyTemplate and sets the default values.
+     * Instantiates a new PolicyTemplate and sets the default values.
      */
     public PolicyTemplate() {
         super();
@@ -25,7 +17,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyTemplate
+     * @return a PolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public static PolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class PolicyTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the multiTenantOrganizationIdentitySynchronization property value. Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
-     * @return a multiTenantOrganizationIdentitySyncPolicyTemplate
+     * @return a MultiTenantOrganizationIdentitySyncPolicyTemplate
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate getMultiTenantOrganizationIdentitySynchronization() {
-        return this.multiTenantOrganizationIdentitySynchronization;
+        return this.BackingStore.get("multiTenantOrganizationIdentitySynchronization");
     }
     /**
      * Gets the multiTenantOrganizationPartnerConfiguration property value. Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
-     * @return a multiTenantOrganizationPartnerConfigurationTemplate
+     * @return a MultiTenantOrganizationPartnerConfigurationTemplate
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate getMultiTenantOrganizationPartnerConfiguration() {
-        return this.multiTenantOrganizationPartnerConfiguration;
+        return this.BackingStore.get("multiTenantOrganizationPartnerConfiguration");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the multiTenantOrganizationIdentitySynchronization property.
      */
     public void setMultiTenantOrganizationIdentitySynchronization(@jakarta.annotation.Nullable final MultiTenantOrganizationIdentitySyncPolicyTemplate value) {
-        this.multiTenantOrganizationIdentitySynchronization = value;
+        this.BackingStore.set("multiTenantOrganizationIdentitySynchronization", value);
     }
     /**
      * Sets the multiTenantOrganizationPartnerConfiguration property value. Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
      * @param value Value to set for the multiTenantOrganizationPartnerConfiguration property.
      */
     public void setMultiTenantOrganizationPartnerConfiguration(@jakarta.annotation.Nullable final MultiTenantOrganizationPartnerConfigurationTemplate value) {
-        this.multiTenantOrganizationPartnerConfiguration = value;
+        this.BackingStore.set("multiTenantOrganizationPartnerConfiguration", value);
     }
 }

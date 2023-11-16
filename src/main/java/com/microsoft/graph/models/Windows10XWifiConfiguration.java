@@ -13,19 +13,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileBase implements Parsable {
     /**
-     * ID to the Authentication Certificate
-     */
-    private UUID authenticationCertificateId;
-    /**
-     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
-     */
-    private byte[] customXml;
-    /**
-     * Custom Xml file name.
-     */
-    private String customXmlFileName;
-    /**
-     * Instantiates a new windows10XWifiConfiguration and sets the default values.
+     * Instantiates a new Windows10XWifiConfiguration and sets the default values.
      */
     public Windows10XWifiConfiguration() {
         super();
@@ -34,7 +22,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10XWifiConfiguration
+     * @return a Windows10XWifiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10XWifiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,23 +35,23 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      */
     @jakarta.annotation.Nullable
     public UUID getAuthenticationCertificateId() {
-        return this.authenticationCertificateId;
+        return this.BackingStore.get("authenticationCertificateId");
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomXml() {
-        return this.customXml;
+        return this.BackingStore.get("customXml");
     }
     /**
      * Gets the customXmlFileName property value. Custom Xml file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomXmlFileName() {
-        return this.customXmlFileName;
+        return this.BackingStore.get("customXmlFileName");
     }
     /**
      * The deserialization information for the current model
@@ -93,20 +81,20 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * @param value Value to set for the authenticationCertificateId property.
      */
     public void setAuthenticationCertificateId(@jakarta.annotation.Nullable final UUID value) {
-        this.authenticationCertificateId = value;
+        this.BackingStore.set("authenticationCertificateId", value);
     }
     /**
      * Sets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
      * @param value Value to set for the customXml property.
      */
     public void setCustomXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.customXml = value;
+        this.BackingStore.set("customXml", value);
     }
     /**
      * Sets the customXmlFileName property value. Custom Xml file name.
      * @param value Value to set for the customXmlFileName property.
      */
     public void setCustomXmlFileName(@jakarta.annotation.Nullable final String value) {
-        this.customXmlFileName = value;
+        this.BackingStore.set("customXmlFileName", value);
     }
 }

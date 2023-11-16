@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SourceSystemDefinition extends Entity implements Parsable {
     /**
-     * The name of the source system. Maximum supported length is 100 characters.
-     */
-    private String displayName;
-    /**
-     * A collection of user matching settings by roleGroup.
-     */
-    private java.util.List<UserMatchingSetting> userMatchingSettings;
-    /**
-     * The name of the vendor who supplies the source system. Maximum supported length is 100 characters.
-     */
-    private String vendor;
-    /**
-     * Instantiates a new sourceSystemDefinition and sets the default values.
+     * Instantiates a new SourceSystemDefinition and sets the default values.
      */
     public SourceSystemDefinition() {
         super();
@@ -30,7 +18,7 @@ public class SourceSystemDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sourceSystemDefinition
+     * @return a SourceSystemDefinition
      */
     @jakarta.annotation.Nonnull
     public static SourceSystemDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class SourceSystemDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the source system. Maximum supported length is 100 characters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class SourceSystemDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the userMatchingSettings property value. A collection of user matching settings by roleGroup.
-     * @return a userMatchingSetting
+     * @return a java.util.List<UserMatchingSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserMatchingSetting> getUserMatchingSettings() {
-        return this.userMatchingSettings;
+        return this.BackingStore.get("userMatchingSettings");
     }
     /**
      * Gets the vendor property value. The name of the vendor who supplies the source system. Maximum supported length is 100 characters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
-        return this.vendor;
+        return this.BackingStore.get("vendor");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the userMatchingSettings property value. A collection of user matching settings by roleGroup.
      * @param value Value to set for the userMatchingSettings property.
      */
     public void setUserMatchingSettings(@jakarta.annotation.Nullable final java.util.List<UserMatchingSetting> value) {
-        this.userMatchingSettings = value;
+        this.BackingStore.set("userMatchingSettings", value);
     }
     /**
      * Sets the vendor property value. The name of the vendor who supplies the source system. Maximum supported length is 100 characters.
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.vendor = value;
+        this.BackingStore.set("vendor", value);
     }
 }

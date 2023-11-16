@@ -10,87 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrgContact extends DirectoryObject implements Parsable {
     /**
-     * Postal addresses for this organizational contact. For now a contact can only have one physical address.
-     */
-    private java.util.List<PhysicalOfficeAddress> addresses;
-    /**
-     * Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String companyName;
-    /**
-     * The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String department;
-    /**
-     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> directReports;
-    /**
-     * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
-     */
-    private String displayName;
-    /**
-     * First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String givenName;
-    /**
-     * Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String jobTitle;
-    /**
-     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String mail;
-    /**
-     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     */
-    private String mailNickname;
-    /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
-     */
-    private DirectoryObject manager;
-    /**
-     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> memberOf;
-    /**
-     * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
-     */
-    private OffsetDateTime onPremisesLastSyncDateTime;
-    /**
-     * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
-     */
-    private java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
-    /**
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
-     */
-    private Boolean onPremisesSyncEnabled;
-    /**
-     * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
-     */
-    private java.util.List<Phone> phones;
-    /**
-     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
-     */
-    private java.util.List<String> proxyAddresses;
-    /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an orgContact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
-     */
-    private java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
-    /**
-     * Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values)
-     */
-    private String surname;
-    /**
-     * The transitiveMemberOf property
-     */
-    private java.util.List<DirectoryObject> transitiveMemberOf;
-    /**
-     * The transitive reports for a contact. Read-only.
-     */
-    private java.util.List<DirectoryObject> transitiveReports;
-    /**
-     * Instantiates a new orgContact and sets the default values.
+     * Instantiates a new OrgContact and sets the default values.
      */
     public OrgContact() {
         super();
@@ -99,7 +19,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a orgContact
+     * @return a OrgContact
      */
     @jakarta.annotation.Nonnull
     public static OrgContact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -108,43 +28,43 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
-     * @return a physicalOfficeAddress
+     * @return a java.util.List<PhysicalOfficeAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalOfficeAddress> getAddresses() {
-        return this.addresses;
+        return this.BackingStore.get("addresses");
     }
     /**
      * Gets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
-        return this.companyName;
+        return this.BackingStore.get("companyName");
     }
     /**
      * Gets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
-        return this.department;
+        return this.BackingStore.get("department");
     }
     /**
      * Gets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectReports() {
-        return this.directReports;
+        return this.BackingStore.get("directReports");
     }
     /**
      * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -177,51 +97,51 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
-        return this.givenName;
+        return this.BackingStore.get("givenName");
     }
     /**
      * Gets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
-        return this.jobTitle;
+        return this.BackingStore.get("jobTitle");
     }
     /**
      * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMail() {
-        return this.mail;
+        return this.BackingStore.get("mail");
     }
     /**
      * Gets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
-        return this.mailNickname;
+        return this.BackingStore.get("mailNickname");
     }
     /**
      * Gets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getManager() {
-        return this.manager;
+        return this.BackingStore.get("manager");
     }
     /**
      * Gets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
-        return this.memberOf;
+        return this.BackingStore.get("memberOf");
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
@@ -229,71 +149,71 @@ public class OrgContact extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
-        return this.onPremisesLastSyncDateTime;
+        return this.BackingStore.get("onPremisesLastSyncDateTime");
     }
     /**
      * Gets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
-     * @return a onPremisesProvisioningError
+     * @return a java.util.List<OnPremisesProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
-        return this.onPremisesProvisioningErrors;
+        return this.BackingStore.get("onPremisesProvisioningErrors");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
-        return this.onPremisesSyncEnabled;
+        return this.BackingStore.get("onPremisesSyncEnabled");
     }
     /**
      * Gets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this.phones;
+        return this.BackingStore.get("phones");
     }
     /**
      * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
-        return this.proxyAddresses;
+        return this.BackingStore.get("proxyAddresses");
     }
     /**
      * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an orgContact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
-     * @return a serviceProvisioningError
+     * @return a java.util.List<ServiceProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
-        return this.serviceProvisioningErrors;
+        return this.BackingStore.get("serviceProvisioningErrors");
     }
     /**
      * Gets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
-        return this.surname;
+        return this.BackingStore.get("surname");
     }
     /**
      * Gets the transitiveMemberOf property value. The transitiveMemberOf property
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
-        return this.transitiveMemberOf;
+        return this.BackingStore.get("transitiveMemberOf");
     }
     /**
      * Gets the transitiveReports property value. The transitive reports for a contact. Read-only.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveReports() {
-        return this.transitiveReports;
+        return this.BackingStore.get("transitiveReports");
     }
     /**
      * Serializes information the current object
@@ -328,139 +248,139 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the addresses property.
      */
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalOfficeAddress> value) {
-        this.addresses = value;
+        this.BackingStore.set("addresses", value);
     }
     /**
      * Sets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
-        this.companyName = value;
+        this.BackingStore.set("companyName", value);
     }
     /**
      * Sets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
-        this.department = value;
+        this.BackingStore.set("department", value);
     }
     /**
      * Sets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
      * @param value Value to set for the directReports property.
      */
     public void setDirectReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.directReports = value;
+        this.BackingStore.set("directReports", value);
     }
     /**
      * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
-        this.givenName = value;
+        this.BackingStore.set("givenName", value);
     }
     /**
      * Sets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
-        this.jobTitle = value;
+        this.BackingStore.set("jobTitle", value);
     }
     /**
      * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
-        this.mail = value;
+        this.BackingStore.set("mail", value);
     }
     /**
      * Sets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
-        this.mailNickname = value;
+        this.BackingStore.set("mailNickname", value);
     }
     /**
      * Sets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.manager = value;
+        this.BackingStore.set("manager", value);
     }
     /**
      * Sets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the memberOf property.
      */
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.memberOf = value;
+        this.BackingStore.set("memberOf", value);
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      */
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.onPremisesLastSyncDateTime = value;
+        this.BackingStore.set("onPremisesLastSyncDateTime", value);
     }
     /**
      * Sets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
      * @param value Value to set for the onPremisesProvisioningErrors property.
      */
     public void setOnPremisesProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
-        this.onPremisesProvisioningErrors = value;
+        this.BackingStore.set("onPremisesProvisioningErrors", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.onPremisesSyncEnabled = value;
+        this.BackingStore.set("onPremisesSyncEnabled", value);
     }
     /**
      * Sets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the phones property.
      */
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
-        this.phones = value;
+        this.BackingStore.set("phones", value);
     }
     /**
      * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
      */
     public void setProxyAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.proxyAddresses = value;
+        this.BackingStore.set("proxyAddresses", value);
     }
     /**
      * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an orgContact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param value Value to set for the serviceProvisioningErrors property.
      */
     public void setServiceProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {
-        this.serviceProvisioningErrors = value;
+        this.BackingStore.set("serviceProvisioningErrors", value);
     }
     /**
      * Sets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values)
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
-        this.surname = value;
+        this.BackingStore.set("surname", value);
     }
     /**
      * Sets the transitiveMemberOf property value. The transitiveMemberOf property
      * @param value Value to set for the transitiveMemberOf property.
      */
     public void setTransitiveMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.transitiveMemberOf = value;
+        this.BackingStore.set("transitiveMemberOf", value);
     }
     /**
      * Sets the transitiveReports property value. The transitive reports for a contact. Read-only.
      * @param value Value to set for the transitiveReports property.
      */
     public void setTransitiveReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.transitiveReports = value;
+        this.BackingStore.set("transitiveReports", value);
     }
 }

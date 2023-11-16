@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrivilegedAccess> value;
-    /**
-     * Instantiates a new privilegedAccessCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedAccessCollectionResponse and sets the default values.
      */
     public PrivilegedAccessCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrivilegedAccessCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessCollectionResponse
+     * @return a PrivilegedAccessCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrivilegedAccessCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedAccess
+     * @return a java.util.List<PrivilegedAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccess> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedAccessCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrivilegedAccess> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

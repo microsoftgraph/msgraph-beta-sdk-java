@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Website implements AdditionalDataHolder, Parsable {
+public class Website implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The URL of the website.
-     */
-    private String address;
-    /**
-     * The display name of the web site.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Possible values are: other, home, work, blog, profile.
-     */
-    private WebsiteType type;
-    /**
-     * Instantiates a new website and sets the default values.
+     * Instantiates a new Website and sets the default values.
      */
     public Website() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a website
+     * @return a Website
      */
     @jakarta.annotation.Nonnull
     public static Website createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +34,41 @@ public class Website implements AdditionalDataHolder, Parsable {
         return new Website();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The URL of the website.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.BackingStore.get("address");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the displayName property value. The display name of the web site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +85,19 @@ public class Website implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the type property value. Possible values are: other, home, work, blog, profile.
-     * @return a websiteType
+     * @return a WebsiteType
      */
     @jakarta.annotation.Nullable
     public WebsiteType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class Website implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the address property value. The URL of the website.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.BackingStore.set("address", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the displayName property value. The display name of the web site.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the type property value. Possible values are: other, home, work, blog, profile.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final WebsiteType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

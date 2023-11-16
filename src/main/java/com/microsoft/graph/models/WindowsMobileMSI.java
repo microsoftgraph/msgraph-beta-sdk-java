@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
-     * The command line.
-     */
-    private String commandLine;
-    /**
-     * The identity version.
-     */
-    private String identityVersion;
-    /**
-     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-     */
-    private Boolean ignoreVersionDetection;
-    /**
-     * The product code.
-     */
-    private String productCode;
-    /**
-     * The product version of Windows Mobile MSI Line of Business (LoB) app.
-     */
-    private String productVersion;
-    /**
-     * Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
-     */
-    private Boolean useDeviceContext;
-    /**
-     * Instantiates a new windowsMobileMSI and sets the default values.
+     * Instantiates a new WindowsMobileMSI and sets the default values.
      */
     public WindowsMobileMSI() {
         super();
@@ -45,7 +21,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsMobileMSI
+     * @return a WindowsMobileMSI
      */
     @jakarta.annotation.Nonnull
     public static WindowsMobileMSI createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +30,11 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the commandLine property value. The command line.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommandLine() {
-        return this.commandLine;
+        return this.BackingStore.get("commandLine");
     }
     /**
      * The deserialization information for the current model
@@ -77,43 +53,43 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
-        return this.identityVersion;
+        return this.BackingStore.get("identityVersion");
     }
     /**
      * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
-        return this.ignoreVersionDetection;
+        return this.BackingStore.get("ignoreVersionDetection");
     }
     /**
      * Gets the productCode property value. The product code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
-        return this.productCode;
+        return this.BackingStore.get("productCode");
     }
     /**
      * Gets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
-        return this.productVersion;
+        return this.BackingStore.get("productVersion");
     }
     /**
      * Gets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this.useDeviceContext;
+        return this.BackingStore.get("useDeviceContext");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the commandLine property.
      */
     public void setCommandLine(@jakarta.annotation.Nullable final String value) {
-        this.commandLine = value;
+        this.BackingStore.set("commandLine", value);
     }
     /**
      * Sets the identityVersion property value. The identity version.
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
-        this.identityVersion = value;
+        this.BackingStore.set("identityVersion", value);
     }
     /**
      * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
-        this.ignoreVersionDetection = value;
+        this.BackingStore.set("ignoreVersionDetection", value);
     }
     /**
      * Sets the productCode property value. The product code.
      * @param value Value to set for the productCode property.
      */
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
-        this.productCode = value;
+        this.BackingStore.set("productCode", value);
     }
     /**
      * Sets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
-        this.productVersion = value;
+        this.BackingStore.set("productVersion", value);
     }
     /**
      * Sets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceContext = value;
+        this.BackingStore.set("useDeviceContext", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The password. It isn't returned in the responses.
-     */
-    private String password;
-    /**
-     * The username.
-     */
-    private String username;
-    /**
-     * Instantiates a new basicAuthentication and sets the default values.
+     * Instantiates a new BasicAuthentication and sets the default values.
      */
     public BasicAuthentication() {
         super();
@@ -26,7 +18,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a basicAuthentication
+     * @return a BasicAuthentication
      */
     @jakarta.annotation.Nonnull
     public static BasicAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     }
     /**
      * Gets the password property value. The password. It isn't returned in the responses.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.BackingStore.get("password");
     }
     /**
      * Gets the username property value. The username.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsername() {
-        return this.username;
+        return this.BackingStore.get("username");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.BackingStore.set("password", value);
     }
     /**
      * Sets the username property value. The username.
      * @param value Value to set for the username property.
      */
     public void setUsername(@jakarta.annotation.Nullable final String value) {
-        this.username = value;
+        this.BackingStore.set("username", value);
     }
 }

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationSchema extends Entity implements Parsable {
     /**
-     * Contains the collection of directories and all of their objects.
-     */
-    private java.util.List<DirectoryDefinition> directories;
-    /**
-     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
-     */
-    private java.util.List<SynchronizationRule> synchronizationRules;
-    /**
-     * The version of the schema, updated automatically with every schema change.
-     */
-    private String version;
-    /**
-     * Instantiates a new synchronizationSchema and sets the default values.
+     * Instantiates a new SynchronizationSchema and sets the default values.
      */
     public SynchronizationSchema() {
         super();
@@ -29,7 +17,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationSchema
+     * @return a SynchronizationSchema
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class SynchronizationSchema extends Entity implements Parsable {
     }
     /**
      * Gets the directories property value. Contains the collection of directories and all of their objects.
-     * @return a directoryDefinition
+     * @return a java.util.List<DirectoryDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryDefinition> getDirectories() {
-        return this.directories;
+        return this.BackingStore.get("directories");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class SynchronizationSchema extends Entity implements Parsable {
     }
     /**
      * Gets the synchronizationRules property value. A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
-     * @return a synchronizationRule
+     * @return a java.util.List<SynchronizationRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationRule> getSynchronizationRules() {
-        return this.synchronizationRules;
+        return this.BackingStore.get("synchronizationRules");
     }
     /**
      * Gets the version property value. The version of the schema, updated automatically with every schema change.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class SynchronizationSchema extends Entity implements Parsable {
      * @param value Value to set for the directories property.
      */
     public void setDirectories(@jakarta.annotation.Nullable final java.util.List<DirectoryDefinition> value) {
-        this.directories = value;
+        this.BackingStore.set("directories", value);
     }
     /**
      * Sets the synchronizationRules property value. A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      * @param value Value to set for the synchronizationRules property.
      */
     public void setSynchronizationRules(@jakarta.annotation.Nullable final java.util.List<SynchronizationRule> value) {
-        this.synchronizationRules = value;
+        this.BackingStore.set("synchronizationRules", value);
     }
     /**
      * Sets the version property value. The version of the schema, updated automatically with every schema change.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

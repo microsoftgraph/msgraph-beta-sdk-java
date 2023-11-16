@@ -5,41 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateInstancePostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateInstancePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The roleScopeTagIds property
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The settingsDelta property
-     */
-    private java.util.List<DeviceManagementSettingInstance> settingsDelta;
-    /**
-     * Instantiates a new createInstancePostRequestBody and sets the default values.
+     * Instantiates a new CreateInstancePostRequestBody and sets the default values.
      */
     public CreateInstancePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createInstancePostRequestBody
+     * @return a CreateInstancePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreateInstancePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,28 +35,41 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
         return new CreateInstancePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +86,19 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the roleScopeTagIds property value. The roleScopeTagIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the settingsDelta property value. The settingsDelta property
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettingsDelta() {
-        return this.settingsDelta;
+        return this.BackingStore.get("settingsDelta");
     }
     /**
      * Serializes information the current object
@@ -112,38 +113,46 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the roleScopeTagIds property value. The roleScopeTagIds property
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the settingsDelta property value. The settingsDelta property
      * @param value Value to set for the settingsDelta property.
      */
     public void setSettingsDelta(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
-        this.settingsDelta = value;
+        this.BackingStore.set("settingsDelta", value);
     }
 }

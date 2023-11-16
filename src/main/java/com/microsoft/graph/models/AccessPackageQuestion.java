@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
+public class AccessPackageQuestion implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * ID of the question.
-     */
-    private String id;
-    /**
-     * Specifies whether the requestor is allowed to edit answers to questions.
-     */
-    private Boolean isAnswerEditable;
-    /**
-     * Whether the requestor is required to supply an answer or not.
-     */
-    private Boolean isRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Relative position of this question when displaying a list of questions to the requestor.
-     */
-    private Integer sequence;
-    /**
-     * The text of the question to show to the requestor.
-     */
-    private AccessPackageLocalizedContent text;
-    /**
-     * Instantiates a new accessPackageQuestion and sets the default values.
+     * Instantiates a new AccessPackageQuestion and sets the default values.
      */
     public AccessPackageQuestion() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageQuestion
+     * @return a AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,12 +42,25 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         return new AccessPackageQuestion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -86,51 +79,51 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. ID of the question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
-        return this.isAnswerEditable;
+        return this.BackingStore.get("isAnswerEditable");
     }
     /**
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.BackingStore.get("isRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
-        return this.sequence;
+        return this.BackingStore.get("sequence");
     }
     /**
      * Gets the text property value. The text of the question to show to the requestor.
-     * @return a accessPackageLocalizedContent
+     * @return a AccessPackageLocalizedContent
      */
     @jakarta.annotation.Nullable
     public AccessPackageLocalizedContent getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -147,52 +140,60 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the id property value. ID of the question.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
      * @param value Value to set for the isAnswerEditable property.
      */
     public void setIsAnswerEditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAnswerEditable = value;
+        this.BackingStore.set("isAnswerEditable", value);
     }
     /**
      * Sets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.BackingStore.set("isRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
      */
     public void setSequence(@jakarta.annotation.Nullable final Integer value) {
-        this.sequence = value;
+        this.BackingStore.set("sequence", value);
     }
     /**
      * Sets the text property value. The text of the question to show to the requestor.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final AccessPackageLocalizedContent value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
     /**
-     * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     */
-    private CustomTaskExtensionOperationStatus operationStatus;
-    /**
-     * Instantiates a new customTaskExtensionCallbackData and sets the default values.
+     * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
      */
     public CustomTaskExtensionCallbackData() {
         super();
@@ -23,7 +19,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTaskExtensionCallbackData
+     * @return a CustomTaskExtensionCallbackData
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtensionCallbackData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     }
     /**
      * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     * @return a customTaskExtensionOperationStatus
+     * @return a CustomTaskExtensionOperationStatus
      */
     @jakarta.annotation.Nullable
     public CustomTaskExtensionOperationStatus getOperationStatus() {
-        return this.operationStatus;
+        return this.BackingStore.get("operationStatus");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
      * @param value Value to set for the operationStatus property.
      */
     public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionOperationStatus value) {
-        this.operationStatus = value;
+        this.BackingStore.set("operationStatus", value);
     }
 }

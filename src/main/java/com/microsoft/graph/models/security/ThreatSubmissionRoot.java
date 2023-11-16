@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatSubmissionRoot extends Entity implements Parsable {
     /**
-     * The emailThreats property
-     */
-    private java.util.List<EmailThreatSubmission> emailThreats;
-    /**
-     * The emailThreatSubmissionPolicies property
-     */
-    private java.util.List<EmailThreatSubmissionPolicy> emailThreatSubmissionPolicies;
-    /**
-     * The fileThreats property
-     */
-    private java.util.List<FileThreatSubmission> fileThreats;
-    /**
-     * The urlThreats property
-     */
-    private java.util.List<UrlThreatSubmission> urlThreats;
-    /**
-     * Instantiates a new threatSubmissionRoot and sets the default values.
+     * Instantiates a new ThreatSubmissionRoot and sets the default values.
      */
     public ThreatSubmissionRoot() {
         super();
@@ -34,7 +18,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatSubmissionRoot
+     * @return a ThreatSubmissionRoot
      */
     @jakarta.annotation.Nonnull
     public static ThreatSubmissionRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the emailThreats property value. The emailThreats property
-     * @return a emailThreatSubmission
+     * @return a java.util.List<EmailThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getEmailThreats() {
-        return this.emailThreats;
+        return this.BackingStore.get("emailThreats");
     }
     /**
      * Gets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
-     * @return a emailThreatSubmissionPolicy
+     * @return a java.util.List<EmailThreatSubmissionPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmissionPolicy> getEmailThreatSubmissionPolicies() {
-        return this.emailThreatSubmissionPolicies;
+        return this.BackingStore.get("emailThreatSubmissionPolicies");
     }
     /**
      * The deserialization information for the current model
@@ -72,19 +56,19 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the fileThreats property value. The fileThreats property
-     * @return a fileThreatSubmission
+     * @return a java.util.List<FileThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileThreatSubmission> getFileThreats() {
-        return this.fileThreats;
+        return this.BackingStore.get("fileThreats");
     }
     /**
      * Gets the urlThreats property value. The urlThreats property
-     * @return a urlThreatSubmission
+     * @return a java.util.List<UrlThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UrlThreatSubmission> getUrlThreats() {
-        return this.urlThreats;
+        return this.BackingStore.get("urlThreats");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      * @param value Value to set for the emailThreats property.
      */
     public void setEmailThreats(@jakarta.annotation.Nullable final java.util.List<EmailThreatSubmission> value) {
-        this.emailThreats = value;
+        this.BackingStore.set("emailThreats", value);
     }
     /**
      * Sets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
      * @param value Value to set for the emailThreatSubmissionPolicies property.
      */
     public void setEmailThreatSubmissionPolicies(@jakarta.annotation.Nullable final java.util.List<EmailThreatSubmissionPolicy> value) {
-        this.emailThreatSubmissionPolicies = value;
+        this.BackingStore.set("emailThreatSubmissionPolicies", value);
     }
     /**
      * Sets the fileThreats property value. The fileThreats property
      * @param value Value to set for the fileThreats property.
      */
     public void setFileThreats(@jakarta.annotation.Nullable final java.util.List<FileThreatSubmission> value) {
-        this.fileThreats = value;
+        this.BackingStore.set("fileThreats", value);
     }
     /**
      * Sets the urlThreats property value. The urlThreats property
      * @param value Value to set for the urlThreats property.
      */
     public void setUrlThreats(@jakarta.annotation.Nullable final java.util.List<UrlThreatSubmission> value) {
-        this.urlThreats = value;
+        this.BackingStore.set("urlThreats", value);
     }
 }

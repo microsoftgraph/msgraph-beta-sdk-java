@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnterpriseCodeSigningCertificateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<EnterpriseCodeSigningCertificate> value;
-    /**
-     * Instantiates a new enterpriseCodeSigningCertificateCollectionResponse and sets the default values.
+     * Instantiates a new EnterpriseCodeSigningCertificateCollectionResponse and sets the default values.
      */
     public EnterpriseCodeSigningCertificateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class EnterpriseCodeSigningCertificateCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enterpriseCodeSigningCertificateCollectionResponse
+     * @return a EnterpriseCodeSigningCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EnterpriseCodeSigningCertificateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class EnterpriseCodeSigningCertificateCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a enterpriseCodeSigningCertificate
+     * @return a java.util.List<EnterpriseCodeSigningCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnterpriseCodeSigningCertificate> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EnterpriseCodeSigningCertificateCollectionResponse extends BaseColl
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<EnterpriseCodeSigningCertificate> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

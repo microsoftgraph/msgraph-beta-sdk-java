@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
+public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
-     */
-    private java.util.List<Recipient> ccRecipients;
-    /**
-     * Customized message body you want to send if you don't want the default message.
-     */
-    private String customizedMessageBody;
-    /**
-     * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-     */
-    private String messageLanguage;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new invitedUserMessageInfo and sets the default values.
+     * Instantiates a new InvitedUserMessageInfo and sets the default values.
      */
     public InvitedUserMessageInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitedUserMessageInfo
+     * @return a InvitedUserMessageInfo
      */
     @jakarta.annotation.Nonnull
     public static InvitedUserMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +34,41 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         return new InvitedUserMessageInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
-        return this.ccRecipients;
+        return this.BackingStore.get("ccRecipients");
     }
     /**
      * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedMessageBody() {
-        return this.customizedMessageBody;
+        return this.BackingStore.get("customizedMessageBody");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +85,19 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageLanguage() {
-        return this.messageLanguage;
+        return this.BackingStore.get("messageLanguage");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.ccRecipients = value;
+        this.BackingStore.set("ccRecipients", value);
     }
     /**
      * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
      * @param value Value to set for the customizedMessageBody property.
      */
     public void setCustomizedMessageBody(@jakarta.annotation.Nullable final String value) {
-        this.customizedMessageBody = value;
+        this.BackingStore.set("customizedMessageBody", value);
     }
     /**
      * Sets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
      * @param value Value to set for the messageLanguage property.
      */
     public void setMessageLanguage(@jakarta.annotation.Nullable final String value) {
-        this.messageLanguage = value;
+        this.BackingStore.set("messageLanguage", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

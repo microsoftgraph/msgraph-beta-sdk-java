@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workspace extends Place implements Parsable {
     /**
-     * Specifies the building name or building number that the workspace is in.
-     */
-    private String building;
-    /**
-     * Specifies the capacity of the workspace.
-     */
-    private Integer capacity;
-    /**
-     * Email address of the workspace.
-     */
-    private String emailAddress;
-    /**
-     * Specifies a descriptive label for the floor, for example, P.
-     */
-    private String floorLabel;
-    /**
-     * Specifies the floor number that the workspace is on.
-     */
-    private Integer floorNumber;
-    /**
-     * Specifies whether the workspace is wheelchair accessible.
-     */
-    private Boolean isWheelChairAccessible;
-    /**
-     * Specifies a descriptive label for the workspace, for example, a number or name.
-     */
-    private String label;
-    /**
-     * Specifies a nickname for the workspace, for example, 'quiet workspace'.
-     */
-    private String nickname;
-    /**
-     * Specifies additional features of the workspace, for example, details like the type of view or furniture type.
-     */
-    private java.util.List<String> tags;
-    /**
-     * Instantiates a new workspace and sets the default values.
+     * Instantiates a new Workspace and sets the default values.
      */
     public Workspace() {
         super();
@@ -54,7 +18,7 @@ public class Workspace extends Place implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workspace
+     * @return a Workspace
      */
     @jakarta.annotation.Nonnull
     public static Workspace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,27 +27,27 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the building property value. Specifies the building name or building number that the workspace is in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuilding() {
-        return this.building;
+        return this.BackingStore.get("building");
     }
     /**
      * Gets the capacity property value. Specifies the capacity of the workspace.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCapacity() {
-        return this.capacity;
+        return this.BackingStore.get("capacity");
     }
     /**
      * Gets the emailAddress property value. Email address of the workspace.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.BackingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -105,51 +69,51 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloorLabel() {
-        return this.floorLabel;
+        return this.BackingStore.get("floorLabel");
     }
     /**
      * Gets the floorNumber property value. Specifies the floor number that the workspace is on.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
-        return this.floorNumber;
+        return this.BackingStore.get("floorNumber");
     }
     /**
      * Gets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
-        return this.isWheelChairAccessible;
+        return this.BackingStore.get("isWheelChairAccessible");
     }
     /**
      * Gets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
-        return this.label;
+        return this.BackingStore.get("label");
     }
     /**
      * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNickname() {
-        return this.nickname;
+        return this.BackingStore.get("nickname");
     }
     /**
      * Gets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the building property.
      */
     public void setBuilding(@jakarta.annotation.Nullable final String value) {
-        this.building = value;
+        this.BackingStore.set("building", value);
     }
     /**
      * Sets the capacity property value. Specifies the capacity of the workspace.
      * @param value Value to set for the capacity property.
      */
     public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
-        this.capacity = value;
+        this.BackingStore.set("capacity", value);
     }
     /**
      * Sets the emailAddress property value. Email address of the workspace.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.BackingStore.set("emailAddress", value);
     }
     /**
      * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @param value Value to set for the floorLabel property.
      */
     public void setFloorLabel(@jakarta.annotation.Nullable final String value) {
-        this.floorLabel = value;
+        this.BackingStore.set("floorLabel", value);
     }
     /**
      * Sets the floorNumber property value. Specifies the floor number that the workspace is on.
      * @param value Value to set for the floorNumber property.
      */
     public void setFloorNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.floorNumber = value;
+        this.BackingStore.set("floorNumber", value);
     }
     /**
      * Sets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
      */
     public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
-        this.isWheelChairAccessible = value;
+        this.BackingStore.set("isWheelChairAccessible", value);
     }
     /**
      * Sets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.label = value;
+        this.BackingStore.set("label", value);
     }
     /**
      * Sets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
      * @param value Value to set for the nickname property.
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
-        this.nickname = value;
+        this.BackingStore.set("nickname", value);
     }
     /**
      * Sets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
 }

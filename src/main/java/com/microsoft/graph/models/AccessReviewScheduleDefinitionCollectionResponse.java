@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessReviewScheduleDefinition> value;
-    /**
-     * Instantiates a new accessReviewScheduleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new AccessReviewScheduleDefinitionCollectionResponse and sets the default values.
      */
     public AccessReviewScheduleDefinitionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewScheduleDefinitionCollectionResponse
+     * @return a AccessReviewScheduleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewScheduleDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessReviewScheduleDefinition
+     * @return a java.util.List<AccessReviewScheduleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AccessReviewScheduleDefinitionCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

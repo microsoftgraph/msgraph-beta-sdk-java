@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Sharepoint extends Entity implements Parsable {
     /**
-     * The settings property
-     */
-    private SharepointSettings settings;
-    /**
-     * Instantiates a new sharepoint and sets the default values.
+     * Instantiates a new Sharepoint and sets the default values.
      */
     public Sharepoint() {
         super();
@@ -21,7 +17,7 @@ public class Sharepoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharepoint
+     * @return a Sharepoint
      */
     @jakarta.annotation.Nonnull
     public static Sharepoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class Sharepoint extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a sharepointSettings
+     * @return a SharepointSettings
      */
     @jakarta.annotation.Nullable
     public SharepointSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Sharepoint extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final SharepointSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
 }

@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable {
     /**
-     * The assignmentState property
-     */
-    private String assignmentState;
-    /**
-     * The duration property
-     */
-    private String duration;
-    /**
-     * The reason property
-     */
-    private String reason;
-    /**
-     * The requestedDateTime property
-     */
-    private OffsetDateTime requestedDateTime;
-    /**
-     * The roleId property
-     */
-    private String roleId;
-    /**
-     * The roleInfo property
-     */
-    private PrivilegedRole roleInfo;
-    /**
-     * The schedule property
-     */
-    private GovernanceSchedule schedule;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The ticketNumber property
-     */
-    private String ticketNumber;
-    /**
-     * The ticketSystem property
-     */
-    private String ticketSystem;
-    /**
-     * The type property
-     */
-    private String type;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new privilegedRoleAssignmentRequest and sets the default values.
+     * Instantiates a new PrivilegedRoleAssignmentRequest and sets the default values.
      */
     public PrivilegedRoleAssignmentRequest() {
         super();
@@ -66,7 +18,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleAssignmentRequest
+     * @return a PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,19 +27,19 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the assignmentState property value. The assignmentState property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
-        return this.assignmentState;
+        return this.BackingStore.get("assignmentState");
     }
     /**
      * Gets the duration property value. The duration property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDuration() {
-        return this.duration;
+        return this.BackingStore.get("duration");
     }
     /**
      * The deserialization information for the current model
@@ -112,11 +64,11 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.BackingStore.get("reason");
     }
     /**
      * Gets the requestedDateTime property value. The requestedDateTime property
@@ -124,71 +76,71 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
-        return this.requestedDateTime;
+        return this.BackingStore.get("requestedDateTime");
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.BackingStore.get("roleId");
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
-        return this.roleInfo;
+        return this.BackingStore.get("roleInfo");
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a governanceSchedule
+     * @return a GovernanceSchedule
      */
     @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the ticketNumber property value. The ticketNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTicketNumber() {
-        return this.ticketNumber;
+        return this.BackingStore.get("ticketNumber");
     }
     /**
      * Gets the ticketSystem property value. The ticketSystem property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTicketSystem() {
-        return this.ticketSystem;
+        return this.BackingStore.get("ticketSystem");
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the assignmentState property.
      */
     public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
-        this.assignmentState = value;
+        this.BackingStore.set("assignmentState", value);
     }
     /**
      * Sets the duration property value. The duration property
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final String value) {
-        this.duration = value;
+        this.BackingStore.set("duration", value);
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.BackingStore.set("reason", value);
     }
     /**
      * Sets the requestedDateTime property value. The requestedDateTime property
      * @param value Value to set for the requestedDateTime property.
      */
     public void setRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestedDateTime = value;
+        this.BackingStore.set("requestedDateTime", value);
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.BackingStore.set("roleId", value);
     }
     /**
      * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
      */
     public void setRoleInfo(@jakarta.annotation.Nullable final PrivilegedRole value) {
-        this.roleInfo = value;
+        this.BackingStore.set("roleInfo", value);
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final GovernanceSchedule value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the ticketNumber property value. The ticketNumber property
      * @param value Value to set for the ticketNumber property.
      */
     public void setTicketNumber(@jakarta.annotation.Nullable final String value) {
-        this.ticketNumber = value;
+        this.BackingStore.set("ticketNumber", value);
     }
     /**
      * Sets the ticketSystem property value. The ticketSystem property
      * @param value Value to set for the ticketSystem property.
      */
     public void setTicketSystem(@jakarta.annotation.Nullable final String value) {
-        this.ticketSystem = value;
+        this.BackingStore.set("ticketSystem", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

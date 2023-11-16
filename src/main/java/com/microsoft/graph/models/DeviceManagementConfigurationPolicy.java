@@ -14,63 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationPolicy extends Entity implements Parsable {
     /**
-     * Policy assignments
-     */
-    private java.util.List<DeviceManagementConfigurationPolicyAssignment> assignments;
-    /**
-     * Policy creation date and time
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Policy creation source
-     */
-    private String creationSource;
-    /**
-     * Policy description
-     */
-    private String description;
-    /**
-     * Policy assignment status. This property is read-only.
-     */
-    private Boolean isAssigned;
-    /**
-     * Policy last modification date and time
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Policy name
-     */
-    private String name;
-    /**
-     * Supported platform types.
-     */
-    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
-    /**
-     * Indicates the priority of each policies that are selected by the admin during enrollment process
-     */
-    private DeviceManagementPriorityMetaData priorityMetaData;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Number of settings
-     */
-    private Integer settingCount;
-    /**
-     * Policy settings
-     */
-    private java.util.List<DeviceManagementConfigurationSetting> settings;
-    /**
-     * Describes which technology this setting can be deployed with
-     */
-    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
-    /**
-     * Template reference information
-     */
-    private DeviceManagementConfigurationPolicyTemplateReference templateReference;
-    /**
-     * Instantiates a new deviceManagementConfigurationPolicy and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicy and sets the default values.
      */
     public DeviceManagementConfigurationPolicy() {
         super();
@@ -78,7 +22,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicy
+     * @return a DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,11 +31,11 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. Policy assignments
-     * @return a deviceManagementConfigurationPolicyAssignment
+     * @return a java.util.List<DeviceManagementConfigurationPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. Policy creation date and time
@@ -99,23 +43,23 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the creationSource property value. Policy creation source
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreationSource() {
-        return this.creationSource;
+        return this.BackingStore.get("creationSource");
     }
     /**
      * Gets the description property value. Policy description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -142,11 +86,11 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the isAssigned property value. Policy assignment status. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.BackingStore.get("isAssigned");
     }
     /**
      * Gets the lastModifiedDateTime property value. Policy last modification date and time
@@ -154,71 +98,71 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. Policy name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
-        return this.platforms;
+        return this.BackingStore.get("platforms");
     }
     /**
      * Gets the priorityMetaData property value. Indicates the priority of each policies that are selected by the admin during enrollment process
-     * @return a deviceManagementPriorityMetaData
+     * @return a DeviceManagementPriorityMetaData
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPriorityMetaData getPriorityMetaData() {
-        return this.priorityMetaData;
+        return this.BackingStore.get("priorityMetaData");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the settingCount property value. Number of settings
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
-        return this.settingCount;
+        return this.BackingStore.get("settingCount");
     }
     /**
      * Gets the settings property value. Policy settings
-     * @return a deviceManagementConfigurationSetting
+     * @return a java.util.List<DeviceManagementConfigurationSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
-        return this.technologies;
+        return this.BackingStore.get("technologies");
     }
     /**
      * Gets the templateReference property value. Template reference information
-     * @return a deviceManagementConfigurationPolicyTemplateReference
+     * @return a DeviceManagementConfigurationPolicyTemplateReference
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplateReference getTemplateReference() {
-        return this.templateReference;
+        return this.BackingStore.get("templateReference");
     }
     /**
      * Serializes information the current object
@@ -246,97 +190,97 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. Policy creation date and time
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the creationSource property value. Policy creation source
      * @param value Value to set for the creationSource property.
      */
     public void setCreationSource(@jakarta.annotation.Nullable final String value) {
-        this.creationSource = value;
+        this.BackingStore.set("creationSource", value);
     }
     /**
      * Sets the description property value. Policy description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the isAssigned property value. Policy assignment status. This property is read-only.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.BackingStore.set("isAssigned", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Policy last modification date and time
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. Policy name
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      */
     public void setPlatforms(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
-        this.platforms = value;
+        this.BackingStore.set("platforms", value);
     }
     /**
      * Sets the priorityMetaData property value. Indicates the priority of each policies that are selected by the admin during enrollment process
      * @param value Value to set for the priorityMetaData property.
      */
     public void setPriorityMetaData(@jakarta.annotation.Nullable final DeviceManagementPriorityMetaData value) {
-        this.priorityMetaData = value;
+        this.BackingStore.set("priorityMetaData", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the settingCount property value. Number of settings
      * @param value Value to set for the settingCount property.
      */
     public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.settingCount = value;
+        this.BackingStore.set("settingCount", value);
     }
     /**
      * Sets the settings property value. Policy settings
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
     public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
-        this.technologies = value;
+        this.BackingStore.set("technologies", value);
     }
     /**
      * Sets the templateReference property value. Template reference information
      * @param value Value to set for the templateReference property.
      */
     public void setTemplateReference(@jakarta.annotation.Nullable final DeviceManagementConfigurationPolicyTemplateReference value) {
-        this.templateReference = value;
+        this.BackingStore.set("templateReference", value);
     }
 }

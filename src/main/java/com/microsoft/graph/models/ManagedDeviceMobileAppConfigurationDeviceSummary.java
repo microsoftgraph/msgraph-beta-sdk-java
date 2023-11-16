@@ -13,43 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity implements Parsable {
     /**
-     * Version of the policy for that overview
-     */
-    private Integer configurationVersion;
-    /**
-     * Number of devices in conflict
-     */
-    private Integer conflictCount;
-    /**
-     * Number of error devices
-     */
-    private Integer errorCount;
-    /**
-     * Number of failed devices
-     */
-    private Integer failedCount;
-    /**
-     * Last update time
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableCount;
-    /**
-     * Number of not applicable devices due to mismatch platform and policy
-     */
-    private Integer notApplicablePlatformCount;
-    /**
-     * Number of pending devices
-     */
-    private Integer pendingCount;
-    /**
-     * Number of succeeded devices
-     */
-    private Integer successCount;
-    /**
-     * Instantiates a new managedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationDeviceSummary() {
         super();
@@ -57,7 +21,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationDeviceSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,35 +30,35 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
-        return this.configurationVersion;
+        return this.BackingStore.get("configurationVersion");
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
-        return this.conflictCount;
+        return this.BackingStore.get("conflictCount");
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
-        return this.errorCount;
+        return this.BackingStore.get("errorCount");
     }
     /**
      * Gets the failedCount property value. Number of failed devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
-        return this.failedCount;
+        return this.BackingStore.get("failedCount");
     }
     /**
      * The deserialization information for the current model
@@ -120,39 +84,39 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.BackingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this.notApplicableCount;
+        return this.BackingStore.get("notApplicableCount");
     }
     /**
      * Gets the notApplicablePlatformCount property value. Number of not applicable devices due to mismatch platform and policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicablePlatformCount() {
-        return this.notApplicablePlatformCount;
+        return this.BackingStore.get("notApplicablePlatformCount");
     }
     /**
      * Gets the pendingCount property value. Number of pending devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
-        return this.pendingCount;
+        return this.BackingStore.get("pendingCount");
     }
     /**
      * Gets the successCount property value. Number of succeeded devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {
-        return this.successCount;
+        return this.BackingStore.get("successCount");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
      * @param value Value to set for the configurationVersion property.
      */
     public void setConfigurationVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.configurationVersion = value;
+        this.BackingStore.set("configurationVersion", value);
     }
     /**
      * Sets the conflictCount property value. Number of devices in conflict
      * @param value Value to set for the conflictCount property.
      */
     public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictCount = value;
+        this.BackingStore.set("conflictCount", value);
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCount = value;
+        this.BackingStore.set("errorCount", value);
     }
     /**
      * Sets the failedCount property value. Number of failed devices
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedCount = value;
+        this.BackingStore.set("failedCount", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. Last update time
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.BackingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
      */
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableCount = value;
+        this.BackingStore.set("notApplicableCount", value);
     }
     /**
      * Sets the notApplicablePlatformCount property value. Number of not applicable devices due to mismatch platform and policy
      * @param value Value to set for the notApplicablePlatformCount property.
      */
     public void setNotApplicablePlatformCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicablePlatformCount = value;
+        this.BackingStore.set("notApplicablePlatformCount", value);
     }
     /**
      * Sets the pendingCount property value. Number of pending devices
      * @param value Value to set for the pendingCount property.
      */
     public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingCount = value;
+        this.BackingStore.set("pendingCount", value);
     }
     /**
      * Sets the successCount property value. Number of succeeded devices
      * @param value Value to set for the successCount property.
      */
     public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successCount = value;
+        this.BackingStore.set("successCount", value);
     }
 }

@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeploymentSettings implements AdditionalDataHolder, Parsable {
+public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Settings for governing whether content is applicable to a device.
-     */
-    private ContentApplicabilitySettings contentApplicability;
-    /**
-     * Settings for governing whether updates should be expedited.
-     */
-    private ExpediteSettings expedite;
-    /**
-     * Settings for governing conditions to monitor and automated actions to take.
-     */
-    private MonitoringSettings monitoring;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Settings for governing how and when the content is rolled out.
-     */
-    private ScheduleSettings schedule;
-    /**
-     * Settings for governing end user update experience.
-     */
-    private UserExperienceSettings userExperience;
-    /**
-     * Instantiates a new deploymentSettings and sets the default values.
+     * Instantiates a new DeploymentSettings and sets the default values.
      */
     public DeploymentSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deploymentSettings
+     * @return a DeploymentSettings
      */
     @jakarta.annotation.Nonnull
     public static DeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         return new DeploymentSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the contentApplicability property value. Settings for governing whether content is applicable to a device.
-     * @return a contentApplicabilitySettings
+     * @return a ContentApplicabilitySettings
      */
     @jakarta.annotation.Nullable
     public ContentApplicabilitySettings getContentApplicability() {
-        return this.contentApplicability;
+        return this.BackingStore.get("contentApplicability");
     }
     /**
      * Gets the expedite property value. Settings for governing whether updates should be expedited.
-     * @return a expediteSettings
+     * @return a ExpediteSettings
      */
     @jakarta.annotation.Nullable
     public ExpediteSettings getExpedite() {
-        return this.expedite;
+        return this.BackingStore.get("expedite");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +87,35 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the monitoring property value. Settings for governing conditions to monitor and automated actions to take.
-     * @return a monitoringSettings
+     * @return a MonitoringSettings
      */
     @jakarta.annotation.Nullable
     public MonitoringSettings getMonitoring() {
-        return this.monitoring;
+        return this.BackingStore.get("monitoring");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the schedule property value. Settings for governing how and when the content is rolled out.
-     * @return a scheduleSettings
+     * @return a ScheduleSettings
      */
     @jakarta.annotation.Nullable
     public ScheduleSettings getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the userExperience property value. Settings for governing end user update experience.
-     * @return a userExperienceSettings
+     * @return a UserExperienceSettings
      */
     @jakarta.annotation.Nullable
     public UserExperienceSettings getUserExperience() {
-        return this.userExperience;
+        return this.BackingStore.get("userExperience");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the contentApplicability property value. Settings for governing whether content is applicable to a device.
      * @param value Value to set for the contentApplicability property.
      */
     public void setContentApplicability(@jakarta.annotation.Nullable final ContentApplicabilitySettings value) {
-        this.contentApplicability = value;
+        this.BackingStore.set("contentApplicability", value);
     }
     /**
      * Sets the expedite property value. Settings for governing whether updates should be expedited.
      * @param value Value to set for the expedite property.
      */
     public void setExpedite(@jakarta.annotation.Nullable final ExpediteSettings value) {
-        this.expedite = value;
+        this.BackingStore.set("expedite", value);
     }
     /**
      * Sets the monitoring property value. Settings for governing conditions to monitor and automated actions to take.
      * @param value Value to set for the monitoring property.
      */
     public void setMonitoring(@jakarta.annotation.Nullable final MonitoringSettings value) {
-        this.monitoring = value;
+        this.BackingStore.set("monitoring", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the schedule property value. Settings for governing how and when the content is rolled out.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final ScheduleSettings value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the userExperience property value. Settings for governing end user update experience.
      * @param value Value to set for the userExperience property.
      */
     public void setUserExperience(@jakarta.annotation.Nullable final UserExperienceSettings value) {
-        this.userExperience = value;
+        this.BackingStore.set("userExperience", value);
     }
 }

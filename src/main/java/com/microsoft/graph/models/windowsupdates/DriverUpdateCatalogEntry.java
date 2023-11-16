@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * The description of the content.
-     */
-    private String description;
-    /**
-     * The classification of the driver.
-     */
-    private String driverClass;
-    /**
-     * The manufacturer of the driver.
-     */
-    private String manufacturer;
-    /**
-     * The provider of the driver.
-     */
-    private String provider;
-    /**
-     * The setup information file of the driver.
-     */
-    private String setupInformationFile;
-    /**
-     * The unique version of the content.
-     */
-    private String version;
-    /**
-     * The date and time when a new version of content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime versionDateTime;
-    /**
-     * Instantiates a new driverUpdateCatalogEntry and sets the default values.
+     * Instantiates a new DriverUpdateCatalogEntry and sets the default values.
      */
     public DriverUpdateCatalogEntry() {
         super();
@@ -47,7 +19,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driverUpdateCatalogEntry
+     * @return a DriverUpdateCatalogEntry
      */
     @jakarta.annotation.Nonnull
     public static DriverUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,19 +28,19 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the description property value. The description of the content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the driverClass property value. The classification of the driver.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDriverClass() {
-        return this.driverClass;
+        return this.BackingStore.get("driverClass");
     }
     /**
      * The deserialization information for the current model
@@ -88,35 +60,35 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the driver.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the provider property value. The provider of the driver.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
-        return this.provider;
+        return this.BackingStore.get("provider");
     }
     /**
      * Gets the setupInformationFile property value. The setup information file of the driver.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetupInformationFile() {
-        return this.setupInformationFile;
+        return this.BackingStore.get("setupInformationFile");
     }
     /**
      * Gets the version property value. The unique version of the content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Gets the versionDateTime property value. The date and time when a new version of content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -124,7 +96,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getVersionDateTime() {
-        return this.versionDateTime;
+        return this.BackingStore.get("versionDateTime");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the driverClass property value. The classification of the driver.
      * @param value Value to set for the driverClass property.
      */
     public void setDriverClass(@jakarta.annotation.Nullable final String value) {
-        this.driverClass = value;
+        this.BackingStore.set("driverClass", value);
     }
     /**
      * Sets the manufacturer property value. The manufacturer of the driver.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the provider property value. The provider of the driver.
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final String value) {
-        this.provider = value;
+        this.BackingStore.set("provider", value);
     }
     /**
      * Sets the setupInformationFile property value. The setup information file of the driver.
      * @param value Value to set for the setupInformationFile property.
      */
     public void setSetupInformationFile(@jakarta.annotation.Nullable final String value) {
-        this.setupInformationFile = value;
+        this.BackingStore.set("setupInformationFile", value);
     }
     /**
      * Sets the version property value. The unique version of the content.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
     /**
      * Sets the versionDateTime property value. The date and time when a new version of content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the versionDateTime property.
      */
     public void setVersionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.versionDateTime = value;
+        this.BackingStore.set("versionDateTime", value);
     }
 }

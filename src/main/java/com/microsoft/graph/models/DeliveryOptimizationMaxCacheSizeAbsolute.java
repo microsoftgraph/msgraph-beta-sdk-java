@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizationMaxCacheSize implements Parsable {
     /**
-     * Specifies the maximum size in GB of Delivery Optimization cache. Valid values 0 to 4294967295
-     */
-    private Long maximumCacheSizeInGigabytes;
-    /**
-     * Instantiates a new deliveryOptimizationMaxCacheSizeAbsolute and sets the default values.
+     * Instantiates a new DeliveryOptimizationMaxCacheSizeAbsolute and sets the default values.
      */
     public DeliveryOptimizationMaxCacheSizeAbsolute() {
         super();
@@ -25,7 +21,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationMaxCacheSizeAbsolute
+     * @return a DeliveryOptimizationMaxCacheSizeAbsolute
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationMaxCacheSizeAbsolute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
     }
     /**
      * Gets the maximumCacheSizeInGigabytes property value. Specifies the maximum size in GB of Delivery Optimization cache. Valid values 0 to 4294967295
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaximumCacheSizeInGigabytes() {
-        return this.maximumCacheSizeInGigabytes;
+        return this.BackingStore.get("maximumCacheSizeInGigabytes");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      * @param value Value to set for the maximumCacheSizeInGigabytes property.
      */
     public void setMaximumCacheSizeInGigabytes(@jakarta.annotation.Nullable final Long value) {
-        this.maximumCacheSizeInGigabytes = value;
+        this.BackingStore.set("maximumCacheSizeInGigabytes", value);
     }
 }

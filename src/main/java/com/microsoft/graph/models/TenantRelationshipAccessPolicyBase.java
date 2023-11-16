@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Parsable {
     /**
-     * The definition property
-     */
-    private java.util.List<String> definition;
-    /**
-     * Instantiates a new tenantRelationshipAccessPolicyBase and sets the default values.
+     * Instantiates a new TenantRelationshipAccessPolicyBase and sets the default values.
      */
     public TenantRelationshipAccessPolicyBase() {
         super();
@@ -22,7 +18,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantRelationshipAccessPolicyBase
+     * @return a TenantRelationshipAccessPolicyBase
      */
     @jakarta.annotation.Nonnull
     public static TenantRelationshipAccessPolicyBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +34,11 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     }
     /**
      * Gets the definition property value. The definition property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefinition() {
-        return this.definition;
+        return this.BackingStore.get("definition");
     }
     /**
      * The deserialization information for the current model
@@ -68,6 +64,6 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.definition = value;
+        this.BackingStore.set("definition", value);
     }
 }

@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkDeviceOperation extends Entity implements Parsable {
     /**
-     * Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled).
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * Identity of the user who created the device operation.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The UTC date and time when the device operation was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Error details are available only in case of a failed status.
-     */
-    private OperationError error;
-    /**
-     * Identity of the user who last modified the device operation.
-     */
-    private IdentitySet lastActionBy;
-    /**
-     * The UTC date and time when the device operation was last modified.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The operationType property
-     */
-    private TeamworkDeviceOperationType operationType;
-    /**
-     * Time at which the operation was started.
-     */
-    private OffsetDateTime startedDateTime;
-    /**
-     * The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
-     */
-    private String status;
-    /**
-     * Instantiates a new teamworkDeviceOperation and sets the default values.
+     * Instantiates a new TeamworkDeviceOperation and sets the default values.
      */
     public TeamworkDeviceOperation() {
         super();
@@ -54,7 +18,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceOperation
+     * @return a TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,15 +31,15 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device operation.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The UTC date and time when the device operation was created.
@@ -83,15 +47,15 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the error property value. Error details are available only in case of a failed status.
-     * @return a operationError
+     * @return a OperationError
      */
     @jakarta.annotation.Nullable
     public OperationError getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -113,11 +77,11 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionBy property value. Identity of the user who last modified the device operation.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastActionBy() {
-        return this.lastActionBy;
+        return this.BackingStore.get("lastActionBy");
     }
     /**
      * Gets the lastActionDateTime property value. The UTC date and time when the device operation was last modified.
@@ -125,15 +89,15 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.BackingStore.get("lastActionDateTime");
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a teamworkDeviceOperationType
+     * @return a TeamworkDeviceOperationType
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceOperationType getOperationType() {
-        return this.operationType;
+        return this.BackingStore.get("operationType");
     }
     /**
      * Gets the startedDateTime property value. Time at which the operation was started.
@@ -141,15 +105,15 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.BackingStore.get("startedDateTime");
     }
     /**
      * Gets the status property value. The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the device operation.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The UTC date and time when the device operation was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the error property value. Error details are available only in case of a failed status.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final OperationError value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the lastActionBy property value. Identity of the user who last modified the device operation.
      * @param value Value to set for the lastActionBy property.
      */
     public void setLastActionBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastActionBy = value;
+        this.BackingStore.set("lastActionBy", value);
     }
     /**
      * Sets the lastActionDateTime property value. The UTC date and time when the device operation was last modified.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.BackingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final TeamworkDeviceOperationType value) {
-        this.operationType = value;
+        this.BackingStore.set("operationType", value);
     }
     /**
      * Sets the startedDateTime property value. Time at which the operation was started.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.BackingStore.set("startedDateTime", value);
     }
     /**
      * Sets the status property value. The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

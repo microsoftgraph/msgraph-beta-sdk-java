@@ -13,103 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
-     * Data can be transferred from/to these classes of apps
-     */
-    private WindowsManagedAppDataTransferLevel allowedInboundDataTransferSources;
-    /**
-     * Represents the level to which the device's clipboard may be shared between apps
-     */
-    private WindowsManagedAppClipboardSharingLevel allowedOutboundClipboardSharingLevel;
-    /**
-     * Data can be transferred from/to these classes of apps
-     */
-    private WindowsManagedAppDataTransferLevel allowedOutboundDataTransferDestinations;
-    /**
-     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
-     */
-    private ManagedAppRemediationAction appActionIfUnableToAuthenticateUser;
-    /**
-     * List of apps to which the policy is deployed.
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     */
-    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /**
-     * Indicates the total number of applications for which the current policy is deployed.
-     */
-    private Integer deployedAppCount;
-    /**
-     * When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE.
-     */
-    private Boolean isAssigned;
-    /**
-     * The maxium threat level allowed for an app to be compliant.
-     */
-    private ManagedAppDeviceThreatLevel maximumAllowedDeviceThreatLevel;
-    /**
-     * Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String maximumRequiredOsVersion;
-    /**
-     * Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String maximumWarningOsVersion;
-    /**
-     * Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String maximumWipeOsVersion;
-    /**
-     * Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumRequiredAppVersion;
-    /**
-     * Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumRequiredOsVersion;
-    /**
-     * Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumRequiredSdkVersion;
-    /**
-     * Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumWarningAppVersion;
-    /**
-     * Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumWarningOsVersion;
-    /**
-     * Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumWipeAppVersion;
-    /**
-     * Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumWipeOsVersion;
-    /**
-     * Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     */
-    private String minimumWipeSdkVersion;
-    /**
-     * An admin initiated action to be applied on a managed app.
-     */
-    private ManagedAppRemediationAction mobileThreatDefenseRemediationAction;
-    /**
-     * The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet.
-     */
-    private PeriodAndDuration periodOfflineBeforeAccessCheck;
-    /**
-     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. For example, P5D indicates that the interval is 5 days in duration. A timespan value of PT0S indicates that managed data will never be wiped when the device is not connected to the internet.
-     */
-    private PeriodAndDuration periodOfflineBeforeWipeIsEnforced;
-    /**
-     * When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE.
-     */
-    private Boolean printBlocked;
-    /**
-     * Instantiates a new windowsManagedAppProtection and sets the default values.
+     * Instantiates a new WindowsManagedAppProtection and sets the default values.
      */
     public WindowsManagedAppProtection() {
         super();
@@ -118,7 +22,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagedAppProtection
+     * @return a WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,59 +31,59 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
-     * @return a windowsManagedAppDataTransferLevel
+     * @return a WindowsManagedAppDataTransferLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
-        return this.allowedInboundDataTransferSources;
+        return this.BackingStore.get("allowedInboundDataTransferSources");
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
-     * @return a windowsManagedAppClipboardSharingLevel
+     * @return a WindowsManagedAppClipboardSharingLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
-        return this.allowedOutboundClipboardSharingLevel;
+        return this.BackingStore.get("allowedOutboundClipboardSharingLevel");
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
-     * @return a windowsManagedAppDataTransferLevel
+     * @return a WindowsManagedAppDataTransferLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
-        return this.allowedOutboundDataTransferDestinations;
+        return this.BackingStore.get("allowedOutboundDataTransferDestinations");
     }
     /**
      * Gets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfUnableToAuthenticateUser() {
-        return this.appActionIfUnableToAuthenticateUser;
+        return this.BackingStore.get("appActionIfUnableToAuthenticateUser");
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.BackingStore.get("apps");
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the deployedAppCount property value. Indicates the total number of applications for which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this.deployedAppCount;
+        return this.BackingStore.get("deployedAppCount");
     }
     /**
      * The deserialization information for the current model
@@ -216,115 +120,115 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the isAssigned property value. When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.BackingStore.get("isAssigned");
     }
     /**
      * Gets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
-     * @return a managedAppDeviceThreatLevel
+     * @return a ManagedAppDeviceThreatLevel
      */
     @jakarta.annotation.Nullable
     public ManagedAppDeviceThreatLevel getMaximumAllowedDeviceThreatLevel() {
-        return this.maximumAllowedDeviceThreatLevel;
+        return this.BackingStore.get("maximumAllowedDeviceThreatLevel");
     }
     /**
      * Gets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumRequiredOsVersion() {
-        return this.maximumRequiredOsVersion;
+        return this.BackingStore.get("maximumRequiredOsVersion");
     }
     /**
      * Gets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumWarningOsVersion() {
-        return this.maximumWarningOsVersion;
+        return this.BackingStore.get("maximumWarningOsVersion");
     }
     /**
      * Gets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumWipeOsVersion() {
-        return this.maximumWipeOsVersion;
+        return this.BackingStore.get("maximumWipeOsVersion");
     }
     /**
      * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredAppVersion() {
-        return this.minimumRequiredAppVersion;
+        return this.BackingStore.get("minimumRequiredAppVersion");
     }
     /**
      * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredOsVersion() {
-        return this.minimumRequiredOsVersion;
+        return this.BackingStore.get("minimumRequiredOsVersion");
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
-        return this.minimumRequiredSdkVersion;
+        return this.BackingStore.get("minimumRequiredSdkVersion");
     }
     /**
      * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningAppVersion() {
-        return this.minimumWarningAppVersion;
+        return this.BackingStore.get("minimumWarningAppVersion");
     }
     /**
      * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningOsVersion() {
-        return this.minimumWarningOsVersion;
+        return this.BackingStore.get("minimumWarningOsVersion");
     }
     /**
      * Gets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeAppVersion() {
-        return this.minimumWipeAppVersion;
+        return this.BackingStore.get("minimumWipeAppVersion");
     }
     /**
      * Gets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeOsVersion() {
-        return this.minimumWipeOsVersion;
+        return this.BackingStore.get("minimumWipeOsVersion");
     }
     /**
      * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeSdkVersion() {
-        return this.minimumWipeSdkVersion;
+        return this.BackingStore.get("minimumWipeSdkVersion");
     }
     /**
      * Gets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getMobileThreatDefenseRemediationAction() {
-        return this.mobileThreatDefenseRemediationAction;
+        return this.BackingStore.get("mobileThreatDefenseRemediationAction");
     }
     /**
      * Gets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet.
@@ -332,7 +236,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodOfflineBeforeAccessCheck() {
-        return this.periodOfflineBeforeAccessCheck;
+        return this.BackingStore.get("periodOfflineBeforeAccessCheck");
     }
     /**
      * Gets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. For example, P5D indicates that the interval is 5 days in duration. A timespan value of PT0S indicates that managed data will never be wiped when the device is not connected to the internet.
@@ -340,15 +244,15 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPeriodOfflineBeforeWipeIsEnforced() {
-        return this.periodOfflineBeforeWipeIsEnforced;
+        return this.BackingStore.get("periodOfflineBeforeWipeIsEnforced");
     }
     /**
      * Gets the printBlocked property value. When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrintBlocked() {
-        return this.printBlocked;
+        return this.BackingStore.get("printBlocked");
     }
     /**
      * Serializes information the current object
@@ -387,167 +291,167 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the allowedInboundDataTransferSources property.
      */
     public void setAllowedInboundDataTransferSources(@jakarta.annotation.Nullable final WindowsManagedAppDataTransferLevel value) {
-        this.allowedInboundDataTransferSources = value;
+        this.BackingStore.set("allowedInboundDataTransferSources", value);
     }
     /**
      * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      */
     public void setAllowedOutboundClipboardSharingLevel(@jakarta.annotation.Nullable final WindowsManagedAppClipboardSharingLevel value) {
-        this.allowedOutboundClipboardSharingLevel = value;
+        this.BackingStore.set("allowedOutboundClipboardSharingLevel", value);
     }
     /**
      * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      */
     public void setAllowedOutboundDataTransferDestinations(@jakarta.annotation.Nullable final WindowsManagedAppDataTransferLevel value) {
-        this.allowedOutboundDataTransferDestinations = value;
+        this.BackingStore.set("allowedOutboundDataTransferDestinations", value);
     }
     /**
      * Sets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfUnableToAuthenticateUser property.
      */
     public void setAppActionIfUnableToAuthenticateUser(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
-        this.appActionIfUnableToAuthenticateUser = value;
+        this.BackingStore.set("appActionIfUnableToAuthenticateUser", value);
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.BackingStore.set("apps", value);
     }
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the deployedAppCount property value. Indicates the total number of applications for which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deployedAppCount = value;
+        this.BackingStore.set("deployedAppCount", value);
     }
     /**
      * Sets the isAssigned property value. When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.BackingStore.set("isAssigned", value);
     }
     /**
      * Sets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
      * @param value Value to set for the maximumAllowedDeviceThreatLevel property.
      */
     public void setMaximumAllowedDeviceThreatLevel(@jakarta.annotation.Nullable final ManagedAppDeviceThreatLevel value) {
-        this.maximumAllowedDeviceThreatLevel = value;
+        this.BackingStore.set("maximumAllowedDeviceThreatLevel", value);
     }
     /**
      * Sets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the maximumRequiredOsVersion property.
      */
     public void setMaximumRequiredOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.maximumRequiredOsVersion = value;
+        this.BackingStore.set("maximumRequiredOsVersion", value);
     }
     /**
      * Sets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the maximumWarningOsVersion property.
      */
     public void setMaximumWarningOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.maximumWarningOsVersion = value;
+        this.BackingStore.set("maximumWarningOsVersion", value);
     }
     /**
      * Sets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the maximumWipeOsVersion property.
      */
     public void setMaximumWipeOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.maximumWipeOsVersion = value;
+        this.BackingStore.set("maximumWipeOsVersion", value);
     }
     /**
      * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumRequiredAppVersion property.
      */
     public void setMinimumRequiredAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredAppVersion = value;
+        this.BackingStore.set("minimumRequiredAppVersion", value);
     }
     /**
      * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumRequiredOsVersion property.
      */
     public void setMinimumRequiredOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredOsVersion = value;
+        this.BackingStore.set("minimumRequiredOsVersion", value);
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumRequiredSdkVersion property.
      */
     public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredSdkVersion = value;
+        this.BackingStore.set("minimumRequiredSdkVersion", value);
     }
     /**
      * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumWarningAppVersion property.
      */
     public void setMinimumWarningAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWarningAppVersion = value;
+        this.BackingStore.set("minimumWarningAppVersion", value);
     }
     /**
      * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumWarningOsVersion property.
      */
     public void setMinimumWarningOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWarningOsVersion = value;
+        this.BackingStore.set("minimumWarningOsVersion", value);
     }
     /**
      * Sets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumWipeAppVersion property.
      */
     public void setMinimumWipeAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWipeAppVersion = value;
+        this.BackingStore.set("minimumWipeAppVersion", value);
     }
     /**
      * Sets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumWipeOsVersion property.
      */
     public void setMinimumWipeOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWipeOsVersion = value;
+        this.BackingStore.set("minimumWipeOsVersion", value);
     }
     /**
      * Sets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
      * @param value Value to set for the minimumWipeSdkVersion property.
      */
     public void setMinimumWipeSdkVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWipeSdkVersion = value;
+        this.BackingStore.set("minimumWipeSdkVersion", value);
     }
     /**
      * Sets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the mobileThreatDefenseRemediationAction property.
      */
     public void setMobileThreatDefenseRemediationAction(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
-        this.mobileThreatDefenseRemediationAction = value;
+        this.BackingStore.set("mobileThreatDefenseRemediationAction", value);
     }
     /**
      * Sets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet.
      * @param value Value to set for the periodOfflineBeforeAccessCheck property.
      */
     public void setPeriodOfflineBeforeAccessCheck(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodOfflineBeforeAccessCheck = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("periodOfflineBeforeAccessCheck", value);
     }
     /**
      * Sets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. For example, P5D indicates that the interval is 5 days in duration. A timespan value of PT0S indicates that managed data will never be wiped when the device is not connected to the internet.
      * @param value Value to set for the periodOfflineBeforeWipeIsEnforced property.
      */
     public void setPeriodOfflineBeforeWipeIsEnforced(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodOfflineBeforeWipeIsEnforced = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("periodOfflineBeforeWipeIsEnforced", value);
     }
     /**
      * Sets the printBlocked property value. When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE.
      * @param value Value to set for the printBlocked property.
      */
     public void setPrintBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.printBlocked = value;
+        this.BackingStore.set("printBlocked", value);
     }
 }

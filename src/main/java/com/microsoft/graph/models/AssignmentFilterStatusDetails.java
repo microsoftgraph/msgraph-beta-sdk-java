@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,45 +14,22 @@ import java.util.Objects;
  * Represent status details for device and payload and all associated applied filters.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Parsable {
+public class AssignmentFilterStatusDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Device properties used for filter evaluation during device check-in time.
-     */
-    private java.util.List<KeyValuePair> deviceProperties;
-    /**
-     * Evaluation result summaries for each filter associated to device and payload
-     */
-    private java.util.List<AssignmentFilterEvaluationSummary> evalutionSummaries;
-    /**
-     * Unique identifier for the device object.
-     */
-    private String managedDeviceId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Unique identifier for payload object.
-     */
-    private String payloadId;
-    /**
-     * Unique identifier for UserId object. Can be null
-     */
-    private String userId;
-    /**
-     * Instantiates a new assignmentFilterStatusDetails and sets the default values.
+     * Instantiates a new AssignmentFilterStatusDetails and sets the default values.
      */
     public AssignmentFilterStatusDetails() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignmentFilterStatusDetails
+     * @return a AssignmentFilterStatusDetails
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterStatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,28 +37,41 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
         return new AssignmentFilterStatusDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deviceProperties property value. Device properties used for filter evaluation during device check-in time.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getDeviceProperties() {
-        return this.deviceProperties;
+        return this.BackingStore.get("deviceProperties");
     }
     /**
      * Gets the evalutionSummaries property value. Evaluation result summaries for each filter associated to device and payload
-     * @return a assignmentFilterEvaluationSummary
+     * @return a java.util.List<AssignmentFilterEvaluationSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterEvaluationSummary> getEvalutionSummaries() {
-        return this.evalutionSummaries;
+        return this.BackingStore.get("evalutionSummaries");
     }
     /**
      * The deserialization information for the current model
@@ -97,35 +90,35 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the managedDeviceId property value. Unique identifier for the device object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.BackingStore.get("managedDeviceId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the payloadId property value. Unique identifier for payload object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
-        return this.payloadId;
+        return this.BackingStore.get("payloadId");
     }
     /**
      * Gets the userId property value. Unique identifier for UserId object. Can be null
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -142,52 +135,60 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deviceProperties property value. Device properties used for filter evaluation during device check-in time.
      * @param value Value to set for the deviceProperties property.
      */
     public void setDeviceProperties(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.deviceProperties = value;
+        this.BackingStore.set("deviceProperties", value);
     }
     /**
      * Sets the evalutionSummaries property value. Evaluation result summaries for each filter associated to device and payload
      * @param value Value to set for the evalutionSummaries property.
      */
     public void setEvalutionSummaries(@jakarta.annotation.Nullable final java.util.List<AssignmentFilterEvaluationSummary> value) {
-        this.evalutionSummaries = value;
+        this.BackingStore.set("evalutionSummaries", value);
     }
     /**
      * Sets the managedDeviceId property value. Unique identifier for the device object.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.BackingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the payloadId property value. Unique identifier for payload object.
      * @param value Value to set for the payloadId property.
      */
     public void setPayloadId(@jakarta.annotation.Nullable final String value) {
-        this.payloadId = value;
+        this.BackingStore.set("payloadId", value);
     }
     /**
      * Sets the userId property value. Unique identifier for UserId object. Can be null
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

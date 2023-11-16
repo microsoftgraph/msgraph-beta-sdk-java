@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantEmailNotificationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedTenantEmailNotification> value;
-    /**
-     * Instantiates a new managedTenantEmailNotificationCollectionResponse and sets the default values.
+     * Instantiates a new ManagedTenantEmailNotificationCollectionResponse and sets the default values.
      */
     public ManagedTenantEmailNotificationCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class ManagedTenantEmailNotificationCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantEmailNotificationCollectionResponse
+     * @return a ManagedTenantEmailNotificationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantEmailNotificationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ManagedTenantEmailNotificationCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedTenantEmailNotification
+     * @return a java.util.List<ManagedTenantEmailNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantEmailNotification> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ManagedTenantEmailNotificationCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedTenantEmailNotification> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

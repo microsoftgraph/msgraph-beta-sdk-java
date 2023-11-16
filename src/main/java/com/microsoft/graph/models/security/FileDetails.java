@@ -4,61 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FileDetails implements AdditionalDataHolder, Parsable {
+public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The name of the file.
-     */
-    private String fileName;
-    /**
-     * The file path (location) of the file instance.
-     */
-    private String filePath;
-    /**
-     * The publisher of the file.
-     */
-    private String filePublisher;
-    /**
-     * The size of the file in bytes.
-     */
-    private Long fileSize;
-    /**
-     * The certificate authority (CA) that issued the certificate.
-     */
-    private String issuer;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The Sha1 cryptographic hash of the file content.
-     */
-    private String sha1;
-    /**
-     * The Sha256 cryptographic hash of the file content.
-     */
-    private String sha256;
-    /**
-     * The signer of the signed file.
-     */
-    private String signer;
-    /**
-     * Instantiates a new fileDetails and sets the default values.
+     * Instantiates a new FileDetails and sets the default values.
      */
     public FileDetails() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileDetails
+     * @return a FileDetails
      */
     @jakarta.annotation.Nonnull
     public static FileDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,12 +34,25 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return new FileDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -93,75 +74,75 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fileName property value. The name of the file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.BackingStore.get("fileName");
     }
     /**
      * Gets the filePath property value. The file path (location) of the file instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
-        return this.filePath;
+        return this.BackingStore.get("filePath");
     }
     /**
      * Gets the filePublisher property value. The publisher of the file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePublisher() {
-        return this.filePublisher;
+        return this.BackingStore.get("filePublisher");
     }
     /**
      * Gets the fileSize property value. The size of the file in bytes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
-        return this.fileSize;
+        return this.BackingStore.get("fileSize");
     }
     /**
      * Gets the issuer property value. The certificate authority (CA) that issued the certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
-        return this.issuer;
+        return this.BackingStore.get("issuer");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sha1 property value. The Sha1 cryptographic hash of the file content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSha1() {
-        return this.sha1;
+        return this.BackingStore.get("sha1");
     }
     /**
      * Gets the sha256 property value. The Sha256 cryptographic hash of the file content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSha256() {
-        return this.sha256;
+        return this.BackingStore.get("sha256");
     }
     /**
      * Gets the signer property value. The signer of the signed file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSigner() {
-        return this.signer;
+        return this.BackingStore.get("signer");
     }
     /**
      * Serializes information the current object
@@ -181,73 +162,81 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the fileName property value. The name of the file.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.BackingStore.set("fileName", value);
     }
     /**
      * Sets the filePath property value. The file path (location) of the file instance.
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
-        this.filePath = value;
+        this.BackingStore.set("filePath", value);
     }
     /**
      * Sets the filePublisher property value. The publisher of the file.
      * @param value Value to set for the filePublisher property.
      */
     public void setFilePublisher(@jakarta.annotation.Nullable final String value) {
-        this.filePublisher = value;
+        this.BackingStore.set("filePublisher", value);
     }
     /**
      * Sets the fileSize property value. The size of the file in bytes.
      * @param value Value to set for the fileSize property.
      */
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {
-        this.fileSize = value;
+        this.BackingStore.set("fileSize", value);
     }
     /**
      * Sets the issuer property value. The certificate authority (CA) that issued the certificate.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
-        this.issuer = value;
+        this.BackingStore.set("issuer", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sha1 property value. The Sha1 cryptographic hash of the file content.
      * @param value Value to set for the sha1 property.
      */
     public void setSha1(@jakarta.annotation.Nullable final String value) {
-        this.sha1 = value;
+        this.BackingStore.set("sha1", value);
     }
     /**
      * Sets the sha256 property value. The Sha256 cryptographic hash of the file content.
      * @param value Value to set for the sha256 property.
      */
     public void setSha256(@jakarta.annotation.Nullable final String value) {
-        this.sha256 = value;
+        this.BackingStore.set("sha256", value);
     }
     /**
      * Sets the signer property value. The signer of the signed file.
      * @param value Value to set for the signer property.
      */
     public void setSigner(@jakarta.annotation.Nullable final String value) {
-        this.signer = value;
+        this.BackingStore.set("signer", value);
     }
 }

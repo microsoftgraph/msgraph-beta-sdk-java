@@ -11,67 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthStatus extends Entity implements Parsable {
     /**
-     * The blueScreenCount property
-     */
-    private Integer blueScreenCount;
-    /**
-     * The bootTotalDurationInSeconds property
-     */
-    private Double bootTotalDurationInSeconds;
-    /**
-     * The deviceId property
-     */
-    private String deviceId;
-    /**
-     * The deviceMake property
-     */
-    private String deviceMake;
-    /**
-     * The deviceModel property
-     */
-    private String deviceModel;
-    /**
-     * The deviceName property
-     */
-    private String deviceName;
-    /**
-     * The healthStatus property
-     */
-    private String healthStatus;
-    /**
-     * The lastUpdatedDateTime property
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The osVersion property
-     */
-    private String osVersion;
-    /**
-     * The primaryDiskType property
-     */
-    private String primaryDiskType;
-    /**
-     * The restartCount property
-     */
-    private Integer restartCount;
-    /**
-     * The startupPerformanceScore property
-     */
-    private Double startupPerformanceScore;
-    /**
-     * The tenantDisplayName property
-     */
-    private String tenantDisplayName;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The topProcesses property
-     */
-    private String topProcesses;
-    /**
-     * Instantiates a new deviceHealthStatus and sets the default values.
+     * Instantiates a new DeviceHealthStatus and sets the default values.
      */
     public DeviceHealthStatus() {
         super();
@@ -79,7 +19,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthStatus
+     * @return a DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,51 +28,51 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the blueScreenCount property value. The blueScreenCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
-        return this.blueScreenCount;
+        return this.BackingStore.get("blueScreenCount");
     }
     /**
      * Gets the bootTotalDurationInSeconds property value. The bootTotalDurationInSeconds property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBootTotalDurationInSeconds() {
-        return this.bootTotalDurationInSeconds;
+        return this.BackingStore.get("bootTotalDurationInSeconds");
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceMake property value. The deviceMake property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceMake() {
-        return this.deviceMake;
+        return this.BackingStore.get("deviceMake");
     }
     /**
      * Gets the deviceModel property value. The deviceModel property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.BackingStore.get("deviceModel");
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -160,11 +100,11 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatus() {
-        return this.healthStatus;
+        return this.BackingStore.get("healthStatus");
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
@@ -172,63 +112,63 @@ public class DeviceHealthStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.BackingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Gets the primaryDiskType property value. The primaryDiskType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryDiskType() {
-        return this.primaryDiskType;
+        return this.BackingStore.get("primaryDiskType");
     }
     /**
      * Gets the restartCount property value. The restartCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRestartCount() {
-        return this.restartCount;
+        return this.BackingStore.get("restartCount");
     }
     /**
      * Gets the startupPerformanceScore property value. The startupPerformanceScore property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
-        return this.startupPerformanceScore;
+        return this.BackingStore.get("startupPerformanceScore");
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.BackingStore.get("tenantDisplayName");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the topProcesses property value. The topProcesses property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTopProcesses() {
-        return this.topProcesses;
+        return this.BackingStore.get("topProcesses");
     }
     /**
      * Serializes information the current object
@@ -258,104 +198,104 @@ public class DeviceHealthStatus extends Entity implements Parsable {
      * @param value Value to set for the blueScreenCount property.
      */
     public void setBlueScreenCount(@jakarta.annotation.Nullable final Integer value) {
-        this.blueScreenCount = value;
+        this.BackingStore.set("blueScreenCount", value);
     }
     /**
      * Sets the bootTotalDurationInSeconds property value. The bootTotalDurationInSeconds property
      * @param value Value to set for the bootTotalDurationInSeconds property.
      */
     public void setBootTotalDurationInSeconds(@jakarta.annotation.Nullable final Double value) {
-        this.bootTotalDurationInSeconds = value;
+        this.BackingStore.set("bootTotalDurationInSeconds", value);
     }
     /**
      * Sets the deviceId property value. The deviceId property
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceMake property value. The deviceMake property
      * @param value Value to set for the deviceMake property.
      */
     public void setDeviceMake(@jakarta.annotation.Nullable final String value) {
-        this.deviceMake = value;
+        this.BackingStore.set("deviceMake", value);
     }
     /**
      * Sets the deviceModel property value. The deviceModel property
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.BackingStore.set("deviceModel", value);
     }
     /**
      * Sets the deviceName property value. The deviceName property
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final String value) {
-        this.healthStatus = value;
+        this.BackingStore.set("healthStatus", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.BackingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the osVersion property value. The osVersion property
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
     /**
      * Sets the primaryDiskType property value. The primaryDiskType property
      * @param value Value to set for the primaryDiskType property.
      */
     public void setPrimaryDiskType(@jakarta.annotation.Nullable final String value) {
-        this.primaryDiskType = value;
+        this.BackingStore.set("primaryDiskType", value);
     }
     /**
      * Sets the restartCount property value. The restartCount property
      * @param value Value to set for the restartCount property.
      */
     public void setRestartCount(@jakarta.annotation.Nullable final Integer value) {
-        this.restartCount = value;
+        this.BackingStore.set("restartCount", value);
     }
     /**
      * Sets the startupPerformanceScore property value. The startupPerformanceScore property
      * @param value Value to set for the startupPerformanceScore property.
      */
     public void setStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
-        this.startupPerformanceScore = value;
+        this.BackingStore.set("startupPerformanceScore", value);
     }
     /**
      * Sets the tenantDisplayName property value. The tenantDisplayName property
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.BackingStore.set("tenantDisplayName", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the topProcesses property value. The topProcesses property
      * @param value Value to set for the topProcesses property.
      */
     public void setTopProcesses(@jakarta.annotation.Nullable final String value) {
-        this.topProcesses = value;
+        this.BackingStore.set("topProcesses", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisRecord extends WhoisBaseRecord implements Parsable {
     /**
-     * The collection of historical records associated to this WHOIS object.
-     */
-    private java.util.List<WhoisHistoryRecord> history;
-    /**
-     * Instantiates a new whoisRecord and sets the default values.
+     * Instantiates a new WhoisRecord and sets the default values.
      */
     public WhoisRecord() {
         super();
@@ -22,7 +18,7 @@ public class WhoisRecord extends WhoisBaseRecord implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a whoisRecord
+     * @return a WhoisRecord
      */
     @jakarta.annotation.Nonnull
     public static WhoisRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class WhoisRecord extends WhoisBaseRecord implements Parsable {
     }
     /**
      * Gets the history property value. The collection of historical records associated to this WHOIS object.
-     * @return a whoisHistoryRecord
+     * @return a java.util.List<WhoisHistoryRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisHistoryRecord> getHistory() {
-        return this.history;
+        return this.BackingStore.get("history");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WhoisRecord extends WhoisBaseRecord implements Parsable {
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<WhoisHistoryRecord> value) {
-        this.history = value;
+        this.BackingStore.set("history", value);
     }
 }

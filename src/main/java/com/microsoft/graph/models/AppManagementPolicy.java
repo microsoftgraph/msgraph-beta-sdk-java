@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
-     * Collection of application and service principals to which a policy is applied.
-     */
-    private java.util.List<DirectoryObject> appliesTo;
-    /**
-     * Denotes whether the policy is enabled.
-     */
-    private Boolean isEnabled;
-    /**
-     * Restrictions that apply to an application or service principal object.
-     */
-    private AppManagementConfiguration restrictions;
-    /**
-     * Instantiates a new appManagementPolicy and sets the default values.
+     * Instantiates a new AppManagementPolicy and sets the default values.
      */
     public AppManagementPolicy() {
         super();
@@ -30,7 +18,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appManagementPolicy
+     * @return a AppManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public static AppManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Collection of application and service principals to which a policy is applied.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this.appliesTo;
+        return this.BackingStore.get("appliesTo");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Denotes whether the policy is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @return a appManagementConfiguration
+     * @return a AppManagementConfiguration
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {
-        return this.restrictions;
+        return this.BackingStore.get("restrictions");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.appliesTo = value;
+        this.BackingStore.set("appliesTo", value);
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
      */
     public void setRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
-        this.restrictions = value;
+        this.BackingStore.set("restrictions", value);
     }
 }

@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmission extends ThreatSubmission implements Parsable {
     /**
-     * If the email is phishing simulation, this field won't be null.
-     */
-    private AttackSimulationInfo attackSimulationInfo;
-    /**
-     * Specifies the internet message ID of the email being submitted. This information is present in the email header.
-     */
-    private String internetMessageId;
-    /**
-     * The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
-     */
-    private SubmissionCategory originalCategory;
-    /**
-     * Specifies the date and time stamp when the email was received.
-     */
-    private OffsetDateTime receivedDateTime;
-    /**
-     * Specifies the email address (in smtp format) of the recipient who received the email.
-     */
-    private String recipientEmailAddress;
-    /**
-     * Specifies the email address of the sender.
-     */
-    private String sender;
-    /**
-     * Specifies the IP address of the sender.
-     */
-    private String senderIP;
-    /**
-     * Specifies the subject of the email.
-     */
-    private String subject;
-    /**
-     * It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
-     */
-    private TenantAllowOrBlockListAction tenantAllowOrBlockListAction;
-    /**
-     * Instantiates a new emailThreatSubmission and sets the default values.
+     * Instantiates a new EmailThreatSubmission and sets the default values.
      */
     public EmailThreatSubmission() {
         super();
@@ -55,7 +19,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailThreatSubmission
+     * @return a EmailThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public static EmailThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,11 +36,11 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
-     * @return a attackSimulationInfo
+     * @return a AttackSimulationInfo
      */
     @jakarta.annotation.Nullable
     public AttackSimulationInfo getAttackSimulationInfo() {
-        return this.attackSimulationInfo;
+        return this.BackingStore.get("attackSimulationInfo");
     }
     /**
      * The deserialization information for the current model
@@ -98,19 +62,19 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the internetMessageId property value. Specifies the internet message ID of the email being submitted. This information is present in the email header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
-        return this.internetMessageId;
+        return this.BackingStore.get("internetMessageId");
     }
     /**
      * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
-     * @return a submissionCategory
+     * @return a SubmissionCategory
      */
     @jakarta.annotation.Nullable
     public SubmissionCategory getOriginalCategory() {
-        return this.originalCategory;
+        return this.BackingStore.get("originalCategory");
     }
     /**
      * Gets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
@@ -118,47 +82,47 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this.receivedDateTime;
+        return this.BackingStore.get("receivedDateTime");
     }
     /**
      * Gets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmailAddress() {
-        return this.recipientEmailAddress;
+        return this.BackingStore.get("recipientEmailAddress");
     }
     /**
      * Gets the sender property value. Specifies the email address of the sender.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSender() {
-        return this.sender;
+        return this.BackingStore.get("sender");
     }
     /**
      * Gets the senderIP property value. Specifies the IP address of the sender.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderIP() {
-        return this.senderIP;
+        return this.BackingStore.get("senderIP");
     }
     /**
      * Gets the subject property value. Specifies the subject of the email.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
-     * @return a tenantAllowOrBlockListAction
+     * @return a TenantAllowOrBlockListAction
      */
     @jakarta.annotation.Nullable
     public TenantAllowOrBlockListAction getTenantAllowOrBlockListAction() {
-        return this.tenantAllowOrBlockListAction;
+        return this.BackingStore.get("tenantAllowOrBlockListAction");
     }
     /**
      * Serializes information the current object
@@ -182,62 +146,62 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the attackSimulationInfo property.
      */
     public void setAttackSimulationInfo(@jakarta.annotation.Nullable final AttackSimulationInfo value) {
-        this.attackSimulationInfo = value;
+        this.BackingStore.set("attackSimulationInfo", value);
     }
     /**
      * Sets the internetMessageId property value. Specifies the internet message ID of the email being submitted. This information is present in the email header.
      * @param value Value to set for the internetMessageId property.
      */
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
-        this.internetMessageId = value;
+        this.BackingStore.set("internetMessageId", value);
     }
     /**
      * Sets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @param value Value to set for the originalCategory property.
      */
     public void setOriginalCategory(@jakarta.annotation.Nullable final SubmissionCategory value) {
-        this.originalCategory = value;
+        this.BackingStore.set("originalCategory", value);
     }
     /**
      * Sets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @param value Value to set for the receivedDateTime property.
      */
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.receivedDateTime = value;
+        this.BackingStore.set("receivedDateTime", value);
     }
     /**
      * Sets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @param value Value to set for the recipientEmailAddress property.
      */
     public void setRecipientEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.recipientEmailAddress = value;
+        this.BackingStore.set("recipientEmailAddress", value);
     }
     /**
      * Sets the sender property value. Specifies the email address of the sender.
      * @param value Value to set for the sender property.
      */
     public void setSender(@jakarta.annotation.Nullable final String value) {
-        this.sender = value;
+        this.BackingStore.set("sender", value);
     }
     /**
      * Sets the senderIP property value. Specifies the IP address of the sender.
      * @param value Value to set for the senderIP property.
      */
     public void setSenderIP(@jakarta.annotation.Nullable final String value) {
-        this.senderIP = value;
+        this.BackingStore.set("senderIP", value);
     }
     /**
      * Sets the subject property value. Specifies the subject of the email.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      */
     public void setTenantAllowOrBlockListAction(@jakarta.annotation.Nullable final TenantAllowOrBlockListAction value) {
-        this.tenantAllowOrBlockListAction = value;
+        this.BackingStore.set("tenantAllowOrBlockListAction", value);
     }
 }

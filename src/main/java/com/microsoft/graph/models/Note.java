@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Note extends OutlookItem implements Parsable {
     /**
-     * The attachments property
-     */
-    private java.util.List<Attachment> attachments;
-    /**
-     * The body property
-     */
-    private ItemBody body;
-    /**
-     * The extensions property
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * The hasAttachments property
-     */
-    private Boolean hasAttachments;
-    /**
-     * The isDeleted property
-     */
-    private Boolean isDeleted;
-    /**
-     * The multiValueExtendedProperties property
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * The singleValueExtendedProperties property
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
-     * Instantiates a new note and sets the default values.
+     * Instantiates a new Note and sets the default values.
      */
     public Note() {
         super();
@@ -50,7 +18,7 @@ public class Note extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a note
+     * @return a Note
      */
     @jakarta.annotation.Nonnull
     public static Note createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,27 +27,27 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the attachments property value. The attachments property
-     * @return a attachment
+     * @return a java.util.List<Attachment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
-        return this.attachments;
+        return this.BackingStore.get("attachments");
     }
     /**
      * Gets the body property value. The body property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the extensions property value. The extensions property
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -100,43 +68,43 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. The hasAttachments property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.BackingStore.get("hasAttachments");
     }
     /**
      * Gets the isDeleted property value. The isDeleted property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.BackingStore.get("isDeleted");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
-     * @return a multiValueLegacyExtendedProperty
+     * @return a java.util.List<MultiValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.BackingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
-     * @return a singleValueLegacyExtendedProperty
+     * @return a java.util.List<SingleValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.BackingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
-        this.attachments = value;
+        this.BackingStore.set("attachments", value);
     }
     /**
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the extensions property value. The extensions property
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the hasAttachments property value. The hasAttachments property
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.BackingStore.set("hasAttachments", value);
     }
     /**
      * Sets the isDeleted property value. The isDeleted property
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.BackingStore.set("isDeleted", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.BackingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.BackingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
 }

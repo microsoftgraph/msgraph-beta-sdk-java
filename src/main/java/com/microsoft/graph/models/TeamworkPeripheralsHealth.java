@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable {
+public class TeamworkPeripheralsHealth implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The health details about the communication speaker.
-     */
-    private TeamworkPeripheralHealth communicationSpeakerHealth;
-    /**
-     * The health details about the content camera.
-     */
-    private TeamworkPeripheralHealth contentCameraHealth;
-    /**
-     * The health details about displays.
-     */
-    private java.util.List<TeamworkPeripheralHealth> displayHealthCollection;
-    /**
-     * The health details about the microphone.
-     */
-    private TeamworkPeripheralHealth microphoneHealth;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The health details about the room camera.
-     */
-    private TeamworkPeripheralHealth roomCameraHealth;
-    /**
-     * The health details about the speaker.
-     */
-    private TeamworkPeripheralHealth speakerHealth;
-    /**
-     * Instantiates a new teamworkPeripheralsHealth and sets the default values.
+     * Instantiates a new TeamworkPeripheralsHealth and sets the default values.
      */
     public TeamworkPeripheralsHealth() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkPeripheralsHealth
+     * @return a TeamworkPeripheralsHealth
      */
     @jakarta.annotation.Nonnull
     public static TeamworkPeripheralsHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +34,49 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
         return new TeamworkPeripheralsHealth();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the communicationSpeakerHealth property value. The health details about the communication speaker.
-     * @return a teamworkPeripheralHealth
+     * @return a TeamworkPeripheralHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getCommunicationSpeakerHealth() {
-        return this.communicationSpeakerHealth;
+        return this.BackingStore.get("communicationSpeakerHealth");
     }
     /**
      * Gets the contentCameraHealth property value. The health details about the content camera.
-     * @return a teamworkPeripheralHealth
+     * @return a TeamworkPeripheralHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getContentCameraHealth() {
-        return this.contentCameraHealth;
+        return this.BackingStore.get("contentCameraHealth");
     }
     /**
      * Gets the displayHealthCollection property value. The health details about displays.
-     * @return a teamworkPeripheralHealth
+     * @return a java.util.List<TeamworkPeripheralHealth>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheralHealth> getDisplayHealthCollection() {
-        return this.displayHealthCollection;
+        return this.BackingStore.get("displayHealthCollection");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +96,35 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the microphoneHealth property value. The health details about the microphone.
-     * @return a teamworkPeripheralHealth
+     * @return a TeamworkPeripheralHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getMicrophoneHealth() {
-        return this.microphoneHealth;
+        return this.BackingStore.get("microphoneHealth");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the roomCameraHealth property value. The health details about the room camera.
-     * @return a teamworkPeripheralHealth
+     * @return a TeamworkPeripheralHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getRoomCameraHealth() {
-        return this.roomCameraHealth;
+        return this.BackingStore.get("roomCameraHealth");
     }
     /**
      * Gets the speakerHealth property value. The health details about the speaker.
-     * @return a teamworkPeripheralHealth
+     * @return a TeamworkPeripheralHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getSpeakerHealth() {
-        return this.speakerHealth;
+        return this.BackingStore.get("speakerHealth");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the communicationSpeakerHealth property value. The health details about the communication speaker.
      * @param value Value to set for the communicationSpeakerHealth property.
      */
     public void setCommunicationSpeakerHealth(@jakarta.annotation.Nullable final TeamworkPeripheralHealth value) {
-        this.communicationSpeakerHealth = value;
+        this.BackingStore.set("communicationSpeakerHealth", value);
     }
     /**
      * Sets the contentCameraHealth property value. The health details about the content camera.
      * @param value Value to set for the contentCameraHealth property.
      */
     public void setContentCameraHealth(@jakarta.annotation.Nullable final TeamworkPeripheralHealth value) {
-        this.contentCameraHealth = value;
+        this.BackingStore.set("contentCameraHealth", value);
     }
     /**
      * Sets the displayHealthCollection property value. The health details about displays.
      * @param value Value to set for the displayHealthCollection property.
      */
     public void setDisplayHealthCollection(@jakarta.annotation.Nullable final java.util.List<TeamworkPeripheralHealth> value) {
-        this.displayHealthCollection = value;
+        this.BackingStore.set("displayHealthCollection", value);
     }
     /**
      * Sets the microphoneHealth property value. The health details about the microphone.
      * @param value Value to set for the microphoneHealth property.
      */
     public void setMicrophoneHealth(@jakarta.annotation.Nullable final TeamworkPeripheralHealth value) {
-        this.microphoneHealth = value;
+        this.BackingStore.set("microphoneHealth", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the roomCameraHealth property value. The health details about the room camera.
      * @param value Value to set for the roomCameraHealth property.
      */
     public void setRoomCameraHealth(@jakarta.annotation.Nullable final TeamworkPeripheralHealth value) {
-        this.roomCameraHealth = value;
+        this.BackingStore.set("roomCameraHealth", value);
     }
     /**
      * Sets the speakerHealth property value. The health details about the speaker.
      * @param value Value to set for the speakerHealth property.
      */
     public void setSpeakerHealth(@jakarta.annotation.Nullable final TeamworkPeripheralHealth value) {
-        this.speakerHealth = value;
+        this.BackingStore.set("speakerHealth", value);
     }
 }

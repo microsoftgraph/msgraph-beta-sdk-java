@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceManagementAutopilotEvent> value;
-    /**
-     * Instantiates a new deviceManagementAutopilotEventCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementAutopilotEventCollectionResponse and sets the default values.
      */
     public DeviceManagementAutopilotEventCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceManagementAutopilotEventCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAutopilotEventCollectionResponse
+     * @return a DeviceManagementAutopilotEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceManagementAutopilotEventCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementAutopilotEvent
+     * @return a java.util.List<DeviceManagementAutopilotEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotEvent> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceManagementAutopilotEventCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementAutopilotEvent> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -12,51 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingDefinition extends Entity implements Parsable {
     /**
-     * Collection of constraints for the setting value
-     */
-    private java.util.List<DeviceManagementConstraint> constraints;
-    /**
-     * Collection of dependencies on other settings
-     */
-    private java.util.List<DeviceManagementSettingDependency> dependencies;
-    /**
-     * The setting's description
-     */
-    private String description;
-    /**
-     * The setting's display name
-     */
-    private String displayName;
-    /**
-     * Url to setting documentation
-     */
-    private String documentationUrl;
-    /**
-     * subtitle of the setting header for more details about the category/section
-     */
-    private String headerSubtitle;
-    /**
-     * title of the setting header represents a category/section of a setting/settings
-     */
-    private String headerTitle;
-    /**
-     * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-     */
-    private Boolean isTopLevel;
-    /**
-     * Keywords associated with the setting
-     */
-    private java.util.List<String> keywords;
-    /**
-     * Placeholder text as an example of valid input
-     */
-    private String placeholderText;
-    /**
-     * The valueType property
-     */
-    private DeviceManangementIntentValueType valueType;
-    /**
-     * Instantiates a new deviceManagementSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementSettingDefinition and sets the default values.
      */
     public DeviceManagementSettingDefinition() {
         super();
@@ -64,7 +20,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingDefinition
+     * @return a DeviceManagementSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,43 +38,43 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the constraints property value. Collection of constraints for the setting value
-     * @return a deviceManagementConstraint
+     * @return a java.util.List<DeviceManagementConstraint>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConstraint> getConstraints() {
-        return this.constraints;
+        return this.BackingStore.get("constraints");
     }
     /**
      * Gets the dependencies property value. Collection of dependencies on other settings
-     * @return a deviceManagementSettingDependency
+     * @return a java.util.List<DeviceManagementSettingDependency>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingDependency> getDependencies() {
-        return this.dependencies;
+        return this.BackingStore.get("dependencies");
     }
     /**
      * Gets the description property value. The setting's description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The setting's display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the documentationUrl property value. Url to setting documentation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentationUrl() {
-        return this.documentationUrl;
+        return this.BackingStore.get("documentationUrl");
     }
     /**
      * The deserialization information for the current model
@@ -142,51 +98,51 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the headerSubtitle property value. subtitle of the setting header for more details about the category/section
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHeaderSubtitle() {
-        return this.headerSubtitle;
+        return this.BackingStore.get("headerSubtitle");
     }
     /**
      * Gets the headerTitle property value. title of the setting header represents a category/section of a setting/settings
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHeaderTitle() {
-        return this.headerTitle;
+        return this.BackingStore.get("headerTitle");
     }
     /**
      * Gets the isTopLevel property value. If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTopLevel() {
-        return this.isTopLevel;
+        return this.BackingStore.get("isTopLevel");
     }
     /**
      * Gets the keywords property value. Keywords associated with the setting
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeywords() {
-        return this.keywords;
+        return this.BackingStore.get("keywords");
     }
     /**
      * Gets the placeholderText property value. Placeholder text as an example of valid input
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlaceholderText() {
-        return this.placeholderText;
+        return this.BackingStore.get("placeholderText");
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a deviceManangementIntentValueType
+     * @return a DeviceManangementIntentValueType
      */
     @jakarta.annotation.Nullable
     public DeviceManangementIntentValueType getValueType() {
-        return this.valueType;
+        return this.BackingStore.get("valueType");
     }
     /**
      * Serializes information the current object
@@ -212,76 +168,76 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      * @param value Value to set for the constraints property.
      */
     public void setConstraints(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConstraint> value) {
-        this.constraints = value;
+        this.BackingStore.set("constraints", value);
     }
     /**
      * Sets the dependencies property value. Collection of dependencies on other settings
      * @param value Value to set for the dependencies property.
      */
     public void setDependencies(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingDependency> value) {
-        this.dependencies = value;
+        this.BackingStore.set("dependencies", value);
     }
     /**
      * Sets the description property value. The setting's description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The setting's display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the documentationUrl property value. Url to setting documentation
      * @param value Value to set for the documentationUrl property.
      */
     public void setDocumentationUrl(@jakarta.annotation.Nullable final String value) {
-        this.documentationUrl = value;
+        this.BackingStore.set("documentationUrl", value);
     }
     /**
      * Sets the headerSubtitle property value. subtitle of the setting header for more details about the category/section
      * @param value Value to set for the headerSubtitle property.
      */
     public void setHeaderSubtitle(@jakarta.annotation.Nullable final String value) {
-        this.headerSubtitle = value;
+        this.BackingStore.set("headerSubtitle", value);
     }
     /**
      * Sets the headerTitle property value. title of the setting header represents a category/section of a setting/settings
      * @param value Value to set for the headerTitle property.
      */
     public void setHeaderTitle(@jakarta.annotation.Nullable final String value) {
-        this.headerTitle = value;
+        this.BackingStore.set("headerTitle", value);
     }
     /**
      * Sets the isTopLevel property value. If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
      * @param value Value to set for the isTopLevel property.
      */
     public void setIsTopLevel(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTopLevel = value;
+        this.BackingStore.set("isTopLevel", value);
     }
     /**
      * Sets the keywords property value. Keywords associated with the setting
      * @param value Value to set for the keywords property.
      */
     public void setKeywords(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.keywords = value;
+        this.BackingStore.set("keywords", value);
     }
     /**
      * Sets the placeholderText property value. Placeholder text as an example of valid input
      * @param value Value to set for the placeholderText property.
      */
     public void setPlaceholderText(@jakarta.annotation.Nullable final String value) {
-        this.placeholderText = value;
+        this.BackingStore.set("placeholderText", value);
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final DeviceManangementIntentValueType value) {
-        this.valueType = value;
+        this.BackingStore.set("valueType", value);
     }
 }

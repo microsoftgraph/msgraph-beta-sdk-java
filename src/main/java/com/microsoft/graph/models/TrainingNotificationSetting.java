@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * The trainingAssignment property
-     */
-    private BaseEndUserNotification trainingAssignment;
-    /**
-     * The trainingReminder property
-     */
-    private TrainingReminderNotification trainingReminder;
-    /**
-     * Instantiates a new trainingNotificationSetting and sets the default values.
+     * Instantiates a new TrainingNotificationSetting and sets the default values.
      */
     public TrainingNotificationSetting() {
         super();
@@ -26,7 +18,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trainingNotificationSetting
+     * @return a TrainingNotificationSetting
      */
     @jakarta.annotation.Nonnull
     public static TrainingNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,20 +37,20 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
         return deserializerMap;
     }
     /**
-     * Gets the trainingAssignment property value. The trainingAssignment property
-     * @return a baseEndUserNotification
+     * Gets the trainingAssignment property value. Training assignment details.
+     * @return a BaseEndUserNotification
      */
     @jakarta.annotation.Nullable
     public BaseEndUserNotification getTrainingAssignment() {
-        return this.trainingAssignment;
+        return this.BackingStore.get("trainingAssignment");
     }
     /**
-     * Gets the trainingReminder property value. The trainingReminder property
-     * @return a trainingReminderNotification
+     * Gets the trainingReminder property value. Training reminder details.
+     * @return a TrainingReminderNotification
      */
     @jakarta.annotation.Nullable
     public TrainingReminderNotification getTrainingReminder() {
-        return this.trainingReminder;
+        return this.BackingStore.get("trainingReminder");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
         writer.writeObjectValue("trainingReminder", this.getTrainingReminder());
     }
     /**
-     * Sets the trainingAssignment property value. The trainingAssignment property
+     * Sets the trainingAssignment property value. Training assignment details.
      * @param value Value to set for the trainingAssignment property.
      */
     public void setTrainingAssignment(@jakarta.annotation.Nullable final BaseEndUserNotification value) {
-        this.trainingAssignment = value;
+        this.BackingStore.set("trainingAssignment", value);
     }
     /**
-     * Sets the trainingReminder property value. The trainingReminder property
+     * Sets the trainingReminder property value. Training reminder details.
      * @param value Value to set for the trainingReminder property.
      */
     public void setTrainingReminder(@jakarta.annotation.Nullable final TrainingReminderNotification value) {
-        this.trainingReminder = value;
+        this.BackingStore.set("trainingReminder", value);
     }
 }

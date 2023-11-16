@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddContentFooterAction extends InformationProtectionAction implements Parsable {
     /**
-     * The alignment property
-     */
-    private ContentAlignment alignment;
-    /**
-     * Color of the font to use for the footer.
-     */
-    private String fontColor;
-    /**
-     * Name of the font to use for the footer.
-     */
-    private String fontName;
-    /**
-     * Font size to use for the footer.
-     */
-    private Integer fontSize;
-    /**
-     * The margin of the header from the bottom of the document.
-     */
-    private Integer margin;
-    /**
-     * The contents of the footer itself.
-     */
-    private String text;
-    /**
-     * The name of the UI element where the footer should be placed.
-     */
-    private String uiElementName;
-    /**
-     * Instantiates a new addContentFooterAction and sets the default values.
+     * Instantiates a new AddContentFooterAction and sets the default values.
      */
     public AddContentFooterAction() {
         super();
@@ -46,7 +18,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addContentFooterAction
+     * @return a AddContentFooterAction
      */
     @jakarta.annotation.Nonnull
     public static AddContentFooterAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a contentAlignment
+     * @return a ContentAlignment
      */
     @jakarta.annotation.Nullable
     public ContentAlignment getAlignment() {
-        return this.alignment;
+        return this.BackingStore.get("alignment");
     }
     /**
      * The deserialization information for the current model
@@ -79,51 +51,51 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the footer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
-        return this.fontColor;
+        return this.BackingStore.get("fontColor");
     }
     /**
      * Gets the fontName property value. Name of the font to use for the footer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontName() {
-        return this.fontName;
+        return this.BackingStore.get("fontName");
     }
     /**
      * Gets the fontSize property value. Font size to use for the footer.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFontSize() {
-        return this.fontSize;
+        return this.BackingStore.get("fontSize");
     }
     /**
      * Gets the margin property value. The margin of the header from the bottom of the document.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {
-        return this.margin;
+        return this.BackingStore.get("margin");
     }
     /**
      * Gets the text property value. The contents of the footer itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the footer should be placed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUiElementName() {
-        return this.uiElementName;
+        return this.BackingStore.get("uiElementName");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * @param value Value to set for the alignment property.
      */
     public void setAlignment(@jakarta.annotation.Nullable final ContentAlignment value) {
-        this.alignment = value;
+        this.BackingStore.set("alignment", value);
     }
     /**
      * Sets the fontColor property value. Color of the font to use for the footer.
      * @param value Value to set for the fontColor property.
      */
     public void setFontColor(@jakarta.annotation.Nullable final String value) {
-        this.fontColor = value;
+        this.BackingStore.set("fontColor", value);
     }
     /**
      * Sets the fontName property value. Name of the font to use for the footer.
      * @param value Value to set for the fontName property.
      */
     public void setFontName(@jakarta.annotation.Nullable final String value) {
-        this.fontName = value;
+        this.BackingStore.set("fontName", value);
     }
     /**
      * Sets the fontSize property value. Font size to use for the footer.
      * @param value Value to set for the fontSize property.
      */
     public void setFontSize(@jakarta.annotation.Nullable final Integer value) {
-        this.fontSize = value;
+        this.BackingStore.set("fontSize", value);
     }
     /**
      * Sets the margin property value. The margin of the header from the bottom of the document.
      * @param value Value to set for the margin property.
      */
     public void setMargin(@jakarta.annotation.Nullable final Integer value) {
-        this.margin = value;
+        this.BackingStore.set("margin", value);
     }
     /**
      * Sets the text property value. The contents of the footer itself.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the uiElementName property value. The name of the UI element where the footer should be placed.
      * @param value Value to set for the uiElementName property.
      */
     public void setUiElementName(@jakarta.annotation.Nullable final String value) {
-        this.uiElementName = value;
+        this.BackingStore.set("uiElementName", value);
     }
 }

@@ -11,15 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ValidateOperation extends LongRunningOperation implements Parsable {
     /**
-     * Set of errors discovered through validation.
-     */
-    private java.util.List<PublicError> errors;
-    /**
-     * Set of warnings discovered through validation.
-     */
-    private java.util.List<PublicError> warnings;
-    /**
-     * Instantiates a new validateOperation and sets the default values.
+     * Instantiates a new ValidateOperation and sets the default values.
      */
     public ValidateOperation() {
         super();
@@ -27,7 +19,7 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validateOperation
+     * @return a ValidateOperation
      */
     @jakarta.annotation.Nonnull
     public static ValidateOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +35,11 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
     }
     /**
      * Gets the errors property value. Set of errors discovered through validation.
-     * @return a publicError
+     * @return a java.util.List<PublicError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublicError> getErrors() {
-        return this.errors;
+        return this.BackingStore.get("errors");
     }
     /**
      * The deserialization information for the current model
@@ -62,11 +54,11 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
     }
     /**
      * Gets the warnings property value. Set of warnings discovered through validation.
-     * @return a publicError
+     * @return a java.util.List<PublicError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublicError> getWarnings() {
-        return this.warnings;
+        return this.BackingStore.get("warnings");
     }
     /**
      * Serializes information the current object
@@ -81,13 +73,13 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<PublicError> value) {
-        this.errors = value;
+        this.BackingStore.set("errors", value);
     }
     /**
      * Sets the warnings property value. Set of warnings discovered through validation.
      * @param value Value to set for the warnings property.
      */
     public void setWarnings(@jakarta.annotation.Nullable final java.util.List<PublicError> value) {
-        this.warnings = value;
+        this.BackingStore.set("warnings", value);
     }
 }

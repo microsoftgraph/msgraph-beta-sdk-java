@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EducationTeacher implements AdditionalDataHolder, Parsable {
+public class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Id of the Teacher in external source system.
-     */
-    private String externalId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Teacher number.
-     */
-    private String teacherNumber;
-    /**
-     * Instantiates a new educationTeacher and sets the default values.
+     * Instantiates a new EducationTeacher and sets the default values.
      */
     public EducationTeacher() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationTeacher
+     * @return a EducationTeacher
      */
     @jakarta.annotation.Nonnull
     public static EducationTeacher createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +34,33 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
         return new EducationTeacher();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the externalId property value. Id of the Teacher in external source system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +76,19 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the teacherNumber property value. Teacher number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeacherNumber() {
-        return this.teacherNumber;
+        return this.BackingStore.get("teacherNumber");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the externalId property value. Id of the Teacher in external source system.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the teacherNumber property value. Teacher number.
      * @param value Value to set for the teacherNumber property.
      */
     public void setTeacherNumber(@jakarta.annotation.Nullable final String value) {
-        this.teacherNumber = value;
+        this.BackingStore.set("teacherNumber", value);
     }
 }

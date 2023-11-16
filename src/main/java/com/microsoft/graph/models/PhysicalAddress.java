@@ -4,57 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PhysicalAddress implements AdditionalDataHolder, Parsable {
+public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The city.
-     */
-    private String city;
-    /**
-     * The country or region. It's a free-format string value, for example, 'United States'.
-     */
-    private String countryOrRegion;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The postal code.
-     */
-    private String postalCode;
-    /**
-     * The post office box number.
-     */
-    private String postOfficeBox;
-    /**
-     * The state.
-     */
-    private String state;
-    /**
-     * The street.
-     */
-    private String street;
-    /**
-     * The type of address. Possible values are: unknown, home, business, other.
-     */
-    private PhysicalAddressType type;
-    /**
-     * Instantiates a new physicalAddress and sets the default values.
+     * Instantiates a new PhysicalAddress and sets the default values.
      */
     public PhysicalAddress() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nonnull
     public static PhysicalAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,28 +34,41 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
         return new PhysicalAddress();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the city property value. The city.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
-        return this.city;
+        return this.BackingStore.get("city");
     }
     /**
      * Gets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
-        return this.countryOrRegion;
+        return this.BackingStore.get("countryOrRegion");
     }
     /**
      * The deserialization information for the current model
@@ -104,51 +89,51 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the postalCode property value. The postal code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
-        return this.postalCode;
+        return this.BackingStore.get("postalCode");
     }
     /**
      * Gets the postOfficeBox property value. The post office box number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostOfficeBox() {
-        return this.postOfficeBox;
+        return this.BackingStore.get("postOfficeBox");
     }
     /**
      * Gets the state property value. The state.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the street property value. The street.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreet() {
-        return this.street;
+        return this.BackingStore.get("street");
     }
     /**
      * Gets the type property value. The type of address. Possible values are: unknown, home, business, other.
-     * @return a physicalAddressType
+     * @return a PhysicalAddressType
      */
     @jakarta.annotation.Nullable
     public PhysicalAddressType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -167,66 +152,74 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the city property value. The city.
      * @param value Value to set for the city property.
      */
     public void setCity(@jakarta.annotation.Nullable final String value) {
-        this.city = value;
+        this.BackingStore.set("city", value);
     }
     /**
      * Sets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
-        this.countryOrRegion = value;
+        this.BackingStore.set("countryOrRegion", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the postalCode property value. The postal code.
      * @param value Value to set for the postalCode property.
      */
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
-        this.postalCode = value;
+        this.BackingStore.set("postalCode", value);
     }
     /**
      * Sets the postOfficeBox property value. The post office box number.
      * @param value Value to set for the postOfficeBox property.
      */
     public void setPostOfficeBox(@jakarta.annotation.Nullable final String value) {
-        this.postOfficeBox = value;
+        this.BackingStore.set("postOfficeBox", value);
     }
     /**
      * Sets the state property value. The state.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the street property value. The street.
      * @param value Value to set for the street property.
      */
     public void setStreet(@jakarta.annotation.Nullable final String value) {
-        this.street = value;
+        this.BackingStore.set("street", value);
     }
     /**
      * Sets the type property value. The type of address. Possible values are: unknown, home, business, other.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PhysicalAddressType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

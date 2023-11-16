@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
+public class ExpressionInputObject implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Definition of the test object.
-     */
-    private ObjectDefinition definition;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Property values of the test object.
-     */
-    private java.util.List<StringKeyObjectValuePair> properties;
-    /**
-     * Instantiates a new expressionInputObject and sets the default values.
+     * Instantiates a new ExpressionInputObject and sets the default values.
      */
     public ExpressionInputObject() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a expressionInputObject
+     * @return a ExpressionInputObject
      */
     @jakarta.annotation.Nonnull
     public static ExpressionInputObject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +34,33 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         return new ExpressionInputObject();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the definition property value. Definition of the test object.
-     * @return a objectDefinition
+     * @return a ObjectDefinition
      */
     @jakarta.annotation.Nullable
     public ObjectDefinition getDefinition() {
-        return this.definition;
+        return this.BackingStore.get("definition");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +76,19 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the properties property value. Property values of the test object.
-     * @return a stringKeyObjectValuePair
+     * @return a java.util.List<StringKeyObjectValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyObjectValuePair> getProperties() {
-        return this.properties;
+        return this.BackingStore.get("properties");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the definition property value. Definition of the test object.
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final ObjectDefinition value) {
-        this.definition = value;
+        this.BackingStore.set("definition", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the properties property value. Property values of the test object.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<StringKeyObjectValuePair> value) {
-        this.properties = value;
+        this.BackingStore.set("properties", value);
     }
 }

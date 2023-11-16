@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSharingConsent extends Entity implements Parsable {
     /**
-     * The time consent was granted for this account
-     */
-    private OffsetDateTime grantDateTime;
-    /**
-     * The granted state for the data sharing consent
-     */
-    private Boolean granted;
-    /**
-     * The Upn of the user that granted consent for this account
-     */
-    private String grantedByUpn;
-    /**
-     * The UserId of the user that granted consent for this account
-     */
-    private String grantedByUserId;
-    /**
-     * The display name of the service work flow
-     */
-    private String serviceDisplayName;
-    /**
-     * The TermsUrl for the data sharing consent
-     */
-    private String termsUrl;
-    /**
-     * Instantiates a new dataSharingConsent and sets the default values.
+     * Instantiates a new DataSharingConsent and sets the default values.
      */
     public DataSharingConsent() {
         super();
@@ -45,7 +21,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataSharingConsent
+     * @return a DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public static DataSharingConsent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,47 +49,47 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getGrantDateTime() {
-        return this.grantDateTime;
+        return this.BackingStore.get("grantDateTime");
     }
     /**
      * Gets the granted property value. The granted state for the data sharing consent
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGranted() {
-        return this.granted;
+        return this.BackingStore.get("granted");
     }
     /**
      * Gets the grantedByUpn property value. The Upn of the user that granted consent for this account
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGrantedByUpn() {
-        return this.grantedByUpn;
+        return this.BackingStore.get("grantedByUpn");
     }
     /**
      * Gets the grantedByUserId property value. The UserId of the user that granted consent for this account
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGrantedByUserId() {
-        return this.grantedByUserId;
+        return this.BackingStore.get("grantedByUserId");
     }
     /**
      * Gets the serviceDisplayName property value. The display name of the service work flow
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceDisplayName() {
-        return this.serviceDisplayName;
+        return this.BackingStore.get("serviceDisplayName");
     }
     /**
      * Gets the termsUrl property value. The TermsUrl for the data sharing consent
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTermsUrl() {
-        return this.termsUrl;
+        return this.BackingStore.get("termsUrl");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the grantDateTime property.
      */
     public void setGrantDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.grantDateTime = value;
+        this.BackingStore.set("grantDateTime", value);
     }
     /**
      * Sets the granted property value. The granted state for the data sharing consent
      * @param value Value to set for the granted property.
      */
     public void setGranted(@jakarta.annotation.Nullable final Boolean value) {
-        this.granted = value;
+        this.BackingStore.set("granted", value);
     }
     /**
      * Sets the grantedByUpn property value. The Upn of the user that granted consent for this account
      * @param value Value to set for the grantedByUpn property.
      */
     public void setGrantedByUpn(@jakarta.annotation.Nullable final String value) {
-        this.grantedByUpn = value;
+        this.BackingStore.set("grantedByUpn", value);
     }
     /**
      * Sets the grantedByUserId property value. The UserId of the user that granted consent for this account
      * @param value Value to set for the grantedByUserId property.
      */
     public void setGrantedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.grantedByUserId = value;
+        this.BackingStore.set("grantedByUserId", value);
     }
     /**
      * Sets the serviceDisplayName property value. The display name of the service work flow
      * @param value Value to set for the serviceDisplayName property.
      */
     public void setServiceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.serviceDisplayName = value;
+        this.BackingStore.set("serviceDisplayName", value);
     }
     /**
      * Sets the termsUrl property value. The TermsUrl for the data sharing consent
      * @param value Value to set for the termsUrl property.
      */
     public void setTermsUrl(@jakarta.annotation.Nullable final String value) {
-        this.termsUrl = value;
+        this.BackingStore.set("termsUrl", value);
     }
 }

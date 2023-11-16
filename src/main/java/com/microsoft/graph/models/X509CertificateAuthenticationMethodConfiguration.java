@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
-     */
-    private X509CertificateAuthenticationModeConfiguration authenticationModeConfiguration;
-    /**
-     * Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
-     */
-    private java.util.List<X509CertificateUserBinding> certificateUserBindings;
-    /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
-     * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
      */
     public X509CertificateAuthenticationMethodConfiguration() {
         super();
@@ -30,7 +18,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateAuthenticationMethodConfiguration
+     * @return a X509CertificateAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     }
     /**
      * Gets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
-     * @return a x509CertificateAuthenticationModeConfiguration
+     * @return a X509CertificateAuthenticationModeConfiguration
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration getAuthenticationModeConfiguration() {
-        return this.authenticationModeConfiguration;
+        return this.BackingStore.get("authenticationModeConfiguration");
     }
     /**
-     * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
-     * @return a x509CertificateUserBinding
+     * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * @return a java.util.List<X509CertificateUserBinding>
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateUserBinding> getCertificateUserBindings() {
-        return this.certificateUserBindings;
+        return this.BackingStore.get("certificateUserBindings");
     }
     /**
      * The deserialization information for the current model
@@ -63,15 +51,24 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         deserializerMap.put("authenticationModeConfiguration", (n) -> { this.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("issuerHintsConfiguration", (n) -> { this.setIssuerHintsConfiguration(n.getObjectValue(X509CertificateIssuerHintsConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.BackingStore.get("includeTargets");
+    }
+    /**
+     * Gets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
+     * @return a X509CertificateIssuerHintsConfiguration
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateIssuerHintsConfiguration getIssuerHintsConfiguration() {
+        return this.BackingStore.get("issuerHintsConfiguration");
     }
     /**
      * Serializes information the current object
@@ -83,26 +80,34 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         writer.writeObjectValue("authenticationModeConfiguration", this.getAuthenticationModeConfiguration());
         writer.writeCollectionOfObjectValues("certificateUserBindings", this.getCertificateUserBindings());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
+        writer.writeObjectValue("issuerHintsConfiguration", this.getIssuerHintsConfiguration());
     }
     /**
      * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
      * @param value Value to set for the authenticationModeConfiguration property.
      */
     public void setAuthenticationModeConfiguration(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
-        this.authenticationModeConfiguration = value;
+        this.BackingStore.set("authenticationModeConfiguration", value);
     }
     /**
-     * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @param value Value to set for the certificateUserBindings property.
      */
     public void setCertificateUserBindings(@jakarta.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
-        this.certificateUserBindings = value;
+        this.BackingStore.set("certificateUserBindings", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.BackingStore.set("includeTargets", value);
+    }
+    /**
+     * Sets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
+     * @param value Value to set for the issuerHintsConfiguration property.
+     */
+    public void setIssuerHintsConfiguration(@jakarta.annotation.Nullable final X509CertificateIssuerHintsConfiguration value) {
+        this.BackingStore.set("issuerHintsConfiguration", value);
     }
 }

@@ -13,43 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase implements Parsable {
     /**
-     * Target store certificate. Possible values are: user, machine.
-     */
-    private CertificateStore certificateStore;
-    /**
-     * Hash Algorithm Options.
-     */
-    private EnumSet<HashAlgorithms> hashAlgorithm;
-    /**
-     * Key Size Options.
-     */
-    private KeySize keySize;
-    /**
-     * Key Usage Options.
-     */
-    private EnumSet<KeyUsages> keyUsage;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Trusted Root Certificate
-     */
-    private Windows81TrustedRootCertificate rootCertificate;
-    /**
-     * SCEP Server Url(s).
-     */
-    private java.util.List<String> scepServerUrls;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new windows81SCEPCertificateProfile and sets the default values.
+     * Instantiates a new Windows81SCEPCertificateProfile and sets the default values.
      */
     public Windows81SCEPCertificateProfile() {
         super();
@@ -58,7 +22,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81SCEPCertificateProfile
+     * @return a Windows81SCEPCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static Windows81SCEPCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,11 +31,11 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this.certificateStore;
+        return this.BackingStore.get("certificateStore");
     }
     /**
      * The deserialization information for the current model
@@ -93,67 +57,67 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
-        return this.hashAlgorithm;
+        return this.BackingStore.get("hashAlgorithm");
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
-        return this.keySize;
+        return this.BackingStore.get("keySize");
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
-        return this.keyUsage;
+        return this.BackingStore.get("keyUsage");
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.BackingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate
-     * @return a windows81TrustedRootCertificate
+     * @return a Windows81TrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificate() {
-        return this.rootCertificate;
+        return this.BackingStore.get("rootCertificate");
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this.scepServerUrls;
+        return this.BackingStore.get("scepServerUrls");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.BackingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.BackingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -177,62 +141,62 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
-        this.certificateStore = value;
+        this.BackingStore.set("certificateStore", value);
     }
     /**
      * Sets the hashAlgorithm property value. Hash Algorithm Options.
      * @param value Value to set for the hashAlgorithm property.
      */
     public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {
-        this.hashAlgorithm = value;
+        this.BackingStore.set("hashAlgorithm", value);
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      */
     public void setKeySize(@jakarta.annotation.Nullable final KeySize value) {
-        this.keySize = value;
+        this.BackingStore.set("keySize", value);
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
     public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
-        this.keyUsage = value;
+        this.BackingStore.set("keyUsage", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.BackingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the rootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the rootCertificate property.
      */
     public void setRootCertificate(@jakarta.annotation.Nullable final Windows81TrustedRootCertificate value) {
-        this.rootCertificate = value;
+        this.BackingStore.set("rootCertificate", value);
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s).
      * @param value Value to set for the scepServerUrls property.
      */
     public void setScepServerUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.scepServerUrls = value;
+        this.BackingStore.set("scepServerUrls", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.BackingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.BackingStore.set("subjectNameFormatString", value);
     }
 }

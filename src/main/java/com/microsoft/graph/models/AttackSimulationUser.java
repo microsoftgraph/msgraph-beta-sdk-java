@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
+public class AttackSimulationUser implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Display name of the user.
-     */
-    private String displayName;
-    /**
-     * Email address of the user.
-     */
-    private String email;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of days the user is OOF during a simulation journey/course of a campaign.
-     */
-    private Integer outOfOfficeDays;
-    /**
-     * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
-     */
-    private String userId;
-    /**
-     * Instantiates a new attackSimulationUser and sets the default values.
+     * Instantiates a new AttackSimulationUser and sets the default values.
      */
     public AttackSimulationUser() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +34,41 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
         return new AttackSimulationUser();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the displayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the email property value. Email address of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +86,27 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the outOfOfficeDays property value. Number of days the user is OOF during a simulation journey/course of a campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOutOfOfficeDays() {
-        return this.outOfOfficeDays;
+        return this.BackingStore.get("outOfOfficeDays");
     }
     /**
-     * Gets the userId property value. The id property value of the user resource that represents the user in the Azure Active Directory tenant.
-     * @return a string
+     * Gets the userId property value. The id property value of the user resource that represents the user in the Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the displayName property value. Display name of the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the email property value. Email address of the user.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the outOfOfficeDays property value. Number of days the user is OOF during a simulation journey/course of a campaign.
      * @param value Value to set for the outOfOfficeDays property.
      */
     public void setOutOfOfficeDays(@jakarta.annotation.Nullable final Integer value) {
-        this.outOfOfficeDays = value;
+        this.BackingStore.set("outOfOfficeDays", value);
     }
     /**
-     * Sets the userId property value. The id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * Sets the userId property value. The id property value of the user resource that represents the user in the Microsoft Entra tenant.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

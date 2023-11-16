@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
     /**
-     * The name of user.
-     */
-    private String userDisplayName;
-    /**
-     * The identifier of user.
-     */
-    private String userId;
-    /**
-     * The user principal name.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new accessReviewInstanceDecisionItemUserTarget and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemUserTarget and sets the default values.
      */
     public AccessReviewInstanceDecisionItemUserTarget() {
         super();
@@ -30,7 +18,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewInstanceDecisionItemUserTarget
+     * @return a AccessReviewInstanceDecisionItemUserTarget
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemUserTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     }
     /**
      * Gets the userDisplayName property value. The name of user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.BackingStore.get("userDisplayName");
     }
     /**
      * Gets the userId property value. The identifier of user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.BackingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userId property value. The identifier of user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseSitePage extends BaseItem implements Parsable {
     /**
-     * The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
-     */
-    private PageLayoutType pageLayout;
-    /**
-     * The publishing status and the MM.mm version of the page.
-     */
-    private PublicationFacet publishingState;
-    /**
-     * Title of the sitePage.
-     */
-    private String title;
-    /**
-     * Instantiates a new baseSitePage and sets the default values.
+     * Instantiates a new BaseSitePage and sets the default values.
      */
     public BaseSitePage() {
         super();
@@ -30,7 +18,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a baseSitePage
+     * @return a BaseSitePage
      */
     @jakarta.annotation.Nonnull
     public static BaseSitePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,27 +46,27 @@ public class BaseSitePage extends BaseItem implements Parsable {
     }
     /**
      * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
-     * @return a pageLayoutType
+     * @return a PageLayoutType
      */
     @jakarta.annotation.Nullable
     public PageLayoutType getPageLayout() {
-        return this.pageLayout;
+        return this.BackingStore.get("pageLayout");
     }
     /**
      * Gets the publishingState property value. The publishing status and the MM.mm version of the page.
-     * @return a publicationFacet
+     * @return a PublicationFacet
      */
     @jakarta.annotation.Nullable
     public PublicationFacet getPublishingState() {
-        return this.publishingState;
+        return this.BackingStore.get("publishingState");
     }
     /**
      * Gets the title property value. Title of the sitePage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * @param value Value to set for the pageLayout property.
      */
     public void setPageLayout(@jakarta.annotation.Nullable final PageLayoutType value) {
-        this.pageLayout = value;
+        this.BackingStore.set("pageLayout", value);
     }
     /**
      * Sets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final PublicationFacet value) {
-        this.publishingState = value;
+        this.BackingStore.set("publishingState", value);
     }
     /**
      * Sets the title property value. Title of the sitePage.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CategoryTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CategoryTemplate> value;
-    /**
-     * Instantiates a new categoryTemplateCollectionResponse and sets the default values.
+     * Instantiates a new CategoryTemplateCollectionResponse and sets the default values.
      */
     public CategoryTemplateCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class CategoryTemplateCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a categoryTemplateCollectionResponse
+     * @return a CategoryTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CategoryTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class CategoryTemplateCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a categoryTemplate
+     * @return a java.util.List<CategoryTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CategoryTemplate> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CategoryTemplateCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CategoryTemplate> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

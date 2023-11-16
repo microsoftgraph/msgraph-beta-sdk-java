@@ -11,87 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcOverview extends Entity implements Parsable {
     /**
-     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * The number of cloud PC connections that have a status of failed. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcConnectionStatusFailed;
-    /**
-     * The number of cloud PC connections that have a status of passed. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcConnectionStatusPassed;
-    /**
-     * The number of cloud PC connections that have a status of pending. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcConnectionStatusPending;
-    /**
-     * The number of cloud PC connections that have a status of running. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcConnectionStatusRunning;
-    /**
-     * The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcConnectionStatusUnkownFutureValue;
-    /**
-     * The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusDeprovisioning;
-    /**
-     * The number of cloud PCs that have a status of failed. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusFailed;
-    /**
-     * The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusInGracePeriod;
-    /**
-     * The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusNotProvisioned;
-    /**
-     * The number of cloud PCs that have a status of provisioned. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusProvisioned;
-    /**
-     * The number of cloud PCs that have a status of provisioning. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusProvisioning;
-    /**
-     * The number of cloud PCs that have a status of unknown. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusUnknown;
-    /**
-     * The number of cloud PCs that have a status of upgrading. Optional. Read-only.
-     */
-    private Integer numberOfCloudPcStatusUpgrading;
-    /**
-     * The display name for the managed tenant. Optional. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
-     */
-    private Integer totalBusinessLicenses;
-    /**
-     * The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
-     */
-    private Integer totalCloudPcConnectionStatus;
-    /**
-     * The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
-     */
-    private Integer totalCloudPcStatus;
-    /**
-     * The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
-     */
-    private Integer totalEnterpriseLicenses;
-    /**
-     * Instantiates a new cloudPcOverview and sets the default values.
+     * Instantiates a new CloudPcOverview and sets the default values.
      */
     public CloudPcOverview() {
         super();
@@ -99,7 +19,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcOverview
+     * @return a CloudPcOverview
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -141,159 +61,159 @@ public class CloudPcOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.BackingStore.get("lastRefreshedDateTime");
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusFailed property value. The number of cloud PC connections that have a status of failed. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusFailed() {
-        return this.numberOfCloudPcConnectionStatusFailed;
+        return this.BackingStore.get("numberOfCloudPcConnectionStatusFailed");
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusPassed property value. The number of cloud PC connections that have a status of passed. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusPassed() {
-        return this.numberOfCloudPcConnectionStatusPassed;
+        return this.BackingStore.get("numberOfCloudPcConnectionStatusPassed");
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusPending property value. The number of cloud PC connections that have a status of pending. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusPending() {
-        return this.numberOfCloudPcConnectionStatusPending;
+        return this.BackingStore.get("numberOfCloudPcConnectionStatusPending");
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusRunning property value. The number of cloud PC connections that have a status of running. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusRunning() {
-        return this.numberOfCloudPcConnectionStatusRunning;
+        return this.BackingStore.get("numberOfCloudPcConnectionStatusRunning");
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusUnkownFutureValue property value. The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusUnkownFutureValue() {
-        return this.numberOfCloudPcConnectionStatusUnkownFutureValue;
+        return this.BackingStore.get("numberOfCloudPcConnectionStatusUnkownFutureValue");
     }
     /**
      * Gets the numberOfCloudPcStatusDeprovisioning property value. The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusDeprovisioning() {
-        return this.numberOfCloudPcStatusDeprovisioning;
+        return this.BackingStore.get("numberOfCloudPcStatusDeprovisioning");
     }
     /**
      * Gets the numberOfCloudPcStatusFailed property value. The number of cloud PCs that have a status of failed. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusFailed() {
-        return this.numberOfCloudPcStatusFailed;
+        return this.BackingStore.get("numberOfCloudPcStatusFailed");
     }
     /**
      * Gets the numberOfCloudPcStatusInGracePeriod property value. The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusInGracePeriod() {
-        return this.numberOfCloudPcStatusInGracePeriod;
+        return this.BackingStore.get("numberOfCloudPcStatusInGracePeriod");
     }
     /**
      * Gets the numberOfCloudPcStatusNotProvisioned property value. The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusNotProvisioned() {
-        return this.numberOfCloudPcStatusNotProvisioned;
+        return this.BackingStore.get("numberOfCloudPcStatusNotProvisioned");
     }
     /**
      * Gets the numberOfCloudPcStatusProvisioned property value. The number of cloud PCs that have a status of provisioned. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusProvisioned() {
-        return this.numberOfCloudPcStatusProvisioned;
+        return this.BackingStore.get("numberOfCloudPcStatusProvisioned");
     }
     /**
      * Gets the numberOfCloudPcStatusProvisioning property value. The number of cloud PCs that have a status of provisioning. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusProvisioning() {
-        return this.numberOfCloudPcStatusProvisioning;
+        return this.BackingStore.get("numberOfCloudPcStatusProvisioning");
     }
     /**
      * Gets the numberOfCloudPcStatusUnknown property value. The number of cloud PCs that have a status of unknown. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusUnknown() {
-        return this.numberOfCloudPcStatusUnknown;
+        return this.BackingStore.get("numberOfCloudPcStatusUnknown");
     }
     /**
      * Gets the numberOfCloudPcStatusUpgrading property value. The number of cloud PCs that have a status of upgrading. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusUpgrading() {
-        return this.numberOfCloudPcStatusUpgrading;
+        return this.BackingStore.get("numberOfCloudPcStatusUpgrading");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.BackingStore.get("tenantDisplayName");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the totalBusinessLicenses property value. The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalBusinessLicenses() {
-        return this.totalBusinessLicenses;
+        return this.BackingStore.get("totalBusinessLicenses");
     }
     /**
      * Gets the totalCloudPcConnectionStatus property value. The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCloudPcConnectionStatus() {
-        return this.totalCloudPcConnectionStatus;
+        return this.BackingStore.get("totalCloudPcConnectionStatus");
     }
     /**
      * Gets the totalCloudPcStatus property value. The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCloudPcStatus() {
-        return this.totalCloudPcStatus;
+        return this.BackingStore.get("totalCloudPcStatus");
     }
     /**
      * Gets the totalEnterpriseLicenses property value. The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalEnterpriseLicenses() {
-        return this.totalEnterpriseLicenses;
+        return this.BackingStore.get("totalEnterpriseLicenses");
     }
     /**
      * Serializes information the current object
@@ -328,139 +248,139 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.BackingStore.set("lastRefreshedDateTime", value);
     }
     /**
      * Sets the numberOfCloudPcConnectionStatusFailed property value. The number of cloud PC connections that have a status of failed. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcConnectionStatusFailed property.
      */
     public void setNumberOfCloudPcConnectionStatusFailed(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcConnectionStatusFailed = value;
+        this.BackingStore.set("numberOfCloudPcConnectionStatusFailed", value);
     }
     /**
      * Sets the numberOfCloudPcConnectionStatusPassed property value. The number of cloud PC connections that have a status of passed. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcConnectionStatusPassed property.
      */
     public void setNumberOfCloudPcConnectionStatusPassed(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcConnectionStatusPassed = value;
+        this.BackingStore.set("numberOfCloudPcConnectionStatusPassed", value);
     }
     /**
      * Sets the numberOfCloudPcConnectionStatusPending property value. The number of cloud PC connections that have a status of pending. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcConnectionStatusPending property.
      */
     public void setNumberOfCloudPcConnectionStatusPending(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcConnectionStatusPending = value;
+        this.BackingStore.set("numberOfCloudPcConnectionStatusPending", value);
     }
     /**
      * Sets the numberOfCloudPcConnectionStatusRunning property value. The number of cloud PC connections that have a status of running. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcConnectionStatusRunning property.
      */
     public void setNumberOfCloudPcConnectionStatusRunning(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcConnectionStatusRunning = value;
+        this.BackingStore.set("numberOfCloudPcConnectionStatusRunning", value);
     }
     /**
      * Sets the numberOfCloudPcConnectionStatusUnkownFutureValue property value. The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcConnectionStatusUnkownFutureValue property.
      */
     public void setNumberOfCloudPcConnectionStatusUnkownFutureValue(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcConnectionStatusUnkownFutureValue = value;
+        this.BackingStore.set("numberOfCloudPcConnectionStatusUnkownFutureValue", value);
     }
     /**
      * Sets the numberOfCloudPcStatusDeprovisioning property value. The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusDeprovisioning property.
      */
     public void setNumberOfCloudPcStatusDeprovisioning(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusDeprovisioning = value;
+        this.BackingStore.set("numberOfCloudPcStatusDeprovisioning", value);
     }
     /**
      * Sets the numberOfCloudPcStatusFailed property value. The number of cloud PCs that have a status of failed. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusFailed property.
      */
     public void setNumberOfCloudPcStatusFailed(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusFailed = value;
+        this.BackingStore.set("numberOfCloudPcStatusFailed", value);
     }
     /**
      * Sets the numberOfCloudPcStatusInGracePeriod property value. The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusInGracePeriod property.
      */
     public void setNumberOfCloudPcStatusInGracePeriod(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusInGracePeriod = value;
+        this.BackingStore.set("numberOfCloudPcStatusInGracePeriod", value);
     }
     /**
      * Sets the numberOfCloudPcStatusNotProvisioned property value. The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusNotProvisioned property.
      */
     public void setNumberOfCloudPcStatusNotProvisioned(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusNotProvisioned = value;
+        this.BackingStore.set("numberOfCloudPcStatusNotProvisioned", value);
     }
     /**
      * Sets the numberOfCloudPcStatusProvisioned property value. The number of cloud PCs that have a status of provisioned. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusProvisioned property.
      */
     public void setNumberOfCloudPcStatusProvisioned(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusProvisioned = value;
+        this.BackingStore.set("numberOfCloudPcStatusProvisioned", value);
     }
     /**
      * Sets the numberOfCloudPcStatusProvisioning property value. The number of cloud PCs that have a status of provisioning. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusProvisioning property.
      */
     public void setNumberOfCloudPcStatusProvisioning(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusProvisioning = value;
+        this.BackingStore.set("numberOfCloudPcStatusProvisioning", value);
     }
     /**
      * Sets the numberOfCloudPcStatusUnknown property value. The number of cloud PCs that have a status of unknown. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusUnknown property.
      */
     public void setNumberOfCloudPcStatusUnknown(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusUnknown = value;
+        this.BackingStore.set("numberOfCloudPcStatusUnknown", value);
     }
     /**
      * Sets the numberOfCloudPcStatusUpgrading property value. The number of cloud PCs that have a status of upgrading. Optional. Read-only.
      * @param value Value to set for the numberOfCloudPcStatusUpgrading property.
      */
     public void setNumberOfCloudPcStatusUpgrading(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfCloudPcStatusUpgrading = value;
+        this.BackingStore.set("numberOfCloudPcStatusUpgrading", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.BackingStore.set("tenantDisplayName", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the totalBusinessLicenses property value. The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
      * @param value Value to set for the totalBusinessLicenses property.
      */
     public void setTotalBusinessLicenses(@jakarta.annotation.Nullable final Integer value) {
-        this.totalBusinessLicenses = value;
+        this.BackingStore.set("totalBusinessLicenses", value);
     }
     /**
      * Sets the totalCloudPcConnectionStatus property value. The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
      * @param value Value to set for the totalCloudPcConnectionStatus property.
      */
     public void setTotalCloudPcConnectionStatus(@jakarta.annotation.Nullable final Integer value) {
-        this.totalCloudPcConnectionStatus = value;
+        this.BackingStore.set("totalCloudPcConnectionStatus", value);
     }
     /**
      * Sets the totalCloudPcStatus property value. The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
      * @param value Value to set for the totalCloudPcStatus property.
      */
     public void setTotalCloudPcStatus(@jakarta.annotation.Nullable final Integer value) {
-        this.totalCloudPcStatus = value;
+        this.BackingStore.set("totalCloudPcStatus", value);
     }
     /**
      * Sets the totalEnterpriseLicenses property value. The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
      * @param value Value to set for the totalEnterpriseLicenses property.
      */
     public void setTotalEnterpriseLicenses(@jakarta.annotation.Nullable final Integer value) {
-        this.totalEnterpriseLicenses = value;
+        this.BackingStore.set("totalEnterpriseLicenses", value);
     }
 }

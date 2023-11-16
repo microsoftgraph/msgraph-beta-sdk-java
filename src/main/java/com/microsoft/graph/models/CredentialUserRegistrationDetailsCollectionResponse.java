@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationDetailsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CredentialUserRegistrationDetails> value;
-    /**
-     * Instantiates a new credentialUserRegistrationDetailsCollectionResponse and sets the default values.
+     * Instantiates a new CredentialUserRegistrationDetailsCollectionResponse and sets the default values.
      */
     public CredentialUserRegistrationDetailsCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CredentialUserRegistrationDetailsCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationDetailsCollectionResponse
+     * @return a CredentialUserRegistrationDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationDetailsCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CredentialUserRegistrationDetailsCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a credentialUserRegistrationDetails
+     * @return a java.util.List<CredentialUserRegistrationDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CredentialUserRegistrationDetails> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CredentialUserRegistrationDetailsCollectionResponse extends BaseCol
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CredentialUserRegistrationDetails> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

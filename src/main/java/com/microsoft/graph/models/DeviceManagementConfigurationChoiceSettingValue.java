@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManagementConfigurationSettingValue implements Parsable {
     /**
-     * Child settings.
-     */
-    private java.util.List<DeviceManagementConfigurationSettingInstance> children;
-    /**
-     * Choice setting value: an OptionDefinition ItemId.
-     */
-    private String value;
-    /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingValue() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingValue
+     * @return a DeviceManagementConfigurationChoiceSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +30,11 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     }
     /**
      * Gets the children property value. Child settings.
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a java.util.List<DeviceManagementConfigurationSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstance> getChildren() {
-        return this.children;
+        return this.BackingStore.get("children");
     }
     /**
      * The deserialization information for the current model
@@ -57,11 +49,11 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     }
     /**
      * Gets the value property value. Choice setting value: an OptionDefinition ItemId.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstance> value) {
-        this.children = value;
+        this.BackingStore.set("children", value);
     }
     /**
      * Sets the value property value. Choice setting value: an OptionDefinition ItemId.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     /**
-     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     */
-    private String contentQuery;
-    /**
-     * Lists any errors that happened while placing the hold.
-     */
-    private java.util.List<String> errors;
-    /**
-     * Indicates whether the hold is enabled and actively holding content.
-     */
-    private Boolean isEnabled;
-    /**
-     * Data sources that represent SharePoint sites.
-     */
-    private java.util.List<SiteSource> siteSources;
-    /**
-     * Data sources that represent Exchange mailboxes.
-     */
-    private java.util.List<UserSource> userSources;
-    /**
-     * Instantiates a new ediscoveryHoldPolicy and sets the default values.
+     * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
      */
     public EdiscoveryHoldPolicy() {
         super();
@@ -38,7 +18,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryHoldPolicy
+     * @return a EdiscoveryHoldPolicy
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryHoldPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
-        return this.contentQuery;
+        return this.BackingStore.get("contentQuery");
     }
     /**
      * Gets the errors property value. Lists any errors that happened while placing the hold.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getErrors() {
-        return this.errors;
+        return this.BackingStore.get("errors");
     }
     /**
      * The deserialization information for the current model
@@ -77,27 +57,27 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the siteSources property value. Data sources that represent SharePoint sites.
-     * @return a siteSource
+     * @return a java.util.List<SiteSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
-        return this.siteSources;
+        return this.BackingStore.get("siteSources");
     }
     /**
      * Gets the userSources property value. Data sources that represent Exchange mailboxes.
-     * @return a userSource
+     * @return a java.util.List<UserSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
-        return this.userSources;
+        return this.BackingStore.get("userSources");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the contentQuery property.
      */
     public void setContentQuery(@jakarta.annotation.Nullable final String value) {
-        this.contentQuery = value;
+        this.BackingStore.set("contentQuery", value);
     }
     /**
      * Sets the errors property value. Lists any errors that happened while placing the hold.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.errors = value;
+        this.BackingStore.set("errors", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the siteSources property value. Data sources that represent SharePoint sites.
      * @param value Value to set for the siteSources property.
      */
     public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
-        this.siteSources = value;
+        this.BackingStore.set("siteSources", value);
     }
     /**
      * Sets the userSources property value. Data sources that represent Exchange mailboxes.
      * @param value Value to set for the userSources property.
      */
     public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
-        this.userSources = value;
+        this.BackingStore.set("userSources", value);
     }
 }

@@ -12,59 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LegalHold extends Entity implements Parsable {
     /**
-     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     */
-    private String contentQuery;
-    /**
-     * The user who created the legal hold.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The date and time the legal hold was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The legal hold description.
-     */
-    private String description;
-    /**
-     * The display name of the legal hold.
-     */
-    private String displayName;
-    /**
-     * Lists any errors that happened while placing the hold.
-     */
-    private java.util.List<String> errors;
-    /**
-     * Indicates whether the hold is enabled and actively holding content.
-     */
-    private Boolean isEnabled;
-    /**
-     * the user who last modified the legal hold.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time the legal hold was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Data source entity for SharePoint sites associated with the legal hold.
-     */
-    private java.util.List<SiteSource> siteSources;
-    /**
-     * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
-     */
-    private LegalHoldStatus status;
-    /**
-     * The unifiedGroupSources property
-     */
-    private java.util.List<UnifiedGroupSource> unifiedGroupSources;
-    /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
-     */
-    private java.util.List<UserSource> userSources;
-    /**
-     * Instantiates a new legalHold and sets the default values.
+     * Instantiates a new LegalHold and sets the default values.
      */
     public LegalHold() {
         super();
@@ -72,7 +20,7 @@ public class LegalHold extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a legalHold
+     * @return a LegalHold
      */
     @jakarta.annotation.Nonnull
     public static LegalHold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,19 +29,19 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
-        return this.contentQuery;
+        return this.BackingStore.get("contentQuery");
     }
     /**
      * Gets the createdBy property value. The user who created the legal hold.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date and time the legal hold was created.
@@ -101,31 +49,31 @@ public class LegalHold extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The legal hold description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the legal hold.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the errors property value. Lists any errors that happened while placing the hold.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getErrors() {
-        return this.errors;
+        return this.BackingStore.get("errors");
     }
     /**
      * The deserialization information for the current model
@@ -151,19 +99,19 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the lastModifiedBy property value. the user who last modified the legal hold.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the legal hold was last modified.
@@ -171,39 +119,39 @@ public class LegalHold extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the legal hold.
-     * @return a siteSource
+     * @return a java.util.List<SiteSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
-        return this.siteSources;
+        return this.BackingStore.get("siteSources");
     }
     /**
      * Gets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
-     * @return a legalHoldStatus
+     * @return a LegalHoldStatus
      */
     @jakarta.annotation.Nullable
     public LegalHoldStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the unifiedGroupSources property value. The unifiedGroupSources property
-     * @return a unifiedGroupSource
+     * @return a java.util.List<UnifiedGroupSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
-        return this.unifiedGroupSources;
+        return this.BackingStore.get("unifiedGroupSources");
     }
     /**
      * Gets the userSources property value. Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
-     * @return a userSource
+     * @return a java.util.List<UserSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
-        return this.userSources;
+        return this.BackingStore.get("userSources");
     }
     /**
      * Serializes information the current object
@@ -231,90 +179,90 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      */
     public void setContentQuery(@jakarta.annotation.Nullable final String value) {
-        this.contentQuery = value;
+        this.BackingStore.set("contentQuery", value);
     }
     /**
      * Sets the createdBy property value. The user who created the legal hold.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the legal hold was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The legal hold description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the legal hold.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the errors property value. Lists any errors that happened while placing the hold.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.errors = value;
+        this.BackingStore.set("errors", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the lastModifiedBy property value. the user who last modified the legal hold.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the legal hold was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the siteSources property value. Data source entity for SharePoint sites associated with the legal hold.
      * @param value Value to set for the siteSources property.
      */
     public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
-        this.siteSources = value;
+        this.BackingStore.set("siteSources", value);
     }
     /**
      * Sets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LegalHoldStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the unifiedGroupSources property value. The unifiedGroupSources property
      * @param value Value to set for the unifiedGroupSources property.
      */
     public void setUnifiedGroupSources(@jakarta.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
-        this.unifiedGroupSources = value;
+        this.BackingStore.set("unifiedGroupSources", value);
     }
     /**
      * Sets the userSources property value. Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
      */
     public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
-        this.userSources = value;
+        this.BackingStore.set("userSources", value);
     }
 }

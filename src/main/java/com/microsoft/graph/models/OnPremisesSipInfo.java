@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
+public class OnPremisesSipInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Indicates whether the user is currently enabled for on-premises Skype for Business.
-     */
-    private Boolean isSipEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
-     */
-    private String sipDeploymentLocation;
-    /**
-     * Serves as a unique identifier for each user on the on-premises Skype for Business.
-     */
-    private String sipPrimaryAddress;
-    /**
-     * Instantiates a new onPremisesSipInfo and sets the default values.
+     * Instantiates a new OnPremisesSipInfo and sets the default values.
      */
     public OnPremisesSipInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesSipInfo
+     * @return a OnPremisesSipInfo
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesSipInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
         return new OnPremisesSipInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isSipEnabled property value. Indicates whether the user is currently enabled for on-premises Skype for Business.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSipEnabled() {
-        return this.isSipEnabled;
+        return this.BackingStore.get("isSipEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sipDeploymentLocation property value. Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSipDeploymentLocation() {
-        return this.sipDeploymentLocation;
+        return this.BackingStore.get("sipDeploymentLocation");
     }
     /**
      * Gets the sipPrimaryAddress property value. Serves as a unique identifier for each user on the on-premises Skype for Business.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSipPrimaryAddress() {
-        return this.sipPrimaryAddress;
+        return this.BackingStore.get("sipPrimaryAddress");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the isSipEnabled property value. Indicates whether the user is currently enabled for on-premises Skype for Business.
      * @param value Value to set for the isSipEnabled property.
      */
     public void setIsSipEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSipEnabled = value;
+        this.BackingStore.set("isSipEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sipDeploymentLocation property value. Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
      * @param value Value to set for the sipDeploymentLocation property.
      */
     public void setSipDeploymentLocation(@jakarta.annotation.Nullable final String value) {
-        this.sipDeploymentLocation = value;
+        this.BackingStore.set("sipDeploymentLocation", value);
     }
     /**
      * Sets the sipPrimaryAddress property value. Serves as a unique identifier for each user on the on-premises Skype for Business.
      * @param value Value to set for the sipPrimaryAddress property.
      */
     public void setSipPrimaryAddress(@jakarta.annotation.Nullable final String value) {
-        this.sipPrimaryAddress = value;
+        this.BackingStore.set("sipPrimaryAddress", value);
     }
 }

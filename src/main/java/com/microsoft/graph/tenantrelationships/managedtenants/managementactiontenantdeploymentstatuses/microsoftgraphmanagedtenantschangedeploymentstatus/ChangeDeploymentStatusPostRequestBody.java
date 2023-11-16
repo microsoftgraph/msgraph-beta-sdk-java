@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The managementActionId property
-     */
-    private String managementActionId;
-    /**
-     * The managementTemplateId property
-     */
-    private String managementTemplateId;
-    /**
-     * The managementTemplateVersion property
-     */
-    private Integer managementTemplateVersion;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The tenantGroupId property
-     */
-    private String tenantGroupId;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new changeDeploymentStatusPostRequestBody and sets the default values.
+     * Instantiates a new ChangeDeploymentStatusPostRequestBody and sets the default values.
      */
     public ChangeDeploymentStatusPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a changeDeploymentStatusPostRequestBody
+     * @return a ChangeDeploymentStatusPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ChangeDeploymentStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +34,25 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
         return new ChangeDeploymentStatusPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -78,51 +71,51 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the managementActionId property value. The managementActionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementActionId() {
-        return this.managementActionId;
+        return this.BackingStore.get("managementActionId");
     }
     /**
      * Gets the managementTemplateId property value. The managementTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
-        return this.managementTemplateId;
+        return this.BackingStore.get("managementTemplateId");
     }
     /**
      * Gets the managementTemplateVersion property value. The managementTemplateVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagementTemplateVersion() {
-        return this.managementTemplateVersion;
+        return this.BackingStore.get("managementTemplateVersion");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the tenantGroupId property value. The tenantGroupId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantGroupId() {
-        return this.tenantGroupId;
+        return this.BackingStore.get("tenantGroupId");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the managementActionId property value. The managementActionId property
      * @param value Value to set for the managementActionId property.
      */
     public void setManagementActionId(@jakarta.annotation.Nullable final String value) {
-        this.managementActionId = value;
+        this.BackingStore.set("managementActionId", value);
     }
     /**
      * Sets the managementTemplateId property value. The managementTemplateId property
      * @param value Value to set for the managementTemplateId property.
      */
     public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateId = value;
+        this.BackingStore.set("managementTemplateId", value);
     }
     /**
      * Sets the managementTemplateVersion property value. The managementTemplateVersion property
      * @param value Value to set for the managementTemplateVersion property.
      */
     public void setManagementTemplateVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.managementTemplateVersion = value;
+        this.BackingStore.set("managementTemplateVersion", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the tenantGroupId property value. The tenantGroupId property
      * @param value Value to set for the tenantGroupId property.
      */
     public void setTenantGroupId(@jakarta.annotation.Nullable final String value) {
-        this.tenantGroupId = value;
+        this.BackingStore.set("tenantGroupId", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

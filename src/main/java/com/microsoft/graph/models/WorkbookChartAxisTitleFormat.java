@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
-     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-     */
-    private WorkbookChartFont font;
-    /**
-     * Instantiates a new workbookChartAxisTitleFormat and sets the default values.
+     * Instantiates a new WorkbookChartAxisTitleFormat and sets the default values.
      */
     public WorkbookChartAxisTitleFormat() {
         super();
@@ -21,7 +17,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxisTitleFormat
+     * @return a WorkbookChartAxisTitleFormat
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxisTitleFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-     * @return a workbookChartFont
+     * @return a WorkbookChartFont
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this.font;
+        return this.BackingStore.get("font");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      */
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.font = value;
+        this.BackingStore.set("font", value);
     }
 }

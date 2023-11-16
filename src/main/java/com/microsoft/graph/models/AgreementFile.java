@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFile extends AgreementFileProperties implements Parsable {
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
-     */
-    private java.util.List<AgreementFileLocalization> localizations;
-    /**
-     * Instantiates a new agreementFile and sets the default values.
+     * Instantiates a new AgreementFile and sets the default values.
      */
     public AgreementFile() {
         super();
@@ -21,7 +17,7 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreementFile
+     * @return a AgreementFile
      */
     @jakarta.annotation.Nonnull
     public static AgreementFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
     }
     /**
      * Gets the localizations property value. The localized version of the terms of use agreement files attached to the agreement.
-     * @return a agreementFileLocalization
+     * @return a java.util.List<AgreementFileLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileLocalization> getLocalizations() {
-        return this.localizations;
+        return this.BackingStore.get("localizations");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
-        this.localizations = value;
+        this.BackingStore.set("localizations", value);
     }
 }

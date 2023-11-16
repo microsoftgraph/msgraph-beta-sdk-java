@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,49 +14,22 @@ import java.util.Objects;
  * Entity representing setting comparison result
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementSettingComparison implements AdditionalDataHolder, Parsable {
+public class DeviceManagementSettingComparison implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Setting comparison result type
-     */
-    private DeviceManagementComparisonResult comparisonResult;
-    /**
-     * JSON representation of current intent (or) template setting's value
-     */
-    private String currentValueJson;
-    /**
-     * The ID of the setting definition for this instance
-     */
-    private String definitionId;
-    /**
-     * The setting's display name
-     */
-    private String displayName;
-    /**
-     * The setting ID
-     */
-    private String id;
-    /**
-     * JSON representation of new template setting's value
-     */
-    private String newValueJson;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new deviceManagementSettingComparison and sets the default values.
+     * Instantiates a new DeviceManagementSettingComparison and sets the default values.
      */
     public DeviceManagementSettingComparison() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingComparison
+     * @return a DeviceManagementSettingComparison
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingComparison createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,44 +37,57 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return new DeviceManagementSettingComparison();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comparisonResult property value. Setting comparison result type
-     * @return a deviceManagementComparisonResult
+     * @return a DeviceManagementComparisonResult
      */
     @jakarta.annotation.Nullable
     public DeviceManagementComparisonResult getComparisonResult() {
-        return this.comparisonResult;
+        return this.BackingStore.get("comparisonResult");
     }
     /**
      * Gets the currentValueJson property value. JSON representation of current intent (or) template setting's value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrentValueJson() {
-        return this.currentValueJson;
+        return this.BackingStore.get("currentValueJson");
     }
     /**
      * Gets the definitionId property value. The ID of the setting definition for this instance
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefinitionId() {
-        return this.definitionId;
+        return this.BackingStore.get("definitionId");
     }
     /**
      * Gets the displayName property value. The setting's display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -118,27 +107,27 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
     }
     /**
      * Gets the id property value. The setting ID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the newValueJson property value. JSON representation of new template setting's value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNewValueJson() {
-        return this.newValueJson;
+        return this.BackingStore.get("newValueJson");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -156,59 +145,67 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the comparisonResult property value. Setting comparison result type
      * @param value Value to set for the comparisonResult property.
      */
     public void setComparisonResult(@jakarta.annotation.Nullable final DeviceManagementComparisonResult value) {
-        this.comparisonResult = value;
+        this.BackingStore.set("comparisonResult", value);
     }
     /**
      * Sets the currentValueJson property value. JSON representation of current intent (or) template setting's value
      * @param value Value to set for the currentValueJson property.
      */
     public void setCurrentValueJson(@jakarta.annotation.Nullable final String value) {
-        this.currentValueJson = value;
+        this.BackingStore.set("currentValueJson", value);
     }
     /**
      * Sets the definitionId property value. The ID of the setting definition for this instance
      * @param value Value to set for the definitionId property.
      */
     public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.definitionId = value;
+        this.BackingStore.set("definitionId", value);
     }
     /**
      * Sets the displayName property value. The setting's display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the id property value. The setting ID
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the newValueJson property value. JSON representation of new template setting's value
      * @param value Value to set for the newValueJson property.
      */
     public void setNewValueJson(@jakarta.annotation.Nullable final String value) {
-        this.newValueJson = value;
+        this.BackingStore.set("newValueJson", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

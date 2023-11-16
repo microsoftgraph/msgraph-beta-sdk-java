@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Ediscoveryroot extends Entity implements Parsable {
     /**
-     * The cases property
-     */
-    private java.util.List<CaseEscaped> cases;
-    /**
-     * Instantiates a new ediscoveryroot and sets the default values.
+     * Instantiates a new Ediscoveryroot and sets the default values.
      */
     public Ediscoveryroot() {
         super();
@@ -22,7 +18,7 @@ public class Ediscoveryroot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryroot
+     * @return a Ediscoveryroot
      */
     @jakarta.annotation.Nonnull
     public static Ediscoveryroot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class Ediscoveryroot extends Entity implements Parsable {
     }
     /**
      * Gets the cases property value. The cases property
-     * @return a caseEscaped
+     * @return a java.util.List<CaseEscaped>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseEscaped> getCases() {
-        return this.cases;
+        return this.BackingStore.get("cases");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class Ediscoveryroot extends Entity implements Parsable {
      * @param value Value to set for the cases property.
      */
     public void setCases(@jakarta.annotation.Nullable final java.util.List<CaseEscaped> value) {
-        this.cases = value;
+        this.BackingStore.set("cases", value);
     }
 }

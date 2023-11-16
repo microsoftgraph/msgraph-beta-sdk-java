@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingRegistrationBase extends Entity implements Parsable {
     /**
-     * Specifies who can register for the meeting.
-     */
-    private MeetingAudience allowedRegistrant;
-    /**
-     * Registrants of the online meeting.
-     */
-    private java.util.List<MeetingRegistrantBase> registrants;
-    /**
-     * Instantiates a new meetingRegistrationBase and sets the default values.
+     * Instantiates a new MeetingRegistrationBase and sets the default values.
      */
     public MeetingRegistrationBase() {
         super();
@@ -25,7 +17,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingRegistrationBase
+     * @return a MeetingRegistrationBase
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistrationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +34,11 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRegistrant property value. Specifies who can register for the meeting.
-     * @return a meetingAudience
+     * @return a MeetingAudience
      */
     @jakarta.annotation.Nullable
     public MeetingAudience getAllowedRegistrant() {
-        return this.allowedRegistrant;
+        return this.BackingStore.get("allowedRegistrant");
     }
     /**
      * The deserialization information for the current model
@@ -61,11 +53,11 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the registrants property value. Registrants of the online meeting.
-     * @return a meetingRegistrantBase
+     * @return a java.util.List<MeetingRegistrantBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrantBase> getRegistrants() {
-        return this.registrants;
+        return this.BackingStore.get("registrants");
     }
     /**
      * Serializes information the current object
@@ -82,13 +74,13 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * @param value Value to set for the allowedRegistrant property.
      */
     public void setAllowedRegistrant(@jakarta.annotation.Nullable final MeetingAudience value) {
-        this.allowedRegistrant = value;
+        this.BackingStore.set("allowedRegistrant", value);
     }
     /**
      * Sets the registrants property value. Registrants of the online meeting.
      * @param value Value to set for the registrants property.
      */
     public void setRegistrants(@jakarta.annotation.Nullable final java.util.List<MeetingRegistrantBase> value) {
-        this.registrants = value;
+        this.BackingStore.set("registrants", value);
     }
 }

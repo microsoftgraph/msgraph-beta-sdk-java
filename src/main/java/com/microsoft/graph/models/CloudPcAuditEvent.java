@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
-     * Friendly name of the activity.Optional.
-     */
-    private String activity;
-    /**
-     * The date time in UTC when the activity was performed.Read-only.
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * The activityOperationType property
-     */
-    private CloudPcAuditActivityOperationType activityOperationType;
-    /**
-     * The activityResult property
-     */
-    private CloudPcAuditActivityResult activityResult;
-    /**
-     * The type of activity that was performed.Read-only.
-     */
-    private String activityType;
-    /**
-     * The actor property
-     */
-    private CloudPcAuditActor actor;
-    /**
-     * The category property
-     */
-    private CloudPcAuditCategory category;
-    /**
-     * Component name. Read-only.
-     */
-    private String componentName;
-    /**
-     * The client request identifier, used to correlate activity within the system.Read-only.
-     */
-    private String correlationId;
-    /**
-     * Event display name. Read-only.
-     */
-    private String displayName;
-    /**
-     * List of cloudPcAuditResource objects.Read-only.
-     */
-    private java.util.List<CloudPcAuditResource> resources;
-    /**
-     * Instantiates a new cloudPcAuditEvent and sets the default values.
+     * Instantiates a new CloudPcAuditEvent and sets the default values.
      */
     public CloudPcAuditEvent() {
         super();
@@ -62,7 +18,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcAuditEvent
+     * @return a CloudPcAuditEvent
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,11 +27,11 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Friendly name of the activity.Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.BackingStore.get("activity");
     }
     /**
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.Read-only.
@@ -83,71 +39,71 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the activityOperationType property value. The activityOperationType property
-     * @return a cloudPcAuditActivityOperationType
+     * @return a CloudPcAuditActivityOperationType
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityOperationType getActivityOperationType() {
-        return this.activityOperationType;
+        return this.BackingStore.get("activityOperationType");
     }
     /**
      * Gets the activityResult property value. The activityResult property
-     * @return a cloudPcAuditActivityResult
+     * @return a CloudPcAuditActivityResult
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityResult getActivityResult() {
-        return this.activityResult;
+        return this.BackingStore.get("activityResult");
     }
     /**
      * Gets the activityType property value. The type of activity that was performed.Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
-        return this.activityType;
+        return this.BackingStore.get("activityType");
     }
     /**
      * Gets the actor property value. The actor property
-     * @return a cloudPcAuditActor
+     * @return a CloudPcAuditActor
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActor getActor() {
-        return this.actor;
+        return this.BackingStore.get("actor");
     }
     /**
      * Gets the category property value. The category property
-     * @return a cloudPcAuditCategory
+     * @return a CloudPcAuditCategory
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the componentName property value. Component name. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComponentName() {
-        return this.componentName;
+        return this.BackingStore.get("componentName");
     }
     /**
      * Gets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.BackingStore.get("correlationId");
     }
     /**
      * Gets the displayName property value. Event display name. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -171,11 +127,11 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. List of cloudPcAuditResource objects.Read-only.
-     * @return a cloudPcAuditResource
+     * @return a java.util.List<CloudPcAuditResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcAuditResource> getResources() {
-        return this.resources;
+        return this.BackingStore.get("resources");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.BackingStore.set("activity", value);
     }
     /**
      * Sets the activityDateTime property value. The date time in UTC when the activity was performed.Read-only.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the activityOperationType property value. The activityOperationType property
      * @param value Value to set for the activityOperationType property.
      */
     public void setActivityOperationType(@jakarta.annotation.Nullable final CloudPcAuditActivityOperationType value) {
-        this.activityOperationType = value;
+        this.BackingStore.set("activityOperationType", value);
     }
     /**
      * Sets the activityResult property value. The activityResult property
      * @param value Value to set for the activityResult property.
      */
     public void setActivityResult(@jakarta.annotation.Nullable final CloudPcAuditActivityResult value) {
-        this.activityResult = value;
+        this.BackingStore.set("activityResult", value);
     }
     /**
      * Sets the activityType property value. The type of activity that was performed.Read-only.
      * @param value Value to set for the activityType property.
      */
     public void setActivityType(@jakarta.annotation.Nullable final String value) {
-        this.activityType = value;
+        this.BackingStore.set("activityType", value);
     }
     /**
      * Sets the actor property value. The actor property
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final CloudPcAuditActor value) {
-        this.actor = value;
+        this.BackingStore.set("actor", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final CloudPcAuditCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the componentName property value. Component name. Read-only.
      * @param value Value to set for the componentName property.
      */
     public void setComponentName(@jakarta.annotation.Nullable final String value) {
-        this.componentName = value;
+        this.BackingStore.set("componentName", value);
     }
     /**
      * Sets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.BackingStore.set("correlationId", value);
     }
     /**
      * Sets the displayName property value. Event display name. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the resources property value. List of cloudPcAuditResource objects.Read-only.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<CloudPcAuditResource> value) {
-        this.resources = value;
+        this.BackingStore.set("resources", value);
     }
 }

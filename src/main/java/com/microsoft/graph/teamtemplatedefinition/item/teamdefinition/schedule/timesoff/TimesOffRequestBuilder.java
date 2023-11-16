@@ -59,56 +59,56 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timesOff{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
+     * @return a TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TimeOffCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * @return a TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TimeOffCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TimeOffCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TimeOffCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of timeOff
+     * @return a TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOff> post(@jakarta.annotation.Nonnull final TimeOff body) {
+    @jakarta.annotation.Nullable
+    public TimeOff post(@jakarta.annotation.Nonnull final TimeOff body) {
         return post(body, null);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOff
+     * @return a TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOff> post(@jakarta.annotation.Nonnull final TimeOff body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TimeOff post(@jakarta.annotation.Nonnull final TimeOff body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TimeOff::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TimeOff::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,28 +116,19 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +137,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -154,24 +145,16 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TimeOff body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a timesOffRequestBuilder
+     * @return a TimesOffRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TimesOffRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +162,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return new TimesOffRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

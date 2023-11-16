@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaxGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TaxGroup> value;
-    /**
-     * Instantiates a new taxGroupCollectionResponse and sets the default values.
+     * Instantiates a new TaxGroupCollectionResponse and sets the default values.
      */
     public TaxGroupCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class TaxGroupCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a taxGroupCollectionResponse
+     * @return a TaxGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TaxGroupCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class TaxGroupCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a taxGroup
+     * @return a java.util.List<TaxGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaxGroup> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TaxGroupCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TaxGroup> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

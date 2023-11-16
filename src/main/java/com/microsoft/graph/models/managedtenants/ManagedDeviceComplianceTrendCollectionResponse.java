@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceComplianceTrendCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedDeviceComplianceTrend> value;
-    /**
-     * Instantiates a new managedDeviceComplianceTrendCollectionResponse and sets the default values.
+     * Instantiates a new ManagedDeviceComplianceTrendCollectionResponse and sets the default values.
      */
     public ManagedDeviceComplianceTrendCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class ManagedDeviceComplianceTrendCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceComplianceTrendCollectionResponse
+     * @return a ManagedDeviceComplianceTrendCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceComplianceTrendCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ManagedDeviceComplianceTrendCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedDeviceComplianceTrend
+     * @return a java.util.List<ManagedDeviceComplianceTrend>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceComplianceTrend> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ManagedDeviceComplianceTrendCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceComplianceTrend> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

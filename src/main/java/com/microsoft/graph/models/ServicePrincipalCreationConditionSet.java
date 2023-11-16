@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalCreationConditionSet extends Entity implements Parsable {
     /**
-     * The applicationIds property
-     */
-    private java.util.List<String> applicationIds;
-    /**
-     * The applicationPublisherIds property
-     */
-    private java.util.List<String> applicationPublisherIds;
-    /**
-     * The applicationsFromVerifiedPublisherOnly property
-     */
-    private Boolean applicationsFromVerifiedPublisherOnly;
-    /**
-     * The applicationTenantIds property
-     */
-    private java.util.List<String> applicationTenantIds;
-    /**
-     * The certifiedApplicationsOnly property
-     */
-    private Boolean certifiedApplicationsOnly;
-    /**
-     * Instantiates a new servicePrincipalCreationConditionSet and sets the default values.
+     * Instantiates a new ServicePrincipalCreationConditionSet and sets the default values.
      */
     public ServicePrincipalCreationConditionSet() {
         super();
@@ -37,7 +17,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalCreationConditionSet
+     * @return a ServicePrincipalCreationConditionSet
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalCreationConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,43 +26,43 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the applicationIds property value. The applicationIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationIds() {
-        return this.applicationIds;
+        return this.BackingStore.get("applicationIds");
     }
     /**
      * Gets the applicationPublisherIds property value. The applicationPublisherIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationPublisherIds() {
-        return this.applicationPublisherIds;
+        return this.BackingStore.get("applicationPublisherIds");
     }
     /**
      * Gets the applicationsFromVerifiedPublisherOnly property value. The applicationsFromVerifiedPublisherOnly property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationsFromVerifiedPublisherOnly() {
-        return this.applicationsFromVerifiedPublisherOnly;
+        return this.BackingStore.get("applicationsFromVerifiedPublisherOnly");
     }
     /**
      * Gets the applicationTenantIds property value. The applicationTenantIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationTenantIds() {
-        return this.applicationTenantIds;
+        return this.BackingStore.get("applicationTenantIds");
     }
     /**
      * Gets the certifiedApplicationsOnly property value. The certifiedApplicationsOnly property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCertifiedApplicationsOnly() {
-        return this.certifiedApplicationsOnly;
+        return this.BackingStore.get("certifiedApplicationsOnly");
     }
     /**
      * The deserialization information for the current model
@@ -116,34 +96,34 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationIds property.
      */
     public void setApplicationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.applicationIds = value;
+        this.BackingStore.set("applicationIds", value);
     }
     /**
      * Sets the applicationPublisherIds property value. The applicationPublisherIds property
      * @param value Value to set for the applicationPublisherIds property.
      */
     public void setApplicationPublisherIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.applicationPublisherIds = value;
+        this.BackingStore.set("applicationPublisherIds", value);
     }
     /**
      * Sets the applicationsFromVerifiedPublisherOnly property value. The applicationsFromVerifiedPublisherOnly property
      * @param value Value to set for the applicationsFromVerifiedPublisherOnly property.
      */
     public void setApplicationsFromVerifiedPublisherOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.applicationsFromVerifiedPublisherOnly = value;
+        this.BackingStore.set("applicationsFromVerifiedPublisherOnly", value);
     }
     /**
      * Sets the applicationTenantIds property value. The applicationTenantIds property
      * @param value Value to set for the applicationTenantIds property.
      */
     public void setApplicationTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.applicationTenantIds = value;
+        this.BackingStore.set("applicationTenantIds", value);
     }
     /**
      * Sets the certifiedApplicationsOnly property value. The certifiedApplicationsOnly property
      * @param value Value to set for the certifiedApplicationsOnly property.
      */
     public void setCertifiedApplicationsOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.certifiedApplicationsOnly = value;
+        this.BackingStore.set("certifiedApplicationsOnly", value);
     }
 }

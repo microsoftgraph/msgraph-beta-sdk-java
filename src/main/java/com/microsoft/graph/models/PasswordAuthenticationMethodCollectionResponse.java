@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PasswordAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PasswordAuthenticationMethod> value;
-    /**
-     * Instantiates a new passwordAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new PasswordAuthenticationMethodCollectionResponse and sets the default values.
      */
     public PasswordAuthenticationMethodCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PasswordAuthenticationMethodCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordAuthenticationMethodCollectionResponse
+     * @return a PasswordAuthenticationMethodCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PasswordAuthenticationMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PasswordAuthenticationMethodCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a passwordAuthenticationMethod
+     * @return a java.util.List<PasswordAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordAuthenticationMethod> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PasswordAuthenticationMethodCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

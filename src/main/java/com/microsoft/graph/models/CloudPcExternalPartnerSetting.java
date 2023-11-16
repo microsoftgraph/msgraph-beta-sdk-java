@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     /**
-     * Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
-     */
-    private Boolean enableConnection;
-    /**
-     * Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The external partner ID.
-     */
-    private String partnerId;
-    /**
-     * The status property
-     */
-    private CloudPcExternalPartnerStatus status;
-    /**
-     * Status details message.
-     */
-    private String statusDetails;
-    /**
-     * Instantiates a new cloudPcExternalPartnerSetting and sets the default values.
+     * Instantiates a new CloudPcExternalPartnerSetting and sets the default values.
      */
     public CloudPcExternalPartnerSetting() {
         super();
@@ -38,7 +18,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcExternalPartnerSetting
+     * @return a CloudPcExternalPartnerSetting
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExternalPartnerSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,11 +27,11 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableConnection() {
-        return this.enableConnection;
+        return this.BackingStore.get("enableConnection");
     }
     /**
      * The deserialization information for the current model
@@ -73,31 +53,31 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.BackingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the partnerId property value. The external partner ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerId() {
-        return this.partnerId;
+        return this.BackingStore.get("partnerId");
     }
     /**
      * Gets the status property value. The status property
-     * @return a cloudPcExternalPartnerStatus
+     * @return a CloudPcExternalPartnerStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the statusDetails property value. Status details message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {
-        return this.statusDetails;
+        return this.BackingStore.get("statusDetails");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the enableConnection property.
      */
     public void setEnableConnection(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableConnection = value;
+        this.BackingStore.set("enableConnection", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.BackingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the partnerId property value. The external partner ID.
      * @param value Value to set for the partnerId property.
      */
     public void setPartnerId(@jakarta.annotation.Nullable final String value) {
-        this.partnerId = value;
+        this.BackingStore.set("partnerId", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcExternalPartnerStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the statusDetails property value. Status details message.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final String value) {
-        this.statusDetails = value;
+        this.BackingStore.set("statusDetails", value);
     }
 }

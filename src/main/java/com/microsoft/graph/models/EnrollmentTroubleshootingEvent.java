@@ -12,39 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /**
-     * Azure AD device identifier.
-     */
-    private String deviceId;
-    /**
-     * Possible ways of adding a mobile device to management.
-     */
-    private DeviceEnrollmentType enrollmentType;
-    /**
-     * Top level failure categories for enrollment.
-     */
-    private DeviceEnrollmentFailureReason failureCategory;
-    /**
-     * Detailed failure reason.
-     */
-    private String failureReason;
-    /**
-     * Device identifier created or collected by Intune.
-     */
-    private String managedDeviceIdentifier;
-    /**
-     * Operating System.
-     */
-    private String operatingSystem;
-    /**
-     * OS Version.
-     */
-    private String osVersion;
-    /**
-     * Identifier for the user that tried to enroll the device.
-     */
-    private String userId;
-    /**
-     * Instantiates a new enrollmentTroubleshootingEvent and sets the default values.
+     * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.
      */
     public EnrollmentTroubleshootingEvent() {
         super();
@@ -52,7 +20,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enrollmentTroubleshootingEvent
+     * @return a EnrollmentTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,35 +29,35 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the deviceId property value. Azure AD device identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a deviceEnrollmentType
+     * @return a DeviceEnrollmentType
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentType getEnrollmentType() {
-        return this.enrollmentType;
+        return this.BackingStore.get("enrollmentType");
     }
     /**
      * Gets the failureCategory property value. Top level failure categories for enrollment.
-     * @return a deviceEnrollmentFailureReason
+     * @return a DeviceEnrollmentFailureReason
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentFailureReason getFailureCategory() {
-        return this.failureCategory;
+        return this.BackingStore.get("failureCategory");
     }
     /**
      * Gets the failureReason property value. Detailed failure reason.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
-        return this.failureReason;
+        return this.BackingStore.get("failureReason");
     }
     /**
      * The deserialization information for the current model
@@ -110,35 +78,35 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceIdentifier() {
-        return this.managedDeviceIdentifier;
+        return this.BackingStore.get("managedDeviceIdentifier");
     }
     /**
      * Gets the operatingSystem property value. Operating System.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
-        return this.operatingSystem;
+        return this.BackingStore.get("operatingSystem");
     }
     /**
      * Gets the osVersion property value. OS Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -161,55 +129,55 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the enrollmentType property.
      */
     public void setEnrollmentType(@jakarta.annotation.Nullable final DeviceEnrollmentType value) {
-        this.enrollmentType = value;
+        this.BackingStore.set("enrollmentType", value);
     }
     /**
      * Sets the failureCategory property value. Top level failure categories for enrollment.
      * @param value Value to set for the failureCategory property.
      */
     public void setFailureCategory(@jakarta.annotation.Nullable final DeviceEnrollmentFailureReason value) {
-        this.failureCategory = value;
+        this.BackingStore.set("failureCategory", value);
     }
     /**
      * Sets the failureReason property value. Detailed failure reason.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
-        this.failureReason = value;
+        this.BackingStore.set("failureReason", value);
     }
     /**
      * Sets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
      * @param value Value to set for the managedDeviceIdentifier property.
      */
     public void setManagedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceIdentifier = value;
+        this.BackingStore.set("managedDeviceIdentifier", value);
     }
     /**
      * Sets the operatingSystem property value. Operating System.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystem = value;
+        this.BackingStore.set("operatingSystem", value);
     }
     /**
      * Sets the osVersion property value. OS Version.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

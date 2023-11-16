@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
     /**
-     * The appId for the service principal entity being reviewed.
-     */
-    private String appId;
-    /**
-     * The display name of the service principal whose access is being reviewed.
-     */
-    private String servicePrincipalDisplayName;
-    /**
-     * The servicePrincipalId property
-     */
-    private String servicePrincipalId;
-    /**
-     * Instantiates a new accessReviewInstanceDecisionItemServicePrincipalTarget and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalTarget and sets the default values.
      */
     public AccessReviewInstanceDecisionItemServicePrincipalTarget() {
         super();
@@ -30,7 +18,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewInstanceDecisionItemServicePrincipalTarget
+     * @return a AccessReviewInstanceDecisionItemServicePrincipalTarget
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemServicePrincipalTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * Gets the appId property value. The appId for the service principal entity being reviewed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.BackingStore.get("appId");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * Gets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalDisplayName() {
-        return this.servicePrincipalDisplayName;
+        return this.BackingStore.get("servicePrincipalDisplayName");
     }
     /**
      * Gets the servicePrincipalId property value. The servicePrincipalId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
-        return this.servicePrincipalId;
+        return this.BackingStore.get("servicePrincipalId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.BackingStore.set("appId", value);
     }
     /**
      * Sets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
      * @param value Value to set for the servicePrincipalDisplayName property.
      */
     public void setServicePrincipalDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalDisplayName = value;
+        this.BackingStore.set("servicePrincipalDisplayName", value);
     }
     /**
      * Sets the servicePrincipalId property value. The servicePrincipalId property
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalId = value;
+        this.BackingStore.set("servicePrincipalId", value);
     }
 }

@@ -4,70 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
+public class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Number of trainings assigned to a user in an attack simulation and training campaign.
-     */
-    private Integer assignedTrainingsCount;
-    /**
-     * Number of trainings completed by a user in an attack simulation and training campaign.
-     */
-    private Integer completedTrainingsCount;
-    /**
-     * Date and time of the compromising online action by a user in an attack simulation and training campaign.
-     */
-    private OffsetDateTime compromisedDateTime;
-    /**
-     * Number of trainings in progress by a user in an attack simulation and training campaign.
-     */
-    private Integer inProgressTrainingsCount;
-    /**
-     * Indicates whether a user was compromised in an attack simulation and training campaign.
-     */
-    private Boolean isCompromised;
-    /**
-     * Indicates latest user activity.
-     */
-    private String latestSimulationActivity;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
-     */
-    private OffsetDateTime reportedPhishDateTime;
-    /**
-     * List of simulation events of a user in the attack simulation and training campaign.
-     */
-    private java.util.List<UserSimulationEventInfo> simulationEvents;
-    /**
-     * The user in an attack simulation and training campaign.
-     */
-    private AttackSimulationUser simulationUser;
-    /**
-     * List of training events of a user in the attack simulation and training campaign.
-     */
-    private java.util.List<UserTrainingEventInfo> trainingEvents;
-    /**
-     * Instantiates a new userSimulationDetails and sets the default values.
+     * Instantiates a new UserSimulationDetails and sets the default values.
      */
     public UserSimulationDetails() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSimulationDetails
+     * @return a UserSimulationDetails
      */
     @jakarta.annotation.Nonnull
     public static UserSimulationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,28 +35,41 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         return new UserSimulationDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedTrainingsCount() {
-        return this.assignedTrainingsCount;
+        return this.BackingStore.get("assignedTrainingsCount");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompletedTrainingsCount() {
-        return this.completedTrainingsCount;
+        return this.BackingStore.get("completedTrainingsCount");
     }
     /**
      * Gets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
@@ -104,7 +77,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompromisedDateTime() {
-        return this.compromisedDateTime;
+        return this.BackingStore.get("compromisedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -128,35 +101,35 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInProgressTrainingsCount() {
-        return this.inProgressTrainingsCount;
+        return this.BackingStore.get("inProgressTrainingsCount");
     }
     /**
      * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompromised() {
-        return this.isCompromised;
+        return this.BackingStore.get("isCompromised");
     }
     /**
      * Gets the latestSimulationActivity property value. Indicates latest user activity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLatestSimulationActivity() {
-        return this.latestSimulationActivity;
+        return this.BackingStore.get("latestSimulationActivity");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
@@ -164,31 +137,31 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReportedPhishDateTime() {
-        return this.reportedPhishDateTime;
+        return this.BackingStore.get("reportedPhishDateTime");
     }
     /**
      * Gets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
-     * @return a userSimulationEventInfo
+     * @return a java.util.List<UserSimulationEventInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSimulationEventInfo> getSimulationEvents() {
-        return this.simulationEvents;
+        return this.BackingStore.get("simulationEvents");
     }
     /**
      * Gets the simulationUser property value. The user in an attack simulation and training campaign.
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getSimulationUser() {
-        return this.simulationUser;
+        return this.BackingStore.get("simulationUser");
     }
     /**
      * Gets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
-     * @return a userTrainingEventInfo
+     * @return a java.util.List<UserTrainingEventInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserTrainingEventInfo> getTrainingEvents() {
-        return this.trainingEvents;
+        return this.BackingStore.get("trainingEvents");
     }
     /**
      * Serializes information the current object
@@ -210,87 +183,95 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
      * @param value Value to set for the assignedTrainingsCount property.
      */
     public void setAssignedTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.assignedTrainingsCount = value;
+        this.BackingStore.set("assignedTrainingsCount", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
      * @param value Value to set for the completedTrainingsCount property.
      */
     public void setCompletedTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.completedTrainingsCount = value;
+        this.BackingStore.set("completedTrainingsCount", value);
     }
     /**
      * Sets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
      * @param value Value to set for the compromisedDateTime property.
      */
     public void setCompromisedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.compromisedDateTime = value;
+        this.BackingStore.set("compromisedDateTime", value);
     }
     /**
      * Sets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
      * @param value Value to set for the inProgressTrainingsCount property.
      */
     public void setInProgressTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.inProgressTrainingsCount = value;
+        this.BackingStore.set("inProgressTrainingsCount", value);
     }
     /**
      * Sets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      * @param value Value to set for the isCompromised property.
      */
     public void setIsCompromised(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCompromised = value;
+        this.BackingStore.set("isCompromised", value);
     }
     /**
      * Sets the latestSimulationActivity property value. Indicates latest user activity.
      * @param value Value to set for the latestSimulationActivity property.
      */
     public void setLatestSimulationActivity(@jakarta.annotation.Nullable final String value) {
-        this.latestSimulationActivity = value;
+        this.BackingStore.set("latestSimulationActivity", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      * @param value Value to set for the reportedPhishDateTime property.
      */
     public void setReportedPhishDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.reportedPhishDateTime = value;
+        this.BackingStore.set("reportedPhishDateTime", value);
     }
     /**
      * Sets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
      * @param value Value to set for the simulationEvents property.
      */
     public void setSimulationEvents(@jakarta.annotation.Nullable final java.util.List<UserSimulationEventInfo> value) {
-        this.simulationEvents = value;
+        this.BackingStore.set("simulationEvents", value);
     }
     /**
      * Sets the simulationUser property value. The user in an attack simulation and training campaign.
      * @param value Value to set for the simulationUser property.
      */
     public void setSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
-        this.simulationUser = value;
+        this.BackingStore.set("simulationUser", value);
     }
     /**
      * Sets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
      * @param value Value to set for the trainingEvents property.
      */
     public void setTrainingEvents(@jakarta.annotation.Nullable final java.util.List<UserTrainingEventInfo> value) {
-        this.trainingEvents = value;
+        this.BackingStore.set("trainingEvents", value);
     }
 }

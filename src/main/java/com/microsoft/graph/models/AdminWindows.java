@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminWindows extends Entity implements Parsable {
     /**
-     * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
-     */
-    private AdminWindowsUpdates updates;
-    /**
-     * Instantiates a new adminWindows and sets the default values.
+     * Instantiates a new AdminWindows and sets the default values.
      */
     public AdminWindows() {
         super();
@@ -21,7 +17,7 @@ public class AdminWindows extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminWindows
+     * @return a AdminWindows
      */
     @jakarta.annotation.Nonnull
     public static AdminWindows createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AdminWindows extends Entity implements Parsable {
     }
     /**
      * Gets the updates property value. Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
-     * @return a adminWindowsUpdates
+     * @return a AdminWindowsUpdates
      */
     @jakarta.annotation.Nullable
     public AdminWindowsUpdates getUpdates() {
-        return this.updates;
+        return this.BackingStore.get("updates");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AdminWindows extends Entity implements Parsable {
      * @param value Value to set for the updates property.
      */
     public void setUpdates(@jakarta.annotation.Nullable final AdminWindowsUpdates value) {
-        this.updates = value;
+        this.BackingStore.set("updates", value);
     }
 }

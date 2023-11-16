@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
-     * The accessContainer property
-     */
-    private DelegatedAdminAccessContainer accessContainer;
-    /**
-     * The accessDetails property
-     */
-    private DelegatedAdminAccessDetails accessDetails;
-    /**
-     * The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
-     */
-    private DelegatedAdminAccessAssignmentStatus status;
-    /**
-     * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
+     * Instantiates a new DelegatedAdminAccessAssignment and sets the default values.
      */
     public DelegatedAdminAccessAssignment() {
         super();
@@ -38,7 +18,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminAccessAssignment
+     * @return a DelegatedAdminAccessAssignment
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminAccessAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessContainer property value. The accessContainer property
-     * @return a delegatedAdminAccessContainer
+     * @return a DelegatedAdminAccessContainer
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainer getAccessContainer() {
-        return this.accessContainer;
+        return this.BackingStore.get("accessContainer");
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
-        return this.accessDetails;
+        return this.BackingStore.get("accessDetails");
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
@@ -67,7 +47,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -89,15 +69,15 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
-     * @return a delegatedAdminAccessAssignmentStatus
+     * @return a DelegatedAdminAccessAssignmentStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignmentStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessContainer property.
      */
     public void setAccessContainer(@jakarta.annotation.Nullable final DelegatedAdminAccessContainer value) {
-        this.accessContainer = value;
+        this.BackingStore.set("accessContainer", value);
     }
     /**
      * Sets the accessDetails property value. The accessDetails property
      * @param value Value to set for the accessDetails property.
      */
     public void setAccessDetails(@jakarta.annotation.Nullable final DelegatedAdminAccessDetails value) {
-        this.accessDetails = value;
+        this.BackingStore.set("accessDetails", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminAccessAssignmentStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

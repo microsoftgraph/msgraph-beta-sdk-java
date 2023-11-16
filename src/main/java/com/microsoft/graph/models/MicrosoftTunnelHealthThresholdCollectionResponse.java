@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelHealthThresholdCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MicrosoftTunnelHealthThreshold> value;
-    /**
-     * Instantiates a new microsoftTunnelHealthThresholdCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelHealthThresholdCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelHealthThresholdCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MicrosoftTunnelHealthThresholdCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelHealthThresholdCollectionResponse
+     * @return a MicrosoftTunnelHealthThresholdCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelHealthThresholdCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MicrosoftTunnelHealthThresholdCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a microsoftTunnelHealthThreshold
+     * @return a java.util.List<MicrosoftTunnelHealthThreshold>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelHealthThreshold> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MicrosoftTunnelHealthThresholdCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MicrosoftTunnelHealthThreshold> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

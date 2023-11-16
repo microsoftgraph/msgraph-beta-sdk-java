@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Program extends Entity implements Parsable {
     /**
-     * Controls associated with the program.
-     */
-    private java.util.List<ProgramControl> controls;
-    /**
-     * The description of the program.
-     */
-    private String description;
-    /**
-     * The name of the program.  Required on create.
-     */
-    private String displayName;
-    /**
-     * Instantiates a new program and sets the default values.
+     * Instantiates a new Program and sets the default values.
      */
     public Program() {
         super();
@@ -29,7 +17,7 @@ public class Program extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a program
+     * @return a Program
      */
     @jakarta.annotation.Nonnull
     public static Program createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,27 +26,27 @@ public class Program extends Entity implements Parsable {
     }
     /**
      * Gets the controls property value. Controls associated with the program.
-     * @return a programControl
+     * @return a java.util.List<ProgramControl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProgramControl> getControls() {
-        return this.controls;
+        return this.BackingStore.get("controls");
     }
     /**
      * Gets the description property value. The description of the program.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name of the program.  Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -88,20 +76,20 @@ public class Program extends Entity implements Parsable {
      * @param value Value to set for the controls property.
      */
     public void setControls(@jakarta.annotation.Nullable final java.util.List<ProgramControl> value) {
-        this.controls = value;
+        this.BackingStore.set("controls", value);
     }
     /**
      * Sets the description property value. The description of the program.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name of the program.  Required on create.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
 }

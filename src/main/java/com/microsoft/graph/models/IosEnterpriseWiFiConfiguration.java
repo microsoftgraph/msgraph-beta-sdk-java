@@ -12,51 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration implements Parsable {
     /**
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     */
-    private WiFiAuthenticationMethod authenticationMethod;
-    /**
-     * Tenant level settings for the Derived Credentials to be used for authentication.
-     */
-    private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
-    /**
-     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
-     */
-    private EapFastConfiguration eapFastConfiguration;
-    /**
-     * Extensible Authentication Protocol (EAP) configuration types.
-     */
-    private EapType eapType;
-    /**
-     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-     */
-    private IosCertificateProfileBase identityCertificateForClientAuthentication;
-    /**
-     * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     */
-    private NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEapTtls;
-    /**
-     * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
-     */
-    private String outerIdentityPrivacyTemporaryValue;
-    /**
-     * Password format string used to build the password to connect to wifi
-     */
-    private String passwordFormatString;
-    /**
-     * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IosTrustedRootCertificate> rootCertificatesForServerValidation;
-    /**
-     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
-     */
-    private java.util.List<String> trustedServerCertificateNames;
-    /**
-     * Username format string used to build the username to connect to wifi
-     */
-    private String usernameFormatString;
-    /**
-     * Instantiates a new iosEnterpriseWiFiConfiguration and sets the default values.
+     * Instantiates a new IosEnterpriseWiFiConfiguration and sets the default values.
      */
     public IosEnterpriseWiFiConfiguration() {
         super();
@@ -65,7 +21,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEnterpriseWiFiConfiguration
+     * @return a IosEnterpriseWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosEnterpriseWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,35 +30,35 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a wiFiAuthenticationMethod
+     * @return a WiFiAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.BackingStore.get("authenticationMethod");
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
-        return this.derivedCredentialSettings;
+        return this.BackingStore.get("derivedCredentialSettings");
     }
     /**
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
-     * @return a eapFastConfiguration
+     * @return a EapFastConfiguration
      */
     @jakarta.annotation.Nullable
     public EapFastConfiguration getEapFastConfiguration() {
-        return this.eapFastConfiguration;
+        return this.BackingStore.get("eapFastConfiguration");
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
-     * @return a eapType
+     * @return a EapType
      */
     @jakarta.annotation.Nullable
     public EapType getEapType() {
-        return this.eapType;
+        return this.BackingStore.get("eapType");
     }
     /**
      * The deserialization information for the current model
@@ -126,59 +82,59 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificateForClientAuthentication() {
-        return this.identityCertificateForClientAuthentication;
+        return this.BackingStore.get("identityCertificateForClientAuthentication");
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a nonEapAuthenticationMethodForEapTtlsType
+     * @return a NonEapAuthenticationMethodForEapTtlsType
      */
     @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
-        return this.innerAuthenticationProtocolForEapTtls;
+        return this.BackingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
-        return this.outerIdentityPrivacyTemporaryValue;
+        return this.BackingStore.get("outerIdentityPrivacyTemporaryValue");
     }
     /**
      * Gets the passwordFormatString property value. Password format string used to build the password to connect to wifi
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordFormatString() {
-        return this.passwordFormatString;
+        return this.BackingStore.get("passwordFormatString");
     }
     /**
      * Gets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
-     * @return a iosTrustedRootCertificate
+     * @return a java.util.List<IosTrustedRootCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosTrustedRootCertificate> getRootCertificatesForServerValidation() {
-        return this.rootCertificatesForServerValidation;
+        return this.BackingStore.get("rootCertificatesForServerValidation");
     }
     /**
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
-        return this.trustedServerCertificateNames;
+        return this.BackingStore.get("trustedServerCertificateNames");
     }
     /**
      * Gets the usernameFormatString property value. Username format string used to build the username to connect to wifi
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsernameFormatString() {
-        return this.usernameFormatString;
+        return this.BackingStore.get("usernameFormatString");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.BackingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
      */
     public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
-        this.derivedCredentialSettings = value;
+        this.BackingStore.set("derivedCredentialSettings", value);
     }
     /**
      * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @param value Value to set for the eapFastConfiguration property.
      */
     public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
-        this.eapFastConfiguration = value;
+        this.BackingStore.set("eapFastConfiguration", value);
     }
     /**
      * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      */
     public void setEapType(@jakarta.annotation.Nullable final EapType value) {
-        this.eapType = value;
+        this.BackingStore.set("eapType", value);
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      */
     public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final IosCertificateProfileBase value) {
-        this.identityCertificateForClientAuthentication = value;
+        this.BackingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
      * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      */
     public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
-        this.innerAuthenticationProtocolForEapTtls = value;
+        this.BackingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**
      * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      */
     public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
-        this.outerIdentityPrivacyTemporaryValue = value;
+        this.BackingStore.set("outerIdentityPrivacyTemporaryValue", value);
     }
     /**
      * Sets the passwordFormatString property value. Password format string used to build the password to connect to wifi
      * @param value Value to set for the passwordFormatString property.
      */
     public void setPasswordFormatString(@jakarta.annotation.Nullable final String value) {
-        this.passwordFormatString = value;
+        this.BackingStore.set("passwordFormatString", value);
     }
     /**
      * Sets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the rootCertificatesForServerValidation property.
      */
     public void setRootCertificatesForServerValidation(@jakarta.annotation.Nullable final java.util.List<IosTrustedRootCertificate> value) {
-        this.rootCertificatesForServerValidation = value;
+        this.BackingStore.set("rootCertificatesForServerValidation", value);
     }
     /**
      * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      * @param value Value to set for the trustedServerCertificateNames property.
      */
     public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.trustedServerCertificateNames = value;
+        this.BackingStore.set("trustedServerCertificateNames", value);
     }
     /**
      * Sets the usernameFormatString property value. Username format string used to build the username to connect to wifi
      * @param value Value to set for the usernameFormatString property.
      */
     public void setUsernameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.usernameFormatString = value;
+        this.BackingStore.set("usernameFormatString", value);
     }
 }

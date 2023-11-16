@@ -11,39 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateStepDeployment extends Entity implements Parsable {
     /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The error property
-     */
-    private GraphAPIErrorDetails error;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The status property
-     */
-    private ManagementTemplateDeploymentStatus status;
-    /**
-     * The templateStepVersion property
-     */
-    private ManagementTemplateStepVersion templateStepVersion;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new managementTemplateStepDeployment and sets the default values.
+     * Instantiates a new ManagementTemplateStepDeployment and sets the default values.
      */
     public ManagementTemplateStepDeployment() {
         super();
@@ -51,7 +19,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStepDeployment
+     * @return a ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepDeployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,11 +28,11 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.BackingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -72,15 +40,15 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the error property value. The error property
-     * @return a graphAPIErrorDetails
+     * @return a GraphAPIErrorDetails
      */
     @jakarta.annotation.Nullable
     public GraphAPIErrorDetails getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -101,11 +69,11 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.BackingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -113,31 +81,31 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.BackingStore.get("lastActionDateTime");
     }
     /**
      * Gets the status property value. The status property
-     * @return a managementTemplateDeploymentStatus
+     * @return a ManagementTemplateDeploymentStatus
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateDeploymentStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the templateStepVersion property value. The templateStepVersion property
-     * @return a managementTemplateStepVersion
+     * @return a ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion getTemplateStepVersion() {
-        return this.templateStepVersion;
+        return this.BackingStore.get("templateStepVersion");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.BackingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final GraphAPIErrorDetails value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.BackingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.BackingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ManagementTemplateDeploymentStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the templateStepVersion property value. The templateStepVersion property
      * @param value Value to set for the templateStepVersion property.
      */
     public void setTemplateStepVersion(@jakarta.annotation.Nullable final ManagementTemplateStepVersion value) {
-        this.templateStepVersion = value;
+        this.BackingStore.set("templateStepVersion", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

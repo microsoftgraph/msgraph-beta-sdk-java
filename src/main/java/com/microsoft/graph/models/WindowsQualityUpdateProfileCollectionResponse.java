@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsQualityUpdateProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsQualityUpdateProfile> value;
-    /**
-     * Instantiates a new windowsQualityUpdateProfileCollectionResponse and sets the default values.
+     * Instantiates a new WindowsQualityUpdateProfileCollectionResponse and sets the default values.
      */
     public WindowsQualityUpdateProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsQualityUpdateProfileCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsQualityUpdateProfileCollectionResponse
+     * @return a WindowsQualityUpdateProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsQualityUpdateProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsQualityUpdateProfileCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsQualityUpdateProfile
+     * @return a java.util.List<WindowsQualityUpdateProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsQualityUpdateProfile> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsQualityUpdateProfileCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsQualityUpdateProfile> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

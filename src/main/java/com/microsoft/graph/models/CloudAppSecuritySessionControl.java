@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps.
-     */
-    private CloudAppSecuritySessionControlType cloudAppSecurityType;
-    /**
-     * Instantiates a new cloudAppSecuritySessionControl and sets the default values.
+     * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
      */
     public CloudAppSecuritySessionControl() {
         super();
@@ -22,7 +18,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudAppSecuritySessionControl
+     * @return a CloudAppSecuritySessionControl
      */
     @jakarta.annotation.Nonnull
     public static CloudAppSecuritySessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     }
     /**
      * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps.
-     * @return a cloudAppSecuritySessionControlType
+     * @return a CloudAppSecuritySessionControlType
      */
     @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControlType getCloudAppSecurityType() {
-        return this.cloudAppSecurityType;
+        return this.BackingStore.get("cloudAppSecurityType");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * @param value Value to set for the cloudAppSecurityType property.
      */
     public void setCloudAppSecurityType(@jakarta.annotation.Nullable final CloudAppSecuritySessionControlType value) {
-        this.cloudAppSecurityType = value;
+        this.BackingStore.set("cloudAppSecurityType", value);
     }
 }

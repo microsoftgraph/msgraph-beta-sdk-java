@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
+public class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
-     */
-    private RecurrencePattern pattern;
-    /**
-     * The duration of an event.
-     */
-    private RecurrenceRange range;
-    /**
-     * Instantiates a new patternedRecurrence and sets the default values.
+     * Instantiates a new PatternedRecurrence and sets the default values.
      */
     public PatternedRecurrence() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a patternedRecurrence
+     * @return a PatternedRecurrence
      */
     @jakarta.annotation.Nonnull
     public static PatternedRecurrence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         return new PatternedRecurrence();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
-     * @return a recurrencePattern
+     * @return a RecurrencePattern
      */
     @jakarta.annotation.Nullable
     public RecurrencePattern getPattern() {
-        return this.pattern;
+        return this.BackingStore.get("pattern");
     }
     /**
      * Gets the range property value. The duration of an event.
-     * @return a recurrenceRange
+     * @return a RecurrenceRange
      */
     @jakarta.annotation.Nullable
     public RecurrenceRange getRange() {
-        return this.range;
+        return this.BackingStore.get("range");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
      * @param value Value to set for the pattern property.
      */
     public void setPattern(@jakarta.annotation.Nullable final RecurrencePattern value) {
-        this.pattern = value;
+        this.BackingStore.set("pattern", value);
     }
     /**
      * Sets the range property value. The duration of an event.
      * @param value Value to set for the range property.
      */
     public void setRange(@jakarta.annotation.Nullable final RecurrenceRange value) {
-        this.range = value;
+        this.BackingStore.set("range", value);
     }
 }

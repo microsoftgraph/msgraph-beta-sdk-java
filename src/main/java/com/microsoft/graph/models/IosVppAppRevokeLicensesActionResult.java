@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,61 +15,22 @@ import java.util.Objects;
  * Defines results for actions on iOS Vpp Apps, contains inherited properties for ActionResult.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder, Parsable {
+public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Possible types of reasons for an Apple Volume Purchase Program token action failure.
+     * Stores model information.
      */
-    private VppTokenActionFailureReason actionFailureReason;
+    private BackingStore BackingStore;
     /**
-     * Action name
-     */
-    private String actionName;
-    /**
-     * The actionState property
-     */
-    private ActionState actionState;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * A count of the number of licenses for which revoke failed.
-     */
-    private Integer failedLicensesCount;
-    /**
-     * Time the action state was last updated
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * DeviceId associated with the action.
-     */
-    private String managedDeviceId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Time the action was initiated
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * A count of the number of licenses for which revoke was attempted.
-     */
-    private Integer totalLicensesCount;
-    /**
-     * UserId associated with the action.
-     */
-    private String userId;
-    /**
-     * Instantiates a new iosVppAppRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new IosVppAppRevokeLicensesActionResult and sets the default values.
      */
     public IosVppAppRevokeLicensesActionResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppAppRevokeLicensesActionResult
+     * @return a IosVppAppRevokeLicensesActionResult
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,43 +39,56 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a vppTokenActionFailureReason
+     * @return a VppTokenActionFailureReason
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
-        return this.actionFailureReason;
+        return this.BackingStore.get("actionFailureReason");
     }
     /**
      * Gets the actionName property value. Action name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
-        return this.actionName;
+        return this.BackingStore.get("actionName");
     }
     /**
      * Gets the actionState property value. The actionState property
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
-        return this.actionState;
+        return this.BackingStore.get("actionState");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses for which revoke failed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
-        return this.failedLicensesCount;
+        return this.BackingStore.get("failedLicensesCount");
     }
     /**
      * The deserialization information for the current model
@@ -138,23 +115,23 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.BackingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the managedDeviceId property value. DeviceId associated with the action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.BackingStore.get("managedDeviceId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -162,23 +139,23 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses for which revoke was attempted.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {
-        return this.totalLicensesCount;
+        return this.BackingStore.get("totalLicensesCount");
     }
     /**
      * Gets the userId property value. UserId associated with the action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -203,76 +180,84 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
      * @param value Value to set for the actionFailureReason property.
      */
     public void setActionFailureReason(@jakarta.annotation.Nullable final VppTokenActionFailureReason value) {
-        this.actionFailureReason = value;
+        this.BackingStore.set("actionFailureReason", value);
     }
     /**
      * Sets the actionName property value. Action name
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final String value) {
-        this.actionName = value;
+        this.BackingStore.set("actionName", value);
     }
     /**
      * Sets the actionState property value. The actionState property
      * @param value Value to set for the actionState property.
      */
     public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
-        this.actionState = value;
+        this.BackingStore.set("actionState", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the failedLicensesCount property value. A count of the number of licenses for which revoke failed.
      * @param value Value to set for the failedLicensesCount property.
      */
     public void setFailedLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedLicensesCount = value;
+        this.BackingStore.set("failedLicensesCount", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. Time the action state was last updated
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.BackingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the managedDeviceId property value. DeviceId associated with the action.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.BackingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the totalLicensesCount property value. A count of the number of licenses for which revoke was attempted.
      * @param value Value to set for the totalLicensesCount property.
      */
     public void setTotalLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicensesCount = value;
+        this.BackingStore.set("totalLicensesCount", value);
     }
     /**
      * Sets the userId property value. UserId associated with the action.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     /**
-     * The auto-assignment target for the specific Role Scope Tag.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new roleScopeTagAutoAssignment and sets the default values.
+     * Instantiates a new RoleScopeTagAutoAssignment and sets the default values.
      */
     public RoleScopeTagAutoAssignment() {
         super();
@@ -24,7 +20,7 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleScopeTagAutoAssignment
+     * @return a RoleScopeTagAutoAssignment
      */
     @jakarta.annotation.Nonnull
     public static RoleScopeTagAutoAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The auto-assignment target for the specific Role Scope Tag.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
 }

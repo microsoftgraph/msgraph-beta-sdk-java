@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForceUserPasswordResetResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<ForceUserPasswordResetEntityIdentifier> identifier;
-    /**
-     * Instantiates a new forceUserPasswordResetResponseAction and sets the default values.
+     * Instantiates a new ForceUserPasswordResetResponseAction and sets the default values.
      */
     public ForceUserPasswordResetResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forceUserPasswordResetResponseAction
+     * @return a ForceUserPasswordResetResponseAction
      */
     @jakarta.annotation.Nonnull
     public static ForceUserPasswordResetResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a forceUserPasswordResetEntityIdentifier
+     * @return a EnumSet<ForceUserPasswordResetEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ForceUserPasswordResetEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<ForceUserPasswordResetEntityIdentifier> value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
 }

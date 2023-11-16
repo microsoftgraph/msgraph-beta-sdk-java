@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implements Parsable {
     /**
-     * Unmanaged devices discovered in the network.
-     */
-    private java.util.List<UnmanagedDevice> unmanagedDevices;
-    /**
-     * Instantiates a new unmanagedDeviceDiscoveryTask and sets the default values.
+     * Instantiates a new UnmanagedDeviceDiscoveryTask and sets the default values.
      */
     public UnmanagedDeviceDiscoveryTask() {
         super();
@@ -25,7 +21,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unmanagedDeviceDiscoveryTask
+     * @return a UnmanagedDeviceDiscoveryTask
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDeviceDiscoveryTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     }
     /**
      * Gets the unmanagedDevices property value. Unmanaged devices discovered in the network.
-     * @return a unmanagedDevice
+     * @return a java.util.List<UnmanagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnmanagedDevice> getUnmanagedDevices() {
-        return this.unmanagedDevices;
+        return this.BackingStore.get("unmanagedDevices");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      * @param value Value to set for the unmanagedDevices property.
      */
     public void setUnmanagedDevices(@jakarta.annotation.Nullable final java.util.List<UnmanagedDevice> value) {
-        this.unmanagedDevices = value;
+        this.BackingStore.set("unmanagedDevices", value);
     }
 }

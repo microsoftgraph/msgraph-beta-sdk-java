@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TermsAndConditionsAcceptanceStatus> value;
-    /**
-     * Instantiates a new termsAndConditionsAcceptanceStatusCollectionResponse and sets the default values.
+     * Instantiates a new TermsAndConditionsAcceptanceStatusCollectionResponse and sets the default values.
      */
     public TermsAndConditionsAcceptanceStatusCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termsAndConditionsAcceptanceStatusCollectionResponse
+     * @return a TermsAndConditionsAcceptanceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditionsAcceptanceStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a termsAndConditionsAcceptanceStatus
+     * @return a java.util.List<TermsAndConditionsAcceptanceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

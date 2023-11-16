@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * The callback configuration for a custom task extension.
-     */
-    private CustomExtensionCallbackConfiguration callbackConfiguration;
-    /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
-     */
-    private User createdBy;
-    /**
-     * When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     */
-    private User lastModifiedBy;
-    /**
-     * When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Instantiates a new customTaskExtension and sets the default values.
+     * Instantiates a new CustomTaskExtension and sets the default values.
      */
     public CustomTaskExtension() {
         super();
@@ -42,7 +22,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTaskExtension
+     * @return a CustomTaskExtension
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +31,19 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the callbackConfiguration property value. The callback configuration for a custom task extension.
-     * @return a customExtensionCallbackConfiguration
+     * @return a CustomExtensionCallbackConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
-        return this.callbackConfiguration;
+        return this.BackingStore.get("callbackConfiguration");
     }
     /**
-     * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
-     * @return a user
+     * Gets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -71,7 +51,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -88,12 +68,12 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     * @return a user
+     * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -101,7 +81,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -121,34 +101,34 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the callbackConfiguration property.
      */
     public void setCallbackConfiguration(@jakarta.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
-        this.callbackConfiguration = value;
+        this.BackingStore.set("callbackConfiguration", value);
     }
     /**
-     * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * Sets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * Sets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
 }

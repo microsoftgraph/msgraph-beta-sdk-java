@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate extends DeviceManagementConfigurationSettingInstanceTemplate implements Parsable {
     /**
-     * Linked policy may append values which are not present in the template.
-     */
-    private Boolean allowUnmanagedValues;
-    /**
-     * Group Setting Collection Value Template
-     */
-    private java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> groupSettingCollectionValueTemplate;
-    /**
-     * Instantiates a new deviceManagementConfigurationGroupSettingCollectionInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationGroupSettingCollectionInstanceTemplate
+     * @return a DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +30,11 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     }
     /**
      * Gets the allowUnmanagedValues property value. Linked policy may append values which are not present in the template.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedValues() {
-        return this.allowUnmanagedValues;
+        return this.BackingStore.get("allowUnmanagedValues");
     }
     /**
      * The deserialization information for the current model
@@ -57,11 +49,11 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     }
     /**
      * Gets the groupSettingCollectionValueTemplate property value. Group Setting Collection Value Template
-     * @return a deviceManagementConfigurationGroupSettingValueTemplate
+     * @return a java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> getGroupSettingCollectionValueTemplate() {
-        return this.groupSettingCollectionValueTemplate;
+        return this.BackingStore.get("groupSettingCollectionValueTemplate");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param value Value to set for the allowUnmanagedValues property.
      */
     public void setAllowUnmanagedValues(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUnmanagedValues = value;
+        this.BackingStore.set("allowUnmanagedValues", value);
     }
     /**
      * Sets the groupSettingCollectionValueTemplate property value. Group Setting Collection Value Template
      * @param value Value to set for the groupSettingCollectionValueTemplate property.
      */
     public void setGroupSettingCollectionValueTemplate(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> value) {
-        this.groupSettingCollectionValueTemplate = value;
+        this.BackingStore.set("groupSettingCollectionValueTemplate", value);
     }
 }

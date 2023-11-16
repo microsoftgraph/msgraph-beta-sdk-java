@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmbeddedSIMDeviceState extends Entity implements Parsable {
     /**
-     * The time the embedded SIM device status was created. Generated service side.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
-     */
-    private String deviceName;
-    /**
-     * The time the embedded SIM device last checked in. Updated service side.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The time the embedded SIM device status was last modified. Updated service side.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Describes the various states for an embedded SIM activation code.
-     */
-    private EmbeddedSIMDeviceStateValue state;
-    /**
-     * String description of the provisioning state.
-     */
-    private String stateDetails;
-    /**
-     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
-     */
-    private String universalIntegratedCircuitCardIdentifier;
-    /**
-     * Username which the subscription was provisioned to e.g. joe@contoso.com
-     */
-    private String userName;
-    /**
-     * Instantiates a new embeddedSIMDeviceState and sets the default values.
+     * Instantiates a new EmbeddedSIMDeviceState and sets the default values.
      */
     public EmbeddedSIMDeviceState() {
         super();
@@ -53,7 +21,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMDeviceState
+     * @return a EmbeddedSIMDeviceState
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,15 +34,15 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the deviceName property value. Device name to which the subscription was provisioned e.g. DESKTOP-JOE
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +67,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.BackingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the modifiedDateTime property value. The time the embedded SIM device status was last modified. Updated service side.
@@ -107,39 +75,39 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.BackingStore.get("modifiedDateTime");
     }
     /**
      * Gets the state property value. Describes the various states for an embedded SIM activation code.
-     * @return a embeddedSIMDeviceStateValue
+     * @return a EmbeddedSIMDeviceStateValue
      */
     @jakarta.annotation.Nullable
     public EmbeddedSIMDeviceStateValue getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the stateDetails property value. String description of the provisioning state.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStateDetails() {
-        return this.stateDetails;
+        return this.BackingStore.get("stateDetails");
     }
     /**
      * Gets the universalIntegratedCircuitCardIdentifier property value. The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniversalIntegratedCircuitCardIdentifier() {
-        return this.universalIntegratedCircuitCardIdentifier;
+        return this.BackingStore.get("universalIntegratedCircuitCardIdentifier");
     }
     /**
      * Gets the userName property value. Username which the subscription was provisioned to e.g. joe@contoso.com
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.BackingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deviceName property value. Device name to which the subscription was provisioned e.g. DESKTOP-JOE
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the lastSyncDateTime property value. The time the embedded SIM device last checked in. Updated service side.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.BackingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the modifiedDateTime property value. The time the embedded SIM device status was last modified. Updated service side.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.BackingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the state property value. Describes the various states for an embedded SIM activation code.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final EmbeddedSIMDeviceStateValue value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the stateDetails property value. String description of the provisioning state.
      * @param value Value to set for the stateDetails property.
      */
     public void setStateDetails(@jakarta.annotation.Nullable final String value) {
-        this.stateDetails = value;
+        this.BackingStore.set("stateDetails", value);
     }
     /**
      * Sets the universalIntegratedCircuitCardIdentifier property value. The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
      * @param value Value to set for the universalIntegratedCircuitCardIdentifier property.
      */
     public void setUniversalIntegratedCircuitCardIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.universalIntegratedCircuitCardIdentifier = value;
+        this.BackingStore.set("universalIntegratedCircuitCardIdentifier", value);
     }
     /**
      * Sets the userName property value. Username which the subscription was provisioned to e.g. joe@contoso.com
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.BackingStore.set("userName", value);
     }
 }

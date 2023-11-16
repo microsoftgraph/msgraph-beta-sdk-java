@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationRoot extends Entity implements Parsable {
     /**
-     * The endUserNotifications property
-     */
-    private java.util.List<EndUserNotification> endUserNotifications;
-    /**
-     * The landingPages property
-     */
-    private java.util.List<LandingPage> landingPages;
-    /**
-     * The loginPages property
-     */
-    private java.util.List<LoginPage> loginPages;
-    /**
-     * Represents an attack simulation training operation.
-     */
-    private java.util.List<AttackSimulationOperation> operations;
-    /**
-     * Represents an attack simulation training campaign payload in a tenant.
-     */
-    private java.util.List<Payload> payloads;
-    /**
-     * Represents simulation automation created to run on a tenant.
-     */
-    private java.util.List<SimulationAutomation> simulationAutomations;
-    /**
-     * Represents an attack simulation training campaign in a tenant.
-     */
-    private java.util.List<Simulation> simulations;
-    /**
-     * The trainings property
-     */
-    private java.util.List<Training> trainings;
-    /**
-     * Instantiates a new attackSimulationRoot and sets the default values.
+     * Instantiates a new AttackSimulationRoot and sets the default values.
      */
     public AttackSimulationRoot() {
         super();
@@ -49,7 +17,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationRoot
+     * @return a AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,12 +25,12 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         return new AttackSimulationRoot();
     }
     /**
-     * Gets the endUserNotifications property value. The endUserNotifications property
-     * @return a endUserNotification
+     * Gets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
+     * @return a java.util.List<EndUserNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EndUserNotification> getEndUserNotifications() {
-        return this.endUserNotifications;
+        return this.BackingStore.get("endUserNotifications");
     }
     /**
      * The deserialization information for the current model
@@ -82,60 +50,60 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the landingPages property value. The landingPages property
-     * @return a landingPage
+     * Gets the landingPages property value. Represents an attack simulation training landing page.
+     * @return a java.util.List<LandingPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LandingPage> getLandingPages() {
-        return this.landingPages;
+        return this.BackingStore.get("landingPages");
     }
     /**
-     * Gets the loginPages property value. The loginPages property
-     * @return a loginPage
+     * Gets the loginPages property value. Represents an attack simulation training login page.
+     * @return a java.util.List<LoginPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LoginPage> getLoginPages() {
-        return this.loginPages;
+        return this.BackingStore.get("loginPages");
     }
     /**
      * Gets the operations property value. Represents an attack simulation training operation.
-     * @return a attackSimulationOperation
+     * @return a java.util.List<AttackSimulationOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
-     * @return a payload
+     * @return a java.util.List<Payload>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Payload> getPayloads() {
-        return this.payloads;
+        return this.BackingStore.get("payloads");
     }
     /**
      * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
-     * @return a simulationAutomation
+     * @return a java.util.List<SimulationAutomation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomation> getSimulationAutomations() {
-        return this.simulationAutomations;
+        return this.BackingStore.get("simulationAutomations");
     }
     /**
      * Gets the simulations property value. Represents an attack simulation training campaign in a tenant.
-     * @return a simulation
+     * @return a java.util.List<Simulation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Simulation> getSimulations() {
-        return this.simulations;
+        return this.BackingStore.get("simulations");
     }
     /**
-     * Gets the trainings property value. The trainings property
-     * @return a training
+     * Gets the trainings property value. Represents details about attack simulation trainings.
+     * @return a java.util.List<Training>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Training> getTrainings() {
-        return this.trainings;
+        return this.BackingStore.get("trainings");
     }
     /**
      * Serializes information the current object
@@ -154,59 +122,59 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("trainings", this.getTrainings());
     }
     /**
-     * Sets the endUserNotifications property value. The endUserNotifications property
+     * Sets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
      * @param value Value to set for the endUserNotifications property.
      */
     public void setEndUserNotifications(@jakarta.annotation.Nullable final java.util.List<EndUserNotification> value) {
-        this.endUserNotifications = value;
+        this.BackingStore.set("endUserNotifications", value);
     }
     /**
-     * Sets the landingPages property value. The landingPages property
+     * Sets the landingPages property value. Represents an attack simulation training landing page.
      * @param value Value to set for the landingPages property.
      */
     public void setLandingPages(@jakarta.annotation.Nullable final java.util.List<LandingPage> value) {
-        this.landingPages = value;
+        this.BackingStore.set("landingPages", value);
     }
     /**
-     * Sets the loginPages property value. The loginPages property
+     * Sets the loginPages property value. Represents an attack simulation training login page.
      * @param value Value to set for the loginPages property.
      */
     public void setLoginPages(@jakarta.annotation.Nullable final java.util.List<LoginPage> value) {
-        this.loginPages = value;
+        this.BackingStore.set("loginPages", value);
     }
     /**
      * Sets the operations property value. Represents an attack simulation training operation.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<AttackSimulationOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
      * @param value Value to set for the payloads property.
      */
     public void setPayloads(@jakarta.annotation.Nullable final java.util.List<Payload> value) {
-        this.payloads = value;
+        this.BackingStore.set("payloads", value);
     }
     /**
      * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @param value Value to set for the simulationAutomations property.
      */
     public void setSimulationAutomations(@jakarta.annotation.Nullable final java.util.List<SimulationAutomation> value) {
-        this.simulationAutomations = value;
+        this.BackingStore.set("simulationAutomations", value);
     }
     /**
      * Sets the simulations property value. Represents an attack simulation training campaign in a tenant.
      * @param value Value to set for the simulations property.
      */
     public void setSimulations(@jakarta.annotation.Nullable final java.util.List<Simulation> value) {
-        this.simulations = value;
+        this.BackingStore.set("simulations", value);
     }
     /**
-     * Sets the trainings property value. The trainings property
+     * Sets the trainings property value. Represents details about attack simulation trainings.
      * @param value Value to set for the trainings property.
      */
     public void setTrainings(@jakarta.annotation.Nullable final java.util.List<Training> value) {
-        this.trainings = value;
+        this.BackingStore.set("trainings", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable {
     /**
-     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
-     */
-    private String description;
-    /**
-     * Instantiates a new domainDnsUnavailableRecord and sets the default values.
+     * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
      */
     public DomainDnsUnavailableRecord() {
         super();
@@ -21,7 +17,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsUnavailableRecord
+     * @return a DomainDnsUnavailableRecord
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsUnavailableRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
     }
     /**
      * Gets the description property value. Provides the reason why the DomainDnsUnavailableRecord entity is returned.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
 }

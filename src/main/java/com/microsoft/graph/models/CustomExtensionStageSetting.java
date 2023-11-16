@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
-     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
-     */
-    private CustomCalloutExtension customExtension;
-    /**
-     * The stage property
-     */
-    private AccessPackageCustomExtensionStage stage;
-    /**
-     * Instantiates a new customExtensionStageSetting and sets the default values.
+     * Instantiates a new CustomExtensionStageSetting and sets the default values.
      */
     public CustomExtensionStageSetting() {
         super();
@@ -25,7 +17,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionStageSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     }
     /**
      * Gets the customExtension property value. Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
-     * @return a customCalloutExtension
+     * @return a CustomCalloutExtension
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension getCustomExtension() {
-        return this.customExtension;
+        return this.BackingStore.get("customExtension");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     }
     /**
      * Gets the stage property value. The stage property
-     * @return a accessPackageCustomExtensionStage
+     * @return a AccessPackageCustomExtensionStage
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
-        return this.stage;
+        return this.BackingStore.get("stage");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
      * @param value Value to set for the customExtension property.
      */
     public void setCustomExtension(@jakarta.annotation.Nullable final CustomCalloutExtension value) {
-        this.customExtension = value;
+        this.BackingStore.set("customExtension", value);
     }
     /**
      * Sets the stage property value. The stage property
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
-        this.stage = value;
+        this.BackingStore.set("stage", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffReasonCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TimeOffReason> value;
-    /**
-     * Instantiates a new timeOffReasonCollectionResponse and sets the default values.
+     * Instantiates a new TimeOffReasonCollectionResponse and sets the default values.
      */
     public TimeOffReasonCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class TimeOffReasonCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeOffReasonCollectionResponse
+     * @return a TimeOffReasonCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TimeOffReasonCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class TimeOffReasonCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a timeOffReason
+     * @return a java.util.List<TimeOffReason>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeOffReason> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TimeOffReasonCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TimeOffReason> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceResource extends Entity implements Parsable {
     /**
-     * The display name of the resource.
-     */
-    private String displayName;
-    /**
-     * The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
-     */
-    private String externalId;
-    /**
-     * Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
-     */
-    private GovernanceResource parent;
-    /**
-     * Represents the date time when the resource is registered in PIM.
-     */
-    private OffsetDateTime registeredDateTime;
-    /**
-     * The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
-     */
-    private String registeredRoot;
-    /**
-     * The collection of role assignment requests for the resource.
-     */
-    private java.util.List<GovernanceRoleAssignmentRequest> roleAssignmentRequests;
-    /**
-     * The collection of role assignments for the resource.
-     */
-    private java.util.List<GovernanceRoleAssignment> roleAssignments;
-    /**
-     * The collection of role definitions for the resource.
-     */
-    private java.util.List<GovernanceRoleDefinition> roleDefinitions;
-    /**
-     * The collection of role settings for the resource.
-     */
-    private java.util.List<GovernanceRoleSetting> roleSettings;
-    /**
-     * The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
-     */
-    private String status;
-    /**
-     * Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
-     */
-    private String type;
-    /**
-     * Instantiates a new governanceResource and sets the default values.
+     * Instantiates a new GovernanceResource and sets the default values.
      */
     public GovernanceResource() {
         super();
@@ -62,7 +18,7 @@ public class GovernanceResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public static GovernanceResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,19 +27,19 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -107,11 +63,11 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the parent property value. Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getParent() {
-        return this.parent;
+        return this.BackingStore.get("parent");
     }
     /**
      * Gets the registeredDateTime property value. Represents the date time when the resource is registered in PIM.
@@ -119,63 +75,63 @@ public class GovernanceResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
-        return this.registeredDateTime;
+        return this.BackingStore.get("registeredDateTime");
     }
     /**
      * Gets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegisteredRoot() {
-        return this.registeredRoot;
+        return this.BackingStore.get("registeredRoot");
     }
     /**
      * Gets the roleAssignmentRequests property value. The collection of role assignment requests for the resource.
-     * @return a governanceRoleAssignmentRequest
+     * @return a java.util.List<GovernanceRoleAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
-        return this.roleAssignmentRequests;
+        return this.BackingStore.get("roleAssignmentRequests");
     }
     /**
      * Gets the roleAssignments property value. The collection of role assignments for the resource.
-     * @return a governanceRoleAssignment
+     * @return a java.util.List<GovernanceRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
-        return this.roleAssignments;
+        return this.BackingStore.get("roleAssignments");
     }
     /**
      * Gets the roleDefinitions property value. The collection of role definitions for the resource.
-     * @return a governanceRoleDefinition
+     * @return a java.util.List<GovernanceRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
-        return this.roleDefinitions;
+        return this.BackingStore.get("roleDefinitions");
     }
     /**
      * Gets the roleSettings property value. The collection of role settings for the resource.
-     * @return a governanceRoleSetting
+     * @return a java.util.List<GovernanceRoleSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {
-        return this.roleSettings;
+        return this.BackingStore.get("roleSettings");
     }
     /**
      * Gets the status property value. The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the parent property value. Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final GovernanceResource value) {
-        this.parent = value;
+        this.BackingStore.set("parent", value);
     }
     /**
      * Sets the registeredDateTime property value. Represents the date time when the resource is registered in PIM.
      * @param value Value to set for the registeredDateTime property.
      */
     public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.registeredDateTime = value;
+        this.BackingStore.set("registeredDateTime", value);
     }
     /**
      * Sets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
      * @param value Value to set for the registeredRoot property.
      */
     public void setRegisteredRoot(@jakarta.annotation.Nullable final String value) {
-        this.registeredRoot = value;
+        this.BackingStore.set("registeredRoot", value);
     }
     /**
      * Sets the roleAssignmentRequests property value. The collection of role assignment requests for the resource.
      * @param value Value to set for the roleAssignmentRequests property.
      */
     public void setRoleAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
-        this.roleAssignmentRequests = value;
+        this.BackingStore.set("roleAssignmentRequests", value);
     }
     /**
      * Sets the roleAssignments property value. The collection of role assignments for the resource.
      * @param value Value to set for the roleAssignments property.
      */
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
-        this.roleAssignments = value;
+        this.BackingStore.set("roleAssignments", value);
     }
     /**
      * Sets the roleDefinitions property value. The collection of role definitions for the resource.
      * @param value Value to set for the roleDefinitions property.
      */
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
-        this.roleDefinitions = value;
+        this.BackingStore.set("roleDefinitions", value);
     }
     /**
      * Sets the roleSettings property value. The collection of role settings for the resource.
      * @param value Value to set for the roleSettings property.
      */
     public void setRoleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
-        this.roleSettings = value;
+        this.BackingStore.set("roleSettings", value);
     }
     /**
      * Sets the status property value. The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

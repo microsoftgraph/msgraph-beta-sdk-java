@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MicrosoftTunnelServer> value;
-    /**
-     * Instantiates a new microsoftTunnelServerCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelServerCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelServerCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MicrosoftTunnelServerCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelServerCollectionResponse
+     * @return a MicrosoftTunnelServerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MicrosoftTunnelServerCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a microsoftTunnelServer
+     * @return a java.util.List<MicrosoftTunnelServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServer> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MicrosoftTunnelServerCollectionResponse extends BaseCollectionPagin
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MicrosoftTunnelServer> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

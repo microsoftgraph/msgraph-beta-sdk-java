@@ -13,59 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     /**
-     * Indicates the first occurrence date and time for the anomaly.
-     */
-    private OffsetDateTime anomalyFirstOccurrenceDateTime;
-    /**
-     * The unique identifier of the anomaly.
-     */
-    private String anomalyId;
-    /**
-     * Indicates the latest occurrence date and time for the anomaly.
-     */
-    private OffsetDateTime anomalyLatestOccurrenceDateTime;
-    /**
-     * The name of the anomaly.
-     */
-    private String anomalyName;
-    /**
-     * Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
-     */
-    private UserExperienceAnalyticsAnomalyType anomalyType;
-    /**
-     * The name of the application or module that caused the anomaly.
-     */
-    private String assetName;
-    /**
-     * The publisher of the application or module that caused the anomaly.
-     */
-    private String assetPublisher;
-    /**
-     * The version of the application or module that caused the anomaly.
-     */
-    private String assetVersion;
-    /**
-     * The unique identifier of the anomaly detection model.
-     */
-    private String detectionModelId;
-    /**
-     * The number of devices impacted by the anomaly. Valid values -2147483648 to 2147483647
-     */
-    private Integer deviceImpactedCount;
-    /**
-     * The unique identifier of the anomaly detection model.
-     */
-    private String issueId;
-    /**
-     * Indicates the severity of the anomaly. Eg: anomaly severity can be high, medium, low, informational or other.
-     */
-    private UserExperienceAnalyticsAnomalySeverity severity;
-    /**
-     * Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
-     */
-    private UserExperienceAnalyticsAnomalyState state;
-    /**
-     * Instantiates a new userExperienceAnalyticsAnomaly and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomaly and sets the default values.
      */
     public UserExperienceAnalyticsAnomaly() {
         super();
@@ -73,7 +21,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomaly
+     * @return a UserExperienceAnalyticsAnomaly
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomaly createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,15 +34,15 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyFirstOccurrenceDateTime() {
-        return this.anomalyFirstOccurrenceDateTime;
+        return this.BackingStore.get("anomalyFirstOccurrenceDateTime");
     }
     /**
      * Gets the anomalyId property value. The unique identifier of the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyId() {
-        return this.anomalyId;
+        return this.BackingStore.get("anomalyId");
     }
     /**
      * Gets the anomalyLatestOccurrenceDateTime property value. Indicates the latest occurrence date and time for the anomaly.
@@ -102,63 +50,63 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyLatestOccurrenceDateTime() {
-        return this.anomalyLatestOccurrenceDateTime;
+        return this.BackingStore.get("anomalyLatestOccurrenceDateTime");
     }
     /**
      * Gets the anomalyName property value. The name of the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyName() {
-        return this.anomalyName;
+        return this.BackingStore.get("anomalyName");
     }
     /**
      * Gets the anomalyType property value. Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
-     * @return a userExperienceAnalyticsAnomalyType
+     * @return a UserExperienceAnalyticsAnomalyType
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyType getAnomalyType() {
-        return this.anomalyType;
+        return this.BackingStore.get("anomalyType");
     }
     /**
      * Gets the assetName property value. The name of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetName() {
-        return this.assetName;
+        return this.BackingStore.get("assetName");
     }
     /**
      * Gets the assetPublisher property value. The publisher of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetPublisher() {
-        return this.assetPublisher;
+        return this.BackingStore.get("assetPublisher");
     }
     /**
      * Gets the assetVersion property value. The version of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetVersion() {
-        return this.assetVersion;
+        return this.BackingStore.get("assetVersion");
     }
     /**
      * Gets the detectionModelId property value. The unique identifier of the anomaly detection model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDetectionModelId() {
-        return this.detectionModelId;
+        return this.BackingStore.get("detectionModelId");
     }
     /**
      * Gets the deviceImpactedCount property value. The number of devices impacted by the anomaly. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceImpactedCount() {
-        return this.deviceImpactedCount;
+        return this.BackingStore.get("deviceImpactedCount");
     }
     /**
      * The deserialization information for the current model
@@ -184,27 +132,27 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the issueId property value. The unique identifier of the anomaly detection model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssueId() {
-        return this.issueId;
+        return this.BackingStore.get("issueId");
     }
     /**
      * Gets the severity property value. Indicates the severity of the anomaly. Eg: anomaly severity can be high, medium, low, informational or other.
-     * @return a userExperienceAnalyticsAnomalySeverity
+     * @return a UserExperienceAnalyticsAnomalySeverity
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalySeverity getSeverity() {
-        return this.severity;
+        return this.BackingStore.get("severity");
     }
     /**
      * Gets the state property value. Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
-     * @return a userExperienceAnalyticsAnomalyState
+     * @return a UserExperienceAnalyticsAnomalyState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -232,90 +180,90 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyFirstOccurrenceDateTime property.
      */
     public void setAnomalyFirstOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.anomalyFirstOccurrenceDateTime = value;
+        this.BackingStore.set("anomalyFirstOccurrenceDateTime", value);
     }
     /**
      * Sets the anomalyId property value. The unique identifier of the anomaly.
      * @param value Value to set for the anomalyId property.
      */
     public void setAnomalyId(@jakarta.annotation.Nullable final String value) {
-        this.anomalyId = value;
+        this.BackingStore.set("anomalyId", value);
     }
     /**
      * Sets the anomalyLatestOccurrenceDateTime property value. Indicates the latest occurrence date and time for the anomaly.
      * @param value Value to set for the anomalyLatestOccurrenceDateTime property.
      */
     public void setAnomalyLatestOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.anomalyLatestOccurrenceDateTime = value;
+        this.BackingStore.set("anomalyLatestOccurrenceDateTime", value);
     }
     /**
      * Sets the anomalyName property value. The name of the anomaly.
      * @param value Value to set for the anomalyName property.
      */
     public void setAnomalyName(@jakarta.annotation.Nullable final String value) {
-        this.anomalyName = value;
+        this.BackingStore.set("anomalyName", value);
     }
     /**
      * Sets the anomalyType property value. Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
      * @param value Value to set for the anomalyType property.
      */
     public void setAnomalyType(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyType value) {
-        this.anomalyType = value;
+        this.BackingStore.set("anomalyType", value);
     }
     /**
      * Sets the assetName property value. The name of the application or module that caused the anomaly.
      * @param value Value to set for the assetName property.
      */
     public void setAssetName(@jakarta.annotation.Nullable final String value) {
-        this.assetName = value;
+        this.BackingStore.set("assetName", value);
     }
     /**
      * Sets the assetPublisher property value. The publisher of the application or module that caused the anomaly.
      * @param value Value to set for the assetPublisher property.
      */
     public void setAssetPublisher(@jakarta.annotation.Nullable final String value) {
-        this.assetPublisher = value;
+        this.BackingStore.set("assetPublisher", value);
     }
     /**
      * Sets the assetVersion property value. The version of the application or module that caused the anomaly.
      * @param value Value to set for the assetVersion property.
      */
     public void setAssetVersion(@jakarta.annotation.Nullable final String value) {
-        this.assetVersion = value;
+        this.BackingStore.set("assetVersion", value);
     }
     /**
      * Sets the detectionModelId property value. The unique identifier of the anomaly detection model.
      * @param value Value to set for the detectionModelId property.
      */
     public void setDetectionModelId(@jakarta.annotation.Nullable final String value) {
-        this.detectionModelId = value;
+        this.BackingStore.set("detectionModelId", value);
     }
     /**
      * Sets the deviceImpactedCount property value. The number of devices impacted by the anomaly. Valid values -2147483648 to 2147483647
      * @param value Value to set for the deviceImpactedCount property.
      */
     public void setDeviceImpactedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceImpactedCount = value;
+        this.BackingStore.set("deviceImpactedCount", value);
     }
     /**
      * Sets the issueId property value. The unique identifier of the anomaly detection model.
      * @param value Value to set for the issueId property.
      */
     public void setIssueId(@jakarta.annotation.Nullable final String value) {
-        this.issueId = value;
+        this.BackingStore.set("issueId", value);
     }
     /**
      * Sets the severity property value. Indicates the severity of the anomaly. Eg: anomaly severity can be high, medium, low, informational or other.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalySeverity value) {
-        this.severity = value;
+        this.BackingStore.set("severity", value);
     }
     /**
      * Sets the state property value. Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
 }

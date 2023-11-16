@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectorySettingTemplate extends DirectoryObject implements Parsable {
     /**
-     * Description of the template. Read-only.
-     */
-    private String description;
-    /**
-     * Display name of the template. Read-only.
-     */
-    private String displayName;
-    /**
-     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
-     */
-    private java.util.List<SettingTemplateValue> values;
-    /**
-     * Instantiates a new directorySettingTemplate and sets the default values.
+     * Instantiates a new DirectorySettingTemplate and sets the default values.
      */
     public DirectorySettingTemplate() {
         super();
@@ -30,7 +18,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directorySettingTemplate
+     * @return a DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public static DirectorySettingTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     }
     /**
      * Gets the description property value. Description of the template. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name of the template. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     }
     /**
      * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
-     * @return a settingTemplateValue
+     * @return a java.util.List<SettingTemplateValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {
-        return this.values;
+        return this.BackingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name of the template. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
-        this.values = value;
+        this.BackingStore.set("values", value);
     }
 }

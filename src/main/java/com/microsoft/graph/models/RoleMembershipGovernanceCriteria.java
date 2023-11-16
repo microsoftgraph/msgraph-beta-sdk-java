@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleMembershipGovernanceCriteria extends GovernanceCriteria implements Parsable {
     /**
-     * The roleId property
-     */
-    private String roleId;
-    /**
-     * The roleTemplateId property
-     */
-    private String roleTemplateId;
-    /**
-     * Instantiates a new roleMembershipGovernanceCriteria and sets the default values.
+     * Instantiates a new RoleMembershipGovernanceCriteria and sets the default values.
      */
     public RoleMembershipGovernanceCriteria() {
         super();
@@ -26,7 +18,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleMembershipGovernanceCriteria
+     * @return a RoleMembershipGovernanceCriteria
      */
     @jakarta.annotation.Nonnull
     public static RoleMembershipGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.BackingStore.get("roleId");
     }
     /**
      * Gets the roleTemplateId property value. The roleTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleTemplateId() {
-        return this.roleTemplateId;
+        return this.BackingStore.get("roleTemplateId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.BackingStore.set("roleId", value);
     }
     /**
      * Sets the roleTemplateId property value. The roleTemplateId property
      * @param value Value to set for the roleTemplateId property.
      */
     public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.roleTemplateId = value;
+        this.BackingStore.set("roleTemplateId", value);
     }
 }

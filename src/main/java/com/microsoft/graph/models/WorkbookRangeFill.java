@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeFill extends Entity implements Parsable {
     /**
-     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
-     */
-    private String color;
-    /**
-     * Instantiates a new workbookRangeFill and sets the default values.
+     * Instantiates a new WorkbookRangeFill and sets the default values.
      */
     public WorkbookRangeFill() {
         super();
@@ -21,7 +17,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookRangeFill
+     * @return a WorkbookRangeFill
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRangeFill createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,12 +25,12 @@ public class WorkbookRangeFill extends Entity implements Parsable {
         return new WorkbookRangeFill();
     }
     /**
-     * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
-     * @return a string
+     * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange')
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.BackingStore.get("color");
     }
     /**
      * The deserialization information for the current model
@@ -56,10 +52,10 @@ public class WorkbookRangeFill extends Entity implements Parsable {
         writer.writeStringValue("color", this.getColor());
     }
     /**
-     * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
+     * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange')
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.BackingStore.set("color", value);
     }
 }

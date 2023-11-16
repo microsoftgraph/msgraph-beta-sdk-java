@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
     /**
-     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     */
-    private Boolean applyOnlyToWindows81;
-    /**
-     * Windows VPN connection type.
-     */
-    private WindowsVpnConnectionType connectionType;
-    /**
-     * Enable split tunneling for the VPN.
-     */
-    private Boolean enableSplitTunneling;
-    /**
-     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     */
-    private String loginGroupOrDomain;
-    /**
-     * Proxy Server.
-     */
-    private Windows81VpnProxyServer proxyServer;
-    /**
-     * Instantiates a new windows81VpnConfiguration and sets the default values.
+     * Instantiates a new Windows81VpnConfiguration and sets the default values.
      */
     public Windows81VpnConfiguration() {
         super();
@@ -41,7 +21,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81VpnConfiguration
+     * @return a Windows81VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,27 +37,27 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
-        return this.applyOnlyToWindows81;
+        return this.BackingStore.get("applyOnlyToWindows81");
     }
     /**
      * Gets the connectionType property value. Windows VPN connection type.
-     * @return a windowsVpnConnectionType
+     * @return a WindowsVpnConnectionType
      */
     @jakarta.annotation.Nullable
     public WindowsVpnConnectionType getConnectionType() {
-        return this.connectionType;
+        return this.BackingStore.get("connectionType");
     }
     /**
      * Gets the enableSplitTunneling property value. Enable split tunneling for the VPN.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
-        return this.enableSplitTunneling;
+        return this.BackingStore.get("enableSplitTunneling");
     }
     /**
      * The deserialization information for the current model
@@ -95,19 +75,19 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoginGroupOrDomain() {
-        return this.loginGroupOrDomain;
+        return this.BackingStore.get("loginGroupOrDomain");
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a windows81VpnProxyServer
+     * @return a Windows81VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public Windows81VpnProxyServer getProxyServer() {
-        return this.proxyServer;
+        return this.BackingStore.get("proxyServer");
     }
     /**
      * Serializes information the current object
@@ -126,34 +106,34 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the applyOnlyToWindows81 property.
      */
     public void setApplyOnlyToWindows81(@jakarta.annotation.Nullable final Boolean value) {
-        this.applyOnlyToWindows81 = value;
+        this.BackingStore.set("applyOnlyToWindows81", value);
     }
     /**
      * Sets the connectionType property value. Windows VPN connection type.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final WindowsVpnConnectionType value) {
-        this.connectionType = value;
+        this.BackingStore.set("connectionType", value);
     }
     /**
      * Sets the enableSplitTunneling property value. Enable split tunneling for the VPN.
      * @param value Value to set for the enableSplitTunneling property.
      */
     public void setEnableSplitTunneling(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableSplitTunneling = value;
+        this.BackingStore.set("enableSplitTunneling", value);
     }
     /**
      * Sets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
      * @param value Value to set for the loginGroupOrDomain property.
      */
     public void setLoginGroupOrDomain(@jakarta.annotation.Nullable final String value) {
-        this.loginGroupOrDomain = value;
+        this.BackingStore.set("loginGroupOrDomain", value);
     }
     /**
      * Sets the proxyServer property value. Proxy Server.
      * @param value Value to set for the proxyServer property.
      */
     public void setProxyServer(@jakarta.annotation.Nullable final Windows81VpnProxyServer value) {
-        this.proxyServer = value;
+        this.BackingStore.set("proxyServer", value);
     }
 }

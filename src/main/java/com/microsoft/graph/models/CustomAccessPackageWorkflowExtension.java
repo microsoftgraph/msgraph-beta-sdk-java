@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Instantiates a new customAccessPackageWorkflowExtension and sets the default values.
+     * Instantiates a new CustomAccessPackageWorkflowExtension and sets the default values.
      */
     public CustomAccessPackageWorkflowExtension() {
         super();
@@ -27,7 +19,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customAccessPackageWorkflowExtension
+     * @return a CustomAccessPackageWorkflowExtension
      */
     @jakarta.annotation.Nonnull
     public static CustomAccessPackageWorkflowExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +32,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -59,7 +51,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
 }

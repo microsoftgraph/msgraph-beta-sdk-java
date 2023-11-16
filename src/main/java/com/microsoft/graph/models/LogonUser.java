@@ -4,58 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LogonUser implements AdditionalDataHolder, Parsable {
+public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Domain of user account used to logon.
+     * Stores model information.
      */
-    private String accountDomain;
+    private BackingStore BackingStore;
     /**
-     * Account name of user account used to logon.
-     */
-    private String accountName;
-    /**
-     * User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
-     */
-    private UserAccountSecurityType accountType;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * User logon ID.
-     */
-    private String logonId;
-    /**
-     * Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     */
-    private java.util.List<LogonType> logonTypes;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new logonUser and sets the default values.
+     * Instantiates a new LogonUser and sets the default values.
      */
     public LogonUser() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a logonUser
+     * @return a LogonUser
      */
     @jakarta.annotation.Nonnull
     public static LogonUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,35 +36,48 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountDomain property value. Domain of user account used to logon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountDomain() {
-        return this.accountDomain;
+        return this.BackingStore.get("accountDomain");
     }
     /**
      * Gets the accountName property value. Account name of user account used to logon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.BackingStore.get("accountName");
     }
     /**
      * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a userAccountSecurityType
+     * @return a UserAccountSecurityType
      */
     @jakarta.annotation.Nullable
     public UserAccountSecurityType getAccountType() {
-        return this.accountType;
+        return this.BackingStore.get("accountType");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -117,7 +102,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the lastSeenDateTime property value. DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -125,31 +110,31 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the logonId property value. User logon ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogonId() {
-        return this.logonId;
+        return this.BackingStore.get("logonId");
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a logonType
+     * @return a java.util.List<LogonType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LogonType> getLogonTypes() {
-        return this.logonTypes;
+        return this.BackingStore.get("logonTypes");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -172,62 +157,70 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountDomain property.
      */
     public void setAccountDomain(@jakarta.annotation.Nullable final String value) {
-        this.accountDomain = value;
+        this.BackingStore.set("accountDomain", value);
     }
     /**
      * Sets the accountName property value. Account name of user account used to logon.
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.BackingStore.set("accountName", value);
     }
     /**
      * Sets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the accountType property.
      */
     public void setAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {
-        this.accountType = value;
+        this.BackingStore.set("accountType", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the firstSeenDateTime property value. DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the lastSeenDateTime property value. DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the logonId property value. User logon ID.
      * @param value Value to set for the logonId property.
      */
     public void setLogonId(@jakarta.annotation.Nullable final String value) {
-        this.logonId = value;
+        this.BackingStore.set("logonId", value);
     }
     /**
      * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonTypes property.
      */
     public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<LogonType> value) {
-        this.logonTypes = value;
+        this.BackingStore.set("logonTypes", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

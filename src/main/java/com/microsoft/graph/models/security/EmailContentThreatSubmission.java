@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailContentThreatSubmission extends EmailThreatSubmission implements Parsable {
     /**
-     * Base64 encoded file content.
-     */
-    private String fileContent;
-    /**
-     * Instantiates a new emailContentThreatSubmission and sets the default values.
+     * Instantiates a new EmailContentThreatSubmission and sets the default values.
      */
     public EmailContentThreatSubmission() {
         super();
@@ -22,7 +18,7 @@ public class EmailContentThreatSubmission extends EmailThreatSubmission implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailContentThreatSubmission
+     * @return a EmailContentThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public static EmailContentThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class EmailContentThreatSubmission extends EmailThreatSubmission implemen
     }
     /**
      * Gets the fileContent property value. Base64 encoded file content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileContent() {
-        return this.fileContent;
+        return this.BackingStore.get("fileContent");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EmailContentThreatSubmission extends EmailThreatSubmission implemen
      * @param value Value to set for the fileContent property.
      */
     public void setFileContent(@jakarta.annotation.Nullable final String value) {
-        this.fileContent = value;
+        this.BackingStore.set("fileContent", value);
     }
 }

@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TodoSettings implements AdditionalDataHolder, Parsable {
+public class TodoSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Controls whether users can join lists from users external to your organization.
-     */
-    private Boolean isExternalJoinEnabled;
-    /**
-     * Controls whether users can share lists with external users.
-     */
-    private Boolean isExternalShareEnabled;
-    /**
-     * Controls whether push notifications are enabled for your users.
-     */
-    private Boolean isPushNotificationEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new todoSettings and sets the default values.
+     * Instantiates a new TodoSettings and sets the default values.
      */
     public TodoSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a todoSettings
+     * @return a TodoSettings
      */
     @jakarta.annotation.Nonnull
     public static TodoSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
         return new TodoSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalJoinEnabled property value. Controls whether users can join lists from users external to your organization.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalJoinEnabled() {
-        return this.isExternalJoinEnabled;
+        return this.BackingStore.get("isExternalJoinEnabled");
     }
     /**
      * Gets the isExternalShareEnabled property value. Controls whether users can share lists with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareEnabled() {
-        return this.isExternalShareEnabled;
+        return this.BackingStore.get("isExternalShareEnabled");
     }
     /**
      * Gets the isPushNotificationEnabled property value. Controls whether push notifications are enabled for your users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPushNotificationEnabled() {
-        return this.isPushNotificationEnabled;
+        return this.BackingStore.get("isPushNotificationEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the isExternalJoinEnabled property value. Controls whether users can join lists from users external to your organization.
      * @param value Value to set for the isExternalJoinEnabled property.
      */
     public void setIsExternalJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalJoinEnabled = value;
+        this.BackingStore.set("isExternalJoinEnabled", value);
     }
     /**
      * Sets the isExternalShareEnabled property value. Controls whether users can share lists with external users.
      * @param value Value to set for the isExternalShareEnabled property.
      */
     public void setIsExternalShareEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalShareEnabled = value;
+        this.BackingStore.set("isExternalShareEnabled", value);
     }
     /**
      * Sets the isPushNotificationEnabled property value. Controls whether push notifications are enabled for your users.
      * @param value Value to set for the isPushNotificationEnabled property.
      */
     public void setIsPushNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPushNotificationEnabled = value;
+        this.BackingStore.set("isPushNotificationEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate extends DeviceManagementConfigurationStringSettingValueDefaultTemplate implements Parsable {
     /**
-     * Default Constant Value
-     */
-    private String constantValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationStringSettingValueConstantDefaultTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate and sets the default values.
      */
     public DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationStringSettingValueConstantDefaultTemplate
+     * @return a DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
     }
     /**
      * Gets the constantValue property value. Default Constant Value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConstantValue() {
-        return this.constantValue;
+        return this.BackingStore.get("constantValue");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param value Value to set for the constantValue property.
      */
     public void setConstantValue(@jakarta.annotation.Nullable final String value) {
-        this.constantValue = value;
+        this.BackingStore.set("constantValue", value);
     }
 }

@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
-     * The list of group assignments for the configuration.
-     */
-    private java.util.List<GroupPolicyConfigurationAssignment> assignments;
-    /**
-     * The date and time the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The list of enabled or disabled group policy definition values for the configuration.
-     */
-    private java.util.List<GroupPolicyDefinitionValue> definitionValues;
-    /**
-     * User provided description for the resource object.
-     */
-    private String description;
-    /**
-     * User provided name for the resource object.
-     */
-    private String displayName;
-    /**
-     * The date and time the entity was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Group Policy Configuration Ingestion Type
-     */
-    private GroupPolicyConfigurationIngestionType policyConfigurationIngestionType;
-    /**
-     * The list of scope tags for the configuration.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Instantiates a new groupPolicyConfiguration and sets the default values.
+     * Instantiates a new GroupPolicyConfiguration and sets the default values.
      */
     public GroupPolicyConfiguration() {
         super();
@@ -53,7 +21,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfiguration
+     * @return a GroupPolicyConfiguration
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,11 +30,11 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the configuration.
-     * @return a groupPolicyConfigurationAssignment
+     * @return a java.util.List<GroupPolicyConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfigurationAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. The date and time the object was created.
@@ -74,31 +42,31 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getDefinitionValues() {
-        return this.definitionValues;
+        return this.BackingStore.get("definitionValues");
     }
     /**
      * Gets the description property value. User provided description for the resource object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. User provided name for the resource object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -123,23 +91,23 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
-     * @return a groupPolicyConfigurationIngestionType
+     * @return a GroupPolicyConfigurationIngestionType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyConfigurationIngestionType getPolicyConfigurationIngestionType() {
-        return this.policyConfigurationIngestionType;
+        return this.BackingStore.get("policyConfigurationIngestionType");
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<GroupPolicyConfigurationAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
      * @param value Value to set for the definitionValues property.
      */
     public void setDefinitionValues(@jakarta.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
-        this.definitionValues = value;
+        this.BackingStore.set("definitionValues", value);
     }
     /**
      * Sets the description property value. User provided description for the resource object.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. User provided name for the resource object.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
      * @param value Value to set for the policyConfigurationIngestionType property.
      */
     public void setPolicyConfigurationIngestionType(@jakarta.annotation.Nullable final GroupPolicyConfigurationIngestionType value) {
-        this.policyConfigurationIngestionType = value;
+        this.BackingStore.set("policyConfigurationIngestionType", value);
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
 }

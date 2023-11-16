@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedItemContainer extends Entity implements Parsable {
     /**
-     * Deleted workflows that end up in the deletedItemsContainer.
-     */
-    private java.util.List<Workflow> workflows;
-    /**
-     * Instantiates a new deletedItemContainer and sets the default values.
+     * Instantiates a new DeletedItemContainer and sets the default values.
      */
     public DeletedItemContainer() {
         super();
@@ -22,7 +18,7 @@ public class DeletedItemContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deletedItemContainer
+     * @return a DeletedItemContainer
      */
     @jakarta.annotation.Nonnull
     public static DeletedItemContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class DeletedItemContainer extends Entity implements Parsable {
     }
     /**
      * Gets the workflows property value. Deleted workflows that end up in the deletedItemsContainer.
-     * @return a workflow
+     * @return a java.util.List<Workflow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Workflow> getWorkflows() {
-        return this.workflows;
+        return this.BackingStore.get("workflows");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * @param value Value to set for the workflows property.
      */
     public void setWorkflows(@jakarta.annotation.Nullable final java.util.List<Workflow> value) {
-        this.workflows = value;
+        this.BackingStore.set("workflows", value);
     }
 }

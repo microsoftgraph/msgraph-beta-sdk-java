@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Payload. (UTF8 encoded byte array)
-     */
-    private byte[] payload;
-    /**
-     * Payload file name (.mobileconfig
-     */
-    private String payloadFileName;
-    /**
-     * Name that is displayed to the user.
-     */
-    private String payloadName;
-    /**
-     * Instantiates a new iosCustomConfiguration and sets the default values.
+     * Instantiates a new IosCustomConfiguration and sets the default values.
      */
     public IosCustomConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosCustomConfiguration
+     * @return a IosCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
-        return this.payload;
+        return this.BackingStore.get("payload");
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
-        return this.payloadFileName;
+        return this.BackingStore.get("payloadFileName");
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {
-        return this.payloadName;
+        return this.BackingStore.get("payloadName");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
-        this.payload = value;
+        this.BackingStore.set("payload", value);
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      * @param value Value to set for the payloadFileName property.
      */
     public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
-        this.payloadFileName = value;
+        this.BackingStore.set("payloadFileName", value);
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      * @param value Value to set for the payloadName property.
      */
     public void setPayloadName(@jakarta.annotation.Nullable final String value) {
-        this.payloadName = value;
+        this.BackingStore.set("payloadName", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
-     * Status of the tenant's Azure AD Premium P2 license.
-     */
-    private String tenantLicenseStatus;
-    /**
-     * Instantiates a new invalidLicenseAlertIncident and sets the default values.
+     * Instantiates a new InvalidLicenseAlertIncident and sets the default values.
      */
     public InvalidLicenseAlertIncident() {
         super();
@@ -22,7 +18,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invalidLicenseAlertIncident
+     * @return a InvalidLicenseAlertIncident
      */
     @jakarta.annotation.Nonnull
     public static InvalidLicenseAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,12 +36,12 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
         return deserializerMap;
     }
     /**
-     * Gets the tenantLicenseStatus property value. Status of the tenant's Azure AD Premium P2 license.
-     * @return a string
+     * Gets the tenantLicenseStatus property value. Status of the tenant's Microsoft Entra ID P2 license.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantLicenseStatus() {
-        return this.tenantLicenseStatus;
+        return this.BackingStore.get("tenantLicenseStatus");
     }
     /**
      * Serializes information the current object
@@ -57,10 +53,10 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
         writer.writeStringValue("tenantLicenseStatus", this.getTenantLicenseStatus());
     }
     /**
-     * Sets the tenantLicenseStatus property value. Status of the tenant's Azure AD Premium P2 license.
+     * Sets the tenantLicenseStatus property value. Status of the tenant's Microsoft Entra ID P2 license.
      * @param value Value to set for the tenantLicenseStatus property.
      */
     public void setTenantLicenseStatus(@jakarta.annotation.Nullable final String value) {
-        this.tenantLicenseStatus = value;
+        this.BackingStore.set("tenantLicenseStatus", value);
     }
 }

@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationCategory extends Entity implements Parsable {
     /**
-     * Description of the category header in policy summary.
-     */
-    private String categoryDescription;
-    /**
-     * List of child ids of the category.
-     */
-    private java.util.List<String> childCategoryIds;
-    /**
-     * Description of the category. For example: Display
-     */
-    private String description;
-    /**
-     * Name of the category. For example: Device Lock
-     */
-    private String displayName;
-    /**
-     * Help text of the category. Give more details of the category.
-     */
-    private String helpText;
-    /**
-     * Name of the item
-     */
-    private String name;
-    /**
-     * Direct parent id of the category. If the category is the root, the parent id is same as its id.
-     */
-    private String parentCategoryId;
-    /**
-     * Supported platform types.
-     */
-    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
-    /**
-     * Root id of the category.
-     */
-    private String rootCategoryId;
-    /**
-     * Supported setting types
-     */
-    private EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
-    /**
-     * Describes which technology this setting can be deployed with
-     */
-    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
-    /**
-     * Instantiates a new deviceManagementConfigurationCategory and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationCategory and sets the default values.
      */
     public DeviceManagementConfigurationCategory() {
         super();
@@ -65,7 +21,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationCategory
+     * @return a DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,35 +30,35 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the categoryDescription property value. Description of the category header in policy summary.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategoryDescription() {
-        return this.categoryDescription;
+        return this.BackingStore.get("categoryDescription");
     }
     /**
      * Gets the childCategoryIds property value. List of child ids of the category.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildCategoryIds() {
-        return this.childCategoryIds;
+        return this.BackingStore.get("childCategoryIds");
     }
     /**
      * Gets the description property value. Description of the category. For example: Display
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Name of the category. For example: Device Lock
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -126,59 +82,59 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the helpText property value. Help text of the category. Give more details of the category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
-        return this.helpText;
+        return this.BackingStore.get("helpText");
     }
     /**
      * Gets the name property value. Name of the item
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the parentCategoryId property value. Direct parent id of the category. If the category is the root, the parent id is same as its id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentCategoryId() {
-        return this.parentCategoryId;
+        return this.BackingStore.get("parentCategoryId");
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
-        return this.platforms;
+        return this.BackingStore.get("platforms");
     }
     /**
      * Gets the rootCategoryId property value. Root id of the category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRootCategoryId() {
-        return this.rootCategoryId;
+        return this.BackingStore.get("rootCategoryId");
     }
     /**
      * Gets the settingUsage property value. Supported setting types
-     * @return a deviceManagementConfigurationSettingUsage
+     * @return a EnumSet<DeviceManagementConfigurationSettingUsage>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingUsage> getSettingUsage() {
-        return this.settingUsage;
+        return this.BackingStore.get("settingUsage");
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
-        return this.technologies;
+        return this.BackingStore.get("technologies");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the categoryDescription property.
      */
     public void setCategoryDescription(@jakarta.annotation.Nullable final String value) {
-        this.categoryDescription = value;
+        this.BackingStore.set("categoryDescription", value);
     }
     /**
      * Sets the childCategoryIds property value. List of child ids of the category.
      * @param value Value to set for the childCategoryIds property.
      */
     public void setChildCategoryIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.childCategoryIds = value;
+        this.BackingStore.set("childCategoryIds", value);
     }
     /**
      * Sets the description property value. Description of the category. For example: Display
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the category. For example: Device Lock
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the helpText property value. Help text of the category. Give more details of the category.
      * @param value Value to set for the helpText property.
      */
     public void setHelpText(@jakarta.annotation.Nullable final String value) {
-        this.helpText = value;
+        this.BackingStore.set("helpText", value);
     }
     /**
      * Sets the name property value. Name of the item
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the parentCategoryId property value. Direct parent id of the category. If the category is the root, the parent id is same as its id.
      * @param value Value to set for the parentCategoryId property.
      */
     public void setParentCategoryId(@jakarta.annotation.Nullable final String value) {
-        this.parentCategoryId = value;
+        this.BackingStore.set("parentCategoryId", value);
     }
     /**
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      */
     public void setPlatforms(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
-        this.platforms = value;
+        this.BackingStore.set("platforms", value);
     }
     /**
      * Sets the rootCategoryId property value. Root id of the category.
      * @param value Value to set for the rootCategoryId property.
      */
     public void setRootCategoryId(@jakarta.annotation.Nullable final String value) {
-        this.rootCategoryId = value;
+        this.BackingStore.set("rootCategoryId", value);
     }
     /**
      * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      */
     public void setSettingUsage(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingUsage> value) {
-        this.settingUsage = value;
+        this.BackingStore.set("settingUsage", value);
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
     public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
-        this.technologies = value;
+        this.BackingStore.set("technologies", value);
     }
 }

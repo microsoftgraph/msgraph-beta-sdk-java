@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /**
-     * Created Date Time of the device
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the device
-     */
-    private String description;
-    /**
-     * The discoverySource property
-     */
-    private DiscoverySource discoverySource;
-    /**
-     * The enrollmentState property
-     */
-    private EnrollmentState enrollmentState;
-    /**
-     * Indicates if the device is deleted from Apple Business Manager
-     */
-    private Boolean isDeleted;
-    /**
-     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
-     */
-    private Boolean isSupervised;
-    /**
-     * Last Contacted Date Time of the device
-     */
-    private OffsetDateTime lastContactedDateTime;
-    /**
-     * The platform property
-     */
-    private Platform platform;
-    /**
-     * The time enrollment profile was assigned to the device
-     */
-    private OffsetDateTime requestedEnrollmentProfileAssignmentDateTime;
-    /**
-     * Enrollment profile Id admin intends to apply to the device during next enrollment
-     */
-    private String requestedEnrollmentProfileId;
-    /**
-     * Device serial number
-     */
-    private String serialNumber;
-    /**
-     * Instantiates a new importedAppleDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedAppleDeviceIdentity and sets the default values.
      */
     public ImportedAppleDeviceIdentity() {
         super();
@@ -65,7 +21,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedAppleDeviceIdentity
+     * @return a ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static ImportedAppleDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,31 +41,31 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the discoverySource property value. The discoverySource property
-     * @return a discoverySource
+     * @return a DiscoverySource
      */
     @jakarta.annotation.Nullable
     public DiscoverySource getDiscoverySource() {
-        return this.discoverySource;
+        return this.BackingStore.get("discoverySource");
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
-        return this.enrollmentState;
+        return this.BackingStore.get("enrollmentState");
     }
     /**
      * The deserialization information for the current model
@@ -133,19 +89,19 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.BackingStore.get("isDeleted");
     }
     /**
      * Gets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
-        return this.isSupervised;
+        return this.BackingStore.get("isSupervised");
     }
     /**
      * Gets the lastContactedDateTime property value. Last Contacted Date Time of the device
@@ -153,15 +109,15 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
-        return this.lastContactedDateTime;
+        return this.BackingStore.get("lastContactedDateTime");
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a platform
+     * @return a Platform
      */
     @jakarta.annotation.Nullable
     public Platform getPlatform() {
-        return this.platform;
+        return this.BackingStore.get("platform");
     }
     /**
      * Gets the requestedEnrollmentProfileAssignmentDateTime property value. The time enrollment profile was assigned to the device
@@ -169,23 +125,23 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedEnrollmentProfileAssignmentDateTime() {
-        return this.requestedEnrollmentProfileAssignmentDateTime;
+        return this.BackingStore.get("requestedEnrollmentProfileAssignmentDateTime");
     }
     /**
      * Gets the requestedEnrollmentProfileId property value. Enrollment profile Id admin intends to apply to the device during next enrollment
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestedEnrollmentProfileId() {
-        return this.requestedEnrollmentProfileId;
+        return this.BackingStore.get("requestedEnrollmentProfileId");
     }
     /**
      * Gets the serialNumber property value. Device serial number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Serializes information the current object
@@ -211,76 +167,76 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the device
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the discoverySource property value. The discoverySource property
      * @param value Value to set for the discoverySource property.
      */
     public void setDiscoverySource(@jakarta.annotation.Nullable final DiscoverySource value) {
-        this.discoverySource = value;
+        this.BackingStore.set("discoverySource", value);
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      */
     public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
-        this.enrollmentState = value;
+        this.BackingStore.set("enrollmentState", value);
     }
     /**
      * Sets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.BackingStore.set("isDeleted", value);
     }
     /**
      * Sets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      * @param value Value to set for the isSupervised property.
      */
     public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSupervised = value;
+        this.BackingStore.set("isSupervised", value);
     }
     /**
      * Sets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @param value Value to set for the lastContactedDateTime property.
      */
     public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastContactedDateTime = value;
+        this.BackingStore.set("lastContactedDateTime", value);
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final Platform value) {
-        this.platform = value;
+        this.BackingStore.set("platform", value);
     }
     /**
      * Sets the requestedEnrollmentProfileAssignmentDateTime property value. The time enrollment profile was assigned to the device
      * @param value Value to set for the requestedEnrollmentProfileAssignmentDateTime property.
      */
     public void setRequestedEnrollmentProfileAssignmentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestedEnrollmentProfileAssignmentDateTime = value;
+        this.BackingStore.set("requestedEnrollmentProfileAssignmentDateTime", value);
     }
     /**
      * Sets the requestedEnrollmentProfileId property value. Enrollment profile Id admin intends to apply to the device during next enrollment
      * @param value Value to set for the requestedEnrollmentProfileId property.
      */
     public void setRequestedEnrollmentProfileId(@jakarta.annotation.Nullable final String value) {
-        this.requestedEnrollmentProfileId = value;
+        this.BackingStore.set("requestedEnrollmentProfileId", value);
     }
     /**
      * Sets the serialNumber property value. Device serial number
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
 }

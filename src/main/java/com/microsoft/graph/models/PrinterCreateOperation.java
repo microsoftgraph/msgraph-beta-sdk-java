@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
-     * The signed certificate created during the registration process. Read-only.
-     */
-    private String certificate;
-    /**
-     * The printer property
-     */
-    private Printer printer;
-    /**
-     * Instantiates a new printerCreateOperation and sets the default values.
+     * Instantiates a new PrinterCreateOperation and sets the default values.
      */
     public PrinterCreateOperation() {
         super();
@@ -26,7 +18,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerCreateOperation
+     * @return a PrinterCreateOperation
      */
     @jakarta.annotation.Nonnull
     public static PrinterCreateOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     }
     /**
      * Gets the certificate property value. The signed certificate created during the registration process. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificate() {
-        return this.certificate;
+        return this.BackingStore.get("certificate");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     }
     /**
      * Gets the printer property value. The printer property
-     * @return a printer
+     * @return a Printer
      */
     @jakarta.annotation.Nullable
     public Printer getPrinter() {
-        return this.printer;
+        return this.BackingStore.get("printer");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final String value) {
-        this.certificate = value;
+        this.BackingStore.set("certificate", value);
     }
     /**
      * Sets the printer property value. The printer property
      * @param value Value to set for the printer property.
      */
     public void setPrinter(@jakarta.annotation.Nullable final Printer value) {
-        this.printer = value;
+        this.BackingStore.set("printer", value);
     }
 }

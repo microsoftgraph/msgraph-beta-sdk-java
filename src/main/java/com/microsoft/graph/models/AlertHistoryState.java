@@ -4,58 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AlertHistoryState implements AdditionalDataHolder, Parsable {
+public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
-     */
-    private String appId;
-    /**
-     * UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
-     */
-    private String assignedTo;
-    /**
-     * Comment entered by signed-in user.
-     */
-    private java.util.List<String> comments;
-    /**
-     * Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
-     */
-    private AlertFeedback feedback;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
-     */
-    private AlertStatus status;
-    /**
-     * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime updatedDateTime;
-    /**
-     * UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
-     */
-    private String user;
-    /**
-     * Instantiates a new alertHistoryState and sets the default values.
+     * Instantiates a new AlertHistoryState and sets the default values.
      */
     public AlertHistoryState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertHistoryState
+     * @return a AlertHistoryState
      */
     @jakarta.annotation.Nonnull
     public static AlertHistoryState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,44 +35,57 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return new AlertHistoryState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.BackingStore.get("appId");
     }
     /**
      * Gets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.BackingStore.get("assignedTo");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comments property value. Comment entered by signed-in user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getComments() {
-        return this.comments;
+        return this.BackingStore.get("comments");
     }
     /**
      * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
-     * @return a alertFeedback
+     * @return a AlertFeedback
      */
     @jakarta.annotation.Nullable
     public AlertFeedback getFeedback() {
-        return this.feedback;
+        return this.BackingStore.get("feedback");
     }
     /**
      * The deserialization information for the current model
@@ -121,19 +106,19 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
-     * @return a alertStatus
+     * @return a AlertStatus
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -141,15 +126,15 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this.updatedDateTime;
+        return this.BackingStore.get("updatedDateTime");
     }
     /**
      * Gets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUser() {
-        return this.user;
+        return this.BackingStore.get("user");
     }
     /**
      * Serializes information the current object
@@ -168,66 +153,74 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.BackingStore.set("appId", value);
     }
     /**
      * Sets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.BackingStore.set("assignedTo", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the comments property value. Comment entered by signed-in user.
      * @param value Value to set for the comments property.
      */
     public void setComments(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.comments = value;
+        this.BackingStore.set("comments", value);
     }
     /**
      * Sets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {
-        this.feedback = value;
+        this.BackingStore.set("feedback", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.updatedDateTime = value;
+        this.BackingStore.set("updatedDateTime", value);
     }
     /**
      * Sets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final String value) {
-        this.user = value;
+        this.BackingStore.set("user", value);
     }
 }

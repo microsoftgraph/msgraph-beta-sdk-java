@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivity extends Entity implements Parsable {
     /**
-     * An item was accessed.
-     */
-    private AccessAction access;
-    /**
-     * The activityDateTime property
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * Identity of who performed the action. Read-only.
-     */
-    private IdentitySet actor;
-    /**
-     * Exposes the driveItem that was the target of this activity.
-     */
-    private DriveItem driveItem;
-    /**
-     * Instantiates a new itemActivity and sets the default values.
+     * Instantiates a new ItemActivity and sets the default values.
      */
     public ItemActivity() {
         super();
@@ -34,7 +18,7 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemActivity
+     * @return a ItemActivity
      */
     @jakarta.annotation.Nonnull
     public static ItemActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class ItemActivity extends Entity implements Parsable {
     }
     /**
      * Gets the access property value. An item was accessed.
-     * @return a accessAction
+     * @return a AccessAction
      */
     @jakarta.annotation.Nullable
     public AccessAction getAccess() {
-        return this.access;
+        return this.BackingStore.get("access");
     }
     /**
      * Gets the activityDateTime property value. The activityDateTime property
@@ -55,23 +39,23 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the actor property value. Identity of who performed the action. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getActor() {
-        return this.actor;
+        return this.BackingStore.get("actor");
     }
     /**
      * Gets the driveItem property value. Exposes the driveItem that was the target of this activity.
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this.driveItem;
+        return this.BackingStore.get("driveItem");
     }
     /**
      * The deserialization information for the current model
@@ -103,27 +87,27 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the access property.
      */
     public void setAccess(@jakarta.annotation.Nullable final AccessAction value) {
-        this.access = value;
+        this.BackingStore.set("access", value);
     }
     /**
      * Sets the activityDateTime property value. The activityDateTime property
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.actor = value;
+        this.BackingStore.set("actor", value);
     }
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
-        this.driveItem = value;
+        this.BackingStore.set("driveItem", value);
     }
 }

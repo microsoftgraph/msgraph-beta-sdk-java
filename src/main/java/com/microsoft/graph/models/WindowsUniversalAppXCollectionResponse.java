@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppXCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsUniversalAppX> value;
-    /**
-     * Instantiates a new windowsUniversalAppXCollectionResponse and sets the default values.
+     * Instantiates a new WindowsUniversalAppXCollectionResponse and sets the default values.
      */
     public WindowsUniversalAppXCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsUniversalAppXCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUniversalAppXCollectionResponse
+     * @return a WindowsUniversalAppXCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsUniversalAppXCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsUniversalAppXCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsUniversalAppX
+     * @return a java.util.List<WindowsUniversalAppX>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsUniversalAppX> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsUniversalAppXCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsUniversalAppX> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

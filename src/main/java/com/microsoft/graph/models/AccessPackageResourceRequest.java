@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
-     * The accessPackageResource property
-     */
-    private AccessPackageResource accessPackageResource;
-    /**
-     * The unique ID of the access package catalog.
-     */
-    private String catalogId;
-    /**
-     * The executeImmediately property
-     */
-    private Boolean executeImmediately;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * If set, does not add the resource.
-     */
-    private Boolean isValidationOnly;
-    /**
-     * The requestor's justification for adding or removing the resource.
-     */
-    private String justification;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private AccessPackageSubject requestor;
-    /**
-     * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
-     */
-    private String requestState;
-    /**
-     * The requestStatus property
-     */
-    private String requestStatus;
-    /**
-     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
-     */
-    private String requestType;
-    /**
-     * Instantiates a new accessPackageResourceRequest and sets the default values.
+     * Instantiates a new AccessPackageResourceRequest and sets the default values.
      */
     public AccessPackageResourceRequest() {
         super();
@@ -58,7 +18,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceRequest
+     * @return a AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,27 +27,27 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResource property value. The accessPackageResource property
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
-        return this.accessPackageResource;
+        return this.BackingStore.get("accessPackageResource");
     }
     /**
      * Gets the catalogId property value. The unique ID of the access package catalog.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
-        return this.catalogId;
+        return this.BackingStore.get("catalogId");
     }
     /**
      * Gets the executeImmediately property value. The executeImmediately property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExecuteImmediately() {
-        return this.executeImmediately;
+        return this.BackingStore.get("executeImmediately");
     }
     /**
      * Gets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -95,7 +55,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -118,51 +78,51 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the isValidationOnly property value. If set, does not add the resource.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
-        return this.isValidationOnly;
+        return this.BackingStore.get("isValidationOnly");
     }
     /**
      * Gets the justification property value. The requestor's justification for adding or removing the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.BackingStore.get("justification");
     }
     /**
      * Gets the requestor property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getRequestor() {
-        return this.requestor;
+        return this.BackingStore.get("requestor");
     }
     /**
      * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestState() {
-        return this.requestState;
+        return this.BackingStore.get("requestState");
     }
     /**
      * Gets the requestStatus property value. The requestStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestStatus() {
-        return this.requestStatus;
+        return this.BackingStore.get("requestStatus");
     }
     /**
      * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestType() {
-        return this.requestType;
+        return this.BackingStore.get("requestType");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      */
     public void setAccessPackageResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
-        this.accessPackageResource = value;
+        this.BackingStore.set("accessPackageResource", value);
     }
     /**
      * Sets the catalogId property value. The unique ID of the access package catalog.
      * @param value Value to set for the catalogId property.
      */
     public void setCatalogId(@jakarta.annotation.Nullable final String value) {
-        this.catalogId = value;
+        this.BackingStore.set("catalogId", value);
     }
     /**
      * Sets the executeImmediately property value. The executeImmediately property
      * @param value Value to set for the executeImmediately property.
      */
     public void setExecuteImmediately(@jakarta.annotation.Nullable final Boolean value) {
-        this.executeImmediately = value;
+        this.BackingStore.set("executeImmediately", value);
     }
     /**
      * Sets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the isValidationOnly property value. If set, does not add the resource.
      * @param value Value to set for the isValidationOnly property.
      */
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.isValidationOnly = value;
+        this.BackingStore.set("isValidationOnly", value);
     }
     /**
      * Sets the justification property value. The requestor's justification for adding or removing the resource.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.BackingStore.set("justification", value);
     }
     /**
      * Sets the requestor property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the requestor property.
      */
     public void setRequestor(@jakarta.annotation.Nullable final AccessPackageSubject value) {
-        this.requestor = value;
+        this.BackingStore.set("requestor", value);
     }
     /**
      * Sets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
      * @param value Value to set for the requestState property.
      */
     public void setRequestState(@jakarta.annotation.Nullable final String value) {
-        this.requestState = value;
+        this.BackingStore.set("requestState", value);
     }
     /**
      * Sets the requestStatus property value. The requestStatus property
      * @param value Value to set for the requestStatus property.
      */
     public void setRequestStatus(@jakarta.annotation.Nullable final String value) {
-        this.requestStatus = value;
+        this.BackingStore.set("requestStatus", value);
     }
     /**
      * Sets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final String value) {
-        this.requestType = value;
+        this.BackingStore.set("requestType", value);
     }
 }

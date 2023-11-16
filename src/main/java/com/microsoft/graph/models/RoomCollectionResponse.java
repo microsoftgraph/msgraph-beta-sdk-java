@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoomCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Room> value;
-    /**
-     * Instantiates a new roomCollectionResponse and sets the default values.
+     * Instantiates a new RoomCollectionResponse and sets the default values.
      */
     public RoomCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class RoomCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roomCollectionResponse
+     * @return a RoomCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RoomCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class RoomCollectionResponse extends BaseCollectionPaginationCountRespons
     }
     /**
      * Gets the value property value. The value property
-     * @return a room
+     * @return a java.util.List<Room>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Room> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class RoomCollectionResponse extends BaseCollectionPaginationCountRespons
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Room> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

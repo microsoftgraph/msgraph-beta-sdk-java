@@ -11,47 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntelligenceProfile extends Entity implements Parsable {
     /**
-     * A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
-     */
-    private java.util.List<String> aliases;
-    /**
-     * The country/region of origin for the given actor or threat associated with this intelligenceProfile.
-     */
-    private java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> countriesOrRegionsOfOrigin;
-    /**
-     * The description property
-     */
-    private FormattedContent description;
-    /**
-     * The date and time when this intelligenceProfile was first active.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstActiveDateTime;
-    /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
-     */
-    private java.util.List<IntelligenceProfileIndicator> indicators;
-    /**
-     * The kind property
-     */
-    private IntelligenceProfileKind kind;
-    /**
-     * The summary property
-     */
-    private FormattedContent summary;
-    /**
-     * Known targets related to this intelligenceProfile.
-     */
-    private java.util.List<String> targets;
-    /**
-     * The title of this intelligenceProfile.
-     */
-    private String title;
-    /**
-     * Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
-     */
-    private FormattedContent tradecraft;
-    /**
-     * Instantiates a new intelligenceProfile and sets the default values.
+     * Instantiates a new IntelligenceProfile and sets the default values.
      */
     public IntelligenceProfile() {
         super();
@@ -59,7 +19,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a intelligenceProfile
+     * @return a IntelligenceProfile
      */
     @jakarta.annotation.Nonnull
     public static IntelligenceProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,27 +28,27 @@ public class IntelligenceProfile extends Entity implements Parsable {
     }
     /**
      * Gets the aliases property value. A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAliases() {
-        return this.aliases;
+        return this.BackingStore.get("aliases");
     }
     /**
      * Gets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
-     * @return a intelligenceProfileCountryOrRegionOfOrigin
+     * @return a java.util.List<IntelligenceProfileCountryOrRegionOfOrigin>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> getCountriesOrRegionsOfOrigin() {
-        return this.countriesOrRegionsOfOrigin;
+        return this.BackingStore.get("countriesOrRegionsOfOrigin");
     }
     /**
      * Gets the description property value. The description property
-     * @return a formattedContent
+     * @return a FormattedContent
      */
     @jakarta.annotation.Nullable
     public FormattedContent getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -115,55 +75,55 @@ public class IntelligenceProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstActiveDateTime() {
-        return this.firstActiveDateTime;
+        return this.BackingStore.get("firstActiveDateTime");
     }
     /**
      * Gets the indicators property value. Includes an assemblage of high-fidelity network indicators of compromise.
-     * @return a intelligenceProfileIndicator
+     * @return a java.util.List<IntelligenceProfileIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIndicators() {
-        return this.indicators;
+        return this.BackingStore.get("indicators");
     }
     /**
      * Gets the kind property value. The kind property
-     * @return a intelligenceProfileKind
+     * @return a IntelligenceProfileKind
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileKind getKind() {
-        return this.kind;
+        return this.BackingStore.get("kind");
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a formattedContent
+     * @return a FormattedContent
      */
     @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
-        return this.summary;
+        return this.BackingStore.get("summary");
     }
     /**
      * Gets the targets property value. Known targets related to this intelligenceProfile.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargets() {
-        return this.targets;
+        return this.BackingStore.get("targets");
     }
     /**
      * Gets the title property value. The title of this intelligenceProfile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Gets the tradecraft property value. Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
-     * @return a formattedContent
+     * @return a FormattedContent
      */
     @jakarta.annotation.Nullable
     public FormattedContent getTradecraft() {
-        return this.tradecraft;
+        return this.BackingStore.get("tradecraft");
     }
     /**
      * Serializes information the current object
@@ -188,69 +148,69 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the aliases property.
      */
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.aliases = value;
+        this.BackingStore.set("aliases", value);
     }
     /**
      * Sets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      * @param value Value to set for the countriesOrRegionsOfOrigin property.
      */
     public void setCountriesOrRegionsOfOrigin(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> value) {
-        this.countriesOrRegionsOfOrigin = value;
+        this.BackingStore.set("countriesOrRegionsOfOrigin", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final FormattedContent value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the firstActiveDateTime property value. The date and time when this intelligenceProfile was first active.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstActiveDateTime property.
      */
     public void setFirstActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstActiveDateTime = value;
+        this.BackingStore.set("firstActiveDateTime", value);
     }
     /**
      * Sets the indicators property value. Includes an assemblage of high-fidelity network indicators of compromise.
      * @param value Value to set for the indicators property.
      */
     public void setIndicators(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
-        this.indicators = value;
+        this.BackingStore.set("indicators", value);
     }
     /**
      * Sets the kind property value. The kind property
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final IntelligenceProfileKind value) {
-        this.kind = value;
+        this.BackingStore.set("kind", value);
     }
     /**
      * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
-        this.summary = value;
+        this.BackingStore.set("summary", value);
     }
     /**
      * Sets the targets property value. Known targets related to this intelligenceProfile.
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.targets = value;
+        this.BackingStore.set("targets", value);
     }
     /**
      * Sets the title property value. The title of this intelligenceProfile.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
     /**
      * Sets the tradecraft property value. Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
      * @param value Value to set for the tradecraft property.
      */
     public void setTradecraft(@jakarta.annotation.Nullable final FormattedContent value) {
-        this.tradecraft = value;
+        this.BackingStore.set("tradecraft", value);
     }
 }

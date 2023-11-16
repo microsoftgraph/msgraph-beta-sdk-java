@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     /**
-     * The matchingRows property
-     */
-    private java.util.List<LookupResultRow> matchingRows;
-    /**
-     * The state property
-     */
-    private String state;
-    /**
-     * Instantiates a new exactMatchLookupJob and sets the default values.
+     * Instantiates a new ExactMatchLookupJob and sets the default values.
      */
     public ExactMatchLookupJob() {
         super();
@@ -26,7 +18,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchLookupJob
+     * @return a ExactMatchLookupJob
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchLookupJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     }
     /**
      * Gets the matchingRows property value. The matchingRows property
-     * @return a lookupResultRow
+     * @return a java.util.List<LookupResultRow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LookupResultRow> getMatchingRows() {
-        return this.matchingRows;
+        return this.BackingStore.get("matchingRows");
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param value Value to set for the matchingRows property.
      */
     public void setMatchingRows(@jakarta.annotation.Nullable final java.util.List<LookupResultRow> value) {
-        this.matchingRows = value;
+        this.BackingStore.set("matchingRows", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
 }

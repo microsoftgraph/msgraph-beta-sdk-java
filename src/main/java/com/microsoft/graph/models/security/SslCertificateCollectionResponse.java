@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SslCertificateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<SslCertificate> value;
-    /**
-     * Instantiates a new sslCertificateCollectionResponse and sets the default values.
+     * Instantiates a new SslCertificateCollectionResponse and sets the default values.
      */
     public SslCertificateCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class SslCertificateCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sslCertificateCollectionResponse
+     * @return a SslCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SslCertificateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class SslCertificateCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a sslCertificate
+     * @return a java.util.List<SslCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SslCertificate> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SslCertificateCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<SslCertificate> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

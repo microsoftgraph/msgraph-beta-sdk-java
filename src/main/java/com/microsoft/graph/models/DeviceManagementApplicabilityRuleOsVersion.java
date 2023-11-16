@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDataHolder, Parsable {
+public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Max OS version for Applicability Rule.
-     */
-    private String maxOSVersion;
-    /**
-     * Min OS version for Applicability Rule.
-     */
-    private String minOSVersion;
-    /**
-     * Name for object.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Supported Applicability rule types for Device Configuration
-     */
-    private DeviceManagementApplicabilityRuleType ruleType;
-    /**
-     * Instantiates a new deviceManagementApplicabilityRuleOsVersion and sets the default values.
+     * Instantiates a new DeviceManagementApplicabilityRuleOsVersion and sets the default values.
      */
     public DeviceManagementApplicabilityRuleOsVersion() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementApplicabilityRuleOsVersion
+     * @return a DeviceManagementApplicabilityRuleOsVersion
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementApplicabilityRuleOsVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +34,25 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         return new DeviceManagementApplicabilityRuleOsVersion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,43 +70,43 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the maxOSVersion property value. Max OS version for Applicability Rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaxOSVersion() {
-        return this.maxOSVersion;
+        return this.BackingStore.get("maxOSVersion");
     }
     /**
      * Gets the minOSVersion property value. Min OS version for Applicability Rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinOSVersion() {
-        return this.minOSVersion;
+        return this.BackingStore.get("minOSVersion");
     }
     /**
      * Gets the name property value. Name for object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
-     * @return a deviceManagementApplicabilityRuleType
+     * @return a DeviceManagementApplicabilityRuleType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleType getRuleType() {
-        return this.ruleType;
+        return this.BackingStore.get("ruleType");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the maxOSVersion property value. Max OS version for Applicability Rule.
      * @param value Value to set for the maxOSVersion property.
      */
     public void setMaxOSVersion(@jakarta.annotation.Nullable final String value) {
-        this.maxOSVersion = value;
+        this.BackingStore.set("maxOSVersion", value);
     }
     /**
      * Sets the minOSVersion property value. Min OS version for Applicability Rule.
      * @param value Value to set for the minOSVersion property.
      */
     public void setMinOSVersion(@jakarta.annotation.Nullable final String value) {
-        this.minOSVersion = value;
+        this.BackingStore.set("minOSVersion", value);
     }
     /**
      * Sets the name property value. Name for object.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the ruleType property value. Supported Applicability rule types for Device Configuration
      * @param value Value to set for the ruleType property.
      */
     public void setRuleType(@jakarta.annotation.Nullable final DeviceManagementApplicabilityRuleType value) {
-        this.ruleType = value;
+        this.BackingStore.set("ruleType", value);
     }
 }

@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Onenote extends Entity implements Parsable {
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
-     */
-    private java.util.List<Notebook> notebooks;
-    /**
-     * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
-     */
-    private java.util.List<OnenoteOperation> operations;
-    /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     */
-    private java.util.List<OnenotePage> pages;
-    /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     */
-    private java.util.List<OnenoteResource> resources;
-    /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     */
-    private java.util.List<SectionGroup> sectionGroups;
-    /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     */
-    private java.util.List<OnenoteSection> sections;
-    /**
-     * Instantiates a new onenote and sets the default values.
+     * Instantiates a new Onenote and sets the default values.
      */
     public Onenote() {
         super();
@@ -41,7 +17,7 @@ public class Onenote extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenote
+     * @return a Onenote
      */
     @jakarta.annotation.Nonnull
     public static Onenote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,51 +41,51 @@ public class Onenote extends Entity implements Parsable {
     }
     /**
      * Gets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
-     * @return a notebook
+     * @return a java.util.List<Notebook>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Notebook> getNotebooks() {
-        return this.notebooks;
+        return this.BackingStore.get("notebooks");
     }
     /**
-     * Gets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
-     * @return a onenoteOperation
+     * Gets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * @return a java.util.List<OnenoteOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     * @return a onenotePage
+     * @return a java.util.List<OnenotePage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
-        return this.pages;
+        return this.BackingStore.get("pages");
     }
     /**
-     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     * @return a onenoteResource
+     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * @return a java.util.List<OnenoteResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteResource> getResources() {
-        return this.resources;
+        return this.BackingStore.get("resources");
     }
     /**
      * Gets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     * @return a sectionGroup
+     * @return a java.util.List<SectionGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
-        return this.sectionGroups;
+        return this.BackingStore.get("sectionGroups");
     }
     /**
      * Gets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     * @return a onenoteSection
+     * @return a java.util.List<OnenoteSection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
-        return this.sections;
+        return this.BackingStore.get("sections");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the notebooks property.
      */
     public void setNotebooks(@jakarta.annotation.Nullable final java.util.List<Notebook> value) {
-        this.notebooks = value;
+        this.BackingStore.set("notebooks", value);
     }
     /**
-     * Sets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Sets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<OnenoteOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<OnenotePage> value) {
-        this.pages = value;
+        this.BackingStore.set("pages", value);
     }
     /**
-     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<OnenoteResource> value) {
-        this.resources = value;
+        this.BackingStore.set("resources", value);
     }
     /**
      * Sets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
      */
     public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
-        this.sectionGroups = value;
+        this.BackingStore.set("sectionGroups", value);
     }
     /**
      * Sets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the sections property.
      */
     public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
-        this.sections = value;
+        this.BackingStore.set("sections", value);
     }
 }

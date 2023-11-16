@@ -11,23 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
-     * Indicates the date and time the conditional access policy was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Provides a summary of the conditional access policy.
-     */
-    private String description;
-    /**
-     * Represents the human-readable name or title assigned to the conditional access policy.
-     */
-    private String displayName;
-    /**
-     * Indicates the date and time when the conditional access policy was last modified.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Instantiates a new conditionalAccessPolicy and sets the default values.
+     * Instantiates a new ConditionalAccessPolicy and sets the default values.
      */
     public ConditionalAccessPolicy() {
         super();
@@ -35,7 +19,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,23 +32,23 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Provides a summary of the conditional access policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Represents the human-readable name or title assigned to the conditional access policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +69,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.BackingStore.get("modifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Provides a summary of the conditional access policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Represents the human-readable name or title assigned to the conditional access policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the modifiedDateTime property value. Indicates the date and time when the conditional access policy was last modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.BackingStore.set("modifiedDateTime", value);
     }
 }

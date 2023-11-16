@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ValidationResult implements AdditionalDataHolder, Parsable {
+public class ValidationResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The string containing the reason for why the rule passed or not. Read-only. Not nullable.
-     */
-    private String message;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
-     */
-    private String ruleName;
-    /**
-     * Whether the password passed or failed the validation rule. Read-only. Not nullable.
-     */
-    private Boolean validationPassed;
-    /**
-     * Instantiates a new validationResult and sets the default values.
+     * Instantiates a new ValidationResult and sets the default values.
      */
     public ValidationResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validationResult
+     * @return a ValidationResult
      */
     @jakarta.annotation.Nonnull
     public static ValidationResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
         return new ValidationResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. The string containing the reason for why the rule passed or not. Read-only. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.BackingStore.get("message");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the ruleName property value. The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
-        return this.ruleName;
+        return this.BackingStore.get("ruleName");
     }
     /**
      * Gets the validationPassed property value. Whether the password passed or failed the validation rule. Read-only. Not nullable.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getValidationPassed() {
-        return this.validationPassed;
+        return this.BackingStore.get("validationPassed");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the message property value. The string containing the reason for why the rule passed or not. Read-only. Not nullable.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.BackingStore.set("message", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the ruleName property value. The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
      * @param value Value to set for the ruleName property.
      */
     public void setRuleName(@jakarta.annotation.Nullable final String value) {
-        this.ruleName = value;
+        this.BackingStore.set("ruleName", value);
     }
     /**
      * Sets the validationPassed property value. Whether the password passed or failed the validation rule. Read-only. Not nullable.
      * @param value Value to set for the validationPassed property.
      */
     public void setValidationPassed(@jakarta.annotation.Nullable final Boolean value) {
-        this.validationPassed = value;
+        this.BackingStore.set("validationPassed", value);
     }
 }

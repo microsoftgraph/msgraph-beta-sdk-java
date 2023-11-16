@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The defaultCommunicationSpeaker property
-     */
-    private TeamworkPeripheral defaultCommunicationSpeaker;
-    /**
-     * The defaultSpeaker property
-     */
-    private TeamworkPeripheral defaultSpeaker;
-    /**
-     * True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
-     */
-    private Boolean isCommunicationSpeakerOptional;
-    /**
-     * True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
-     */
-    private Boolean isSpeakerOptional;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The speakers property
-     */
-    private java.util.List<TeamworkPeripheral> speakers;
-    /**
-     * Instantiates a new teamworkSpeakerConfiguration and sets the default values.
+     * Instantiates a new TeamworkSpeakerConfiguration and sets the default values.
      */
     public TeamworkSpeakerConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSpeakerConfiguration
+     * @return a TeamworkSpeakerConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSpeakerConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         return new TeamworkSpeakerConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the defaultCommunicationSpeaker property value. The defaultCommunicationSpeaker property
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultCommunicationSpeaker() {
-        return this.defaultCommunicationSpeaker;
+        return this.BackingStore.get("defaultCommunicationSpeaker");
     }
     /**
      * Gets the defaultSpeaker property value. The defaultSpeaker property
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultSpeaker() {
-        return this.defaultSpeaker;
+        return this.BackingStore.get("defaultSpeaker");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +87,35 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isCommunicationSpeakerOptional property value. True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommunicationSpeakerOptional() {
-        return this.isCommunicationSpeakerOptional;
+        return this.BackingStore.get("isCommunicationSpeakerOptional");
     }
     /**
      * Gets the isSpeakerOptional property value. True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSpeakerOptional() {
-        return this.isSpeakerOptional;
+        return this.BackingStore.get("isSpeakerOptional");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the speakers property value. The speakers property
-     * @return a teamworkPeripheral
+     * @return a java.util.List<TeamworkPeripheral>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getSpeakers() {
-        return this.speakers;
+        return this.BackingStore.get("speakers");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the defaultCommunicationSpeaker property value. The defaultCommunicationSpeaker property
      * @param value Value to set for the defaultCommunicationSpeaker property.
      */
     public void setDefaultCommunicationSpeaker(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
-        this.defaultCommunicationSpeaker = value;
+        this.BackingStore.set("defaultCommunicationSpeaker", value);
     }
     /**
      * Sets the defaultSpeaker property value. The defaultSpeaker property
      * @param value Value to set for the defaultSpeaker property.
      */
     public void setDefaultSpeaker(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
-        this.defaultSpeaker = value;
+        this.BackingStore.set("defaultSpeaker", value);
     }
     /**
      * Sets the isCommunicationSpeakerOptional property value. True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
      * @param value Value to set for the isCommunicationSpeakerOptional property.
      */
     public void setIsCommunicationSpeakerOptional(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCommunicationSpeakerOptional = value;
+        this.BackingStore.set("isCommunicationSpeakerOptional", value);
     }
     /**
      * Sets the isSpeakerOptional property value. True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
      * @param value Value to set for the isSpeakerOptional property.
      */
     public void setIsSpeakerOptional(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSpeakerOptional = value;
+        this.BackingStore.set("isSpeakerOptional", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the speakers property value. The speakers property
      * @param value Value to set for the speakers property.
      */
     public void setSpeakers(@jakarta.annotation.Nullable final java.util.List<TeamworkPeripheral> value) {
-        this.speakers = value;
+        this.BackingStore.set("speakers", value);
     }
 }

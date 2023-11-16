@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessSettings extends Entity implements Parsable {
     /**
-     * The signalingStatus property
-     */
-    private Status signalingStatus;
-    /**
-     * Instantiates a new conditionalAccessSettings and sets the default values.
+     * Instantiates a new ConditionalAccessSettings and sets the default values.
      */
     public ConditionalAccessSettings() {
         super();
@@ -22,7 +18,7 @@ public class ConditionalAccessSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessSettings
+     * @return a ConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ConditionalAccessSettings extends Entity implements Parsable {
     }
     /**
      * Gets the signalingStatus property value. The signalingStatus property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getSignalingStatus() {
-        return this.signalingStatus;
+        return this.BackingStore.get("signalingStatus");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ConditionalAccessSettings extends Entity implements Parsable {
      * @param value Value to set for the signalingStatus property.
      */
     public void setSignalingStatus(@jakarta.annotation.Nullable final Status value) {
-        this.signalingStatus = value;
+        this.BackingStore.set("signalingStatus", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * ID of the tenant that the user belongs to.
-     */
-    private String tenantId;
-    /**
-     * Azure Active Directory ID of the user.
-     */
-    private String userId;
-    /**
-     * Instantiates a new skypeForBusinessUserConversationMember and sets the default values.
+     * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
      */
     public SkypeForBusinessUserConversationMember() {
         super();
@@ -26,7 +18,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a skypeForBusinessUserConversationMember
+     * @return a SkypeForBusinessUserConversationMember
      */
     @jakarta.annotation.Nonnull
     public static SkypeForBusinessUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
     }
     /**
      * Gets the tenantId property value. ID of the tenant that the user belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
-     * Gets the userId property value. Azure Active Directory ID of the user.
-     * @return a string
+     * Gets the userId property value. Microsoft Entra ID of the user.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
-     * Sets the userId property value. Azure Active Directory ID of the user.
+     * Sets the userId property value. Microsoft Entra ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

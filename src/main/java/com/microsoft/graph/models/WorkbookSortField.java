@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkbookSortField implements AdditionalDataHolder, Parsable {
+public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Represents whether the sorting is done in an ascending fashion.
-     */
-    private Boolean ascending;
-    /**
-     * Represents the color that is the target of the condition if the sorting is on font or cell color.
-     */
-    private String color;
-    /**
-     * Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
-     */
-    private String dataOption;
-    /**
-     * Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-     */
-    private WorkbookIcon icon;
-    /**
-     * Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
-     */
-    private Integer key;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
-     */
-    private String sortOn;
-    /**
-     * Instantiates a new workbookSortField and sets the default values.
+     * Instantiates a new WorkbookSortField and sets the default values.
      */
     public WorkbookSortField() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookSortField
+     * @return a WorkbookSortField
      */
     @jakarta.annotation.Nonnull
     public static WorkbookSortField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +34,49 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         return new WorkbookSortField();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the ascending property value. Represents whether the sorting is done in an ascending fashion.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAscending() {
-        return this.ascending;
+        return this.BackingStore.get("ascending");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.BackingStore.get("color");
     }
     /**
      * Gets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataOption() {
-        return this.dataOption;
+        return this.BackingStore.get("dataOption");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +96,35 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-     * @return a workbookIcon
+     * @return a WorkbookIcon
      */
     @jakarta.annotation.Nullable
     public WorkbookIcon getIcon() {
-        return this.icon;
+        return this.BackingStore.get("icon");
     }
     /**
      * Gets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getKey() {
-        return this.key;
+        return this.BackingStore.get("key");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOn() {
-        return this.sortOn;
+        return this.BackingStore.get("sortOn");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the ascending property value. Represents whether the sorting is done in an ascending fashion.
      * @param value Value to set for the ascending property.
      */
     public void setAscending(@jakarta.annotation.Nullable final Boolean value) {
-        this.ascending = value;
+        this.BackingStore.set("ascending", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.BackingStore.set("color", value);
     }
     /**
      * Sets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
      * @param value Value to set for the dataOption property.
      */
     public void setDataOption(@jakarta.annotation.Nullable final String value) {
-        this.dataOption = value;
+        this.BackingStore.set("dataOption", value);
     }
     /**
      * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
      * @param value Value to set for the icon property.
      */
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {
-        this.icon = value;
+        this.BackingStore.set("icon", value);
     }
     /**
      * Sets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final Integer value) {
-        this.key = value;
+        this.BackingStore.set("key", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
      * @param value Value to set for the sortOn property.
      */
     public void setSortOn(@jakarta.annotation.Nullable final String value) {
-        this.sortOn = value;
+        this.BackingStore.set("sortOn", value);
     }
 }

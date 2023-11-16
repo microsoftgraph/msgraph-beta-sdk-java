@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningSelfInitiatedCourse extends LearningCourseActivity implements Parsable {
     /**
-     * The date and time on which the self-initiated course was started by the learner. Optional.
-     */
-    private OffsetDateTime startedDateTime;
-    /**
-     * Instantiates a new learningSelfInitiatedCourse and sets the default values.
+     * Instantiates a new LearningSelfInitiatedCourse and sets the default values.
      */
     public LearningSelfInitiatedCourse() {
         super();
@@ -22,7 +18,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a learningSelfInitiatedCourse
+     * @return a LearningSelfInitiatedCourse
      */
     @jakarta.annotation.Nonnull
     public static LearningSelfInitiatedCourse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +41,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.BackingStore.get("startedDateTime");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.BackingStore.set("startedDateTime", value);
     }
 }

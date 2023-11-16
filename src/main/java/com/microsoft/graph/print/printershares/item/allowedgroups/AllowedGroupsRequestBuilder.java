@@ -72,36 +72,36 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/allowedGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
-     * @return a CompletableFuture of groupCollectionResponse
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * @return a GroupCollectionResponse
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
+    public GroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a GroupCollectionResponse
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -112,7 +112,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -121,24 +121,15 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allowedGroupsRequestBuilder
+     * @return a AllowedGroupsRequestBuilder
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -149,7 +140,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         return new AllowedGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

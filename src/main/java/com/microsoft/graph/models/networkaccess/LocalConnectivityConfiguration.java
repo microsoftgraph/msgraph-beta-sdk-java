@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LocalConnectivityConfiguration implements AdditionalDataHolder, Parsable {
+public class LocalConnectivityConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The asn property
-     */
-    private Integer asn;
-    /**
-     * The bgpAddress property
-     */
-    private String bgpAddress;
-    /**
-     * The endpoint property
-     */
-    private String endpoint;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The region property
-     */
-    private Region region;
-    /**
-     * Instantiates a new localConnectivityConfiguration and sets the default values.
+     * Instantiates a new LocalConnectivityConfiguration and sets the default values.
      */
     public LocalConnectivityConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localConnectivityConfiguration
+     * @return a LocalConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static LocalConnectivityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,36 +34,49 @@ public class LocalConnectivityConfiguration implements AdditionalDataHolder, Par
         return new LocalConnectivityConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the asn property value. The asn property
-     * @return a integer
+     * Gets the asn property value. Specifies ASN of one end of IPSec tunnel (local or peer).
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAsn() {
-        return this.asn;
+        return this.BackingStore.get("asn");
     }
     /**
-     * Gets the bgpAddress property value. The bgpAddress property
-     * @return a string
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
+    }
+    /**
+     * Gets the bgpAddress property value. Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBgpAddress() {
-        return this.bgpAddress;
+        return this.BackingStore.get("bgpAddress");
     }
     /**
-     * Gets the endpoint property value. The endpoint property
-     * @return a string
+     * Gets the endpoint property value. Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEndpoint() {
-        return this.endpoint;
+        return this.BackingStore.get("endpoint");
     }
     /**
      * The deserialization information for the current model
@@ -97,19 +94,19 @@ public class LocalConnectivityConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the region property value. The region property
-     * @return a region
+     * @return a Region
      */
     @jakarta.annotation.Nullable
     public Region getRegion() {
-        return this.region;
+        return this.BackingStore.get("region");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class LocalConnectivityConfiguration implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
-     * Sets the asn property value. The asn property
+     * Sets the asn property value. Specifies ASN of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the asn property.
      */
     public void setAsn(@jakarta.annotation.Nullable final Integer value) {
-        this.asn = value;
+        this.BackingStore.set("asn", value);
     }
     /**
-     * Sets the bgpAddress property value. The bgpAddress property
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
+    }
+    /**
+     * Sets the bgpAddress property value. Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the bgpAddress property.
      */
     public void setBgpAddress(@jakarta.annotation.Nullable final String value) {
-        this.bgpAddress = value;
+        this.BackingStore.set("bgpAddress", value);
     }
     /**
-     * Sets the endpoint property value. The endpoint property
+     * Sets the endpoint property value. Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the endpoint property.
      */
     public void setEndpoint(@jakarta.annotation.Nullable final String value) {
-        this.endpoint = value;
+        this.BackingStore.set("endpoint", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the region property value. The region property
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final Region value) {
-        this.region = value;
+        this.BackingStore.set("region", value);
     }
 }

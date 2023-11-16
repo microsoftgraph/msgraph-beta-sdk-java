@@ -5,49 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
+public class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The keepEnrollmentData property
-     */
-    private Boolean keepEnrollmentData;
-    /**
-     * The keepUserData property
-     */
-    private Boolean keepUserData;
-    /**
-     * The macOsUnlockCode property
-     */
-    private String macOsUnlockCode;
-    /**
-     * The obliterationBehavior property
-     */
-    private ObliterationBehavior obliterationBehavior;
-    /**
-     * The persistEsimDataPlan property
-     */
-    private Boolean persistEsimDataPlan;
-    /**
-     * The useProtectedWipe property
-     */
-    private Boolean useProtectedWipe;
-    /**
-     * Instantiates a new wipePostRequestBody and sets the default values.
+     * Instantiates a new WipePostRequestBody and sets the default values.
      */
     public WipePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a wipePostRequestBody
+     * @return a WipePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static WipePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,12 +35,25 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
         return new WipePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -79,51 +72,51 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepEnrollmentData() {
-        return this.keepEnrollmentData;
+        return this.BackingStore.get("keepEnrollmentData");
     }
     /**
      * Gets the keepUserData property value. The keepUserData property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepUserData() {
-        return this.keepUserData;
+        return this.BackingStore.get("keepUserData");
     }
     /**
      * Gets the macOsUnlockCode property value. The macOsUnlockCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacOsUnlockCode() {
-        return this.macOsUnlockCode;
+        return this.BackingStore.get("macOsUnlockCode");
     }
     /**
      * Gets the obliterationBehavior property value. The obliterationBehavior property
-     * @return a obliterationBehavior
+     * @return a ObliterationBehavior
      */
     @jakarta.annotation.Nullable
     public ObliterationBehavior getObliterationBehavior() {
-        return this.obliterationBehavior;
+        return this.BackingStore.get("obliterationBehavior");
     }
     /**
      * Gets the persistEsimDataPlan property value. The persistEsimDataPlan property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistEsimDataPlan() {
-        return this.persistEsimDataPlan;
+        return this.BackingStore.get("persistEsimDataPlan");
     }
     /**
      * Gets the useProtectedWipe property value. The useProtectedWipe property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseProtectedWipe() {
-        return this.useProtectedWipe;
+        return this.BackingStore.get("useProtectedWipe");
     }
     /**
      * Serializes information the current object
@@ -140,52 +133,60 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the keepEnrollmentData property value. The keepEnrollmentData property
      * @param value Value to set for the keepEnrollmentData property.
      */
     public void setKeepEnrollmentData(@jakarta.annotation.Nullable final Boolean value) {
-        this.keepEnrollmentData = value;
+        this.BackingStore.set("keepEnrollmentData", value);
     }
     /**
      * Sets the keepUserData property value. The keepUserData property
      * @param value Value to set for the keepUserData property.
      */
     public void setKeepUserData(@jakarta.annotation.Nullable final Boolean value) {
-        this.keepUserData = value;
+        this.BackingStore.set("keepUserData", value);
     }
     /**
      * Sets the macOsUnlockCode property value. The macOsUnlockCode property
      * @param value Value to set for the macOsUnlockCode property.
      */
     public void setMacOsUnlockCode(@jakarta.annotation.Nullable final String value) {
-        this.macOsUnlockCode = value;
+        this.BackingStore.set("macOsUnlockCode", value);
     }
     /**
      * Sets the obliterationBehavior property value. The obliterationBehavior property
      * @param value Value to set for the obliterationBehavior property.
      */
     public void setObliterationBehavior(@jakarta.annotation.Nullable final ObliterationBehavior value) {
-        this.obliterationBehavior = value;
+        this.BackingStore.set("obliterationBehavior", value);
     }
     /**
      * Sets the persistEsimDataPlan property value. The persistEsimDataPlan property
      * @param value Value to set for the persistEsimDataPlan property.
      */
     public void setPersistEsimDataPlan(@jakarta.annotation.Nullable final Boolean value) {
-        this.persistEsimDataPlan = value;
+        this.BackingStore.set("persistEsimDataPlan", value);
     }
     /**
      * Sets the useProtectedWipe property value. The useProtectedWipe property
      * @param value Value to set for the useProtectedWipe property.
      */
     public void setUseProtectedWipe(@jakarta.annotation.Nullable final Boolean value) {
-        this.useProtectedWipe = value;
+        this.BackingStore.set("useProtectedWipe", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftDeleteResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<EmailEntityIdentifier> identifier;
-    /**
-     * Instantiates a new softDeleteResponseAction and sets the default values.
+     * Instantiates a new SoftDeleteResponseAction and sets the default values.
      */
     public SoftDeleteResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a softDeleteResponseAction
+     * @return a SoftDeleteResponseAction
      */
     @jakarta.annotation.Nonnull
     public static SoftDeleteResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a emailEntityIdentifier
+     * @return a EnumSet<EmailEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EmailEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<EmailEntityIdentifier> value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
 }

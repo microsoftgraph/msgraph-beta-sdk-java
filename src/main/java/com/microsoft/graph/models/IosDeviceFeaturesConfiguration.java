@@ -12,67 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
-     * Asset tag information for the device, displayed on the login window and lock screen.
-     */
-    private String assetTagTemplate;
-    /**
-     * Gets or sets iOS Web Content Filter settings, supervised mode only
-     */
-    private IosWebContentFilterBase contentFilterSettings;
-    /**
-     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IosHomeScreenItem> homeScreenDockIcons;
-    /**
-     * Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
-     */
-    private Integer homeScreenGridHeight;
-    /**
-     * Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
-     */
-    private Integer homeScreenGridWidth;
-    /**
-     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IosHomeScreenPage> homeScreenPages;
-    /**
-     * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
-     */
-    private IosCertificateProfileBase identityCertificateForClientAuthentication;
-    /**
-     * Gets or sets a single sign-on extension profile.
-     */
-    private IosSingleSignOnExtension iosSingleSignOnExtension;
-    /**
-     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     */
-    private String lockScreenFootnote;
-    /**
-     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IosNotificationSettings> notificationSettings;
-    /**
-     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-     */
-    private SingleSignOnExtension singleSignOnExtension;
-    /**
-     * PKINIT Certificate for the authentication with single sign-on extension settings.
-     */
-    private IosCertificateProfileBase singleSignOnExtensionPkinitCertificate;
-    /**
-     * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
-     */
-    private IosSingleSignOnSettings singleSignOnSettings;
-    /**
-     * An enum type for wallpaper display location specifier.
-     */
-    private IosWallpaperDisplayLocation wallpaperDisplayLocation;
-    /**
-     * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
-     */
-    private MimeContent wallpaperImage;
-    /**
-     * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      */
     public IosDeviceFeaturesConfiguration() {
         super();
@@ -81,7 +21,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosDeviceFeaturesConfiguration
+     * @return a IosDeviceFeaturesConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,19 +30,19 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetTagTemplate() {
-        return this.assetTagTemplate;
+        return this.BackingStore.get("assetTagTemplate");
     }
     /**
      * Gets the contentFilterSettings property value. Gets or sets iOS Web Content Filter settings, supervised mode only
-     * @return a iosWebContentFilterBase
+     * @return a IosWebContentFilterBase
      */
     @jakarta.annotation.Nullable
     public IosWebContentFilterBase getContentFilterSettings() {
-        return this.contentFilterSettings;
+        return this.BackingStore.get("contentFilterSettings");
     }
     /**
      * The deserialization information for the current model
@@ -130,107 +70,107 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenItem
+     * @return a java.util.List<IosHomeScreenItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
-        return this.homeScreenDockIcons;
+        return this.BackingStore.get("homeScreenDockIcons");
     }
     /**
      * Gets the homeScreenGridHeight property value. Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHomeScreenGridHeight() {
-        return this.homeScreenGridHeight;
+        return this.BackingStore.get("homeScreenGridHeight");
     }
     /**
      * Gets the homeScreenGridWidth property value. Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHomeScreenGridWidth() {
-        return this.homeScreenGridWidth;
+        return this.BackingStore.get("homeScreenGridWidth");
     }
     /**
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenPage
+     * @return a java.util.List<IosHomeScreenPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
-        return this.homeScreenPages;
+        return this.BackingStore.get("homeScreenPages");
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificateForClientAuthentication() {
-        return this.identityCertificateForClientAuthentication;
+        return this.BackingStore.get("identityCertificateForClientAuthentication");
     }
     /**
      * Gets the iosSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
-     * @return a iosSingleSignOnExtension
+     * @return a IosSingleSignOnExtension
      */
     @jakarta.annotation.Nullable
     public IosSingleSignOnExtension getIosSingleSignOnExtension() {
-        return this.iosSingleSignOnExtension;
+        return this.BackingStore.get("iosSingleSignOnExtension");
     }
     /**
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLockScreenFootnote() {
-        return this.lockScreenFootnote;
+        return this.BackingStore.get("lockScreenFootnote");
     }
     /**
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
-     * @return a iosNotificationSettings
+     * @return a java.util.List<IosNotificationSettings>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {
-        return this.notificationSettings;
+        return this.BackingStore.get("notificationSettings");
     }
     /**
      * Gets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-     * @return a singleSignOnExtension
+     * @return a SingleSignOnExtension
      */
     @jakarta.annotation.Nullable
     public SingleSignOnExtension getSingleSignOnExtension() {
-        return this.singleSignOnExtension;
+        return this.BackingStore.get("singleSignOnExtension");
     }
     /**
      * Gets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extension settings.
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getSingleSignOnExtensionPkinitCertificate() {
-        return this.singleSignOnExtensionPkinitCertificate;
+        return this.BackingStore.get("singleSignOnExtensionPkinitCertificate");
     }
     /**
      * Gets the singleSignOnSettings property value. The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
-     * @return a iosSingleSignOnSettings
+     * @return a IosSingleSignOnSettings
      */
     @jakarta.annotation.Nullable
     public IosSingleSignOnSettings getSingleSignOnSettings() {
-        return this.singleSignOnSettings;
+        return this.BackingStore.get("singleSignOnSettings");
     }
     /**
      * Gets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
-     * @return a iosWallpaperDisplayLocation
+     * @return a IosWallpaperDisplayLocation
      */
     @jakarta.annotation.Nullable
     public IosWallpaperDisplayLocation getWallpaperDisplayLocation() {
-        return this.wallpaperDisplayLocation;
+        return this.BackingStore.get("wallpaperDisplayLocation");
     }
     /**
      * Gets the wallpaperImage property value. A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getWallpaperImage() {
-        return this.wallpaperImage;
+        return this.BackingStore.get("wallpaperImage");
     }
     /**
      * Serializes information the current object
@@ -260,104 +200,104 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the assetTagTemplate property.
      */
     public void setAssetTagTemplate(@jakarta.annotation.Nullable final String value) {
-        this.assetTagTemplate = value;
+        this.BackingStore.set("assetTagTemplate", value);
     }
     /**
      * Sets the contentFilterSettings property value. Gets or sets iOS Web Content Filter settings, supervised mode only
      * @param value Value to set for the contentFilterSettings property.
      */
     public void setContentFilterSettings(@jakarta.annotation.Nullable final IosWebContentFilterBase value) {
-        this.contentFilterSettings = value;
+        this.BackingStore.set("contentFilterSettings", value);
     }
     /**
      * Sets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenDockIcons property.
      */
     public void setHomeScreenDockIcons(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
-        this.homeScreenDockIcons = value;
+        this.BackingStore.set("homeScreenDockIcons", value);
     }
     /**
      * Sets the homeScreenGridHeight property value. Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
      * @param value Value to set for the homeScreenGridHeight property.
      */
     public void setHomeScreenGridHeight(@jakarta.annotation.Nullable final Integer value) {
-        this.homeScreenGridHeight = value;
+        this.BackingStore.set("homeScreenGridHeight", value);
     }
     /**
      * Sets the homeScreenGridWidth property value. Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
      * @param value Value to set for the homeScreenGridWidth property.
      */
     public void setHomeScreenGridWidth(@jakarta.annotation.Nullable final Integer value) {
-        this.homeScreenGridWidth = value;
+        this.BackingStore.set("homeScreenGridWidth", value);
     }
     /**
      * Sets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenPages property.
      */
     public void setHomeScreenPages(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
-        this.homeScreenPages = value;
+        this.BackingStore.set("homeScreenPages", value);
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      */
     public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final IosCertificateProfileBase value) {
-        this.identityCertificateForClientAuthentication = value;
+        this.BackingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
      * Sets the iosSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
      * @param value Value to set for the iosSingleSignOnExtension property.
      */
     public void setIosSingleSignOnExtension(@jakarta.annotation.Nullable final IosSingleSignOnExtension value) {
-        this.iosSingleSignOnExtension = value;
+        this.BackingStore.set("iosSingleSignOnExtension", value);
     }
     /**
      * Sets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      * @param value Value to set for the lockScreenFootnote property.
      */
     public void setLockScreenFootnote(@jakarta.annotation.Nullable final String value) {
-        this.lockScreenFootnote = value;
+        this.BackingStore.set("lockScreenFootnote", value);
     }
     /**
      * Sets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the notificationSettings property.
      */
     public void setNotificationSettings(@jakarta.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
-        this.notificationSettings = value;
+        this.BackingStore.set("notificationSettings", value);
     }
     /**
      * Sets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
      * @param value Value to set for the singleSignOnExtension property.
      */
     public void setSingleSignOnExtension(@jakarta.annotation.Nullable final SingleSignOnExtension value) {
-        this.singleSignOnExtension = value;
+        this.BackingStore.set("singleSignOnExtension", value);
     }
     /**
      * Sets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extension settings.
      * @param value Value to set for the singleSignOnExtensionPkinitCertificate property.
      */
     public void setSingleSignOnExtensionPkinitCertificate(@jakarta.annotation.Nullable final IosCertificateProfileBase value) {
-        this.singleSignOnExtensionPkinitCertificate = value;
+        this.BackingStore.set("singleSignOnExtensionPkinitCertificate", value);
     }
     /**
      * Sets the singleSignOnSettings property value. The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
      * @param value Value to set for the singleSignOnSettings property.
      */
     public void setSingleSignOnSettings(@jakarta.annotation.Nullable final IosSingleSignOnSettings value) {
-        this.singleSignOnSettings = value;
+        this.BackingStore.set("singleSignOnSettings", value);
     }
     /**
      * Sets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
      * @param value Value to set for the wallpaperDisplayLocation property.
      */
     public void setWallpaperDisplayLocation(@jakarta.annotation.Nullable final IosWallpaperDisplayLocation value) {
-        this.wallpaperDisplayLocation = value;
+        this.BackingStore.set("wallpaperDisplayLocation", value);
     }
     /**
      * Sets the wallpaperImage property value. A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
      * @param value Value to set for the wallpaperImage property.
      */
     public void setWallpaperImage(@jakarta.annotation.Nullable final MimeContent value) {
-        this.wallpaperImage = value;
+        this.BackingStore.set("wallpaperImage", value);
     }
 }

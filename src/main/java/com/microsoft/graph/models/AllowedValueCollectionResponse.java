@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedValueCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AllowedValue> value;
-    /**
-     * Instantiates a new allowedValueCollectionResponse and sets the default values.
+     * Instantiates a new AllowedValueCollectionResponse and sets the default values.
      */
     public AllowedValueCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AllowedValueCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allowedValueCollectionResponse
+     * @return a AllowedValueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AllowedValueCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AllowedValueCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a allowedValue
+     * @return a java.util.List<AllowedValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AllowedValue> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AllowedValueCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AllowedValue> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

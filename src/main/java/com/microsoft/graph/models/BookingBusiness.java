@@ -12,75 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingBusiness extends BookingNamedEntity implements Parsable {
     /**
-     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
-     */
-    private PhysicalAddress address;
-    /**
-     * All the appointments of this business. Read-only. Nullable.
-     */
-    private java.util.List<BookingAppointment> appointments;
-    /**
-     * The hours of operation for the business.
-     */
-    private java.util.List<BookingWorkHours> businessHours;
-    /**
-     * The type of business.
-     */
-    private String businessType;
-    /**
-     * The set of appointments of this business in a specified date range. Read-only. Nullable.
-     */
-    private java.util.List<BookingAppointment> calendarView;
-    /**
-     * All the customers of this business. Read-only. Nullable.
-     */
-    private java.util.List<BookingCustomer> customers;
-    /**
-     * All the custom questions of this business. Read-only. Nullable.
-     */
-    private java.util.List<BookingCustomQuestion> customQuestions;
-    /**
-     * The code for the currency that the business operates in on Microsoft Bookings.
-     */
-    private String defaultCurrencyIso;
-    /**
-     * The email address for the business.
-     */
-    private String email;
-    /**
-     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
-     */
-    private Boolean isPublished;
-    /**
-     * The language of the self service booking page
-     */
-    private String languageTag;
-    /**
-     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
-     */
-    private String phone;
-    /**
-     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
-     */
-    private String publicUrl;
-    /**
-     * Specifies how bookings can be created for this business.
-     */
-    private BookingSchedulingPolicy schedulingPolicy;
-    /**
-     * All the services offered by this business. Read-only. Nullable.
-     */
-    private java.util.List<BookingService> services;
-    /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
-     */
-    private java.util.List<BookingStaffMember> staffMembers;
-    /**
-     * The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
-     */
-    private String webSiteUrl;
-    /**
-     * Instantiates a new bookingBusiness and sets the default values.
+     * Instantiates a new BookingBusiness and sets the default values.
      */
     public BookingBusiness() {
         super();
@@ -89,7 +21,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingBusiness
+     * @return a BookingBusiness
      */
     @jakarta.annotation.Nonnull
     public static BookingBusiness createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,75 +30,75 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this.address;
+        return this.BackingStore.get("address");
     }
     /**
      * Gets the appointments property value. All the appointments of this business. Read-only. Nullable.
-     * @return a bookingAppointment
+     * @return a java.util.List<BookingAppointment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getAppointments() {
-        return this.appointments;
+        return this.BackingStore.get("appointments");
     }
     /**
      * Gets the businessHours property value. The hours of operation for the business.
-     * @return a bookingWorkHours
+     * @return a java.util.List<BookingWorkHours>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingWorkHours> getBusinessHours() {
-        return this.businessHours;
+        return this.BackingStore.get("businessHours");
     }
     /**
      * Gets the businessType property value. The type of business.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBusinessType() {
-        return this.businessType;
+        return this.BackingStore.get("businessType");
     }
     /**
      * Gets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
-     * @return a bookingAppointment
+     * @return a java.util.List<BookingAppointment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getCalendarView() {
-        return this.calendarView;
+        return this.BackingStore.get("calendarView");
     }
     /**
      * Gets the customers property value. All the customers of this business. Read-only. Nullable.
-     * @return a bookingCustomer
+     * @return a java.util.List<BookingCustomer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomer> getCustomers() {
-        return this.customers;
+        return this.BackingStore.get("customers");
     }
     /**
      * Gets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
-     * @return a bookingCustomQuestion
+     * @return a java.util.List<BookingCustomQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomQuestion> getCustomQuestions() {
-        return this.customQuestions;
+        return this.BackingStore.get("customQuestions");
     }
     /**
      * Gets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultCurrencyIso() {
-        return this.defaultCurrencyIso;
+        return this.BackingStore.get("defaultCurrencyIso");
     }
     /**
      * Gets the email property value. The email address for the business.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -196,67 +128,67 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPublished() {
-        return this.isPublished;
+        return this.BackingStore.get("isPublished");
     }
     /**
      * Gets the languageTag property value. The language of the self service booking page
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.BackingStore.get("languageTag");
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
-        return this.phone;
+        return this.BackingStore.get("phone");
     }
     /**
      * Gets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicUrl() {
-        return this.publicUrl;
+        return this.BackingStore.get("publicUrl");
     }
     /**
      * Gets the schedulingPolicy property value. Specifies how bookings can be created for this business.
-     * @return a bookingSchedulingPolicy
+     * @return a BookingSchedulingPolicy
      */
     @jakarta.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
-        return this.schedulingPolicy;
+        return this.BackingStore.get("schedulingPolicy");
     }
     /**
      * Gets the services property value. All the services offered by this business. Read-only. Nullable.
-     * @return a bookingService
+     * @return a java.util.List<BookingService>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingService> getServices() {
-        return this.services;
+        return this.BackingStore.get("services");
     }
     /**
      * Gets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
-     * @return a bookingStaffMember
+     * @return a java.util.List<BookingStaffMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingStaffMember> getStaffMembers() {
-        return this.staffMembers;
+        return this.BackingStore.get("staffMembers");
     }
     /**
      * Gets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebSiteUrl() {
-        return this.webSiteUrl;
+        return this.BackingStore.get("webSiteUrl");
     }
     /**
      * Serializes information the current object
@@ -286,118 +218,118 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.address = value;
+        this.BackingStore.set("address", value);
     }
     /**
      * Sets the appointments property value. All the appointments of this business. Read-only. Nullable.
      * @param value Value to set for the appointments property.
      */
     public void setAppointments(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this.appointments = value;
+        this.BackingStore.set("appointments", value);
     }
     /**
      * Sets the businessHours property value. The hours of operation for the business.
      * @param value Value to set for the businessHours property.
      */
     public void setBusinessHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this.businessHours = value;
+        this.BackingStore.set("businessHours", value);
     }
     /**
      * Sets the businessType property value. The type of business.
      * @param value Value to set for the businessType property.
      */
     public void setBusinessType(@jakarta.annotation.Nullable final String value) {
-        this.businessType = value;
+        this.BackingStore.set("businessType", value);
     }
     /**
      * Sets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param value Value to set for the calendarView property.
      */
     public void setCalendarView(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this.calendarView = value;
+        this.BackingStore.set("calendarView", value);
     }
     /**
      * Sets the customers property value. All the customers of this business. Read-only. Nullable.
      * @param value Value to set for the customers property.
      */
     public void setCustomers(@jakarta.annotation.Nullable final java.util.List<BookingCustomer> value) {
-        this.customers = value;
+        this.BackingStore.set("customers", value);
     }
     /**
      * Sets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
      * @param value Value to set for the customQuestions property.
      */
     public void setCustomQuestions(@jakarta.annotation.Nullable final java.util.List<BookingCustomQuestion> value) {
-        this.customQuestions = value;
+        this.BackingStore.set("customQuestions", value);
     }
     /**
      * Sets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
      * @param value Value to set for the defaultCurrencyIso property.
      */
     public void setDefaultCurrencyIso(@jakarta.annotation.Nullable final String value) {
-        this.defaultCurrencyIso = value;
+        this.BackingStore.set("defaultCurrencyIso", value);
     }
     /**
      * Sets the email property value. The email address for the business.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
      * @param value Value to set for the isPublished property.
      */
     public void setIsPublished(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPublished = value;
+        this.BackingStore.set("isPublished", value);
     }
     /**
      * Sets the languageTag property value. The language of the self service booking page
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.BackingStore.set("languageTag", value);
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
-        this.phone = value;
+        this.BackingStore.set("phone", value);
     }
     /**
      * Sets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
      * @param value Value to set for the publicUrl property.
      */
     public void setPublicUrl(@jakarta.annotation.Nullable final String value) {
-        this.publicUrl = value;
+        this.BackingStore.set("publicUrl", value);
     }
     /**
      * Sets the schedulingPolicy property value. Specifies how bookings can be created for this business.
      * @param value Value to set for the schedulingPolicy property.
      */
     public void setSchedulingPolicy(@jakarta.annotation.Nullable final BookingSchedulingPolicy value) {
-        this.schedulingPolicy = value;
+        this.BackingStore.set("schedulingPolicy", value);
     }
     /**
      * Sets the services property value. All the services offered by this business. Read-only. Nullable.
      * @param value Value to set for the services property.
      */
     public void setServices(@jakarta.annotation.Nullable final java.util.List<BookingService> value) {
-        this.services = value;
+        this.BackingStore.set("services", value);
     }
     /**
      * Sets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
      * @param value Value to set for the staffMembers property.
      */
     public void setStaffMembers(@jakarta.annotation.Nullable final java.util.List<BookingStaffMember> value) {
-        this.staffMembers = value;
+        this.BackingStore.set("staffMembers", value);
     }
     /**
      * Sets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
      * @param value Value to set for the webSiteUrl property.
      */
     public void setWebSiteUrl(@jakarta.annotation.Nullable final String value) {
-        this.webSiteUrl = value;
+        this.BackingStore.set("webSiteUrl", value);
     }
 }

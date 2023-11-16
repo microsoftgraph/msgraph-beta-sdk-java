@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,57 +14,22 @@ import java.util.Objects;
  * Trusted Root and PFX certificates for iOS EDU.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable {
+public class IosEduCertificateSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * File name to display in UI.
-     */
-    private String certFileName;
-    /**
-     * PKCS Certificate Template Name.
-     */
-    private String certificateTemplateName;
-    /**
-     * Certificate Validity Period Options.
-     */
-    private CertificateValidityPeriodScale certificateValidityPeriodScale;
-    /**
-     * Value for the Certificate Validity Period.
-     */
-    private Integer certificateValidityPeriodValue;
-    /**
-     * PKCS Certification Authority.
-     */
-    private String certificationAuthority;
-    /**
-     * PKCS Certification Authority Name.
-     */
-    private String certificationAuthorityName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Certificate renewal threshold percentage. Valid values 1 to 99
-     */
-    private Integer renewalThresholdPercentage;
-    /**
-     * Trusted Root Certificate.
-     */
-    private byte[] trustedRootCertificate;
-    /**
-     * Instantiates a new iosEduCertificateSettings and sets the default values.
+     * Instantiates a new IosEduCertificateSettings and sets the default values.
      */
     public IosEduCertificateSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEduCertificateSettings
+     * @return a IosEduCertificateSettings
      */
     @jakarta.annotation.Nonnull
     public static IosEduCertificateSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,60 +37,73 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
         return new IosEduCertificateSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
-        return this.certFileName;
+        return this.BackingStore.get("certFileName");
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this.certificateTemplateName;
+        return this.BackingStore.get("certificateTemplateName");
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a certificateValidityPeriodScale
+     * @return a CertificateValidityPeriodScale
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
-        return this.certificateValidityPeriodScale;
+        return this.BackingStore.get("certificateValidityPeriodScale");
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
-        return this.certificateValidityPeriodValue;
+        return this.BackingStore.get("certificateValidityPeriodValue");
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
-        return this.certificationAuthority;
+        return this.BackingStore.get("certificationAuthority");
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this.certificationAuthorityName;
+        return this.BackingStore.get("certificationAuthorityName");
     }
     /**
      * The deserialization information for the current model
@@ -144,27 +125,27 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
-        return this.renewalThresholdPercentage;
+        return this.BackingStore.get("renewalThresholdPercentage");
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
-        return this.trustedRootCertificate;
+        return this.BackingStore.get("trustedRootCertificate");
     }
     /**
      * Serializes information the current object
@@ -184,73 +165,81 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the certFileName property value. File name to display in UI.
      * @param value Value to set for the certFileName property.
      */
     public void setCertFileName(@jakarta.annotation.Nullable final String value) {
-        this.certFileName = value;
+        this.BackingStore.set("certFileName", value);
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name.
      * @param value Value to set for the certificateTemplateName property.
      */
     public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
-        this.certificateTemplateName = value;
+        this.BackingStore.set("certificateTemplateName", value);
     }
     /**
      * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      */
     public void setCertificateValidityPeriodScale(@jakarta.annotation.Nullable final CertificateValidityPeriodScale value) {
-        this.certificateValidityPeriodScale = value;
+        this.BackingStore.set("certificateValidityPeriodScale", value);
     }
     /**
      * Sets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @param value Value to set for the certificateValidityPeriodValue property.
      */
     public void setCertificateValidityPeriodValue(@jakarta.annotation.Nullable final Integer value) {
-        this.certificateValidityPeriodValue = value;
+        this.BackingStore.set("certificateValidityPeriodValue", value);
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority.
      * @param value Value to set for the certificationAuthority property.
      */
     public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthority = value;
+        this.BackingStore.set("certificationAuthority", value);
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name.
      * @param value Value to set for the certificationAuthorityName property.
      */
     public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthorityName = value;
+        this.BackingStore.set("certificationAuthorityName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
      * @param value Value to set for the renewalThresholdPercentage property.
      */
     public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.renewalThresholdPercentage = value;
+        this.BackingStore.set("renewalThresholdPercentage", value);
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the trustedRootCertificate property.
      */
     public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
-        this.trustedRootCertificate = value;
+        this.BackingStore.set("trustedRootCertificate", value);
     }
 }

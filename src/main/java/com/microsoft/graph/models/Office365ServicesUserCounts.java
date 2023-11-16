@@ -10,71 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365ServicesUserCounts extends Entity implements Parsable {
     /**
-     * The number of active users on Exchange. Any user who can read and send email is considered an active user.
-     */
-    private Long exchangeActive;
-    /**
-     * The number of inactive users on Exchange.
-     */
-    private Long exchangeInactive;
-    /**
-     * The number of active users on Microsoft 365.
-     */
-    private Long office365Active;
-    /**
-     * The number of inactive users on Microsoft 365.
-     */
-    private Long office365Inactive;
-    /**
-     * The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
-     */
-    private Long oneDriveActive;
-    /**
-     * The number of inactive users on OneDrive.
-     */
-    private Long oneDriveInactive;
-    /**
-     * The number of days the report covers.
-     */
-    private String reportPeriod;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
-     */
-    private Long sharePointActive;
-    /**
-     * The number of inactive users on SharePoint.
-     */
-    private Long sharePointInactive;
-    /**
-     * The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
-     */
-    private Long skypeForBusinessActive;
-    /**
-     * The number of inactive users on Skype For Business.
-     */
-    private Long skypeForBusinessInactive;
-    /**
-     * The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
-     */
-    private Long teamsActive;
-    /**
-     * The number of inactive users on Microsoft Teams.
-     */
-    private Long teamsInactive;
-    /**
-     * The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
-     */
-    private Long yammerActive;
-    /**
-     * The number of inactive users on Yammer.
-     */
-    private Long yammerInactive;
-    /**
-     * Instantiates a new office365ServicesUserCounts and sets the default values.
+     * Instantiates a new Office365ServicesUserCounts and sets the default values.
      */
     public Office365ServicesUserCounts() {
         super();
@@ -82,7 +18,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365ServicesUserCounts
+     * @return a Office365ServicesUserCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365ServicesUserCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -91,19 +27,19 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeActive property value. The number of active users on Exchange. Any user who can read and send email is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeActive() {
-        return this.exchangeActive;
+        return this.BackingStore.get("exchangeActive");
     }
     /**
      * Gets the exchangeInactive property value. The number of inactive users on Exchange.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeInactive() {
-        return this.exchangeInactive;
+        return this.BackingStore.get("exchangeInactive");
     }
     /**
      * The deserialization information for the current model
@@ -132,43 +68,43 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the office365Active property value. The number of active users on Microsoft 365.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOffice365Active() {
-        return this.office365Active;
+        return this.BackingStore.get("office365Active");
     }
     /**
      * Gets the office365Inactive property value. The number of inactive users on Microsoft 365.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOffice365Inactive() {
-        return this.office365Inactive;
+        return this.BackingStore.get("office365Inactive");
     }
     /**
      * Gets the oneDriveActive property value. The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOneDriveActive() {
-        return this.oneDriveActive;
+        return this.BackingStore.get("oneDriveActive");
     }
     /**
      * Gets the oneDriveInactive property value. The number of inactive users on OneDrive.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOneDriveInactive() {
-        return this.oneDriveInactive;
+        return this.BackingStore.get("oneDriveInactive");
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
-        return this.reportPeriod;
+        return this.BackingStore.get("reportPeriod");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -176,71 +112,71 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.BackingStore.get("reportRefreshDate");
     }
     /**
      * Gets the sharePointActive property value. The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointActive() {
-        return this.sharePointActive;
+        return this.BackingStore.get("sharePointActive");
     }
     /**
      * Gets the sharePointInactive property value. The number of inactive users on SharePoint.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointInactive() {
-        return this.sharePointInactive;
+        return this.BackingStore.get("sharePointInactive");
     }
     /**
      * Gets the skypeForBusinessActive property value. The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSkypeForBusinessActive() {
-        return this.skypeForBusinessActive;
+        return this.BackingStore.get("skypeForBusinessActive");
     }
     /**
      * Gets the skypeForBusinessInactive property value. The number of inactive users on Skype For Business.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSkypeForBusinessInactive() {
-        return this.skypeForBusinessInactive;
+        return this.BackingStore.get("skypeForBusinessInactive");
     }
     /**
      * Gets the teamsActive property value. The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsActive() {
-        return this.teamsActive;
+        return this.BackingStore.get("teamsActive");
     }
     /**
      * Gets the teamsInactive property value. The number of inactive users on Microsoft Teams.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsInactive() {
-        return this.teamsInactive;
+        return this.BackingStore.get("teamsInactive");
     }
     /**
      * Gets the yammerActive property value. The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerActive() {
-        return this.yammerActive;
+        return this.BackingStore.get("yammerActive");
     }
     /**
      * Gets the yammerInactive property value. The number of inactive users on Yammer.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerInactive() {
-        return this.yammerInactive;
+        return this.BackingStore.get("yammerInactive");
     }
     /**
      * Serializes information the current object
@@ -271,111 +207,111 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
      * @param value Value to set for the exchangeActive property.
      */
     public void setExchangeActive(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeActive = value;
+        this.BackingStore.set("exchangeActive", value);
     }
     /**
      * Sets the exchangeInactive property value. The number of inactive users on Exchange.
      * @param value Value to set for the exchangeInactive property.
      */
     public void setExchangeInactive(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeInactive = value;
+        this.BackingStore.set("exchangeInactive", value);
     }
     /**
      * Sets the office365Active property value. The number of active users on Microsoft 365.
      * @param value Value to set for the office365Active property.
      */
     public void setOffice365Active(@jakarta.annotation.Nullable final Long value) {
-        this.office365Active = value;
+        this.BackingStore.set("office365Active", value);
     }
     /**
      * Sets the office365Inactive property value. The number of inactive users on Microsoft 365.
      * @param value Value to set for the office365Inactive property.
      */
     public void setOffice365Inactive(@jakarta.annotation.Nullable final Long value) {
-        this.office365Inactive = value;
+        this.BackingStore.set("office365Inactive", value);
     }
     /**
      * Sets the oneDriveActive property value. The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
      * @param value Value to set for the oneDriveActive property.
      */
     public void setOneDriveActive(@jakarta.annotation.Nullable final Long value) {
-        this.oneDriveActive = value;
+        this.BackingStore.set("oneDriveActive", value);
     }
     /**
      * Sets the oneDriveInactive property value. The number of inactive users on OneDrive.
      * @param value Value to set for the oneDriveInactive property.
      */
     public void setOneDriveInactive(@jakarta.annotation.Nullable final Long value) {
-        this.oneDriveInactive = value;
+        this.BackingStore.set("oneDriveInactive", value);
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      */
     public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
-        this.reportPeriod = value;
+        this.BackingStore.set("reportPeriod", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.BackingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the sharePointActive property value. The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
      * @param value Value to set for the sharePointActive property.
      */
     public void setSharePointActive(@jakarta.annotation.Nullable final Long value) {
-        this.sharePointActive = value;
+        this.BackingStore.set("sharePointActive", value);
     }
     /**
      * Sets the sharePointInactive property value. The number of inactive users on SharePoint.
      * @param value Value to set for the sharePointInactive property.
      */
     public void setSharePointInactive(@jakarta.annotation.Nullable final Long value) {
-        this.sharePointInactive = value;
+        this.BackingStore.set("sharePointInactive", value);
     }
     /**
      * Sets the skypeForBusinessActive property value. The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
      * @param value Value to set for the skypeForBusinessActive property.
      */
     public void setSkypeForBusinessActive(@jakarta.annotation.Nullable final Long value) {
-        this.skypeForBusinessActive = value;
+        this.BackingStore.set("skypeForBusinessActive", value);
     }
     /**
      * Sets the skypeForBusinessInactive property value. The number of inactive users on Skype For Business.
      * @param value Value to set for the skypeForBusinessInactive property.
      */
     public void setSkypeForBusinessInactive(@jakarta.annotation.Nullable final Long value) {
-        this.skypeForBusinessInactive = value;
+        this.BackingStore.set("skypeForBusinessInactive", value);
     }
     /**
      * Sets the teamsActive property value. The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
      * @param value Value to set for the teamsActive property.
      */
     public void setTeamsActive(@jakarta.annotation.Nullable final Long value) {
-        this.teamsActive = value;
+        this.BackingStore.set("teamsActive", value);
     }
     /**
      * Sets the teamsInactive property value. The number of inactive users on Microsoft Teams.
      * @param value Value to set for the teamsInactive property.
      */
     public void setTeamsInactive(@jakarta.annotation.Nullable final Long value) {
-        this.teamsInactive = value;
+        this.BackingStore.set("teamsInactive", value);
     }
     /**
      * Sets the yammerActive property value. The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
      * @param value Value to set for the yammerActive property.
      */
     public void setYammerActive(@jakarta.annotation.Nullable final Long value) {
-        this.yammerActive = value;
+        this.BackingStore.set("yammerActive", value);
     }
     /**
      * Sets the yammerInactive property value. The number of inactive users on Yammer.
      * @param value Value to set for the yammerInactive property.
      */
     public void setYammerInactive(@jakarta.annotation.Nullable final Long value) {
-        this.yammerInactive = value;
+        this.BackingStore.set("yammerInactive", value);
     }
 }

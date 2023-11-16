@@ -11,155 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Contact extends OutlookItem implements Parsable {
     /**
-     * The name of the contact's assistant.
-     */
-    private String assistantName;
-    /**
-     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime birthday;
-    /**
-     * The names of the contact's children.
-     */
-    private java.util.List<String> children;
-    /**
-     * The name of the contact's company.
-     */
-    private String companyName;
-    /**
-     * The contact's department.
-     */
-    private String department;
-    /**
-     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
-     */
-    private String displayName;
-    /**
-     * The contact's email addresses.
-     */
-    private java.util.List<TypedEmailAddress> emailAddresses;
-    /**
-     * The collection of open extensions defined for the contact. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * The name the contact is filed under.
-     */
-    private String fileAs;
-    /**
-     * The flag value that indicates the status, start date, due date, or completion date for the contact.
-     */
-    private FollowupFlag flag;
-    /**
-     * The contact's gender.
-     */
-    private String gender;
-    /**
-     * The contact's generation.
-     */
-    private String generation;
-    /**
-     * The contact's given name.
-     */
-    private String givenName;
-    /**
-     * The imAddresses property
-     */
-    private java.util.List<String> imAddresses;
-    /**
-     * The initials property
-     */
-    private String initials;
-    /**
-     * The isFavorite property
-     */
-    private Boolean isFavorite;
-    /**
-     * The jobTitle property
-     */
-    private String jobTitle;
-    /**
-     * The manager property
-     */
-    private String manager;
-    /**
-     * The middleName property
-     */
-    private String middleName;
-    /**
-     * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * The nickName property
-     */
-    private String nickName;
-    /**
-     * The officeLocation property
-     */
-    private String officeLocation;
-    /**
-     * The parentFolderId property
-     */
-    private String parentFolderId;
-    /**
-     * The personalNotes property
-     */
-    private String personalNotes;
-    /**
-     * The phones property
-     */
-    private java.util.List<Phone> phones;
-    /**
-     * Optional contact picture. You can get or set a photo for a contact.
-     */
-    private ProfilePhoto photo;
-    /**
-     * The postalAddresses property
-     */
-    private java.util.List<PhysicalAddress> postalAddresses;
-    /**
-     * The profession property
-     */
-    private String profession;
-    /**
-     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
-     * The spouseName property
-     */
-    private String spouseName;
-    /**
-     * The surname property
-     */
-    private String surname;
-    /**
-     * The title property
-     */
-    private String title;
-    /**
-     * The websites property
-     */
-    private java.util.List<Website> websites;
-    /**
-     * The weddingAnniversary property
-     */
-    private LocalDate weddingAnniversary;
-    /**
-     * The yomiCompanyName property
-     */
-    private String yomiCompanyName;
-    /**
-     * The yomiGivenName property
-     */
-    private String yomiGivenName;
-    /**
-     * The yomiSurname property
-     */
-    private String yomiSurname;
-    /**
-     * Instantiates a new contact and sets the default values.
+     * Instantiates a new Contact and sets the default values.
      */
     public Contact() {
         super();
@@ -168,7 +20,7 @@ public class Contact extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contact
+     * @return a Contact
      */
     @jakarta.annotation.Nonnull
     public static Contact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -177,11 +29,11 @@ public class Contact extends OutlookItem implements Parsable {
     }
     /**
      * Gets the assistantName property value. The name of the contact's assistant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssistantName() {
-        return this.assistantName;
+        return this.BackingStore.get("assistantName");
     }
     /**
      * Gets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -189,55 +41,55 @@ public class Contact extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getBirthday() {
-        return this.birthday;
+        return this.BackingStore.get("birthday");
     }
     /**
      * Gets the children property value. The names of the contact's children.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildren() {
-        return this.children;
+        return this.BackingStore.get("children");
     }
     /**
      * Gets the companyName property value. The name of the contact's company.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
-        return this.companyName;
+        return this.BackingStore.get("companyName");
     }
     /**
      * Gets the department property value. The contact's department.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
-        return this.department;
+        return this.BackingStore.get("department");
     }
     /**
      * Gets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the emailAddresses property value. The contact's email addresses.
-     * @return a typedEmailAddress
+     * @return a java.util.List<TypedEmailAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TypedEmailAddress> getEmailAddresses() {
-        return this.emailAddresses;
+        return this.BackingStore.get("emailAddresses");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the contact. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -287,203 +139,203 @@ public class Contact extends OutlookItem implements Parsable {
     }
     /**
      * Gets the fileAs property value. The name the contact is filed under.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileAs() {
-        return this.fileAs;
+        return this.BackingStore.get("fileAs");
     }
     /**
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the contact.
-     * @return a followupFlag
+     * @return a FollowupFlag
      */
     @jakarta.annotation.Nullable
     public FollowupFlag getFlag() {
-        return this.flag;
+        return this.BackingStore.get("flag");
     }
     /**
      * Gets the gender property value. The contact's gender.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGender() {
-        return this.gender;
+        return this.BackingStore.get("gender");
     }
     /**
      * Gets the generation property value. The contact's generation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGeneration() {
-        return this.generation;
+        return this.BackingStore.get("generation");
     }
     /**
      * Gets the givenName property value. The contact's given name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
-        return this.givenName;
+        return this.BackingStore.get("givenName");
     }
     /**
      * Gets the imAddresses property value. The imAddresses property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getImAddresses() {
-        return this.imAddresses;
+        return this.BackingStore.get("imAddresses");
     }
     /**
      * Gets the initials property value. The initials property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitials() {
-        return this.initials;
+        return this.BackingStore.get("initials");
     }
     /**
      * Gets the isFavorite property value. The isFavorite property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFavorite() {
-        return this.isFavorite;
+        return this.BackingStore.get("isFavorite");
     }
     /**
      * Gets the jobTitle property value. The jobTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
-        return this.jobTitle;
+        return this.BackingStore.get("jobTitle");
     }
     /**
      * Gets the manager property value. The manager property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManager() {
-        return this.manager;
+        return this.BackingStore.get("manager");
     }
     /**
      * Gets the middleName property value. The middleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMiddleName() {
-        return this.middleName;
+        return this.BackingStore.get("middleName");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
-     * @return a multiValueLegacyExtendedProperty
+     * @return a java.util.List<MultiValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.BackingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the nickName property value. The nickName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNickName() {
-        return this.nickName;
+        return this.BackingStore.get("nickName");
     }
     /**
      * Gets the officeLocation property value. The officeLocation property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOfficeLocation() {
-        return this.officeLocation;
+        return this.BackingStore.get("officeLocation");
     }
     /**
      * Gets the parentFolderId property value. The parentFolderId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
-        return this.parentFolderId;
+        return this.BackingStore.get("parentFolderId");
     }
     /**
      * Gets the personalNotes property value. The personalNotes property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalNotes() {
-        return this.personalNotes;
+        return this.BackingStore.get("personalNotes");
     }
     /**
      * Gets the phones property value. The phones property
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this.phones;
+        return this.BackingStore.get("phones");
     }
     /**
      * Gets the photo property value. Optional contact picture. You can get or set a photo for a contact.
-     * @return a profilePhoto
+     * @return a ProfilePhoto
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto getPhoto() {
-        return this.photo;
+        return this.BackingStore.get("photo");
     }
     /**
      * Gets the postalAddresses property value. The postalAddresses property
-     * @return a physicalAddress
+     * @return a java.util.List<PhysicalAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getPostalAddresses() {
-        return this.postalAddresses;
+        return this.BackingStore.get("postalAddresses");
     }
     /**
      * Gets the profession property value. The profession property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfession() {
-        return this.profession;
+        return this.BackingStore.get("profession");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
-     * @return a singleValueLegacyExtendedProperty
+     * @return a java.util.List<SingleValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.BackingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the spouseName property value. The spouseName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSpouseName() {
-        return this.spouseName;
+        return this.BackingStore.get("spouseName");
     }
     /**
      * Gets the surname property value. The surname property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
-        return this.surname;
+        return this.BackingStore.get("surname");
     }
     /**
      * Gets the title property value. The title property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Gets the websites property value. The websites property
-     * @return a website
+     * @return a java.util.List<Website>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Website> getWebsites() {
-        return this.websites;
+        return this.BackingStore.get("websites");
     }
     /**
      * Gets the weddingAnniversary property value. The weddingAnniversary property
@@ -491,31 +343,31 @@ public class Contact extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getWeddingAnniversary() {
-        return this.weddingAnniversary;
+        return this.BackingStore.get("weddingAnniversary");
     }
     /**
      * Gets the yomiCompanyName property value. The yomiCompanyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getYomiCompanyName() {
-        return this.yomiCompanyName;
+        return this.BackingStore.get("yomiCompanyName");
     }
     /**
      * Gets the yomiGivenName property value. The yomiGivenName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getYomiGivenName() {
-        return this.yomiGivenName;
+        return this.BackingStore.get("yomiGivenName");
     }
     /**
      * Gets the yomiSurname property value. The yomiSurname property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getYomiSurname() {
-        return this.yomiSurname;
+        return this.BackingStore.get("yomiSurname");
     }
     /**
      * Serializes information the current object
@@ -567,258 +419,258 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the assistantName property.
      */
     public void setAssistantName(@jakarta.annotation.Nullable final String value) {
-        this.assistantName = value;
+        this.BackingStore.set("assistantName", value);
     }
     /**
      * Sets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the birthday property.
      */
     public void setBirthday(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.birthday = value;
+        this.BackingStore.set("birthday", value);
     }
     /**
      * Sets the children property value. The names of the contact's children.
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.children = value;
+        this.BackingStore.set("children", value);
     }
     /**
      * Sets the companyName property value. The name of the contact's company.
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
-        this.companyName = value;
+        this.BackingStore.set("companyName", value);
     }
     /**
      * Sets the department property value. The contact's department.
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
-        this.department = value;
+        this.BackingStore.set("department", value);
     }
     /**
      * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the emailAddresses property value. The contact's email addresses.
      * @param value Value to set for the emailAddresses property.
      */
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<TypedEmailAddress> value) {
-        this.emailAddresses = value;
+        this.BackingStore.set("emailAddresses", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the contact. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the fileAs property value. The name the contact is filed under.
      * @param value Value to set for the fileAs property.
      */
     public void setFileAs(@jakarta.annotation.Nullable final String value) {
-        this.fileAs = value;
+        this.BackingStore.set("fileAs", value);
     }
     /**
      * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the contact.
      * @param value Value to set for the flag property.
      */
     public void setFlag(@jakarta.annotation.Nullable final FollowupFlag value) {
-        this.flag = value;
+        this.BackingStore.set("flag", value);
     }
     /**
      * Sets the gender property value. The contact's gender.
      * @param value Value to set for the gender property.
      */
     public void setGender(@jakarta.annotation.Nullable final String value) {
-        this.gender = value;
+        this.BackingStore.set("gender", value);
     }
     /**
      * Sets the generation property value. The contact's generation.
      * @param value Value to set for the generation property.
      */
     public void setGeneration(@jakarta.annotation.Nullable final String value) {
-        this.generation = value;
+        this.BackingStore.set("generation", value);
     }
     /**
      * Sets the givenName property value. The contact's given name.
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
-        this.givenName = value;
+        this.BackingStore.set("givenName", value);
     }
     /**
      * Sets the imAddresses property value. The imAddresses property
      * @param value Value to set for the imAddresses property.
      */
     public void setImAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.imAddresses = value;
+        this.BackingStore.set("imAddresses", value);
     }
     /**
      * Sets the initials property value. The initials property
      * @param value Value to set for the initials property.
      */
     public void setInitials(@jakarta.annotation.Nullable final String value) {
-        this.initials = value;
+        this.BackingStore.set("initials", value);
     }
     /**
      * Sets the isFavorite property value. The isFavorite property
      * @param value Value to set for the isFavorite property.
      */
     public void setIsFavorite(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFavorite = value;
+        this.BackingStore.set("isFavorite", value);
     }
     /**
      * Sets the jobTitle property value. The jobTitle property
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
-        this.jobTitle = value;
+        this.BackingStore.set("jobTitle", value);
     }
     /**
      * Sets the manager property value. The manager property
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final String value) {
-        this.manager = value;
+        this.BackingStore.set("manager", value);
     }
     /**
      * Sets the middleName property value. The middleName property
      * @param value Value to set for the middleName property.
      */
     public void setMiddleName(@jakarta.annotation.Nullable final String value) {
-        this.middleName = value;
+        this.BackingStore.set("middleName", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.BackingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the nickName property value. The nickName property
      * @param value Value to set for the nickName property.
      */
     public void setNickName(@jakarta.annotation.Nullable final String value) {
-        this.nickName = value;
+        this.BackingStore.set("nickName", value);
     }
     /**
      * Sets the officeLocation property value. The officeLocation property
      * @param value Value to set for the officeLocation property.
      */
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
-        this.officeLocation = value;
+        this.BackingStore.set("officeLocation", value);
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
-        this.parentFolderId = value;
+        this.BackingStore.set("parentFolderId", value);
     }
     /**
      * Sets the personalNotes property value. The personalNotes property
      * @param value Value to set for the personalNotes property.
      */
     public void setPersonalNotes(@jakarta.annotation.Nullable final String value) {
-        this.personalNotes = value;
+        this.BackingStore.set("personalNotes", value);
     }
     /**
      * Sets the phones property value. The phones property
      * @param value Value to set for the phones property.
      */
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
-        this.phones = value;
+        this.BackingStore.set("phones", value);
     }
     /**
      * Sets the photo property value. Optional contact picture. You can get or set a photo for a contact.
      * @param value Value to set for the photo property.
      */
     public void setPhoto(@jakarta.annotation.Nullable final ProfilePhoto value) {
-        this.photo = value;
+        this.BackingStore.set("photo", value);
     }
     /**
      * Sets the postalAddresses property value. The postalAddresses property
      * @param value Value to set for the postalAddresses property.
      */
     public void setPostalAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
-        this.postalAddresses = value;
+        this.BackingStore.set("postalAddresses", value);
     }
     /**
      * Sets the profession property value. The profession property
      * @param value Value to set for the profession property.
      */
     public void setProfession(@jakarta.annotation.Nullable final String value) {
-        this.profession = value;
+        this.BackingStore.set("profession", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.BackingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the spouseName property value. The spouseName property
      * @param value Value to set for the spouseName property.
      */
     public void setSpouseName(@jakarta.annotation.Nullable final String value) {
-        this.spouseName = value;
+        this.BackingStore.set("spouseName", value);
     }
     /**
      * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
-        this.surname = value;
+        this.BackingStore.set("surname", value);
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
     /**
      * Sets the websites property value. The websites property
      * @param value Value to set for the websites property.
      */
     public void setWebsites(@jakarta.annotation.Nullable final java.util.List<Website> value) {
-        this.websites = value;
+        this.BackingStore.set("websites", value);
     }
     /**
      * Sets the weddingAnniversary property value. The weddingAnniversary property
      * @param value Value to set for the weddingAnniversary property.
      */
     public void setWeddingAnniversary(@jakarta.annotation.Nullable final LocalDate value) {
-        this.weddingAnniversary = value;
+        this.BackingStore.set("weddingAnniversary", value);
     }
     /**
      * Sets the yomiCompanyName property value. The yomiCompanyName property
      * @param value Value to set for the yomiCompanyName property.
      */
     public void setYomiCompanyName(@jakarta.annotation.Nullable final String value) {
-        this.yomiCompanyName = value;
+        this.BackingStore.set("yomiCompanyName", value);
     }
     /**
      * Sets the yomiGivenName property value. The yomiGivenName property
      * @param value Value to set for the yomiGivenName property.
      */
     public void setYomiGivenName(@jakarta.annotation.Nullable final String value) {
-        this.yomiGivenName = value;
+        this.BackingStore.set("yomiGivenName", value);
     }
     /**
      * Sets the yomiSurname property value. The yomiSurname property
      * @param value Value to set for the yomiSurname property.
      */
     public void setYomiSurname(@jakarta.annotation.Nullable final String value) {
-        this.yomiSurname = value;
+        this.BackingStore.set("yomiSurname", value);
     }
 }

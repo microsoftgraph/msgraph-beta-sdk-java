@@ -11,59 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
-     * A string that uniquely represents the operation that occurred. Required. Read-only.
-     */
-    private String activity;
-    /**
-     * The time when the activity occurred. Required. Read-only.
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * The identifier of the activity request that made the audit event. Required. Read-only.
-     */
-    private String activityId;
-    /**
-     * A category that represents a logical grouping of activities. Required. Read-only.
-     */
-    private String category;
-    /**
-     * The HTTP verb that was used when making the API request. Required. Read-only.
-     */
-    private String httpVerb;
-    /**
-     * The identifier of the app that was used to make the request. Required. Read-only.
-     */
-    private String initiatedByAppId;
-    /**
-     * The UPN of the user who initiated the activity. Required. Read-only.
-     */
-    private String initiatedByUpn;
-    /**
-     * The identifier of the user who initiated the activity. Required. Read-only.
-     */
-    private String initiatedByUserId;
-    /**
-     * The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
-     */
-    private String ipAddress;
-    /**
-     * The raw HTTP request body. Some sensitive information may be removed.
-     */
-    private String requestBody;
-    /**
-     * The raw HTTP request URL. Required. Read-only.
-     */
-    private String requestUrl;
-    /**
-     * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     */
-    private String tenantIds;
-    /**
-     * The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     */
-    private String tenantNames;
-    /**
-     * Instantiates a new auditEvent and sets the default values.
+     * Instantiates a new AuditEvent and sets the default values.
      */
     public AuditEvent() {
         super();
@@ -71,7 +19,7 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditEvent
+     * @return a AuditEvent
      */
     @jakarta.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,11 +28,11 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. A string that uniquely represents the operation that occurred. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.BackingStore.get("activity");
     }
     /**
      * Gets the activityDateTime property value. The time when the activity occurred. Required. Read-only.
@@ -92,23 +40,23 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the activityId property value. The identifier of the activity request that made the audit event. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityId() {
-        return this.activityId;
+        return this.BackingStore.get("activityId");
     }
     /**
      * Gets the category property value. A category that represents a logical grouping of activities. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * The deserialization information for the current model
@@ -134,75 +82,75 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the httpVerb property value. The HTTP verb that was used when making the API request. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHttpVerb() {
-        return this.httpVerb;
+        return this.BackingStore.get("httpVerb");
     }
     /**
      * Gets the initiatedByAppId property value. The identifier of the app that was used to make the request. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByAppId() {
-        return this.initiatedByAppId;
+        return this.BackingStore.get("initiatedByAppId");
     }
     /**
      * Gets the initiatedByUpn property value. The UPN of the user who initiated the activity. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUpn() {
-        return this.initiatedByUpn;
+        return this.BackingStore.get("initiatedByUpn");
     }
     /**
      * Gets the initiatedByUserId property value. The identifier of the user who initiated the activity. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserId() {
-        return this.initiatedByUserId;
+        return this.BackingStore.get("initiatedByUserId");
     }
     /**
      * Gets the ipAddress property value. The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the requestBody property value. The raw HTTP request body. Some sensitive information may be removed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestBody() {
-        return this.requestBody;
+        return this.BackingStore.get("requestBody");
     }
     /**
      * Gets the requestUrl property value. The raw HTTP request URL. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestUrl() {
-        return this.requestUrl;
+        return this.BackingStore.get("requestUrl");
     }
     /**
-     * Gets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     * @return a string
+     * Gets the tenantIds property value. The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantIds() {
-        return this.tenantIds;
+        return this.BackingStore.get("tenantIds");
     }
     /**
      * Gets the tenantNames property value. The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantNames() {
-        return this.tenantNames;
+        return this.BackingStore.get("tenantNames");
     }
     /**
      * Serializes information the current object
@@ -230,90 +178,90 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.BackingStore.set("activity", value);
     }
     /**
      * Sets the activityDateTime property value. The time when the activity occurred. Required. Read-only.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the activityId property value. The identifier of the activity request that made the audit event. Required. Read-only.
      * @param value Value to set for the activityId property.
      */
     public void setActivityId(@jakarta.annotation.Nullable final String value) {
-        this.activityId = value;
+        this.BackingStore.set("activityId", value);
     }
     /**
      * Sets the category property value. A category that represents a logical grouping of activities. Required. Read-only.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the httpVerb property value. The HTTP verb that was used when making the API request. Required. Read-only.
      * @param value Value to set for the httpVerb property.
      */
     public void setHttpVerb(@jakarta.annotation.Nullable final String value) {
-        this.httpVerb = value;
+        this.BackingStore.set("httpVerb", value);
     }
     /**
      * Sets the initiatedByAppId property value. The identifier of the app that was used to make the request. Required. Read-only.
      * @param value Value to set for the initiatedByAppId property.
      */
     public void setInitiatedByAppId(@jakarta.annotation.Nullable final String value) {
-        this.initiatedByAppId = value;
+        this.BackingStore.set("initiatedByAppId", value);
     }
     /**
      * Sets the initiatedByUpn property value. The UPN of the user who initiated the activity. Required. Read-only.
      * @param value Value to set for the initiatedByUpn property.
      */
     public void setInitiatedByUpn(@jakarta.annotation.Nullable final String value) {
-        this.initiatedByUpn = value;
+        this.BackingStore.set("initiatedByUpn", value);
     }
     /**
      * Sets the initiatedByUserId property value. The identifier of the user who initiated the activity. Required. Read-only.
      * @param value Value to set for the initiatedByUserId property.
      */
     public void setInitiatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.initiatedByUserId = value;
+        this.BackingStore.set("initiatedByUserId", value);
     }
     /**
      * Sets the ipAddress property value. The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the requestBody property value. The raw HTTP request body. Some sensitive information may be removed.
      * @param value Value to set for the requestBody property.
      */
     public void setRequestBody(@jakarta.annotation.Nullable final String value) {
-        this.requestBody = value;
+        this.BackingStore.set("requestBody", value);
     }
     /**
      * Sets the requestUrl property value. The raw HTTP request URL. Required. Read-only.
      * @param value Value to set for the requestUrl property.
      */
     public void setRequestUrl(@jakarta.annotation.Nullable final String value) {
-        this.requestUrl = value;
+        this.BackingStore.set("requestUrl", value);
     }
     /**
-     * Sets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
+     * Sets the tenantIds property value. The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantIds property.
      */
     public void setTenantIds(@jakarta.annotation.Nullable final String value) {
-        this.tenantIds = value;
+        this.BackingStore.set("tenantIds", value);
     }
     /**
      * Sets the tenantNames property value. The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantNames property.
      */
     public void setTenantNames(@jakarta.annotation.Nullable final String value) {
-        this.tenantNames = value;
+        this.BackingStore.set("tenantNames", value);
     }
 }

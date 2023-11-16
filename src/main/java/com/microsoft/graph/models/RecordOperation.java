@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecordOperation extends CommsOperation implements Parsable {
     /**
-     * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
-     */
-    private RecordCompletionReason completionReason;
-    /**
-     * The access token required to retrieve the recording.
-     */
-    private String recordingAccessToken;
-    /**
-     * The location where the recording is located.
-     */
-    private String recordingLocation;
-    /**
-     * Instantiates a new recordOperation and sets the default values.
+     * Instantiates a new RecordOperation and sets the default values.
      */
     public RecordOperation() {
         super();
@@ -29,7 +17,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recordOperation
+     * @return a RecordOperation
      */
     @jakarta.annotation.Nonnull
     public static RecordOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class RecordOperation extends CommsOperation implements Parsable {
     }
     /**
      * Gets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
-     * @return a recordCompletionReason
+     * @return a RecordCompletionReason
      */
     @jakarta.annotation.Nullable
     public RecordCompletionReason getCompletionReason() {
-        return this.completionReason;
+        return this.BackingStore.get("completionReason");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class RecordOperation extends CommsOperation implements Parsable {
     }
     /**
      * Gets the recordingAccessToken property value. The access token required to retrieve the recording.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecordingAccessToken() {
-        return this.recordingAccessToken;
+        return this.BackingStore.get("recordingAccessToken");
     }
     /**
      * Gets the recordingLocation property value. The location where the recording is located.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecordingLocation() {
-        return this.recordingLocation;
+        return this.BackingStore.get("recordingLocation");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the completionReason property.
      */
     public void setCompletionReason(@jakarta.annotation.Nullable final RecordCompletionReason value) {
-        this.completionReason = value;
+        this.BackingStore.set("completionReason", value);
     }
     /**
      * Sets the recordingAccessToken property value. The access token required to retrieve the recording.
      * @param value Value to set for the recordingAccessToken property.
      */
     public void setRecordingAccessToken(@jakarta.annotation.Nullable final String value) {
-        this.recordingAccessToken = value;
+        this.BackingStore.set("recordingAccessToken", value);
     }
     /**
      * Sets the recordingLocation property value. The location where the recording is located.
      * @param value Value to set for the recordingLocation property.
      */
     public void setRecordingLocation(@jakarta.annotation.Nullable final String value) {
-        this.recordingLocation = value;
+        this.BackingStore.set("recordingLocation", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
-     * Indicates when the user last signed in
-     */
-    private OffsetDateTime lastSignInDateTime;
-    /**
-     * Instantiates a new userSignInInsight and sets the default values.
+     * Instantiates a new UserSignInInsight and sets the default values.
      */
     public UserSignInInsight() {
         super();
@@ -23,7 +19,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSignInInsight
+     * @return a UserSignInInsight
      */
     @jakarta.annotation.Nonnull
     public static UserSignInInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +42,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSignInDateTime() {
-        return this.lastSignInDateTime;
+        return this.BackingStore.get("lastSignInDateTime");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      * @param value Value to set for the lastSignInDateTime property.
      */
     public void setLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSignInDateTime = value;
+        this.BackingStore.set("lastSignInDateTime", value);
     }
 }

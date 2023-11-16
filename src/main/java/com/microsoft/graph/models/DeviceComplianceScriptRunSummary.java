@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptRunSummary extends Entity implements Parsable {
     /**
-     * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
-     */
-    private Integer detectionScriptErrorDeviceCount;
-    /**
-     * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
-     */
-    private Integer detectionScriptPendingDeviceCount;
-    /**
-     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
-     */
-    private Integer issueDetectedDeviceCount;
-    /**
-     * Last run time for the script across all devices
-     */
-    private OffsetDateTime lastScriptRunDateTime;
-    /**
-     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
-     */
-    private Integer noIssueDetectedDeviceCount;
-    /**
-     * Instantiates a new deviceComplianceScriptRunSummary and sets the default values.
+     * Instantiates a new DeviceComplianceScriptRunSummary and sets the default values.
      */
     public DeviceComplianceScriptRunSummary() {
         super();
@@ -41,7 +21,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptRunSummary
+     * @return a DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +30,19 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the detectionScriptErrorDeviceCount property value. Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptErrorDeviceCount() {
-        return this.detectionScriptErrorDeviceCount;
+        return this.BackingStore.get("detectionScriptErrorDeviceCount");
     }
     /**
      * Gets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptPendingDeviceCount() {
-        return this.detectionScriptPendingDeviceCount;
+        return this.BackingStore.get("detectionScriptPendingDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -80,11 +60,11 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIssueDetectedDeviceCount() {
-        return this.issueDetectedDeviceCount;
+        return this.BackingStore.get("issueDetectedDeviceCount");
     }
     /**
      * Gets the lastScriptRunDateTime property value. Last run time for the script across all devices
@@ -92,15 +72,15 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScriptRunDateTime() {
-        return this.lastScriptRunDateTime;
+        return this.BackingStore.get("lastScriptRunDateTime");
     }
     /**
      * Gets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNoIssueDetectedDeviceCount() {
-        return this.noIssueDetectedDeviceCount;
+        return this.BackingStore.get("noIssueDetectedDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the detectionScriptErrorDeviceCount property.
      */
     public void setDetectionScriptErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectionScriptErrorDeviceCount = value;
+        this.BackingStore.set("detectionScriptErrorDeviceCount", value);
     }
     /**
      * Sets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
      * @param value Value to set for the detectionScriptPendingDeviceCount property.
      */
     public void setDetectionScriptPendingDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectionScriptPendingDeviceCount = value;
+        this.BackingStore.set("detectionScriptPendingDeviceCount", value);
     }
     /**
      * Sets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
      * @param value Value to set for the issueDetectedDeviceCount property.
      */
     public void setIssueDetectedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.issueDetectedDeviceCount = value;
+        this.BackingStore.set("issueDetectedDeviceCount", value);
     }
     /**
      * Sets the lastScriptRunDateTime property value. Last run time for the script across all devices
      * @param value Value to set for the lastScriptRunDateTime property.
      */
     public void setLastScriptRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastScriptRunDateTime = value;
+        this.BackingStore.set("lastScriptRunDateTime", value);
     }
     /**
      * Sets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
      * @param value Value to set for the noIssueDetectedDeviceCount property.
      */
     public void setNoIssueDetectedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.noIssueDetectedDeviceCount = value;
+        this.BackingStore.set("noIssueDetectedDeviceCount", value);
     }
 }

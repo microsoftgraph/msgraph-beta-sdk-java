@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,89 +15,22 @@ import java.util.Objects;
  * A rule controlling traffic through the Windows Firewall.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
+public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * State Management Setting.
+     * Stores model information.
      */
-    private StateManagementSetting action;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The description of the rule.
-     */
-    private String description;
-    /**
-     * The display name of the rule. Does not need to be unique.
-     */
-    private String displayName;
-    /**
-     * State Management Setting.
-     */
-    private StateManagementSetting edgeTraversal;
-    /**
-     * The full file path of an app that's affected by the firewall rule.
-     */
-    private String filePath;
-    /**
-     * Flags representing firewall rule interface types.
-     */
-    private EnumSet<WindowsFirewallRuleInterfaceTypes> interfaceTypes;
-    /**
-     * List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     */
-    private java.util.List<String> localAddressRanges;
-    /**
-     * List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     */
-    private java.util.List<String> localPortRanges;
-    /**
-     * Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
-     */
-    private String localUserAuthorizations;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The package family name of a Microsoft Store application that's affected by the firewall rule.
-     */
-    private String packageFamilyName;
-    /**
-     * Flags representing which network profile types apply to a firewall rule.
-     */
-    private EnumSet<WindowsFirewallRuleNetworkProfileTypes> profileTypes;
-    /**
-     * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-     */
-    private Integer protocol;
-    /**
-     * List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     */
-    private java.util.List<String> remoteAddressRanges;
-    /**
-     * List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     */
-    private java.util.List<String> remotePortRanges;
-    /**
-     * The name used in cases when a service, not an application, is sending or receiving traffic.
-     */
-    private String serviceName;
-    /**
-     * Firewall rule traffic directions.
-     */
-    private WindowsFirewallRuleTrafficDirectionType trafficDirection;
-    /**
-     * Instantiates a new windowsFirewallRule and sets the default values.
+     * Instantiates a new WindowsFirewallRule and sets the default values.
      */
     public WindowsFirewallRule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFirewallRule
+     * @return a WindowsFirewallRule
      */
     @jakarta.annotation.Nonnull
     public static WindowsFirewallRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,43 +39,56 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the action property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getAction() {
-        return this.action;
+        return this.BackingStore.get("action");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the description property value. The description of the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the rule. Does not need to be unique.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the edgeTraversal property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getEdgeTraversal() {
-        return this.edgeTraversal;
+        return this.BackingStore.get("edgeTraversal");
     }
     /**
      * The deserialization information for the current model
@@ -169,107 +118,107 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the filePath property value. The full file path of an app that's affected by the firewall rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
-        return this.filePath;
+        return this.BackingStore.get("filePath");
     }
     /**
      * Gets the interfaceTypes property value. Flags representing firewall rule interface types.
-     * @return a windowsFirewallRuleInterfaceTypes
+     * @return a EnumSet<WindowsFirewallRuleInterfaceTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleInterfaceTypes> getInterfaceTypes() {
-        return this.interfaceTypes;
+        return this.BackingStore.get("interfaceTypes");
     }
     /**
      * Gets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalAddressRanges() {
-        return this.localAddressRanges;
+        return this.BackingStore.get("localAddressRanges");
     }
     /**
      * Gets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalPortRanges() {
-        return this.localPortRanges;
+        return this.BackingStore.get("localPortRanges");
     }
     /**
      * Gets the localUserAuthorizations property value. Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalUserAuthorizations() {
-        return this.localUserAuthorizations;
+        return this.BackingStore.get("localUserAuthorizations");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageFamilyName() {
-        return this.packageFamilyName;
+        return this.BackingStore.get("packageFamilyName");
     }
     /**
      * Gets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
-     * @return a windowsFirewallRuleNetworkProfileTypes
+     * @return a EnumSet<WindowsFirewallRuleNetworkProfileTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleNetworkProfileTypes> getProfileTypes() {
-        return this.profileTypes;
+        return this.BackingStore.get("profileTypes");
     }
     /**
      * Gets the protocol property value. 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProtocol() {
-        return this.protocol;
+        return this.BackingStore.get("protocol");
     }
     /**
      * Gets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemoteAddressRanges() {
-        return this.remoteAddressRanges;
+        return this.BackingStore.get("remoteAddressRanges");
     }
     /**
      * Gets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemotePortRanges() {
-        return this.remotePortRanges;
+        return this.BackingStore.get("remotePortRanges");
     }
     /**
      * Gets the serviceName property value. The name used in cases when a service, not an application, is sending or receiving traffic.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
-        return this.serviceName;
+        return this.BackingStore.get("serviceName");
     }
     /**
      * Gets the trafficDirection property value. Firewall rule traffic directions.
-     * @return a windowsFirewallRuleTrafficDirectionType
+     * @return a WindowsFirewallRuleTrafficDirectionType
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallRuleTrafficDirectionType getTrafficDirection() {
-        return this.trafficDirection;
+        return this.BackingStore.get("trafficDirection");
     }
     /**
      * Serializes information the current object
@@ -301,125 +250,133 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final StateManagementSetting value) {
-        this.action = value;
+        this.BackingStore.set("action", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the description property value. The description of the rule.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the rule. Does not need to be unique.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the edgeTraversal property value. State Management Setting.
      * @param value Value to set for the edgeTraversal property.
      */
     public void setEdgeTraversal(@jakarta.annotation.Nullable final StateManagementSetting value) {
-        this.edgeTraversal = value;
+        this.BackingStore.set("edgeTraversal", value);
     }
     /**
      * Sets the filePath property value. The full file path of an app that's affected by the firewall rule.
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
-        this.filePath = value;
+        this.BackingStore.set("filePath", value);
     }
     /**
      * Sets the interfaceTypes property value. Flags representing firewall rule interface types.
      * @param value Value to set for the interfaceTypes property.
      */
     public void setInterfaceTypes(@jakarta.annotation.Nullable final EnumSet<WindowsFirewallRuleInterfaceTypes> value) {
-        this.interfaceTypes = value;
+        this.BackingStore.set("interfaceTypes", value);
     }
     /**
      * Sets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
      * @param value Value to set for the localAddressRanges property.
      */
     public void setLocalAddressRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.localAddressRanges = value;
+        this.BackingStore.set("localAddressRanges", value);
     }
     /**
      * Sets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
      * @param value Value to set for the localPortRanges property.
      */
     public void setLocalPortRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.localPortRanges = value;
+        this.BackingStore.set("localPortRanges", value);
     }
     /**
      * Sets the localUserAuthorizations property value. Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
      * @param value Value to set for the localUserAuthorizations property.
      */
     public void setLocalUserAuthorizations(@jakarta.annotation.Nullable final String value) {
-        this.localUserAuthorizations = value;
+        this.BackingStore.set("localUserAuthorizations", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
      * @param value Value to set for the packageFamilyName property.
      */
     public void setPackageFamilyName(@jakarta.annotation.Nullable final String value) {
-        this.packageFamilyName = value;
+        this.BackingStore.set("packageFamilyName", value);
     }
     /**
      * Sets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
      * @param value Value to set for the profileTypes property.
      */
     public void setProfileTypes(@jakarta.annotation.Nullable final EnumSet<WindowsFirewallRuleNetworkProfileTypes> value) {
-        this.profileTypes = value;
+        this.BackingStore.set("profileTypes", value);
     }
     /**
      * Sets the protocol property value. 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final Integer value) {
-        this.protocol = value;
+        this.BackingStore.set("protocol", value);
     }
     /**
      * Sets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
      * @param value Value to set for the remoteAddressRanges property.
      */
     public void setRemoteAddressRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.remoteAddressRanges = value;
+        this.BackingStore.set("remoteAddressRanges", value);
     }
     /**
      * Sets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
      * @param value Value to set for the remotePortRanges property.
      */
     public void setRemotePortRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.remotePortRanges = value;
+        this.BackingStore.set("remotePortRanges", value);
     }
     /**
      * Sets the serviceName property value. The name used in cases when a service, not an application, is sending or receiving traffic.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
-        this.serviceName = value;
+        this.BackingStore.set("serviceName", value);
     }
     /**
      * Sets the trafficDirection property value. Firewall rule traffic directions.
      * @param value Value to set for the trafficDirection property.
      */
     public void setTrafficDirection(@jakarta.annotation.Nullable final WindowsFirewallRuleTrafficDirectionType value) {
-        this.trafficDirection = value;
+        this.BackingStore.set("trafficDirection", value);
     }
 }

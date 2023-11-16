@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HorizontalSection extends Entity implements Parsable {
     /**
-     * The set of vertical columns in this section.
-     */
-    private java.util.List<HorizontalSectionColumn> columns;
-    /**
-     * Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     */
-    private SectionEmphasisType emphasis;
-    /**
-     * Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
-     */
-    private HorizontalSectionLayoutType layout;
-    /**
-     * Instantiates a new horizontalSection and sets the default values.
+     * Instantiates a new HorizontalSection and sets the default values.
      */
     public HorizontalSection() {
         super();
@@ -29,7 +17,7 @@ public class HorizontalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a horizontalSection
+     * @return a HorizontalSection
      */
     @jakarta.annotation.Nonnull
     public static HorizontalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. The set of vertical columns in this section.
-     * @return a horizontalSectionColumn
+     * @return a java.util.List<HorizontalSectionColumn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HorizontalSectionColumn> getColumns() {
-        return this.columns;
+        return this.BackingStore.get("columns");
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a sectionEmphasisType
+     * @return a SectionEmphasisType
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
-        return this.emphasis;
+        return this.BackingStore.get("emphasis");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
-     * @return a horizontalSectionLayoutType
+     * @return a HorizontalSectionLayoutType
      */
     @jakarta.annotation.Nullable
     public HorizontalSectionLayoutType getLayout() {
-        return this.layout;
+        return this.BackingStore.get("layout");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class HorizontalSection extends Entity implements Parsable {
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<HorizontalSectionColumn> value) {
-        this.columns = value;
+        this.BackingStore.set("columns", value);
     }
     /**
      * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param value Value to set for the emphasis property.
      */
     public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
-        this.emphasis = value;
+        this.BackingStore.set("emphasis", value);
     }
     /**
      * Sets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final HorizontalSectionLayoutType value) {
-        this.layout = value;
+        this.BackingStore.set("layout", value);
     }
 }

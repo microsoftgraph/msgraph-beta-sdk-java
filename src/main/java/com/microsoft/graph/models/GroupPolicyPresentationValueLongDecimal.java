@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresentationValue implements Parsable {
     /**
-     * An unsigned long value for the associated presentation.
-     */
-    private Long value;
-    /**
-     * Instantiates a new groupPolicyPresentationValueLongDecimal and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueLongDecimal and sets the default values.
      */
     public GroupPolicyPresentationValueLongDecimal() {
         super();
@@ -24,7 +20,7 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueLongDecimal
+     * @return a GroupPolicyPresentationValueLongDecimal
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueLongDecimal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     }
     /**
      * Gets the value property value. An unsigned long value for the associated presentation.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Long value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

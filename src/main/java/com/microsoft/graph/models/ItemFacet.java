@@ -11,39 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemFacet extends Entity implements Parsable {
     /**
-     * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
-     */
-    private EnumSet<AllowedAudiences> allowedAudiences;
-    /**
-     * The createdBy property
-     */
-    private IdentitySet createdBy;
-    /**
-     * Provides the dateTimeOffset for when the entity was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Contains inference detail if the entity is inferred by the creating or modifying application.
-     */
-    private InferenceData inference;
-    /**
-     * The isSearchable property
-     */
-    private Boolean isSearchable;
-    /**
-     * The lastModifiedBy property
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * Provides the dateTimeOffset for when the entity was created.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Where the values within an entity originated if synced from another service.
-     */
-    private PersonDataSources source;
-    /**
-     * Instantiates a new itemFacet and sets the default values.
+     * Instantiates a new ItemFacet and sets the default values.
      */
     public ItemFacet() {
         super();
@@ -51,7 +19,7 @@ public class ItemFacet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemFacet
+     * @return a ItemFacet
      */
     @jakarta.annotation.Nonnull
     public static ItemFacet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,19 +54,19 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
-     * @return a allowedAudiences
+     * @return a EnumSet<AllowedAudiences>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AllowedAudiences> getAllowedAudiences() {
-        return this.allowedAudiences;
+        return this.BackingStore.get("allowedAudiences");
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Provides the dateTimeOffset for when the entity was created.
@@ -106,7 +74,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -127,27 +95,27 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
-     * @return a inferenceData
+     * @return a InferenceData
      */
     @jakarta.annotation.Nullable
     public InferenceData getInference() {
-        return this.inference;
+        return this.BackingStore.get("inference");
     }
     /**
      * Gets the isSearchable property value. The isSearchable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
-        return this.isSearchable;
+        return this.BackingStore.get("isSearchable");
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Provides the dateTimeOffset for when the entity was created.
@@ -155,15 +123,15 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the source property value. Where the values within an entity originated if synced from another service.
-     * @return a personDataSources
+     * @return a PersonDataSources
      */
     @jakarta.annotation.Nullable
     public PersonDataSources getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Serializes information the current object
@@ -186,55 +154,55 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the allowedAudiences property.
      */
     public void setAllowedAudiences(@jakarta.annotation.Nullable final EnumSet<AllowedAudiences> value) {
-        this.allowedAudiences = value;
+        this.BackingStore.set("allowedAudiences", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Provides the dateTimeOffset for when the entity was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
      * @param value Value to set for the inference property.
      */
     public void setInference(@jakarta.annotation.Nullable final InferenceData value) {
-        this.inference = value;
+        this.BackingStore.set("inference", value);
     }
     /**
      * Sets the isSearchable property value. The isSearchable property
      * @param value Value to set for the isSearchable property.
      */
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSearchable = value;
+        this.BackingStore.set("isSearchable", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Provides the dateTimeOffset for when the entity was created.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the source property value. Where the values within an entity originated if synced from another service.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final PersonDataSources value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
 }

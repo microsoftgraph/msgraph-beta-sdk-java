@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
     /**
-     * Denotes the webUrl that needs to be submitted.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new urlThreatSubmission and sets the default values.
+     * Instantiates a new UrlThreatSubmission and sets the default values.
      */
     public UrlThreatSubmission() {
         super();
@@ -22,7 +18,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a urlThreatSubmission
+     * @return a UrlThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public static UrlThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
     }
     /**
      * Gets the webUrl property value. Denotes the webUrl that needs to be submitted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.BackingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.BackingStore.set("webUrl", value);
     }
 }

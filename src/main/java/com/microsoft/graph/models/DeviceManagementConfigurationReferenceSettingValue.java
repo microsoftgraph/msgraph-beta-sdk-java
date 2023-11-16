@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationReferenceSettingValue extends DeviceManagementConfigurationStringSettingValue implements Parsable {
     /**
-     * A note that admin can use to put some contextual information
-     */
-    private String note;
-    /**
-     * Instantiates a new deviceManagementConfigurationReferenceSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationReferenceSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationReferenceSettingValue() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationReferenceSettingValue
+     * @return a DeviceManagementConfigurationReferenceSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationReferenceSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
     }
     /**
      * Gets the note property value. A note that admin can use to put some contextual information
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNote() {
-        return this.note;
+        return this.BackingStore.get("note");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * @param value Value to set for the note property.
      */
     public void setNote(@jakarta.annotation.Nullable final String value) {
-        this.note = value;
+        this.BackingStore.set("note", value);
     }
 }

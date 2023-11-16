@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyCategory extends Entity implements Parsable {
     /**
-     * The children categories
-     */
-    private java.util.List<GroupPolicyCategory> children;
-    /**
-     * The id of the definition file the category came from
-     */
-    private GroupPolicyDefinitionFile definitionFile;
-    /**
-     * The immediate GroupPolicyDefinition children of the category
-     */
-    private java.util.List<GroupPolicyDefinition> definitions;
-    /**
-     * The string id of the category's display name
-     */
-    private String displayName;
-    /**
-     * Category Ingestion source
-     */
-    private IngestionSource ingestionSource;
-    /**
-     * Defines if the category is a root category
-     */
-    private Boolean isRoot;
-    /**
-     * The date and time the entity was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The parent category
-     */
-    private GroupPolicyCategory parent;
-    /**
-     * Instantiates a new groupPolicyCategory and sets the default values.
+     * Instantiates a new GroupPolicyCategory and sets the default values.
      */
     public GroupPolicyCategory() {
         super();
@@ -53,7 +21,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyCategory
+     * @return a GroupPolicyCategory
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,35 +30,35 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     }
     /**
      * Gets the children property value. The children categories
-     * @return a groupPolicyCategory
+     * @return a java.util.List<GroupPolicyCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyCategory> getChildren() {
-        return this.children;
+        return this.BackingStore.get("children");
     }
     /**
      * Gets the definitionFile property value. The id of the definition file the category came from
-     * @return a groupPolicyDefinitionFile
+     * @return a GroupPolicyDefinitionFile
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinitionFile getDefinitionFile() {
-        return this.definitionFile;
+        return this.BackingStore.get("definitionFile");
     }
     /**
      * Gets the definitions property value. The immediate GroupPolicyDefinition children of the category
-     * @return a groupPolicyDefinition
+     * @return a java.util.List<GroupPolicyDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinition> getDefinitions() {
-        return this.definitions;
+        return this.BackingStore.get("definitions");
     }
     /**
      * Gets the displayName property value. The string id of the category's display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -111,19 +79,19 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     }
     /**
      * Gets the ingestionSource property value. Category Ingestion source
-     * @return a ingestionSource
+     * @return a IngestionSource
      */
     @jakarta.annotation.Nullable
     public IngestionSource getIngestionSource() {
-        return this.ingestionSource;
+        return this.BackingStore.get("ingestionSource");
     }
     /**
      * Gets the isRoot property value. Defines if the category is a root category
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRoot() {
-        return this.isRoot;
+        return this.BackingStore.get("isRoot");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -131,15 +99,15 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the parent property value. The parent category
-     * @return a groupPolicyCategory
+     * @return a GroupPolicyCategory
      */
     @jakarta.annotation.Nullable
     public GroupPolicyCategory getParent() {
-        return this.parent;
+        return this.BackingStore.get("parent");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
-        this.children = value;
+        this.BackingStore.set("children", value);
     }
     /**
      * Sets the definitionFile property value. The id of the definition file the category came from
      * @param value Value to set for the definitionFile property.
      */
     public void setDefinitionFile(@jakarta.annotation.Nullable final GroupPolicyDefinitionFile value) {
-        this.definitionFile = value;
+        this.BackingStore.set("definitionFile", value);
     }
     /**
      * Sets the definitions property value. The immediate GroupPolicyDefinition children of the category
      * @param value Value to set for the definitions property.
      */
     public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
-        this.definitions = value;
+        this.BackingStore.set("definitions", value);
     }
     /**
      * Sets the displayName property value. The string id of the category's display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the ingestionSource property value. Category Ingestion source
      * @param value Value to set for the ingestionSource property.
      */
     public void setIngestionSource(@jakarta.annotation.Nullable final IngestionSource value) {
-        this.ingestionSource = value;
+        this.BackingStore.set("ingestionSource", value);
     }
     /**
      * Sets the isRoot property value. Defines if the category is a root category
      * @param value Value to set for the isRoot property.
      */
     public void setIsRoot(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRoot = value;
+        this.BackingStore.set("isRoot", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the parent property value. The parent category
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final GroupPolicyCategory value) {
-        this.parent = value;
+        this.BackingStore.set("parent", value);
     }
 }

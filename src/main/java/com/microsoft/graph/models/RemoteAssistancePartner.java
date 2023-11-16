@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
-     * Display name of the partner.
-     */
-    private String displayName;
-    /**
-     * Timestamp of the last request sent to Intune by the TEM partner.
-     */
-    private OffsetDateTime lastConnectionDateTime;
-    /**
-     * When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
-     */
-    private OffsetDateTime onboardingRequestExpiryDateTime;
-    /**
-     * The current TeamViewer connector status
-     */
-    private RemoteAssistanceOnboardingStatus onboardingStatus;
-    /**
-     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-     */
-    private String onboardingUrl;
-    /**
-     * Instantiates a new remoteAssistancePartner and sets the default values.
+     * Instantiates a new RemoteAssistancePartner and sets the default values.
      */
     public RemoteAssistancePartner() {
         super();
@@ -41,7 +21,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteAssistancePartner
+     * @return a RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public static RemoteAssistancePartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +30,11 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the partner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +56,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this.lastConnectionDateTime;
+        return this.BackingStore.get("lastConnectionDateTime");
     }
     /**
      * Gets the onboardingRequestExpiryDateTime property value. When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
@@ -84,23 +64,23 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnboardingRequestExpiryDateTime() {
-        return this.onboardingRequestExpiryDateTime;
+        return this.BackingStore.get("onboardingRequestExpiryDateTime");
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
-     * @return a remoteAssistanceOnboardingStatus
+     * @return a RemoteAssistanceOnboardingStatus
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {
-        return this.onboardingStatus;
+        return this.BackingStore.get("onboardingStatus");
     }
     /**
      * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnboardingUrl() {
-        return this.onboardingUrl;
+        return this.BackingStore.get("onboardingUrl");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
      */
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastConnectionDateTime = value;
+        this.BackingStore.set("lastConnectionDateTime", value);
     }
     /**
      * Sets the onboardingRequestExpiryDateTime property value. When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
      * @param value Value to set for the onboardingRequestExpiryDateTime property.
      */
     public void setOnboardingRequestExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.onboardingRequestExpiryDateTime = value;
+        this.BackingStore.set("onboardingRequestExpiryDateTime", value);
     }
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
-        this.onboardingStatus = value;
+        this.BackingStore.set("onboardingStatus", value);
     }
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
      * @param value Value to set for the onboardingUrl property.
      */
     public void setOnboardingUrl(@jakarta.annotation.Nullable final String value) {
-        this.onboardingUrl = value;
+        this.BackingStore.set("onboardingUrl", value);
     }
 }

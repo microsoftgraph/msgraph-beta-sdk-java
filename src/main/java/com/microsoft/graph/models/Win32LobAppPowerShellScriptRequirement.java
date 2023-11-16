@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement implements Parsable {
     /**
-     * Contains all supported Powershell Script output detection type.
-     */
-    private Win32LobAppPowerShellScriptDetectionType detectionType;
-    /**
-     * The unique display name for this rule
-     */
-    private String displayName;
-    /**
-     * A value indicating whether signature check is enforced
-     */
-    private Boolean enforceSignatureCheck;
-    /**
-     * A value indicating whether this script should run as 32-bit
-     */
-    private Boolean runAs32Bit;
-    /**
-     * Indicates the type of execution context the app runs in.
-     */
-    private RunAsAccountType runAsAccount;
-    /**
-     * The base64 encoded script content to detect Win32 Line of Business (LoB) app
-     */
-    private String scriptContent;
-    /**
-     * Instantiates a new win32LobAppPowerShellScriptRequirement and sets the default values.
+     * Instantiates a new Win32LobAppPowerShellScriptRequirement and sets the default values.
      */
     public Win32LobAppPowerShellScriptRequirement() {
         super();
@@ -45,7 +21,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppPowerShellScriptRequirement
+     * @return a Win32LobAppPowerShellScriptRequirement
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppPowerShellScriptRequirement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +30,27 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the detectionType property value. Contains all supported Powershell Script output detection type.
-     * @return a win32LobAppPowerShellScriptDetectionType
+     * @return a Win32LobAppPowerShellScriptDetectionType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppPowerShellScriptDetectionType getDetectionType() {
-        return this.detectionType;
+        return this.BackingStore.get("detectionType");
     }
     /**
      * Gets the displayName property value. The unique display name for this rule
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
-        return this.enforceSignatureCheck;
+        return this.BackingStore.get("enforceSignatureCheck");
     }
     /**
      * The deserialization information for the current model
@@ -93,27 +69,27 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
-        return this.runAs32Bit;
+        return this.BackingStore.get("runAs32Bit");
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this.runAsAccount;
+        return this.BackingStore.get("runAsAccount");
     }
     /**
      * Gets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptContent() {
-        return this.scriptContent;
+        return this.BackingStore.get("scriptContent");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the detectionType property.
      */
     public void setDetectionType(@jakarta.annotation.Nullable final Win32LobAppPowerShellScriptDetectionType value) {
-        this.detectionType = value;
+        this.BackingStore.set("detectionType", value);
     }
     /**
      * Sets the displayName property value. The unique display name for this rule
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
      * @param value Value to set for the enforceSignatureCheck property.
      */
     public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
-        this.enforceSignatureCheck = value;
+        this.BackingStore.set("enforceSignatureCheck", value);
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
      */
     public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
-        this.runAs32Bit = value;
+        this.BackingStore.set("runAs32Bit", value);
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      */
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
-        this.runAsAccount = value;
+        this.BackingStore.set("runAsAccount", value);
     }
     /**
      * Sets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
      * @param value Value to set for the scriptContent property.
      */
     public void setScriptContent(@jakarta.annotation.Nullable final String value) {
-        this.scriptContent = value;
+        this.BackingStore.set("scriptContent", value);
     }
 }

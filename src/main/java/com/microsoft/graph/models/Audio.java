@@ -4,93 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Audio implements AdditionalDataHolder, Parsable {
+public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The title of the album for this audio file.
-     */
-    private String album;
-    /**
-     * The artist named on the album for the audio file.
-     */
-    private String albumArtist;
-    /**
-     * The performing artist for the audio file.
-     */
-    private String artist;
-    /**
-     * Bitrate expressed in kbps.
-     */
-    private Long bitrate;
-    /**
-     * The name of the composer of the audio file.
-     */
-    private String composers;
-    /**
-     * Copyright information for the audio file.
-     */
-    private String copyright;
-    /**
-     * The number of the disc this audio file came from.
-     */
-    private Integer disc;
-    /**
-     * The total number of discs in this album.
-     */
-    private Integer discCount;
-    /**
-     * Duration of the audio file, expressed in milliseconds
-     */
-    private Long duration;
-    /**
-     * The genre of this audio file.
-     */
-    private String genre;
-    /**
-     * Indicates if the file is protected with digital rights management.
-     */
-    private Boolean hasDrm;
-    /**
-     * Indicates if the file is encoded with a variable bitrate.
-     */
-    private Boolean isVariableBitrate;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The title of the audio file.
-     */
-    private String title;
-    /**
-     * The number of the track on the original disc for this audio file.
-     */
-    private Integer track;
-    /**
-     * The total number of tracks on the original disc for this audio file.
-     */
-    private Integer trackCount;
-    /**
-     * The year the audio file was recorded.
-     */
-    private Integer year;
-    /**
-     * Instantiates a new audio and sets the default values.
+     * Instantiates a new Audio and sets the default values.
      */
     public Audio() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a audio
+     * @return a Audio
      */
     @jakarta.annotation.Nonnull
     public static Audio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,84 +34,97 @@ public class Audio implements AdditionalDataHolder, Parsable {
         return new Audio();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the album property value. The title of the album for this audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlbum() {
-        return this.album;
+        return this.BackingStore.get("album");
     }
     /**
      * Gets the albumArtist property value. The artist named on the album for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlbumArtist() {
-        return this.albumArtist;
+        return this.BackingStore.get("albumArtist");
     }
     /**
      * Gets the artist property value. The performing artist for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getArtist() {
-        return this.artist;
+        return this.BackingStore.get("artist");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the bitrate property value. Bitrate expressed in kbps.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getBitrate() {
-        return this.bitrate;
+        return this.BackingStore.get("bitrate");
     }
     /**
      * Gets the composers property value. The name of the composer of the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComposers() {
-        return this.composers;
+        return this.BackingStore.get("composers");
     }
     /**
      * Gets the copyright property value. Copyright information for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCopyright() {
-        return this.copyright;
+        return this.BackingStore.get("copyright");
     }
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisc() {
-        return this.disc;
+        return this.BackingStore.get("disc");
     }
     /**
      * Gets the discCount property value. The total number of discs in this album.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDiscCount() {
-        return this.discCount;
+        return this.BackingStore.get("discCount");
     }
     /**
      * Gets the duration property value. Duration of the audio file, expressed in milliseconds
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDuration() {
-        return this.duration;
+        return this.BackingStore.get("duration");
     }
     /**
      * The deserialization information for the current model
@@ -205,67 +154,67 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the genre property value. The genre of this audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGenre() {
-        return this.genre;
+        return this.BackingStore.get("genre");
     }
     /**
      * Gets the hasDrm property value. Indicates if the file is protected with digital rights management.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasDrm() {
-        return this.hasDrm;
+        return this.BackingStore.get("hasDrm");
     }
     /**
      * Gets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVariableBitrate() {
-        return this.isVariableBitrate;
+        return this.BackingStore.get("isVariableBitrate");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the title property value. The title of the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Gets the track property value. The number of the track on the original disc for this audio file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTrack() {
-        return this.track;
+        return this.BackingStore.get("track");
     }
     /**
      * Gets the trackCount property value. The total number of tracks on the original disc for this audio file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTrackCount() {
-        return this.trackCount;
+        return this.BackingStore.get("trackCount");
     }
     /**
      * Gets the year property value. The year the audio file was recorded.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {
-        return this.year;
+        return this.BackingStore.get("year");
     }
     /**
      * Serializes information the current object
@@ -293,129 +242,137 @@ public class Audio implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the album property value. The title of the album for this audio file.
      * @param value Value to set for the album property.
      */
     public void setAlbum(@jakarta.annotation.Nullable final String value) {
-        this.album = value;
+        this.BackingStore.set("album", value);
     }
     /**
      * Sets the albumArtist property value. The artist named on the album for the audio file.
      * @param value Value to set for the albumArtist property.
      */
     public void setAlbumArtist(@jakarta.annotation.Nullable final String value) {
-        this.albumArtist = value;
+        this.BackingStore.set("albumArtist", value);
     }
     /**
      * Sets the artist property value. The performing artist for the audio file.
      * @param value Value to set for the artist property.
      */
     public void setArtist(@jakarta.annotation.Nullable final String value) {
-        this.artist = value;
+        this.BackingStore.set("artist", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the bitrate property value. Bitrate expressed in kbps.
      * @param value Value to set for the bitrate property.
      */
     public void setBitrate(@jakarta.annotation.Nullable final Long value) {
-        this.bitrate = value;
+        this.BackingStore.set("bitrate", value);
     }
     /**
      * Sets the composers property value. The name of the composer of the audio file.
      * @param value Value to set for the composers property.
      */
     public void setComposers(@jakarta.annotation.Nullable final String value) {
-        this.composers = value;
+        this.BackingStore.set("composers", value);
     }
     /**
      * Sets the copyright property value. Copyright information for the audio file.
      * @param value Value to set for the copyright property.
      */
     public void setCopyright(@jakarta.annotation.Nullable final String value) {
-        this.copyright = value;
+        this.BackingStore.set("copyright", value);
     }
     /**
      * Sets the disc property value. The number of the disc this audio file came from.
      * @param value Value to set for the disc property.
      */
     public void setDisc(@jakarta.annotation.Nullable final Integer value) {
-        this.disc = value;
+        this.BackingStore.set("disc", value);
     }
     /**
      * Sets the discCount property value. The total number of discs in this album.
      * @param value Value to set for the discCount property.
      */
     public void setDiscCount(@jakarta.annotation.Nullable final Integer value) {
-        this.discCount = value;
+        this.BackingStore.set("discCount", value);
     }
     /**
      * Sets the duration property value. Duration of the audio file, expressed in milliseconds
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Long value) {
-        this.duration = value;
+        this.BackingStore.set("duration", value);
     }
     /**
      * Sets the genre property value. The genre of this audio file.
      * @param value Value to set for the genre property.
      */
     public void setGenre(@jakarta.annotation.Nullable final String value) {
-        this.genre = value;
+        this.BackingStore.set("genre", value);
     }
     /**
      * Sets the hasDrm property value. Indicates if the file is protected with digital rights management.
      * @param value Value to set for the hasDrm property.
      */
     public void setHasDrm(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasDrm = value;
+        this.BackingStore.set("hasDrm", value);
     }
     /**
      * Sets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
      * @param value Value to set for the isVariableBitrate property.
      */
     public void setIsVariableBitrate(@jakarta.annotation.Nullable final Boolean value) {
-        this.isVariableBitrate = value;
+        this.BackingStore.set("isVariableBitrate", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the title property value. The title of the audio file.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
     /**
      * Sets the track property value. The number of the track on the original disc for this audio file.
      * @param value Value to set for the track property.
      */
     public void setTrack(@jakarta.annotation.Nullable final Integer value) {
-        this.track = value;
+        this.BackingStore.set("track", value);
     }
     /**
      * Sets the trackCount property value. The total number of tracks on the original disc for this audio file.
      * @param value Value to set for the trackCount property.
      */
     public void setTrackCount(@jakarta.annotation.Nullable final Integer value) {
-        this.trackCount = value;
+        this.BackingStore.set("trackCount", value);
     }
     /**
      * Sets the year property value. The year the audio file was recorded.
      * @param value Value to set for the year property.
      */
     public void setYear(@jakarta.annotation.Nullable final Integer value) {
-        this.year = value;
+        this.BackingStore.set("year", value);
     }
 }

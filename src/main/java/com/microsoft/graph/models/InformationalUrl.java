@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InformationalUrl implements AdditionalDataHolder, Parsable {
+public class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * CDN URL to the application's logo, Read-only.
-     */
-    private String logoUrl;
-    /**
-     * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
-     */
-    private String marketingUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
-     */
-    private String privacyStatementUrl;
-    /**
-     * Link to the application's support page. For example, https://www.contoso.com/app/support
-     */
-    private String supportUrl;
-    /**
-     * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
-     */
-    private String termsOfServiceUrl;
-    /**
-     * Instantiates a new informationalUrl and sets the default values.
+     * Instantiates a new InformationalUrl and sets the default values.
      */
     public InformationalUrl() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationalUrl
+     * @return a InformationalUrl
      */
     @jakarta.annotation.Nonnull
     public static InformationalUrl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +34,25 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
         return new InformationalUrl();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -78,51 +71,51 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogoUrl() {
-        return this.logoUrl;
+        return this.BackingStore.get("logoUrl");
     }
     /**
      * Gets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMarketingUrl() {
-        return this.marketingUrl;
+        return this.BackingStore.get("marketingUrl");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrivacyStatementUrl() {
-        return this.privacyStatementUrl;
+        return this.BackingStore.get("privacyStatementUrl");
     }
     /**
      * Gets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportUrl() {
-        return this.supportUrl;
+        return this.BackingStore.get("supportUrl");
     }
     /**
      * Gets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTermsOfServiceUrl() {
-        return this.termsOfServiceUrl;
+        return this.BackingStore.get("termsOfServiceUrl");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the logoUrl property value. CDN URL to the application's logo, Read-only.
      * @param value Value to set for the logoUrl property.
      */
     public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
-        this.logoUrl = value;
+        this.BackingStore.set("logoUrl", value);
     }
     /**
      * Sets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
      * @param value Value to set for the marketingUrl property.
      */
     public void setMarketingUrl(@jakarta.annotation.Nullable final String value) {
-        this.marketingUrl = value;
+        this.BackingStore.set("marketingUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
      * @param value Value to set for the privacyStatementUrl property.
      */
     public void setPrivacyStatementUrl(@jakarta.annotation.Nullable final String value) {
-        this.privacyStatementUrl = value;
+        this.BackingStore.set("privacyStatementUrl", value);
     }
     /**
      * Sets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
      * @param value Value to set for the supportUrl property.
      */
     public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
-        this.supportUrl = value;
+        this.BackingStore.set("supportUrl", value);
     }
     /**
      * Sets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @param value Value to set for the termsOfServiceUrl property.
      */
     public void setTermsOfServiceUrl(@jakarta.annotation.Nullable final String value) {
-        this.termsOfServiceUrl = value;
+        this.BackingStore.set("termsOfServiceUrl", value);
     }
 }

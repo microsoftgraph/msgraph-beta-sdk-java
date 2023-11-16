@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationSettingDependedOnBy implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationSettingDependedOnBy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Identifier of child setting that is dependent on the current setting
-     */
-    private String dependedOnBy;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Value that determines if the child setting is required based on the parent setting's selection
-     */
-    private Boolean required;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingDependedOnBy and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingDependedOnBy and sets the default values.
      */
     public DeviceManagementConfigurationSettingDependedOnBy() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingDependedOnBy
+     * @return a DeviceManagementConfigurationSettingDependedOnBy
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDependedOnBy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +34,33 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
         return new DeviceManagementConfigurationSettingDependedOnBy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dependedOnBy property value. Identifier of child setting that is dependent on the current setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDependedOnBy() {
-        return this.dependedOnBy;
+        return this.BackingStore.get("dependedOnBy");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +76,19 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the required property value. Value that determines if the child setting is required based on the parent setting's selection
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.BackingStore.get("required");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the dependedOnBy property value. Identifier of child setting that is dependent on the current setting
      * @param value Value to set for the dependedOnBy property.
      */
     public void setDependedOnBy(@jakarta.annotation.Nullable final String value) {
-        this.dependedOnBy = value;
+        this.BackingStore.set("dependedOnBy", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the required property value. Value that determines if the child setting is required based on the parent setting's selection
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.BackingStore.set("required", value);
     }
 }

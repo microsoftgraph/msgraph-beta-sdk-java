@@ -4,182 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable {
+public class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-     */
-    private String attestationIdentityKey;
-    /**
-     * On or Off of BitLocker Drive Encryption
-     */
-    private String bitLockerStatus;
-    /**
-     * The security version number of the Boot Application
-     */
-    private String bootAppSecurityVersion;
-    /**
-     * When bootDebugging is enabled, the device is used in development and testing
-     */
-    private String bootDebugging;
-    /**
-     * The security version number of the Boot Application
-     */
-    private String bootManagerSecurityVersion;
-    /**
-     * The version of the Boot Manager
-     */
-    private String bootManagerVersion;
-    /**
-     * The Boot Revision List that was loaded during initial boot on the attested device
-     */
-    private String bootRevisionListInfo;
-    /**
-     * When code integrity is enabled, code execution is restricted to integrity verified code
-     */
-    private String codeIntegrity;
-    /**
-     * The version of the Boot Manager
-     */
-    private String codeIntegrityCheckVersion;
-    /**
-     * The Code Integrity policy that is controlling the security of the boot environment
-     */
-    private String codeIntegrityPolicy;
-    /**
-     * The DHA report version. (Namespace version)
-     */
-    private String contentNamespaceUrl;
-    /**
-     * The HealthAttestation state schema version
-     */
-    private String contentVersion;
-    /**
-     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-     */
-    private String dataExcutionPolicy;
-    /**
-     * The DHA report version. (Namespace version)
-     */
-    private String deviceHealthAttestationStatus;
-    /**
-     * ELAM provides protection for the computers in your network when they start up
-     */
-    private String earlyLaunchAntiMalwareDriverProtection;
-    /**
-     * A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
-     */
-    private FirmwareProtectionType firmwareProtection;
-    /**
-     * This attribute indicates if DHA is supported for the device
-     */
-    private String healthAttestationSupportedStatus;
-    /**
-     * This attribute appears if DHA-Service detects an integrity issue
-     */
-    private String healthStatusMismatchInfo;
-    /**
-     * The DateTime when device was evaluated or issued to MDM
-     */
-    private OffsetDateTime issuedDateTime;
-    /**
-     * The Timestamp of the last update.
-     */
-    private String lastUpdateDateTime;
-    /**
-     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     */
-    private AzureAttestationSettingStatus memoryAccessProtection;
-    /**
-     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     */
-    private AzureAttestationSettingStatus memoryIntegrityProtection;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     */
-    private String operatingSystemKernelDebugging;
-    /**
-     * The Operating System Revision List that was loaded during initial boot on the attested device
-     */
-    private String operatingSystemRevListInfo;
-    /**
-     * The measurement that is captured in PCR[0]
-     */
-    private String pcr0;
-    /**
-     * Informational attribute that identifies the HASH algorithm that was used by TPM
-     */
-    private String pcrHashAlgorithm;
-    /**
-     * The number of times a PC device has hibernated or resumed
-     */
-    private Long resetCount;
-    /**
-     * The number of times a PC device has rebooted
-     */
-    private Long restartCount;
-    /**
-     * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-     */
-    private String safeMode;
-    /**
-     * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-     */
-    private String secureBoot;
-    /**
-     * Fingerprint of the Custom Secure Boot Configuration Policy
-     */
-    private String secureBootConfigurationPolicyFingerPrint;
-    /**
-     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     */
-    private AzureAttestationSettingStatus securedCorePC;
-    /**
-     * A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
-     */
-    private SystemManagementModeLevel systemManagementMode;
-    /**
-     * When test signing is allowed, the device does not enforce signature validation during boot
-     */
-    private String testSigning;
-    /**
-     * The security version number of the Boot Application
-     */
-    private String tpmVersion;
-    /**
-     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     */
-    private AzureAttestationSettingStatus virtualizationBasedSecurity;
-    /**
-     * VSM is a container that protects high value assets from a compromised kernel
-     */
-    private String virtualSecureMode;
-    /**
-     * Operating system running with limited services that is used to prepare a computer for Windows
-     */
-    private String windowsPE;
-    /**
-     * Instantiates a new deviceHealthAttestationState and sets the default values.
+     * Instantiates a new DeviceHealthAttestationState and sets the default values.
      */
     public DeviceHealthAttestationState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthAttestationState
+     * @return a DeviceHealthAttestationState
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthAttestationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -187,132 +35,145 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         return new DeviceHealthAttestationState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAttestationIdentityKey() {
-        return this.attestationIdentityKey;
+        return this.BackingStore.get("attestationIdentityKey");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBitLockerStatus() {
-        return this.bitLockerStatus;
+        return this.BackingStore.get("bitLockerStatus");
     }
     /**
      * Gets the bootAppSecurityVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootAppSecurityVersion() {
-        return this.bootAppSecurityVersion;
+        return this.BackingStore.get("bootAppSecurityVersion");
     }
     /**
      * Gets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootDebugging() {
-        return this.bootDebugging;
+        return this.BackingStore.get("bootDebugging");
     }
     /**
      * Gets the bootManagerSecurityVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootManagerSecurityVersion() {
-        return this.bootManagerSecurityVersion;
+        return this.BackingStore.get("bootManagerSecurityVersion");
     }
     /**
      * Gets the bootManagerVersion property value. The version of the Boot Manager
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootManagerVersion() {
-        return this.bootManagerVersion;
+        return this.BackingStore.get("bootManagerVersion");
     }
     /**
      * Gets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootRevisionListInfo() {
-        return this.bootRevisionListInfo;
+        return this.BackingStore.get("bootRevisionListInfo");
     }
     /**
      * Gets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrity() {
-        return this.codeIntegrity;
+        return this.BackingStore.get("codeIntegrity");
     }
     /**
      * Gets the codeIntegrityCheckVersion property value. The version of the Boot Manager
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityCheckVersion() {
-        return this.codeIntegrityCheckVersion;
+        return this.BackingStore.get("codeIntegrityCheckVersion");
     }
     /**
      * Gets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityPolicy() {
-        return this.codeIntegrityPolicy;
+        return this.BackingStore.get("codeIntegrityPolicy");
     }
     /**
      * Gets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentNamespaceUrl() {
-        return this.contentNamespaceUrl;
+        return this.BackingStore.get("contentNamespaceUrl");
     }
     /**
      * Gets the contentVersion property value. The HealthAttestation state schema version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentVersion() {
-        return this.contentVersion;
+        return this.BackingStore.get("contentVersion");
     }
     /**
      * Gets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataExcutionPolicy() {
-        return this.dataExcutionPolicy;
+        return this.BackingStore.get("dataExcutionPolicy");
     }
     /**
      * Gets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceHealthAttestationStatus() {
-        return this.deviceHealthAttestationStatus;
+        return this.BackingStore.get("deviceHealthAttestationStatus");
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEarlyLaunchAntiMalwareDriverProtection() {
-        return this.earlyLaunchAntiMalwareDriverProtection;
+        return this.BackingStore.get("earlyLaunchAntiMalwareDriverProtection");
     }
     /**
      * The deserialization information for the current model
@@ -364,27 +225,27 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a firmwareProtectionType
+     * @return a FirmwareProtectionType
      */
     @jakarta.annotation.Nullable
     public FirmwareProtectionType getFirmwareProtection() {
-        return this.firmwareProtection;
+        return this.BackingStore.get("firmwareProtection");
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthAttestationSupportedStatus() {
-        return this.healthAttestationSupportedStatus;
+        return this.BackingStore.get("healthAttestationSupportedStatus");
     }
     /**
      * Gets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatusMismatchInfo() {
-        return this.healthStatusMismatchInfo;
+        return this.BackingStore.get("healthStatusMismatchInfo");
     }
     /**
      * Gets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
@@ -392,167 +253,167 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIssuedDateTime() {
-        return this.issuedDateTime;
+        return this.BackingStore.get("issuedDateTime");
     }
     /**
      * Gets the lastUpdateDateTime property value. The Timestamp of the last update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.BackingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getMemoryAccessProtection() {
-        return this.memoryAccessProtection;
+        return this.BackingStore.get("memoryAccessProtection");
     }
     /**
      * Gets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getMemoryIntegrityProtection() {
-        return this.memoryIntegrityProtection;
+        return this.BackingStore.get("memoryIntegrityProtection");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemKernelDebugging() {
-        return this.operatingSystemKernelDebugging;
+        return this.BackingStore.get("operatingSystemKernelDebugging");
     }
     /**
      * Gets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemRevListInfo() {
-        return this.operatingSystemRevListInfo;
+        return this.BackingStore.get("operatingSystemRevListInfo");
     }
     /**
      * Gets the pcr0 property value. The measurement that is captured in PCR[0]
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPcr0() {
-        return this.pcr0;
+        return this.BackingStore.get("pcr0");
     }
     /**
      * Gets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPcrHashAlgorithm() {
-        return this.pcrHashAlgorithm;
+        return this.BackingStore.get("pcrHashAlgorithm");
     }
     /**
      * Gets the resetCount property value. The number of times a PC device has hibernated or resumed
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getResetCount() {
-        return this.resetCount;
+        return this.BackingStore.get("resetCount");
     }
     /**
      * Gets the restartCount property value. The number of times a PC device has rebooted
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRestartCount() {
-        return this.restartCount;
+        return this.BackingStore.get("restartCount");
     }
     /**
      * Gets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSafeMode() {
-        return this.safeMode;
+        return this.BackingStore.get("safeMode");
     }
     /**
      * Gets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecureBoot() {
-        return this.secureBoot;
+        return this.BackingStore.get("secureBoot");
     }
     /**
      * Gets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecureBootConfigurationPolicyFingerPrint() {
-        return this.secureBootConfigurationPolicyFingerPrint;
+        return this.BackingStore.get("secureBootConfigurationPolicyFingerPrint");
     }
     /**
      * Gets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getSecuredCorePC() {
-        return this.securedCorePC;
+        return this.BackingStore.get("securedCorePC");
     }
     /**
      * Gets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
-     * @return a systemManagementModeLevel
+     * @return a SystemManagementModeLevel
      */
     @jakarta.annotation.Nullable
     public SystemManagementModeLevel getSystemManagementMode() {
-        return this.systemManagementMode;
+        return this.BackingStore.get("systemManagementMode");
     }
     /**
      * Gets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTestSigning() {
-        return this.testSigning;
+        return this.BackingStore.get("testSigning");
     }
     /**
      * Gets the tpmVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
-        return this.tpmVersion;
+        return this.BackingStore.get("tpmVersion");
     }
     /**
      * Gets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getVirtualizationBasedSecurity() {
-        return this.virtualizationBasedSecurity;
+        return this.BackingStore.get("virtualizationBasedSecurity");
     }
     /**
      * Gets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualSecureMode() {
-        return this.virtualSecureMode;
+        return this.BackingStore.get("virtualSecureMode");
     }
     /**
      * Gets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindowsPE() {
-        return this.windowsPE;
+        return this.BackingStore.get("windowsPE");
     }
     /**
      * Serializes information the current object
@@ -602,283 +463,291 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
      * @param value Value to set for the attestationIdentityKey property.
      */
     public void setAttestationIdentityKey(@jakarta.annotation.Nullable final String value) {
-        this.attestationIdentityKey = value;
+        this.BackingStore.set("attestationIdentityKey", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
      * @param value Value to set for the bitLockerStatus property.
      */
     public void setBitLockerStatus(@jakarta.annotation.Nullable final String value) {
-        this.bitLockerStatus = value;
+        this.BackingStore.set("bitLockerStatus", value);
     }
     /**
      * Sets the bootAppSecurityVersion property value. The security version number of the Boot Application
      * @param value Value to set for the bootAppSecurityVersion property.
      */
     public void setBootAppSecurityVersion(@jakarta.annotation.Nullable final String value) {
-        this.bootAppSecurityVersion = value;
+        this.BackingStore.set("bootAppSecurityVersion", value);
     }
     /**
      * Sets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
      * @param value Value to set for the bootDebugging property.
      */
     public void setBootDebugging(@jakarta.annotation.Nullable final String value) {
-        this.bootDebugging = value;
+        this.BackingStore.set("bootDebugging", value);
     }
     /**
      * Sets the bootManagerSecurityVersion property value. The security version number of the Boot Application
      * @param value Value to set for the bootManagerSecurityVersion property.
      */
     public void setBootManagerSecurityVersion(@jakarta.annotation.Nullable final String value) {
-        this.bootManagerSecurityVersion = value;
+        this.BackingStore.set("bootManagerSecurityVersion", value);
     }
     /**
      * Sets the bootManagerVersion property value. The version of the Boot Manager
      * @param value Value to set for the bootManagerVersion property.
      */
     public void setBootManagerVersion(@jakarta.annotation.Nullable final String value) {
-        this.bootManagerVersion = value;
+        this.BackingStore.set("bootManagerVersion", value);
     }
     /**
      * Sets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
      * @param value Value to set for the bootRevisionListInfo property.
      */
     public void setBootRevisionListInfo(@jakarta.annotation.Nullable final String value) {
-        this.bootRevisionListInfo = value;
+        this.BackingStore.set("bootRevisionListInfo", value);
     }
     /**
      * Sets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
      * @param value Value to set for the codeIntegrity property.
      */
     public void setCodeIntegrity(@jakarta.annotation.Nullable final String value) {
-        this.codeIntegrity = value;
+        this.BackingStore.set("codeIntegrity", value);
     }
     /**
      * Sets the codeIntegrityCheckVersion property value. The version of the Boot Manager
      * @param value Value to set for the codeIntegrityCheckVersion property.
      */
     public void setCodeIntegrityCheckVersion(@jakarta.annotation.Nullable final String value) {
-        this.codeIntegrityCheckVersion = value;
+        this.BackingStore.set("codeIntegrityCheckVersion", value);
     }
     /**
      * Sets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
      * @param value Value to set for the codeIntegrityPolicy property.
      */
     public void setCodeIntegrityPolicy(@jakarta.annotation.Nullable final String value) {
-        this.codeIntegrityPolicy = value;
+        this.BackingStore.set("codeIntegrityPolicy", value);
     }
     /**
      * Sets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
      * @param value Value to set for the contentNamespaceUrl property.
      */
     public void setContentNamespaceUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentNamespaceUrl = value;
+        this.BackingStore.set("contentNamespaceUrl", value);
     }
     /**
      * Sets the contentVersion property value. The HealthAttestation state schema version
      * @param value Value to set for the contentVersion property.
      */
     public void setContentVersion(@jakarta.annotation.Nullable final String value) {
-        this.contentVersion = value;
+        this.BackingStore.set("contentVersion", value);
     }
     /**
      * Sets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
      * @param value Value to set for the dataExcutionPolicy property.
      */
     public void setDataExcutionPolicy(@jakarta.annotation.Nullable final String value) {
-        this.dataExcutionPolicy = value;
+        this.BackingStore.set("dataExcutionPolicy", value);
     }
     /**
      * Sets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
      * @param value Value to set for the deviceHealthAttestationStatus property.
      */
     public void setDeviceHealthAttestationStatus(@jakarta.annotation.Nullable final String value) {
-        this.deviceHealthAttestationStatus = value;
+        this.BackingStore.set("deviceHealthAttestationStatus", value);
     }
     /**
      * Sets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
      * @param value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
      */
     public void setEarlyLaunchAntiMalwareDriverProtection(@jakarta.annotation.Nullable final String value) {
-        this.earlyLaunchAntiMalwareDriverProtection = value;
+        this.BackingStore.set("earlyLaunchAntiMalwareDriverProtection", value);
     }
     /**
      * Sets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the firmwareProtection property.
      */
     public void setFirmwareProtection(@jakarta.annotation.Nullable final FirmwareProtectionType value) {
-        this.firmwareProtection = value;
+        this.BackingStore.set("firmwareProtection", value);
     }
     /**
      * Sets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
      * @param value Value to set for the healthAttestationSupportedStatus property.
      */
     public void setHealthAttestationSupportedStatus(@jakarta.annotation.Nullable final String value) {
-        this.healthAttestationSupportedStatus = value;
+        this.BackingStore.set("healthAttestationSupportedStatus", value);
     }
     /**
      * Sets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
      * @param value Value to set for the healthStatusMismatchInfo property.
      */
     public void setHealthStatusMismatchInfo(@jakarta.annotation.Nullable final String value) {
-        this.healthStatusMismatchInfo = value;
+        this.BackingStore.set("healthStatusMismatchInfo", value);
     }
     /**
      * Sets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
      * @param value Value to set for the issuedDateTime property.
      */
     public void setIssuedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.issuedDateTime = value;
+        this.BackingStore.set("issuedDateTime", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update.
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final String value) {
-        this.lastUpdateDateTime = value;
+        this.BackingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the memoryAccessProtection property.
      */
     public void setMemoryAccessProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
-        this.memoryAccessProtection = value;
+        this.BackingStore.set("memoryAccessProtection", value);
     }
     /**
      * Sets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the memoryIntegrityProtection property.
      */
     public void setMemoryIntegrityProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
-        this.memoryIntegrityProtection = value;
+        this.BackingStore.set("memoryIntegrityProtection", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
      * @param value Value to set for the operatingSystemKernelDebugging property.
      */
     public void setOperatingSystemKernelDebugging(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemKernelDebugging = value;
+        this.BackingStore.set("operatingSystemKernelDebugging", value);
     }
     /**
      * Sets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
      * @param value Value to set for the operatingSystemRevListInfo property.
      */
     public void setOperatingSystemRevListInfo(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemRevListInfo = value;
+        this.BackingStore.set("operatingSystemRevListInfo", value);
     }
     /**
      * Sets the pcr0 property value. The measurement that is captured in PCR[0]
      * @param value Value to set for the pcr0 property.
      */
     public void setPcr0(@jakarta.annotation.Nullable final String value) {
-        this.pcr0 = value;
+        this.BackingStore.set("pcr0", value);
     }
     /**
      * Sets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
      * @param value Value to set for the pcrHashAlgorithm property.
      */
     public void setPcrHashAlgorithm(@jakarta.annotation.Nullable final String value) {
-        this.pcrHashAlgorithm = value;
+        this.BackingStore.set("pcrHashAlgorithm", value);
     }
     /**
      * Sets the resetCount property value. The number of times a PC device has hibernated or resumed
      * @param value Value to set for the resetCount property.
      */
     public void setResetCount(@jakarta.annotation.Nullable final Long value) {
-        this.resetCount = value;
+        this.BackingStore.set("resetCount", value);
     }
     /**
      * Sets the restartCount property value. The number of times a PC device has rebooted
      * @param value Value to set for the restartCount property.
      */
     public void setRestartCount(@jakarta.annotation.Nullable final Long value) {
-        this.restartCount = value;
+        this.BackingStore.set("restartCount", value);
     }
     /**
      * Sets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
      * @param value Value to set for the safeMode property.
      */
     public void setSafeMode(@jakarta.annotation.Nullable final String value) {
-        this.safeMode = value;
+        this.BackingStore.set("safeMode", value);
     }
     /**
      * Sets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
      * @param value Value to set for the secureBoot property.
      */
     public void setSecureBoot(@jakarta.annotation.Nullable final String value) {
-        this.secureBoot = value;
+        this.BackingStore.set("secureBoot", value);
     }
     /**
      * Sets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
      * @param value Value to set for the secureBootConfigurationPolicyFingerPrint property.
      */
     public void setSecureBootConfigurationPolicyFingerPrint(@jakarta.annotation.Nullable final String value) {
-        this.secureBootConfigurationPolicyFingerPrint = value;
+        this.BackingStore.set("secureBootConfigurationPolicyFingerPrint", value);
     }
     /**
      * Sets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the securedCorePC property.
      */
     public void setSecuredCorePC(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
-        this.securedCorePC = value;
+        this.BackingStore.set("securedCorePC", value);
     }
     /**
      * Sets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the systemManagementMode property.
      */
     public void setSystemManagementMode(@jakarta.annotation.Nullable final SystemManagementModeLevel value) {
-        this.systemManagementMode = value;
+        this.BackingStore.set("systemManagementMode", value);
     }
     /**
      * Sets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
      * @param value Value to set for the testSigning property.
      */
     public void setTestSigning(@jakarta.annotation.Nullable final String value) {
-        this.testSigning = value;
+        this.BackingStore.set("testSigning", value);
     }
     /**
      * Sets the tpmVersion property value. The security version number of the Boot Application
      * @param value Value to set for the tpmVersion property.
      */
     public void setTpmVersion(@jakarta.annotation.Nullable final String value) {
-        this.tpmVersion = value;
+        this.BackingStore.set("tpmVersion", value);
     }
     /**
      * Sets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
      * @param value Value to set for the virtualizationBasedSecurity property.
      */
     public void setVirtualizationBasedSecurity(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
-        this.virtualizationBasedSecurity = value;
+        this.BackingStore.set("virtualizationBasedSecurity", value);
     }
     /**
      * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
      * @param value Value to set for the virtualSecureMode property.
      */
     public void setVirtualSecureMode(@jakarta.annotation.Nullable final String value) {
-        this.virtualSecureMode = value;
+        this.BackingStore.set("virtualSecureMode", value);
     }
     /**
      * Sets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
      * @param value Value to set for the windowsPE property.
      */
     public void setWindowsPE(@jakarta.annotation.Nullable final String value) {
-        this.windowsPE = value;
+        this.BackingStore.set("windowsPE", value);
     }
 }

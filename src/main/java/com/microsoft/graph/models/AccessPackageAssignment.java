@@ -10,67 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignment extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     */
-    private AccessPackage accessPackage;
-    /**
-     * Read-only. Nullable. Supports $filter (eq) on the id property
-     */
-    private AccessPackageAssignmentPolicy accessPackageAssignmentPolicy;
-    /**
-     * The accessPackageAssignmentRequests property
-     */
-    private java.util.List<AccessPackageAssignmentRequest> accessPackageAssignmentRequests;
-    /**
-     * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
-     */
-    private java.util.List<AccessPackageAssignmentResourceRole> accessPackageAssignmentResourceRoles;
-    /**
-     * The identifier of the access package. Read-only.
-     */
-    private String accessPackageId;
-    /**
-     * The identifier of the access package assignment policy. Read-only.
-     */
-    private String assignmentPolicyId;
-    /**
-     * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
-     */
-    private String assignmentState;
-    /**
-     * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     */
-    private String assignmentStatus;
-    /**
-     * The identifier of the catalog containing the access package. Read-only.
-     */
-    private String catalogId;
-    /**
-     * Information about all the custom extension calls that were made during the access package assignment workflow.
-     */
-    private java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime expiredDateTime;
-    /**
-     * Indicates whether the access package assignment is extended. Read-only.
-     */
-    private Boolean isExtended;
-    /**
-     * When the access assignment is to be in place. Read-only.
-     */
-    private RequestSchedule schedule;
-    /**
-     * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     */
-    private AccessPackageSubject target;
-    /**
-     * The ID of the subject with the assignment. Read-only.
-     */
-    private String targetId;
-    /**
-     * Instantiates a new accessPackageAssignment and sets the default values.
+     * Instantiates a new AccessPackageAssignment and sets the default values.
      */
     public AccessPackageAssignment() {
         super();
@@ -78,7 +18,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignment
+     * @return a AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,83 +27,83 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this.accessPackage;
+        return this.BackingStore.get("accessPackage");
     }
     /**
      * Gets the accessPackageAssignmentPolicy property value. Read-only. Nullable. Supports $filter (eq) on the id property
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy getAccessPackageAssignmentPolicy() {
-        return this.accessPackageAssignmentPolicy;
+        return this.BackingStore.get("accessPackageAssignmentPolicy");
     }
     /**
      * Gets the accessPackageAssignmentRequests property value. The accessPackageAssignmentRequests property
-     * @return a accessPackageAssignmentRequest
+     * @return a java.util.List<AccessPackageAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAccessPackageAssignmentRequests() {
-        return this.accessPackageAssignmentRequests;
+        return this.BackingStore.get("accessPackageAssignmentRequests");
     }
     /**
      * Gets the accessPackageAssignmentResourceRoles property value. The resource roles delivered to the target user for this assignment. Read-only. Nullable.
-     * @return a accessPackageAssignmentResourceRole
+     * @return a java.util.List<AccessPackageAssignmentResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getAccessPackageAssignmentResourceRoles() {
-        return this.accessPackageAssignmentResourceRoles;
+        return this.BackingStore.get("accessPackageAssignmentResourceRoles");
     }
     /**
      * Gets the accessPackageId property value. The identifier of the access package. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
-        return this.accessPackageId;
+        return this.BackingStore.get("accessPackageId");
     }
     /**
      * Gets the assignmentPolicyId property value. The identifier of the access package assignment policy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentPolicyId() {
-        return this.assignmentPolicyId;
+        return this.BackingStore.get("assignmentPolicyId");
     }
     /**
      * Gets the assignmentState property value. The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
-        return this.assignmentState;
+        return this.BackingStore.get("assignmentState");
     }
     /**
      * Gets the assignmentStatus property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentStatus() {
-        return this.assignmentStatus;
+        return this.BackingStore.get("assignmentStatus");
     }
     /**
      * Gets the catalogId property value. The identifier of the catalog containing the access package. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
-        return this.catalogId;
+        return this.BackingStore.get("catalogId");
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
-     * @return a customExtensionCalloutInstance
+     * @return a java.util.List<CustomExtensionCalloutInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
-        return this.customExtensionCalloutInstances;
+        return this.BackingStore.get("customExtensionCalloutInstances");
     }
     /**
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -171,7 +111,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiredDateTime() {
-        return this.expiredDateTime;
+        return this.BackingStore.get("expiredDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -199,35 +139,35 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExtended() {
-        return this.isExtended;
+        return this.BackingStore.get("isExtended");
     }
     /**
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Gets the targetId property value. The ID of the subject with the assignment. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetId() {
-        return this.targetId;
+        return this.BackingStore.get("targetId");
     }
     /**
      * Serializes information the current object
@@ -257,104 +197,104 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      */
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
-        this.accessPackage = value;
+        this.BackingStore.set("accessPackage", value);
     }
     /**
      * Sets the accessPackageAssignmentPolicy property value. Read-only. Nullable. Supports $filter (eq) on the id property
      * @param value Value to set for the accessPackageAssignmentPolicy property.
      */
     public void setAccessPackageAssignmentPolicy(@jakarta.annotation.Nullable final AccessPackageAssignmentPolicy value) {
-        this.accessPackageAssignmentPolicy = value;
+        this.BackingStore.set("accessPackageAssignmentPolicy", value);
     }
     /**
      * Sets the accessPackageAssignmentRequests property value. The accessPackageAssignmentRequests property
      * @param value Value to set for the accessPackageAssignmentRequests property.
      */
     public void setAccessPackageAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
-        this.accessPackageAssignmentRequests = value;
+        this.BackingStore.set("accessPackageAssignmentRequests", value);
     }
     /**
      * Sets the accessPackageAssignmentResourceRoles property value. The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      * @param value Value to set for the accessPackageAssignmentResourceRoles property.
      */
     public void setAccessPackageAssignmentResourceRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
-        this.accessPackageAssignmentResourceRoles = value;
+        this.BackingStore.set("accessPackageAssignmentResourceRoles", value);
     }
     /**
      * Sets the accessPackageId property value. The identifier of the access package. Read-only.
      * @param value Value to set for the accessPackageId property.
      */
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
-        this.accessPackageId = value;
+        this.BackingStore.set("accessPackageId", value);
     }
     /**
      * Sets the assignmentPolicyId property value. The identifier of the access package assignment policy. Read-only.
      * @param value Value to set for the assignmentPolicyId property.
      */
     public void setAssignmentPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.assignmentPolicyId = value;
+        this.BackingStore.set("assignmentPolicyId", value);
     }
     /**
      * Sets the assignmentState property value. The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
      * @param value Value to set for the assignmentState property.
      */
     public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
-        this.assignmentState = value;
+        this.BackingStore.set("assignmentState", value);
     }
     /**
      * Sets the assignmentStatus property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      * @param value Value to set for the assignmentStatus property.
      */
     public void setAssignmentStatus(@jakarta.annotation.Nullable final String value) {
-        this.assignmentStatus = value;
+        this.BackingStore.set("assignmentStatus", value);
     }
     /**
      * Sets the catalogId property value. The identifier of the catalog containing the access package. Read-only.
      * @param value Value to set for the catalogId property.
      */
     public void setCatalogId(@jakarta.annotation.Nullable final String value) {
-        this.catalogId = value;
+        this.BackingStore.set("catalogId", value);
     }
     /**
      * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param value Value to set for the customExtensionCalloutInstances property.
      */
     public void setCustomExtensionCalloutInstances(@jakarta.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
-        this.customExtensionCalloutInstances = value;
+        this.BackingStore.set("customExtensionCalloutInstances", value);
     }
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expiredDateTime property.
      */
     public void setExpiredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiredDateTime = value;
+        this.BackingStore.set("expiredDateTime", value);
     }
     /**
      * Sets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
      * @param value Value to set for the isExtended property.
      */
     public void setIsExtended(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExtended = value;
+        this.BackingStore.set("isExtended", value);
     }
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final AccessPackageSubject value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
     /**
      * Sets the targetId property value. The ID of the subject with the assignment. Read-only.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {
-        this.targetId = value;
+        this.BackingStore.set("targetId", value);
     }
 }

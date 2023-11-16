@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StandardWebPart extends WebPart implements Parsable {
     /**
-     * The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
-     */
-    private String containerTextWebPartId;
-    /**
-     * Data of the webPart.
-     */
-    private WebPartData data;
-    /**
-     * A Guid that indicates the webPart type.
-     */
-    private String webPartType;
-    /**
-     * Instantiates a new standardWebPart and sets the default values.
+     * Instantiates a new StandardWebPart and sets the default values.
      */
     public StandardWebPart() {
         super();
@@ -30,7 +18,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a standardWebPart
+     * @return a StandardWebPart
      */
     @jakarta.annotation.Nonnull
     public static StandardWebPart createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainerTextWebPartId() {
-        return this.containerTextWebPartId;
+        return this.BackingStore.get("containerTextWebPartId");
     }
     /**
      * Gets the data property value. Data of the webPart.
-     * @return a webPartData
+     * @return a WebPartData
      */
     @jakarta.annotation.Nullable
     public WebPartData getData() {
-        return this.data;
+        return this.BackingStore.get("data");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the webPartType property value. A Guid that indicates the webPart type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebPartType() {
-        return this.webPartType;
+        return this.BackingStore.get("webPartType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class StandardWebPart extends WebPart implements Parsable {
      * @param value Value to set for the containerTextWebPartId property.
      */
     public void setContainerTextWebPartId(@jakarta.annotation.Nullable final String value) {
-        this.containerTextWebPartId = value;
+        this.BackingStore.set("containerTextWebPartId", value);
     }
     /**
      * Sets the data property value. Data of the webPart.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final WebPartData value) {
-        this.data = value;
+        this.BackingStore.set("data", value);
     }
     /**
      * Sets the webPartType property value. A Guid that indicates the webPart type.
      * @param value Value to set for the webPartType property.
      */
     public void setWebPartType(@jakarta.annotation.Nullable final String value) {
-        this.webPartType = value;
+        this.BackingStore.set("webPartType", value);
     }
 }

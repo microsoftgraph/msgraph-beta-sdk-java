@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BranchSiteCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BranchSite> value;
-    /**
-     * Instantiates a new branchSiteCollectionResponse and sets the default values.
+     * Instantiates a new BranchSiteCollectionResponse and sets the default values.
      */
     public BranchSiteCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class BranchSiteCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a branchSiteCollectionResponse
+     * @return a BranchSiteCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BranchSiteCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class BranchSiteCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a branchSite
+     * @return a java.util.List<BranchSite>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BranchSite> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class BranchSiteCollectionResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BranchSite> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

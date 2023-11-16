@@ -11,39 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLink extends Entity implements Parsable {
     /**
-     * Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     */
-    private BandwidthCapacityInMbps bandwidthCapacityInMbps;
-    /**
-     * The bgpConfiguration property
-     */
-    private BgpConfiguration bgpConfiguration;
-    /**
-     * The deviceVendor property
-     */
-    private DeviceVendor deviceVendor;
-    /**
-     * Specifies the client IPv4 of the link
-     */
-    private String ipAddress;
-    /**
-     * last modified time.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Name.
-     */
-    private String name;
-    /**
-     * The redundancyConfiguration property
-     */
-    private RedundancyConfiguration redundancyConfiguration;
-    /**
-     * The tunnelConfiguration property
-     */
-    private TunnelConfiguration tunnelConfiguration;
-    /**
-     * Instantiates a new deviceLink and sets the default values.
+     * Instantiates a new DeviceLink and sets the default values.
      */
     public DeviceLink() {
         super();
@@ -51,7 +19,7 @@ public class DeviceLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLink
+     * @return a DeviceLink
      */
     @jakarta.annotation.Nonnull
     public static DeviceLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,27 +28,27 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     * @return a bandwidthCapacityInMbps
+     * @return a BandwidthCapacityInMbps
      */
     @jakarta.annotation.Nullable
     public BandwidthCapacityInMbps getBandwidthCapacityInMbps() {
-        return this.bandwidthCapacityInMbps;
+        return this.BackingStore.get("bandwidthCapacityInMbps");
     }
     /**
      * Gets the bgpConfiguration property value. The bgpConfiguration property
-     * @return a bgpConfiguration
+     * @return a BgpConfiguration
      */
     @jakarta.annotation.Nullable
     public BgpConfiguration getBgpConfiguration() {
-        return this.bgpConfiguration;
+        return this.BackingStore.get("bgpConfiguration");
     }
     /**
      * Gets the deviceVendor property value. The deviceVendor property
-     * @return a deviceVendor
+     * @return a DeviceVendor
      */
     @jakarta.annotation.Nullable
     public DeviceVendor getDeviceVendor() {
-        return this.deviceVendor;
+        return this.BackingStore.get("deviceVendor");
     }
     /**
      * The deserialization information for the current model
@@ -101,11 +69,11 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Specifies the client IPv4 of the link
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the lastModifiedDateTime property value. last modified time.
@@ -113,31 +81,31 @@ public class DeviceLink extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the redundancyConfiguration property value. The redundancyConfiguration property
-     * @return a redundancyConfiguration
+     * @return a RedundancyConfiguration
      */
     @jakarta.annotation.Nullable
     public RedundancyConfiguration getRedundancyConfiguration() {
-        return this.redundancyConfiguration;
+        return this.BackingStore.get("redundancyConfiguration");
     }
     /**
      * Gets the tunnelConfiguration property value. The tunnelConfiguration property
-     * @return a tunnelConfiguration
+     * @return a TunnelConfiguration
      */
     @jakarta.annotation.Nullable
     public TunnelConfiguration getTunnelConfiguration() {
-        return this.tunnelConfiguration;
+        return this.BackingStore.get("tunnelConfiguration");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the bandwidthCapacityInMbps property.
      */
     public void setBandwidthCapacityInMbps(@jakarta.annotation.Nullable final BandwidthCapacityInMbps value) {
-        this.bandwidthCapacityInMbps = value;
+        this.BackingStore.set("bandwidthCapacityInMbps", value);
     }
     /**
      * Sets the bgpConfiguration property value. The bgpConfiguration property
      * @param value Value to set for the bgpConfiguration property.
      */
     public void setBgpConfiguration(@jakarta.annotation.Nullable final BgpConfiguration value) {
-        this.bgpConfiguration = value;
+        this.BackingStore.set("bgpConfiguration", value);
     }
     /**
      * Sets the deviceVendor property value. The deviceVendor property
      * @param value Value to set for the deviceVendor property.
      */
     public void setDeviceVendor(@jakarta.annotation.Nullable final DeviceVendor value) {
-        this.deviceVendor = value;
+        this.BackingStore.set("deviceVendor", value);
     }
     /**
      * Sets the ipAddress property value. Specifies the client IPv4 of the link
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. last modified time.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. Name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the redundancyConfiguration property value. The redundancyConfiguration property
      * @param value Value to set for the redundancyConfiguration property.
      */
     public void setRedundancyConfiguration(@jakarta.annotation.Nullable final RedundancyConfiguration value) {
-        this.redundancyConfiguration = value;
+        this.BackingStore.set("redundancyConfiguration", value);
     }
     /**
      * Sets the tunnelConfiguration property value. The tunnelConfiguration property
      * @param value Value to set for the tunnelConfiguration property.
      */
     public void setTunnelConfiguration(@jakarta.annotation.Nullable final TunnelConfiguration value) {
-        this.tunnelConfiguration = value;
+        this.BackingStore.set("tunnelConfiguration", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,49 +14,22 @@ import java.util.Objects;
  * Request for assignment filter evaluation for devices.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Parsable {
+public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Order the devices should be sorted in. Default is ascending on device name.
-     */
-    private java.util.List<String> orderBy;
-    /**
-     * Supported platform types.
-     */
-    private DevicePlatformType platform;
-    /**
-     * Rule definition of the Assignment Filter.
-     */
-    private String rule;
-    /**
-     * Search keyword applied to scope found devices.
-     */
-    private String search;
-    /**
-     * Number of records to skip. Default value is 0
-     */
-    private Integer skip;
-    /**
-     * Limit of records per request. Default value is 100, if provided less than 0 or greater than 100
-     */
-    private Integer top;
-    /**
-     * Instantiates a new assignmentFilterEvaluateRequest and sets the default values.
+     * Instantiates a new AssignmentFilterEvaluateRequest and sets the default values.
      */
     public AssignmentFilterEvaluateRequest() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignmentFilterEvaluateRequest
+     * @return a AssignmentFilterEvaluateRequest
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterEvaluateRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,12 +37,25 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         return new AssignmentFilterEvaluateRequest();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -86,59 +75,59 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the orderBy property value. Order the devices should be sorted in. Default is ascending on device name.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
-        return this.orderBy;
+        return this.BackingStore.get("orderBy");
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
-        return this.platform;
+        return this.BackingStore.get("platform");
     }
     /**
      * Gets the rule property value. Rule definition of the Assignment Filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRule() {
-        return this.rule;
+        return this.BackingStore.get("rule");
     }
     /**
      * Gets the search property value. Search keyword applied to scope found devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
-        return this.search;
+        return this.BackingStore.get("search");
     }
     /**
      * Gets the skip property value. Number of records to skip. Default value is 0
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
-        return this.skip;
+        return this.BackingStore.get("skip");
     }
     /**
      * Gets the top property value. Limit of records per request. Default value is 100, if provided less than 0 or greater than 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
-        return this.top;
+        return this.BackingStore.get("top");
     }
     /**
      * Serializes information the current object
@@ -156,59 +145,67 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the orderBy property value. Order the devices should be sorted in. Default is ascending on device name.
      * @param value Value to set for the orderBy property.
      */
     public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.orderBy = value;
+        this.BackingStore.set("orderBy", value);
     }
     /**
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
-        this.platform = value;
+        this.BackingStore.set("platform", value);
     }
     /**
      * Sets the rule property value. Rule definition of the Assignment Filter.
      * @param value Value to set for the rule property.
      */
     public void setRule(@jakarta.annotation.Nullable final String value) {
-        this.rule = value;
+        this.BackingStore.set("rule", value);
     }
     /**
      * Sets the search property value. Search keyword applied to scope found devices.
      * @param value Value to set for the search property.
      */
     public void setSearch(@jakarta.annotation.Nullable final String value) {
-        this.search = value;
+        this.BackingStore.set("search", value);
     }
     /**
      * Sets the skip property value. Number of records to skip. Default value is 0
      * @param value Value to set for the skip property.
      */
     public void setSkip(@jakarta.annotation.Nullable final Integer value) {
-        this.skip = value;
+        this.BackingStore.set("skip", value);
     }
     /**
      * Sets the top property value. Limit of records per request. Default value is 100, if provided less than 0 or greater than 100
      * @param value Value to set for the top property.
      */
     public void setTop(@jakarta.annotation.Nullable final Integer value) {
-        this.top = value;
+        this.BackingStore.set("top", value);
     }
 }

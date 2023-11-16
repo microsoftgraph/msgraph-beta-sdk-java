@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintOperation extends Entity implements Parsable {
     /**
-     * The DateTimeOffset when the operation was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The status property
-     */
-    private PrintOperationStatus status;
-    /**
-     * Instantiates a new printOperation and sets the default values.
+     * Instantiates a new PrintOperation and sets the default values.
      */
     public PrintOperation() {
         super();
@@ -26,7 +18,7 @@ public class PrintOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printOperation
+     * @return a PrintOperation
      */
     @jakarta.annotation.Nonnull
     public static PrintOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +38,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -61,11 +53,11 @@ public class PrintOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a printOperationStatus
+     * @return a PrintOperationStatus
      */
     @jakarta.annotation.Nullable
     public PrintOperationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -82,13 +74,13 @@ public class PrintOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PrintOperationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChatInfo implements AdditionalDataHolder, Parsable {
+public class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The unique identifier for a message in a Microsoft Teams channel.
-     */
-    private String messageId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of the reply message.
-     */
-    private String replyChainMessageId;
-    /**
-     * The unique identifier for a thread in Microsoft Teams.
-     */
-    private String threadId;
-    /**
-     * Instantiates a new chatInfo and sets the default values.
+     * Instantiates a new ChatInfo and sets the default values.
      */
     public ChatInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatInfo
+     * @return a ChatInfo
      */
     @jakarta.annotation.Nonnull
     public static ChatInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         return new ChatInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
-        return this.messageId;
+        return this.BackingStore.get("messageId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the replyChainMessageId property value. The ID of the reply message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReplyChainMessageId() {
-        return this.replyChainMessageId;
+        return this.BackingStore.get("replyChainMessageId");
     }
     /**
      * Gets the threadId property value. The unique identifier for a thread in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThreadId() {
-        return this.threadId;
+        return this.BackingStore.get("threadId");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
      * @param value Value to set for the messageId property.
      */
     public void setMessageId(@jakarta.annotation.Nullable final String value) {
-        this.messageId = value;
+        this.BackingStore.set("messageId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the replyChainMessageId property value. The ID of the reply message.
      * @param value Value to set for the replyChainMessageId property.
      */
     public void setReplyChainMessageId(@jakarta.annotation.Nullable final String value) {
-        this.replyChainMessageId = value;
+        this.BackingStore.set("replyChainMessageId", value);
     }
     /**
      * Sets the threadId property value. The unique identifier for a thread in Microsoft Teams.
      * @param value Value to set for the threadId property.
      */
     public void setThreadId(@jakarta.annotation.Nullable final String value) {
-        this.threadId = value;
+        this.BackingStore.set("threadId", value);
     }
 }

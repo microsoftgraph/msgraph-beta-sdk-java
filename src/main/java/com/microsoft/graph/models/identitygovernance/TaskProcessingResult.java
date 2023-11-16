@@ -12,35 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskProcessingResult extends Entity implements Parsable {
     /**
-     * The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Describes why the taskProcessingResult has failed.
-     */
-    private String failureReason;
-    /**
-     * The processingStatus property
-     */
-    private LifecycleWorkflowProcessingStatus processingStatus;
-    /**
-     * The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime startedDateTime;
-    /**
-     * The subject property
-     */
-    private User subject;
-    /**
-     * The task property
-     */
-    private Task task;
-    /**
-     * Instantiates a new taskProcessingResult and sets the default values.
+     * Instantiates a new TaskProcessingResult and sets the default values.
      */
     public TaskProcessingResult() {
         super();
@@ -48,7 +20,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a taskProcessingResult
+     * @return a TaskProcessingResult
      */
     @jakarta.annotation.Nonnull
     public static TaskProcessingResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +33,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * Gets the createdDateTime property value. The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -69,15 +41,15 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the failureReason property value. Describes why the taskProcessingResult has failed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
-        return this.failureReason;
+        return this.BackingStore.get("failureReason");
     }
     /**
      * The deserialization information for the current model
@@ -97,11 +69,11 @@ public class TaskProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a lifecycleWorkflowProcessingStatus
+     * @return a LifecycleWorkflowProcessingStatus
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
-        return this.processingStatus;
+        return this.BackingStore.get("processingStatus");
     }
     /**
      * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -109,23 +81,23 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.BackingStore.get("startedDateTime");
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the task property value. The task property
-     * @return a task
+     * @return a Task
      */
     @jakarta.annotation.Nullable
     public Task getTask() {
-        return this.task;
+        return this.BackingStore.get("task");
     }
     /**
      * Serializes information the current object
@@ -147,48 +119,48 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the failureReason property value. Describes why the taskProcessingResult has failed.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
-        this.failureReason = value;
+        this.BackingStore.set("failureReason", value);
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
      */
     public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
-        this.processingStatus = value;
+        this.BackingStore.set("processingStatus", value);
     }
     /**
      * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.BackingStore.set("startedDateTime", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final User value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
      */
     public void setTask(@jakarta.annotation.Nullable final Task value) {
-        this.task = value;
+        this.BackingStore.set("task", value);
     }
 }

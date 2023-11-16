@@ -11,27 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdatePolicy extends Entity implements Parsable {
     /**
-     * Specifies the audience to target.
-     */
-    private DeploymentAudience audience;
-    /**
-     * Rules for governing the automatic creation of compliance changes.
-     */
-    private java.util.List<ComplianceChangeRule> complianceChangeRules;
-    /**
-     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
-     */
-    private java.util.List<ComplianceChange> complianceChanges;
-    /**
-     * The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Settings for governing how to deploy content.
-     */
-    private DeploymentSettings deploymentSettings;
-    /**
-     * Instantiates a new updatePolicy and sets the default values.
+     * Instantiates a new UpdatePolicy and sets the default values.
      */
     public UpdatePolicy() {
         super();
@@ -39,7 +19,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatePolicy
+     * @return a UpdatePolicy
      */
     @jakarta.annotation.Nonnull
     public static UpdatePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,27 +28,27 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Specifies the audience to target.
-     * @return a deploymentAudience
+     * @return a DeploymentAudience
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
-        return this.audience;
+        return this.BackingStore.get("audience");
     }
     /**
      * Gets the complianceChangeRules property value. Rules for governing the automatic creation of compliance changes.
-     * @return a complianceChangeRule
+     * @return a java.util.List<ComplianceChangeRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceChangeRule> getComplianceChangeRules() {
-        return this.complianceChangeRules;
+        return this.BackingStore.get("complianceChangeRules");
     }
     /**
      * Gets the complianceChanges property value. Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
-     * @return a complianceChange
+     * @return a java.util.List<ComplianceChange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceChange> getComplianceChanges() {
-        return this.complianceChanges;
+        return this.BackingStore.get("complianceChanges");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -76,15 +56,15 @@ public class UpdatePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the deploymentSettings property value. Settings for governing how to deploy content.
-     * @return a deploymentSettings
+     * @return a DeploymentSettings
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getDeploymentSettings() {
-        return this.deploymentSettings;
+        return this.BackingStore.get("deploymentSettings");
     }
     /**
      * The deserialization information for the current model
@@ -118,34 +98,34 @@ public class UpdatePolicy extends Entity implements Parsable {
      * @param value Value to set for the audience property.
      */
     public void setAudience(@jakarta.annotation.Nullable final DeploymentAudience value) {
-        this.audience = value;
+        this.BackingStore.set("audience", value);
     }
     /**
      * Sets the complianceChangeRules property value. Rules for governing the automatic creation of compliance changes.
      * @param value Value to set for the complianceChangeRules property.
      */
     public void setComplianceChangeRules(@jakarta.annotation.Nullable final java.util.List<ComplianceChangeRule> value) {
-        this.complianceChangeRules = value;
+        this.BackingStore.set("complianceChangeRules", value);
     }
     /**
      * Sets the complianceChanges property value. Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @param value Value to set for the complianceChanges property.
      */
     public void setComplianceChanges(@jakarta.annotation.Nullable final java.util.List<ComplianceChange> value) {
-        this.complianceChanges = value;
+        this.BackingStore.set("complianceChanges", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deploymentSettings property value. Settings for governing how to deploy content.
      * @param value Value to set for the deploymentSettings property.
      */
     public void setDeploymentSettings(@jakarta.annotation.Nullable final DeploymentSettings value) {
-        this.deploymentSettings = value;
+        this.BackingStore.set("deploymentSettings", value);
     }
 }

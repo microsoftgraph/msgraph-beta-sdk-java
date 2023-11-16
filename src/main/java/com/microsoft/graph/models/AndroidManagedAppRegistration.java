@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedAppRegistration extends ManagedAppRegistration implements Parsable {
     /**
-     * The patch version for the current android app registration
-     */
-    private String patchVersion;
-    /**
-     * Instantiates a new androidManagedAppRegistration and sets the default values.
+     * Instantiates a new AndroidManagedAppRegistration and sets the default values.
      */
     public AndroidManagedAppRegistration() {
         super();
@@ -25,7 +21,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedAppRegistration
+     * @return a AndroidManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedAppRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
     }
     /**
      * Gets the patchVersion property value. The patch version for the current android app registration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPatchVersion() {
-        return this.patchVersion;
+        return this.BackingStore.get("patchVersion");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      * @param value Value to set for the patchVersion property.
      */
     public void setPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.patchVersion = value;
+        this.BackingStore.set("patchVersion", value);
     }
 }

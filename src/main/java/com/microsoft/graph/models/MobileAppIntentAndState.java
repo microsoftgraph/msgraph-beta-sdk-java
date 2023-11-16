@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppIntentAndState extends Entity implements Parsable {
     /**
-     * Device identifier created or collected by Intune.
-     */
-    private String managedDeviceIdentifier;
-    /**
-     * The list of payload intents and states for the tenant.
-     */
-    private java.util.List<MobileAppIntentAndStateDetail> mobileAppList;
-    /**
-     * Identifier for the user that tried to enroll the device.
-     */
-    private String userId;
-    /**
-     * Instantiates a new mobileAppIntentAndState and sets the default values.
+     * Instantiates a new MobileAppIntentAndState and sets the default values.
      */
     public MobileAppIntentAndState() {
         super();
@@ -32,7 +20,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppIntentAndState
+     * @return a MobileAppIntentAndState
      */
     @jakarta.annotation.Nonnull
     public static MobileAppIntentAndState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +41,27 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceIdentifier() {
-        return this.managedDeviceIdentifier;
+        return this.BackingStore.get("managedDeviceIdentifier");
     }
     /**
      * Gets the mobileAppList property value. The list of payload intents and states for the tenant.
-     * @return a mobileAppIntentAndStateDetail
+     * @return a java.util.List<MobileAppIntentAndStateDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppIntentAndStateDetail> getMobileAppList() {
-        return this.mobileAppList;
+        return this.BackingStore.get("mobileAppList");
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceIdentifier property.
      */
     public void setManagedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceIdentifier = value;
+        this.BackingStore.set("managedDeviceIdentifier", value);
     }
     /**
      * Sets the mobileAppList property value. The list of payload intents and states for the tenant.
      * @param value Value to set for the mobileAppList property.
      */
     public void setMobileAppList(@jakarta.annotation.Nullable final java.util.List<MobileAppIntentAndStateDetail> value) {
-        this.mobileAppList = value;
+        this.BackingStore.set("mobileAppList", value);
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

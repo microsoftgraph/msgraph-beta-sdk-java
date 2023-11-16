@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisHistoryRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WhoisHistoryRecord> value;
-    /**
-     * Instantiates a new whoisHistoryRecordCollectionResponse and sets the default values.
+     * Instantiates a new WhoisHistoryRecordCollectionResponse and sets the default values.
      */
     public WhoisHistoryRecordCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class WhoisHistoryRecordCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a whoisHistoryRecordCollectionResponse
+     * @return a WhoisHistoryRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WhoisHistoryRecordCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class WhoisHistoryRecordCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a whoisHistoryRecord
+     * @return a java.util.List<WhoisHistoryRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisHistoryRecord> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WhoisHistoryRecordCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WhoisHistoryRecord> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationJob extends Entity implements Parsable {
     /**
-     * The bulk upload operation for the job.
-     */
-    private BulkUpload bulkUpload;
-    /**
-     * Schedule used to run the job. Read-only.
-     */
-    private SynchronizationSchedule schedule;
-    /**
-     * The synchronization schema configured for the job.
-     */
-    private SynchronizationSchema schema;
-    /**
-     * Status of the job, which includes when the job was last run, current job state, and errors.
-     */
-    private SynchronizationStatus status;
-    /**
-     * Settings associated with the job. Some settings are inherited from the template.
-     */
-    private java.util.List<KeyValuePair> synchronizationJobSettings;
-    /**
-     * Identifier of the synchronization template this job is based on.
-     */
-    private String templateId;
-    /**
-     * Instantiates a new synchronizationJob and sets the default values.
+     * Instantiates a new SynchronizationJob and sets the default values.
      */
     public SynchronizationJob() {
         super();
@@ -41,7 +17,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationJob
+     * @return a SynchronizationJob
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +26,11 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the bulkUpload property value. The bulk upload operation for the job.
-     * @return a bulkUpload
+     * @return a BulkUpload
      */
     @jakarta.annotation.Nullable
     public BulkUpload getBulkUpload() {
-        return this.bulkUpload;
+        return this.BackingStore.get("bulkUpload");
     }
     /**
      * The deserialization information for the current model
@@ -73,43 +49,43 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. Schedule used to run the job. Read-only.
-     * @return a synchronizationSchedule
+     * @return a SynchronizationSchedule
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchedule getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the schema property value. The synchronization schema configured for the job.
-     * @return a synchronizationSchema
+     * @return a SynchronizationSchema
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {
-        return this.schema;
+        return this.BackingStore.get("schema");
     }
     /**
      * Gets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
-     * @return a synchronizationStatus
+     * @return a SynchronizationStatus
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getSynchronizationJobSettings() {
-        return this.synchronizationJobSettings;
+        return this.BackingStore.get("synchronizationJobSettings");
     }
     /**
      * Gets the templateId property value. Identifier of the synchronization template this job is based on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.BackingStore.get("templateId");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the bulkUpload property.
      */
     public void setBulkUpload(@jakarta.annotation.Nullable final BulkUpload value) {
-        this.bulkUpload = value;
+        this.BackingStore.set("bulkUpload", value);
     }
     /**
      * Sets the schedule property value. Schedule used to run the job. Read-only.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final SynchronizationSchedule value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the schema property value. The synchronization schema configured for the job.
      * @param value Value to set for the schema property.
      */
     public void setSchema(@jakarta.annotation.Nullable final SynchronizationSchema value) {
-        this.schema = value;
+        this.BackingStore.set("schema", value);
     }
     /**
      * Sets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SynchronizationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @param value Value to set for the synchronizationJobSettings property.
      */
     public void setSynchronizationJobSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.synchronizationJobSettings = value;
+        this.BackingStore.set("synchronizationJobSettings", value);
     }
     /**
      * Sets the templateId property value. Identifier of the synchronization template this job is based on.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.BackingStore.set("templateId", value);
     }
 }

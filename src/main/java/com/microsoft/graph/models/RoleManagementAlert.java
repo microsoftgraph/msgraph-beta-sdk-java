@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleManagementAlert extends Entity implements Parsable {
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
-     */
-    private java.util.List<UnifiedRoleManagementAlertConfiguration> alertConfigurations;
-    /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
-     */
-    private java.util.List<UnifiedRoleManagementAlertDefinition> alertDefinitions;
-    /**
-     * Represents the alert entity.
-     */
-    private java.util.List<UnifiedRoleManagementAlert> alerts;
-    /**
-     * Represents operations on resources that take a long time to complete and can run in the background until completion.
-     */
-    private java.util.List<LongRunningOperation> operations;
-    /**
-     * Instantiates a new roleManagementAlert and sets the default values.
+     * Instantiates a new RoleManagementAlert and sets the default values.
      */
     public RoleManagementAlert() {
         super();
@@ -33,7 +17,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleManagementAlert
+     * @return a RoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public static RoleManagementAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,28 +25,28 @@ public class RoleManagementAlert extends Entity implements Parsable {
         return new RoleManagementAlert();
     }
     /**
-     * Gets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
-     * @return a unifiedRoleManagementAlertConfiguration
+     * Gets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+     * @return a java.util.List<UnifiedRoleManagementAlertConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertConfiguration> getAlertConfigurations() {
-        return this.alertConfigurations;
+        return this.BackingStore.get("alertConfigurations");
     }
     /**
      * Gets the alertDefinitions property value. Defines an alert, its impact, and measures to mitigate or prevent it.
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a java.util.List<UnifiedRoleManagementAlertDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertDefinition> getAlertDefinitions() {
-        return this.alertDefinitions;
+        return this.BackingStore.get("alertDefinitions");
     }
     /**
      * Gets the alerts property value. Represents the alert entity.
-     * @return a unifiedRoleManagementAlert
+     * @return a java.util.List<UnifiedRoleManagementAlert>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlert> getAlerts() {
-        return this.alerts;
+        return this.BackingStore.get("alerts");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +63,11 @@ public class RoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Represents operations on resources that take a long time to complete and can run in the background until completion.
-     * @return a longRunningOperation
+     * @return a java.util.List<LongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Serializes information the current object
@@ -98,31 +82,31 @@ public class RoleManagementAlert extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
     }
     /**
-     * Sets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+     * Sets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @param value Value to set for the alertConfigurations property.
      */
     public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertConfiguration> value) {
-        this.alertConfigurations = value;
+        this.BackingStore.set("alertConfigurations", value);
     }
     /**
      * Sets the alertDefinitions property value. Defines an alert, its impact, and measures to mitigate or prevent it.
      * @param value Value to set for the alertDefinitions property.
      */
     public void setAlertDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertDefinition> value) {
-        this.alertDefinitions = value;
+        this.BackingStore.set("alertDefinitions", value);
     }
     /**
      * Sets the alerts property value. Represents the alert entity.
      * @param value Value to set for the alerts property.
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlert> value) {
-        this.alerts = value;
+        this.BackingStore.set("alerts", value);
     }
     /**
      * Sets the operations property value. Represents operations on resources that take a long time to complete and can run in the background until completion.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
 }

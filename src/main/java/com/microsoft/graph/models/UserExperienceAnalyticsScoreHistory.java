@@ -13,11 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsable {
     /**
-     * The device startup date time. The value cannot be modified and is automatically populated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
-     */
-    private OffsetDateTime startupDateTime;
-    /**
-     * Instantiates a new userExperienceAnalyticsScoreHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsScoreHistory and sets the default values.
      */
     public UserExperienceAnalyticsScoreHistory() {
         super();
@@ -25,7 +21,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsScoreHistory
+     * @return a UserExperienceAnalyticsScoreHistory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsScoreHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +44,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartupDateTime() {
-        return this.startupDateTime;
+        return this.BackingStore.get("startupDateTime");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * @param value Value to set for the startupDateTime property.
      */
     public void setStartupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startupDateTime = value;
+        this.BackingStore.set("startupDateTime", value);
     }
 }

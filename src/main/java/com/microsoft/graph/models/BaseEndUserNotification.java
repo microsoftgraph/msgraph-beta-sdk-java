@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
+public class BaseEndUserNotification implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The defaultLanguage property
-     */
-    private String defaultLanguage;
-    /**
-     * The endUserNotification property
-     */
-    private EndUserNotification endUserNotification;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new baseEndUserNotification and sets the default values.
+     * Instantiates a new BaseEndUserNotification and sets the default values.
      */
     public BaseEndUserNotification() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a baseEndUserNotification
+     * @return a BaseEndUserNotification
      */
     @jakarta.annotation.Nonnull
     public static BaseEndUserNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,28 +43,41 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         return new BaseEndUserNotification();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the defaultLanguage property value. The defaultLanguage property
-     * @return a string
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
+    }
+    /**
+     * Gets the defaultLanguage property value. The default language for the end user notification.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
-        return this.defaultLanguage;
+        return this.BackingStore.get("defaultLanguage");
     }
     /**
      * Gets the endUserNotification property value. The endUserNotification property
-     * @return a endUserNotification
+     * @return a EndUserNotification
      */
     @jakarta.annotation.Nullable
     public EndUserNotification getEndUserNotification() {
-        return this.endUserNotification;
+        return this.BackingStore.get("endUserNotification");
     }
     /**
      * The deserialization information for the current model
@@ -88,11 +93,11 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -106,31 +111,39 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
-     * Sets the defaultLanguage property value. The defaultLanguage property
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
+    }
+    /**
+     * Sets the defaultLanguage property value. The default language for the end user notification.
      * @param value Value to set for the defaultLanguage property.
      */
     public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {
-        this.defaultLanguage = value;
+        this.BackingStore.set("defaultLanguage", value);
     }
     /**
      * Sets the endUserNotification property value. The endUserNotification property
      * @param value Value to set for the endUserNotification property.
      */
     public void setEndUserNotification(@jakarta.annotation.Nullable final EndUserNotification value) {
-        this.endUserNotification = value;
+        this.BackingStore.set("endUserNotification", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

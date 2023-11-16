@@ -12,75 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
-     */
-    private Long backgroundDownloadFromHttpDelayInSeconds;
-    /**
-     * Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
-     */
-    private DeliveryOptimizationBandwidth bandwidthMode;
-    /**
-     * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
-     */
-    private Integer cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
-    /**
-     * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
-     */
-    private Integer cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
-    /**
-     * Specifies cache servers host names.
-     */
-    private java.util.List<String> cacheServerHostNames;
-    /**
-     * Delivery optimization mode for peer distribution
-     */
-    private WindowsDeliveryOptimizationMode deliveryOptimizationMode;
-    /**
-     * Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
-     */
-    private Long foregroundDownloadFromHttpDelayInSeconds;
-    /**
-     * Specifies to restrict peer selection to a specfic source.
-     */
-    private DeliveryOptimizationGroupIdSource groupIdSource;
-    /**
-     * Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
-     */
-    private Integer maximumCacheAgeInDays;
-    /**
-     * Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
-     */
-    private DeliveryOptimizationMaxCacheSize maximumCacheSize;
-    /**
-     * Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
-     */
-    private Integer minimumBatteryPercentageAllowedToUpload;
-    /**
-     * Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     */
-    private Integer minimumDiskSizeAllowedToPeerInGigabytes;
-    /**
-     * Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
-     */
-    private Integer minimumFileSizeToCacheInMegabytes;
-    /**
-     * Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     */
-    private Integer minimumRamAllowedToPeerInGigabytes;
-    /**
-     * Specifies the drive that Delivery Optimization should use for its cache.
-     */
-    private String modifyCacheLocation;
-    /**
-     * Values to restrict peer selection by.
-     */
-    private DeliveryOptimizationRestrictPeerSelectionByOptions restrictPeerSelectionBy;
-    /**
-     * Possible values of a property
-     */
-    private Enablement vpnPeerCaching;
-    /**
-     * Instantiates a new windowsDeliveryOptimizationConfiguration and sets the default values.
+     * Instantiates a new WindowsDeliveryOptimizationConfiguration and sets the default values.
      */
     public WindowsDeliveryOptimizationConfiguration() {
         super();
@@ -89,7 +21,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDeliveryOptimizationConfiguration
+     * @return a WindowsDeliveryOptimizationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsDeliveryOptimizationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,51 +30,51 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the backgroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getBackgroundDownloadFromHttpDelayInSeconds() {
-        return this.backgroundDownloadFromHttpDelayInSeconds;
+        return this.BackingStore.get("backgroundDownloadFromHttpDelayInSeconds");
     }
     /**
      * Gets the bandwidthMode property value. Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
-     * @return a deliveryOptimizationBandwidth
+     * @return a DeliveryOptimizationBandwidth
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationBandwidth getBandwidthMode() {
-        return this.bandwidthMode;
+        return this.BackingStore.get("bandwidthMode");
     }
     /**
      * Gets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds() {
-        return this.cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
+        return this.BackingStore.get("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds");
     }
     /**
      * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCacheServerForegroundDownloadFallbackToHttpDelayInSeconds() {
-        return this.cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
+        return this.BackingStore.get("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds");
     }
     /**
      * Gets the cacheServerHostNames property value. Specifies cache servers host names.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCacheServerHostNames() {
-        return this.cacheServerHostNames;
+        return this.BackingStore.get("cacheServerHostNames");
     }
     /**
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     * @return a windowsDeliveryOptimizationMode
+     * @return a WindowsDeliveryOptimizationMode
      */
     @jakarta.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
-        return this.deliveryOptimizationMode;
+        return this.BackingStore.get("deliveryOptimizationMode");
     }
     /**
      * The deserialization information for the current model
@@ -172,91 +104,91 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the foregroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getForegroundDownloadFromHttpDelayInSeconds() {
-        return this.foregroundDownloadFromHttpDelayInSeconds;
+        return this.BackingStore.get("foregroundDownloadFromHttpDelayInSeconds");
     }
     /**
      * Gets the groupIdSource property value. Specifies to restrict peer selection to a specfic source.
-     * @return a deliveryOptimizationGroupIdSource
+     * @return a DeliveryOptimizationGroupIdSource
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationGroupIdSource getGroupIdSource() {
-        return this.groupIdSource;
+        return this.BackingStore.get("groupIdSource");
     }
     /**
      * Gets the maximumCacheAgeInDays property value. Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumCacheAgeInDays() {
-        return this.maximumCacheAgeInDays;
+        return this.BackingStore.get("maximumCacheAgeInDays");
     }
     /**
      * Gets the maximumCacheSize property value. Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
-     * @return a deliveryOptimizationMaxCacheSize
+     * @return a DeliveryOptimizationMaxCacheSize
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationMaxCacheSize getMaximumCacheSize() {
-        return this.maximumCacheSize;
+        return this.BackingStore.get("maximumCacheSize");
     }
     /**
      * Gets the minimumBatteryPercentageAllowedToUpload property value. Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumBatteryPercentageAllowedToUpload() {
-        return this.minimumBatteryPercentageAllowedToUpload;
+        return this.BackingStore.get("minimumBatteryPercentageAllowedToUpload");
     }
     /**
      * Gets the minimumDiskSizeAllowedToPeerInGigabytes property value. Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumDiskSizeAllowedToPeerInGigabytes() {
-        return this.minimumDiskSizeAllowedToPeerInGigabytes;
+        return this.BackingStore.get("minimumDiskSizeAllowedToPeerInGigabytes");
     }
     /**
      * Gets the minimumFileSizeToCacheInMegabytes property value. Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumFileSizeToCacheInMegabytes() {
-        return this.minimumFileSizeToCacheInMegabytes;
+        return this.BackingStore.get("minimumFileSizeToCacheInMegabytes");
     }
     /**
      * Gets the minimumRamAllowedToPeerInGigabytes property value. Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumRamAllowedToPeerInGigabytes() {
-        return this.minimumRamAllowedToPeerInGigabytes;
+        return this.BackingStore.get("minimumRamAllowedToPeerInGigabytes");
     }
     /**
      * Gets the modifyCacheLocation property value. Specifies the drive that Delivery Optimization should use for its cache.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifyCacheLocation() {
-        return this.modifyCacheLocation;
+        return this.BackingStore.get("modifyCacheLocation");
     }
     /**
      * Gets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
-     * @return a deliveryOptimizationRestrictPeerSelectionByOptions
+     * @return a DeliveryOptimizationRestrictPeerSelectionByOptions
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationRestrictPeerSelectionByOptions getRestrictPeerSelectionBy() {
-        return this.restrictPeerSelectionBy;
+        return this.BackingStore.get("restrictPeerSelectionBy");
     }
     /**
      * Gets the vpnPeerCaching property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getVpnPeerCaching() {
-        return this.vpnPeerCaching;
+        return this.BackingStore.get("vpnPeerCaching");
     }
     /**
      * Serializes information the current object
@@ -288,118 +220,118 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the backgroundDownloadFromHttpDelayInSeconds property.
      */
     public void setBackgroundDownloadFromHttpDelayInSeconds(@jakarta.annotation.Nullable final Long value) {
-        this.backgroundDownloadFromHttpDelayInSeconds = value;
+        this.BackingStore.set("backgroundDownloadFromHttpDelayInSeconds", value);
     }
     /**
      * Sets the bandwidthMode property value. Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
      * @param value Value to set for the bandwidthMode property.
      */
     public void setBandwidthMode(@jakarta.annotation.Nullable final DeliveryOptimizationBandwidth value) {
-        this.bandwidthMode = value;
+        this.BackingStore.set("bandwidthMode", value);
     }
     /**
      * Sets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property.
      */
     public void setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds = value;
+        this.BackingStore.set("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", value);
     }
     /**
      * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property.
      */
     public void setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.cacheServerForegroundDownloadFallbackToHttpDelayInSeconds = value;
+        this.BackingStore.set("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", value);
     }
     /**
      * Sets the cacheServerHostNames property value. Specifies cache servers host names.
      * @param value Value to set for the cacheServerHostNames property.
      */
     public void setCacheServerHostNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.cacheServerHostNames = value;
+        this.BackingStore.set("cacheServerHostNames", value);
     }
     /**
      * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
      */
     public void setDeliveryOptimizationMode(@jakarta.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
-        this.deliveryOptimizationMode = value;
+        this.BackingStore.set("deliveryOptimizationMode", value);
     }
     /**
      * Sets the foregroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
      * @param value Value to set for the foregroundDownloadFromHttpDelayInSeconds property.
      */
     public void setForegroundDownloadFromHttpDelayInSeconds(@jakarta.annotation.Nullable final Long value) {
-        this.foregroundDownloadFromHttpDelayInSeconds = value;
+        this.BackingStore.set("foregroundDownloadFromHttpDelayInSeconds", value);
     }
     /**
      * Sets the groupIdSource property value. Specifies to restrict peer selection to a specfic source.
      * @param value Value to set for the groupIdSource property.
      */
     public void setGroupIdSource(@jakarta.annotation.Nullable final DeliveryOptimizationGroupIdSource value) {
-        this.groupIdSource = value;
+        this.BackingStore.set("groupIdSource", value);
     }
     /**
      * Sets the maximumCacheAgeInDays property value. Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
      * @param value Value to set for the maximumCacheAgeInDays property.
      */
     public void setMaximumCacheAgeInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumCacheAgeInDays = value;
+        this.BackingStore.set("maximumCacheAgeInDays", value);
     }
     /**
      * Sets the maximumCacheSize property value. Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
      * @param value Value to set for the maximumCacheSize property.
      */
     public void setMaximumCacheSize(@jakarta.annotation.Nullable final DeliveryOptimizationMaxCacheSize value) {
-        this.maximumCacheSize = value;
+        this.BackingStore.set("maximumCacheSize", value);
     }
     /**
      * Sets the minimumBatteryPercentageAllowedToUpload property value. Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
      * @param value Value to set for the minimumBatteryPercentageAllowedToUpload property.
      */
     public void setMinimumBatteryPercentageAllowedToUpload(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumBatteryPercentageAllowedToUpload = value;
+        this.BackingStore.set("minimumBatteryPercentageAllowedToUpload", value);
     }
     /**
      * Sets the minimumDiskSizeAllowedToPeerInGigabytes property value. Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumDiskSizeAllowedToPeerInGigabytes property.
      */
     public void setMinimumDiskSizeAllowedToPeerInGigabytes(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumDiskSizeAllowedToPeerInGigabytes = value;
+        this.BackingStore.set("minimumDiskSizeAllowedToPeerInGigabytes", value);
     }
     /**
      * Sets the minimumFileSizeToCacheInMegabytes property value. Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumFileSizeToCacheInMegabytes property.
      */
     public void setMinimumFileSizeToCacheInMegabytes(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumFileSizeToCacheInMegabytes = value;
+        this.BackingStore.set("minimumFileSizeToCacheInMegabytes", value);
     }
     /**
      * Sets the minimumRamAllowedToPeerInGigabytes property value. Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumRamAllowedToPeerInGigabytes property.
      */
     public void setMinimumRamAllowedToPeerInGigabytes(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumRamAllowedToPeerInGigabytes = value;
+        this.BackingStore.set("minimumRamAllowedToPeerInGigabytes", value);
     }
     /**
      * Sets the modifyCacheLocation property value. Specifies the drive that Delivery Optimization should use for its cache.
      * @param value Value to set for the modifyCacheLocation property.
      */
     public void setModifyCacheLocation(@jakarta.annotation.Nullable final String value) {
-        this.modifyCacheLocation = value;
+        this.BackingStore.set("modifyCacheLocation", value);
     }
     /**
      * Sets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
      * @param value Value to set for the restrictPeerSelectionBy property.
      */
     public void setRestrictPeerSelectionBy(@jakarta.annotation.Nullable final DeliveryOptimizationRestrictPeerSelectionByOptions value) {
-        this.restrictPeerSelectionBy = value;
+        this.BackingStore.set("restrictPeerSelectionBy", value);
     }
     /**
      * Sets the vpnPeerCaching property value. Possible values of a property
      * @param value Value to set for the vpnPeerCaching property.
      */
     public void setVpnPeerCaching(@jakarta.annotation.Nullable final Enablement value) {
-        this.vpnPeerCaching = value;
+        this.BackingStore.set("vpnPeerCaching", value);
     }
 }

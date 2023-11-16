@@ -4,46 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ContentProperties implements AdditionalDataHolder, Parsable {
+public class ContentProperties implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The extensions property
-     */
-    private java.util.List<String> extensions;
-    /**
-     * The lastModifiedBy property
-     */
-    private String lastModifiedBy;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The metadata property
-     */
-    private ContentMetadata metadata;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new contentProperties and sets the default values.
+     * Instantiates a new ContentProperties and sets the default values.
      */
     public ContentProperties() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentProperties
+     * @return a ContentProperties
      */
     @jakarta.annotation.Nonnull
     public static ContentProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,20 +42,33 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
         return new ContentProperties();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the extensions property value. The extensions property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -89,11 +86,11 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -101,23 +98,23 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the metadata property value. The metadata property
-     * @return a contentMetadata
+     * @return a ContentMetadata
      */
     @jakarta.annotation.Nullable
     public ContentMetadata getMetadata() {
-        return this.metadata;
+        return this.BackingStore.get("metadata");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -133,45 +130,53 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the extensions property value. The extensions property
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the metadata property value. The metadata property
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final ContentMetadata value) {
-        this.metadata = value;
+        this.BackingStore.set("metadata", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

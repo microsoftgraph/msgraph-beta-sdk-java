@@ -4,50 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable {
+public class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The assignedTo property
-     */
-    private String assignedTo;
-    /**
-     * The comment property
-     */
-    private String comment;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The state property
-     */
-    private String state;
-    /**
-     * The updatedBy property
-     */
-    private String updatedBy;
-    /**
-     * The updatedDateTime property
-     */
-    private OffsetDateTime updatedDateTime;
-    /**
-     * Instantiates a new secureScoreControlStateUpdate and sets the default values.
+     * Instantiates a new SecureScoreControlStateUpdate and sets the default values.
      */
     public SecureScoreControlStateUpdate() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScoreControlStateUpdate
+     * @return a SecureScoreControlStateUpdate
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlStateUpdate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,28 +35,41 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return new SecureScoreControlStateUpdate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.BackingStore.get("assignedTo");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comment property value. The comment property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.BackingStore.get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -95,27 +88,27 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the updatedBy property value. The updatedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpdatedBy() {
-        return this.updatedBy;
+        return this.BackingStore.get("updatedBy");
     }
     /**
      * Gets the updatedDateTime property value. The updatedDateTime property
@@ -123,7 +116,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this.updatedDateTime;
+        return this.BackingStore.get("updatedDateTime");
     }
     /**
      * Serializes information the current object
@@ -140,52 +133,60 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.BackingStore.set("assignedTo", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.BackingStore.set("comment", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the updatedBy property value. The updatedBy property
      * @param value Value to set for the updatedBy property.
      */
     public void setUpdatedBy(@jakarta.annotation.Nullable final String value) {
-        this.updatedBy = value;
+        this.BackingStore.set("updatedBy", value);
     }
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.updatedDateTime = value;
+        this.BackingStore.set("updatedDateTime", value);
     }
 }

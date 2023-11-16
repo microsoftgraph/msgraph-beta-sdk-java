@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAccountUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * Microsoft Account ID of the user.
-     */
-    private String userId;
-    /**
-     * Instantiates a new microsoftAccountUserConversationMember and sets the default values.
+     * Instantiates a new MicrosoftAccountUserConversationMember and sets the default values.
      */
     public MicrosoftAccountUserConversationMember() {
         super();
@@ -22,7 +18,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAccountUserConversationMember
+     * @return a MicrosoftAccountUserConversationMember
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAccountUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     }
     /**
      * Gets the userId property value. Microsoft Account ID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
+public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The enabled property
-     */
-    private Boolean enabled;
-    /**
-     * The endpoint property
-     */
-    private String endpoint;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The provider property
-     */
-    private String provider;
-    /**
-     * The region property
-     */
-    private String region;
-    /**
-     * The vendor property
-     */
-    private String vendor;
-    /**
-     * Instantiates a new securityProviderStatus and sets the default values.
+     * Instantiates a new SecurityProviderStatus and sets the default values.
      */
     public SecurityProviderStatus() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityProviderStatus
+     * @return a SecurityProviderStatus
      */
     @jakarta.annotation.Nonnull
     public static SecurityProviderStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
         return new SecurityProviderStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the enabled property value. The enabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.BackingStore.get("enabled");
     }
     /**
      * Gets the endpoint property value. The endpoint property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEndpoint() {
-        return this.endpoint;
+        return this.BackingStore.get("endpoint");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +87,35 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
-        return this.provider;
+        return this.BackingStore.get("provider");
     }
     /**
      * Gets the region property value. The region property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
-        return this.region;
+        return this.BackingStore.get("region");
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
-        return this.vendor;
+        return this.BackingStore.get("vendor");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the enabled property value. The enabled property
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.BackingStore.set("enabled", value);
     }
     /**
      * Sets the endpoint property value. The endpoint property
      * @param value Value to set for the endpoint property.
      */
     public void setEndpoint(@jakarta.annotation.Nullable final String value) {
-        this.endpoint = value;
+        this.BackingStore.set("endpoint", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final String value) {
-        this.provider = value;
+        this.BackingStore.set("provider", value);
     }
     /**
      * Sets the region property value. The region property
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.region = value;
+        this.BackingStore.set("region", value);
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.vendor = value;
+        this.BackingStore.set("vendor", value);
     }
 }

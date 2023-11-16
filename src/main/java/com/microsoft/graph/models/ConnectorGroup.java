@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectorGroup extends Entity implements Parsable {
     /**
-     * The applications property
-     */
-    private java.util.List<Application> applications;
-    /**
-     * The connectorGroupType property
-     */
-    private ConnectorGroupType connectorGroupType;
-    /**
-     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
-     */
-    private Boolean isDefault;
-    /**
-     * The members property
-     */
-    private java.util.List<Connector> members;
-    /**
-     * The name associated with the connectorGroup.
-     */
-    private String name;
-    /**
-     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
-     */
-    private ConnectorGroupRegion region;
-    /**
-     * Instantiates a new connectorGroup and sets the default values.
+     * Instantiates a new ConnectorGroup and sets the default values.
      */
     public ConnectorGroup() {
         super();
@@ -41,7 +17,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectorGroup
+     * @return a ConnectorGroup
      */
     @jakarta.annotation.Nonnull
     public static ConnectorGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +26,19 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the applications property value. The applications property
-     * @return a application
+     * @return a java.util.List<Application>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Application> getApplications() {
-        return this.applications;
+        return this.BackingStore.get("applications");
     }
     /**
      * Gets the connectorGroupType property value. The connectorGroupType property
-     * @return a connectorGroupType
+     * @return a ConnectorGroupType
      */
     @jakarta.annotation.Nullable
     public ConnectorGroupType getConnectorGroupType() {
-        return this.connectorGroupType;
+        return this.BackingStore.get("connectorGroupType");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +57,35 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.BackingStore.get("isDefault");
     }
     /**
      * Gets the members property value. The members property
-     * @return a connector
+     * @return a java.util.List<Connector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Connector> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Gets the name property value. The name associated with the connectorGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
-     * @return a connectorGroupRegion
+     * @return a ConnectorGroupRegion
      */
     @jakarta.annotation.Nullable
     public ConnectorGroupRegion getRegion() {
-        return this.region;
+        return this.BackingStore.get("region");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the applications property.
      */
     public void setApplications(@jakarta.annotation.Nullable final java.util.List<Application> value) {
-        this.applications = value;
+        this.BackingStore.set("applications", value);
     }
     /**
      * Sets the connectorGroupType property value. The connectorGroupType property
      * @param value Value to set for the connectorGroupType property.
      */
     public void setConnectorGroupType(@jakarta.annotation.Nullable final ConnectorGroupType value) {
-        this.connectorGroupType = value;
+        this.BackingStore.set("connectorGroupType", value);
     }
     /**
      * Sets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.BackingStore.set("isDefault", value);
     }
     /**
      * Sets the members property value. The members property
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<Connector> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
     /**
      * Sets the name property value. The name associated with the connectorGroup.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final ConnectorGroupRegion value) {
-        this.region = value;
+        this.BackingStore.set("region", value);
     }
 }

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AudioRoutingGroup extends Entity implements Parsable {
     /**
-     * List of receiving participant ids.
-     */
-    private java.util.List<String> receivers;
-    /**
-     * The routingMode property
-     */
-    private RoutingMode routingMode;
-    /**
-     * List of source participant ids.
-     */
-    private java.util.List<String> sources;
-    /**
-     * Instantiates a new audioRoutingGroup and sets the default values.
+     * Instantiates a new AudioRoutingGroup and sets the default values.
      */
     public AudioRoutingGroup() {
         super();
@@ -29,7 +17,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a audioRoutingGroup
+     * @return a AudioRoutingGroup
      */
     @jakarta.annotation.Nonnull
     public static AudioRoutingGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +38,27 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * Gets the receivers property value. List of receiving participant ids.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReceivers() {
-        return this.receivers;
+        return this.BackingStore.get("receivers");
     }
     /**
      * Gets the routingMode property value. The routingMode property
-     * @return a routingMode
+     * @return a RoutingMode
      */
     @jakarta.annotation.Nullable
     public RoutingMode getRoutingMode() {
-        return this.routingMode;
+        return this.BackingStore.get("routingMode");
     }
     /**
      * Gets the sources property value. List of source participant ids.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSources() {
-        return this.sources;
+        return this.BackingStore.get("sources");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the receivers property.
      */
     public void setReceivers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.receivers = value;
+        this.BackingStore.set("receivers", value);
     }
     /**
      * Sets the routingMode property value. The routingMode property
      * @param value Value to set for the routingMode property.
      */
     public void setRoutingMode(@jakarta.annotation.Nullable final RoutingMode value) {
-        this.routingMode = value;
+        this.BackingStore.set("routingMode", value);
     }
     /**
      * Sets the sources property value. List of source participant ids.
      * @param value Value to set for the sources property.
      */
     public void setSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.sources = value;
+        this.BackingStore.set("sources", value);
     }
 }

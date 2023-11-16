@@ -5,29 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddLanguageFilesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddLanguageFilesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The groupPolicyUploadedLanguageFiles property
-     */
-    private java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
-    /**
-     * Instantiates a new addLanguageFilesPostRequestBody and sets the default values.
+     * Instantiates a new AddLanguageFilesPostRequestBody and sets the default values.
      */
     public AddLanguageFilesPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addLanguageFilesPostRequestBody
+     * @return a AddLanguageFilesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AddLanguageFilesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,12 +35,25 @@ public class AddLanguageFilesPostRequestBody implements AdditionalDataHolder, Pa
         return new AddLanguageFilesPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +67,11 @@ public class AddLanguageFilesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the groupPolicyUploadedLanguageFiles property value. The groupPolicyUploadedLanguageFiles property
-     * @return a groupPolicyUploadedLanguageFile
+     * @return a java.util.List<GroupPolicyUploadedLanguageFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedLanguageFile> getGroupPolicyUploadedLanguageFiles() {
-        return this.groupPolicyUploadedLanguageFiles;
+        return this.BackingStore.get("groupPolicyUploadedLanguageFiles");
     }
     /**
      * Serializes information the current object
@@ -70,17 +83,25 @@ public class AddLanguageFilesPostRequestBody implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the groupPolicyUploadedLanguageFiles property value. The groupPolicyUploadedLanguageFiles property
      * @param value Value to set for the groupPolicyUploadedLanguageFiles property.
      */
     public void setGroupPolicyUploadedLanguageFiles(@jakarta.annotation.Nullable final java.util.List<GroupPolicyUploadedLanguageFile> value) {
-        this.groupPolicyUploadedLanguageFiles = value;
+        this.BackingStore.set("groupPolicyUploadedLanguageFiles", value);
     }
 }

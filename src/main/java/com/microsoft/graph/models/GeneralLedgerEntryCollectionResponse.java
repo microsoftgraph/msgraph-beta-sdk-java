@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GeneralLedgerEntryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<GeneralLedgerEntry> value;
-    /**
-     * Instantiates a new generalLedgerEntryCollectionResponse and sets the default values.
+     * Instantiates a new GeneralLedgerEntryCollectionResponse and sets the default values.
      */
     public GeneralLedgerEntryCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class GeneralLedgerEntryCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a generalLedgerEntryCollectionResponse
+     * @return a GeneralLedgerEntryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GeneralLedgerEntryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class GeneralLedgerEntryCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a generalLedgerEntry
+     * @return a java.util.List<GeneralLedgerEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GeneralLedgerEntry> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class GeneralLedgerEntryCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

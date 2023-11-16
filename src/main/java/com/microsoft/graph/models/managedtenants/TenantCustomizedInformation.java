@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantCustomizedInformation extends Entity implements Parsable {
     /**
-     * The collection of contacts for the managed tenant. Optional.
-     */
-    private java.util.List<TenantContactInformation> contacts;
-    /**
-     * The display name for the managed tenant. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     */
-    private String tenantId;
-    /**
-     * The website for the managed tenant. Required.
-     */
-    private String website;
-    /**
-     * Instantiates a new tenantCustomizedInformation and sets the default values.
+     * Instantiates a new TenantCustomizedInformation and sets the default values.
      */
     public TenantCustomizedInformation() {
         super();
@@ -34,7 +18,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantCustomizedInformation
+     * @return a TenantCustomizedInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantCustomizedInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the contacts property value. The collection of contacts for the managed tenant. Optional.
-     * @return a tenantContactInformation
+     * @return a java.util.List<TenantContactInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantContactInformation> getContacts() {
-        return this.contacts;
+        return this.BackingStore.get("contacts");
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,20 +55,20 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the website property value. The website for the managed tenant. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {
-        return this.website;
+        return this.BackingStore.get("website");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      */
     public void setContacts(@jakarta.annotation.Nullable final java.util.List<TenantContactInformation> value) {
-        this.contacts = value;
+        this.BackingStore.set("contacts", value);
     }
     /**
      * Sets the displayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the website property value. The website for the managed tenant. Required.
      * @param value Value to set for the website property.
      */
     public void setWebsite(@jakarta.annotation.Nullable final String value) {
-        this.website = value;
+        this.BackingStore.set("website", value);
     }
 }

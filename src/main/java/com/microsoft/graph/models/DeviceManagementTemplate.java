@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
-     * Collection of setting categories within the template
-     */
-    private java.util.List<DeviceManagementTemplateSettingCategory> categories;
-    /**
-     * The template's description
-     */
-    private String description;
-    /**
-     * The template's display name
-     */
-    private String displayName;
-    /**
-     * Number of Intents created from this template.
-     */
-    private Integer intentCount;
-    /**
-     * The template is deprecated or not. Intents cannot be created from a deprecated template.
-     */
-    private Boolean isDeprecated;
-    /**
-     * Collection of templates this template can migrate to
-     */
-    private java.util.List<DeviceManagementTemplate> migratableTo;
-    /**
-     * Supported platform types for policies.
-     */
-    private PolicyPlatformType platformType;
-    /**
-     * When the template was published
-     */
-    private OffsetDateTime publishedDateTime;
-    /**
-     * Collection of all settings this template has
-     */
-    private java.util.List<DeviceManagementSettingInstance> settings;
-    /**
-     * Template subtype
-     */
-    private DeviceManagementTemplateSubtype templateSubtype;
-    /**
-     * Template type
-     */
-    private DeviceManagementTemplateType templateType;
-    /**
-     * The template's version information
-     */
-    private String versionInfo;
-    /**
-     * Instantiates a new deviceManagementTemplate and sets the default values.
+     * Instantiates a new DeviceManagementTemplate and sets the default values.
      */
     public DeviceManagementTemplate() {
         super();
@@ -69,7 +21,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplate
+     * @return a DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,27 +37,27 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. Collection of setting categories within the template
-     * @return a deviceManagementTemplateSettingCategory
+     * @return a java.util.List<DeviceManagementTemplateSettingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplateSettingCategory> getCategories() {
-        return this.categories;
+        return this.BackingStore.get("categories");
     }
     /**
      * Gets the description property value. The template's description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The template's display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -130,35 +82,35 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the intentCount property value. Number of Intents created from this template.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIntentCount() {
-        return this.intentCount;
+        return this.BackingStore.get("intentCount");
     }
     /**
      * Gets the isDeprecated property value. The template is deprecated or not. Intents cannot be created from a deprecated template.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeprecated() {
-        return this.isDeprecated;
+        return this.BackingStore.get("isDeprecated");
     }
     /**
      * Gets the migratableTo property value. Collection of templates this template can migrate to
-     * @return a deviceManagementTemplate
+     * @return a java.util.List<DeviceManagementTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplate> getMigratableTo() {
-        return this.migratableTo;
+        return this.BackingStore.get("migratableTo");
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
-        return this.platformType;
+        return this.BackingStore.get("platformType");
     }
     /**
      * Gets the publishedDateTime property value. When the template was published
@@ -166,39 +118,39 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
-        return this.publishedDateTime;
+        return this.BackingStore.get("publishedDateTime");
     }
     /**
      * Gets the settings property value. Collection of all settings this template has
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the templateSubtype property value. Template subtype
-     * @return a deviceManagementTemplateSubtype
+     * @return a DeviceManagementTemplateSubtype
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateSubtype getTemplateSubtype() {
-        return this.templateSubtype;
+        return this.BackingStore.get("templateSubtype");
     }
     /**
      * Gets the templateType property value. Template type
-     * @return a deviceManagementTemplateType
+     * @return a DeviceManagementTemplateType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateType getTemplateType() {
-        return this.templateType;
+        return this.BackingStore.get("templateType");
     }
     /**
      * Gets the versionInfo property value. The template's version information
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionInfo() {
-        return this.versionInfo;
+        return this.BackingStore.get("versionInfo");
     }
     /**
      * Serializes information the current object
@@ -225,83 +177,83 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTemplateSettingCategory> value) {
-        this.categories = value;
+        this.BackingStore.set("categories", value);
     }
     /**
      * Sets the description property value. The template's description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The template's display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the intentCount property value. Number of Intents created from this template.
      * @param value Value to set for the intentCount property.
      */
     public void setIntentCount(@jakarta.annotation.Nullable final Integer value) {
-        this.intentCount = value;
+        this.BackingStore.set("intentCount", value);
     }
     /**
      * Sets the isDeprecated property value. The template is deprecated or not. Intents cannot be created from a deprecated template.
      * @param value Value to set for the isDeprecated property.
      */
     public void setIsDeprecated(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeprecated = value;
+        this.BackingStore.set("isDeprecated", value);
     }
     /**
      * Sets the migratableTo property value. Collection of templates this template can migrate to
      * @param value Value to set for the migratableTo property.
      */
     public void setMigratableTo(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
-        this.migratableTo = value;
+        this.BackingStore.set("migratableTo", value);
     }
     /**
      * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      */
     public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
-        this.platformType = value;
+        this.BackingStore.set("platformType", value);
     }
     /**
      * Sets the publishedDateTime property value. When the template was published
      * @param value Value to set for the publishedDateTime property.
      */
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.publishedDateTime = value;
+        this.BackingStore.set("publishedDateTime", value);
     }
     /**
      * Sets the settings property value. Collection of all settings this template has
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the templateSubtype property value. Template subtype
      * @param value Value to set for the templateSubtype property.
      */
     public void setTemplateSubtype(@jakarta.annotation.Nullable final DeviceManagementTemplateSubtype value) {
-        this.templateSubtype = value;
+        this.BackingStore.set("templateSubtype", value);
     }
     /**
      * Sets the templateType property value. Template type
      * @param value Value to set for the templateType property.
      */
     public void setTemplateType(@jakarta.annotation.Nullable final DeviceManagementTemplateType value) {
-        this.templateType = value;
+        this.BackingStore.set("templateType", value);
     }
     /**
      * Sets the versionInfo property value. The template's version information
      * @param value Value to set for the versionInfo property.
      */
     public void setVersionInfo(@jakarta.annotation.Nullable final String value) {
-        this.versionInfo = value;
+        this.BackingStore.set("versionInfo", value);
     }
 }

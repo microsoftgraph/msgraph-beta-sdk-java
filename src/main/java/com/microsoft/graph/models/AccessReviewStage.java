@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewStage extends Entity implements Parsable {
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
-     */
-    private java.util.List<AccessReviewInstanceDecisionItem> decisions;
-    /**
-     * DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
-     */
-    private java.util.List<AccessReviewReviewerScope> fallbackReviewers;
-    /**
-     * This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
-     */
-    private java.util.List<AccessReviewReviewerScope> reviewers;
-    /**
-     * DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
-     */
-    private String status;
-    /**
-     * Instantiates a new accessReviewStage and sets the default values.
+     * Instantiates a new AccessReviewStage and sets the default values.
      */
     public AccessReviewStage() {
         super();
@@ -42,7 +18,7 @@ public class AccessReviewStage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewStage
+     * @return a AccessReviewStage
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,11 +27,11 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
-     * @return a accessReviewInstanceDecisionItem
+     * @return a java.util.List<AccessReviewInstanceDecisionItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewInstanceDecisionItem> getDecisions() {
-        return this.decisions;
+        return this.BackingStore.get("decisions");
     }
     /**
      * Gets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
@@ -63,15 +39,15 @@ public class AccessReviewStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
-     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
-     * @return a accessReviewReviewerScope
+     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This can occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
+     * @return a java.util.List<AccessReviewReviewerScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
-        return this.fallbackReviewers;
+        return this.BackingStore.get("fallbackReviewers");
     }
     /**
      * The deserialization information for the current model
@@ -90,11 +66,11 @@ public class AccessReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the reviewers property value. This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
-     * @return a accessReviewReviewerScope
+     * @return a java.util.List<AccessReviewReviewerScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
-        return this.reviewers;
+        return this.BackingStore.get("reviewers");
     }
     /**
      * Gets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -102,15 +78,15 @@ public class AccessReviewStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      */
     public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewInstanceDecisionItem> value) {
-        this.decisions = value;
+        this.BackingStore.set("decisions", value);
     }
     /**
      * Sets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
-     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
+     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This can occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this.fallbackReviewers = value;
+        this.BackingStore.set("fallbackReviewers", value);
     }
     /**
      * Sets the reviewers property value. This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
      * @param value Value to set for the reviewers property.
      */
     public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this.reviewers = value;
+        this.BackingStore.set("reviewers", value);
     }
     /**
      * Sets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

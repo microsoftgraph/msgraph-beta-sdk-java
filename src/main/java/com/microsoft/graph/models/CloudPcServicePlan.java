@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcServicePlan extends Entity implements Parsable {
     /**
-     * The name for the service plan. Read-only.
-     */
-    private String displayName;
-    /**
-     * Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
-     */
-    private CloudPcProvisioningType provisioningType;
-    /**
-     * The size of the RAM in GB. Read-only.
-     */
-    private Integer ramInGB;
-    /**
-     * The size of the OS Disk in GB. Read-only.
-     */
-    private Integer storageInGB;
-    /**
-     * The supportedSolution property
-     */
-    private EnumSet<CloudPcManagementService> supportedSolution;
-    /**
-     * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
-     */
-    private CloudPcServicePlanType type;
-    /**
-     * The size of the user profile disk in GB. Read-only.
-     */
-    private Integer userProfileInGB;
-    /**
-     * The number of vCPUs. Read-only.
-     */
-    private Integer vCpuCount;
-    /**
-     * Instantiates a new cloudPcServicePlan and sets the default values.
+     * Instantiates a new CloudPcServicePlan and sets the default values.
      */
     public CloudPcServicePlan() {
         super();
@@ -50,7 +18,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcServicePlan
+     * @return a CloudPcServicePlan
      */
     @jakarta.annotation.Nonnull
     public static CloudPcServicePlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +27,11 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name for the service plan. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -84,59 +52,59 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
-     * @return a cloudPcProvisioningType
+     * @return a CloudPcProvisioningType
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningType getProvisioningType() {
-        return this.provisioningType;
+        return this.BackingStore.get("provisioningType");
     }
     /**
      * Gets the ramInGB property value. The size of the RAM in GB. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRamInGB() {
-        return this.ramInGB;
+        return this.BackingStore.get("ramInGB");
     }
     /**
      * Gets the storageInGB property value. The size of the OS Disk in GB. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getStorageInGB() {
-        return this.storageInGB;
+        return this.BackingStore.get("storageInGB");
     }
     /**
      * Gets the supportedSolution property value. The supportedSolution property
-     * @return a cloudPcManagementService
+     * @return a EnumSet<CloudPcManagementService>
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcManagementService> getSupportedSolution() {
-        return this.supportedSolution;
+        return this.BackingStore.get("supportedSolution");
     }
     /**
      * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
-     * @return a cloudPcServicePlanType
+     * @return a CloudPcServicePlanType
      */
     @jakarta.annotation.Nullable
     public CloudPcServicePlanType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Gets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUserProfileInGB() {
-        return this.userProfileInGB;
+        return this.BackingStore.get("userProfileInGB");
     }
     /**
      * Gets the vCpuCount property value. The number of vCPUs. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVCpuCount() {
-        return this.vCpuCount;
+        return this.BackingStore.get("vCpuCount");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
-        this.provisioningType = value;
+        this.BackingStore.set("provisioningType", value);
     }
     /**
      * Sets the ramInGB property value. The size of the RAM in GB. Read-only.
      * @param value Value to set for the ramInGB property.
      */
     public void setRamInGB(@jakarta.annotation.Nullable final Integer value) {
-        this.ramInGB = value;
+        this.BackingStore.set("ramInGB", value);
     }
     /**
      * Sets the storageInGB property value. The size of the OS Disk in GB. Read-only.
      * @param value Value to set for the storageInGB property.
      */
     public void setStorageInGB(@jakarta.annotation.Nullable final Integer value) {
-        this.storageInGB = value;
+        this.BackingStore.set("storageInGB", value);
     }
     /**
      * Sets the supportedSolution property value. The supportedSolution property
      * @param value Value to set for the supportedSolution property.
      */
     public void setSupportedSolution(@jakarta.annotation.Nullable final EnumSet<CloudPcManagementService> value) {
-        this.supportedSolution = value;
+        this.BackingStore.set("supportedSolution", value);
     }
     /**
      * Sets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcServicePlanType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
     /**
      * Sets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
      * @param value Value to set for the userProfileInGB property.
      */
     public void setUserProfileInGB(@jakarta.annotation.Nullable final Integer value) {
-        this.userProfileInGB = value;
+        this.BackingStore.set("userProfileInGB", value);
     }
     /**
      * Sets the vCpuCount property value. The number of vCPUs. Read-only.
      * @param value Value to set for the vCpuCount property.
      */
     public void setVCpuCount(@jakarta.annotation.Nullable final Integer value) {
-        this.vCpuCount = value;
+        this.BackingStore.set("vCpuCount", value);
     }
 }

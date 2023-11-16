@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
-     * The date and time when the key was originally backed up to Azure Active Directory.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * ID of the device the BitLocker key is originally backed up from.
-     */
-    private String deviceId;
-    /**
-     * The BitLocker recovery key.
-     */
-    private String key;
-    /**
-     * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
-     */
-    private VolumeType volumeType;
-    /**
-     * Instantiates a new bitlockerRecoveryKey and sets the default values.
+     * Instantiates a new BitlockerRecoveryKey and sets the default values.
      */
     public BitlockerRecoveryKey() {
         super();
@@ -34,7 +18,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bitlockerRecoveryKey
+     * @return a BitlockerRecoveryKey
      */
     @jakarta.annotation.Nonnull
     public static BitlockerRecoveryKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +26,20 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         return new BitlockerRecoveryKey();
     }
     /**
-     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory.
+     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the deviceId property value. ID of the device the BitLocker key is originally backed up from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -72,19 +56,19 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     }
     /**
      * Gets the key property value. The BitLocker recovery key.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKey() {
-        return this.key;
+        return this.BackingStore.get("key");
     }
     /**
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
-     * @return a volumeType
+     * @return a VolumeType
      */
     @jakarta.annotation.Nullable
     public VolumeType getVolumeType() {
-        return this.volumeType;
+        return this.BackingStore.get("volumeType");
     }
     /**
      * Serializes information the current object
@@ -99,31 +83,31 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         writer.writeEnumValue("volumeType", this.getVolumeType());
     }
     /**
-     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory.
+     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deviceId property value. ID of the device the BitLocker key is originally backed up from.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the key property value. The BitLocker recovery key.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
-        this.key = value;
+        this.BackingStore.set("key", value);
     }
     /**
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
      * @param value Value to set for the volumeType property.
      */
     public void setVolumeType(@jakarta.annotation.Nullable final VolumeType value) {
-        this.volumeType = value;
+        this.BackingStore.set("volumeType", value);
     }
 }

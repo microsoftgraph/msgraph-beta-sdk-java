@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAppPerformanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceAppPerformance> value;
-    /**
-     * Instantiates a new deviceAppPerformanceCollectionResponse and sets the default values.
+     * Instantiates a new DeviceAppPerformanceCollectionResponse and sets the default values.
      */
     public DeviceAppPerformanceCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class DeviceAppPerformanceCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppPerformanceCollectionResponse
+     * @return a DeviceAppPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppPerformanceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class DeviceAppPerformanceCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceAppPerformance
+     * @return a java.util.List<DeviceAppPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAppPerformance> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class DeviceAppPerformanceCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceAppPerformance> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EducationRoot implements AdditionalDataHolder, Parsable {
+public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The classes property
-     */
-    private java.util.List<EducationClass> classes;
-    /**
-     * The me property
-     */
-    private EducationUser me;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The schools property
-     */
-    private java.util.List<EducationSchool> schools;
-    /**
-     * The synchronizationProfiles property
-     */
-    private java.util.List<EducationSynchronizationProfile> synchronizationProfiles;
-    /**
-     * The users property
-     */
-    private java.util.List<EducationUser> users;
-    /**
-     * Instantiates a new educationRoot and sets the default values.
+     * Instantiates a new EducationRoot and sets the default values.
      */
     public EducationRoot() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationRoot
+     * @return a EducationRoot
      */
     @jakarta.annotation.Nonnull
     public static EducationRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +34,33 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
         return new EducationRoot();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the classes property value. The classes property
-     * @return a educationClass
+     * @return a java.util.List<EducationClass>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
-        return this.classes;
+        return this.BackingStore.get("classes");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +79,43 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the me property value. The me property
-     * @return a educationUser
+     * @return a EducationUser
      */
     @jakarta.annotation.Nullable
     public EducationUser getMe() {
-        return this.me;
+        return this.BackingStore.get("me");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the schools property value. The schools property
-     * @return a educationSchool
+     * @return a java.util.List<EducationSchool>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
-        return this.schools;
+        return this.BackingStore.get("schools");
     }
     /**
      * Gets the synchronizationProfiles property value. The synchronizationProfiles property
-     * @return a educationSynchronizationProfile
+     * @return a java.util.List<EducationSynchronizationProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationProfile> getSynchronizationProfiles() {
-        return this.synchronizationProfiles;
+        return this.BackingStore.get("synchronizationProfiles");
     }
     /**
      * Gets the users property value. The users property
-     * @return a educationUser
+     * @return a java.util.List<EducationUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getUsers() {
-        return this.users;
+        return this.BackingStore.get("users");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the classes property value. The classes property
      * @param value Value to set for the classes property.
      */
     public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
-        this.classes = value;
+        this.BackingStore.set("classes", value);
     }
     /**
      * Sets the me property value. The me property
      * @param value Value to set for the me property.
      */
     public void setMe(@jakarta.annotation.Nullable final EducationUser value) {
-        this.me = value;
+        this.BackingStore.set("me", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the schools property value. The schools property
      * @param value Value to set for the schools property.
      */
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
-        this.schools = value;
+        this.BackingStore.set("schools", value);
     }
     /**
      * Sets the synchronizationProfiles property value. The synchronizationProfiles property
      * @param value Value to set for the synchronizationProfiles property.
      */
     public void setSynchronizationProfiles(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationProfile> value) {
-        this.synchronizationProfiles = value;
+        this.BackingStore.set("synchronizationProfiles", value);
     }
     /**
      * Sets the users property value. The users property
      * @param value Value to set for the users property.
      */
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
-        this.users = value;
+        this.BackingStore.set("users", value);
     }
 }

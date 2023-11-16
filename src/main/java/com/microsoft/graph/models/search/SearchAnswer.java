@@ -11,27 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchAnswer extends Entity implements Parsable {
     /**
-     * Search answer description shown on search results page.
-     */
-    private String description;
-    /**
-     * Search answer name displayed in search results.
-     */
-    private String displayName;
-    /**
-     * Details of the user that created or last modified the search answer. Read-only.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * Timestamp of when the search answer is created or edited. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Search answer URL link. When users click this search answer in search results, they will go to this URL.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new searchAnswer and sets the default values.
+     * Instantiates a new SearchAnswer and sets the default values.
      */
     public SearchAnswer() {
         super();
@@ -39,7 +19,7 @@ public class SearchAnswer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchAnswer
+     * @return a SearchAnswer
      */
     @jakarta.annotation.Nonnull
     public static SearchAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,19 +37,19 @@ public class SearchAnswer extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Search answer description shown on search results page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Search answer name displayed in search results.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -87,11 +67,11 @@ public class SearchAnswer extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Details of the user that created or last modified the search answer. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Timestamp of when the search answer is created or edited. Read-only.
@@ -99,15 +79,15 @@ public class SearchAnswer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the webUrl property value. Search answer URL link. When users click this search answer in search results, they will go to this URL.
-     * @return a string
+     * Gets the webUrl property value. Search answer URL link. When users click this search answer in search results, they'll go to this URL.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.BackingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -127,34 +107,34 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Search answer name displayed in search results.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. Details of the user that created or last modified the search answer. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Timestamp of when the search answer is created or edited. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the webUrl property value. Search answer URL link. When users click this search answer in search results, they will go to this URL.
+     * Sets the webUrl property value. Search answer URL link. When users click this search answer in search results, they'll go to this URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.BackingStore.set("webUrl", value);
     }
 }

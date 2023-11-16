@@ -10,91 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityDetail extends Entity implements Parsable {
     /**
-     * The storage used of the group mailbox.
-     */
-    private Long exchangeMailboxStorageUsedInBytes;
-    /**
-     * The number of items in the group mailbox.
-     */
-    private Long exchangeMailboxTotalItemCount;
-    /**
-     * The number of email that the group mailbox received.
-     */
-    private Long exchangeReceivedEmailCount;
-    /**
-     * The group external member count.
-     */
-    private Long externalMemberCount;
-    /**
-     * The display name of the group.
-     */
-    private String groupDisplayName;
-    /**
-     * The group id.
-     */
-    private String groupId;
-    /**
-     * The group type. Possible values are: Public or Private.
-     */
-    private String groupType;
-    /**
-     * Whether this user has been deleted or soft deleted.
-     */
-    private Boolean isDeleted;
-    /**
-     * The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
-     */
-    private LocalDate lastActivityDate;
-    /**
-     * The group member count.
-     */
-    private Long memberCount;
-    /**
-     * The group owner principal name.
-     */
-    private String ownerPrincipalName;
-    /**
-     * The number of days the report covers.
-     */
-    private String reportPeriod;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The number of active files in SharePoint Group site.
-     */
-    private Long sharePointActiveFileCount;
-    /**
-     * The storage used by SharePoint Group site.
-     */
-    private Long sharePointSiteStorageUsedInBytes;
-    /**
-     * The total number of files in SharePoint Group site.
-     */
-    private Long sharePointTotalFileCount;
-    /**
-     * The number of channel messages in Teams team.
-     */
-    private Long teamsChannelMessagesCount;
-    /**
-     * The number of meetings organized in Teams team.
-     */
-    private Long teamsMeetingsOrganizedCount;
-    /**
-     * The number of messages liked in Yammer groups.
-     */
-    private Long yammerLikedMessageCount;
-    /**
-     * The number of messages posted to Yammer groups.
-     */
-    private Long yammerPostedMessageCount;
-    /**
-     * The number of messages read in Yammer groups.
-     */
-    private Long yammerReadMessageCount;
-    /**
-     * Instantiates a new office365GroupsActivityDetail and sets the default values.
+     * Instantiates a new Office365GroupsActivityDetail and sets the default values.
      */
     public Office365GroupsActivityDetail() {
         super();
@@ -102,7 +18,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityDetail
+     * @return a Office365GroupsActivityDetail
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -111,35 +27,35 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeMailboxStorageUsedInBytes property value. The storage used of the group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeMailboxStorageUsedInBytes() {
-        return this.exchangeMailboxStorageUsedInBytes;
+        return this.BackingStore.get("exchangeMailboxStorageUsedInBytes");
     }
     /**
      * Gets the exchangeMailboxTotalItemCount property value. The number of items in the group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeMailboxTotalItemCount() {
-        return this.exchangeMailboxTotalItemCount;
+        return this.BackingStore.get("exchangeMailboxTotalItemCount");
     }
     /**
-     * Gets the exchangeReceivedEmailCount property value. The number of email that the group mailbox received.
-     * @return a int64
+     * Gets the exchangeReceivedEmailCount property value. The number of emails that the group mailbox received.
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeReceivedEmailCount() {
-        return this.exchangeReceivedEmailCount;
+        return this.BackingStore.get("exchangeReceivedEmailCount");
     }
     /**
      * Gets the externalMemberCount property value. The group external member count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExternalMemberCount() {
-        return this.externalMemberCount;
+        return this.BackingStore.get("externalMemberCount");
     }
     /**
      * The deserialization information for the current model
@@ -173,35 +89,35 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the groupDisplayName property value. The display name of the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupDisplayName() {
-        return this.groupDisplayName;
+        return this.BackingStore.get("groupDisplayName");
     }
     /**
      * Gets the groupId property value. The group id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.BackingStore.get("groupId");
     }
     /**
      * Gets the groupType property value. The group type. Possible values are: Public or Private.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupType() {
-        return this.groupType;
+        return this.BackingStore.get("groupType");
     }
     /**
      * Gets the isDeleted property value. Whether this user has been deleted or soft deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.BackingStore.get("isDeleted");
     }
     /**
      * Gets the lastActivityDate property value. The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
@@ -209,31 +125,31 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getLastActivityDate() {
-        return this.lastActivityDate;
+        return this.BackingStore.get("lastActivityDate");
     }
     /**
      * Gets the memberCount property value. The group member count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMemberCount() {
-        return this.memberCount;
+        return this.BackingStore.get("memberCount");
     }
     /**
      * Gets the ownerPrincipalName property value. The group owner principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerPrincipalName() {
-        return this.ownerPrincipalName;
+        return this.BackingStore.get("ownerPrincipalName");
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
-        return this.reportPeriod;
+        return this.BackingStore.get("reportPeriod");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -241,71 +157,71 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.BackingStore.get("reportRefreshDate");
     }
     /**
      * Gets the sharePointActiveFileCount property value. The number of active files in SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointActiveFileCount() {
-        return this.sharePointActiveFileCount;
+        return this.BackingStore.get("sharePointActiveFileCount");
     }
     /**
      * Gets the sharePointSiteStorageUsedInBytes property value. The storage used by SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointSiteStorageUsedInBytes() {
-        return this.sharePointSiteStorageUsedInBytes;
+        return this.BackingStore.get("sharePointSiteStorageUsedInBytes");
     }
     /**
      * Gets the sharePointTotalFileCount property value. The total number of files in SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointTotalFileCount() {
-        return this.sharePointTotalFileCount;
+        return this.BackingStore.get("sharePointTotalFileCount");
     }
     /**
      * Gets the teamsChannelMessagesCount property value. The number of channel messages in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsChannelMessagesCount() {
-        return this.teamsChannelMessagesCount;
+        return this.BackingStore.get("teamsChannelMessagesCount");
     }
     /**
      * Gets the teamsMeetingsOrganizedCount property value. The number of meetings organized in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsMeetingsOrganizedCount() {
-        return this.teamsMeetingsOrganizedCount;
+        return this.BackingStore.get("teamsMeetingsOrganizedCount");
     }
     /**
      * Gets the yammerLikedMessageCount property value. The number of messages liked in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerLikedMessageCount() {
-        return this.yammerLikedMessageCount;
+        return this.BackingStore.get("yammerLikedMessageCount");
     }
     /**
      * Gets the yammerPostedMessageCount property value. The number of messages posted to Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerPostedMessageCount() {
-        return this.yammerPostedMessageCount;
+        return this.BackingStore.get("yammerPostedMessageCount");
     }
     /**
      * Gets the yammerReadMessageCount property value. The number of messages read in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerReadMessageCount() {
-        return this.yammerReadMessageCount;
+        return this.BackingStore.get("yammerReadMessageCount");
     }
     /**
      * Serializes information the current object
@@ -341,146 +257,146 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeMailboxStorageUsedInBytes property.
      */
     public void setExchangeMailboxStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeMailboxStorageUsedInBytes = value;
+        this.BackingStore.set("exchangeMailboxStorageUsedInBytes", value);
     }
     /**
      * Sets the exchangeMailboxTotalItemCount property value. The number of items in the group mailbox.
      * @param value Value to set for the exchangeMailboxTotalItemCount property.
      */
     public void setExchangeMailboxTotalItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeMailboxTotalItemCount = value;
+        this.BackingStore.set("exchangeMailboxTotalItemCount", value);
     }
     /**
-     * Sets the exchangeReceivedEmailCount property value. The number of email that the group mailbox received.
+     * Sets the exchangeReceivedEmailCount property value. The number of emails that the group mailbox received.
      * @param value Value to set for the exchangeReceivedEmailCount property.
      */
     public void setExchangeReceivedEmailCount(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeReceivedEmailCount = value;
+        this.BackingStore.set("exchangeReceivedEmailCount", value);
     }
     /**
      * Sets the externalMemberCount property value. The group external member count.
      * @param value Value to set for the externalMemberCount property.
      */
     public void setExternalMemberCount(@jakarta.annotation.Nullable final Long value) {
-        this.externalMemberCount = value;
+        this.BackingStore.set("externalMemberCount", value);
     }
     /**
      * Sets the groupDisplayName property value. The display name of the group.
      * @param value Value to set for the groupDisplayName property.
      */
     public void setGroupDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.groupDisplayName = value;
+        this.BackingStore.set("groupDisplayName", value);
     }
     /**
      * Sets the groupId property value. The group id.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.BackingStore.set("groupId", value);
     }
     /**
      * Sets the groupType property value. The group type. Possible values are: Public or Private.
      * @param value Value to set for the groupType property.
      */
     public void setGroupType(@jakarta.annotation.Nullable final String value) {
-        this.groupType = value;
+        this.BackingStore.set("groupType", value);
     }
     /**
      * Sets the isDeleted property value. Whether this user has been deleted or soft deleted.
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.BackingStore.set("isDeleted", value);
     }
     /**
      * Sets the lastActivityDate property value. The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
      * @param value Value to set for the lastActivityDate property.
      */
     public void setLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.lastActivityDate = value;
+        this.BackingStore.set("lastActivityDate", value);
     }
     /**
      * Sets the memberCount property value. The group member count.
      * @param value Value to set for the memberCount property.
      */
     public void setMemberCount(@jakarta.annotation.Nullable final Long value) {
-        this.memberCount = value;
+        this.BackingStore.set("memberCount", value);
     }
     /**
      * Sets the ownerPrincipalName property value. The group owner principal name.
      * @param value Value to set for the ownerPrincipalName property.
      */
     public void setOwnerPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.ownerPrincipalName = value;
+        this.BackingStore.set("ownerPrincipalName", value);
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      */
     public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
-        this.reportPeriod = value;
+        this.BackingStore.set("reportPeriod", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.BackingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the sharePointActiveFileCount property value. The number of active files in SharePoint Group site.
      * @param value Value to set for the sharePointActiveFileCount property.
      */
     public void setSharePointActiveFileCount(@jakarta.annotation.Nullable final Long value) {
-        this.sharePointActiveFileCount = value;
+        this.BackingStore.set("sharePointActiveFileCount", value);
     }
     /**
      * Sets the sharePointSiteStorageUsedInBytes property value. The storage used by SharePoint Group site.
      * @param value Value to set for the sharePointSiteStorageUsedInBytes property.
      */
     public void setSharePointSiteStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.sharePointSiteStorageUsedInBytes = value;
+        this.BackingStore.set("sharePointSiteStorageUsedInBytes", value);
     }
     /**
      * Sets the sharePointTotalFileCount property value. The total number of files in SharePoint Group site.
      * @param value Value to set for the sharePointTotalFileCount property.
      */
     public void setSharePointTotalFileCount(@jakarta.annotation.Nullable final Long value) {
-        this.sharePointTotalFileCount = value;
+        this.BackingStore.set("sharePointTotalFileCount", value);
     }
     /**
      * Sets the teamsChannelMessagesCount property value. The number of channel messages in Teams team.
      * @param value Value to set for the teamsChannelMessagesCount property.
      */
     public void setTeamsChannelMessagesCount(@jakarta.annotation.Nullable final Long value) {
-        this.teamsChannelMessagesCount = value;
+        this.BackingStore.set("teamsChannelMessagesCount", value);
     }
     /**
      * Sets the teamsMeetingsOrganizedCount property value. The number of meetings organized in Teams team.
      * @param value Value to set for the teamsMeetingsOrganizedCount property.
      */
     public void setTeamsMeetingsOrganizedCount(@jakarta.annotation.Nullable final Long value) {
-        this.teamsMeetingsOrganizedCount = value;
+        this.BackingStore.set("teamsMeetingsOrganizedCount", value);
     }
     /**
      * Sets the yammerLikedMessageCount property value. The number of messages liked in Yammer groups.
      * @param value Value to set for the yammerLikedMessageCount property.
      */
     public void setYammerLikedMessageCount(@jakarta.annotation.Nullable final Long value) {
-        this.yammerLikedMessageCount = value;
+        this.BackingStore.set("yammerLikedMessageCount", value);
     }
     /**
      * Sets the yammerPostedMessageCount property value. The number of messages posted to Yammer groups.
      * @param value Value to set for the yammerPostedMessageCount property.
      */
     public void setYammerPostedMessageCount(@jakarta.annotation.Nullable final Long value) {
-        this.yammerPostedMessageCount = value;
+        this.BackingStore.set("yammerPostedMessageCount", value);
     }
     /**
      * Sets the yammerReadMessageCount property value. The number of messages read in Yammer groups.
      * @param value Value to set for the yammerReadMessageCount property.
      */
     public void setYammerReadMessageCount(@jakarta.annotation.Nullable final Long value) {
-        this.yammerReadMessageCount = value;
+        this.BackingStore.set("yammerReadMessageCount", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRoster extends Entity implements Parsable {
     /**
-     * Retrieves the members of the plannerRoster.
-     */
-    private java.util.List<PlannerRosterMember> members;
-    /**
-     * Retrieves the plans contained by the plannerRoster.
-     */
-    private java.util.List<PlannerPlan> plans;
-    /**
-     * Instantiates a new plannerRoster and sets the default values.
+     * Instantiates a new PlannerRoster and sets the default values.
      */
     public PlannerRoster() {
         super();
@@ -25,7 +17,7 @@ public class PlannerRoster extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerRoster
+     * @return a PlannerRoster
      */
     @jakarta.annotation.Nonnull
     public static PlannerRoster createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class PlannerRoster extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Retrieves the members of the plannerRoster.
-     * @return a plannerRosterMember
+     * @return a java.util.List<PlannerRosterMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerRosterMember> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Gets the plans property value. Retrieves the plans contained by the plannerRoster.
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this.plans;
+        return this.BackingStore.get("plans");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PlannerRoster extends Entity implements Parsable {
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<PlannerRosterMember> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
     /**
      * Sets the plans property value. Retrieves the plans contained by the plannerRoster.
      * @param value Value to set for the plans property.
      */
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this.plans = value;
+        this.BackingStore.set("plans", value);
     }
 }

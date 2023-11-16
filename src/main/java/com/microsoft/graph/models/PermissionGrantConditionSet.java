@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /**
-     * Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
-     */
-    private Boolean certifiedClientApplicationsOnly;
-    /**
-     * A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
-     */
-    private java.util.List<String> clientApplicationIds;
-    /**
-     * A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
-     */
-    private java.util.List<String> clientApplicationPublisherIds;
-    /**
-     * Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
-     */
-    private Boolean clientApplicationsFromVerifiedPublisherOnly;
-    /**
-     * A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
-     */
-    private java.util.List<String> clientApplicationTenantIds;
-    /**
-     * The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
-     */
-    private String permissionClassification;
-    /**
-     * The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
-     */
-    private java.util.List<String> permissions;
-    /**
-     * The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
-     */
-    private PermissionType permissionType;
-    /**
-     * The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
-     */
-    private String resourceApplication;
-    /**
-     * Instantiates a new permissionGrantConditionSet and sets the default values.
+     * Instantiates a new PermissionGrantConditionSet and sets the default values.
      */
     public PermissionGrantConditionSet() {
         super();
@@ -53,7 +17,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a permissionGrantConditionSet
+     * @return a PermissionGrantConditionSet
      */
     @jakarta.annotation.Nonnull
     public static PermissionGrantConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,43 +26,43 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the certifiedClientApplicationsOnly property value. Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCertifiedClientApplicationsOnly() {
-        return this.certifiedClientApplicationsOnly;
+        return this.BackingStore.get("certifiedClientApplicationsOnly");
     }
     /**
      * Gets the clientApplicationIds property value. A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationIds() {
-        return this.clientApplicationIds;
+        return this.BackingStore.get("clientApplicationIds");
     }
     /**
      * Gets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationPublisherIds() {
-        return this.clientApplicationPublisherIds;
+        return this.BackingStore.get("clientApplicationPublisherIds");
     }
     /**
      * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClientApplicationsFromVerifiedPublisherOnly() {
-        return this.clientApplicationsFromVerifiedPublisherOnly;
+        return this.BackingStore.get("clientApplicationsFromVerifiedPublisherOnly");
     }
     /**
-     * Gets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
-     * @return a string
+     * Gets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationTenantIds() {
-        return this.clientApplicationTenantIds;
+        return this.BackingStore.get("clientApplicationTenantIds");
     }
     /**
      * The deserialization information for the current model
@@ -120,35 +84,35 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPermissionClassification() {
-        return this.permissionClassification;
+        return this.BackingStore.get("permissionClassification");
     }
     /**
      * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissions() {
-        return this.permissions;
+        return this.BackingStore.get("permissions");
     }
     /**
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
-     * @return a permissionType
+     * @return a PermissionType
      */
     @jakarta.annotation.Nullable
     public PermissionType getPermissionType() {
-        return this.permissionType;
+        return this.BackingStore.get("permissionType");
     }
     /**
      * Gets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceApplication() {
-        return this.resourceApplication;
+        return this.BackingStore.get("resourceApplication");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the certifiedClientApplicationsOnly property.
      */
     public void setCertifiedClientApplicationsOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.certifiedClientApplicationsOnly = value;
+        this.BackingStore.set("certifiedClientApplicationsOnly", value);
     }
     /**
      * Sets the clientApplicationIds property value. A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
      * @param value Value to set for the clientApplicationIds property.
      */
     public void setClientApplicationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.clientApplicationIds = value;
+        this.BackingStore.set("clientApplicationIds", value);
     }
     /**
      * Sets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
      * @param value Value to set for the clientApplicationPublisherIds property.
      */
     public void setClientApplicationPublisherIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.clientApplicationPublisherIds = value;
+        this.BackingStore.set("clientApplicationPublisherIds", value);
     }
     /**
      * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
      * @param value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
      */
     public void setClientApplicationsFromVerifiedPublisherOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.clientApplicationsFromVerifiedPublisherOnly = value;
+        this.BackingStore.set("clientApplicationsFromVerifiedPublisherOnly", value);
     }
     /**
-     * Sets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * Sets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @param value Value to set for the clientApplicationTenantIds property.
      */
     public void setClientApplicationTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.clientApplicationTenantIds = value;
+        this.BackingStore.set("clientApplicationTenantIds", value);
     }
     /**
      * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
      * @param value Value to set for the permissionClassification property.
      */
     public void setPermissionClassification(@jakarta.annotation.Nullable final String value) {
-        this.permissionClassification = value;
+        this.BackingStore.set("permissionClassification", value);
     }
     /**
      * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.permissions = value;
+        this.BackingStore.set("permissions", value);
     }
     /**
      * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @param value Value to set for the permissionType property.
      */
     public void setPermissionType(@jakarta.annotation.Nullable final PermissionType value) {
-        this.permissionType = value;
+        this.BackingStore.set("permissionType", value);
     }
     /**
      * Sets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
      * @param value Value to set for the resourceApplication property.
      */
     public void setResourceApplication(@jakarta.annotation.Nullable final String value) {
-        this.resourceApplication = value;
+        this.BackingStore.set("resourceApplication", value);
     }
 }

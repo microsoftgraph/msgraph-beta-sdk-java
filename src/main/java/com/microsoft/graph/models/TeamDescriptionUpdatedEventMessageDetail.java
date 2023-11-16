@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * The updated description for the team.
-     */
-    private String teamDescription;
-    /**
-     * Unique identifier of the team.
-     */
-    private String teamId;
-    /**
-     * Instantiates a new teamDescriptionUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new TeamDescriptionUpdatedEventMessageDetail and sets the default values.
      */
     public TeamDescriptionUpdatedEventMessageDetail() {
         super();
@@ -30,7 +18,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamDescriptionUpdatedEventMessageDetail
+     * @return a TeamDescriptionUpdatedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static TeamDescriptionUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Gets the teamDescription property value. The updated description for the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamDescription() {
-        return this.teamDescription;
+        return this.BackingStore.get("teamDescription");
     }
     /**
      * Gets the teamId property value. Unique identifier of the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {
-        return this.teamId;
+        return this.BackingStore.get("teamId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
     /**
      * Sets the teamDescription property value. The updated description for the team.
      * @param value Value to set for the teamDescription property.
      */
     public void setTeamDescription(@jakarta.annotation.Nullable final String value) {
-        this.teamDescription = value;
+        this.BackingStore.set("teamDescription", value);
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.teamId = value;
+        this.BackingStore.set("teamId", value);
     }
 }

@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatAssessmentResult extends Entity implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The result message for each threat assessment.
-     */
-    private String message;
-    /**
-     * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
-     */
-    private ThreatAssessmentResultType resultType;
-    /**
-     * Instantiates a new threatAssessmentResult and sets the default values.
+     * Instantiates a new ThreatAssessmentResult and sets the default values.
      */
     public ThreatAssessmentResult() {
         super();
@@ -30,7 +18,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
     @jakarta.annotation.Nonnull
     public static ThreatAssessmentResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +31,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     }
     /**
      * Gets the message property value. The result message for each threat assessment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.BackingStore.get("message");
     }
     /**
      * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
-     * @return a threatAssessmentResultType
+     * @return a ThreatAssessmentResultType
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentResultType getResultType() {
-        return this.resultType;
+        return this.BackingStore.get("resultType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the message property value. The result message for each threat assessment.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.BackingStore.set("message", value);
     }
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
      * @param value Value to set for the resultType property.
      */
     public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultType value) {
-        this.resultType = value;
+        this.BackingStore.set("resultType", value);
     }
 }

@@ -6,37 +6,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The Comment property
-     */
-    private String comment;
-    /**
-     * The Message property
-     */
-    private Message message;
-    /**
-     * The ToRecipients property
-     */
-    private java.util.List<Recipient> toRecipients;
-    /**
-     * Instantiates a new createForwardPostRequestBody and sets the default values.
+     * Instantiates a new CreateForwardPostRequestBody and sets the default values.
      */
     public CreateForwardPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createForwardPostRequestBody
+     * @return a CreateForwardPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreateForwardPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,20 +36,33 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
         return new CreateForwardPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the Comment property value. The Comment property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.BackingStore.get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -73,19 +78,19 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the Message property value. The Message property
-     * @return a message
+     * @return a Message
      */
     @jakarta.annotation.Nullable
     public Message getMessage() {
-        return this.message;
+        return this.BackingStore.get("message");
     }
     /**
      * Gets the ToRecipients property value. The ToRecipients property
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
-        return this.toRecipients;
+        return this.BackingStore.get("toRecipients");
     }
     /**
      * Serializes information the current object
@@ -99,31 +104,39 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.BackingStore.set("comment", value);
     }
     /**
      * Sets the Message property value. The Message property
      * @param value Value to set for the Message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final Message value) {
-        this.message = value;
+        this.BackingStore.set("message", value);
     }
     /**
      * Sets the ToRecipients property value. The ToRecipients property
      * @param value Value to set for the ToRecipients property.
      */
     public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.toRecipients = value;
+        this.BackingStore.set("toRecipients", value);
     }
 }

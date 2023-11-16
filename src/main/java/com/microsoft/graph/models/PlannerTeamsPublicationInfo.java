@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements Parsable {
     /**
-     * The date and time when this task was last modified by the publication process. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The identifier of the publication. Read-only.
-     */
-    private String publicationId;
-    /**
-     * The identifier of the plannerPlan this task was originally placed in. Read-only.
-     */
-    private String publishedToPlanId;
-    /**
-     * The identifier of the team that initiated the publication process. Read-only.
-     */
-    private String publishingTeamId;
-    /**
-     * The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
-     */
-    private String publishingTeamName;
-    /**
-     * Instantiates a new plannerTeamsPublicationInfo and sets the default values.
+     * Instantiates a new PlannerTeamsPublicationInfo and sets the default values.
      */
     public PlannerTeamsPublicationInfo() {
         super();
@@ -43,7 +19,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTeamsPublicationInfo
+     * @return a PlannerTeamsPublicationInfo
      */
     @jakarta.annotation.Nonnull
     public static PlannerTeamsPublicationInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,47 +47,47 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicationId() {
-        return this.publicationId;
+        return this.BackingStore.get("publicationId");
     }
     /**
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishedToPlanId() {
-        return this.publishedToPlanId;
+        return this.BackingStore.get("publishedToPlanId");
     }
     /**
      * Gets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamId() {
-        return this.publishingTeamId;
+        return this.BackingStore.get("publishingTeamId");
     }
     /**
      * Gets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamName() {
-        return this.publishingTeamName;
+        return this.BackingStore.get("publishingTeamName");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the publicationId property value. The identifier of the publication. Read-only.
      * @param value Value to set for the publicationId property.
      */
     public void setPublicationId(@jakarta.annotation.Nullable final String value) {
-        this.publicationId = value;
+        this.BackingStore.set("publicationId", value);
     }
     /**
      * Sets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
      * @param value Value to set for the publishedToPlanId property.
      */
     public void setPublishedToPlanId(@jakarta.annotation.Nullable final String value) {
-        this.publishedToPlanId = value;
+        this.BackingStore.set("publishedToPlanId", value);
     }
     /**
      * Sets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
      * @param value Value to set for the publishingTeamId property.
      */
     public void setPublishingTeamId(@jakarta.annotation.Nullable final String value) {
-        this.publishingTeamId = value;
+        this.BackingStore.set("publishingTeamId", value);
     }
     /**
      * Sets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
      * @param value Value to set for the publishingTeamName property.
      */
     public void setPublishingTeamName(@jakarta.annotation.Nullable final String value) {
-        this.publishingTeamName = value;
+        this.BackingStore.set("publishingTeamName", value);
     }
 }

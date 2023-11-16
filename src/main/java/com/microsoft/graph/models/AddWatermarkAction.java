@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddWatermarkAction extends InformationProtectionAction implements Parsable {
     /**
-     * Color of the font to use for the watermark.
-     */
-    private String fontColor;
-    /**
-     * Name of the font to use for the watermark.
-     */
-    private String fontName;
-    /**
-     * Font size to use for the watermark.
-     */
-    private Integer fontSize;
-    /**
-     * The layout property
-     */
-    private WatermarkLayout layout;
-    /**
-     * The contents of the watermark itself.
-     */
-    private String text;
-    /**
-     * The name of the UI element where the watermark should be placed.
-     */
-    private String uiElementName;
-    /**
-     * Instantiates a new addWatermarkAction and sets the default values.
+     * Instantiates a new AddWatermarkAction and sets the default values.
      */
     public AddWatermarkAction() {
         super();
@@ -42,7 +18,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addWatermarkAction
+     * @return a AddWatermarkAction
      */
     @jakarta.annotation.Nonnull
     public static AddWatermarkAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +42,51 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the watermark.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
-        return this.fontColor;
+        return this.BackingStore.get("fontColor");
     }
     /**
      * Gets the fontName property value. Name of the font to use for the watermark.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontName() {
-        return this.fontName;
+        return this.BackingStore.get("fontName");
     }
     /**
      * Gets the fontSize property value. Font size to use for the watermark.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFontSize() {
-        return this.fontSize;
+        return this.BackingStore.get("fontSize");
     }
     /**
      * Gets the layout property value. The layout property
-     * @return a watermarkLayout
+     * @return a WatermarkLayout
      */
     @jakarta.annotation.Nullable
     public WatermarkLayout getLayout() {
-        return this.layout;
+        return this.BackingStore.get("layout");
     }
     /**
      * Gets the text property value. The contents of the watermark itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the watermark should be placed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUiElementName() {
-        return this.uiElementName;
+        return this.BackingStore.get("uiElementName");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the fontColor property.
      */
     public void setFontColor(@jakarta.annotation.Nullable final String value) {
-        this.fontColor = value;
+        this.BackingStore.set("fontColor", value);
     }
     /**
      * Sets the fontName property value. Name of the font to use for the watermark.
      * @param value Value to set for the fontName property.
      */
     public void setFontName(@jakarta.annotation.Nullable final String value) {
-        this.fontName = value;
+        this.BackingStore.set("fontName", value);
     }
     /**
      * Sets the fontSize property value. Font size to use for the watermark.
      * @param value Value to set for the fontSize property.
      */
     public void setFontSize(@jakarta.annotation.Nullable final Integer value) {
-        this.fontSize = value;
+        this.BackingStore.set("fontSize", value);
     }
     /**
      * Sets the layout property value. The layout property
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final WatermarkLayout value) {
-        this.layout = value;
+        this.BackingStore.set("layout", value);
     }
     /**
      * Sets the text property value. The contents of the watermark itself.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the uiElementName property value. The name of the UI element where the watermark should be placed.
      * @param value Value to set for the uiElementName property.
      */
     public void setUiElementName(@jakarta.annotation.Nullable final String value) {
-        this.uiElementName = value;
+        this.BackingStore.set("uiElementName", value);
     }
 }

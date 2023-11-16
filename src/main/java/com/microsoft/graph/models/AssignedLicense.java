@@ -4,38 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignedLicense implements AdditionalDataHolder, Parsable {
+public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * A collection of the unique identifiers for plans that have been disabled.
-     */
-    private java.util.List<UUID> disabledPlans;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier for the SKU.
-     */
-    private UUID skuId;
-    /**
-     * Instantiates a new assignedLicense and sets the default values.
+     * Instantiates a new AssignedLicense and sets the default values.
      */
     public AssignedLicense() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignedLicense
+     * @return a AssignedLicense
      */
     @jakarta.annotation.Nonnull
     public static AssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,20 +35,33 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
         return new AssignedLicense();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
-        return this.disabledPlans;
+        return this.BackingStore.get("disabledPlans");
     }
     /**
      * The deserialization information for the current model
@@ -72,11 +77,11 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the skuId property value. The unique identifier for the SKU.
@@ -84,7 +89,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
-        return this.skuId;
+        return this.BackingStore.get("skuId");
     }
     /**
      * Serializes information the current object
@@ -98,31 +103,39 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.disabledPlans = value;
+        this.BackingStore.set("disabledPlans", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the skuId property value. The unique identifier for the SKU.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
-        this.skuId = value;
+        this.BackingStore.set("skuId", value);
     }
 }

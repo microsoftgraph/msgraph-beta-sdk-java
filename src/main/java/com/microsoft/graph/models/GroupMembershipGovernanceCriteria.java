@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implements Parsable {
     /**
-     * The groupId property
-     */
-    private String groupId;
-    /**
-     * Instantiates a new groupMembershipGovernanceCriteria and sets the default values.
+     * Instantiates a new GroupMembershipGovernanceCriteria and sets the default values.
      */
     public GroupMembershipGovernanceCriteria() {
         super();
@@ -22,7 +18,7 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupMembershipGovernanceCriteria
+     * @return a GroupMembershipGovernanceCriteria
      */
     @jakarta.annotation.Nonnull
     public static GroupMembershipGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
     }
     /**
      * Gets the groupId property value. The groupId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.BackingStore.get("groupId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.BackingStore.set("groupId", value);
     }
 }

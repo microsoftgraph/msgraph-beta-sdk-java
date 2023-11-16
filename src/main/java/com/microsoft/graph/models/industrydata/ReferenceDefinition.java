@@ -11,35 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReferenceDefinition extends Entity implements Parsable {
     /**
-     * The code value for the definition that must be unique within the referenceType.
-     */
-    private String code;
-    /**
-     * The date and time when the definition was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Indicates whether the definition has been disabled.
-     */
-    private Boolean isDisabled;
-    /**
-     * The date and time when the definition was most recently changed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The categorical type for a collection of enumerated values.
-     */
-    private String referenceType;
-    /**
-     * The ordering index to present the definitions within a type consistently in user interfaces.
-     */
-    private Integer sortIndex;
-    /**
-     * The standards body or organization source which defined the code.
-     */
-    private String source;
-    /**
-     * Instantiates a new referenceDefinition and sets the default values.
+     * Instantiates a new ReferenceDefinition and sets the default values.
      */
     public ReferenceDefinition() {
         super();
@@ -47,7 +19,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a referenceDefinition
+     * @return a ReferenceDefinition
      */
     @jakarta.annotation.Nonnull
     public static ReferenceDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,11 +28,11 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the code property value. The code value for the definition that must be unique within the referenceType.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.BackingStore.get("code");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the definition was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -68,7 +40,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -88,11 +60,11 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isDisabled property value. Indicates whether the definition has been disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDisabled() {
-        return this.isDisabled;
+        return this.BackingStore.get("isDisabled");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the definition was most recently changed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -100,31 +72,31 @@ public class ReferenceDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the referenceType property value. The categorical type for a collection of enumerated values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceType() {
-        return this.referenceType;
+        return this.BackingStore.get("referenceType");
     }
     /**
      * Gets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSortIndex() {
-        return this.sortIndex;
+        return this.BackingStore.get("sortIndex");
     }
     /**
      * Gets the source property value. The standards body or organization source which defined the code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Serializes information the current object
@@ -143,48 +115,48 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.BackingStore.set("code", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the definition was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isDisabled property value. Indicates whether the definition has been disabled.
      * @param value Value to set for the isDisabled property.
      */
     public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDisabled = value;
+        this.BackingStore.set("isDisabled", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the definition was most recently changed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the referenceType property value. The categorical type for a collection of enumerated values.
      * @param value Value to set for the referenceType property.
      */
     public void setReferenceType(@jakarta.annotation.Nullable final String value) {
-        this.referenceType = value;
+        this.BackingStore.set("referenceType", value);
     }
     /**
      * Sets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
      * @param value Value to set for the sortIndex property.
      */
     public void setSortIndex(@jakarta.annotation.Nullable final Integer value) {
-        this.sortIndex = value;
+        this.BackingStore.set("sortIndex", value);
     }
     /**
      * Sets the source property value. The standards body or organization source which defined the code.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final String value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
 }

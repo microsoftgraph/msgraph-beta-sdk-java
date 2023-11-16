@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InformationProtectionPolicySetting extends Entity implements Parsable {
     /**
-     * The defaultLabelId property
-     */
-    private String defaultLabelId;
-    /**
-     * Exposes whether justification input is required on label downgrade.
-     */
-    private Boolean isDowngradeJustificationRequired;
-    /**
-     * Exposes whether mandatory labeling is enabled.
-     */
-    private Boolean isMandatory;
-    /**
-     * Exposes the more information URL that can be configured by the administrator.
-     */
-    private String moreInfoUrl;
-    /**
-     * Instantiates a new informationProtectionPolicySetting and sets the default values.
+     * Instantiates a new InformationProtectionPolicySetting and sets the default values.
      */
     public InformationProtectionPolicySetting() {
         super();
@@ -34,7 +18,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtectionPolicySetting
+     * @return a InformationProtectionPolicySetting
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionPolicySetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the defaultLabelId property value. The defaultLabelId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLabelId() {
-        return this.defaultLabelId;
+        return this.BackingStore.get("defaultLabelId");
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +48,27 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDowngradeJustificationRequired() {
-        return this.isDowngradeJustificationRequired;
+        return this.BackingStore.get("isDowngradeJustificationRequired");
     }
     /**
      * Gets the isMandatory property value. Exposes whether mandatory labeling is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
-        return this.isMandatory;
+        return this.BackingStore.get("isMandatory");
     }
     /**
      * Gets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMoreInfoUrl() {
-        return this.moreInfoUrl;
+        return this.BackingStore.get("moreInfoUrl");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param value Value to set for the defaultLabelId property.
      */
     public void setDefaultLabelId(@jakarta.annotation.Nullable final String value) {
-        this.defaultLabelId = value;
+        this.BackingStore.set("defaultLabelId", value);
     }
     /**
      * Sets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
      * @param value Value to set for the isDowngradeJustificationRequired property.
      */
     public void setIsDowngradeJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDowngradeJustificationRequired = value;
+        this.BackingStore.set("isDowngradeJustificationRequired", value);
     }
     /**
      * Sets the isMandatory property value. Exposes whether mandatory labeling is enabled.
      * @param value Value to set for the isMandatory property.
      */
     public void setIsMandatory(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMandatory = value;
+        this.BackingStore.set("isMandatory", value);
     }
     /**
      * Sets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
      * @param value Value to set for the moreInfoUrl property.
      */
     public void setMoreInfoUrl(@jakarta.annotation.Nullable final String value) {
-        this.moreInfoUrl = value;
+        this.BackingStore.set("moreInfoUrl", value);
     }
 }

@@ -10,59 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResource extends Entity implements Parsable {
     /**
-     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
-     */
-    private AccessPackageResourceEnvironment accessPackageResourceEnvironment;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<AccessPackageResourceRole> accessPackageResourceRoles;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<AccessPackageResourceScope> accessPackageResourceScopes;
-    /**
-     * The name of the user or application that first added this resource. Read-only.
-     */
-    private String addedBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime addedOn;
-    /**
-     * Contains information about the attributes to be collected from the requestor and sent to the resource application.
-     */
-    private java.util.List<AccessPackageResourceAttribute> attributes;
-    /**
-     * A description for the resource.
-     */
-    private String description;
-    /**
-     * The display name of the resource, such as the application name, group name or site name.
-     */
-    private String displayName;
-    /**
-     * True if the resource is not yet available for assignment. Read-only.
-     */
-    private Boolean isPendingOnboarding;
-    /**
-     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
-     */
-    private String originId;
-    /**
-     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     */
-    private String originSystem;
-    /**
-     * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
-     */
-    private String resourceType;
-    /**
-     * A unique resource locator for the resource, such as the URL for signing a user into an application.
-     */
-    private String url;
-    /**
-     * Instantiates a new accessPackageResource and sets the default values.
+     * Instantiates a new AccessPackageResource and sets the default values.
      */
     public AccessPackageResource() {
         super();
@@ -70,7 +18,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,35 +27,35 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
-     * @return a accessPackageResourceEnvironment
+     * @return a AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment getAccessPackageResourceEnvironment() {
-        return this.accessPackageResourceEnvironment;
+        return this.BackingStore.get("accessPackageResourceEnvironment");
     }
     /**
      * Gets the accessPackageResourceRoles property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageResourceRole
+     * @return a java.util.List<AccessPackageResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getAccessPackageResourceRoles() {
-        return this.accessPackageResourceRoles;
+        return this.BackingStore.get("accessPackageResourceRoles");
     }
     /**
      * Gets the accessPackageResourceScopes property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageResourceScope
+     * @return a java.util.List<AccessPackageResourceScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getAccessPackageResourceScopes() {
-        return this.accessPackageResourceScopes;
+        return this.BackingStore.get("accessPackageResourceScopes");
     }
     /**
      * Gets the addedBy property value. The name of the user or application that first added this resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddedBy() {
-        return this.addedBy;
+        return this.BackingStore.get("addedBy");
     }
     /**
      * Gets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -115,31 +63,31 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAddedOn() {
-        return this.addedOn;
+        return this.BackingStore.get("addedOn");
     }
     /**
      * Gets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
-     * @return a accessPackageResourceAttribute
+     * @return a java.util.List<AccessPackageResourceAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceAttribute> getAttributes() {
-        return this.attributes;
+        return this.BackingStore.get("attributes");
     }
     /**
      * Gets the description property value. A description for the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -165,43 +113,43 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPendingOnboarding() {
-        return this.isPendingOnboarding;
+        return this.BackingStore.get("isPendingOnboarding");
     }
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
-     * @return a string
+     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.BackingStore.get("originId");
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.BackingStore.get("originSystem");
     }
     /**
-     * Gets the resourceType property value. The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
-     * @return a string
+     * Gets the resourceType property value. The type of the resource, such as Application if it is a Microsoft Entra connected application, or SharePoint Online Site for a SharePoint Online site.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
-        return this.resourceType;
+        return this.BackingStore.get("resourceType");
     }
     /**
      * Gets the url property value. A unique resource locator for the resource, such as the URL for signing a user into an application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceEnvironment property.
      */
     public void setAccessPackageResourceEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {
-        this.accessPackageResourceEnvironment = value;
+        this.BackingStore.set("accessPackageResourceEnvironment", value);
     }
     /**
      * Sets the accessPackageResourceRoles property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the accessPackageResourceRoles property.
      */
     public void setAccessPackageResourceRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
-        this.accessPackageResourceRoles = value;
+        this.BackingStore.set("accessPackageResourceRoles", value);
     }
     /**
      * Sets the accessPackageResourceScopes property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the accessPackageResourceScopes property.
      */
     public void setAccessPackageResourceScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
-        this.accessPackageResourceScopes = value;
+        this.BackingStore.set("accessPackageResourceScopes", value);
     }
     /**
      * Sets the addedBy property value. The name of the user or application that first added this resource. Read-only.
      * @param value Value to set for the addedBy property.
      */
     public void setAddedBy(@jakarta.annotation.Nullable final String value) {
-        this.addedBy = value;
+        this.BackingStore.set("addedBy", value);
     }
     /**
      * Sets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the addedOn property.
      */
     public void setAddedOn(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.addedOn = value;
+        this.BackingStore.set("addedOn", value);
     }
     /**
      * Sets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
      * @param value Value to set for the attributes property.
      */
     public void setAttributes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceAttribute> value) {
-        this.attributes = value;
+        this.BackingStore.set("attributes", value);
     }
     /**
      * Sets the description property value. A description for the resource.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.
      * @param value Value to set for the isPendingOnboarding property.
      */
     public void setIsPendingOnboarding(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPendingOnboarding = value;
+        this.BackingStore.set("isPendingOnboarding", value);
     }
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.BackingStore.set("originId", value);
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.BackingStore.set("originSystem", value);
     }
     /**
-     * Sets the resourceType property value. The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
+     * Sets the resourceType property value. The type of the resource, such as Application if it is a Microsoft Entra connected application, or SharePoint Online Site for a SharePoint Online site.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.resourceType = value;
+        this.BackingStore.set("resourceType", value);
     }
     /**
      * Sets the url property value. A unique resource locator for the resource, such as the URL for signing a user into an application.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

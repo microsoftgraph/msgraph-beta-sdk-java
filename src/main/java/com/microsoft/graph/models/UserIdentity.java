@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserIdentity extends Identity implements Parsable {
     /**
-     * Indicates the client IP address used by user performing the activity (audit log only).
-     */
-    private String ipAddress;
-    /**
-     * The userPrincipalName attribute of the user.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new userIdentity and sets the default values.
+     * Instantiates a new UserIdentity and sets the default values.
      */
     public UserIdentity() {
         super();
@@ -26,7 +18,7 @@ public class UserIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nonnull
     public static UserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,19 +45,19 @@ public class UserIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName attribute of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -82,13 +74,13 @@ public class UserIdentity extends Identity implements Parsable {
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

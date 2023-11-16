@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingAbstractImplementationConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * List of value which means not configured for the setting
-     */
-    private java.util.List<String> allowedAbstractImplementationDefinitionIds;
-    /**
-     * Instantiates a new deviceManagementSettingAbstractImplementationConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingAbstractImplementationConstraint and sets the default values.
      */
     public DeviceManagementSettingAbstractImplementationConstraint() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingAbstractImplementationConstraint
+     * @return a DeviceManagementSettingAbstractImplementationConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingAbstractImplementationConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     }
     /**
      * Gets the allowedAbstractImplementationDefinitionIds property value. List of value which means not configured for the setting
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAbstractImplementationDefinitionIds() {
-        return this.allowedAbstractImplementationDefinitionIds;
+        return this.BackingStore.get("allowedAbstractImplementationDefinitionIds");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * @param value Value to set for the allowedAbstractImplementationDefinitionIds property.
      */
     public void setAllowedAbstractImplementationDefinitionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedAbstractImplementationDefinitionIds = value;
+        this.BackingStore.set("allowedAbstractImplementationDefinitionIds", value);
     }
 }

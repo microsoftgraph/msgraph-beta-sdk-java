@@ -12,107 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
     /**
-     * Associated Apps. This collection can contain a maximum of 10000 elements.
-     */
-    private java.util.List<Windows10AssociatedApps> associatedApps;
-    /**
-     * Windows 10 VPN connection types.
-     */
-    private Windows10VpnAuthenticationMethod authenticationMethod;
-    /**
-     * VPN connection types.
-     */
-    private Windows10VpnConnectionType connectionType;
-    /**
-     * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
-     */
-    private CryptographySuite cryptographySuite;
-    /**
-     * DNS rules. This collection can contain a maximum of 1000 elements.
-     */
-    private java.util.List<VpnDnsRule> dnsRules;
-    /**
-     * Specify DNS suffixes to add to the DNS search list to properly route short names.
-     */
-    private java.util.List<String> dnsSuffixes;
-    /**
-     * Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
-     */
-    private byte[] eapXml;
-    /**
-     * Enable Always On mode.
-     */
-    private Boolean enableAlwaysOn;
-    /**
-     * Enable conditional access.
-     */
-    private Boolean enableConditionalAccess;
-    /**
-     * Enable device tunnel.
-     */
-    private Boolean enableDeviceTunnel;
-    /**
-     * Enable IP address registration with internal DNS.
-     */
-    private Boolean enableDnsRegistration;
-    /**
-     * Enable single sign-on (SSO) with alternate certificate.
-     */
-    private Boolean enableSingleSignOnWithAlternateCertificate;
-    /**
-     * Enable split tunneling.
-     */
-    private Boolean enableSplitTunneling;
-    /**
-     * Identity certificate for client authentication when authentication method is certificate.
-     */
-    private WindowsCertificateProfileBase identityCertificate;
-    /**
-     * ID of the Microsoft Tunnel site associated with the VPN profile.
-     */
-    private String microsoftTunnelSiteId;
-    /**
-     * Only associated Apps can use connection (per-app VPN).
-     */
-    private Boolean onlyAssociatedAppsCanUseConnection;
-    /**
-     * Profile target type. Possible values are: user, device, autoPilotDevice.
-     */
-    private Windows10VpnProfileTarget profileTarget;
-    /**
-     * Proxy Server.
-     */
-    private Windows10VpnProxyServer proxyServer;
-    /**
-     * Remember user credentials.
-     */
-    private Boolean rememberUserCredentials;
-    /**
-     * Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
-     */
-    private java.util.List<VpnRoute> routes;
-    /**
-     * Single sign-on Extended Key Usage (EKU).
-     */
-    private ExtendedKeyUsage singleSignOnEku;
-    /**
-     * Single sign-on issuer hash.
-     */
-    private String singleSignOnIssuerHash;
-    /**
-     * Traffic rules. This collection can contain a maximum of 1000 elements.
-     */
-    private java.util.List<VpnTrafficRule> trafficRules;
-    /**
-     * Trusted Network Domains
-     */
-    private java.util.List<String> trustedNetworkDomains;
-    /**
-     * Windows Information Protection (WIP) domain to associate with this connection.
-     */
-    private String windowsInformationProtectionDomain;
-    /**
-     * Instantiates a new windows10VpnConfiguration and sets the default values.
+     * Instantiates a new Windows10VpnConfiguration and sets the default values.
      */
     public Windows10VpnConfiguration() {
         super();
@@ -121,7 +21,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10VpnConfiguration
+     * @return a Windows10VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -130,107 +30,107 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the associatedApps property value. Associated Apps. This collection can contain a maximum of 10000 elements.
-     * @return a windows10AssociatedApps
+     * @return a java.util.List<Windows10AssociatedApps>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Windows10AssociatedApps> getAssociatedApps() {
-        return this.associatedApps;
+        return this.BackingStore.get("associatedApps");
     }
     /**
      * Gets the authenticationMethod property value. Windows 10 VPN connection types.
-     * @return a windows10VpnAuthenticationMethod
+     * @return a Windows10VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public Windows10VpnAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.BackingStore.get("authenticationMethod");
     }
     /**
      * Gets the connectionType property value. VPN connection types.
-     * @return a windows10VpnConnectionType
+     * @return a Windows10VpnConnectionType
      */
     @jakarta.annotation.Nullable
     public Windows10VpnConnectionType getConnectionType() {
-        return this.connectionType;
+        return this.BackingStore.get("connectionType");
     }
     /**
      * Gets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
-     * @return a cryptographySuite
+     * @return a CryptographySuite
      */
     @jakarta.annotation.Nullable
     public CryptographySuite getCryptographySuite() {
-        return this.cryptographySuite;
+        return this.BackingStore.get("cryptographySuite");
     }
     /**
      * Gets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
-     * @return a vpnDnsRule
+     * @return a java.util.List<VpnDnsRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnDnsRule> getDnsRules() {
-        return this.dnsRules;
+        return this.BackingStore.get("dnsRules");
     }
     /**
      * Gets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixes() {
-        return this.dnsSuffixes;
+        return this.BackingStore.get("dnsSuffixes");
     }
     /**
      * Gets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getEapXml() {
-        return this.eapXml;
+        return this.BackingStore.get("eapXml");
     }
     /**
      * Gets the enableAlwaysOn property value. Enable Always On mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAlwaysOn() {
-        return this.enableAlwaysOn;
+        return this.BackingStore.get("enableAlwaysOn");
     }
     /**
      * Gets the enableConditionalAccess property value. Enable conditional access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableConditionalAccess() {
-        return this.enableConditionalAccess;
+        return this.BackingStore.get("enableConditionalAccess");
     }
     /**
      * Gets the enableDeviceTunnel property value. Enable device tunnel.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDeviceTunnel() {
-        return this.enableDeviceTunnel;
+        return this.BackingStore.get("enableDeviceTunnel");
     }
     /**
      * Gets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDnsRegistration() {
-        return this.enableDnsRegistration;
+        return this.BackingStore.get("enableDnsRegistration");
     }
     /**
      * Gets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOnWithAlternateCertificate() {
-        return this.enableSingleSignOnWithAlternateCertificate;
+        return this.BackingStore.get("enableSingleSignOnWithAlternateCertificate");
     }
     /**
      * Gets the enableSplitTunneling property value. Enable split tunneling.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
-        return this.enableSplitTunneling;
+        return this.BackingStore.get("enableSplitTunneling");
     }
     /**
      * The deserialization information for the current model
@@ -268,99 +168,99 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a windowsCertificateProfileBase
+     * @return a WindowsCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificate() {
-        return this.identityCertificate;
+        return this.BackingStore.get("identityCertificate");
     }
     /**
      * Gets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
-        return this.microsoftTunnelSiteId;
+        return this.BackingStore.get("microsoftTunnelSiteId");
     }
     /**
      * Gets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnlyAssociatedAppsCanUseConnection() {
-        return this.onlyAssociatedAppsCanUseConnection;
+        return this.BackingStore.get("onlyAssociatedAppsCanUseConnection");
     }
     /**
      * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
-     * @return a windows10VpnProfileTarget
+     * @return a Windows10VpnProfileTarget
      */
     @jakarta.annotation.Nullable
     public Windows10VpnProfileTarget getProfileTarget() {
-        return this.profileTarget;
+        return this.BackingStore.get("profileTarget");
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a windows10VpnProxyServer
+     * @return a Windows10VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public Windows10VpnProxyServer getProxyServer() {
-        return this.proxyServer;
+        return this.BackingStore.get("proxyServer");
     }
     /**
      * Gets the rememberUserCredentials property value. Remember user credentials.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {
-        return this.rememberUserCredentials;
+        return this.BackingStore.get("rememberUserCredentials");
     }
     /**
      * Gets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
-     * @return a vpnRoute
+     * @return a java.util.List<VpnRoute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnRoute> getRoutes() {
-        return this.routes;
+        return this.BackingStore.get("routes");
     }
     /**
      * Gets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
-     * @return a extendedKeyUsage
+     * @return a ExtendedKeyUsage
      */
     @jakarta.annotation.Nullable
     public ExtendedKeyUsage getSingleSignOnEku() {
-        return this.singleSignOnEku;
+        return this.BackingStore.get("singleSignOnEku");
     }
     /**
      * Gets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSingleSignOnIssuerHash() {
-        return this.singleSignOnIssuerHash;
+        return this.BackingStore.get("singleSignOnIssuerHash");
     }
     /**
      * Gets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
-     * @return a vpnTrafficRule
+     * @return a java.util.List<VpnTrafficRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnTrafficRule> getTrafficRules() {
-        return this.trafficRules;
+        return this.BackingStore.get("trafficRules");
     }
     /**
      * Gets the trustedNetworkDomains property value. Trusted Network Domains
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedNetworkDomains() {
-        return this.trustedNetworkDomains;
+        return this.BackingStore.get("trustedNetworkDomains");
     }
     /**
      * Gets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindowsInformationProtectionDomain() {
-        return this.windowsInformationProtectionDomain;
+        return this.BackingStore.get("windowsInformationProtectionDomain");
     }
     /**
      * Serializes information the current object
@@ -400,174 +300,174 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the associatedApps property.
      */
     public void setAssociatedApps(@jakarta.annotation.Nullable final java.util.List<Windows10AssociatedApps> value) {
-        this.associatedApps = value;
+        this.BackingStore.set("associatedApps", value);
     }
     /**
      * Sets the authenticationMethod property value. Windows 10 VPN connection types.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final Windows10VpnAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.BackingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the connectionType property value. VPN connection types.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final Windows10VpnConnectionType value) {
-        this.connectionType = value;
+        this.BackingStore.set("connectionType", value);
     }
     /**
      * Sets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
      * @param value Value to set for the cryptographySuite property.
      */
     public void setCryptographySuite(@jakarta.annotation.Nullable final CryptographySuite value) {
-        this.cryptographySuite = value;
+        this.BackingStore.set("cryptographySuite", value);
     }
     /**
      * Sets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the dnsRules property.
      */
     public void setDnsRules(@jakarta.annotation.Nullable final java.util.List<VpnDnsRule> value) {
-        this.dnsRules = value;
+        this.BackingStore.set("dnsRules", value);
     }
     /**
      * Sets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
      * @param value Value to set for the dnsSuffixes property.
      */
     public void setDnsSuffixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.dnsSuffixes = value;
+        this.BackingStore.set("dnsSuffixes", value);
     }
     /**
      * Sets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
      * @param value Value to set for the eapXml property.
      */
     public void setEapXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.eapXml = value;
+        this.BackingStore.set("eapXml", value);
     }
     /**
      * Sets the enableAlwaysOn property value. Enable Always On mode.
      * @param value Value to set for the enableAlwaysOn property.
      */
     public void setEnableAlwaysOn(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableAlwaysOn = value;
+        this.BackingStore.set("enableAlwaysOn", value);
     }
     /**
      * Sets the enableConditionalAccess property value. Enable conditional access.
      * @param value Value to set for the enableConditionalAccess property.
      */
     public void setEnableConditionalAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableConditionalAccess = value;
+        this.BackingStore.set("enableConditionalAccess", value);
     }
     /**
      * Sets the enableDeviceTunnel property value. Enable device tunnel.
      * @param value Value to set for the enableDeviceTunnel property.
      */
     public void setEnableDeviceTunnel(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableDeviceTunnel = value;
+        this.BackingStore.set("enableDeviceTunnel", value);
     }
     /**
      * Sets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
      * @param value Value to set for the enableDnsRegistration property.
      */
     public void setEnableDnsRegistration(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableDnsRegistration = value;
+        this.BackingStore.set("enableDnsRegistration", value);
     }
     /**
      * Sets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
      * @param value Value to set for the enableSingleSignOnWithAlternateCertificate property.
      */
     public void setEnableSingleSignOnWithAlternateCertificate(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableSingleSignOnWithAlternateCertificate = value;
+        this.BackingStore.set("enableSingleSignOnWithAlternateCertificate", value);
     }
     /**
      * Sets the enableSplitTunneling property value. Enable split tunneling.
      * @param value Value to set for the enableSplitTunneling property.
      */
     public void setEnableSplitTunneling(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableSplitTunneling = value;
+        this.BackingStore.set("enableSplitTunneling", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final WindowsCertificateProfileBase value) {
-        this.identityCertificate = value;
+        this.BackingStore.set("identityCertificate", value);
     }
     /**
      * Sets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
      * @param value Value to set for the microsoftTunnelSiteId property.
      */
     public void setMicrosoftTunnelSiteId(@jakarta.annotation.Nullable final String value) {
-        this.microsoftTunnelSiteId = value;
+        this.BackingStore.set("microsoftTunnelSiteId", value);
     }
     /**
      * Sets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
      * @param value Value to set for the onlyAssociatedAppsCanUseConnection property.
      */
     public void setOnlyAssociatedAppsCanUseConnection(@jakarta.annotation.Nullable final Boolean value) {
-        this.onlyAssociatedAppsCanUseConnection = value;
+        this.BackingStore.set("onlyAssociatedAppsCanUseConnection", value);
     }
     /**
      * Sets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
      * @param value Value to set for the profileTarget property.
      */
     public void setProfileTarget(@jakarta.annotation.Nullable final Windows10VpnProfileTarget value) {
-        this.profileTarget = value;
+        this.BackingStore.set("profileTarget", value);
     }
     /**
      * Sets the proxyServer property value. Proxy Server.
      * @param value Value to set for the proxyServer property.
      */
     public void setProxyServer(@jakarta.annotation.Nullable final Windows10VpnProxyServer value) {
-        this.proxyServer = value;
+        this.BackingStore.set("proxyServer", value);
     }
     /**
      * Sets the rememberUserCredentials property value. Remember user credentials.
      * @param value Value to set for the rememberUserCredentials property.
      */
     public void setRememberUserCredentials(@jakarta.annotation.Nullable final Boolean value) {
-        this.rememberUserCredentials = value;
+        this.BackingStore.set("rememberUserCredentials", value);
     }
     /**
      * Sets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the routes property.
      */
     public void setRoutes(@jakarta.annotation.Nullable final java.util.List<VpnRoute> value) {
-        this.routes = value;
+        this.BackingStore.set("routes", value);
     }
     /**
      * Sets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
      * @param value Value to set for the singleSignOnEku property.
      */
     public void setSingleSignOnEku(@jakarta.annotation.Nullable final ExtendedKeyUsage value) {
-        this.singleSignOnEku = value;
+        this.BackingStore.set("singleSignOnEku", value);
     }
     /**
      * Sets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
      * @param value Value to set for the singleSignOnIssuerHash property.
      */
     public void setSingleSignOnIssuerHash(@jakarta.annotation.Nullable final String value) {
-        this.singleSignOnIssuerHash = value;
+        this.BackingStore.set("singleSignOnIssuerHash", value);
     }
     /**
      * Sets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the trafficRules property.
      */
     public void setTrafficRules(@jakarta.annotation.Nullable final java.util.List<VpnTrafficRule> value) {
-        this.trafficRules = value;
+        this.BackingStore.set("trafficRules", value);
     }
     /**
      * Sets the trustedNetworkDomains property value. Trusted Network Domains
      * @param value Value to set for the trustedNetworkDomains property.
      */
     public void setTrustedNetworkDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.trustedNetworkDomains = value;
+        this.BackingStore.set("trustedNetworkDomains", value);
     }
     /**
      * Sets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
      * @param value Value to set for the windowsInformationProtectionDomain property.
      */
     public void setWindowsInformationProtectionDomain(@jakarta.annotation.Nullable final String value) {
-        this.windowsInformationProtectionDomain = value;
+        this.BackingStore.set("windowsInformationProtectionDomain", value);
     }
 }

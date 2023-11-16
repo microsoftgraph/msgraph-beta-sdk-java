@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable {
     /**
-     * The zone or region where the resource is located.
-     */
-    private String location;
-    /**
-     * The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     */
-    private GoogleCloudLocationType locationType;
-    /**
-     * The Google project ID as defined by the user.
-     */
-    private String projectId;
-    /**
-     * The project number assigned by Google.
-     */
-    private Long projectNumber;
-    /**
-     * The name of the resource.
-     */
-    private String resourceName;
-    /**
-     * The type of the resource.
-     */
-    private String resourceType;
-    /**
-     * Instantiates a new googleCloudResourceEvidence and sets the default values.
+     * Instantiates a new GoogleCloudResourceEvidence and sets the default values.
      */
     public GoogleCloudResourceEvidence() {
         super();
@@ -42,7 +18,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a googleCloudResourceEvidence
+     * @return a GoogleCloudResourceEvidence
      */
     @jakarta.annotation.Nonnull
     public static GoogleCloudResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +42,51 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the location property value. The zone or region where the resource is located.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
-        return this.location;
+        return this.BackingStore.get("location");
     }
     /**
      * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     * @return a googleCloudLocationType
+     * @return a GoogleCloudLocationType
      */
     @jakarta.annotation.Nullable
     public GoogleCloudLocationType getLocationType() {
-        return this.locationType;
+        return this.BackingStore.get("locationType");
     }
     /**
      * Gets the projectId property value. The Google project ID as defined by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProjectId() {
-        return this.projectId;
+        return this.BackingStore.get("projectId");
     }
     /**
      * Gets the projectNumber property value. The project number assigned by Google.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getProjectNumber() {
-        return this.projectNumber;
+        return this.BackingStore.get("projectNumber");
     }
     /**
      * Gets the resourceName property value. The name of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.BackingStore.get("resourceName");
     }
     /**
      * Gets the resourceType property value. The type of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
-        return this.resourceType;
+        return this.BackingStore.get("resourceType");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {
-        this.location = value;
+        this.BackingStore.set("location", value);
     }
     /**
      * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @param value Value to set for the locationType property.
      */
     public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudLocationType value) {
-        this.locationType = value;
+        this.BackingStore.set("locationType", value);
     }
     /**
      * Sets the projectId property value. The Google project ID as defined by the user.
      * @param value Value to set for the projectId property.
      */
     public void setProjectId(@jakarta.annotation.Nullable final String value) {
-        this.projectId = value;
+        this.BackingStore.set("projectId", value);
     }
     /**
      * Sets the projectNumber property value. The project number assigned by Google.
      * @param value Value to set for the projectNumber property.
      */
     public void setProjectNumber(@jakarta.annotation.Nullable final Long value) {
-        this.projectNumber = value;
+        this.BackingStore.set("projectNumber", value);
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.BackingStore.set("resourceName", value);
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.resourceType = value;
+        this.BackingStore.set("resourceType", value);
     }
 }

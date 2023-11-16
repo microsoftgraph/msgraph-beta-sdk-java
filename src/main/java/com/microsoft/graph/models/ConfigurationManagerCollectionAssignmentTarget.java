@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
-     * The collection Id that is the target of the assignment.
-     */
-    private String collectionId;
-    /**
-     * Instantiates a new configurationManagerCollectionAssignmentTarget and sets the default values.
+     * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
      */
     public ConfigurationManagerCollectionAssignmentTarget() {
         super();
@@ -25,7 +21,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configurationManagerCollectionAssignmentTarget
+     * @return a ConfigurationManagerCollectionAssignmentTarget
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerCollectionAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     }
     /**
      * Gets the collectionId property value. The collection Id that is the target of the assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCollectionId() {
-        return this.collectionId;
+        return this.BackingStore.get("collectionId");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
      * @param value Value to set for the collectionId property.
      */
     public void setCollectionId(@jakarta.annotation.Nullable final String value) {
-        this.collectionId = value;
+        this.BackingStore.set("collectionId", value);
     }
 }

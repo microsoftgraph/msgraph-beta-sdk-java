@@ -10,103 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365ActiveUserDetail extends Entity implements Parsable {
     /**
-     * All the products assigned for the user.
-     */
-    private java.util.List<String> assignedProducts;
-    /**
-     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
-     */
-    private LocalDate deletedDate;
-    /**
-     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
-     */
-    private String displayName;
-    /**
-     * The date when user last read or sent email.
-     */
-    private LocalDate exchangeLastActivityDate;
-    /**
-     * The last date when the user was assigned an Exchange license.
-     */
-    private LocalDate exchangeLicenseAssignDate;
-    /**
-     * Whether the user has been assigned an Exchange license.
-     */
-    private Boolean hasExchangeLicense;
-    /**
-     * Whether the user has been assigned a OneDrive license.
-     */
-    private Boolean hasOneDriveLicense;
-    /**
-     * Whether the user has been assigned a SharePoint license.
-     */
-    private Boolean hasSharePointLicense;
-    /**
-     * Whether the user has been assigned a Skype For Business license.
-     */
-    private Boolean hasSkypeForBusinessLicense;
-    /**
-     * Whether the user has been assigned a Teams license.
-     */
-    private Boolean hasTeamsLicense;
-    /**
-     * Whether the user has been assigned a Yammer license.
-     */
-    private Boolean hasYammerLicense;
-    /**
-     * Whether this user has been deleted or soft deleted.
-     */
-    private Boolean isDeleted;
-    /**
-     * The date when user last viewed or edited files, shared files internally or externally, or synced files.
-     */
-    private LocalDate oneDriveLastActivityDate;
-    /**
-     * The last date when the user was assigned a OneDrive license.
-     */
-    private LocalDate oneDriveLicenseAssignDate;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
-     */
-    private LocalDate sharePointLastActivityDate;
-    /**
-     * The last date when the user was assigned a SharePoint license.
-     */
-    private LocalDate sharePointLicenseAssignDate;
-    /**
-     * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
-     */
-    private LocalDate skypeForBusinessLastActivityDate;
-    /**
-     * The last date when the user was assigned a Skype For Business license.
-     */
-    private LocalDate skypeForBusinessLicenseAssignDate;
-    /**
-     * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
-     */
-    private LocalDate teamsLastActivityDate;
-    /**
-     * The last date when the user was assigned a Teams license.
-     */
-    private LocalDate teamsLicenseAssignDate;
-    /**
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
-     */
-    private String userPrincipalName;
-    /**
-     * The date when user last posted, read, or liked message.
-     */
-    private LocalDate yammerLastActivityDate;
-    /**
-     * The last date when the user was assigned a Yammer license.
-     */
-    private LocalDate yammerLicenseAssignDate;
-    /**
-     * Instantiates a new office365ActiveUserDetail and sets the default values.
+     * Instantiates a new Office365ActiveUserDetail and sets the default values.
      */
     public Office365ActiveUserDetail() {
         super();
@@ -114,7 +18,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365ActiveUserDetail
+     * @return a Office365ActiveUserDetail
      */
     @jakarta.annotation.Nonnull
     public static Office365ActiveUserDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -123,27 +27,27 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the assignedProducts property value. All the products assigned for the user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignedProducts() {
-        return this.assignedProducts;
+        return this.BackingStore.get("assignedProducts");
     }
     /**
-     * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
     public LocalDate getDeletedDate() {
-        return this.deletedDate;
+        return this.BackingStore.get("deletedDate");
     }
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
-     * @return a string
+     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the exchangeLastActivityDate property value. The date when user last read or sent email.
@@ -151,7 +55,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getExchangeLastActivityDate() {
-        return this.exchangeLastActivityDate;
+        return this.BackingStore.get("exchangeLastActivityDate");
     }
     /**
      * Gets the exchangeLicenseAssignDate property value. The last date when the user was assigned an Exchange license.
@@ -159,7 +63,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getExchangeLicenseAssignDate() {
-        return this.exchangeLicenseAssignDate;
+        return this.BackingStore.get("exchangeLicenseAssignDate");
     }
     /**
      * The deserialization information for the current model
@@ -196,59 +100,59 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasExchangeLicense property value. Whether the user has been assigned an Exchange license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasExchangeLicense() {
-        return this.hasExchangeLicense;
+        return this.BackingStore.get("hasExchangeLicense");
     }
     /**
      * Gets the hasOneDriveLicense property value. Whether the user has been assigned a OneDrive license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasOneDriveLicense() {
-        return this.hasOneDriveLicense;
+        return this.BackingStore.get("hasOneDriveLicense");
     }
     /**
      * Gets the hasSharePointLicense property value. Whether the user has been assigned a SharePoint license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSharePointLicense() {
-        return this.hasSharePointLicense;
+        return this.BackingStore.get("hasSharePointLicense");
     }
     /**
      * Gets the hasSkypeForBusinessLicense property value. Whether the user has been assigned a Skype For Business license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSkypeForBusinessLicense() {
-        return this.hasSkypeForBusinessLicense;
+        return this.BackingStore.get("hasSkypeForBusinessLicense");
     }
     /**
      * Gets the hasTeamsLicense property value. Whether the user has been assigned a Teams license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasTeamsLicense() {
-        return this.hasTeamsLicense;
+        return this.BackingStore.get("hasTeamsLicense");
     }
     /**
      * Gets the hasYammerLicense property value. Whether the user has been assigned a Yammer license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasYammerLicense() {
-        return this.hasYammerLicense;
+        return this.BackingStore.get("hasYammerLicense");
     }
     /**
      * Gets the isDeleted property value. Whether this user has been deleted or soft deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.BackingStore.get("isDeleted");
     }
     /**
      * Gets the oneDriveLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, or synced files.
@@ -256,7 +160,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getOneDriveLastActivityDate() {
-        return this.oneDriveLastActivityDate;
+        return this.BackingStore.get("oneDriveLastActivityDate");
     }
     /**
      * Gets the oneDriveLicenseAssignDate property value. The last date when the user was assigned a OneDrive license.
@@ -264,7 +168,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getOneDriveLicenseAssignDate() {
-        return this.oneDriveLicenseAssignDate;
+        return this.BackingStore.get("oneDriveLicenseAssignDate");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -272,7 +176,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.BackingStore.get("reportRefreshDate");
     }
     /**
      * Gets the sharePointLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
@@ -280,7 +184,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getSharePointLastActivityDate() {
-        return this.sharePointLastActivityDate;
+        return this.BackingStore.get("sharePointLastActivityDate");
     }
     /**
      * Gets the sharePointLicenseAssignDate property value. The last date when the user was assigned a SharePoint license.
@@ -288,7 +192,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getSharePointLicenseAssignDate() {
-        return this.sharePointLicenseAssignDate;
+        return this.BackingStore.get("sharePointLicenseAssignDate");
     }
     /**
      * Gets the skypeForBusinessLastActivityDate property value. The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
@@ -296,7 +200,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getSkypeForBusinessLastActivityDate() {
-        return this.skypeForBusinessLastActivityDate;
+        return this.BackingStore.get("skypeForBusinessLastActivityDate");
     }
     /**
      * Gets the skypeForBusinessLicenseAssignDate property value. The last date when the user was assigned a Skype For Business license.
@@ -304,7 +208,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getSkypeForBusinessLicenseAssignDate() {
-        return this.skypeForBusinessLicenseAssignDate;
+        return this.BackingStore.get("skypeForBusinessLicenseAssignDate");
     }
     /**
      * Gets the teamsLastActivityDate property value. The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
@@ -312,7 +216,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getTeamsLastActivityDate() {
-        return this.teamsLastActivityDate;
+        return this.BackingStore.get("teamsLastActivityDate");
     }
     /**
      * Gets the teamsLicenseAssignDate property value. The last date when the user was assigned a Teams license.
@@ -320,15 +224,15 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getTeamsLicenseAssignDate() {
-        return this.teamsLicenseAssignDate;
+        return this.BackingStore.get("teamsLicenseAssignDate");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Gets the yammerLastActivityDate property value. The date when user last posted, read, or liked message.
@@ -336,7 +240,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getYammerLastActivityDate() {
-        return this.yammerLastActivityDate;
+        return this.BackingStore.get("yammerLastActivityDate");
     }
     /**
      * Gets the yammerLicenseAssignDate property value. The last date when the user was assigned a Yammer license.
@@ -344,7 +248,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getYammerLicenseAssignDate() {
-        return this.yammerLicenseAssignDate;
+        return this.BackingStore.get("yammerLicenseAssignDate");
     }
     /**
      * Serializes information the current object
@@ -383,167 +287,167 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the assignedProducts property.
      */
     public void setAssignedProducts(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.assignedProducts = value;
+        this.BackingStore.set("assignedProducts", value);
     }
     /**
-     * Sets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * Sets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      * @param value Value to set for the deletedDate property.
      */
     public void setDeletedDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.deletedDate = value;
+        this.BackingStore.set("deletedDate", value);
     }
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the exchangeLastActivityDate property value. The date when user last read or sent email.
      * @param value Value to set for the exchangeLastActivityDate property.
      */
     public void setExchangeLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.exchangeLastActivityDate = value;
+        this.BackingStore.set("exchangeLastActivityDate", value);
     }
     /**
      * Sets the exchangeLicenseAssignDate property value. The last date when the user was assigned an Exchange license.
      * @param value Value to set for the exchangeLicenseAssignDate property.
      */
     public void setExchangeLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.exchangeLicenseAssignDate = value;
+        this.BackingStore.set("exchangeLicenseAssignDate", value);
     }
     /**
      * Sets the hasExchangeLicense property value. Whether the user has been assigned an Exchange license.
      * @param value Value to set for the hasExchangeLicense property.
      */
     public void setHasExchangeLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasExchangeLicense = value;
+        this.BackingStore.set("hasExchangeLicense", value);
     }
     /**
      * Sets the hasOneDriveLicense property value. Whether the user has been assigned a OneDrive license.
      * @param value Value to set for the hasOneDriveLicense property.
      */
     public void setHasOneDriveLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasOneDriveLicense = value;
+        this.BackingStore.set("hasOneDriveLicense", value);
     }
     /**
      * Sets the hasSharePointLicense property value. Whether the user has been assigned a SharePoint license.
      * @param value Value to set for the hasSharePointLicense property.
      */
     public void setHasSharePointLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasSharePointLicense = value;
+        this.BackingStore.set("hasSharePointLicense", value);
     }
     /**
      * Sets the hasSkypeForBusinessLicense property value. Whether the user has been assigned a Skype For Business license.
      * @param value Value to set for the hasSkypeForBusinessLicense property.
      */
     public void setHasSkypeForBusinessLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasSkypeForBusinessLicense = value;
+        this.BackingStore.set("hasSkypeForBusinessLicense", value);
     }
     /**
      * Sets the hasTeamsLicense property value. Whether the user has been assigned a Teams license.
      * @param value Value to set for the hasTeamsLicense property.
      */
     public void setHasTeamsLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasTeamsLicense = value;
+        this.BackingStore.set("hasTeamsLicense", value);
     }
     /**
      * Sets the hasYammerLicense property value. Whether the user has been assigned a Yammer license.
      * @param value Value to set for the hasYammerLicense property.
      */
     public void setHasYammerLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasYammerLicense = value;
+        this.BackingStore.set("hasYammerLicense", value);
     }
     /**
      * Sets the isDeleted property value. Whether this user has been deleted or soft deleted.
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.BackingStore.set("isDeleted", value);
     }
     /**
      * Sets the oneDriveLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, or synced files.
      * @param value Value to set for the oneDriveLastActivityDate property.
      */
     public void setOneDriveLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.oneDriveLastActivityDate = value;
+        this.BackingStore.set("oneDriveLastActivityDate", value);
     }
     /**
      * Sets the oneDriveLicenseAssignDate property value. The last date when the user was assigned a OneDrive license.
      * @param value Value to set for the oneDriveLicenseAssignDate property.
      */
     public void setOneDriveLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.oneDriveLicenseAssignDate = value;
+        this.BackingStore.set("oneDriveLicenseAssignDate", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.BackingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the sharePointLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
      * @param value Value to set for the sharePointLastActivityDate property.
      */
     public void setSharePointLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.sharePointLastActivityDate = value;
+        this.BackingStore.set("sharePointLastActivityDate", value);
     }
     /**
      * Sets the sharePointLicenseAssignDate property value. The last date when the user was assigned a SharePoint license.
      * @param value Value to set for the sharePointLicenseAssignDate property.
      */
     public void setSharePointLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.sharePointLicenseAssignDate = value;
+        this.BackingStore.set("sharePointLicenseAssignDate", value);
     }
     /**
      * Sets the skypeForBusinessLastActivityDate property value. The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
      * @param value Value to set for the skypeForBusinessLastActivityDate property.
      */
     public void setSkypeForBusinessLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.skypeForBusinessLastActivityDate = value;
+        this.BackingStore.set("skypeForBusinessLastActivityDate", value);
     }
     /**
      * Sets the skypeForBusinessLicenseAssignDate property value. The last date when the user was assigned a Skype For Business license.
      * @param value Value to set for the skypeForBusinessLicenseAssignDate property.
      */
     public void setSkypeForBusinessLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.skypeForBusinessLicenseAssignDate = value;
+        this.BackingStore.set("skypeForBusinessLicenseAssignDate", value);
     }
     /**
      * Sets the teamsLastActivityDate property value. The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
      * @param value Value to set for the teamsLastActivityDate property.
      */
     public void setTeamsLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.teamsLastActivityDate = value;
+        this.BackingStore.set("teamsLastActivityDate", value);
     }
     /**
      * Sets the teamsLicenseAssignDate property value. The last date when the user was assigned a Teams license.
      * @param value Value to set for the teamsLicenseAssignDate property.
      */
     public void setTeamsLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.teamsLicenseAssignDate = value;
+        this.BackingStore.set("teamsLicenseAssignDate", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
     /**
      * Sets the yammerLastActivityDate property value. The date when user last posted, read, or liked message.
      * @param value Value to set for the yammerLastActivityDate property.
      */
     public void setYammerLastActivityDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.yammerLastActivityDate = value;
+        this.BackingStore.set("yammerLastActivityDate", value);
     }
     /**
      * Sets the yammerLicenseAssignDate property value. The last date when the user was assigned a Yammer license.
      * @param value Value to set for the yammerLicenseAssignDate property.
      */
     public void setYammerLicenseAssignDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.yammerLicenseAssignDate = value;
+        this.BackingStore.set("yammerLicenseAssignDate", value);
     }
 }

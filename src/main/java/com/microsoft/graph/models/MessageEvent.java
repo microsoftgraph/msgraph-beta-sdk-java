@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageEvent extends Entity implements Parsable {
     /**
-     * The dateTime property
-     */
-    private OffsetDateTime dateTime;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The eventType property
-     */
-    private MessageEventType eventType;
-    /**
-     * Instantiates a new messageEvent and sets the default values.
+     * Instantiates a new MessageEvent and sets the default values.
      */
     public MessageEvent() {
         super();
@@ -30,7 +18,7 @@ public class MessageEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageEvent
+     * @return a MessageEvent
      */
     @jakarta.annotation.Nonnull
     public static MessageEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,23 +31,23 @@ public class MessageEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDateTime() {
-        return this.dateTime;
+        return this.BackingStore.get("dateTime");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the eventType property value. The eventType property
-     * @return a messageEventType
+     * @return a MessageEventType
      */
     @jakarta.annotation.Nullable
     public MessageEventType getEventType() {
-        return this.eventType;
+        return this.BackingStore.get("eventType");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class MessageEvent extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      */
     public void setDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.dateTime = value;
+        this.BackingStore.set("dateTime", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the eventType property value. The eventType property
      * @param value Value to set for the eventType property.
      */
     public void setEventType(@jakarta.annotation.Nullable final MessageEventType value) {
-        this.eventType = value;
+        this.BackingStore.set("eventType", value);
     }
 }

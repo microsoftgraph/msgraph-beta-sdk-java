@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InsightsSettings extends Entity implements Parsable {
     /**
-     * The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
-     */
-    private String disabledForGroup;
-    /**
-     * true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
-     */
-    private Boolean isEnabledInOrganization;
-    /**
-     * Instantiates a new insightsSettings and sets the default values.
+     * Instantiates a new InsightsSettings and sets the default values.
      */
     public InsightsSettings() {
         super();
@@ -25,7 +17,7 @@ public class InsightsSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a insightsSettings
+     * @return a InsightsSettings
      */
     @jakarta.annotation.Nonnull
     public static InsightsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,12 +25,12 @@ public class InsightsSettings extends Entity implements Parsable {
         return new InsightsSettings();
     }
     /**
-     * Gets the disabledForGroup property value. The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
-     * @return a string
+     * Gets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisabledForGroup() {
-        return this.disabledForGroup;
+        return this.BackingStore.get("disabledForGroup");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class InsightsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {
-        return this.isEnabledInOrganization;
+        return this.BackingStore.get("isEnabledInOrganization");
     }
     /**
      * Serializes information the current object
@@ -70,17 +62,17 @@ public class InsightsSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabledInOrganization", this.getIsEnabledInOrganization());
     }
     /**
-     * Sets the disabledForGroup property value. The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+     * Sets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
      * @param value Value to set for the disabledForGroup property.
      */
     public void setDisabledForGroup(@jakarta.annotation.Nullable final String value) {
-        this.disabledForGroup = value;
+        this.BackingStore.set("disabledForGroup", value);
     }
     /**
      * Sets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
      * @param value Value to set for the isEnabledInOrganization property.
      */
     public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabledInOrganization = value;
+        this.BackingStore.set("isEnabledInOrganization", value);
     }
 }

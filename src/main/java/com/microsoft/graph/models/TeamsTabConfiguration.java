@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Url used for rendering tab contents in Teams. Required.
-     */
-    private String contentUrl;
-    /**
-     * Identifier for the entity hosted by the tab provider.
-     */
-    private String entityId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Url called by Teams client when a Tab is removed using the Teams Client.
-     */
-    private String removeUrl;
-    /**
-     * Url for showing tab contents outside of Teams.
-     */
-    private String websiteUrl;
-    /**
-     * Instantiates a new teamsTabConfiguration and sets the default values.
+     * Instantiates a new TeamsTabConfiguration and sets the default values.
      */
     public TeamsTabConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsTabConfiguration
+     * @return a TeamsTabConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamsTabConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +34,41 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
         return new TeamsTabConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.BackingStore.get("contentUrl");
     }
     /**
      * Gets the entityId property value. Identifier for the entity hosted by the tab provider.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEntityId() {
-        return this.entityId;
+        return this.BackingStore.get("entityId");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +86,27 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoveUrl() {
-        return this.removeUrl;
+        return this.BackingStore.get("removeUrl");
     }
     /**
      * Gets the websiteUrl property value. Url for showing tab contents outside of Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsiteUrl() {
-        return this.websiteUrl;
+        return this.BackingStore.get("websiteUrl");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.BackingStore.set("contentUrl", value);
     }
     /**
      * Sets the entityId property value. Identifier for the entity hosted by the tab provider.
      * @param value Value to set for the entityId property.
      */
     public void setEntityId(@jakarta.annotation.Nullable final String value) {
-        this.entityId = value;
+        this.BackingStore.set("entityId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
      * @param value Value to set for the removeUrl property.
      */
     public void setRemoveUrl(@jakarta.annotation.Nullable final String value) {
-        this.removeUrl = value;
+        this.BackingStore.set("removeUrl", value);
     }
     /**
      * Sets the websiteUrl property value. Url for showing tab contents outside of Teams.
      * @param value Value to set for the websiteUrl property.
      */
     public void setWebsiteUrl(@jakarta.annotation.Nullable final String value) {
-        this.websiteUrl = value;
+        this.BackingStore.set("websiteUrl", value);
     }
 }

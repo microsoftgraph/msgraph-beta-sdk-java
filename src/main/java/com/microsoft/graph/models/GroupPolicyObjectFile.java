@@ -14,31 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
-     * The Group Policy Object file content.
-     */
-    private String content;
-    /**
-     * The date and time at which the GroupPolicy was first uploaded.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The Group Policy Object GUID from GPO Xml content
-     */
-    private UUID groupPolicyObjectId;
-    /**
-     * The date and time at which the GroupPolicyObjectFile was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The distinguished name of the OU.
-     */
-    private String ouDistinguishedName;
-    /**
-     * The list of scope tags for the configuration.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Instantiates a new groupPolicyObjectFile and sets the default values.
+     * Instantiates a new GroupPolicyObjectFile and sets the default values.
      */
     public GroupPolicyObjectFile() {
         super();
@@ -46,7 +22,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyObjectFile
+     * @return a GroupPolicyObjectFile
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyObjectFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +31,11 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The Group Policy Object file content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the createdDateTime property value. The date and time at which the GroupPolicy was first uploaded.
@@ -67,7 +43,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +66,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getGroupPolicyObjectId() {
-        return this.groupPolicyObjectId;
+        return this.BackingStore.get("groupPolicyObjectId");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time at which the GroupPolicyObjectFile was last modified.
@@ -98,23 +74,23 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
-        return this.ouDistinguishedName;
+        return this.BackingStore.get("ouDistinguishedName");
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -135,41 +111,41 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time at which the GroupPolicy was first uploaded.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
      * @param value Value to set for the groupPolicyObjectId property.
      */
     public void setGroupPolicyObjectId(@jakarta.annotation.Nullable final UUID value) {
-        this.groupPolicyObjectId = value;
+        this.BackingStore.set("groupPolicyObjectId", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time at which the GroupPolicyObjectFile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the ouDistinguishedName property value. The distinguished name of the OU.
      * @param value Value to set for the ouDistinguishedName property.
      */
     public void setOuDistinguishedName(@jakarta.annotation.Nullable final String value) {
-        this.ouDistinguishedName = value;
+        this.BackingStore.set("ouDistinguishedName", value);
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
 }

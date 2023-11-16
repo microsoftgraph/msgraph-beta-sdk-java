@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationEventListenerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AuthenticationEventListener> value;
-    /**
-     * Instantiates a new authenticationEventListenerCollectionResponse and sets the default values.
+     * Instantiates a new AuthenticationEventListenerCollectionResponse and sets the default values.
      */
     public AuthenticationEventListenerCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AuthenticationEventListenerCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationEventListenerCollectionResponse
+     * @return a AuthenticationEventListenerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationEventListenerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AuthenticationEventListenerCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a authenticationEventListener
+     * @return a java.util.List<AuthenticationEventListener>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationEventListener> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthenticationEventListenerCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AuthenticationEventListener> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

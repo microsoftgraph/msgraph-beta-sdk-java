@@ -13,91 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsable {
     /**
-     * Tenant GUID the enrollment profile belongs to.
-     */
-    private String accountId;
-    /**
-     * Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
-     */
-    private Boolean configureWifi;
-    /**
-     * Date time the enrollment profile was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description for the enrollment profile.
-     */
-    private String description;
-    /**
-     * Display name for the enrollment profile.
-     */
-    private String displayName;
-    /**
-     * Total number of Android devices that have enrolled using this enrollment profile.
-     */
-    private Integer enrolledDeviceCount;
-    /**
-     * The enrollment mode for an enrollment profile.
-     */
-    private AndroidDeviceOwnerEnrollmentMode enrollmentMode;
-    /**
-     * The enrollment token type for an enrollment profile.
-     */
-    private AndroidDeviceOwnerEnrollmentTokenType enrollmentTokenType;
-    /**
-     * Total number of AOSP devices that have enrolled using the current token.
-     */
-    private Integer enrollmentTokenUsageCount;
-    /**
-     * Boolean indicating if this profile is an Android AOSP for Teams device profile.
-     */
-    private Boolean isTeamsDeviceProfile;
-    /**
-     * Date time the enrollment profile was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * String used to generate a QR code for the token.
-     */
-    private String qrCodeContent;
-    /**
-     * String used to generate a QR code for the token.
-     */
-    private MimeContent qrCodeImage;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Date time the most recently created token was created.
-     */
-    private OffsetDateTime tokenCreationDateTime;
-    /**
-     * Date time the most recently created token will expire.
-     */
-    private OffsetDateTime tokenExpirationDateTime;
-    /**
-     * Value of the most recently created token for this enrollment profile.
-     */
-    private String tokenValue;
-    /**
-     * Boolean that indicates if hidden wifi networks are enabled
-     */
-    private Boolean wifiHidden;
-    /**
-     * String that contains the wi-fi login password
-     */
-    private String wifiPassword;
-    /**
-     * This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
-     */
-    private AospWifiSecurityType wifiSecurityType;
-    /**
-     * String that contains the wi-fi login ssid
-     */
-    private String wifiSsid;
-    /**
-     * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerEnrollmentProfile and sets the default values.
      */
     public AndroidDeviceOwnerEnrollmentProfile() {
         super();
@@ -105,7 +21,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerEnrollmentProfile
+     * @return a AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,19 +30,19 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the accountId property value. Tenant GUID the enrollment profile belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
-        return this.accountId;
+        return this.BackingStore.get("accountId");
     }
     /**
      * Gets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigureWifi() {
-        return this.configureWifi;
+        return this.BackingStore.get("configureWifi");
     }
     /**
      * Gets the createdDateTime property value. Date time the enrollment profile was created.
@@ -134,55 +50,55 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Description for the enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name for the enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
-        return this.enrolledDeviceCount;
+        return this.BackingStore.get("enrolledDeviceCount");
     }
     /**
      * Gets the enrollmentMode property value. The enrollment mode for an enrollment profile.
-     * @return a androidDeviceOwnerEnrollmentMode
+     * @return a AndroidDeviceOwnerEnrollmentMode
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentMode getEnrollmentMode() {
-        return this.enrollmentMode;
+        return this.BackingStore.get("enrollmentMode");
     }
     /**
      * Gets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
-     * @return a androidDeviceOwnerEnrollmentTokenType
+     * @return a AndroidDeviceOwnerEnrollmentTokenType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentTokenType getEnrollmentTokenType() {
-        return this.enrollmentTokenType;
+        return this.BackingStore.get("enrollmentTokenType");
     }
     /**
      * Gets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrollmentTokenUsageCount() {
-        return this.enrollmentTokenUsageCount;
+        return this.BackingStore.get("enrollmentTokenUsageCount");
     }
     /**
      * The deserialization information for the current model
@@ -216,11 +132,11 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the isTeamsDeviceProfile property value. Boolean indicating if this profile is an Android AOSP for Teams device profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTeamsDeviceProfile() {
-        return this.isTeamsDeviceProfile;
+        return this.BackingStore.get("isTeamsDeviceProfile");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
@@ -228,31 +144,31 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQrCodeContent() {
-        return this.qrCodeContent;
+        return this.BackingStore.get("qrCodeContent");
     }
     /**
      * Gets the qrCodeImage property value. String used to generate a QR code for the token.
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getQrCodeImage() {
-        return this.qrCodeImage;
+        return this.BackingStore.get("qrCodeImage");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the tokenCreationDateTime property value. Date time the most recently created token was created.
@@ -260,7 +176,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTokenCreationDateTime() {
-        return this.tokenCreationDateTime;
+        return this.BackingStore.get("tokenCreationDateTime");
     }
     /**
      * Gets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
@@ -268,47 +184,47 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
-        return this.tokenExpirationDateTime;
+        return this.BackingStore.get("tokenExpirationDateTime");
     }
     /**
      * Gets the tokenValue property value. Value of the most recently created token for this enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTokenValue() {
-        return this.tokenValue;
+        return this.BackingStore.get("tokenValue");
     }
     /**
      * Gets the wifiHidden property value. Boolean that indicates if hidden wifi networks are enabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiHidden() {
-        return this.wifiHidden;
+        return this.BackingStore.get("wifiHidden");
     }
     /**
      * Gets the wifiPassword property value. String that contains the wi-fi login password
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiPassword() {
-        return this.wifiPassword;
+        return this.BackingStore.get("wifiPassword");
     }
     /**
      * Gets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
-     * @return a aospWifiSecurityType
+     * @return a AospWifiSecurityType
      */
     @jakarta.annotation.Nullable
     public AospWifiSecurityType getWifiSecurityType() {
-        return this.wifiSecurityType;
+        return this.BackingStore.get("wifiSecurityType");
     }
     /**
      * Gets the wifiSsid property value. String that contains the wi-fi login ssid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiSsid() {
-        return this.wifiSsid;
+        return this.BackingStore.get("wifiSsid");
     }
     /**
      * Serializes information the current object
@@ -344,146 +260,146 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the accountId property.
      */
     public void setAccountId(@jakarta.annotation.Nullable final String value) {
-        this.accountId = value;
+        this.BackingStore.set("accountId", value);
     }
     /**
      * Sets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
      * @param value Value to set for the configureWifi property.
      */
     public void setConfigureWifi(@jakarta.annotation.Nullable final Boolean value) {
-        this.configureWifi = value;
+        this.BackingStore.set("configureWifi", value);
     }
     /**
      * Sets the createdDateTime property value. Date time the enrollment profile was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description for the enrollment profile.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the enrollment profile.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
      * @param value Value to set for the enrolledDeviceCount property.
      */
     public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.enrolledDeviceCount = value;
+        this.BackingStore.set("enrolledDeviceCount", value);
     }
     /**
      * Sets the enrollmentMode property value. The enrollment mode for an enrollment profile.
      * @param value Value to set for the enrollmentMode property.
      */
     public void setEnrollmentMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnrollmentMode value) {
-        this.enrollmentMode = value;
+        this.BackingStore.set("enrollmentMode", value);
     }
     /**
      * Sets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
      * @param value Value to set for the enrollmentTokenType property.
      */
     public void setEnrollmentTokenType(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnrollmentTokenType value) {
-        this.enrollmentTokenType = value;
+        this.BackingStore.set("enrollmentTokenType", value);
     }
     /**
      * Sets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
      * @param value Value to set for the enrollmentTokenUsageCount property.
      */
     public void setEnrollmentTokenUsageCount(@jakarta.annotation.Nullable final Integer value) {
-        this.enrollmentTokenUsageCount = value;
+        this.BackingStore.set("enrollmentTokenUsageCount", value);
     }
     /**
      * Sets the isTeamsDeviceProfile property value. Boolean indicating if this profile is an Android AOSP for Teams device profile.
      * @param value Value to set for the isTeamsDeviceProfile property.
      */
     public void setIsTeamsDeviceProfile(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTeamsDeviceProfile = value;
+        this.BackingStore.set("isTeamsDeviceProfile", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the qrCodeContent property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeContent property.
      */
     public void setQrCodeContent(@jakarta.annotation.Nullable final String value) {
-        this.qrCodeContent = value;
+        this.BackingStore.set("qrCodeContent", value);
     }
     /**
      * Sets the qrCodeImage property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeImage property.
      */
     public void setQrCodeImage(@jakarta.annotation.Nullable final MimeContent value) {
-        this.qrCodeImage = value;
+        this.BackingStore.set("qrCodeImage", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the tokenCreationDateTime property value. Date time the most recently created token was created.
      * @param value Value to set for the tokenCreationDateTime property.
      */
     public void setTokenCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.tokenCreationDateTime = value;
+        this.BackingStore.set("tokenCreationDateTime", value);
     }
     /**
      * Sets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
      * @param value Value to set for the tokenExpirationDateTime property.
      */
     public void setTokenExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.tokenExpirationDateTime = value;
+        this.BackingStore.set("tokenExpirationDateTime", value);
     }
     /**
      * Sets the tokenValue property value. Value of the most recently created token for this enrollment profile.
      * @param value Value to set for the tokenValue property.
      */
     public void setTokenValue(@jakarta.annotation.Nullable final String value) {
-        this.tokenValue = value;
+        this.BackingStore.set("tokenValue", value);
     }
     /**
      * Sets the wifiHidden property value. Boolean that indicates if hidden wifi networks are enabled
      * @param value Value to set for the wifiHidden property.
      */
     public void setWifiHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.wifiHidden = value;
+        this.BackingStore.set("wifiHidden", value);
     }
     /**
      * Sets the wifiPassword property value. String that contains the wi-fi login password
      * @param value Value to set for the wifiPassword property.
      */
     public void setWifiPassword(@jakarta.annotation.Nullable final String value) {
-        this.wifiPassword = value;
+        this.BackingStore.set("wifiPassword", value);
     }
     /**
      * Sets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
      * @param value Value to set for the wifiSecurityType property.
      */
     public void setWifiSecurityType(@jakarta.annotation.Nullable final AospWifiSecurityType value) {
-        this.wifiSecurityType = value;
+        this.BackingStore.set("wifiSecurityType", value);
     }
     /**
      * Sets the wifiSsid property value. String that contains the wi-fi login ssid
      * @param value Value to set for the wifiSsid property.
      */
     public void setWifiSsid(@jakarta.annotation.Nullable final String value) {
-        this.wifiSsid = value;
+        this.BackingStore.set("wifiSsid", value);
     }
 }

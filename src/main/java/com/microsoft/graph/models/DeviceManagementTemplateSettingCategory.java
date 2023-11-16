@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTemplateSettingCategory extends DeviceManagementSettingCategory implements Parsable {
     /**
-     * The settings this category contains
-     */
-    private java.util.List<DeviceManagementSettingInstance> recommendedSettings;
-    /**
-     * Instantiates a new deviceManagementTemplateSettingCategory and sets the default values.
+     * Instantiates a new DeviceManagementTemplateSettingCategory and sets the default values.
      */
     public DeviceManagementTemplateSettingCategory() {
         super();
@@ -24,7 +20,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplateSettingCategory
+     * @return a DeviceManagementTemplateSettingCategory
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplateSettingCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     }
     /**
      * Gets the recommendedSettings property value. The settings this category contains
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getRecommendedSettings() {
-        return this.recommendedSettings;
+        return this.BackingStore.get("recommendedSettings");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      * @param value Value to set for the recommendedSettings property.
      */
     public void setRecommendedSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
-        this.recommendedSettings = value;
+        this.BackingStore.set("recommendedSettings", value);
     }
 }

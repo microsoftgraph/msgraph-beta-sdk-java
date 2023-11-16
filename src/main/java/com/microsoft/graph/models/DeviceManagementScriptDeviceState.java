@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptDeviceState extends Entity implements Parsable {
     /**
-     * Error code corresponding to erroneous execution of the device management script.
-     */
-    private Integer errorCode;
-    /**
-     * Error description corresponding to erroneous execution of the device management script.
-     */
-    private String errorDescription;
-    /**
-     * Latest time the device management script executes.
-     */
-    private OffsetDateTime lastStateUpdateDateTime;
-    /**
-     * The managed devices that executes the device management script.
-     */
-    private ManagedDevice managedDevice;
-    /**
-     * Details of execution output.
-     */
-    private String resultMessage;
-    /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RunState runState;
-    /**
-     * Instantiates a new deviceManagementScriptDeviceState and sets the default values.
+     * Instantiates a new DeviceManagementScriptDeviceState and sets the default values.
      */
     public DeviceManagementScriptDeviceState() {
         super();
@@ -45,7 +21,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptDeviceState
+     * @return a DeviceManagementScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +30,19 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the errorCode property value. Error code corresponding to erroneous execution of the device management script.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * Gets the errorDescription property value. Error description corresponding to erroneous execution of the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
-        return this.errorDescription;
+        return this.BackingStore.get("errorDescription");
     }
     /**
      * The deserialization information for the current model
@@ -89,31 +65,31 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
-        return this.lastStateUpdateDateTime;
+        return this.BackingStore.get("lastStateUpdateDateTime");
     }
     /**
      * Gets the managedDevice property value. The managed devices that executes the device management script.
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
-        return this.managedDevice;
+        return this.BackingStore.get("managedDevice");
     }
     /**
      * Gets the resultMessage property value. Details of execution output.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultMessage() {
-        return this.resultMessage;
+        return this.BackingStore.get("resultMessage");
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {
-        return this.runState;
+        return this.BackingStore.get("runState");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
     /**
      * Sets the errorDescription property value. Error description corresponding to erroneous execution of the device management script.
      * @param value Value to set for the errorDescription property.
      */
     public void setErrorDescription(@jakarta.annotation.Nullable final String value) {
-        this.errorDescription = value;
+        this.BackingStore.set("errorDescription", value);
     }
     /**
      * Sets the lastStateUpdateDateTime property value. Latest time the device management script executes.
      * @param value Value to set for the lastStateUpdateDateTime property.
      */
     public void setLastStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastStateUpdateDateTime = value;
+        this.BackingStore.set("lastStateUpdateDateTime", value);
     }
     /**
      * Sets the managedDevice property value. The managed devices that executes the device management script.
      * @param value Value to set for the managedDevice property.
      */
     public void setManagedDevice(@jakarta.annotation.Nullable final ManagedDevice value) {
-        this.managedDevice = value;
+        this.BackingStore.set("managedDevice", value);
     }
     /**
      * Sets the resultMessage property value. Details of execution output.
      * @param value Value to set for the resultMessage property.
      */
     public void setResultMessage(@jakarta.annotation.Nullable final String value) {
-        this.resultMessage = value;
+        this.BackingStore.set("resultMessage", value);
     }
     /**
      * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
      */
     public void setRunState(@jakarta.annotation.Nullable final RunState value) {
-        this.runState = value;
+        this.BackingStore.set("runState", value);
     }
 }

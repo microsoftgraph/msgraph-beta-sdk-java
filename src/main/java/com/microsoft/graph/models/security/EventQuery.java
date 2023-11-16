@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EventQuery implements AdditionalDataHolder, Parsable {
+public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The query property
-     */
-    private String query;
-    /**
-     * The queryType property
-     */
-    private QueryType queryType;
-    /**
-     * Instantiates a new eventQuery and sets the default values.
+     * Instantiates a new EventQuery and sets the default values.
      */
     public EventQuery() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a eventQuery
+     * @return a EventQuery
      */
     @jakarta.annotation.Nonnull
     public static EventQuery createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class EventQuery implements AdditionalDataHolder, Parsable {
         return new EventQuery();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class EventQuery implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the query property value. The query property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuery() {
-        return this.query;
+        return this.BackingStore.get("query");
     }
     /**
      * Gets the queryType property value. The queryType property
-     * @return a queryType
+     * @return a QueryType
      */
     @jakarta.annotation.Nullable
     public QueryType getQueryType() {
-        return this.queryType;
+        return this.BackingStore.get("queryType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class EventQuery implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the query property value. The query property
      * @param value Value to set for the query property.
      */
     public void setQuery(@jakarta.annotation.Nullable final String value) {
-        this.query = value;
+        this.BackingStore.set("query", value);
     }
     /**
      * Sets the queryType property value. The queryType property
      * @param value Value to set for the queryType property.
      */
     public void setQueryType(@jakarta.annotation.Nullable final QueryType value) {
-        this.queryType = value;
+        this.BackingStore.set("queryType", value);
     }
 }

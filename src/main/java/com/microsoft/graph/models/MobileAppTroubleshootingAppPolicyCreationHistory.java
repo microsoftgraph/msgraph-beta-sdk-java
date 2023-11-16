@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
     /**
-     * Error code for the failure, empty if no failure.
-     */
-    private String errorCode;
-    /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RunState runState;
-    /**
-     * Instantiates a new mobileAppTroubleshootingAppPolicyCreationHistory and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingAppPolicyCreationHistory and sets the default values.
      */
     public MobileAppTroubleshootingAppPolicyCreationHistory() {
         super();
@@ -28,7 +20,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingAppPolicyCreationHistory
+     * @return a MobileAppTroubleshootingAppPolicyCreationHistory
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingAppPolicyCreationHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,11 +29,11 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
     }
     /**
      * Gets the errorCode property value. Error code for the failure, empty if no failure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -56,11 +48,11 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {
-        return this.runState;
+        return this.BackingStore.get("runState");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
     /**
      * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
      */
     public void setRunState(@jakarta.annotation.Nullable final RunState value) {
-        this.runState = value;
+        this.BackingStore.set("runState", value);
     }
 }

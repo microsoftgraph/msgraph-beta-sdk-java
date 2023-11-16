@@ -6,33 +6,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The appGroupType property
-     */
-    private TargetedManagedAppGroupType appGroupType;
-    /**
-     * The apps property
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * Instantiates a new targetAppsPostRequestBody and sets the default values.
+     * Instantiates a new TargetAppsPostRequestBody and sets the default values.
      */
     public TargetAppsPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetAppsPostRequestBody
+     * @return a TargetAppsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static TargetAppsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,28 +36,41 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
         return new TargetAppsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appGroupType property value. The appGroupType property
-     * @return a targetedManagedAppGroupType
+     * @return a TargetedManagedAppGroupType
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppGroupType getAppGroupType() {
-        return this.appGroupType;
+        return this.BackingStore.get("appGroupType");
     }
     /**
      * Gets the apps property value. The apps property
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.BackingStore.get("apps");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,24 +94,32 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the appGroupType property value. The appGroupType property
      * @param value Value to set for the appGroupType property.
      */
     public void setAppGroupType(@jakarta.annotation.Nullable final TargetedManagedAppGroupType value) {
-        this.appGroupType = value;
+        this.BackingStore.set("appGroupType", value);
     }
     /**
      * Sets the apps property value. The apps property
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.BackingStore.set("apps", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserAnalytics extends Entity implements Parsable {
     /**
-     * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
-     */
-    private java.util.List<ActivityStatistics> activityStatistics;
-    /**
-     * The current settings for a user to use the analytics API.
-     */
-    private Settings settings;
-    /**
-     * Instantiates a new userAnalytics and sets the default values.
+     * Instantiates a new UserAnalytics and sets the default values.
      */
     public UserAnalytics() {
         super();
@@ -25,7 +17,7 @@ public class UserAnalytics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userAnalytics
+     * @return a UserAnalytics
      */
     @jakarta.annotation.Nonnull
     public static UserAnalytics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class UserAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the activityStatistics property value. The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
-     * @return a activityStatistics
+     * @return a java.util.List<ActivityStatistics>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityStatistics> getActivityStatistics() {
-        return this.activityStatistics;
+        return this.BackingStore.get("activityStatistics");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class UserAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The current settings for a user to use the analytics API.
-     * @return a settings
+     * @return a Settings
      */
     @jakarta.annotation.Nullable
     public Settings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UserAnalytics extends Entity implements Parsable {
      * @param value Value to set for the activityStatistics property.
      */
     public void setActivityStatistics(@jakarta.annotation.Nullable final java.util.List<ActivityStatistics> value) {
-        this.activityStatistics = value;
+        this.BackingStore.set("activityStatistics", value);
     }
     /**
      * Sets the settings property value. The current settings for a user to use the analytics API.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final Settings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
 }

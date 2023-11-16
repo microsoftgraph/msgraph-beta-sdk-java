@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     /**
-     * The unique identifier for the Azure resource.
-     */
-    private String resourceId;
-    /**
-     * The name of the resource.
-     */
-    private String resourceName;
-    /**
-     * The type of the resource.
-     */
-    private String resourceType;
-    /**
-     * Instantiates a new azureResourceEvidence and sets the default values.
+     * Instantiates a new AzureResourceEvidence and sets the default values.
      */
     public AzureResourceEvidence() {
         super();
@@ -30,7 +18,7 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureResourceEvidence
+     * @return a AzureResourceEvidence
      */
     @jakarta.annotation.Nonnull
     public static AzureResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the resourceId property value. The unique identifier for the Azure resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.BackingStore.get("resourceId");
     }
     /**
      * Gets the resourceName property value. The name of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.BackingStore.get("resourceName");
     }
     /**
      * Gets the resourceType property value. The type of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
-        return this.resourceType;
+        return this.BackingStore.get("resourceType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.BackingStore.set("resourceId", value);
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.BackingStore.set("resourceName", value);
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.resourceType = value;
+        this.BackingStore.set("resourceType", value);
     }
 }

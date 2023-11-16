@@ -4,57 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
+public class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
-     */
-    private String content;
-    /**
-     * The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
-     */
-    private String contentType;
-    /**
-     * URL for the content of the attachment. Supported protocols: http, https, file and data.
-     */
-    private String contentUrl;
-    /**
-     * Read-only. Unique id of the attachment.
-     */
-    private String id;
-    /**
-     * Name of the attachment.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
-     */
-    private String teamsAppId;
-    /**
-     * URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
-     */
-    private String thumbnailUrl;
-    /**
-     * Instantiates a new chatMessageAttachment and sets the default values.
+     * Instantiates a new ChatMessageAttachment and sets the default values.
      */
     public ChatMessageAttachment() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessageAttachment
+     * @return a ChatMessageAttachment
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,36 +34,49 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         return new ChatMessageAttachment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * Gets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.BackingStore.get("contentUrl");
     }
     /**
      * The deserialization information for the current model
@@ -112,43 +97,43 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Read-only. Unique id of the attachment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the name property value. Name of the attachment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
-        return this.teamsAppId;
+        return this.BackingStore.get("teamsAppId");
     }
     /**
      * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
-        return this.thumbnailUrl;
+        return this.BackingStore.get("thumbnailUrl");
     }
     /**
      * Serializes information the current object
@@ -167,66 +152,74 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.BackingStore.set("contentUrl", value);
     }
     /**
      * Sets the id property value. Read-only. Unique id of the attachment.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the name property value. Name of the attachment.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      * @param value Value to set for the teamsAppId property.
      */
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
-        this.teamsAppId = value;
+        this.BackingStore.set("teamsAppId", value);
     }
     /**
      * Sets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
      * @param value Value to set for the thumbnailUrl property.
      */
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailUrl = value;
+        this.BackingStore.set("thumbnailUrl", value);
     }
 }

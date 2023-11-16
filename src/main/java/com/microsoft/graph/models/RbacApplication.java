@@ -9,51 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RbacApplication extends Entity implements Parsable {
     /**
-     * The resourceNamespaces property
-     */
-    private java.util.List<UnifiedRbacResourceNamespace> resourceNamespaces;
-    /**
-     * The roleAssignmentApprovals property
-     */
-    private java.util.List<Approval> roleAssignmentApprovals;
-    /**
-     * The roleAssignments property
-     */
-    private java.util.List<UnifiedRoleAssignment> roleAssignments;
-    /**
-     * The roleAssignmentScheduleInstances property
-     */
-    private java.util.List<UnifiedRoleAssignmentScheduleInstance> roleAssignmentScheduleInstances;
-    /**
-     * The roleAssignmentScheduleRequests property
-     */
-    private java.util.List<UnifiedRoleAssignmentScheduleRequest> roleAssignmentScheduleRequests;
-    /**
-     * The roleAssignmentSchedules property
-     */
-    private java.util.List<UnifiedRoleAssignmentSchedule> roleAssignmentSchedules;
-    /**
-     * The roleDefinitions property
-     */
-    private java.util.List<UnifiedRoleDefinition> roleDefinitions;
-    /**
-     * The roleEligibilityScheduleInstances property
-     */
-    private java.util.List<UnifiedRoleEligibilityScheduleInstance> roleEligibilityScheduleInstances;
-    /**
-     * The roleEligibilityScheduleRequests property
-     */
-    private java.util.List<UnifiedRoleEligibilityScheduleRequest> roleEligibilityScheduleRequests;
-    /**
-     * The roleEligibilitySchedules property
-     */
-    private java.util.List<UnifiedRoleEligibilitySchedule> roleEligibilitySchedules;
-    /**
-     * The transitiveRoleAssignments property
-     */
-    private java.util.List<UnifiedRoleAssignment> transitiveRoleAssignments;
-    /**
-     * Instantiates a new rbacApplication and sets the default values.
+     * Instantiates a new RbacApplication and sets the default values.
      */
     public RbacApplication() {
         super();
@@ -61,7 +17,7 @@ public class RbacApplication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rbacApplication
+     * @return a RbacApplication
      */
     @jakarta.annotation.Nonnull
     public static RbacApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,91 +46,91 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the resourceNamespaces property value. The resourceNamespaces property
-     * @return a unifiedRbacResourceNamespace
+     * @return a java.util.List<UnifiedRbacResourceNamespace>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
-        return this.resourceNamespaces;
+        return this.BackingStore.get("resourceNamespaces");
     }
     /**
      * Gets the roleAssignmentApprovals property value. The roleAssignmentApprovals property
-     * @return a approval
+     * @return a java.util.List<Approval>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Approval> getRoleAssignmentApprovals() {
-        return this.roleAssignmentApprovals;
+        return this.BackingStore.get("roleAssignmentApprovals");
     }
     /**
      * Gets the roleAssignments property value. The roleAssignments property
-     * @return a unifiedRoleAssignment
+     * @return a java.util.List<UnifiedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
-        return this.roleAssignments;
+        return this.BackingStore.get("roleAssignments");
     }
     /**
      * Gets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
-     * @return a unifiedRoleAssignmentScheduleInstance
+     * @return a java.util.List<UnifiedRoleAssignmentScheduleInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleInstance> getRoleAssignmentScheduleInstances() {
-        return this.roleAssignmentScheduleInstances;
+        return this.BackingStore.get("roleAssignmentScheduleInstances");
     }
     /**
      * Gets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
-     * @return a unifiedRoleAssignmentScheduleRequest
+     * @return a java.util.List<UnifiedRoleAssignmentScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleRequest> getRoleAssignmentScheduleRequests() {
-        return this.roleAssignmentScheduleRequests;
+        return this.BackingStore.get("roleAssignmentScheduleRequests");
     }
     /**
      * Gets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
-     * @return a unifiedRoleAssignmentSchedule
+     * @return a java.util.List<UnifiedRoleAssignmentSchedule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentSchedule> getRoleAssignmentSchedules() {
-        return this.roleAssignmentSchedules;
+        return this.BackingStore.get("roleAssignmentSchedules");
     }
     /**
      * Gets the roleDefinitions property value. The roleDefinitions property
-     * @return a unifiedRoleDefinition
+     * @return a java.util.List<UnifiedRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
-        return this.roleDefinitions;
+        return this.BackingStore.get("roleDefinitions");
     }
     /**
      * Gets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
-     * @return a unifiedRoleEligibilityScheduleInstance
+     * @return a java.util.List<UnifiedRoleEligibilityScheduleInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleInstance> getRoleEligibilityScheduleInstances() {
-        return this.roleEligibilityScheduleInstances;
+        return this.BackingStore.get("roleEligibilityScheduleInstances");
     }
     /**
      * Gets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
-     * @return a unifiedRoleEligibilityScheduleRequest
+     * @return a java.util.List<UnifiedRoleEligibilityScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleRequest> getRoleEligibilityScheduleRequests() {
-        return this.roleEligibilityScheduleRequests;
+        return this.BackingStore.get("roleEligibilityScheduleRequests");
     }
     /**
      * Gets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
-     * @return a unifiedRoleEligibilitySchedule
+     * @return a java.util.List<UnifiedRoleEligibilitySchedule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilitySchedule> getRoleEligibilitySchedules() {
-        return this.roleEligibilitySchedules;
+        return this.BackingStore.get("roleEligibilitySchedules");
     }
     /**
      * Gets the transitiveRoleAssignments property value. The transitiveRoleAssignments property
-     * @return a unifiedRoleAssignment
+     * @return a java.util.List<UnifiedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getTransitiveRoleAssignments() {
-        return this.transitiveRoleAssignments;
+        return this.BackingStore.get("transitiveRoleAssignments");
     }
     /**
      * Serializes information the current object
@@ -200,76 +156,76 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      */
     public void setResourceNamespaces(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
-        this.resourceNamespaces = value;
+        this.BackingStore.set("resourceNamespaces", value);
     }
     /**
      * Sets the roleAssignmentApprovals property value. The roleAssignmentApprovals property
      * @param value Value to set for the roleAssignmentApprovals property.
      */
     public void setRoleAssignmentApprovals(@jakarta.annotation.Nullable final java.util.List<Approval> value) {
-        this.roleAssignmentApprovals = value;
+        this.BackingStore.set("roleAssignmentApprovals", value);
     }
     /**
      * Sets the roleAssignments property value. The roleAssignments property
      * @param value Value to set for the roleAssignments property.
      */
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
-        this.roleAssignments = value;
+        this.BackingStore.set("roleAssignments", value);
     }
     /**
      * Sets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
      * @param value Value to set for the roleAssignmentScheduleInstances property.
      */
     public void setRoleAssignmentScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
-        this.roleAssignmentScheduleInstances = value;
+        this.BackingStore.set("roleAssignmentScheduleInstances", value);
     }
     /**
      * Sets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
      * @param value Value to set for the roleAssignmentScheduleRequests property.
      */
     public void setRoleAssignmentScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
-        this.roleAssignmentScheduleRequests = value;
+        this.BackingStore.set("roleAssignmentScheduleRequests", value);
     }
     /**
      * Sets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
      * @param value Value to set for the roleAssignmentSchedules property.
      */
     public void setRoleAssignmentSchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
-        this.roleAssignmentSchedules = value;
+        this.BackingStore.set("roleAssignmentSchedules", value);
     }
     /**
      * Sets the roleDefinitions property value. The roleDefinitions property
      * @param value Value to set for the roleDefinitions property.
      */
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
-        this.roleDefinitions = value;
+        this.BackingStore.set("roleDefinitions", value);
     }
     /**
      * Sets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
      * @param value Value to set for the roleEligibilityScheduleInstances property.
      */
     public void setRoleEligibilityScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
-        this.roleEligibilityScheduleInstances = value;
+        this.BackingStore.set("roleEligibilityScheduleInstances", value);
     }
     /**
      * Sets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
      * @param value Value to set for the roleEligibilityScheduleRequests property.
      */
     public void setRoleEligibilityScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
-        this.roleEligibilityScheduleRequests = value;
+        this.BackingStore.set("roleEligibilityScheduleRequests", value);
     }
     /**
      * Sets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
      * @param value Value to set for the roleEligibilitySchedules property.
      */
     public void setRoleEligibilitySchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
-        this.roleEligibilitySchedules = value;
+        this.BackingStore.set("roleEligibilitySchedules", value);
     }
     /**
      * Sets the transitiveRoleAssignments property value. The transitiveRoleAssignments property
      * @param value Value to set for the transitiveRoleAssignments property.
      */
     public void setTransitiveRoleAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
-        this.transitiveRoleAssignments = value;
+        this.BackingStore.set("transitiveRoleAssignments", value);
     }
 }

@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class X509CertificateRule implements AdditionalDataHolder, Parsable {
+public class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The identifier of the X.509 certificate. Required.
-     */
-    private String identifier;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     */
-    private X509CertificateAuthenticationMode x509CertificateAuthenticationMode;
-    /**
-     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     */
-    private X509CertificateRuleType x509CertificateRuleType;
-    /**
-     * Instantiates a new x509CertificateRule and sets the default values.
+     * Instantiates a new X509CertificateRule and sets the default values.
      */
     public X509CertificateRule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateRule
+     * @return a X509CertificateRule
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
         return new X509CertificateRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identifier property value. The identifier of the X.509 certificate. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return a x509CertificateAuthenticationMode
+     * @return a X509CertificateAuthenticationMode
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
-        return this.x509CertificateAuthenticationMode;
+        return this.BackingStore.get("x509CertificateAuthenticationMode");
     }
     /**
-     * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @return a x509CertificateRuleType
+     * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
+     * @return a X509CertificateRuleType
      */
     @jakarta.annotation.Nullable
     public X509CertificateRuleType getX509CertificateRuleType() {
-        return this.x509CertificateRuleType;
+        return this.BackingStore.get("x509CertificateRuleType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the identifier property value. The identifier of the X.509 certificate. Required.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateAuthenticationMode property.
      */
     public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
-        this.x509CertificateAuthenticationMode = value;
+        this.BackingStore.set("x509CertificateAuthenticationMode", value);
     }
     /**
-     * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
+     * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      * @param value Value to set for the x509CertificateRuleType property.
      */
     public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleType value) {
-        this.x509CertificateRuleType = value;
+        this.BackingStore.set("x509CertificateRuleType", value);
     }
 }

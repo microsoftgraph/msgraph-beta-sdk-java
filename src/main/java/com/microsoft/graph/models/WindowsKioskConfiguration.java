@@ -12,47 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-     */
-    private Boolean edgeKioskEnablePublicBrowsing;
-    /**
-     * Specify URLs that the kiosk browser is allowed to navigate to
-     */
-    private java.util.List<String> kioskBrowserBlockedUrlExceptions;
-    /**
-     * Specify URLs that the kiosk browsers should not navigate to
-     */
-    private java.util.List<String> kioskBrowserBlockedURLs;
-    /**
-     * Specify the default URL the browser should navigate to on launch.
-     */
-    private String kioskBrowserDefaultUrl;
-    /**
-     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
-     */
-    private Boolean kioskBrowserEnableEndSessionButton;
-    /**
-     * Enable the kiosk browser's home button. By default, the home button is disabled.
-     */
-    private Boolean kioskBrowserEnableHomeButton;
-    /**
-     * Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
-     */
-    private Boolean kioskBrowserEnableNavigationButtons;
-    /**
-     * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
-     */
-    private Integer kioskBrowserRestartOnIdleTimeInMinutes;
-    /**
-     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
-     */
-    private java.util.List<WindowsKioskProfile> kioskProfiles;
-    /**
-     * force update schedule for Kiosk devices.
-     */
-    private WindowsKioskForceUpdateSchedule windowsKioskForceUpdateSchedule;
-    /**
-     * Instantiates a new windowsKioskConfiguration and sets the default values.
+     * Instantiates a new WindowsKioskConfiguration and sets the default values.
      */
     public WindowsKioskConfiguration() {
         super();
@@ -61,7 +21,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskConfiguration
+     * @return a WindowsKioskConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,11 +30,11 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the edgeKioskEnablePublicBrowsing property value. Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeKioskEnablePublicBrowsing() {
-        return this.edgeKioskEnablePublicBrowsing;
+        return this.BackingStore.get("edgeKioskEnablePublicBrowsing");
     }
     /**
      * The deserialization information for the current model
@@ -97,75 +57,75 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserBlockedUrlExceptions property value. Specify URLs that the kiosk browser is allowed to navigate to
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedUrlExceptions() {
-        return this.kioskBrowserBlockedUrlExceptions;
+        return this.BackingStore.get("kioskBrowserBlockedUrlExceptions");
     }
     /**
      * Gets the kioskBrowserBlockedURLs property value. Specify URLs that the kiosk browsers should not navigate to
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedURLs() {
-        return this.kioskBrowserBlockedURLs;
+        return this.BackingStore.get("kioskBrowserBlockedURLs");
     }
     /**
      * Gets the kioskBrowserDefaultUrl property value. Specify the default URL the browser should navigate to on launch.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKioskBrowserDefaultUrl() {
-        return this.kioskBrowserDefaultUrl;
+        return this.BackingStore.get("kioskBrowserDefaultUrl");
     }
     /**
      * Gets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableEndSessionButton() {
-        return this.kioskBrowserEnableEndSessionButton;
+        return this.BackingStore.get("kioskBrowserEnableEndSessionButton");
     }
     /**
      * Gets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableHomeButton() {
-        return this.kioskBrowserEnableHomeButton;
+        return this.BackingStore.get("kioskBrowserEnableHomeButton");
     }
     /**
      * Gets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableNavigationButtons() {
-        return this.kioskBrowserEnableNavigationButtons;
+        return this.BackingStore.get("kioskBrowserEnableNavigationButtons");
     }
     /**
      * Gets the kioskBrowserRestartOnIdleTimeInMinutes property value. Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getKioskBrowserRestartOnIdleTimeInMinutes() {
-        return this.kioskBrowserRestartOnIdleTimeInMinutes;
+        return this.BackingStore.get("kioskBrowserRestartOnIdleTimeInMinutes");
     }
     /**
      * Gets the kioskProfiles property value. This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
-     * @return a windowsKioskProfile
+     * @return a java.util.List<WindowsKioskProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskProfile> getKioskProfiles() {
-        return this.kioskProfiles;
+        return this.BackingStore.get("kioskProfiles");
     }
     /**
      * Gets the windowsKioskForceUpdateSchedule property value. force update schedule for Kiosk devices.
-     * @return a windowsKioskForceUpdateSchedule
+     * @return a WindowsKioskForceUpdateSchedule
      */
     @jakarta.annotation.Nullable
     public WindowsKioskForceUpdateSchedule getWindowsKioskForceUpdateSchedule() {
-        return this.windowsKioskForceUpdateSchedule;
+        return this.BackingStore.get("windowsKioskForceUpdateSchedule");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the edgeKioskEnablePublicBrowsing property.
      */
     public void setEdgeKioskEnablePublicBrowsing(@jakarta.annotation.Nullable final Boolean value) {
-        this.edgeKioskEnablePublicBrowsing = value;
+        this.BackingStore.set("edgeKioskEnablePublicBrowsing", value);
     }
     /**
      * Sets the kioskBrowserBlockedUrlExceptions property value. Specify URLs that the kiosk browser is allowed to navigate to
      * @param value Value to set for the kioskBrowserBlockedUrlExceptions property.
      */
     public void setKioskBrowserBlockedUrlExceptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.kioskBrowserBlockedUrlExceptions = value;
+        this.BackingStore.set("kioskBrowserBlockedUrlExceptions", value);
     }
     /**
      * Sets the kioskBrowserBlockedURLs property value. Specify URLs that the kiosk browsers should not navigate to
      * @param value Value to set for the kioskBrowserBlockedURLs property.
      */
     public void setKioskBrowserBlockedURLs(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.kioskBrowserBlockedURLs = value;
+        this.BackingStore.set("kioskBrowserBlockedURLs", value);
     }
     /**
      * Sets the kioskBrowserDefaultUrl property value. Specify the default URL the browser should navigate to on launch.
      * @param value Value to set for the kioskBrowserDefaultUrl property.
      */
     public void setKioskBrowserDefaultUrl(@jakarta.annotation.Nullable final String value) {
-        this.kioskBrowserDefaultUrl = value;
+        this.BackingStore.set("kioskBrowserDefaultUrl", value);
     }
     /**
      * Sets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
      * @param value Value to set for the kioskBrowserEnableEndSessionButton property.
      */
     public void setKioskBrowserEnableEndSessionButton(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskBrowserEnableEndSessionButton = value;
+        this.BackingStore.set("kioskBrowserEnableEndSessionButton", value);
     }
     /**
      * Sets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
      * @param value Value to set for the kioskBrowserEnableHomeButton property.
      */
     public void setKioskBrowserEnableHomeButton(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskBrowserEnableHomeButton = value;
+        this.BackingStore.set("kioskBrowserEnableHomeButton", value);
     }
     /**
      * Sets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
      * @param value Value to set for the kioskBrowserEnableNavigationButtons property.
      */
     public void setKioskBrowserEnableNavigationButtons(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskBrowserEnableNavigationButtons = value;
+        this.BackingStore.set("kioskBrowserEnableNavigationButtons", value);
     }
     /**
      * Sets the kioskBrowserRestartOnIdleTimeInMinutes property value. Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
      * @param value Value to set for the kioskBrowserRestartOnIdleTimeInMinutes property.
      */
     public void setKioskBrowserRestartOnIdleTimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.kioskBrowserRestartOnIdleTimeInMinutes = value;
+        this.BackingStore.set("kioskBrowserRestartOnIdleTimeInMinutes", value);
     }
     /**
      * Sets the kioskProfiles property value. This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      * @param value Value to set for the kioskProfiles property.
      */
     public void setKioskProfiles(@jakarta.annotation.Nullable final java.util.List<WindowsKioskProfile> value) {
-        this.kioskProfiles = value;
+        this.BackingStore.set("kioskProfiles", value);
     }
     /**
      * Sets the windowsKioskForceUpdateSchedule property value. force update schedule for Kiosk devices.
      * @param value Value to set for the windowsKioskForceUpdateSchedule property.
      */
     public void setWindowsKioskForceUpdateSchedule(@jakarta.annotation.Nullable final WindowsKioskForceUpdateSchedule value) {
-        this.windowsKioskForceUpdateSchedule = value;
+        this.BackingStore.set("windowsKioskForceUpdateSchedule", value);
     }
 }

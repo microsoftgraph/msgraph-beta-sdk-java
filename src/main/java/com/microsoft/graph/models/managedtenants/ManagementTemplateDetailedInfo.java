@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Parsable {
+public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The category property
-     */
-    private ManagementCategory category;
-    /**
-     * The display name for the management template. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The unique identifier for the management template. Required. Read-only.
-     */
-    private String managementTemplateId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The version property
-     */
-    private Integer version;
-    /**
-     * Instantiates a new managementTemplateDetailedInfo and sets the default values.
+     * Instantiates a new ManagementTemplateDetailedInfo and sets the default values.
      */
     public ManagementTemplateDetailedInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateDetailedInfo
+     * @return a ManagementTemplateDetailedInfo
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateDetailedInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +34,41 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         return new ManagementTemplateDetailedInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the category property value. The category property
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +86,27 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the managementTemplateId property value. The unique identifier for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
-        return this.managementTemplateId;
+        return this.BackingStore.get("managementTemplateId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the version property value. The version property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the displayName property value. The display name for the management template. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the managementTemplateId property value. The unique identifier for the management template. Required. Read-only.
      * @param value Value to set for the managementTemplateId property.
      */
     public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateId = value;
+        this.BackingStore.set("managementTemplateId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the version property value. The version property
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

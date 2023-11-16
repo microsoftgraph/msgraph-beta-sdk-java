@@ -12,47 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurationBase implements Parsable {
     /**
-     * Account name.
-     */
-    private String accountName;
-    /**
-     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     */
-    private Boolean applyOnlyToWindowsPhone81;
-    /**
-     * Possible values for email sync duration.
-     */
-    private EmailSyncDuration durationOfEmailToSync;
-    /**
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
-     */
-    private UserEmailSource emailAddressSource;
-    /**
-     * Possible values for email sync schedule.
-     */
-    private EmailSyncSchedule emailSyncSchedule;
-    /**
-     * Exchange location that (URL) that the native mail app connects to.
-     */
-    private String hostName;
-    /**
-     * Indicates whether or not to use SSL.
-     */
-    private Boolean requireSsl;
-    /**
-     * Whether or not to sync the calendar.
-     */
-    private Boolean syncCalendar;
-    /**
-     * Whether or not to sync contacts.
-     */
-    private Boolean syncContacts;
-    /**
-     * Whether or not to sync tasks.
-     */
-    private Boolean syncTasks;
-    /**
-     * Instantiates a new windowsPhoneEASEmailProfileConfiguration and sets the default values.
+     * Instantiates a new WindowsPhoneEASEmailProfileConfiguration and sets the default values.
      */
     public WindowsPhoneEASEmailProfileConfiguration() {
         super();
@@ -61,7 +21,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhoneEASEmailProfileConfiguration
+     * @return a WindowsPhoneEASEmailProfileConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhoneEASEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,43 +30,43 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the accountName property value. Account name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.BackingStore.get("accountName");
     }
     /**
      * Gets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindowsPhone81() {
-        return this.applyOnlyToWindowsPhone81;
+        return this.BackingStore.get("applyOnlyToWindowsPhone81");
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this.durationOfEmailToSync;
+        return this.BackingStore.get("durationOfEmailToSync");
     }
     /**
      * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this.emailAddressSource;
+        return this.BackingStore.get("emailAddressSource");
     }
     /**
      * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
-     * @return a emailSyncSchedule
+     * @return a EmailSyncSchedule
      */
     @jakarta.annotation.Nullable
     public EmailSyncSchedule getEmailSyncSchedule() {
-        return this.emailSyncSchedule;
+        return this.BackingStore.get("emailSyncSchedule");
     }
     /**
      * The deserialization information for the current model
@@ -129,43 +89,43 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
-        return this.hostName;
+        return this.BackingStore.get("hostName");
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this.requireSsl;
+        return this.BackingStore.get("requireSsl");
     }
     /**
      * Gets the syncCalendar property value. Whether or not to sync the calendar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncCalendar() {
-        return this.syncCalendar;
+        return this.BackingStore.get("syncCalendar");
     }
     /**
      * Gets the syncContacts property value. Whether or not to sync contacts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncContacts() {
-        return this.syncContacts;
+        return this.BackingStore.get("syncContacts");
     }
     /**
      * Gets the syncTasks property value. Whether or not to sync tasks.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncTasks() {
-        return this.syncTasks;
+        return this.BackingStore.get("syncTasks");
     }
     /**
      * Serializes information the current object
@@ -189,69 +149,69 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.BackingStore.set("accountName", value);
     }
     /**
      * Sets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
      */
     public void setApplyOnlyToWindowsPhone81(@jakarta.annotation.Nullable final Boolean value) {
-        this.applyOnlyToWindowsPhone81 = value;
+        this.BackingStore.set("applyOnlyToWindowsPhone81", value);
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      */
     public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
-        this.durationOfEmailToSync = value;
+        this.BackingStore.set("durationOfEmailToSync", value);
     }
     /**
      * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      * @param value Value to set for the emailAddressSource property.
      */
     public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
-        this.emailAddressSource = value;
+        this.BackingStore.set("emailAddressSource", value);
     }
     /**
      * Sets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @param value Value to set for the emailSyncSchedule property.
      */
     public void setEmailSyncSchedule(@jakarta.annotation.Nullable final EmailSyncSchedule value) {
-        this.emailSyncSchedule = value;
+        this.BackingStore.set("emailSyncSchedule", value);
     }
     /**
      * Sets the hostName property value. Exchange location that (URL) that the native mail app connects to.
      * @param value Value to set for the hostName property.
      */
     public void setHostName(@jakarta.annotation.Nullable final String value) {
-        this.hostName = value;
+        this.BackingStore.set("hostName", value);
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      */
     public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSsl = value;
+        this.BackingStore.set("requireSsl", value);
     }
     /**
      * Sets the syncCalendar property value. Whether or not to sync the calendar.
      * @param value Value to set for the syncCalendar property.
      */
     public void setSyncCalendar(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncCalendar = value;
+        this.BackingStore.set("syncCalendar", value);
     }
     /**
      * Sets the syncContacts property value. Whether or not to sync contacts.
      * @param value Value to set for the syncContacts property.
      */
     public void setSyncContacts(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncContacts = value;
+        this.BackingStore.set("syncContacts", value);
     }
     /**
      * Sets the syncTasks property value. Whether or not to sync tasks.
      * @param value Value to set for the syncTasks property.
      */
     public void setSyncTasks(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncTasks = value;
+        this.BackingStore.set("syncTasks", value);
     }
 }

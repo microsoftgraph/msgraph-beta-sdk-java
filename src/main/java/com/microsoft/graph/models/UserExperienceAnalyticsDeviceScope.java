@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsable {
     /**
-     * Indicates the creation date and time for the custom device scope.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The name of the user experience analytics device Scope configuration.
-     */
-    private String deviceScopeName;
-    /**
-     * Indicates whether a device scope is enabled or disabled. When TRUE, the device scope is enabled. When FALSE, the device scope is disabled. Default value is FALSE.
-     */
-    private Boolean enabled;
-    /**
-     * Indicates whether the device scope configuration is built-in or custom. When TRUE, the device scope configuration is built-in. When FALSE, the device scope configuration is custom. Default value is FALSE.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * Indicates the last updated date and time for the custom device scope.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
-     */
-    private DeviceScopeOperator operator;
-    /**
-     * The unique identifier of the person (admin) who created the device scope configuration.
-     */
-    private String ownerId;
-    /**
-     * Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
-     */
-    private DeviceScopeParameter parameter;
-    /**
-     * Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
-     */
-    private DeviceScopeStatus status;
-    /**
-     * The device scope configuration query clause value.
-     */
-    private String value;
-    /**
-     * The unique identifier for a user device scope tag Id used for the creation of device scope configuration.
-     */
-    private String valueObjectId;
-    /**
-     * Instantiates a new userExperienceAnalyticsDeviceScope and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScope and sets the default values.
      */
     public UserExperienceAnalyticsDeviceScope() {
         super();
@@ -65,7 +21,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScope
+     * @return a UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,23 +34,23 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the deviceScopeName property value. The name of the user experience analytics device Scope configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeName() {
-        return this.deviceScopeName;
+        return this.BackingStore.get("deviceScopeName");
     }
     /**
      * Gets the enabled property value. Indicates whether a device scope is enabled or disabled. When TRUE, the device scope is enabled. When FALSE, the device scope is disabled. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.BackingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -118,11 +74,11 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the isBuiltIn property value. Indicates whether the device scope configuration is built-in or custom. When TRUE, the device scope configuration is built-in. When FALSE, the device scope configuration is custom. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.BackingStore.get("isBuiltIn");
     }
     /**
      * Gets the lastModifiedDateTime property value. Indicates the last updated date and time for the custom device scope.
@@ -130,55 +86,55 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
-     * @return a deviceScopeOperator
+     * @return a DeviceScopeOperator
      */
     @jakarta.annotation.Nullable
     public DeviceScopeOperator getOperator() {
-        return this.operator;
+        return this.BackingStore.get("operator");
     }
     /**
      * Gets the ownerId property value. The unique identifier of the person (admin) who created the device scope configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerId() {
-        return this.ownerId;
+        return this.BackingStore.get("ownerId");
     }
     /**
      * Gets the parameter property value. Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
-     * @return a deviceScopeParameter
+     * @return a DeviceScopeParameter
      */
     @jakarta.annotation.Nullable
     public DeviceScopeParameter getParameter() {
-        return this.parameter;
+        return this.BackingStore.get("parameter");
     }
     /**
      * Gets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
-     * @return a deviceScopeStatus
+     * @return a DeviceScopeStatus
      */
     @jakarta.annotation.Nullable
     public DeviceScopeStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the value property value. The device scope configuration query clause value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Gets the valueObjectId property value. The unique identifier for a user device scope tag Id used for the creation of device scope configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueObjectId() {
-        return this.valueObjectId;
+        return this.BackingStore.get("valueObjectId");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deviceScopeName property value. The name of the user experience analytics device Scope configuration.
      * @param value Value to set for the deviceScopeName property.
      */
     public void setDeviceScopeName(@jakarta.annotation.Nullable final String value) {
-        this.deviceScopeName = value;
+        this.BackingStore.set("deviceScopeName", value);
     }
     /**
      * Sets the enabled property value. Indicates whether a device scope is enabled or disabled. When TRUE, the device scope is enabled. When FALSE, the device scope is disabled. Default value is FALSE.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.BackingStore.set("enabled", value);
     }
     /**
      * Sets the isBuiltIn property value. Indicates whether the device scope configuration is built-in or custom. When TRUE, the device scope configuration is built-in. When FALSE, the device scope configuration is custom. Default value is FALSE.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.BackingStore.set("isBuiltIn", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Indicates the last updated date and time for the custom device scope.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final DeviceScopeOperator value) {
-        this.operator = value;
+        this.BackingStore.set("operator", value);
     }
     /**
      * Sets the ownerId property value. The unique identifier of the person (admin) who created the device scope configuration.
      * @param value Value to set for the ownerId property.
      */
     public void setOwnerId(@jakarta.annotation.Nullable final String value) {
-        this.ownerId = value;
+        this.BackingStore.set("ownerId", value);
     }
     /**
      * Sets the parameter property value. Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
      * @param value Value to set for the parameter property.
      */
     public void setParameter(@jakarta.annotation.Nullable final DeviceScopeParameter value) {
-        this.parameter = value;
+        this.BackingStore.set("parameter", value);
     }
     /**
      * Sets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceScopeStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the value property value. The device scope configuration query clause value.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
     /**
      * Sets the valueObjectId property value. The unique identifier for a user device scope tag Id used for the creation of device scope configuration.
      * @param value Value to set for the valueObjectId property.
      */
     public void setValueObjectId(@jakarta.annotation.Nullable final String value) {
-        this.valueObjectId = value;
+        this.BackingStore.set("valueObjectId", value);
     }
 }

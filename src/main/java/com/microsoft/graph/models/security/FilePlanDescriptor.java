@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilePlanDescriptor extends Entity implements Parsable {
     /**
-     * Represents the file plan descriptor of type authority applied to a particular retention label.
-     */
-    private Authority authority;
-    /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
-     */
-    private AuthorityTemplate authorityTemplate;
-    /**
-     * The category property
-     */
-    private AppliedCategory category;
-    /**
-     * Specifies a group of similar types of content in a particular department.
-     */
-    private CategoryTemplate categoryTemplate;
-    /**
-     * Represents the file plan descriptor of type citation applied to a particular retention label.
-     */
-    private Citation citation;
-    /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
-     */
-    private CitationTemplate citationTemplate;
-    /**
-     * Represents the file plan descriptor of type department applied to a particular retention label.
-     */
-    private Department department;
-    /**
-     * Specifies the  department or business unit of an organization to which a label belongs.
-     */
-    private DepartmentTemplate departmentTemplate;
-    /**
-     * Represents the file plan descriptor of type filePlanReference applied to a particular retention label.
-     */
-    private FilePlanReference filePlanReference;
-    /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
-     */
-    private FilePlanReferenceTemplate filePlanReferenceTemplate;
-    /**
-     * Instantiates a new filePlanDescriptor and sets the default values.
+     * Instantiates a new FilePlanDescriptor and sets the default values.
      */
     public FilePlanDescriptor() {
         super();
@@ -58,7 +18,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filePlanDescriptor
+     * @return a FilePlanDescriptor
      */
     @jakarta.annotation.Nonnull
     public static FilePlanDescriptor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,67 +27,67 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the authority property value. Represents the file plan descriptor of type authority applied to a particular retention label.
-     * @return a authority
+     * @return a Authority
      */
     @jakarta.annotation.Nullable
     public Authority getAuthority() {
-        return this.authority;
+        return this.BackingStore.get("authority");
     }
     /**
      * Gets the authorityTemplate property value. Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
-     * @return a authorityTemplate
+     * @return a AuthorityTemplate
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplate getAuthorityTemplate() {
-        return this.authorityTemplate;
+        return this.BackingStore.get("authorityTemplate");
     }
     /**
      * Gets the category property value. The category property
-     * @return a appliedCategory
+     * @return a AppliedCategory
      */
     @jakarta.annotation.Nullable
     public AppliedCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the categoryTemplate property value. Specifies a group of similar types of content in a particular department.
-     * @return a categoryTemplate
+     * @return a CategoryTemplate
      */
     @jakarta.annotation.Nullable
     public CategoryTemplate getCategoryTemplate() {
-        return this.categoryTemplate;
+        return this.BackingStore.get("categoryTemplate");
     }
     /**
      * Gets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
-     * @return a citation
+     * @return a Citation
      */
     @jakarta.annotation.Nullable
     public Citation getCitation() {
-        return this.citation;
+        return this.BackingStore.get("citation");
     }
     /**
      * Gets the citationTemplate property value. The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
-     * @return a citationTemplate
+     * @return a CitationTemplate
      */
     @jakarta.annotation.Nullable
     public CitationTemplate getCitationTemplate() {
-        return this.citationTemplate;
+        return this.BackingStore.get("citationTemplate");
     }
     /**
      * Gets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
-     * @return a department
+     * @return a Department
      */
     @jakarta.annotation.Nullable
     public Department getDepartment() {
-        return this.department;
+        return this.BackingStore.get("department");
     }
     /**
      * Gets the departmentTemplate property value. Specifies the  department or business unit of an organization to which a label belongs.
-     * @return a departmentTemplate
+     * @return a DepartmentTemplate
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplate getDepartmentTemplate() {
-        return this.departmentTemplate;
+        return this.BackingStore.get("departmentTemplate");
     }
     /**
      * The deserialization information for the current model
@@ -150,19 +110,19 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the filePlanReference property value. Represents the file plan descriptor of type filePlanReference applied to a particular retention label.
-     * @return a filePlanReference
+     * @return a FilePlanReference
      */
     @jakarta.annotation.Nullable
     public FilePlanReference getFilePlanReference() {
-        return this.filePlanReference;
+        return this.BackingStore.get("filePlanReference");
     }
     /**
      * Gets the filePlanReferenceTemplate property value. Specifies a unique alpha-numeric identifier for an organizations retention schedule.
-     * @return a filePlanReferenceTemplate
+     * @return a FilePlanReferenceTemplate
      */
     @jakarta.annotation.Nullable
     public FilePlanReferenceTemplate getFilePlanReferenceTemplate() {
-        return this.filePlanReferenceTemplate;
+        return this.BackingStore.get("filePlanReferenceTemplate");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class FilePlanDescriptor extends Entity implements Parsable {
      * @param value Value to set for the authority property.
      */
     public void setAuthority(@jakarta.annotation.Nullable final Authority value) {
-        this.authority = value;
+        this.BackingStore.set("authority", value);
     }
     /**
      * Sets the authorityTemplate property value. Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      * @param value Value to set for the authorityTemplate property.
      */
     public void setAuthorityTemplate(@jakarta.annotation.Nullable final AuthorityTemplate value) {
-        this.authorityTemplate = value;
+        this.BackingStore.set("authorityTemplate", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final AppliedCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the categoryTemplate property value. Specifies a group of similar types of content in a particular department.
      * @param value Value to set for the categoryTemplate property.
      */
     public void setCategoryTemplate(@jakarta.annotation.Nullable final CategoryTemplate value) {
-        this.categoryTemplate = value;
+        this.BackingStore.set("categoryTemplate", value);
     }
     /**
      * Sets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
      * @param value Value to set for the citation property.
      */
     public void setCitation(@jakarta.annotation.Nullable final Citation value) {
-        this.citation = value;
+        this.BackingStore.set("citation", value);
     }
     /**
      * Sets the citationTemplate property value. The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
      * @param value Value to set for the citationTemplate property.
      */
     public void setCitationTemplate(@jakarta.annotation.Nullable final CitationTemplate value) {
-        this.citationTemplate = value;
+        this.BackingStore.set("citationTemplate", value);
     }
     /**
      * Sets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final Department value) {
-        this.department = value;
+        this.BackingStore.set("department", value);
     }
     /**
      * Sets the departmentTemplate property value. Specifies the  department or business unit of an organization to which a label belongs.
      * @param value Value to set for the departmentTemplate property.
      */
     public void setDepartmentTemplate(@jakarta.annotation.Nullable final DepartmentTemplate value) {
-        this.departmentTemplate = value;
+        this.BackingStore.set("departmentTemplate", value);
     }
     /**
      * Sets the filePlanReference property value. Represents the file plan descriptor of type filePlanReference applied to a particular retention label.
      * @param value Value to set for the filePlanReference property.
      */
     public void setFilePlanReference(@jakarta.annotation.Nullable final FilePlanReference value) {
-        this.filePlanReference = value;
+        this.BackingStore.set("filePlanReference", value);
     }
     /**
      * Sets the filePlanReferenceTemplate property value. Specifies a unique alpha-numeric identifier for an organizations retention schedule.
      * @param value Value to set for the filePlanReferenceTemplate property.
      */
     public void setFilePlanReferenceTemplate(@jakarta.annotation.Nullable final FilePlanReferenceTemplate value) {
-        this.filePlanReferenceTemplate = value;
+        this.BackingStore.set("filePlanReferenceTemplate", value);
     }
 }

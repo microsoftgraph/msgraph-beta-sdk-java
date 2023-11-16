@@ -5,37 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable {
+public class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The fv property
-     */
-    private Json fv;
-    /**
-     * The pv property
-     */
-    private Json pv;
-    /**
-     * The rate property
-     */
-    private Json rate;
-    /**
-     * Instantiates a new pdurationPostRequestBody and sets the default values.
+     * Instantiates a new PdurationPostRequestBody and sets the default values.
      */
     public PdurationPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pdurationPostRequestBody
+     * @return a PdurationPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static PdurationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +35,25 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable 
         return new PdurationPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +73,7 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getFv() {
-        return this.fv;
+        return this.BackingStore.get("fv");
     }
     /**
      * Gets the pv property value. The pv property
@@ -76,7 +81,7 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getPv() {
-        return this.pv;
+        return this.BackingStore.get("pv");
     }
     /**
      * Gets the rate property value. The rate property
@@ -84,7 +89,7 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.BackingStore.get("rate");
     }
     /**
      * Serializes information the current object
@@ -98,31 +103,39 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the fv property value. The fv property
      * @param value Value to set for the fv property.
      */
     public void setFv(@jakarta.annotation.Nullable final Json value) {
-        this.fv = value;
+        this.BackingStore.set("fv", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
     public void setPv(@jakarta.annotation.Nullable final Json value) {
-        this.pv = value;
+        this.BackingStore.set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.BackingStore.set("rate", value);
     }
 }

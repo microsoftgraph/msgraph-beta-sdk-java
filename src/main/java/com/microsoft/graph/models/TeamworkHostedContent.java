@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkHostedContent extends Entity implements Parsable {
     /**
-     * Write only. Bytes for the hosted content (such as images).
-     */
-    private byte[] contentBytes;
-    /**
-     * Write only. Content type, such as image/png, image/jpg.
-     */
-    private String contentType;
-    /**
-     * Instantiates a new teamworkHostedContent and sets the default values.
+     * Instantiates a new TeamworkHostedContent and sets the default values.
      */
     public TeamworkHostedContent() {
         super();
@@ -25,7 +17,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkHostedContent
+     * @return a TeamworkHostedContent
      */
     @jakarta.annotation.Nonnull
     public static TeamworkHostedContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +33,19 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     }
     /**
      * Gets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
-        return this.contentBytes;
+        return this.BackingStore.get("contentBytes");
     }
     /**
      * Gets the contentType property value. Write only. Content type, such as image/png, image/jpg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -81,13 +73,13 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      * @param value Value to set for the contentBytes property.
      */
     public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
-        this.contentBytes = value;
+        this.BackingStore.set("contentBytes", value);
     }
     /**
      * Sets the contentType property value. Write only. Content type, such as image/png, image/jpg.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
 }

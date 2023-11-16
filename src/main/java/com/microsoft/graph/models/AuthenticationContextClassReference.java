@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /**
-     * A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user facing admin experiences. For example, selection UX.
-     */
-    private String description;
-    /**
-     * A friendly name that identifies the authenticationContextClassReference object when building user-facing admin experiences. For example, a selection UX.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in selection UX used to tag resources with authentication context class values. It will still be shown in the Conditional Access policy authoring experience.  Supports $filter (eq).
-     */
-    private Boolean isAvailable;
-    /**
-     * Instantiates a new authenticationContextClassReference and sets the default values.
+     * Instantiates a new AuthenticationContextClassReference and sets the default values.
      */
     public AuthenticationContextClassReference() {
         super();
@@ -29,7 +17,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationContextClassReference
+     * @return a AuthenticationContextClassReference
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationContextClassReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * Gets the description property value. A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user facing admin experiences. For example, selection UX.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. A friendly name that identifies the authenticationContextClassReference object when building user-facing admin experiences. For example, a selection UX.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     }
     /**
      * Gets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in selection UX used to tag resources with authentication context class values. It will still be shown in the Conditional Access policy authoring experience.  Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAvailable() {
-        return this.isAvailable;
+        return this.BackingStore.get("isAvailable");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. A friendly name that identifies the authenticationContextClassReference object when building user-facing admin experiences. For example, a selection UX.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in selection UX used to tag resources with authentication context class values. It will still be shown in the Conditional Access policy authoring experience.  Supports $filter (eq).
      * @param value Value to set for the isAvailable property.
      */
     public void setIsAvailable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAvailable = value;
+        this.BackingStore.set("isAvailable", value);
     }
 }

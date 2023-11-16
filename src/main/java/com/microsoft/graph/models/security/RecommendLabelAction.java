@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecommendLabelAction extends InformationProtectionAction implements Parsable {
     /**
-     * Actions to take if the label is accepted by the user.
-     */
-    private java.util.List<InformationProtectionAction> actions;
-    /**
-     * The actionSource property
-     */
-    private ActionSource actionSource;
-    /**
-     * The sensitive information type GUIDs that caused the recommendation to be given.
-     */
-    private java.util.List<String> responsibleSensitiveTypeIds;
-    /**
-     * The sensitivityLabelId property
-     */
-    private String sensitivityLabelId;
-    /**
-     * Instantiates a new recommendLabelAction and sets the default values.
+     * Instantiates a new RecommendLabelAction and sets the default values.
      */
     public RecommendLabelAction() {
         super();
@@ -34,7 +18,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recommendLabelAction
+     * @return a RecommendLabelAction
      */
     @jakarta.annotation.Nonnull
     public static RecommendLabelAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class RecommendLabelAction extends InformationProtectionAction implements
     }
     /**
      * Gets the actions property value. Actions to take if the label is accepted by the user.
-     * @return a informationProtectionAction
+     * @return a java.util.List<InformationProtectionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
-        return this.actions;
+        return this.BackingStore.get("actions");
     }
     /**
      * Gets the actionSource property value. The actionSource property
-     * @return a actionSource
+     * @return a ActionSource
      */
     @jakarta.annotation.Nullable
     public ActionSource getActionSource() {
-        return this.actionSource;
+        return this.BackingStore.get("actionSource");
     }
     /**
      * The deserialization information for the current model
@@ -72,19 +56,19 @@ public class RecommendLabelAction extends InformationProtectionAction implements
     }
     /**
      * Gets the responsibleSensitiveTypeIds property value. The sensitive information type GUIDs that caused the recommendation to be given.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResponsibleSensitiveTypeIds() {
-        return this.responsibleSensitiveTypeIds;
+        return this.BackingStore.get("responsibleSensitiveTypeIds");
     }
     /**
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
-        return this.sensitivityLabelId;
+        return this.BackingStore.get("sensitivityLabelId");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the actions property.
      */
     public void setActions(@jakarta.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
-        this.actions = value;
+        this.BackingStore.set("actions", value);
     }
     /**
      * Sets the actionSource property value. The actionSource property
      * @param value Value to set for the actionSource property.
      */
     public void setActionSource(@jakarta.annotation.Nullable final ActionSource value) {
-        this.actionSource = value;
+        this.BackingStore.set("actionSource", value);
     }
     /**
      * Sets the responsibleSensitiveTypeIds property value. The sensitive information type GUIDs that caused the recommendation to be given.
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      */
     public void setResponsibleSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.responsibleSensitiveTypeIds = value;
+        this.BackingStore.set("responsibleSensitiveTypeIds", value);
     }
     /**
      * Sets the sensitivityLabelId property value. The sensitivityLabelId property
      * @param value Value to set for the sensitivityLabelId property.
      */
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
-        this.sensitivityLabelId = value;
+        this.BackingStore.set("sensitivityLabelId", value);
     }
 }

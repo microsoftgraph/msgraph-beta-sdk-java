@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppliedCategory extends FilePlanDescriptorBase implements Parsable {
     /**
-     * Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
-     */
-    private SubCategory subCategory;
-    /**
-     * Instantiates a new appliedCategory and sets the default values.
+     * Instantiates a new AppliedCategory and sets the default values.
      */
     public AppliedCategory() {
         super();
@@ -21,7 +17,7 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appliedCategory
+     * @return a AppliedCategory
      */
     @jakarta.annotation.Nonnull
     public static AppliedCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
     }
     /**
      * Gets the subCategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
-     * @return a subCategory
+     * @return a SubCategory
      */
     @jakarta.annotation.Nullable
     public SubCategory getSubCategory() {
-        return this.subCategory;
+        return this.BackingStore.get("subCategory");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * @param value Value to set for the subCategory property.
      */
     public void setSubCategory(@jakarta.annotation.Nullable final SubCategory value) {
-        this.subCategory = value;
+        this.BackingStore.set("subCategory", value);
     }
 }

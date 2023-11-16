@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
-     */
-    private Long defaultValue;
-    /**
-     * An unsigned integer that specifies the maximum allowed value. The default value is 9999.
-     */
-    private Long maxValue;
-    /**
-     * An unsigned integer that specifies the minimum allowed value. The default value is 0.
-     */
-    private Long minValue;
-    /**
-     * Requirement to enter a value in the parameter box. The default value is false.
-     */
-    private Boolean required;
-    /**
-     * If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
-     */
-    private Boolean spin;
-    /**
-     * An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
-     */
-    private Long spinStep;
-    /**
-     * Instantiates a new groupPolicyPresentationDecimalTextBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationDecimalTextBox and sets the default values.
      */
     public GroupPolicyPresentationDecimalTextBox() {
         super();
@@ -45,7 +21,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationDecimalTextBox
+     * @return a GroupPolicyPresentationDecimalTextBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationDecimalTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +30,11 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
     }
     /**
      * Gets the defaultValue property value. An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDefaultValue() {
-        return this.defaultValue;
+        return this.BackingStore.get("defaultValue");
     }
     /**
      * The deserialization information for the current model
@@ -77,43 +53,43 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
     }
     /**
      * Gets the maxValue property value. An unsigned integer that specifies the maximum allowed value. The default value is 9999.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaxValue() {
-        return this.maxValue;
+        return this.BackingStore.get("maxValue");
     }
     /**
      * Gets the minValue property value. An unsigned integer that specifies the minimum allowed value. The default value is 0.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMinValue() {
-        return this.minValue;
+        return this.BackingStore.get("minValue");
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.BackingStore.get("required");
     }
     /**
      * Gets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSpin() {
-        return this.spin;
+        return this.BackingStore.get("spin");
     }
     /**
      * Gets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSpinStep() {
-        return this.spinStep;
+        return this.BackingStore.get("spinStep");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final Long value) {
-        this.defaultValue = value;
+        this.BackingStore.set("defaultValue", value);
     }
     /**
      * Sets the maxValue property value. An unsigned integer that specifies the maximum allowed value. The default value is 9999.
      * @param value Value to set for the maxValue property.
      */
     public void setMaxValue(@jakarta.annotation.Nullable final Long value) {
-        this.maxValue = value;
+        this.BackingStore.set("maxValue", value);
     }
     /**
      * Sets the minValue property value. An unsigned integer that specifies the minimum allowed value. The default value is 0.
      * @param value Value to set for the minValue property.
      */
     public void setMinValue(@jakarta.annotation.Nullable final Long value) {
-        this.minValue = value;
+        this.BackingStore.set("minValue", value);
     }
     /**
      * Sets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.BackingStore.set("required", value);
     }
     /**
      * Sets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      * @param value Value to set for the spin property.
      */
     public void setSpin(@jakarta.annotation.Nullable final Boolean value) {
-        this.spin = value;
+        this.BackingStore.set("spin", value);
     }
     /**
      * Sets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
      * @param value Value to set for the spinStep property.
      */
     public void setSpinStep(@jakarta.annotation.Nullable final Long value) {
-        this.spinStep = value;
+        this.BackingStore.set("spinStep", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryAuditCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DirectoryAudit> value;
-    /**
-     * Instantiates a new directoryAuditCollectionResponse and sets the default values.
+     * Instantiates a new DirectoryAuditCollectionResponse and sets the default values.
      */
     public DirectoryAuditCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DirectoryAuditCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryAuditCollectionResponse
+     * @return a DirectoryAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DirectoryAuditCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DirectoryAuditCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a directoryAudit
+     * @return a java.util.List<DirectoryAudit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryAudit> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DirectoryAuditCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DirectoryAudit> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

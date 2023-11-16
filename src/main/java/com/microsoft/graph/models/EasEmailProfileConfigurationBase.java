@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EasEmailProfileConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Custom domain name value used while generating an email profile before installing on the device.
-     */
-    private String customDomainName;
-    /**
-     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
-     */
-    private DomainNameSource userDomainNameSource;
-    /**
-     * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
-     */
-    private UsernameSource usernameAADSource;
-    /**
-     * Possible values for username source or email source.
-     */
-    private UserEmailSource usernameSource;
-    /**
-     * Instantiates a new easEmailProfileConfigurationBase and sets the default values.
+     * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
      */
     public EasEmailProfileConfigurationBase() {
         super();
@@ -37,7 +21,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a easEmailProfileConfigurationBase
+     * @return a EasEmailProfileConfigurationBase
      */
     @jakarta.annotation.Nonnull
     public static EasEmailProfileConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +39,11 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the customDomainName property value. Custom domain name value used while generating an email profile before installing on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomDomainName() {
-        return this.customDomainName;
+        return this.BackingStore.get("customDomainName");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +60,27 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
-     * @return a domainNameSource
+     * @return a DomainNameSource
      */
     @jakarta.annotation.Nullable
     public DomainNameSource getUserDomainNameSource() {
-        return this.userDomainNameSource;
+        return this.BackingStore.get("userDomainNameSource");
     }
     /**
      * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
-     * @return a usernameSource
+     * @return a UsernameSource
      */
     @jakarta.annotation.Nullable
     public UsernameSource getUsernameAADSource() {
-        return this.usernameAADSource;
+        return this.BackingStore.get("usernameAADSource");
     }
     /**
      * Gets the usernameSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getUsernameSource() {
-        return this.usernameSource;
+        return this.BackingStore.get("usernameSource");
     }
     /**
      * Serializes information the current object
@@ -115,27 +99,27 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the customDomainName property.
      */
     public void setCustomDomainName(@jakarta.annotation.Nullable final String value) {
-        this.customDomainName = value;
+        this.BackingStore.set("customDomainName", value);
     }
     /**
      * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @param value Value to set for the userDomainNameSource property.
      */
     public void setUserDomainNameSource(@jakarta.annotation.Nullable final DomainNameSource value) {
-        this.userDomainNameSource = value;
+        this.BackingStore.set("userDomainNameSource", value);
     }
     /**
      * Sets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
      * @param value Value to set for the usernameAADSource property.
      */
     public void setUsernameAADSource(@jakarta.annotation.Nullable final UsernameSource value) {
-        this.usernameAADSource = value;
+        this.BackingStore.set("usernameAADSource", value);
     }
     /**
      * Sets the usernameSource property value. Possible values for username source or email source.
      * @param value Value to set for the usernameSource property.
      */
     public void setUsernameSource(@jakarta.annotation.Nullable final UserEmailSource value) {
-        this.usernameSource = value;
+        this.BackingStore.set("usernameSource", value);
     }
 }

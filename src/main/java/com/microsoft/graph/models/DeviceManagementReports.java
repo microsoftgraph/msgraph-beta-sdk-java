@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementReports extends Entity implements Parsable {
     /**
-     * Entity representing the configuration of a cached report
-     */
-    private java.util.List<DeviceManagementCachedReportConfiguration> cachedReportConfigurations;
-    /**
-     * Entity representing a job to export a report
-     */
-    private java.util.List<DeviceManagementExportJob> exportJobs;
-    /**
-     * Instantiates a new deviceManagementReports and sets the default values.
+     * Instantiates a new DeviceManagementReports and sets the default values.
      */
     public DeviceManagementReports() {
         super();
@@ -28,7 +20,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementReports
+     * @return a DeviceManagementReports
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementReports createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,19 +29,19 @@ public class DeviceManagementReports extends Entity implements Parsable {
     }
     /**
      * Gets the cachedReportConfigurations property value. Entity representing the configuration of a cached report
-     * @return a deviceManagementCachedReportConfiguration
+     * @return a java.util.List<DeviceManagementCachedReportConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementCachedReportConfiguration> getCachedReportConfigurations() {
-        return this.cachedReportConfigurations;
+        return this.BackingStore.get("cachedReportConfigurations");
     }
     /**
      * Gets the exportJobs property value. Entity representing a job to export a report
-     * @return a deviceManagementExportJob
+     * @return a java.util.List<DeviceManagementExportJob>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExportJob> getExportJobs() {
-        return this.exportJobs;
+        return this.BackingStore.get("exportJobs");
     }
     /**
      * The deserialization information for the current model
@@ -77,13 +69,13 @@ public class DeviceManagementReports extends Entity implements Parsable {
      * @param value Value to set for the cachedReportConfigurations property.
      */
     public void setCachedReportConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceManagementCachedReportConfiguration> value) {
-        this.cachedReportConfigurations = value;
+        this.BackingStore.set("cachedReportConfigurations", value);
     }
     /**
      * Sets the exportJobs property value. Entity representing a job to export a report
      * @param value Value to set for the exportJobs property.
      */
     public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
-        this.exportJobs = value;
+        this.BackingStore.set("exportJobs", value);
     }
 }

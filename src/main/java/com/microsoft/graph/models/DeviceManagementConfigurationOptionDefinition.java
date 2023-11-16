@@ -4,61 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationOptionDefinition implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationOptionDefinition implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * List of Settings that depends on this option
-     */
-    private java.util.List<DeviceManagementConfigurationSettingDependedOnBy> dependedOnBy;
-    /**
-     * List of dependent settings for this option
-     */
-    private java.util.List<DeviceManagementConfigurationDependentOn> dependentOn;
-    /**
-     * Description of the option
-     */
-    private String description;
-    /**
-     * Friendly name of the option
-     */
-    private String displayName;
-    /**
-     * Help text of the option
-     */
-    private String helpText;
-    /**
-     * Identifier of option
-     */
-    private String itemId;
-    /**
-     * Name of the option
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Value of the option
-     */
-    private DeviceManagementConfigurationSettingValue optionValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationOptionDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationOptionDefinition and sets the default values.
      */
     public DeviceManagementConfigurationOptionDefinition() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationOptionDefinition
+     * @return a DeviceManagementConfigurationOptionDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationOptionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,44 +34,57 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
         return new DeviceManagementConfigurationOptionDefinition();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dependedOnBy property value. List of Settings that depends on this option
-     * @return a deviceManagementConfigurationSettingDependedOnBy
+     * @return a java.util.List<DeviceManagementConfigurationSettingDependedOnBy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
-        return this.dependedOnBy;
+        return this.BackingStore.get("dependedOnBy");
     }
     /**
      * Gets the dependentOn property value. List of dependent settings for this option
-     * @return a deviceManagementConfigurationDependentOn
+     * @return a java.util.List<DeviceManagementConfigurationDependentOn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
-        return this.dependentOn;
+        return this.BackingStore.get("dependentOn");
     }
     /**
      * Gets the description property value. Description of the option
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Friendly name of the option
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -125,43 +106,43 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the helpText property value. Help text of the option
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
-        return this.helpText;
+        return this.BackingStore.get("helpText");
     }
     /**
      * Gets the itemId property value. Identifier of option
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
-        return this.itemId;
+        return this.BackingStore.get("itemId");
     }
     /**
      * Gets the name property value. Name of the option
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the optionValue property value. Value of the option
-     * @return a deviceManagementConfigurationSettingValue
+     * @return a DeviceManagementConfigurationSettingValue
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingValue getOptionValue() {
-        return this.optionValue;
+        return this.BackingStore.get("optionValue");
     }
     /**
      * Serializes information the current object
@@ -181,73 +162,81 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the dependedOnBy property value. List of Settings that depends on this option
      * @param value Value to set for the dependedOnBy property.
      */
     public void setDependedOnBy(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
-        this.dependedOnBy = value;
+        this.BackingStore.set("dependedOnBy", value);
     }
     /**
      * Sets the dependentOn property value. List of dependent settings for this option
      * @param value Value to set for the dependentOn property.
      */
     public void setDependentOn(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
-        this.dependentOn = value;
+        this.BackingStore.set("dependentOn", value);
     }
     /**
      * Sets the description property value. Description of the option
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Friendly name of the option
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the helpText property value. Help text of the option
      * @param value Value to set for the helpText property.
      */
     public void setHelpText(@jakarta.annotation.Nullable final String value) {
-        this.helpText = value;
+        this.BackingStore.set("helpText", value);
     }
     /**
      * Sets the itemId property value. Identifier of option
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
-        this.itemId = value;
+        this.BackingStore.set("itemId", value);
     }
     /**
      * Sets the name property value. Name of the option
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the optionValue property value. Value of the option
      * @param value Value to set for the optionValue property.
      */
     public void setOptionValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
-        this.optionValue = value;
+        this.BackingStore.set("optionValue", value);
     }
 }

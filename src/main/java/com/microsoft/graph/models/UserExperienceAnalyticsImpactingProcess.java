@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsImpactingProcess extends Entity implements Parsable {
     /**
-     * The category of impacting process.
-     */
-    private String category;
-    /**
-     * The description of process.
-     */
-    private String description;
-    /**
-     * The unique identifier of the impacted device.
-     */
-    private String deviceId;
-    /**
-     * The impact value of the process. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double impactValue;
-    /**
-     * The process name.
-     */
-    private String processName;
-    /**
-     * The publisher of the process.
-     */
-    private String publisher;
-    /**
-     * Instantiates a new userExperienceAnalyticsImpactingProcess and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsImpactingProcess and sets the default values.
      */
     public UserExperienceAnalyticsImpactingProcess() {
         super();
@@ -44,7 +20,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsImpactingProcess
+     * @return a UserExperienceAnalyticsImpactingProcess
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsImpactingProcess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +29,27 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the category property value. The category of impacting process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the description property value. The description of process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceId property value. The unique identifier of the impacted device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -92,27 +68,27 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getImpactValue() {
-        return this.impactValue;
+        return this.BackingStore.get("impactValue");
     }
     /**
      * Gets the processName property value. The process name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
-        return this.processName;
+        return this.BackingStore.get("processName");
     }
     /**
      * Gets the publisher property value. The publisher of the process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.BackingStore.get("publisher");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the description property value. The description of process.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceId property value. The unique identifier of the impacted device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the impactValue property.
      */
     public void setImpactValue(@jakarta.annotation.Nullable final Double value) {
-        this.impactValue = value;
+        this.BackingStore.set("impactValue", value);
     }
     /**
      * Sets the processName property value. The process name.
      * @param value Value to set for the processName property.
      */
     public void setProcessName(@jakarta.annotation.Nullable final String value) {
-        this.processName = value;
+        this.BackingStore.set("processName", value);
     }
     /**
      * Sets the publisher property value. The publisher of the process.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.BackingStore.set("publisher", value);
     }
 }

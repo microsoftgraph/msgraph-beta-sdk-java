@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
-     * The container which the blob belongs to.
-     */
-    private BlobContainerEvidence blobContainer;
-    /**
-     * The Etag associated with this blob.
-     */
-    private String etag;
-    /**
-     * The file hashes associated with this blob.
-     */
-    private java.util.List<FileHash> fileHashes;
-    /**
-     * The name of the blob.
-     */
-    private String name;
-    /**
-     * The full URL representation of the blob.
-     */
-    private String url;
-    /**
-     * Instantiates a new blobEvidence and sets the default values.
+     * Instantiates a new BlobEvidence and sets the default values.
      */
     public BlobEvidence() {
         super();
@@ -38,7 +18,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a blobEvidence
+     * @return a BlobEvidence
      */
     @jakarta.annotation.Nonnull
     public static BlobEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the blobContainer property value. The container which the blob belongs to.
-     * @return a blobContainerEvidence
+     * @return a BlobContainerEvidence
      */
     @jakarta.annotation.Nullable
     public BlobContainerEvidence getBlobContainer() {
-        return this.blobContainer;
+        return this.BackingStore.get("blobContainer");
     }
     /**
      * Gets the etag property value. The Etag associated with this blob.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEtag() {
-        return this.etag;
+        return this.BackingStore.get("etag");
     }
     /**
      * The deserialization information for the current model
@@ -77,27 +57,27 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the fileHashes property value. The file hashes associated with this blob.
-     * @return a fileHash
+     * @return a java.util.List<FileHash>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileHash> getFileHashes() {
-        return this.fileHashes;
+        return this.BackingStore.get("fileHashes");
     }
     /**
      * Gets the name property value. The name of the blob.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the url property value. The full URL representation of the blob.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the blobContainer property.
      */
     public void setBlobContainer(@jakarta.annotation.Nullable final BlobContainerEvidence value) {
-        this.blobContainer = value;
+        this.BackingStore.set("blobContainer", value);
     }
     /**
      * Sets the etag property value. The Etag associated with this blob.
      * @param value Value to set for the etag property.
      */
     public void setEtag(@jakarta.annotation.Nullable final String value) {
-        this.etag = value;
+        this.BackingStore.set("etag", value);
     }
     /**
      * Sets the fileHashes property value. The file hashes associated with this blob.
      * @param value Value to set for the fileHashes property.
      */
     public void setFileHashes(@jakarta.annotation.Nullable final java.util.List<FileHash> value) {
-        this.fileHashes = value;
+        this.BackingStore.set("fileHashes", value);
     }
     /**
      * Sets the name property value. The name of the blob.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the url property value. The full URL representation of the blob.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

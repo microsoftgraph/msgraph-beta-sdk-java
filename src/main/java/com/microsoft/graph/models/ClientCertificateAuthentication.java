@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The list of certificates uploaded for this API connector.
-     */
-    private java.util.List<Pkcs12CertificateInformation> certificateList;
-    /**
-     * Instantiates a new clientCertificateAuthentication and sets the default values.
+     * Instantiates a new ClientCertificateAuthentication and sets the default values.
      */
     public ClientCertificateAuthentication() {
         super();
@@ -22,7 +18,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a clientCertificateAuthentication
+     * @return a ClientCertificateAuthentication
      */
     @jakarta.annotation.Nonnull
     public static ClientCertificateAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     }
     /**
      * Gets the certificateList property value. The list of certificates uploaded for this API connector.
-     * @return a pkcs12CertificateInformation
+     * @return a java.util.List<Pkcs12CertificateInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Pkcs12CertificateInformation> getCertificateList() {
-        return this.certificateList;
+        return this.BackingStore.get("certificateList");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * @param value Value to set for the certificateList property.
      */
     public void setCertificateList(@jakarta.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
-        this.certificateList = value;
+        this.BackingStore.set("certificateList", value);
     }
 }

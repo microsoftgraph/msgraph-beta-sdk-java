@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<RoleDefinition> value;
-    /**
-     * Instantiates a new roleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new RoleDefinitionCollectionResponse and sets the default values.
      */
     public RoleDefinitionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleDefinitionCollectionResponse
+     * @return a RoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RoleDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a roleDefinition
+     * @return a java.util.List<RoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleDefinition> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RoleDefinition> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

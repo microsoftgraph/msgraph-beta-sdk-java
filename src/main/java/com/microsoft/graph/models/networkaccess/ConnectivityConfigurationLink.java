@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectivityConfigurationLink extends Entity implements Parsable {
     /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The localConfigurations property
-     */
-    private java.util.List<LocalConnectivityConfiguration> localConfigurations;
-    /**
-     * The peerConfiguration property
-     */
-    private PeerConnectivityConfiguration peerConfiguration;
-    /**
-     * Instantiates a new connectivityConfigurationLink and sets the default values.
+     * Instantiates a new ConnectivityConfigurationLink and sets the default values.
      */
     public ConnectivityConfigurationLink() {
         super();
@@ -30,7 +18,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectivityConfigurationLink
+     * @return a ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public static ConnectivityConfigurationLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,12 +26,12 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
         return new ConnectivityConfigurationLink();
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. Specifies the name of the link.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -58,20 +46,20 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the localConfigurations property value. The localConfigurations property
-     * @return a localConnectivityConfiguration
+     * Gets the localConfigurations property value. Specifies Microsoft's end of the tunnel configuration for a device link.
+     * @return a java.util.List<LocalConnectivityConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalConnectivityConfiguration> getLocalConfigurations() {
-        return this.localConfigurations;
+        return this.BackingStore.get("localConfigurations");
     }
     /**
      * Gets the peerConfiguration property value. The peerConfiguration property
-     * @return a peerConnectivityConfiguration
+     * @return a PeerConnectivityConfiguration
      */
     @jakarta.annotation.Nullable
     public PeerConnectivityConfiguration getPeerConfiguration() {
-        return this.peerConfiguration;
+        return this.BackingStore.get("peerConfiguration");
     }
     /**
      * Serializes information the current object
@@ -85,24 +73,24 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
         writer.writeObjectValue("peerConfiguration", this.getPeerConfiguration());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Specifies the name of the link.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
-     * Sets the localConfigurations property value. The localConfigurations property
+     * Sets the localConfigurations property value. Specifies Microsoft's end of the tunnel configuration for a device link.
      * @param value Value to set for the localConfigurations property.
      */
     public void setLocalConfigurations(@jakarta.annotation.Nullable final java.util.List<LocalConnectivityConfiguration> value) {
-        this.localConfigurations = value;
+        this.BackingStore.set("localConfigurations", value);
     }
     /**
      * Sets the peerConfiguration property value. The peerConfiguration property
      * @param value Value to set for the peerConfiguration property.
      */
     public void setPeerConfiguration(@jakarta.annotation.Nullable final PeerConnectivityConfiguration value) {
-        this.peerConfiguration = value;
+        this.BackingStore.set("peerConfiguration", value);
     }
 }

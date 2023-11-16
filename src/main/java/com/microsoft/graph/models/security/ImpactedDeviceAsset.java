@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedDeviceAsset extends ImpactedAsset implements Parsable {
     /**
-     * The identifier property
-     */
-    private DeviceAssetIdentifier identifier;
-    /**
-     * Instantiates a new impactedDeviceAsset and sets the default values.
+     * Instantiates a new ImpactedDeviceAsset and sets the default values.
      */
     public ImpactedDeviceAsset() {
         super();
@@ -22,7 +18,7 @@ public class ImpactedDeviceAsset extends ImpactedAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a impactedDeviceAsset
+     * @return a ImpactedDeviceAsset
      */
     @jakarta.annotation.Nonnull
     public static ImpactedDeviceAsset createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ImpactedDeviceAsset extends ImpactedAsset implements Parsable {
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a deviceAssetIdentifier
+     * @return a DeviceAssetIdentifier
      */
     @jakarta.annotation.Nullable
     public DeviceAssetIdentifier getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ImpactedDeviceAsset extends ImpactedAsset implements Parsable {
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final DeviceAssetIdentifier value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
 }

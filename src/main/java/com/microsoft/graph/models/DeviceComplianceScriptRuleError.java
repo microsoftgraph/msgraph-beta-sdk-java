@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError implements Parsable {
     /**
-     * Setting name for the rule with error.
-     */
-    private String settingName;
-    /**
-     * Instantiates a new deviceComplianceScriptRuleError and sets the default values.
+     * Instantiates a new DeviceComplianceScriptRuleError and sets the default values.
      */
     public DeviceComplianceScriptRuleError() {
         super();
@@ -21,7 +17,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptRuleError
+     * @return a DeviceComplianceScriptRuleError
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptRuleError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     }
     /**
      * Gets the settingName property value. Setting name for the rule with error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.BackingStore.get("settingName");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.BackingStore.set("settingName", value);
     }
 }

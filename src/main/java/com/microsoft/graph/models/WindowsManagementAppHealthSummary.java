@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsManagementAppHealthSummary extends Entity implements Parsable {
     /**
-     * Healthy device count.
-     */
-    private Integer healthyDeviceCount;
-    /**
-     * Unhealthy device count.
-     */
-    private Integer unhealthyDeviceCount;
-    /**
-     * Unknown device count.
-     */
-    private Integer unknownDeviceCount;
-    /**
-     * Instantiates a new windowsManagementAppHealthSummary and sets the default values.
+     * Instantiates a new WindowsManagementAppHealthSummary and sets the default values.
      */
     public WindowsManagementAppHealthSummary() {
         super();
@@ -32,7 +20,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagementAppHealthSummary
+     * @return a WindowsManagementAppHealthSummary
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagementAppHealthSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +41,27 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     }
     /**
      * Gets the healthyDeviceCount property value. Healthy device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHealthyDeviceCount() {
-        return this.healthyDeviceCount;
+        return this.BackingStore.get("healthyDeviceCount");
     }
     /**
      * Gets the unhealthyDeviceCount property value. Unhealthy device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnhealthyDeviceCount() {
-        return this.unhealthyDeviceCount;
+        return this.BackingStore.get("unhealthyDeviceCount");
     }
     /**
      * Gets the unknownDeviceCount property value. Unknown device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this.unknownDeviceCount;
+        return this.BackingStore.get("unknownDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param value Value to set for the healthyDeviceCount property.
      */
     public void setHealthyDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.healthyDeviceCount = value;
+        this.BackingStore.set("healthyDeviceCount", value);
     }
     /**
      * Sets the unhealthyDeviceCount property value. Unhealthy device count.
      * @param value Value to set for the unhealthyDeviceCount property.
      */
     public void setUnhealthyDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unhealthyDeviceCount = value;
+        this.BackingStore.set("unhealthyDeviceCount", value);
     }
     /**
      * Sets the unknownDeviceCount property value. Unknown device count.
      * @param value Value to set for the unknownDeviceCount property.
      */
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownDeviceCount = value;
+        this.BackingStore.set("unknownDeviceCount", value);
     }
 }

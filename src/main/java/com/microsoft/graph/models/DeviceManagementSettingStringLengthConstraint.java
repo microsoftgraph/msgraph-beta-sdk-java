@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingStringLengthConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * The maximum permitted string length
-     */
-    private Integer maximumLength;
-    /**
-     * The minimum permitted string length
-     */
-    private Integer minimumLength;
-    /**
-     * Instantiates a new deviceManagementSettingStringLengthConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingStringLengthConstraint and sets the default values.
      */
     public DeviceManagementSettingStringLengthConstraint() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingStringLengthConstraint
+     * @return a DeviceManagementSettingStringLengthConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingStringLengthConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     }
     /**
      * Gets the maximumLength property value. The maximum permitted string length
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumLength() {
-        return this.maximumLength;
+        return this.BackingStore.get("maximumLength");
     }
     /**
      * Gets the minimumLength property value. The minimum permitted string length
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumLength() {
-        return this.minimumLength;
+        return this.BackingStore.get("minimumLength");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      * @param value Value to set for the maximumLength property.
      */
     public void setMaximumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumLength = value;
+        this.BackingStore.set("maximumLength", value);
     }
     /**
      * Sets the minimumLength property value. The minimum permitted string length
      * @param value Value to set for the minimumLength property.
      */
     public void setMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumLength = value;
+        this.BackingStore.set("minimumLength", value);
     }
 }

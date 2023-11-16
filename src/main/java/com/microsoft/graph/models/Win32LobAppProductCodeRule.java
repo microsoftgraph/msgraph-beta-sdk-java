@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable {
     /**
-     * The product code of the app.
-     */
-    private String productCode;
-    /**
-     * The product version comparison value.
-     */
-    private String productVersion;
-    /**
-     * Contains properties for detection operator.
-     */
-    private Win32LobAppRuleOperator productVersionOperator;
-    /**
-     * Instantiates a new win32LobAppProductCodeRule and sets the default values.
+     * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
      */
     public Win32LobAppProductCodeRule() {
         super();
@@ -33,7 +21,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppProductCodeRule
+     * @return a Win32LobAppProductCodeRule
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppProductCodeRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     }
     /**
      * Gets the productCode property value. The product code of the app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
-        return this.productCode;
+        return this.BackingStore.get("productCode");
     }
     /**
      * Gets the productVersion property value. The product version comparison value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
-        return this.productVersion;
+        return this.BackingStore.get("productVersion");
     }
     /**
      * Gets the productVersionOperator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRuleOperator getProductVersionOperator() {
-        return this.productVersionOperator;
+        return this.BackingStore.get("productVersionOperator");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param value Value to set for the productCode property.
      */
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
-        this.productCode = value;
+        this.BackingStore.set("productCode", value);
     }
     /**
      * Sets the productVersion property value. The product version comparison value.
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
-        this.productVersion = value;
+        this.BackingStore.set("productVersion", value);
     }
     /**
      * Sets the productVersionOperator property value. Contains properties for detection operator.
      * @param value Value to set for the productVersionOperator property.
      */
     public void setProductVersionOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
-        this.productVersionOperator = value;
+        this.BackingStore.set("productVersionOperator", value);
     }
 }

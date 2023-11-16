@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
     /**
-     * The list of group assignemenets for app configration.
-     */
-    private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
-    /**
-     * DateTime the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Admin provided description of the Device Configuration.
-     */
-    private String description;
-    /**
-     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     */
-    private java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> deviceStatuses;
-    /**
-     * App configuration device status summary.
-     */
-    private ManagedDeviceMobileAppConfigurationDeviceSummary deviceStatusSummary;
-    /**
-     * Admin provided name of the device configuration.
-     */
-    private String displayName;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tags for this App configuration entity.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * the associated app.
-     */
-    private java.util.List<String> targetedMobileApps;
-    /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
-     */
-    private java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> userStatuses;
-    /**
-     * App configuration user status summary.
-     */
-    private ManagedDeviceMobileAppConfigurationUserSummary userStatusSummary;
-    /**
-     * Version of the device configuration.
-     */
-    private Integer version;
-    /**
-     * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfiguration and sets the default values.
      */
     public ManagedDeviceMobileAppConfiguration() {
         super();
@@ -69,7 +21,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfiguration
+     * @return a ManagedDeviceMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,11 +39,11 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. The list of group assignemenets for app configration.
-     * @return a managedDeviceMobileAppConfigurationAssignment
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -99,39 +51,39 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     * @return a managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
-        return this.deviceStatuses;
+        return this.BackingStore.get("deviceStatuses");
     }
     /**
      * Gets the deviceStatusSummary property value. App configuration device status summary.
-     * @return a managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary getDeviceStatusSummary() {
-        return this.deviceStatusSummary;
+        return this.BackingStore.get("deviceStatusSummary");
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -160,47 +112,47 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this App configuration entity.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the targetedMobileApps property value. the associated app.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedMobileApps() {
-        return this.targetedMobileApps;
+        return this.BackingStore.get("targetedMobileApps");
     }
     /**
      * Gets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
-     * @return a managedDeviceMobileAppConfigurationUserStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
-        return this.userStatuses;
+        return this.BackingStore.get("userStatuses");
     }
     /**
      * Gets the userStatusSummary property value. App configuration user status summary.
-     * @return a managedDeviceMobileAppConfigurationUserSummary
+     * @return a ManagedDeviceMobileAppConfigurationUserSummary
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary getUserStatusSummary() {
-        return this.userStatusSummary;
+        return this.BackingStore.get("userStatusSummary");
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -227,83 +179,83 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
      */
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value) {
-        this.deviceStatuses = value;
+        this.BackingStore.set("deviceStatuses", value);
     }
     /**
      * Sets the deviceStatusSummary property value. App configuration device status summary.
      * @param value Value to set for the deviceStatusSummary property.
      */
     public void setDeviceStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationDeviceSummary value) {
-        this.deviceStatusSummary = value;
+        this.BackingStore.set("deviceStatusSummary", value);
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this App configuration entity.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the targetedMobileApps property value. the associated app.
      * @param value Value to set for the targetedMobileApps property.
      */
     public void setTargetedMobileApps(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.targetedMobileApps = value;
+        this.BackingStore.set("targetedMobileApps", value);
     }
     /**
      * Sets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @param value Value to set for the userStatuses property.
      */
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> value) {
-        this.userStatuses = value;
+        this.BackingStore.set("userStatuses", value);
     }
     /**
      * Sets the userStatusSummary property value. App configuration user status summary.
      * @param value Value to set for the userStatusSummary property.
      */
     public void setUserStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationUserSummary value) {
-        this.userStatusSummary = value;
+        this.BackingStore.set("userStatusSummary", value);
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

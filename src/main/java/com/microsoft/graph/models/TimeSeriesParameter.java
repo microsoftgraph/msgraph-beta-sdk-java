@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,37 +15,22 @@ import java.util.Objects;
  * Parameter passed to GetHealthMetricTimeSeries when requesting snapshot time series.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
+public class TimeSeriesParameter implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * End time of the series being requested. Optional; if not specified, current time is used.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The name of the metric for which a time series is requested.
-     */
-    private String metricName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Start time of the series being requested.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Instantiates a new timeSeriesParameter and sets the default values.
+     * Instantiates a new TimeSeriesParameter and sets the default values.
      */
     public TimeSeriesParameter() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeSeriesParameter
+     * @return a TimeSeriesParameter
      */
     @jakarta.annotation.Nonnull
     public static TimeSeriesParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +38,25 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
         return new TimeSeriesParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the endDateTime property value. End time of the series being requested. Optional; if not specified, current time is used.
@@ -63,7 +64,7 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -80,19 +81,19 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the metricName property value. The name of the metric for which a time series is requested.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetricName() {
-        return this.metricName;
+        return this.BackingStore.get("metricName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the startDateTime property value. Start time of the series being requested.
@@ -100,7 +101,7 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -115,38 +116,46 @@ public class TimeSeriesParameter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the endDateTime property value. End time of the series being requested. Optional; if not specified, current time is used.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the metricName property value. The name of the metric for which a time series is requested.
      * @param value Value to set for the metricName property.
      */
     public void setMetricName(@jakarta.annotation.Nullable final String value) {
-        this.metricName = value;
+        this.BackingStore.set("metricName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. Start time of the series being requested.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
 }

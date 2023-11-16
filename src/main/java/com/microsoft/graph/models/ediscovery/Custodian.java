@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Custodian extends DataSourceContainer implements Parsable {
     /**
-     * Date and time the custodian acknowledged a hold notification.
-     */
-    private OffsetDateTime acknowledgedDateTime;
-    /**
-     * Identifies whether a custodian's sources were placed on hold during creation.
-     */
-    private Boolean applyHoldToSources;
-    /**
-     * Email address of the custodian.
-     */
-    private String email;
-    /**
-     * Data source entity for SharePoint sites associated with the custodian.
-     */
-    private java.util.List<SiteSource> siteSources;
-    /**
-     * Data source entity for groups associated with the custodian.
-     */
-    private java.util.List<UnifiedGroupSource> unifiedGroupSources;
-    /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     */
-    private java.util.List<UserSource> userSources;
-    /**
-     * Instantiates a new custodian and sets the default values.
+     * Instantiates a new Custodian and sets the default values.
      */
     public Custodian() {
         super();
@@ -43,7 +19,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a custodian
+     * @return a Custodian
      */
     @jakarta.annotation.Nonnull
     public static Custodian createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,23 +32,23 @@ public class Custodian extends DataSourceContainer implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcknowledgedDateTime() {
-        return this.acknowledgedDateTime;
+        return this.BackingStore.get("acknowledgedDateTime");
     }
     /**
      * Gets the applyHoldToSources property value. Identifies whether a custodian's sources were placed on hold during creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyHoldToSources() {
-        return this.applyHoldToSources;
+        return this.BackingStore.get("applyHoldToSources");
     }
     /**
      * Gets the email property value. Email address of the custodian.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -91,27 +67,27 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
-     * @return a siteSource
+     * @return a java.util.List<SiteSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
-        return this.siteSources;
+        return this.BackingStore.get("siteSources");
     }
     /**
      * Gets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
-     * @return a unifiedGroupSource
+     * @return a java.util.List<UnifiedGroupSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
-        return this.unifiedGroupSources;
+        return this.BackingStore.get("unifiedGroupSources");
     }
     /**
      * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     * @return a userSource
+     * @return a java.util.List<UserSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
-        return this.userSources;
+        return this.BackingStore.get("userSources");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the acknowledgedDateTime property.
      */
     public void setAcknowledgedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.acknowledgedDateTime = value;
+        this.BackingStore.set("acknowledgedDateTime", value);
     }
     /**
      * Sets the applyHoldToSources property value. Identifies whether a custodian's sources were placed on hold during creation.
      * @param value Value to set for the applyHoldToSources property.
      */
     public void setApplyHoldToSources(@jakarta.annotation.Nullable final Boolean value) {
-        this.applyHoldToSources = value;
+        this.BackingStore.set("applyHoldToSources", value);
     }
     /**
      * Sets the email property value. Email address of the custodian.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      * @param value Value to set for the siteSources property.
      */
     public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
-        this.siteSources = value;
+        this.BackingStore.set("siteSources", value);
     }
     /**
      * Sets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      * @param value Value to set for the unifiedGroupSources property.
      */
     public void setUnifiedGroupSources(@jakarta.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
-        this.unifiedGroupSources = value;
+        this.BackingStore.set("unifiedGroupSources", value);
     }
     /**
      * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
      */
     public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
-        this.userSources = value;
+        this.BackingStore.set("userSources", value);
     }
 }

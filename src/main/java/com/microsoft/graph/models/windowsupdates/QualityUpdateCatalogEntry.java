@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * The catalog name of the content. Read-only.
-     */
-    private String catalogName;
-    /**
-     * Severity information of the Common Vulnerabilities and Exposures associated with the content.
-     */
-    private QualityUpdateCveSeverityInformation cveSeverityInformation;
-    /**
-     * Indicates whether the content can be deployed as an expedited quality update. Read-only.
-     */
-    private Boolean isExpeditable;
-    /**
-     * The operating system product revisions that are released as part of this quality update.
-     */
-    private java.util.List<ProductRevision> productRevisions;
-    /**
-     * The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
-     */
-    private QualityUpdateCadence qualityUpdateCadence;
-    /**
-     * The qualityUpdateClassification property
-     */
-    private QualityUpdateClassification qualityUpdateClassification;
-    /**
-     * The short name of the content. Read-only.
-     */
-    private String shortName;
-    /**
-     * Instantiates a new qualityUpdateCatalogEntry and sets the default values.
+     * Instantiates a new QualityUpdateCatalogEntry and sets the default values.
      */
     public QualityUpdateCatalogEntry() {
         super();
@@ -46,7 +18,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a qualityUpdateCatalogEntry
+     * @return a QualityUpdateCatalogEntry
      */
     @jakarta.annotation.Nonnull
     public static QualityUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,19 +27,19 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the catalogName property value. The catalog name of the content. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogName() {
-        return this.catalogName;
+        return this.BackingStore.get("catalogName");
     }
     /**
      * Gets the cveSeverityInformation property value. Severity information of the Common Vulnerabilities and Exposures associated with the content.
-     * @return a qualityUpdateCveSeverityInformation
+     * @return a QualityUpdateCveSeverityInformation
      */
     @jakarta.annotation.Nullable
     public QualityUpdateCveSeverityInformation getCveSeverityInformation() {
-        return this.cveSeverityInformation;
+        return this.BackingStore.get("cveSeverityInformation");
     }
     /**
      * The deserialization information for the current model
@@ -87,43 +59,43 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the isExpeditable property value. Indicates whether the content can be deployed as an expedited quality update. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpeditable() {
-        return this.isExpeditable;
+        return this.BackingStore.get("isExpeditable");
     }
     /**
      * Gets the productRevisions property value. The operating system product revisions that are released as part of this quality update.
-     * @return a productRevision
+     * @return a java.util.List<ProductRevision>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProductRevision> getProductRevisions() {
-        return this.productRevisions;
+        return this.BackingStore.get("productRevisions");
     }
     /**
      * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
-     * @return a qualityUpdateCadence
+     * @return a QualityUpdateCadence
      */
     @jakarta.annotation.Nullable
     public QualityUpdateCadence getQualityUpdateCadence() {
-        return this.qualityUpdateCadence;
+        return this.BackingStore.get("qualityUpdateCadence");
     }
     /**
      * Gets the qualityUpdateClassification property value. The qualityUpdateClassification property
-     * @return a qualityUpdateClassification
+     * @return a QualityUpdateClassification
      */
     @jakarta.annotation.Nullable
     public QualityUpdateClassification getQualityUpdateClassification() {
-        return this.qualityUpdateClassification;
+        return this.BackingStore.get("qualityUpdateClassification");
     }
     /**
      * Gets the shortName property value. The short name of the content. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortName() {
-        return this.shortName;
+        return this.BackingStore.get("shortName");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param value Value to set for the catalogName property.
      */
     public void setCatalogName(@jakarta.annotation.Nullable final String value) {
-        this.catalogName = value;
+        this.BackingStore.set("catalogName", value);
     }
     /**
      * Sets the cveSeverityInformation property value. Severity information of the Common Vulnerabilities and Exposures associated with the content.
      * @param value Value to set for the cveSeverityInformation property.
      */
     public void setCveSeverityInformation(@jakarta.annotation.Nullable final QualityUpdateCveSeverityInformation value) {
-        this.cveSeverityInformation = value;
+        this.BackingStore.set("cveSeverityInformation", value);
     }
     /**
      * Sets the isExpeditable property value. Indicates whether the content can be deployed as an expedited quality update. Read-only.
      * @param value Value to set for the isExpeditable property.
      */
     public void setIsExpeditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExpeditable = value;
+        this.BackingStore.set("isExpeditable", value);
     }
     /**
      * Sets the productRevisions property value. The operating system product revisions that are released as part of this quality update.
      * @param value Value to set for the productRevisions property.
      */
     public void setProductRevisions(@jakarta.annotation.Nullable final java.util.List<ProductRevision> value) {
-        this.productRevisions = value;
+        this.BackingStore.set("productRevisions", value);
     }
     /**
      * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @param value Value to set for the qualityUpdateCadence property.
      */
     public void setQualityUpdateCadence(@jakarta.annotation.Nullable final QualityUpdateCadence value) {
-        this.qualityUpdateCadence = value;
+        this.BackingStore.set("qualityUpdateCadence", value);
     }
     /**
      * Sets the qualityUpdateClassification property value. The qualityUpdateClassification property
      * @param value Value to set for the qualityUpdateClassification property.
      */
     public void setQualityUpdateClassification(@jakarta.annotation.Nullable final QualityUpdateClassification value) {
-        this.qualityUpdateClassification = value;
+        this.BackingStore.set("qualityUpdateClassification", value);
     }
     /**
      * Sets the shortName property value. The short name of the content. Read-only.
      * @param value Value to set for the shortName property.
      */
     public void setShortName(@jakarta.annotation.Nullable final String value) {
-        this.shortName = value;
+        this.BackingStore.set("shortName", value);
     }
 }

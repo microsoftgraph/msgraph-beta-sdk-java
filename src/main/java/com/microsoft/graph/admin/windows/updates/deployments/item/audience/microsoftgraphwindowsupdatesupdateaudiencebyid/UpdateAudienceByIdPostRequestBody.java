@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The addExclusions property
+     * Stores model information.
      */
-    private java.util.List<String> addExclusions;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The addMembers property
-     */
-    private java.util.List<String> addMembers;
-    /**
-     * The memberEntityType property
-     */
-    private String memberEntityType;
-    /**
-     * The removeExclusions property
-     */
-    private java.util.List<String> removeExclusions;
-    /**
-     * The removeMembers property
-     */
-    private java.util.List<String> removeMembers;
-    /**
-     * Instantiates a new updateAudienceByIdPostRequestBody and sets the default values.
+     * Instantiates a new UpdateAudienceByIdPostRequestBody and sets the default values.
      */
     public UpdateAudienceByIdPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateAudienceByIdPostRequestBody
+     * @return a UpdateAudienceByIdPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateAudienceByIdPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +35,40 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the addExclusions property value. The addExclusions property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAddExclusions() {
-        return this.addExclusions;
+        return this.BackingStore.get("addExclusions");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the addMembers property value. The addMembers property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAddMembers() {
-        return this.addMembers;
+        return this.BackingStore.get("addMembers");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +86,27 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the memberEntityType property value. The memberEntityType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberEntityType() {
-        return this.memberEntityType;
+        return this.BackingStore.get("memberEntityType");
     }
     /**
      * Gets the removeExclusions property value. The removeExclusions property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemoveExclusions() {
-        return this.removeExclusions;
+        return this.BackingStore.get("removeExclusions");
     }
     /**
      * Gets the removeMembers property value. The removeMembers property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemoveMembers() {
-        return this.removeMembers;
+        return this.BackingStore.get("removeMembers");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the addExclusions property.
      */
     public void setAddExclusions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.addExclusions = value;
+        this.BackingStore.set("addExclusions", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the addMembers property value. The addMembers property
      * @param value Value to set for the addMembers property.
      */
     public void setAddMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.addMembers = value;
+        this.BackingStore.set("addMembers", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the memberEntityType property value. The memberEntityType property
      * @param value Value to set for the memberEntityType property.
      */
     public void setMemberEntityType(@jakarta.annotation.Nullable final String value) {
-        this.memberEntityType = value;
+        this.BackingStore.set("memberEntityType", value);
     }
     /**
      * Sets the removeExclusions property value. The removeExclusions property
      * @param value Value to set for the removeExclusions property.
      */
     public void setRemoveExclusions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.removeExclusions = value;
+        this.BackingStore.set("removeExclusions", value);
     }
     /**
      * Sets the removeMembers property value. The removeMembers property
      * @param value Value to set for the removeMembers property.
      */
     public void setRemoveMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.removeMembers = value;
+        this.BackingStore.set("removeMembers", value);
     }
 }

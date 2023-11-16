@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FolderView implements AdditionalDataHolder, Parsable {
+public class FolderView implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The method by which the folder should be sorted.
-     */
-    private String sortBy;
-    /**
-     * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
-     */
-    private String sortOrder;
-    /**
-     * The type of view that should be used to represent the folder.
-     */
-    private String viewType;
-    /**
-     * Instantiates a new folderView and sets the default values.
+     * Instantiates a new FolderView and sets the default values.
      */
     public FolderView() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a folderView
+     * @return a FolderView
      */
     @jakarta.annotation.Nonnull
     public static FolderView createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class FolderView implements AdditionalDataHolder, Parsable {
         return new FolderView();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sortBy property value. The method by which the folder should be sorted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortBy() {
-        return this.sortBy;
+        return this.BackingStore.get("sortBy");
     }
     /**
      * Gets the sortOrder property value. If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOrder() {
-        return this.sortOrder;
+        return this.BackingStore.get("sortOrder");
     }
     /**
      * Gets the viewType property value. The type of view that should be used to represent the folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getViewType() {
-        return this.viewType;
+        return this.BackingStore.get("viewType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class FolderView implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sortBy property value. The method by which the folder should be sorted.
      * @param value Value to set for the sortBy property.
      */
     public void setSortBy(@jakarta.annotation.Nullable final String value) {
-        this.sortBy = value;
+        this.BackingStore.set("sortBy", value);
     }
     /**
      * Sets the sortOrder property value. If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
      * @param value Value to set for the sortOrder property.
      */
     public void setSortOrder(@jakarta.annotation.Nullable final String value) {
-        this.sortOrder = value;
+        this.BackingStore.set("sortOrder", value);
     }
     /**
      * Sets the viewType property value. The type of view that should be used to represent the folder.
      * @param value Value to set for the viewType property.
      */
     public void setViewType(@jakarta.annotation.Nullable final String value) {
-        this.viewType = value;
+        this.BackingStore.set("viewType", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerSharedWithContainer extends PlannerPlanContainer implements Parsable {
     /**
-     * The accessLevel property
-     */
-    private PlannerPlanAccessLevel accessLevel;
-    /**
-     * Instantiates a new plannerSharedWithContainer and sets the default values.
+     * Instantiates a new PlannerSharedWithContainer and sets the default values.
      */
     public PlannerSharedWithContainer() {
         super();
@@ -22,7 +18,7 @@ public class PlannerSharedWithContainer extends PlannerPlanContainer implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerSharedWithContainer
+     * @return a PlannerSharedWithContainer
      */
     @jakarta.annotation.Nonnull
     public static PlannerSharedWithContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class PlannerSharedWithContainer extends PlannerPlanContainer implements 
     }
     /**
      * Gets the accessLevel property value. The accessLevel property
-     * @return a plannerPlanAccessLevel
+     * @return a PlannerPlanAccessLevel
      */
     @jakarta.annotation.Nullable
     public PlannerPlanAccessLevel getAccessLevel() {
-        return this.accessLevel;
+        return this.BackingStore.get("accessLevel");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class PlannerSharedWithContainer extends PlannerPlanContainer implements 
      * @param value Value to set for the accessLevel property.
      */
     public void setAccessLevel(@jakarta.annotation.Nullable final PlannerPlanAccessLevel value) {
-        this.accessLevel = value;
+        this.BackingStore.set("accessLevel", value);
     }
 }

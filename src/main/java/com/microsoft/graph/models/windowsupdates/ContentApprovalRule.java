@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentApprovalRule extends ComplianceChangeRule implements Parsable {
     /**
-     * A filter to determine which content matches the rule on an ongoing basis.
-     */
-    private ContentFilter contentFilter;
-    /**
-     * The time before the deployment starts represented in ISO 8601 format for durations.
-     */
-    private PeriodAndDuration durationBeforeDeploymentStart;
-    /**
-     * Instantiates a new contentApprovalRule and sets the default values.
+     * Instantiates a new ContentApprovalRule and sets the default values.
      */
     public ContentApprovalRule() {
         super();
@@ -27,7 +19,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentApprovalRule
+     * @return a ContentApprovalRule
      */
     @jakarta.annotation.Nonnull
     public static ContentApprovalRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,11 +28,11 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     }
     /**
      * Gets the contentFilter property value. A filter to determine which content matches the rule on an ongoing basis.
-     * @return a contentFilter
+     * @return a ContentFilter
      */
     @jakarta.annotation.Nullable
     public ContentFilter getContentFilter() {
-        return this.contentFilter;
+        return this.BackingStore.get("contentFilter");
     }
     /**
      * Gets the durationBeforeDeploymentStart property value. The time before the deployment starts represented in ISO 8601 format for durations.
@@ -48,7 +40,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeDeploymentStart() {
-        return this.durationBeforeDeploymentStart;
+        return this.BackingStore.get("durationBeforeDeploymentStart");
     }
     /**
      * The deserialization information for the current model
@@ -76,13 +68,13 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
      * @param value Value to set for the contentFilter property.
      */
     public void setContentFilter(@jakarta.annotation.Nullable final ContentFilter value) {
-        this.contentFilter = value;
+        this.BackingStore.set("contentFilter", value);
     }
     /**
      * Sets the durationBeforeDeploymentStart property value. The time before the deployment starts represented in ISO 8601 format for durations.
      * @param value Value to set for the durationBeforeDeploymentStart property.
      */
     public void setDurationBeforeDeploymentStart(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationBeforeDeploymentStart = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("durationBeforeDeploymentStart", value);
     }
 }

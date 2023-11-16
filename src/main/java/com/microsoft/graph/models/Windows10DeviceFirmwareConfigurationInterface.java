@@ -12,91 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration implements Parsable {
     /**
-     * Possible values of a property
-     */
-    private Enablement bluetooth;
-    /**
-     * Possible values of a property
-     */
-    private Enablement bootFromBuiltInNetworkAdapters;
-    /**
-     * Possible values of a property
-     */
-    private Enablement bootFromExternalMedia;
-    /**
-     * Possible values of a property
-     */
-    private Enablement cameras;
-    /**
-     * Defines the permission level granted to users to enable them change Uefi settings
-     */
-    private ChangeUefiSettingsPermission changeUefiSettingsPermission;
-    /**
-     * Possible values of a property
-     */
-    private Enablement frontCamera;
-    /**
-     * Possible values of a property
-     */
-    private Enablement infraredCamera;
-    /**
-     * Possible values of a property
-     */
-    private Enablement microphone;
-    /**
-     * Possible values of a property
-     */
-    private Enablement microphonesAndSpeakers;
-    /**
-     * Possible values of a property
-     */
-    private Enablement nearFieldCommunication;
-    /**
-     * Possible values of a property
-     */
-    private Enablement radios;
-    /**
-     * Possible values of a property
-     */
-    private Enablement rearCamera;
-    /**
-     * Possible values of a property
-     */
-    private Enablement sdCard;
-    /**
-     * Possible values of a property
-     */
-    private Enablement simultaneousMultiThreading;
-    /**
-     * Possible values of a property
-     */
-    private Enablement usbTypeAPort;
-    /**
-     * Possible values of a property
-     */
-    private Enablement virtualizationOfCpuAndIO;
-    /**
-     * Possible values of a property
-     */
-    private Enablement wakeOnLAN;
-    /**
-     * Possible values of a property
-     */
-    private Enablement wakeOnPower;
-    /**
-     * Possible values of a property
-     */
-    private Enablement wiFi;
-    /**
-     * Possible values of a property
-     */
-    private Enablement windowsPlatformBinaryTable;
-    /**
-     * Possible values of a property
-     */
-    private Enablement wirelessWideAreaNetwork;
-    /**
-     * Instantiates a new windows10DeviceFirmwareConfigurationInterface and sets the default values.
+     * Instantiates a new Windows10DeviceFirmwareConfigurationInterface and sets the default values.
      */
     public Windows10DeviceFirmwareConfigurationInterface() {
         super();
@@ -105,7 +21,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10DeviceFirmwareConfigurationInterface
+     * @return a Windows10DeviceFirmwareConfigurationInterface
      */
     @jakarta.annotation.Nonnull
     public static Windows10DeviceFirmwareConfigurationInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,43 +30,43 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the bluetooth property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getBluetooth() {
-        return this.bluetooth;
+        return this.BackingStore.get("bluetooth");
     }
     /**
      * Gets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getBootFromBuiltInNetworkAdapters() {
-        return this.bootFromBuiltInNetworkAdapters;
+        return this.BackingStore.get("bootFromBuiltInNetworkAdapters");
     }
     /**
      * Gets the bootFromExternalMedia property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getBootFromExternalMedia() {
-        return this.bootFromExternalMedia;
+        return this.BackingStore.get("bootFromExternalMedia");
     }
     /**
      * Gets the cameras property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getCameras() {
-        return this.cameras;
+        return this.BackingStore.get("cameras");
     }
     /**
      * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
-     * @return a changeUefiSettingsPermission
+     * @return a ChangeUefiSettingsPermission
      */
     @jakarta.annotation.Nullable
     public ChangeUefiSettingsPermission getChangeUefiSettingsPermission() {
-        return this.changeUefiSettingsPermission;
+        return this.BackingStore.get("changeUefiSettingsPermission");
     }
     /**
      * The deserialization information for the current model
@@ -184,131 +100,131 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the frontCamera property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getFrontCamera() {
-        return this.frontCamera;
+        return this.BackingStore.get("frontCamera");
     }
     /**
      * Gets the infraredCamera property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getInfraredCamera() {
-        return this.infraredCamera;
+        return this.BackingStore.get("infraredCamera");
     }
     /**
      * Gets the microphone property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getMicrophone() {
-        return this.microphone;
+        return this.BackingStore.get("microphone");
     }
     /**
      * Gets the microphonesAndSpeakers property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getMicrophonesAndSpeakers() {
-        return this.microphonesAndSpeakers;
+        return this.BackingStore.get("microphonesAndSpeakers");
     }
     /**
      * Gets the nearFieldCommunication property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getNearFieldCommunication() {
-        return this.nearFieldCommunication;
+        return this.BackingStore.get("nearFieldCommunication");
     }
     /**
      * Gets the radios property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getRadios() {
-        return this.radios;
+        return this.BackingStore.get("radios");
     }
     /**
      * Gets the rearCamera property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getRearCamera() {
-        return this.rearCamera;
+        return this.BackingStore.get("rearCamera");
     }
     /**
      * Gets the sdCard property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getSdCard() {
-        return this.sdCard;
+        return this.BackingStore.get("sdCard");
     }
     /**
      * Gets the simultaneousMultiThreading property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getSimultaneousMultiThreading() {
-        return this.simultaneousMultiThreading;
+        return this.BackingStore.get("simultaneousMultiThreading");
     }
     /**
      * Gets the usbTypeAPort property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getUsbTypeAPort() {
-        return this.usbTypeAPort;
+        return this.BackingStore.get("usbTypeAPort");
     }
     /**
      * Gets the virtualizationOfCpuAndIO property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getVirtualizationOfCpuAndIO() {
-        return this.virtualizationOfCpuAndIO;
+        return this.BackingStore.get("virtualizationOfCpuAndIO");
     }
     /**
      * Gets the wakeOnLAN property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getWakeOnLAN() {
-        return this.wakeOnLAN;
+        return this.BackingStore.get("wakeOnLAN");
     }
     /**
      * Gets the wakeOnPower property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getWakeOnPower() {
-        return this.wakeOnPower;
+        return this.BackingStore.get("wakeOnPower");
     }
     /**
      * Gets the wiFi property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getWiFi() {
-        return this.wiFi;
+        return this.BackingStore.get("wiFi");
     }
     /**
      * Gets the windowsPlatformBinaryTable property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getWindowsPlatformBinaryTable() {
-        return this.windowsPlatformBinaryTable;
+        return this.BackingStore.get("windowsPlatformBinaryTable");
     }
     /**
      * Gets the wirelessWideAreaNetwork property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getWirelessWideAreaNetwork() {
-        return this.wirelessWideAreaNetwork;
+        return this.BackingStore.get("wirelessWideAreaNetwork");
     }
     /**
      * Serializes information the current object
@@ -344,146 +260,146 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the bluetooth property.
      */
     public void setBluetooth(@jakarta.annotation.Nullable final Enablement value) {
-        this.bluetooth = value;
+        this.BackingStore.set("bluetooth", value);
     }
     /**
      * Sets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
      * @param value Value to set for the bootFromBuiltInNetworkAdapters property.
      */
     public void setBootFromBuiltInNetworkAdapters(@jakarta.annotation.Nullable final Enablement value) {
-        this.bootFromBuiltInNetworkAdapters = value;
+        this.BackingStore.set("bootFromBuiltInNetworkAdapters", value);
     }
     /**
      * Sets the bootFromExternalMedia property value. Possible values of a property
      * @param value Value to set for the bootFromExternalMedia property.
      */
     public void setBootFromExternalMedia(@jakarta.annotation.Nullable final Enablement value) {
-        this.bootFromExternalMedia = value;
+        this.BackingStore.set("bootFromExternalMedia", value);
     }
     /**
      * Sets the cameras property value. Possible values of a property
      * @param value Value to set for the cameras property.
      */
     public void setCameras(@jakarta.annotation.Nullable final Enablement value) {
-        this.cameras = value;
+        this.BackingStore.set("cameras", value);
     }
     /**
      * Sets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
      * @param value Value to set for the changeUefiSettingsPermission property.
      */
     public void setChangeUefiSettingsPermission(@jakarta.annotation.Nullable final ChangeUefiSettingsPermission value) {
-        this.changeUefiSettingsPermission = value;
+        this.BackingStore.set("changeUefiSettingsPermission", value);
     }
     /**
      * Sets the frontCamera property value. Possible values of a property
      * @param value Value to set for the frontCamera property.
      */
     public void setFrontCamera(@jakarta.annotation.Nullable final Enablement value) {
-        this.frontCamera = value;
+        this.BackingStore.set("frontCamera", value);
     }
     /**
      * Sets the infraredCamera property value. Possible values of a property
      * @param value Value to set for the infraredCamera property.
      */
     public void setInfraredCamera(@jakarta.annotation.Nullable final Enablement value) {
-        this.infraredCamera = value;
+        this.BackingStore.set("infraredCamera", value);
     }
     /**
      * Sets the microphone property value. Possible values of a property
      * @param value Value to set for the microphone property.
      */
     public void setMicrophone(@jakarta.annotation.Nullable final Enablement value) {
-        this.microphone = value;
+        this.BackingStore.set("microphone", value);
     }
     /**
      * Sets the microphonesAndSpeakers property value. Possible values of a property
      * @param value Value to set for the microphonesAndSpeakers property.
      */
     public void setMicrophonesAndSpeakers(@jakarta.annotation.Nullable final Enablement value) {
-        this.microphonesAndSpeakers = value;
+        this.BackingStore.set("microphonesAndSpeakers", value);
     }
     /**
      * Sets the nearFieldCommunication property value. Possible values of a property
      * @param value Value to set for the nearFieldCommunication property.
      */
     public void setNearFieldCommunication(@jakarta.annotation.Nullable final Enablement value) {
-        this.nearFieldCommunication = value;
+        this.BackingStore.set("nearFieldCommunication", value);
     }
     /**
      * Sets the radios property value. Possible values of a property
      * @param value Value to set for the radios property.
      */
     public void setRadios(@jakarta.annotation.Nullable final Enablement value) {
-        this.radios = value;
+        this.BackingStore.set("radios", value);
     }
     /**
      * Sets the rearCamera property value. Possible values of a property
      * @param value Value to set for the rearCamera property.
      */
     public void setRearCamera(@jakarta.annotation.Nullable final Enablement value) {
-        this.rearCamera = value;
+        this.BackingStore.set("rearCamera", value);
     }
     /**
      * Sets the sdCard property value. Possible values of a property
      * @param value Value to set for the sdCard property.
      */
     public void setSdCard(@jakarta.annotation.Nullable final Enablement value) {
-        this.sdCard = value;
+        this.BackingStore.set("sdCard", value);
     }
     /**
      * Sets the simultaneousMultiThreading property value. Possible values of a property
      * @param value Value to set for the simultaneousMultiThreading property.
      */
     public void setSimultaneousMultiThreading(@jakarta.annotation.Nullable final Enablement value) {
-        this.simultaneousMultiThreading = value;
+        this.BackingStore.set("simultaneousMultiThreading", value);
     }
     /**
      * Sets the usbTypeAPort property value. Possible values of a property
      * @param value Value to set for the usbTypeAPort property.
      */
     public void setUsbTypeAPort(@jakarta.annotation.Nullable final Enablement value) {
-        this.usbTypeAPort = value;
+        this.BackingStore.set("usbTypeAPort", value);
     }
     /**
      * Sets the virtualizationOfCpuAndIO property value. Possible values of a property
      * @param value Value to set for the virtualizationOfCpuAndIO property.
      */
     public void setVirtualizationOfCpuAndIO(@jakarta.annotation.Nullable final Enablement value) {
-        this.virtualizationOfCpuAndIO = value;
+        this.BackingStore.set("virtualizationOfCpuAndIO", value);
     }
     /**
      * Sets the wakeOnLAN property value. Possible values of a property
      * @param value Value to set for the wakeOnLAN property.
      */
     public void setWakeOnLAN(@jakarta.annotation.Nullable final Enablement value) {
-        this.wakeOnLAN = value;
+        this.BackingStore.set("wakeOnLAN", value);
     }
     /**
      * Sets the wakeOnPower property value. Possible values of a property
      * @param value Value to set for the wakeOnPower property.
      */
     public void setWakeOnPower(@jakarta.annotation.Nullable final Enablement value) {
-        this.wakeOnPower = value;
+        this.BackingStore.set("wakeOnPower", value);
     }
     /**
      * Sets the wiFi property value. Possible values of a property
      * @param value Value to set for the wiFi property.
      */
     public void setWiFi(@jakarta.annotation.Nullable final Enablement value) {
-        this.wiFi = value;
+        this.BackingStore.set("wiFi", value);
     }
     /**
      * Sets the windowsPlatformBinaryTable property value. Possible values of a property
      * @param value Value to set for the windowsPlatformBinaryTable property.
      */
     public void setWindowsPlatformBinaryTable(@jakarta.annotation.Nullable final Enablement value) {
-        this.windowsPlatformBinaryTable = value;
+        this.BackingStore.set("windowsPlatformBinaryTable", value);
     }
     /**
      * Sets the wirelessWideAreaNetwork property value. Possible values of a property
      * @param value Value to set for the wirelessWideAreaNetwork property.
      */
     public void setWirelessWideAreaNetwork(@jakarta.annotation.Nullable final Enablement value) {
-        this.wirelessWideAreaNetwork = value;
+        this.BackingStore.set("wirelessWideAreaNetwork", value);
     }
 }

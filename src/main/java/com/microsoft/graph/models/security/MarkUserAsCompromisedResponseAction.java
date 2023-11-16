@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MarkUserAsCompromisedResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<MarkUserAsCompromisedEntityIdentifier> identifier;
-    /**
-     * Instantiates a new markUserAsCompromisedResponseAction and sets the default values.
+     * Instantiates a new MarkUserAsCompromisedResponseAction and sets the default values.
      */
     public MarkUserAsCompromisedResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a markUserAsCompromisedResponseAction
+     * @return a MarkUserAsCompromisedResponseAction
      */
     @jakarta.annotation.Nonnull
     public static MarkUserAsCompromisedResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a markUserAsCompromisedEntityIdentifier
+     * @return a EnumSet<MarkUserAsCompromisedEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<MarkUserAsCompromisedEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<MarkUserAsCompromisedEntityIdentifier> value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
 }

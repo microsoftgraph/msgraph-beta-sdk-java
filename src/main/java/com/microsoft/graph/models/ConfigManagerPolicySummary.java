@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,49 +14,22 @@ import java.util.Objects;
  * A ConfigManager policy summary.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsable {
+public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The number of devices evaluated to be compliant by the policy.
-     */
-    private Integer compliantDeviceCount;
-    /**
-     * The number of devices that have have been remediated by the policy.
-     */
-    private Integer enforcedDeviceCount;
-    /**
-     * The number of devices that failed to be evaluated by the policy.
-     */
-    private Integer failedDeviceCount;
-    /**
-     * The number of devices evaluated to be noncompliant by the policy.
-     */
-    private Integer nonCompliantDeviceCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of devices that have acknowledged the policy but are pending evaluation.
-     */
-    private Integer pendingDeviceCount;
-    /**
-     * The number of devices targeted by the policy.
-     */
-    private Integer targetedDeviceCount;
-    /**
-     * Instantiates a new configManagerPolicySummary and sets the default values.
+     * Instantiates a new ConfigManagerPolicySummary and sets the default values.
      */
     public ConfigManagerPolicySummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configManagerPolicySummary
+     * @return a ConfigManagerPolicySummary
      */
     @jakarta.annotation.Nonnull
     public static ConfigManagerPolicySummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,36 +37,49 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
         return new ConfigManagerPolicySummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this.compliantDeviceCount;
+        return this.BackingStore.get("compliantDeviceCount");
     }
     /**
      * Gets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnforcedDeviceCount() {
-        return this.enforcedDeviceCount;
+        return this.BackingStore.get("enforcedDeviceCount");
     }
     /**
      * Gets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this.failedDeviceCount;
+        return this.BackingStore.get("failedDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -110,35 +99,35 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this.nonCompliantDeviceCount;
+        return this.BackingStore.get("nonCompliantDeviceCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingDeviceCount() {
-        return this.pendingDeviceCount;
+        return this.BackingStore.get("pendingDeviceCount");
     }
     /**
      * Gets the targetedDeviceCount property value. The number of devices targeted by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedDeviceCount() {
-        return this.targetedDeviceCount;
+        return this.BackingStore.get("targetedDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -156,59 +145,67 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
      * @param value Value to set for the compliantDeviceCount property.
      */
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantDeviceCount = value;
+        this.BackingStore.set("compliantDeviceCount", value);
     }
     /**
      * Sets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
      * @param value Value to set for the enforcedDeviceCount property.
      */
     public void setEnforcedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.enforcedDeviceCount = value;
+        this.BackingStore.set("enforcedDeviceCount", value);
     }
     /**
      * Sets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
      * @param value Value to set for the failedDeviceCount property.
      */
     public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedDeviceCount = value;
+        this.BackingStore.set("failedDeviceCount", value);
     }
     /**
      * Sets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
      * @param value Value to set for the nonCompliantDeviceCount property.
      */
     public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.nonCompliantDeviceCount = value;
+        this.BackingStore.set("nonCompliantDeviceCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
      * @param value Value to set for the pendingDeviceCount property.
      */
     public void setPendingDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingDeviceCount = value;
+        this.BackingStore.set("pendingDeviceCount", value);
     }
     /**
      * Sets the targetedDeviceCount property value. The number of devices targeted by the policy.
      * @param value Value to set for the targetedDeviceCount property.
      */
     public void setTargetedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.targetedDeviceCount = value;
+        this.BackingStore.set("targetedDeviceCount", value);
     }
 }

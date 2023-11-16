@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationLinkedAssignmentResource extends EducationResource implements Parsable {
     /**
-     * URL of the actual assignment.
-     */
-    private String url;
-    /**
-     * Instantiates a new educationLinkedAssignmentResource and sets the default values.
+     * Instantiates a new EducationLinkedAssignmentResource and sets the default values.
      */
     public EducationLinkedAssignmentResource() {
         super();
@@ -22,7 +18,7 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationLinkedAssignmentResource
+     * @return a EducationLinkedAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public static EducationLinkedAssignmentResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
     }
     /**
      * Gets the url property value. URL of the actual assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

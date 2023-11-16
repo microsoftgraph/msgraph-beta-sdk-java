@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsManagementAppHealthState extends Entity implements Parsable {
     /**
-     * Name of the device on which Windows management app is installed.
-     */
-    private String deviceName;
-    /**
-     * Windows 10 OS version of the device on which Windows management app is installed.
-     */
-    private String deviceOSVersion;
-    /**
-     * Indicates health state of the Windows management app.
-     */
-    private HealthState healthState;
-    /**
-     * Windows management app installed version.
-     */
-    private String installedVersion;
-    /**
-     * Windows management app last check-in time.
-     */
-    private OffsetDateTime lastCheckInDateTime;
-    /**
-     * Instantiates a new windowsManagementAppHealthState and sets the default values.
+     * Instantiates a new WindowsManagementAppHealthState and sets the default values.
      */
     public WindowsManagementAppHealthState() {
         super();
@@ -41,7 +21,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagementAppHealthState
+     * @return a WindowsManagementAppHealthState
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagementAppHealthState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +30,19 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     }
     /**
      * Gets the deviceName property value. Name of the device on which Windows management app is installed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * Gets the deviceOSVersion property value. Windows 10 OS version of the device on which Windows management app is installed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOSVersion() {
-        return this.deviceOSVersion;
+        return this.BackingStore.get("deviceOSVersion");
     }
     /**
      * The deserialization information for the current model
@@ -80,19 +60,19 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     }
     /**
      * Gets the healthState property value. Indicates health state of the Windows management app.
-     * @return a healthState
+     * @return a HealthState
      */
     @jakarta.annotation.Nullable
     public HealthState getHealthState() {
-        return this.healthState;
+        return this.BackingStore.get("healthState");
     }
     /**
      * Gets the installedVersion property value. Windows management app installed version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstalledVersion() {
-        return this.installedVersion;
+        return this.BackingStore.get("installedVersion");
     }
     /**
      * Gets the lastCheckInDateTime property value. Windows management app last check-in time.
@@ -100,7 +80,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
-        return this.lastCheckInDateTime;
+        return this.BackingStore.get("lastCheckInDateTime");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the deviceOSVersion property value. Windows 10 OS version of the device on which Windows management app is installed.
      * @param value Value to set for the deviceOSVersion property.
      */
     public void setDeviceOSVersion(@jakarta.annotation.Nullable final String value) {
-        this.deviceOSVersion = value;
+        this.BackingStore.set("deviceOSVersion", value);
     }
     /**
      * Sets the healthState property value. Indicates health state of the Windows management app.
      * @param value Value to set for the healthState property.
      */
     public void setHealthState(@jakarta.annotation.Nullable final HealthState value) {
-        this.healthState = value;
+        this.BackingStore.set("healthState", value);
     }
     /**
      * Sets the installedVersion property value. Windows management app installed version.
      * @param value Value to set for the installedVersion property.
      */
     public void setInstalledVersion(@jakarta.annotation.Nullable final String value) {
-        this.installedVersion = value;
+        this.BackingStore.set("installedVersion", value);
     }
     /**
      * Sets the lastCheckInDateTime property value. Windows management app last check-in time.
      * @param value Value to set for the lastCheckInDateTime property.
      */
     public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastCheckInDateTime = value;
+        this.BackingStore.set("lastCheckInDateTime", value);
     }
 }

@@ -13,15 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfigurationAssignment extends Entity implements Parsable {
     /**
-     * The date and time the entity was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The type of groups targeted the group policy configuration.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new groupPolicyConfigurationAssignment and sets the default values.
+     * Instantiates a new GroupPolicyConfigurationAssignment and sets the default values.
      */
     public GroupPolicyConfigurationAssignment() {
         super();
@@ -29,7 +21,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfigurationAssignment
+     * @return a GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,15 +45,15 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the target property value. The type of groups targeted the group policy configuration.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the target property value. The type of groups targeted the group policy configuration.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
 }

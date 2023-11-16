@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSharedCookieCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BrowserSharedCookie> value;
-    /**
-     * Instantiates a new browserSharedCookieCollectionResponse and sets the default values.
+     * Instantiates a new BrowserSharedCookieCollectionResponse and sets the default values.
      */
     public BrowserSharedCookieCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class BrowserSharedCookieCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSharedCookieCollectionResponse
+     * @return a BrowserSharedCookieCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BrowserSharedCookieCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class BrowserSharedCookieCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a browserSharedCookie
+     * @return a java.util.List<BrowserSharedCookie>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookie> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BrowserSharedCookieCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

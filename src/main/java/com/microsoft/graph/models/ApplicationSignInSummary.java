@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationSignInSummary extends Entity implements Parsable {
     /**
-     * Name of the application that the user signed into.
-     */
-    private String appDisplayName;
-    /**
-     * Count of failed sign-ins made by the application.
-     */
-    private Long failedSignInCount;
-    /**
-     * Count of successful sign-ins made by the application.
-     */
-    private Long successfulSignInCount;
-    /**
-     * Percentage of successful sign-ins made by the application.
-     */
-    private Double successPercentage;
-    /**
-     * Instantiates a new applicationSignInSummary and sets the default values.
+     * Instantiates a new ApplicationSignInSummary and sets the default values.
      */
     public ApplicationSignInSummary() {
         super();
@@ -33,7 +17,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationSignInSummary
+     * @return a ApplicationSignInSummary
      */
     @jakarta.annotation.Nonnull
     public static ApplicationSignInSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +26,19 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. Name of the application that the user signed into.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.BackingStore.get("appDisplayName");
     }
     /**
      * Gets the failedSignInCount property value. Count of failed sign-ins made by the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFailedSignInCount() {
-        return this.failedSignInCount;
+        return this.BackingStore.get("failedSignInCount");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +55,19 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
     }
     /**
      * Gets the successfulSignInCount property value. Count of successful sign-ins made by the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSuccessfulSignInCount() {
-        return this.successfulSignInCount;
+        return this.BackingStore.get("successfulSignInCount");
     }
     /**
      * Gets the successPercentage property value. Percentage of successful sign-ins made by the application.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSuccessPercentage() {
-        return this.successPercentage;
+        return this.BackingStore.get("successPercentage");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.BackingStore.set("appDisplayName", value);
     }
     /**
      * Sets the failedSignInCount property value. Count of failed sign-ins made by the application.
      * @param value Value to set for the failedSignInCount property.
      */
     public void setFailedSignInCount(@jakarta.annotation.Nullable final Long value) {
-        this.failedSignInCount = value;
+        this.BackingStore.set("failedSignInCount", value);
     }
     /**
      * Sets the successfulSignInCount property value. Count of successful sign-ins made by the application.
      * @param value Value to set for the successfulSignInCount property.
      */
     public void setSuccessfulSignInCount(@jakarta.annotation.Nullable final Long value) {
-        this.successfulSignInCount = value;
+        this.BackingStore.set("successfulSignInCount", value);
     }
     /**
      * Sets the successPercentage property value. Percentage of successful sign-ins made by the application.
      * @param value Value to set for the successPercentage property.
      */
     public void setSuccessPercentage(@jakarta.annotation.Nullable final Double value) {
-        this.successPercentage = value;
+        this.BackingStore.set("successPercentage", value);
     }
 }

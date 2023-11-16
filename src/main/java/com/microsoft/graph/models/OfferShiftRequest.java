@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime recipientActionDateTime;
-    /**
-     * Custom message sent by recipient of the offer shift request.
-     */
-    private String recipientActionMessage;
-    /**
-     * User id of the recipient of the offer shift request.
-     */
-    private String recipientUserId;
-    /**
-     * User id of the sender of the offer shift request.
-     */
-    private String senderShiftId;
-    /**
-     * Instantiates a new offerShiftRequest and sets the default values.
+     * Instantiates a new OfferShiftRequest and sets the default values.
      */
     public OfferShiftRequest() {
         super();
@@ -35,7 +19,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a offerShiftRequest
+     * @return a OfferShiftRequest
      */
     @jakarta.annotation.Nonnull
     public static OfferShiftRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,31 +52,31 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRecipientActionDateTime() {
-        return this.recipientActionDateTime;
+        return this.BackingStore.get("recipientActionDateTime");
     }
     /**
      * Gets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecipientActionMessage() {
-        return this.recipientActionMessage;
+        return this.BackingStore.get("recipientActionMessage");
     }
     /**
      * Gets the recipientUserId property value. User id of the recipient of the offer shift request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecipientUserId() {
-        return this.recipientUserId;
+        return this.BackingStore.get("recipientUserId");
     }
     /**
      * Gets the senderShiftId property value. User id of the sender of the offer shift request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderShiftId() {
-        return this.senderShiftId;
+        return this.BackingStore.get("senderShiftId");
     }
     /**
      * Serializes information the current object
@@ -110,27 +94,27 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @param value Value to set for the recipientActionDateTime property.
      */
     public void setRecipientActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.recipientActionDateTime = value;
+        this.BackingStore.set("recipientActionDateTime", value);
     }
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
      * @param value Value to set for the recipientActionMessage property.
      */
     public void setRecipientActionMessage(@jakarta.annotation.Nullable final String value) {
-        this.recipientActionMessage = value;
+        this.BackingStore.set("recipientActionMessage", value);
     }
     /**
      * Sets the recipientUserId property value. User id of the recipient of the offer shift request.
      * @param value Value to set for the recipientUserId property.
      */
     public void setRecipientUserId(@jakarta.annotation.Nullable final String value) {
-        this.recipientUserId = value;
+        this.BackingStore.set("recipientUserId", value);
     }
     /**
      * Sets the senderShiftId property value. User id of the sender of the offer shift request.
      * @param value Value to set for the senderShiftId property.
      */
     public void setSenderShiftId(@jakarta.annotation.Nullable final String value) {
-        this.senderShiftId = value;
+        this.BackingStore.set("senderShiftId", value);
     }
 }

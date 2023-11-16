@@ -35,34 +35,32 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/noncustodialDataSources/{noncustodialDataSource%2Did}/microsoft.graph.ediscovery.release", rawUrl);
     }
     /**
-     * Releases the non-custodial data source from the case.
+     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> post() {
-        return post(null);
+    public void post() {
+        post(null);
     }
     /**
-     * Releases the non-custodial data source from the case.
+     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Releases the non-custodial data source from the case.
+     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -73,7 +71,7 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(null);
     }
     /**
-     * Releases the non-custodial data source from the case.
+     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -82,22 +80,15 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphEdiscoveryReleaseRequestBuilder
+     * @return a MicrosoftGraphEdiscoveryReleaseRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

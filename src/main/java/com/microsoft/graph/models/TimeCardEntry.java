@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimeCardEntry implements AdditionalDataHolder, Parsable {
+public class TimeCardEntry implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The list of breaks associated with the timeCard.
-     */
-    private java.util.List<TimeCardBreak> breaks;
-    /**
-     * The clock-in event of the timeCard.
-     */
-    private TimeCardEvent clockInEvent;
-    /**
-     * The clock-out event of the timeCard.
-     */
-    private TimeCardEvent clockOutEvent;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new timeCardEntry and sets the default values.
+     * Instantiates a new TimeCardEntry and sets the default values.
      */
     public TimeCardEntry() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeCardEntry
+     * @return a TimeCardEntry
      */
     @jakarta.annotation.Nonnull
     public static TimeCardEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,36 +34,49 @@ public class TimeCardEntry implements AdditionalDataHolder, Parsable {
         return new TimeCardEntry();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the breaks property value. The list of breaks associated with the timeCard.
-     * @return a timeCardBreak
+     * @return a java.util.List<TimeCardBreak>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeCardBreak> getBreaks() {
-        return this.breaks;
+        return this.BackingStore.get("breaks");
     }
     /**
      * Gets the clockInEvent property value. The clock-in event of the timeCard.
-     * @return a timeCardEvent
+     * @return a TimeCardEvent
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockInEvent() {
-        return this.clockInEvent;
+        return this.BackingStore.get("clockInEvent");
     }
     /**
      * Gets the clockOutEvent property value. The clock-out event of the timeCard.
-     * @return a timeCardEvent
+     * @return a TimeCardEvent
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockOutEvent() {
-        return this.clockOutEvent;
+        return this.BackingStore.get("clockOutEvent");
     }
     /**
      * The deserialization information for the current model
@@ -92,11 +93,11 @@ public class TimeCardEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class TimeCardEntry implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the breaks property value. The list of breaks associated with the timeCard.
      * @param value Value to set for the breaks property.
      */
     public void setBreaks(@jakarta.annotation.Nullable final java.util.List<TimeCardBreak> value) {
-        this.breaks = value;
+        this.BackingStore.set("breaks", value);
     }
     /**
      * Sets the clockInEvent property value. The clock-in event of the timeCard.
      * @param value Value to set for the clockInEvent property.
      */
     public void setClockInEvent(@jakarta.annotation.Nullable final TimeCardEvent value) {
-        this.clockInEvent = value;
+        this.BackingStore.set("clockInEvent", value);
     }
     /**
      * Sets the clockOutEvent property value. The clock-out event of the timeCard.
      * @param value Value to set for the clockOutEvent property.
      */
     public void setClockOutEvent(@jakarta.annotation.Nullable final TimeCardEvent value) {
-        this.clockOutEvent = value;
+        this.BackingStore.set("clockOutEvent", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

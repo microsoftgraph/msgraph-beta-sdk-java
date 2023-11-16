@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationOrganization extends Entity implements Parsable {
     /**
-     * Organization description.
-     */
-    private String description;
-    /**
-     * Organization display name.
-     */
-    private String displayName;
-    /**
-     * Where this user was created from. Possible values are: sis, lms, or manual.
-     */
-    private EducationExternalSource externalSource;
-    /**
-     * The externalSourceDetail property
-     */
-    private String externalSourceDetail;
-    /**
-     * Instantiates a new educationOrganization and sets the default values.
+     * Instantiates a new EducationOrganization and sets the default values.
      */
     public EducationOrganization() {
         super();
@@ -33,7 +17,7 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationOrganization
+     * @return a EducationOrganization
      */
     @jakarta.annotation.Nonnull
     public static EducationOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,35 +33,35 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Organization description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Organization display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
-     * @return a educationExternalSource
+     * @return a EducationExternalSource
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
-        return this.externalSource;
+        return this.BackingStore.get("externalSource");
     }
     /**
      * Gets the externalSourceDetail property value. The externalSourceDetail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
-        return this.externalSourceDetail;
+        return this.BackingStore.get("externalSourceDetail");
     }
     /**
      * The deserialization information for the current model
@@ -109,27 +93,27 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Organization display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
      * @param value Value to set for the externalSource property.
      */
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
-        this.externalSource = value;
+        this.BackingStore.set("externalSource", value);
     }
     /**
      * Sets the externalSourceDetail property value. The externalSourceDetail property
      * @param value Value to set for the externalSourceDetail property.
      */
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
-        this.externalSourceDetail = value;
+        this.BackingStore.set("externalSourceDetail", value);
     }
 }

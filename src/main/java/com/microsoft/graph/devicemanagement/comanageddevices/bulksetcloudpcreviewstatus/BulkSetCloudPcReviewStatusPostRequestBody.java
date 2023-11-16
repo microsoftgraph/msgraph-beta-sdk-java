@@ -5,33 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The managedDeviceIds property
-     */
-    private java.util.List<String> managedDeviceIds;
-    /**
-     * The reviewStatus property
-     */
-    private CloudPcReviewStatus reviewStatus;
-    /**
-     * Instantiates a new bulkSetCloudPcReviewStatusPostRequestBody and sets the default values.
+     * Instantiates a new BulkSetCloudPcReviewStatusPostRequestBody and sets the default values.
      */
     public BulkSetCloudPcReviewStatusPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bulkSetCloudPcReviewStatusPostRequestBody
+     * @return a BulkSetCloudPcReviewStatusPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static BulkSetCloudPcReviewStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,12 +35,25 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
         return new BulkSetCloudPcReviewStatusPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +68,19 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
-        return this.managedDeviceIds;
+        return this.BackingStore.get("managedDeviceIds");
     }
     /**
      * Gets the reviewStatus property value. The reviewStatus property
-     * @return a cloudPcReviewStatus
+     * @return a CloudPcReviewStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcReviewStatus getReviewStatus() {
-        return this.reviewStatus;
+        return this.BackingStore.get("reviewStatus");
     }
     /**
      * Serializes information the current object
@@ -84,24 +93,32 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the managedDeviceIds property value. The managedDeviceIds property
      * @param value Value to set for the managedDeviceIds property.
      */
     public void setManagedDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.managedDeviceIds = value;
+        this.BackingStore.set("managedDeviceIds", value);
     }
     /**
      * Sets the reviewStatus property value. The reviewStatus property
      * @param value Value to set for the reviewStatus property.
      */
     public void setReviewStatus(@jakarta.annotation.Nullable final CloudPcReviewStatus value) {
-        this.reviewStatus = value;
+        this.BackingStore.set("reviewStatus", value);
     }
 }

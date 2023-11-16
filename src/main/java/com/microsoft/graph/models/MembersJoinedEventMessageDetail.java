@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembersJoinedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * List of members who joined the chat.
-     */
-    private java.util.List<TeamworkUserIdentity> members;
-    /**
-     * Instantiates a new membersJoinedEventMessageDetail and sets the default values.
+     * Instantiates a new MembersJoinedEventMessageDetail and sets the default values.
      */
     public MembersJoinedEventMessageDetail() {
         super();
@@ -26,7 +18,7 @@ public class MembersJoinedEventMessageDetail extends EventMessageDetail implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a membersJoinedEventMessageDetail
+     * @return a MembersJoinedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static MembersJoinedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class MembersJoinedEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Gets the members property value. List of members who joined the chat.
-     * @return a teamworkUserIdentity
+     * @return a java.util.List<TeamworkUserIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MembersJoinedEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
     /**
      * Sets the members property value. List of members who joined the chat.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
 }

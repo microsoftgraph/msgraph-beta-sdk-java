@@ -13,43 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsable {
     /**
-     * The list of assignments for this profile.
-     */
-    private java.util.List<AppleEnrollmentProfileAssignment> assignments;
-    /**
-     * List of available enrollment type options
-     */
-    private java.util.List<AppleOwnerTypeEnrollmentType> availableEnrollmentTypeOptions;
-    /**
-     * Profile creation time
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The defaultEnrollmentType property
-     */
-    private AppleUserInitiatedEnrollmentType defaultEnrollmentType;
-    /**
-     * Description of the profile
-     */
-    private String description;
-    /**
-     * Name of the profile
-     */
-    private String displayName;
-    /**
-     * Profile last modified time
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Supported platform types.
-     */
-    private DevicePlatformType platform;
-    /**
-     * Priority, 0 is highest
-     */
-    private Integer priority;
-    /**
-     * Instantiates a new appleUserInitiatedEnrollmentProfile and sets the default values.
+     * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
      */
     public AppleUserInitiatedEnrollmentProfile() {
         super();
@@ -57,7 +21,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleUserInitiatedEnrollmentProfile
+     * @return a AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,19 +30,19 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. The list of assignments for this profile.
-     * @return a appleEnrollmentProfileAssignment
+     * @return a java.util.List<AppleEnrollmentProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleEnrollmentProfileAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the availableEnrollmentTypeOptions property value. List of available enrollment type options
-     * @return a appleOwnerTypeEnrollmentType
+     * @return a java.util.List<AppleOwnerTypeEnrollmentType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleOwnerTypeEnrollmentType> getAvailableEnrollmentTypeOptions() {
-        return this.availableEnrollmentTypeOptions;
+        return this.BackingStore.get("availableEnrollmentTypeOptions");
     }
     /**
      * Gets the createdDateTime property value. Profile creation time
@@ -86,31 +50,31 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the defaultEnrollmentType property value. The defaultEnrollmentType property
-     * @return a appleUserInitiatedEnrollmentType
+     * @return a AppleUserInitiatedEnrollmentType
      */
     @jakarta.annotation.Nullable
     public AppleUserInitiatedEnrollmentType getDefaultEnrollmentType() {
-        return this.defaultEnrollmentType;
+        return this.BackingStore.get("defaultEnrollmentType");
     }
     /**
      * Gets the description property value. Description of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Name of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -136,23 +100,23 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
-        return this.platform;
+        return this.BackingStore.get("platform");
     }
     /**
      * Gets the priority property value. Priority, 0 is highest
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.BackingStore.get("priority");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<AppleEnrollmentProfileAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the availableEnrollmentTypeOptions property value. List of available enrollment type options
      * @param value Value to set for the availableEnrollmentTypeOptions property.
      */
     public void setAvailableEnrollmentTypeOptions(@jakarta.annotation.Nullable final java.util.List<AppleOwnerTypeEnrollmentType> value) {
-        this.availableEnrollmentTypeOptions = value;
+        this.BackingStore.set("availableEnrollmentTypeOptions", value);
     }
     /**
      * Sets the createdDateTime property value. Profile creation time
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the defaultEnrollmentType property value. The defaultEnrollmentType property
      * @param value Value to set for the defaultEnrollmentType property.
      */
     public void setDefaultEnrollmentType(@jakarta.annotation.Nullable final AppleUserInitiatedEnrollmentType value) {
-        this.defaultEnrollmentType = value;
+        this.BackingStore.set("defaultEnrollmentType", value);
     }
     /**
      * Sets the description property value. Description of the profile
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the profile
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Profile last modified time
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
-        this.platform = value;
+        this.BackingStore.set("platform", value);
     }
     /**
      * Sets the priority property value. Priority, 0 is highest
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.BackingStore.set("priority", value);
     }
 }

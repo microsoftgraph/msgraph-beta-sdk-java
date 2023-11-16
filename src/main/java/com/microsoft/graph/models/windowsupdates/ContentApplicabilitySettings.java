@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsable {
+public class ContentApplicabilitySettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Offer if the update is recommended by a vendor in the list, otherwise withhold the offer.
-     */
-    private java.util.List<String> offerWhileRecommendedBy;
-    /**
-     * Settings for governing safeguard holds on offering content.
-     */
-    private SafeguardSettings safeguard;
-    /**
-     * Instantiates a new contentApplicabilitySettings and sets the default values.
+     * Instantiates a new ContentApplicabilitySettings and sets the default values.
      */
     public ContentApplicabilitySettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentApplicabilitySettings
+     * @return a ContentApplicabilitySettings
      */
     @jakarta.annotation.Nonnull
     public static ContentApplicabilitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
         return new ContentApplicabilitySettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the offerWhileRecommendedBy property value. Offer if the update is recommended by a vendor in the list, otherwise withhold the offer.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOfferWhileRecommendedBy() {
-        return this.offerWhileRecommendedBy;
+        return this.BackingStore.get("offerWhileRecommendedBy");
     }
     /**
-     * Gets the safeguard property value. Settings for governing safeguard holds on offering content.
-     * @return a safeguardSettings
+     * Gets the safeguard property value. Settings for governing safeguard-holds on offering content.
+     * @return a SafeguardSettings
      */
     @jakarta.annotation.Nullable
     public SafeguardSettings getSafeguard() {
-        return this.safeguard;
+        return this.BackingStore.get("safeguard");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the offerWhileRecommendedBy property value. Offer if the update is recommended by a vendor in the list, otherwise withhold the offer.
      * @param value Value to set for the offerWhileRecommendedBy property.
      */
     public void setOfferWhileRecommendedBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.offerWhileRecommendedBy = value;
+        this.BackingStore.set("offerWhileRecommendedBy", value);
     }
     /**
-     * Sets the safeguard property value. Settings for governing safeguard holds on offering content.
+     * Sets the safeguard property value. Settings for governing safeguard-holds on offering content.
      * @param value Value to set for the safeguard property.
      */
     public void setSafeguard(@jakarta.annotation.Nullable final SafeguardSettings value) {
-        this.safeguard = value;
+        this.BackingStore.set("safeguard", value);
     }
 }

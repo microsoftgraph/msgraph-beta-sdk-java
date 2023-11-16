@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /**
-     * The expirationDateTime property
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The isElevated property
-     */
-    private Boolean isElevated;
-    /**
-     * The resultMessage property
-     */
-    private String resultMessage;
-    /**
-     * The roleId property
-     */
-    private String roleId;
-    /**
-     * The roleInfo property
-     */
-    private PrivilegedRole roleInfo;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new privilegedRoleAssignment and sets the default values.
+     * Instantiates a new PrivilegedRoleAssignment and sets the default values.
      */
     public PrivilegedRoleAssignment() {
         super();
@@ -42,7 +18,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleAssignment
+     * @return a PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +31,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -74,43 +50,43 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the isElevated property value. The isElevated property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
-        return this.isElevated;
+        return this.BackingStore.get("isElevated");
     }
     /**
      * Gets the resultMessage property value. The resultMessage property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultMessage() {
-        return this.resultMessage;
+        return this.BackingStore.get("resultMessage");
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.BackingStore.get("roleId");
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
-        return this.roleInfo;
+        return this.BackingStore.get("roleInfo");
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the isElevated property value. The isElevated property
      * @param value Value to set for the isElevated property.
      */
     public void setIsElevated(@jakarta.annotation.Nullable final Boolean value) {
-        this.isElevated = value;
+        this.BackingStore.set("isElevated", value);
     }
     /**
      * Sets the resultMessage property value. The resultMessage property
      * @param value Value to set for the resultMessage property.
      */
     public void setResultMessage(@jakarta.annotation.Nullable final String value) {
-        this.resultMessage = value;
+        this.BackingStore.set("resultMessage", value);
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.BackingStore.set("roleId", value);
     }
     /**
      * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
      */
     public void setRoleInfo(@jakarta.annotation.Nullable final PrivilegedRole value) {
-        this.roleInfo = value;
+        this.BackingStore.set("roleInfo", value);
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

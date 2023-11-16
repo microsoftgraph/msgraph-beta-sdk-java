@@ -60,48 +60,48 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of assignments for this T&C policy.
-     * @return a CompletableFuture of termsAndConditionsAssignmentCollectionResponse
+     * @return a TermsAndConditionsAssignmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of assignments for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignmentCollectionResponse
+     * @return a TermsAndConditionsAssignmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditionsAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditionsAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a TermsAndConditionsAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignment post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a TermsAndConditionsAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignment post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditionsAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditionsAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of assignments for this T&C policy.
@@ -118,18 +118,9 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

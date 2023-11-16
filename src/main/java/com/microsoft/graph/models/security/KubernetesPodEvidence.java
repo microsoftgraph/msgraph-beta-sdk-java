@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
-     * The list of pod containers which are not init or ephemeral containers.
-     */
-    private java.util.List<ContainerEvidence> containers;
-    /**
-     * The pod controller.
-     */
-    private KubernetesControllerEvidence controller;
-    /**
-     * The list of pod ephemeral containers.
-     */
-    private java.util.List<ContainerEvidence> ephemeralContainers;
-    /**
-     * The list of pod init containers.
-     */
-    private java.util.List<ContainerEvidence> initContainers;
-    /**
-     * The pod labels.
-     */
-    private Dictionary labels;
-    /**
-     * The pod name.
-     */
-    private String name;
-    /**
-     * The pod namespace.
-     */
-    private KubernetesNamespaceEvidence namespace;
-    /**
-     * The pod IP.
-     */
-    private IpEvidence podIp;
-    /**
-     * The pod service account.
-     */
-    private KubernetesServiceAccountEvidence serviceAccount;
-    /**
-     * Instantiates a new kubernetesPodEvidence and sets the default values.
+     * Instantiates a new KubernetesPodEvidence and sets the default values.
      */
     public KubernetesPodEvidence() {
         super();
@@ -54,7 +18,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesPodEvidence
+     * @return a KubernetesPodEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesPodEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,27 +27,27 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the containers property value. The list of pod containers which are not init or ephemeral containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getContainers() {
-        return this.containers;
+        return this.BackingStore.get("containers");
     }
     /**
      * Gets the controller property value. The pod controller.
-     * @return a kubernetesControllerEvidence
+     * @return a KubernetesControllerEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesControllerEvidence getController() {
-        return this.controller;
+        return this.BackingStore.get("controller");
     }
     /**
      * Gets the ephemeralContainers property value. The list of pod ephemeral containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getEphemeralContainers() {
-        return this.ephemeralContainers;
+        return this.BackingStore.get("ephemeralContainers");
     }
     /**
      * The deserialization information for the current model
@@ -105,51 +69,51 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the initContainers property value. The list of pod init containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getInitContainers() {
-        return this.initContainers;
+        return this.BackingStore.get("initContainers");
     }
     /**
      * Gets the labels property value. The pod labels.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
-        return this.labels;
+        return this.BackingStore.get("labels");
     }
     /**
      * Gets the name property value. The pod name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the namespace property value. The pod namespace.
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
-        return this.namespace;
+        return this.BackingStore.get("namespace");
     }
     /**
      * Gets the podIp property value. The pod IP.
-     * @return a ipEvidence
+     * @return a IpEvidence
      */
     @jakarta.annotation.Nullable
     public IpEvidence getPodIp() {
-        return this.podIp;
+        return this.BackingStore.get("podIp");
     }
     /**
      * Gets the serviceAccount property value. The pod service account.
-     * @return a kubernetesServiceAccountEvidence
+     * @return a KubernetesServiceAccountEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesServiceAccountEvidence getServiceAccount() {
-        return this.serviceAccount;
+        return this.BackingStore.get("serviceAccount");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the containers property.
      */
     public void setContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
-        this.containers = value;
+        this.BackingStore.set("containers", value);
     }
     /**
      * Sets the controller property value. The pod controller.
      * @param value Value to set for the controller property.
      */
     public void setController(@jakarta.annotation.Nullable final KubernetesControllerEvidence value) {
-        this.controller = value;
+        this.BackingStore.set("controller", value);
     }
     /**
      * Sets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @param value Value to set for the ephemeralContainers property.
      */
     public void setEphemeralContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
-        this.ephemeralContainers = value;
+        this.BackingStore.set("ephemeralContainers", value);
     }
     /**
      * Sets the initContainers property value. The list of pod init containers.
      * @param value Value to set for the initContainers property.
      */
     public void setInitContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
-        this.initContainers = value;
+        this.BackingStore.set("initContainers", value);
     }
     /**
      * Sets the labels property value. The pod labels.
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
-        this.labels = value;
+        this.BackingStore.set("labels", value);
     }
     /**
      * Sets the name property value. The pod name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the namespace property value. The pod namespace.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
-        this.namespace = value;
+        this.BackingStore.set("namespace", value);
     }
     /**
      * Sets the podIp property value. The pod IP.
      * @param value Value to set for the podIp property.
      */
     public void setPodIp(@jakarta.annotation.Nullable final IpEvidence value) {
-        this.podIp = value;
+        this.BackingStore.set("podIp", value);
     }
     /**
      * Sets the serviceAccount property value. The pod service account.
      * @param value Value to set for the serviceAccount property.
      */
     public void setServiceAccount(@jakarta.annotation.Nullable final KubernetesServiceAccountEvidence value) {
-        this.serviceAccount = value;
+        this.BackingStore.set("serviceAccount", value);
     }
 }

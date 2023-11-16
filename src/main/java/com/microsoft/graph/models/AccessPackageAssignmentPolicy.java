@@ -10,83 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
-     */
-    private AccessPackage accessPackage;
-    /**
-     * The accessPackageCatalog property
-     */
-    private AccessPackageCatalog accessPackageCatalog;
-    /**
-     * Identifier of the access package.
-     */
-    private String accessPackageId;
-    /**
-     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
-     */
-    private AssignmentReviewSettings accessReviewSettings;
-    /**
-     * Indicates whether a user can extend the access package assignment duration after approval.
-     */
-    private Boolean canExtend;
-    /**
-     * The createdBy property
-     */
-    private String createdBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     */
-    private java.util.List<CustomExtensionHandler> customExtensionHandlers;
-    /**
-     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     */
-    private java.util.List<CustomExtensionStageSetting> customExtensionStageSettings;
-    /**
-     * The description of the policy.
-     */
-    private String description;
-    /**
-     * The display name of the policy. Supports $filter (eq).
-     */
-    private String displayName;
-    /**
-     * The number of days in which assignments from this policy last until they are expired.
-     */
-    private Integer durationInDays;
-    /**
-     * The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The modifiedBy property
-     */
-    private String modifiedBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Questions that are posed to the  requestor.
-     */
-    private java.util.List<AccessPackageQuestion> questions;
-    /**
-     * Who must approve requests for access package in this policy.
-     */
-    private ApprovalSettings requestApprovalSettings;
-    /**
-     * Who can request this access package from this policy.
-     */
-    private RequestorSettings requestorSettings;
-    /**
-     * Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
-     */
-    private VerifiableCredentialSettings verifiableCredentialSettings;
-    /**
-     * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
+     * Instantiates a new AccessPackageAssignmentPolicy and sets the default values.
      */
     public AccessPackageAssignmentPolicy() {
         super();
@@ -94,7 +18,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,51 +27,51 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this.accessPackage;
+        return this.BackingStore.get("accessPackage");
     }
     /**
      * Gets the accessPackageCatalog property value. The accessPackageCatalog property
-     * @return a accessPackageCatalog
+     * @return a AccessPackageCatalog
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getAccessPackageCatalog() {
-        return this.accessPackageCatalog;
+        return this.BackingStore.get("accessPackageCatalog");
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
-        return this.accessPackageId;
+        return this.BackingStore.get("accessPackageId");
     }
     /**
-     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
-     * @return a assignmentReviewSettings
+     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
+     * @return a AssignmentReviewSettings
      */
     @jakarta.annotation.Nullable
     public AssignmentReviewSettings getAccessReviewSettings() {
-        return this.accessReviewSettings;
+        return this.BackingStore.get("accessReviewSettings");
     }
     /**
      * Gets the canExtend property value. Indicates whether a user can extend the access package assignment duration after approval.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCanExtend() {
-        return this.canExtend;
+        return this.BackingStore.get("canExtend");
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -155,47 +79,47 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the customExtensionHandlers property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a customExtensionHandler
+     * @return a java.util.List<CustomExtensionHandler>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionHandler> getCustomExtensionHandlers() {
-        return this.customExtensionHandlers;
+        return this.BackingStore.get("customExtensionHandlers");
     }
     /**
      * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a customExtensionStageSetting
+     * @return a java.util.List<CustomExtensionStageSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
-        return this.customExtensionStageSettings;
+        return this.BackingStore.get("customExtensionStageSettings");
     }
     /**
      * Gets the description property value. The description of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the policy. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
-     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they are expired.
-     * @return a integer
+     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
-        return this.durationInDays;
+        return this.BackingStore.get("durationInDays");
     }
     /**
      * Gets the expirationDateTime property value. The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -203,7 +127,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -235,11 +159,11 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The modifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
-        return this.modifiedBy;
+        return this.BackingStore.get("modifiedBy");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -247,39 +171,39 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.BackingStore.get("modifiedDateTime");
     }
     /**
      * Gets the questions property value. Questions that are posed to the  requestor.
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
-        return this.questions;
+        return this.BackingStore.get("questions");
     }
     /**
      * Gets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
-     * @return a approvalSettings
+     * @return a ApprovalSettings
      */
     @jakarta.annotation.Nullable
     public ApprovalSettings getRequestApprovalSettings() {
-        return this.requestApprovalSettings;
+        return this.BackingStore.get("requestApprovalSettings");
     }
     /**
      * Gets the requestorSettings property value. Who can request this access package from this policy.
-     * @return a requestorSettings
+     * @return a RequestorSettings
      */
     @jakarta.annotation.Nullable
     public RequestorSettings getRequestorSettings() {
-        return this.requestorSettings;
+        return this.BackingStore.get("requestorSettings");
     }
     /**
-     * Gets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
-     * @return a verifiableCredentialSettings
+     * Gets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * @return a VerifiableCredentialSettings
      */
     @jakarta.annotation.Nullable
     public VerifiableCredentialSettings getVerifiableCredentialSettings() {
-        return this.verifiableCredentialSettings;
+        return this.BackingStore.get("verifiableCredentialSettings");
     }
     /**
      * Serializes information the current object
@@ -313,132 +237,132 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      */
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
-        this.accessPackage = value;
+        this.BackingStore.set("accessPackage", value);
     }
     /**
      * Sets the accessPackageCatalog property value. The accessPackageCatalog property
      * @param value Value to set for the accessPackageCatalog property.
      */
     public void setAccessPackageCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
-        this.accessPackageCatalog = value;
+        this.BackingStore.set("accessPackageCatalog", value);
     }
     /**
      * Sets the accessPackageId property value. Identifier of the access package.
      * @param value Value to set for the accessPackageId property.
      */
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
-        this.accessPackageId = value;
+        this.BackingStore.set("accessPackageId", value);
     }
     /**
-     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
+     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
      * @param value Value to set for the accessReviewSettings property.
      */
     public void setAccessReviewSettings(@jakarta.annotation.Nullable final AssignmentReviewSettings value) {
-        this.accessReviewSettings = value;
+        this.BackingStore.set("accessReviewSettings", value);
     }
     /**
      * Sets the canExtend property value. Indicates whether a user can extend the access package assignment duration after approval.
      * @param value Value to set for the canExtend property.
      */
     public void setCanExtend(@jakarta.annotation.Nullable final Boolean value) {
-        this.canExtend = value;
+        this.BackingStore.set("canExtend", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customExtensionHandlers property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param value Value to set for the customExtensionHandlers property.
      */
     public void setCustomExtensionHandlers(@jakarta.annotation.Nullable final java.util.List<CustomExtensionHandler> value) {
-        this.customExtensionHandlers = value;
+        this.BackingStore.set("customExtensionHandlers", value);
     }
     /**
      * Sets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param value Value to set for the customExtensionStageSettings property.
      */
     public void setCustomExtensionStageSettings(@jakarta.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
-        this.customExtensionStageSettings = value;
+        this.BackingStore.set("customExtensionStageSettings", value);
     }
     /**
      * Sets the description property value. The description of the policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the policy. Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
-     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they are expired.
+     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.durationInDays = value;
+        this.BackingStore.set("durationInDays", value);
     }
     /**
      * Sets the expirationDateTime property value. The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the modifiedBy property value. The modifiedBy property
      * @param value Value to set for the modifiedBy property.
      */
     public void setModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.modifiedBy = value;
+        this.BackingStore.set("modifiedBy", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.BackingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the questions property value. Questions that are posed to the  requestor.
      * @param value Value to set for the questions property.
      */
     public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
-        this.questions = value;
+        this.BackingStore.set("questions", value);
     }
     /**
      * Sets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
      * @param value Value to set for the requestApprovalSettings property.
      */
     public void setRequestApprovalSettings(@jakarta.annotation.Nullable final ApprovalSettings value) {
-        this.requestApprovalSettings = value;
+        this.BackingStore.set("requestApprovalSettings", value);
     }
     /**
      * Sets the requestorSettings property value. Who can request this access package from this policy.
      * @param value Value to set for the requestorSettings property.
      */
     public void setRequestorSettings(@jakarta.annotation.Nullable final RequestorSettings value) {
-        this.requestorSettings = value;
+        this.BackingStore.set("requestorSettings", value);
     }
     /**
-     * Sets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * Sets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
      * @param value Value to set for the verifiableCredentialSettings property.
      */
     public void setVerifiableCredentialSettings(@jakarta.annotation.Nullable final VerifiableCredentialSettings value) {
-        this.verifiableCredentialSettings = value;
+        this.BackingStore.set("verifiableCredentialSettings", value);
     }
 }

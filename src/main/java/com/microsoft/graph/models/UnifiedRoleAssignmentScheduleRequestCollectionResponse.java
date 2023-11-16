@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentScheduleRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UnifiedRoleAssignmentScheduleRequest> value;
-    /**
-     * Instantiates a new unifiedRoleAssignmentScheduleRequestCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleRequestCollectionResponse and sets the default values.
      */
     public UnifiedRoleAssignmentScheduleRequestCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UnifiedRoleAssignmentScheduleRequestCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleAssignmentScheduleRequestCollectionResponse
+     * @return a UnifiedRoleAssignmentScheduleRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentScheduleRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UnifiedRoleAssignmentScheduleRequestCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleAssignmentScheduleRequest
+     * @return a java.util.List<UnifiedRoleAssignmentScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleRequest> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UnifiedRoleAssignmentScheduleRequestCollectionResponse extends Base
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

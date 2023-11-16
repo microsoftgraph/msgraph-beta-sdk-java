@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem implements Parsable {
     /**
-     * Windows quality update classification
-     */
-    private WindowsQualityUpdateClassification classification;
-    /**
-     * Flag indicating if update qualifies for expedite
-     */
-    private Boolean isExpeditable;
-    /**
-     * Knowledge base article id
-     */
-    private String kbArticleId;
-    /**
-     * Instantiates a new windowsQualityUpdateCatalogItem and sets the default values.
+     * Instantiates a new WindowsQualityUpdateCatalogItem and sets the default values.
      */
     public WindowsQualityUpdateCatalogItem() {
         super();
@@ -33,7 +21,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsQualityUpdateCatalogItem
+     * @return a WindowsQualityUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public static WindowsQualityUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     }
     /**
      * Gets the classification property value. Windows quality update classification
-     * @return a windowsQualityUpdateClassification
+     * @return a WindowsQualityUpdateClassification
      */
     @jakarta.annotation.Nullable
     public WindowsQualityUpdateClassification getClassification() {
-        return this.classification;
+        return this.BackingStore.get("classification");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     }
     /**
      * Gets the isExpeditable property value. Flag indicating if update qualifies for expedite
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpeditable() {
-        return this.isExpeditable;
+        return this.BackingStore.get("isExpeditable");
     }
     /**
      * Gets the kbArticleId property value. Knowledge base article id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKbArticleId() {
-        return this.kbArticleId;
+        return this.BackingStore.get("kbArticleId");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final WindowsQualityUpdateClassification value) {
-        this.classification = value;
+        this.BackingStore.set("classification", value);
     }
     /**
      * Sets the isExpeditable property value. Flag indicating if update qualifies for expedite
      * @param value Value to set for the isExpeditable property.
      */
     public void setIsExpeditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExpeditable = value;
+        this.BackingStore.set("isExpeditable", value);
     }
     /**
      * Sets the kbArticleId property value. Knowledge base article id
      * @param value Value to set for the kbArticleId property.
      */
     public void setKbArticleId(@jakarta.annotation.Nullable final String value) {
-        this.kbArticleId = value;
+        this.BackingStore.set("kbArticleId", value);
     }
 }

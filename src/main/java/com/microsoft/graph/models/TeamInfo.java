@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamInfo extends Entity implements Parsable {
     /**
-     * The name of the team.
-     */
-    private String displayName;
-    /**
-     * The team property
-     */
-    private Team team;
-    /**
-     * The ID of the Azure Active Directory tenant.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new teamInfo and sets the default values.
+     * Instantiates a new TeamInfo and sets the default values.
      */
     public TeamInfo() {
         super();
@@ -29,7 +17,7 @@ public class TeamInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamInfo
+     * @return a TeamInfo
      */
     @jakarta.annotation.Nonnull
     public static TeamInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +34,11 @@ public class TeamInfo extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -66,19 +54,19 @@ public class TeamInfo extends Entity implements Parsable {
     }
     /**
      * Gets the team property value. The team property
-     * @return a team
+     * @return a Team
      */
     @jakarta.annotation.Nullable
     public Team getTeam() {
-        return this.team;
+        return this.BackingStore.get("team");
     }
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
-     * @return a string
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the team property value. The team property
      * @param value Value to set for the team property.
      */
     public void setTeam(@jakarta.annotation.Nullable final Team value) {
-        this.team = value;
+        this.BackingStore.set("team", value);
     }
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

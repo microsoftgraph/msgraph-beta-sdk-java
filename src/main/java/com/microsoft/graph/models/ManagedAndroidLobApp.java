@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable {
     /**
-     * The Identity Name. This property is being deprecated in 2302(February 2023).
-     */
-    private String identityName;
-    /**
-     * The identity version. This property is being deprecated in 2302(February 2023).
-     */
-    private String identityVersion;
-    /**
-     * The value for the minimum applicable operating system.
-     */
-    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The package identifier.
-     */
-    private String packageId;
-    /**
-     * Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
-     */
-    private EnumSet<AndroidTargetedPlatforms> targetedPlatforms;
-    /**
-     * The version code of managed Android Line of Business (LoB) app.
-     */
-    private String versionCode;
-    /**
-     * The version name of managed Android Line of Business (LoB) app.
-     */
-    private String versionName;
-    /**
-     * Instantiates a new managedAndroidLobApp and sets the default values.
+     * Instantiates a new ManagedAndroidLobApp and sets the default values.
      */
     public ManagedAndroidLobApp() {
         super();
@@ -50,7 +22,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAndroidLobApp
+     * @return a ManagedAndroidLobApp
      */
     @jakarta.annotation.Nonnull
     public static ManagedAndroidLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,59 +47,59 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
     }
     /**
      * Gets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
-        return this.identityName;
+        return this.BackingStore.get("identityName");
     }
     /**
      * Gets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
-        return this.identityVersion;
+        return this.BackingStore.get("identityVersion");
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a androidMinimumOperatingSystem
+     * @return a AndroidMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.BackingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the packageId property value. The package identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
-        return this.packageId;
+        return this.BackingStore.get("packageId");
     }
     /**
      * Gets the targetedPlatforms property value. Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
-     * @return a androidTargetedPlatforms
+     * @return a EnumSet<AndroidTargetedPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AndroidTargetedPlatforms> getTargetedPlatforms() {
-        return this.targetedPlatforms;
+        return this.BackingStore.get("targetedPlatforms");
     }
     /**
      * Gets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionCode() {
-        return this.versionCode;
+        return this.BackingStore.get("versionCode");
     }
     /**
      * Gets the versionName property value. The version name of managed Android Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionName() {
-        return this.versionName;
+        return this.BackingStore.get("versionName");
     }
     /**
      * Serializes information the current object
@@ -149,48 +121,48 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the identityName property.
      */
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
-        this.identityName = value;
+        this.BackingStore.set("identityName", value);
     }
     /**
      * Sets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
-        this.identityVersion = value;
+        this.BackingStore.set("identityVersion", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.BackingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
-        this.packageId = value;
+        this.BackingStore.set("packageId", value);
     }
     /**
      * Sets the targetedPlatforms property value. Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
      * @param value Value to set for the targetedPlatforms property.
      */
     public void setTargetedPlatforms(@jakarta.annotation.Nullable final EnumSet<AndroidTargetedPlatforms> value) {
-        this.targetedPlatforms = value;
+        this.BackingStore.set("targetedPlatforms", value);
     }
     /**
      * Sets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionCode property.
      */
     public void setVersionCode(@jakarta.annotation.Nullable final String value) {
-        this.versionCode = value;
+        this.BackingStore.set("versionCode", value);
     }
     /**
      * Sets the versionName property value. The version name of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionName property.
      */
     public void setVersionName(@jakarta.annotation.Nullable final String value) {
-        this.versionName = value;
+        this.BackingStore.set("versionName", value);
     }
 }

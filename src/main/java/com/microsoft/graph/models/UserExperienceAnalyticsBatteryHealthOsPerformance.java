@@ -12,55 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity implements Parsable {
     /**
-     * Number of active devices for that os version. Valid values 0 to 2147483647
-     */
-    private Integer activeDevices;
-    /**
-     * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
-     */
-    private Integer averageBatteryAgeInDays;
-    /**
-     * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     */
-    private Integer averageEstimatedRuntimeInMinutes;
-    /**
-     * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     */
-    private Integer averageMaxCapacityPercentage;
-    /**
-     * The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     */
-    private Integer meanFullBatteryDrainCount;
-    /**
-     * The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     */
-    private Integer medianEstimatedRuntimeInMinutes;
-    /**
-     * The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     */
-    private Integer medianFullBatteryDrainCount;
-    /**
-     * The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     */
-    private Integer medianMaxCapacityPercentage;
-    /**
-     * A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
-     */
-    private Integer osBatteryHealthScore;
-    /**
-     * Build number of the operating system.
-     */
-    private String osBuildNumber;
-    /**
-     * The osHealthStatus property
-     */
-    private UserExperienceAnalyticsHealthState osHealthStatus;
-    /**
-     * Version of the operating system.
-     */
-    private String osVersion;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthOsPerformance() {
         super();
@@ -68,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a UserExperienceAnalyticsBatteryHealthOsPerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthOsPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,35 +29,35 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the activeDevices property value. Number of active devices for that os version. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
-        return this.activeDevices;
+        return this.BackingStore.get("activeDevices");
     }
     /**
      * Gets the averageBatteryAgeInDays property value. The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageBatteryAgeInDays() {
-        return this.averageBatteryAgeInDays;
+        return this.BackingStore.get("averageBatteryAgeInDays");
     }
     /**
      * Gets the averageEstimatedRuntimeInMinutes property value. The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageEstimatedRuntimeInMinutes() {
-        return this.averageEstimatedRuntimeInMinutes;
+        return this.BackingStore.get("averageEstimatedRuntimeInMinutes");
     }
     /**
      * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageMaxCapacityPercentage() {
-        return this.averageMaxCapacityPercentage;
+        return this.BackingStore.get("averageMaxCapacityPercentage");
     }
     /**
      * The deserialization information for the current model
@@ -130,67 +82,67 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMeanFullBatteryDrainCount() {
-        return this.meanFullBatteryDrainCount;
+        return this.BackingStore.get("meanFullBatteryDrainCount");
     }
     /**
      * Gets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianEstimatedRuntimeInMinutes() {
-        return this.medianEstimatedRuntimeInMinutes;
+        return this.BackingStore.get("medianEstimatedRuntimeInMinutes");
     }
     /**
      * Gets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianFullBatteryDrainCount() {
-        return this.medianFullBatteryDrainCount;
+        return this.BackingStore.get("medianFullBatteryDrainCount");
     }
     /**
      * Gets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianMaxCapacityPercentage() {
-        return this.medianMaxCapacityPercentage;
+        return this.BackingStore.get("medianMaxCapacityPercentage");
     }
     /**
      * Gets the osBatteryHealthScore property value. A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOsBatteryHealthScore() {
-        return this.osBatteryHealthScore;
+        return this.BackingStore.get("osBatteryHealthScore");
     }
     /**
      * Gets the osBuildNumber property value. Build number of the operating system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
-        return this.osBuildNumber;
+        return this.BackingStore.get("osBuildNumber");
     }
     /**
      * Gets the osHealthStatus property value. The osHealthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getOsHealthStatus() {
-        return this.osHealthStatus;
+        return this.BackingStore.get("osHealthStatus");
     }
     /**
      * Gets the osVersion property value. Version of the operating system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Serializes information the current object
@@ -217,83 +169,83 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the activeDevices property.
      */
     public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDevices = value;
+        this.BackingStore.set("activeDevices", value);
     }
     /**
      * Sets the averageBatteryAgeInDays property value. The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
      * @param value Value to set for the averageBatteryAgeInDays property.
      */
     public void setAverageBatteryAgeInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.averageBatteryAgeInDays = value;
+        this.BackingStore.set("averageBatteryAgeInDays", value);
     }
     /**
      * Sets the averageEstimatedRuntimeInMinutes property value. The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
      * @param value Value to set for the averageEstimatedRuntimeInMinutes property.
      */
     public void setAverageEstimatedRuntimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.averageEstimatedRuntimeInMinutes = value;
+        this.BackingStore.set("averageEstimatedRuntimeInMinutes", value);
     }
     /**
      * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
      * @param value Value to set for the averageMaxCapacityPercentage property.
      */
     public void setAverageMaxCapacityPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.averageMaxCapacityPercentage = value;
+        this.BackingStore.set("averageMaxCapacityPercentage", value);
     }
     /**
      * Sets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
      * @param value Value to set for the meanFullBatteryDrainCount property.
      */
     public void setMeanFullBatteryDrainCount(@jakarta.annotation.Nullable final Integer value) {
-        this.meanFullBatteryDrainCount = value;
+        this.BackingStore.set("meanFullBatteryDrainCount", value);
     }
     /**
      * Sets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
      * @param value Value to set for the medianEstimatedRuntimeInMinutes property.
      */
     public void setMedianEstimatedRuntimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.medianEstimatedRuntimeInMinutes = value;
+        this.BackingStore.set("medianEstimatedRuntimeInMinutes", value);
     }
     /**
      * Sets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
      * @param value Value to set for the medianFullBatteryDrainCount property.
      */
     public void setMedianFullBatteryDrainCount(@jakarta.annotation.Nullable final Integer value) {
-        this.medianFullBatteryDrainCount = value;
+        this.BackingStore.set("medianFullBatteryDrainCount", value);
     }
     /**
      * Sets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
      * @param value Value to set for the medianMaxCapacityPercentage property.
      */
     public void setMedianMaxCapacityPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.medianMaxCapacityPercentage = value;
+        this.BackingStore.set("medianMaxCapacityPercentage", value);
     }
     /**
      * Sets the osBatteryHealthScore property value. A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
      * @param value Value to set for the osBatteryHealthScore property.
      */
     public void setOsBatteryHealthScore(@jakarta.annotation.Nullable final Integer value) {
-        this.osBatteryHealthScore = value;
+        this.BackingStore.set("osBatteryHealthScore", value);
     }
     /**
      * Sets the osBuildNumber property value. Build number of the operating system.
      * @param value Value to set for the osBuildNumber property.
      */
     public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
-        this.osBuildNumber = value;
+        this.BackingStore.set("osBuildNumber", value);
     }
     /**
      * Sets the osHealthStatus property value. The osHealthStatus property
      * @param value Value to set for the osHealthStatus property.
      */
     public void setOsHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.osHealthStatus = value;
+        this.BackingStore.set("osHealthStatus", value);
     }
     /**
      * Sets the osVersion property value. Version of the operating system.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
 }

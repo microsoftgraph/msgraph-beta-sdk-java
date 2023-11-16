@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OfficeGraphInsights extends Entity implements Parsable {
     /**
-     * Access this property from the derived type itemInsights.
-     */
-    private java.util.List<SharedInsight> shared;
-    /**
-     * Access this property from the derived type itemInsights.
-     */
-    private java.util.List<Trending> trending;
-    /**
-     * Access this property from the derived type itemInsights.
-     */
-    private java.util.List<UsedInsight> used;
-    /**
-     * Instantiates a new officeGraphInsights and sets the default values.
+     * Instantiates a new OfficeGraphInsights and sets the default values.
      */
     public OfficeGraphInsights() {
         super();
@@ -29,7 +17,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a officeGraphInsights
+     * @return a OfficeGraphInsights
      */
     @jakarta.annotation.Nonnull
     public static OfficeGraphInsights createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,27 +45,27 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     }
     /**
      * Gets the shared property value. Access this property from the derived type itemInsights.
-     * @return a sharedInsight
+     * @return a java.util.List<SharedInsight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedInsight> getShared() {
-        return this.shared;
+        return this.BackingStore.get("shared");
     }
     /**
      * Gets the trending property value. Access this property from the derived type itemInsights.
-     * @return a trending
+     * @return a java.util.List<Trending>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Trending> getTrending() {
-        return this.trending;
+        return this.BackingStore.get("trending");
     }
     /**
      * Gets the used property value. Access this property from the derived type itemInsights.
-     * @return a usedInsight
+     * @return a java.util.List<UsedInsight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UsedInsight> getUsed() {
-        return this.used;
+        return this.BackingStore.get("used");
     }
     /**
      * Serializes information the current object
@@ -95,20 +83,20 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * @param value Value to set for the shared property.
      */
     public void setShared(@jakarta.annotation.Nullable final java.util.List<SharedInsight> value) {
-        this.shared = value;
+        this.BackingStore.set("shared", value);
     }
     /**
      * Sets the trending property value. Access this property from the derived type itemInsights.
      * @param value Value to set for the trending property.
      */
     public void setTrending(@jakarta.annotation.Nullable final java.util.List<Trending> value) {
-        this.trending = value;
+        this.BackingStore.set("trending", value);
     }
     /**
      * Sets the used property value. Access this property from the derived type itemInsights.
      * @param value Value to set for the used property.
      */
     public void setUsed(@jakarta.annotation.Nullable final java.util.List<UsedInsight> value) {
-        this.used = value;
+        this.BackingStore.set("used", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupMembers extends UserSet implements Parsable {
     /**
-     * The name of the group in Azure AD. Read only.
-     */
-    private String description;
-    /**
-     * The ID of the group in Azure AD.
-     */
-    private String id;
-    /**
-     * Instantiates a new groupMembers and sets the default values.
+     * Instantiates a new GroupMembers and sets the default values.
      */
     public GroupMembers() {
         super();
@@ -26,7 +18,7 @@ public class GroupMembers extends UserSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupMembers
+     * @return a GroupMembers
      */
     @jakarta.annotation.Nonnull
     public static GroupMembers createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,12 +26,12 @@ public class GroupMembers extends UserSet implements Parsable {
         return new GroupMembers();
     }
     /**
-     * Gets the description property value. The name of the group in Azure AD. Read only.
-     * @return a string
+     * Gets the description property value. The name of the group in Microsoft Entra ID. Read only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -53,12 +45,12 @@ public class GroupMembers extends UserSet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The ID of the group in Azure AD.
-     * @return a string
+     * Gets the id property value. The ID of the group in Microsoft Entra ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class GroupMembers extends UserSet implements Parsable {
         writer.writeStringValue("id", this.getId());
     }
     /**
-     * Sets the description property value. The name of the group in Azure AD. Read only.
+     * Sets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
-     * Sets the id property value. The ID of the group in Azure AD.
+     * Sets the id property value. The ID of the group in Microsoft Entra ID.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
 }

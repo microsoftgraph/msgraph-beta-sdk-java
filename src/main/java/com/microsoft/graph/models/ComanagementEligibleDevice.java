@@ -12,83 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
-     * Device registration status.
-     */
-    private DeviceRegistrationState clientRegistrationStatus;
-    /**
-     * DeviceName
-     */
-    private String deviceName;
-    /**
-     * Device type.
-     */
-    private DeviceType deviceType;
-    /**
-     * EntitySource
-     */
-    private Integer entitySource;
-    /**
-     * Management agent type.
-     */
-    private ManagementAgentType managementAgents;
-    /**
-     * Management state of device in Microsoft Intune.
-     */
-    private ManagementState managementState;
-    /**
-     * Manufacturer
-     */
-    private String manufacturer;
-    /**
-     * MDMStatus
-     */
-    private String mdmStatus;
-    /**
-     * Model
-     */
-    private String model;
-    /**
-     * OSDescription
-     */
-    private String osDescription;
-    /**
-     * OSVersion
-     */
-    private String osVersion;
-    /**
-     * Owner type of device.
-     */
-    private OwnerType ownerType;
-    /**
-     * ReferenceId
-     */
-    private String referenceId;
-    /**
-     * SerialNumber
-     */
-    private String serialNumber;
-    /**
-     * The status property
-     */
-    private ComanagementEligibleType status;
-    /**
-     * UPN
-     */
-    private String upn;
-    /**
-     * UserEmail
-     */
-    private String userEmail;
-    /**
-     * UserId
-     */
-    private String userId;
-    /**
-     * UserName
-     */
-    private String userName;
-    /**
-     * Instantiates a new comanagementEligibleDevice and sets the default values.
+     * Instantiates a new ComanagementEligibleDevice and sets the default values.
      */
     public ComanagementEligibleDevice() {
         super();
@@ -96,7 +20,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagementEligibleDevice
+     * @return a ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -105,35 +29,35 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the clientRegistrationStatus property value. Device registration status.
-     * @return a deviceRegistrationState
+     * @return a DeviceRegistrationState
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationState getClientRegistrationStatus() {
-        return this.clientRegistrationStatus;
+        return this.BackingStore.get("clientRegistrationStatus");
     }
     /**
      * Gets the deviceName property value. DeviceName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a deviceType
+     * @return a DeviceType
      */
     @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
-        return this.deviceType;
+        return this.BackingStore.get("deviceType");
     }
     /**
      * Gets the entitySource property value. EntitySource
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEntitySource() {
-        return this.entitySource;
+        return this.BackingStore.get("entitySource");
     }
     /**
      * The deserialization information for the current model
@@ -165,123 +89,123 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgents property value. Management agent type.
-     * @return a managementAgentType
+     * @return a ManagementAgentType
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgents() {
-        return this.managementAgents;
+        return this.BackingStore.get("managementAgents");
     }
     /**
      * Gets the managementState property value. Management state of device in Microsoft Intune.
-     * @return a managementState
+     * @return a ManagementState
      */
     @jakarta.annotation.Nullable
     public ManagementState getManagementState() {
-        return this.managementState;
+        return this.BackingStore.get("managementState");
     }
     /**
      * Gets the manufacturer property value. Manufacturer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the mdmStatus property value. MDMStatus
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdmStatus() {
-        return this.mdmStatus;
+        return this.BackingStore.get("mdmStatus");
     }
     /**
      * Gets the model property value. Model
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the osDescription property value. OSDescription
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
-        return this.osDescription;
+        return this.BackingStore.get("osDescription");
     }
     /**
      * Gets the osVersion property value. OSVersion
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Gets the ownerType property value. Owner type of device.
-     * @return a ownerType
+     * @return a OwnerType
      */
     @jakarta.annotation.Nullable
     public OwnerType getOwnerType() {
-        return this.ownerType;
+        return this.BackingStore.get("ownerType");
     }
     /**
      * Gets the referenceId property value. ReferenceId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceId() {
-        return this.referenceId;
+        return this.BackingStore.get("referenceId");
     }
     /**
      * Gets the serialNumber property value. SerialNumber
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Gets the status property value. The status property
-     * @return a comanagementEligibleType
+     * @return a ComanagementEligibleType
      */
     @jakarta.annotation.Nullable
     public ComanagementEligibleType getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the upn property value. UPN
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpn() {
-        return this.upn;
+        return this.BackingStore.get("upn");
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
-        return this.userEmail;
+        return this.BackingStore.get("userEmail");
     }
     /**
      * Gets the userId property value. UserId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Gets the userName property value. UserName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.BackingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -315,132 +239,132 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the clientRegistrationStatus property.
      */
     public void setClientRegistrationStatus(@jakarta.annotation.Nullable final DeviceRegistrationState value) {
-        this.clientRegistrationStatus = value;
+        this.BackingStore.set("clientRegistrationStatus", value);
     }
     /**
      * Sets the deviceName property value. DeviceName
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final DeviceType value) {
-        this.deviceType = value;
+        this.BackingStore.set("deviceType", value);
     }
     /**
      * Sets the entitySource property value. EntitySource
      * @param value Value to set for the entitySource property.
      */
     public void setEntitySource(@jakarta.annotation.Nullable final Integer value) {
-        this.entitySource = value;
+        this.BackingStore.set("entitySource", value);
     }
     /**
      * Sets the managementAgents property value. Management agent type.
      * @param value Value to set for the managementAgents property.
      */
     public void setManagementAgents(@jakarta.annotation.Nullable final ManagementAgentType value) {
-        this.managementAgents = value;
+        this.BackingStore.set("managementAgents", value);
     }
     /**
      * Sets the managementState property value. Management state of device in Microsoft Intune.
      * @param value Value to set for the managementState property.
      */
     public void setManagementState(@jakarta.annotation.Nullable final ManagementState value) {
-        this.managementState = value;
+        this.BackingStore.set("managementState", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the mdmStatus property value. MDMStatus
      * @param value Value to set for the mdmStatus property.
      */
     public void setMdmStatus(@jakarta.annotation.Nullable final String value) {
-        this.mdmStatus = value;
+        this.BackingStore.set("mdmStatus", value);
     }
     /**
      * Sets the model property value. Model
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the osDescription property value. OSDescription
      * @param value Value to set for the osDescription property.
      */
     public void setOsDescription(@jakarta.annotation.Nullable final String value) {
-        this.osDescription = value;
+        this.BackingStore.set("osDescription", value);
     }
     /**
      * Sets the osVersion property value. OSVersion
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
     /**
      * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      */
     public void setOwnerType(@jakarta.annotation.Nullable final OwnerType value) {
-        this.ownerType = value;
+        this.BackingStore.set("ownerType", value);
     }
     /**
      * Sets the referenceId property value. ReferenceId
      * @param value Value to set for the referenceId property.
      */
     public void setReferenceId(@jakarta.annotation.Nullable final String value) {
-        this.referenceId = value;
+        this.BackingStore.set("referenceId", value);
     }
     /**
      * Sets the serialNumber property value. SerialNumber
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ComanagementEligibleType value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the upn property value. UPN
      * @param value Value to set for the upn property.
      */
     public void setUpn(@jakarta.annotation.Nullable final String value) {
-        this.upn = value;
+        this.BackingStore.set("upn", value);
     }
     /**
      * Sets the userEmail property value. UserEmail
      * @param value Value to set for the userEmail property.
      */
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
-        this.userEmail = value;
+        this.BackingStore.set("userEmail", value);
     }
     /**
      * Sets the userId property value. UserId
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. UserName
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.BackingStore.set("userName", value);
     }
 }

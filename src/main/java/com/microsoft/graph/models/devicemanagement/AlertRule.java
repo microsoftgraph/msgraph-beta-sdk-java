@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AlertRule extends Entity implements Parsable {
     /**
-     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     */
-    private AlertRuleTemplate alertRuleTemplate;
-    /**
-     * The rule description.
-     */
-    private String description;
-    /**
-     * The display name of the rule.
-     */
-    private String displayName;
-    /**
-     * The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
-     */
-    private Boolean enabled;
-    /**
-     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
-     */
-    private Boolean isSystemRule;
-    /**
-     * The notification channels of the rule selected by the user.
-     */
-    private java.util.List<NotificationChannel> notificationChannels;
-    /**
-     * The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     */
-    private RuleSeverityType severity;
-    /**
-     * The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
-     */
-    private RuleThreshold threshold;
-    /**
-     * Instantiates a new alertRule and sets the default values.
+     * Instantiates a new AlertRule and sets the default values.
      */
     public AlertRule() {
         super();
@@ -50,7 +18,7 @@ public class AlertRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertRule
+     * @return a AlertRule
      */
     @jakarta.annotation.Nonnull
     public static AlertRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +26,36 @@ public class AlertRule extends Entity implements Parsable {
         return new AlertRule();
     }
     /**
-     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a alertRuleTemplate
+     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, cloudPcInGracePeriodScenario, cloudPcFrontlineInsufficientLicensesScenario, cloudPcInaccessibleScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
+     * @return a AlertRuleTemplate
      */
     @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
-        return this.alertRuleTemplate;
+        return this.BackingStore.get("alertRuleTemplate");
     }
     /**
      * Gets the description property value. The rule description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enabled property value. The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.BackingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -107,36 +75,36 @@ public class AlertRule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
-     * @return a boolean
+     * Gets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom-defined rule and can be edited. System rules are built in and only a few properties can be edited.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSystemRule() {
-        return this.isSystemRule;
+        return this.BackingStore.get("isSystemRule");
     }
     /**
      * Gets the notificationChannels property value. The notification channels of the rule selected by the user.
-     * @return a notificationChannel
+     * @return a java.util.List<NotificationChannel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationChannel> getNotificationChannels() {
-        return this.notificationChannels;
+        return this.BackingStore.get("notificationChannels");
     }
     /**
      * Gets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a ruleSeverityType
+     * @return a RuleSeverityType
      */
     @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
-        return this.severity;
+        return this.BackingStore.get("severity");
     }
     /**
-     * Gets the threshold property value. The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
-     * @return a ruleThreshold
+     * Gets the threshold property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs. This property is deprecated. Use conditions instead.
+     * @return a RuleThreshold
      */
     @jakarta.annotation.Nullable
     public RuleThreshold getThreshold() {
-        return this.threshold;
+        return this.BackingStore.get("threshold");
     }
     /**
      * Serializes information the current object
@@ -155,59 +123,59 @@ public class AlertRule extends Entity implements Parsable {
         writer.writeObjectValue("threshold", this.getThreshold());
     }
     /**
-     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
+     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, cloudPcInGracePeriodScenario, cloudPcFrontlineInsufficientLicensesScenario, cloudPcInaccessibleScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      */
     public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
-        this.alertRuleTemplate = value;
+        this.BackingStore.set("alertRuleTemplate", value);
     }
     /**
      * Sets the description property value. The rule description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the rule.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enabled property value. The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.BackingStore.set("enabled", value);
     }
     /**
-     * Sets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
+     * Sets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom-defined rule and can be edited. System rules are built in and only a few properties can be edited.
      * @param value Value to set for the isSystemRule property.
      */
     public void setIsSystemRule(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSystemRule = value;
+        this.BackingStore.set("isSystemRule", value);
     }
     /**
      * Sets the notificationChannels property value. The notification channels of the rule selected by the user.
      * @param value Value to set for the notificationChannels property.
      */
     public void setNotificationChannels(@jakarta.annotation.Nullable final java.util.List<NotificationChannel> value) {
-        this.notificationChannels = value;
+        this.BackingStore.set("notificationChannels", value);
     }
     /**
      * Sets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
-        this.severity = value;
+        this.BackingStore.set("severity", value);
     }
     /**
-     * Sets the threshold property value. The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
+     * Sets the threshold property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs. This property is deprecated. Use conditions instead.
      * @param value Value to set for the threshold property.
      */
     public void setThreshold(@jakarta.annotation.Nullable final RuleThreshold value) {
-        this.threshold = value;
+        this.BackingStore.set("threshold", value);
     }
 }

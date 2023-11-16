@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCertificateProfileBase extends DeviceConfiguration implements Parsable {
     /**
-     * Certificate Validity Period Options.
-     */
-    private CertificateValidityPeriodScale certificateValidityPeriodScale;
-    /**
-     * Value for the Certificate Validity Period.
-     */
-    private Integer certificateValidityPeriodValue;
-    /**
-     * Certificate renewal threshold percentage.
-     */
-    private Integer renewalThresholdPercentage;
-    /**
-     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     */
-    private EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
-    /**
-     * Subject Name Format Options for Apple devices.
-     */
-    private AppleSubjectNameFormat subjectNameFormat;
-    /**
-     * Instantiates a new macOSCertificateProfileBase and sets the default values.
+     * Instantiates a new MacOSCertificateProfileBase and sets the default values.
      */
     public MacOSCertificateProfileBase() {
         super();
@@ -42,7 +22,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCertificateProfileBase
+     * @return a MacOSCertificateProfileBase
      */
     @jakarta.annotation.Nonnull
     public static MacOSCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,19 +40,19 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a certificateValidityPeriodScale
+     * @return a CertificateValidityPeriodScale
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
-        return this.certificateValidityPeriodScale;
+        return this.BackingStore.get("certificateValidityPeriodScale");
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
-        return this.certificateValidityPeriodValue;
+        return this.BackingStore.get("certificateValidityPeriodValue");
     }
     /**
      * The deserialization information for the current model
@@ -90,27 +70,27 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
-        return this.renewalThresholdPercentage;
+        return this.BackingStore.get("renewalThresholdPercentage");
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a subjectAlternativeNameType
+     * @return a EnumSet<SubjectAlternativeNameType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
-        return this.subjectAlternativeNameType;
+        return this.BackingStore.get("subjectAlternativeNameType");
     }
     /**
      * Gets the subjectNameFormat property value. Subject Name Format Options for Apple devices.
-     * @return a appleSubjectNameFormat
+     * @return a AppleSubjectNameFormat
      */
     @jakarta.annotation.Nullable
     public AppleSubjectNameFormat getSubjectNameFormat() {
-        return this.subjectNameFormat;
+        return this.BackingStore.get("subjectNameFormat");
     }
     /**
      * Serializes information the current object
@@ -130,34 +110,34 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the certificateValidityPeriodScale property.
      */
     public void setCertificateValidityPeriodScale(@jakarta.annotation.Nullable final CertificateValidityPeriodScale value) {
-        this.certificateValidityPeriodScale = value;
+        this.BackingStore.set("certificateValidityPeriodScale", value);
     }
     /**
      * Sets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @param value Value to set for the certificateValidityPeriodValue property.
      */
     public void setCertificateValidityPeriodValue(@jakarta.annotation.Nullable final Integer value) {
-        this.certificateValidityPeriodValue = value;
+        this.BackingStore.set("certificateValidityPeriodValue", value);
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage.
      * @param value Value to set for the renewalThresholdPercentage property.
      */
     public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.renewalThresholdPercentage = value;
+        this.BackingStore.set("renewalThresholdPercentage", value);
     }
     /**
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
     public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
-        this.subjectAlternativeNameType = value;
+        this.BackingStore.set("subjectAlternativeNameType", value);
     }
     /**
      * Sets the subjectNameFormat property value. Subject Name Format Options for Apple devices.
      * @param value Value to set for the subjectNameFormat property.
      */
     public void setSubjectNameFormat(@jakarta.annotation.Nullable final AppleSubjectNameFormat value) {
-        this.subjectNameFormat = value;
+        this.BackingStore.set("subjectNameFormat", value);
     }
 }

@@ -4,65 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamworkNetworkConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The default gateway is the path used to pass information when the destination is unknown to the device.
-     */
-    private String defaultGateway;
-    /**
-     * The network domain of the device, for example, contoso.com.
-     */
-    private String domainName;
-    /**
-     * The device name on a network.
-     */
-    private String hostName;
-    /**
-     * The IP address is a numerical label that uniquely identifies every device connected to the internet.
-     */
-    private String ipAddress;
-    /**
-     * True if DHCP is enabled.
-     */
-    private Boolean isDhcpEnabled;
-    /**
-     * True if the PC port is enabled.
-     */
-    private Boolean isPCPortEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
-     */
-    private String primaryDns;
-    /**
-     * A secondary DNS is used when the primary DNS is not available.
-     */
-    private String secondaryDns;
-    /**
-     * A subnet mask is a number that distinguishes the network address and the host address within an IP address.
-     */
-    private String subnetMask;
-    /**
-     * Instantiates a new teamworkNetworkConfiguration and sets the default values.
+     * Instantiates a new TeamworkNetworkConfiguration and sets the default values.
      */
     public TeamworkNetworkConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkNetworkConfiguration
+     * @return a TeamworkNetworkConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,28 +34,41 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
         return new TeamworkNetworkConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the defaultGateway property value. The default gateway is the path used to pass information when the destination is unknown to the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultGateway() {
-        return this.defaultGateway;
+        return this.BackingStore.get("defaultGateway");
     }
     /**
      * Gets the domainName property value. The network domain of the device, for example, contoso.com.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.BackingStore.get("domainName");
     }
     /**
      * The deserialization information for the current model
@@ -114,67 +91,67 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the hostName property value. The device name on a network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
-        return this.hostName;
+        return this.BackingStore.get("hostName");
     }
     /**
      * Gets the ipAddress property value. The IP address is a numerical label that uniquely identifies every device connected to the internet.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the isDhcpEnabled property value. True if DHCP is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDhcpEnabled() {
-        return this.isDhcpEnabled;
+        return this.BackingStore.get("isDhcpEnabled");
     }
     /**
      * Gets the isPCPortEnabled property value. True if the PC port is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPCPortEnabled() {
-        return this.isPCPortEnabled;
+        return this.BackingStore.get("isPCPortEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryDns() {
-        return this.primaryDns;
+        return this.BackingStore.get("primaryDns");
     }
     /**
      * Gets the secondaryDns property value. A secondary DNS is used when the primary DNS is not available.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecondaryDns() {
-        return this.secondaryDns;
+        return this.BackingStore.get("secondaryDns");
     }
     /**
      * Gets the subnetMask property value. A subnet mask is a number that distinguishes the network address and the host address within an IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubnetMask() {
-        return this.subnetMask;
+        return this.BackingStore.get("subnetMask");
     }
     /**
      * Serializes information the current object
@@ -195,80 +172,88 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the defaultGateway property value. The default gateway is the path used to pass information when the destination is unknown to the device.
      * @param value Value to set for the defaultGateway property.
      */
     public void setDefaultGateway(@jakarta.annotation.Nullable final String value) {
-        this.defaultGateway = value;
+        this.BackingStore.set("defaultGateway", value);
     }
     /**
      * Sets the domainName property value. The network domain of the device, for example, contoso.com.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.BackingStore.set("domainName", value);
     }
     /**
      * Sets the hostName property value. The device name on a network.
      * @param value Value to set for the hostName property.
      */
     public void setHostName(@jakarta.annotation.Nullable final String value) {
-        this.hostName = value;
+        this.BackingStore.set("hostName", value);
     }
     /**
      * Sets the ipAddress property value. The IP address is a numerical label that uniquely identifies every device connected to the internet.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the isDhcpEnabled property value. True if DHCP is enabled.
      * @param value Value to set for the isDhcpEnabled property.
      */
     public void setIsDhcpEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDhcpEnabled = value;
+        this.BackingStore.set("isDhcpEnabled", value);
     }
     /**
      * Sets the isPCPortEnabled property value. True if the PC port is enabled.
      * @param value Value to set for the isPCPortEnabled property.
      */
     public void setIsPCPortEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPCPortEnabled = value;
+        this.BackingStore.set("isPCPortEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
      * @param value Value to set for the primaryDns property.
      */
     public void setPrimaryDns(@jakarta.annotation.Nullable final String value) {
-        this.primaryDns = value;
+        this.BackingStore.set("primaryDns", value);
     }
     /**
      * Sets the secondaryDns property value. A secondary DNS is used when the primary DNS is not available.
      * @param value Value to set for the secondaryDns property.
      */
     public void setSecondaryDns(@jakarta.annotation.Nullable final String value) {
-        this.secondaryDns = value;
+        this.BackingStore.set("secondaryDns", value);
     }
     /**
      * Sets the subnetMask property value. A subnet mask is a number that distinguishes the network address and the host address within an IP address.
      * @param value Value to set for the subnetMask property.
      */
     public void setSubnetMask(@jakarta.annotation.Nullable final String value) {
-        this.subnetMask = value;
+        this.BackingStore.set("subnetMask", value);
     }
 }

@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCategory extends Entity implements Parsable {
     /**
-     * The insights for the category. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsInsight> insights;
-    /**
-     * The metric values for the user experience analytics category. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsMetric> metricValues;
-    /**
-     * Instantiates a new userExperienceAnalyticsCategory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsCategory and sets the default values.
      */
     public UserExperienceAnalyticsCategory() {
         super();
@@ -28,7 +20,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,19 +40,19 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * Gets the insights property value. The insights for the category. Read-only.
-     * @return a userExperienceAnalyticsInsight
+     * @return a java.util.List<UserExperienceAnalyticsInsight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
-        return this.insights;
+        return this.BackingStore.get("insights");
     }
     /**
      * Gets the metricValues property value. The metric values for the user experience analytics category. Read-only.
-     * @return a userExperienceAnalyticsMetric
+     * @return a java.util.List<UserExperienceAnalyticsMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetric> getMetricValues() {
-        return this.metricValues;
+        return this.BackingStore.get("metricValues");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
-        this.insights = value;
+        this.BackingStore.set("insights", value);
     }
     /**
      * Sets the metricValues property value. The metric values for the user experience analytics category. Read-only.
      * @param value Value to set for the metricValues property.
      */
     public void setMetricValues(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
-        this.metricValues = value;
+        this.BackingStore.set("metricValues", value);
     }
 }

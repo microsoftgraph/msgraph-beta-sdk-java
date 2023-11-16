@@ -13,19 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
-     * The display name for the catalog item.
-     */
-    private String displayName;
-    /**
-     * The last supported date for a catalog item
-     */
-    private OffsetDateTime endOfSupportDate;
-    /**
-     * The date the catalog item was released
-     */
-    private OffsetDateTime releaseDateTime;
-    /**
-     * Instantiates a new windowsUpdateCatalogItem and sets the default values.
+     * Instantiates a new WindowsUpdateCatalogItem and sets the default values.
      */
     public WindowsUpdateCatalogItem() {
         super();
@@ -33,7 +21,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateCatalogItem
+     * @return a WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +38,11 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the catalog item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the endOfSupportDate property value. The last supported date for a catalog item
@@ -62,7 +50,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
-        return this.endOfSupportDate;
+        return this.BackingStore.get("endOfSupportDate");
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +70,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
-        return this.releaseDateTime;
+        return this.BackingStore.get("releaseDateTime");
     }
     /**
      * Serializes information the current object
@@ -100,20 +88,20 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the endOfSupportDate property value. The last supported date for a catalog item
      * @param value Value to set for the endOfSupportDate property.
      */
     public void setEndOfSupportDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endOfSupportDate = value;
+        this.BackingStore.set("endOfSupportDate", value);
     }
     /**
      * Sets the releaseDateTime property value. The date the catalog item was released
      * @param value Value to set for the releaseDateTime property.
      */
     public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.releaseDateTime = value;
+        this.BackingStore.set("releaseDateTime", value);
     }
 }

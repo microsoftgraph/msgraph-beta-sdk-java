@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisTitle extends Entity implements Parsable {
     /**
-     * Represents the formatting of chart axis title. Read-only.
-     */
-    private WorkbookChartAxisTitleFormat format;
-    /**
-     * Represents the axis title.
-     */
-    private String text;
-    /**
-     * A boolean that specifies the visibility of an axis title.
-     */
-    private Boolean visible;
-    /**
-     * Instantiates a new workbookChartAxisTitle and sets the default values.
+     * Instantiates a new WorkbookChartAxisTitle and sets the default values.
      */
     public WorkbookChartAxisTitle() {
         super();
@@ -29,7 +17,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxisTitle
+     * @return a WorkbookChartAxisTitle
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxisTitle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +38,27 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the formatting of chart axis title. Read-only.
-     * @return a workbookChartAxisTitleFormat
+     * @return a WorkbookChartAxisTitleFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitleFormat getFormat() {
-        return this.format;
+        return this.BackingStore.get("format");
     }
     /**
      * Gets the text property value. Represents the axis title.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the visible property value. A boolean that specifies the visibility of an axis title.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {
-        return this.visible;
+        return this.BackingStore.get("visible");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartAxisTitleFormat value) {
-        this.format = value;
+        this.BackingStore.set("format", value);
     }
     /**
      * Sets the text property value. Represents the axis title.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the visible property value. A boolean that specifies the visibility of an axis title.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.visible = value;
+        this.BackingStore.set("visible", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleUserInitiatedEnrollmentProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AppleUserInitiatedEnrollmentProfile> value;
-    /**
-     * Instantiates a new appleUserInitiatedEnrollmentProfileCollectionResponse and sets the default values.
+     * Instantiates a new AppleUserInitiatedEnrollmentProfileCollectionResponse and sets the default values.
      */
     public AppleUserInitiatedEnrollmentProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AppleUserInitiatedEnrollmentProfileCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleUserInitiatedEnrollmentProfileCollectionResponse
+     * @return a AppleUserInitiatedEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AppleUserInitiatedEnrollmentProfileCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a appleUserInitiatedEnrollmentProfile
+     * @return a java.util.List<AppleUserInitiatedEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleUserInitiatedEnrollmentProfile> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AppleUserInitiatedEnrollmentProfileCollectionResponse extends BaseC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AppleUserInitiatedEnrollmentProfile> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

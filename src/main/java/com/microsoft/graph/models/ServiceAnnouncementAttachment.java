@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /**
-     * The attachment content.
-     */
-    private byte[] content;
-    /**
-     * The contentType property
-     */
-    private String contentType;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The size property
-     */
-    private Integer size;
-    /**
-     * Instantiates a new serviceAnnouncementAttachment and sets the default values.
+     * Instantiates a new ServiceAnnouncementAttachment and sets the default values.
      */
     public ServiceAnnouncementAttachment() {
         super();
@@ -38,7 +18,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceAnnouncementAttachment
+     * @return a ServiceAnnouncementAttachment
      */
     @jakarta.annotation.Nonnull
     public static ServiceAnnouncementAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The attachment content.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the contentType property value. The contentType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -81,23 +61,23 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the size property value. The size property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.BackingStore.get("size");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.BackingStore.set("size", value);
     }
 }

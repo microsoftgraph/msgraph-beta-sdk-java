@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProjectParticipation extends ItemFacet implements Parsable {
     /**
-     * Contains categories a user has associated with the project (for example, digital transformation, oil rig).
-     */
-    private java.util.List<String> categories;
-    /**
-     * Contains detailed information about the client the project was for.
-     */
-    private CompanyDetail client;
-    /**
-     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
-     */
-    private java.util.List<String> collaborationTags;
-    /**
-     * Lists people that also worked on the project.
-     */
-    private java.util.List<RelatedPerson> colleagues;
-    /**
-     * Contains detail about the user's role on the project.
-     */
-    private PositionDetail detail;
-    /**
-     * Contains a friendly name for the project.
-     */
-    private String displayName;
-    /**
-     * The Person or people who sponsored the project.
-     */
-    private java.util.List<RelatedPerson> sponsors;
-    /**
-     * The thumbnailUrl property
-     */
-    private String thumbnailUrl;
-    /**
-     * Instantiates a new projectParticipation and sets the default values.
+     * Instantiates a new ProjectParticipation and sets the default values.
      */
     public ProjectParticipation() {
         super();
@@ -50,7 +18,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a projectParticipation
+     * @return a ProjectParticipation
      */
     @jakarta.annotation.Nonnull
     public static ProjectParticipation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,51 +27,51 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Contains categories a user has associated with the project (for example, digital transformation, oil rig).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this.categories;
+        return this.BackingStore.get("categories");
     }
     /**
      * Gets the client property value. Contains detailed information about the client the project was for.
-     * @return a companyDetail
+     * @return a CompanyDetail
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getClient() {
-        return this.client;
+        return this.BackingStore.get("client");
     }
     /**
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
-        return this.collaborationTags;
+        return this.BackingStore.get("collaborationTags");
     }
     /**
      * Gets the colleagues property value. Lists people that also worked on the project.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
-        return this.colleagues;
+        return this.BackingStore.get("colleagues");
     }
     /**
      * Gets the detail property value. Contains detail about the user's role on the project.
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nullable
     public PositionDetail getDetail() {
-        return this.detail;
+        return this.BackingStore.get("detail");
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the project.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -124,19 +92,19 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the sponsors property value. The Person or people who sponsored the project.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getSponsors() {
-        return this.sponsors;
+        return this.BackingStore.get("sponsors");
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
-        return this.thumbnailUrl;
+        return this.BackingStore.get("thumbnailUrl");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.categories = value;
+        this.BackingStore.set("categories", value);
     }
     /**
      * Sets the client property value. Contains detailed information about the client the project was for.
      * @param value Value to set for the client property.
      */
     public void setClient(@jakarta.annotation.Nullable final CompanyDetail value) {
-        this.client = value;
+        this.BackingStore.set("client", value);
     }
     /**
      * Sets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      * @param value Value to set for the collaborationTags property.
      */
     public void setCollaborationTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.collaborationTags = value;
+        this.BackingStore.set("collaborationTags", value);
     }
     /**
      * Sets the colleagues property value. Lists people that also worked on the project.
      * @param value Value to set for the colleagues property.
      */
     public void setColleagues(@jakarta.annotation.Nullable final java.util.List<RelatedPerson> value) {
-        this.colleagues = value;
+        this.BackingStore.set("colleagues", value);
     }
     /**
      * Sets the detail property value. Contains detail about the user's role on the project.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PositionDetail value) {
-        this.detail = value;
+        this.BackingStore.set("detail", value);
     }
     /**
      * Sets the displayName property value. Contains a friendly name for the project.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the sponsors property value. The Person or people who sponsored the project.
      * @param value Value to set for the sponsors property.
      */
     public void setSponsors(@jakarta.annotation.Nullable final java.util.List<RelatedPerson> value) {
-        this.sponsors = value;
+        this.BackingStore.set("sponsors", value);
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      */
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailUrl = value;
+        this.BackingStore.set("thumbnailUrl", value);
     }
 }

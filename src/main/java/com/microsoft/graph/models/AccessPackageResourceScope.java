@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
-     * The accessPackageResource property
-     */
-    private AccessPackageResource accessPackageResource;
-    /**
-     * The description of the scope.
-     */
-    private String description;
-    /**
-     * The display name of the scope.
-     */
-    private String displayName;
-    /**
-     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
-     */
-    private Boolean isRootScope;
-    /**
-     * The unique identifier for the scope in the resource as defined in the origin system.
-     */
-    private String originId;
-    /**
-     * The origin system for the scope.
-     */
-    private String originSystem;
-    /**
-     * The origin system for the role, if different.
-     */
-    private String roleOriginId;
-    /**
-     * A resource locator for the scope.
-     */
-    private String url;
-    /**
-     * Instantiates a new accessPackageResourceScope and sets the default values.
+     * Instantiates a new AccessPackageResourceScope and sets the default values.
      */
     public AccessPackageResourceScope() {
         super();
@@ -49,7 +17,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceScope
+     * @return a AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,27 +26,27 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResource property value. The accessPackageResource property
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
-        return this.accessPackageResource;
+        return this.BackingStore.get("accessPackageResource");
     }
     /**
      * Gets the description property value. The description of the scope.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the scope.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -99,43 +67,43 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     }
     /**
      * Gets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRootScope() {
-        return this.isRootScope;
+        return this.BackingStore.get("isRootScope");
     }
     /**
      * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.BackingStore.get("originId");
     }
     /**
      * Gets the originSystem property value. The origin system for the scope.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.BackingStore.get("originSystem");
     }
     /**
      * Gets the roleOriginId property value. The origin system for the role, if different.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleOriginId() {
-        return this.roleOriginId;
+        return this.BackingStore.get("roleOriginId");
     }
     /**
      * Gets the url property value. A resource locator for the scope.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -158,55 +126,55 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      */
     public void setAccessPackageResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
-        this.accessPackageResource = value;
+        this.BackingStore.set("accessPackageResource", value);
     }
     /**
      * Sets the description property value. The description of the scope.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the scope.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @param value Value to set for the isRootScope property.
      */
     public void setIsRootScope(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRootScope = value;
+        this.BackingStore.set("isRootScope", value);
     }
     /**
      * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.BackingStore.set("originId", value);
     }
     /**
      * Sets the originSystem property value. The origin system for the scope.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.BackingStore.set("originSystem", value);
     }
     /**
      * Sets the roleOriginId property value. The origin system for the role, if different.
      * @param value Value to set for the roleOriginId property.
      */
     public void setRoleOriginId(@jakarta.annotation.Nullable final String value) {
-        this.roleOriginId = value;
+        this.BackingStore.set("roleOriginId", value);
     }
     /**
      * Sets the url property value. A resource locator for the scope.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

@@ -12,35 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Tag extends Entity implements Parsable {
     /**
-     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     */
-    private ChildSelectability childSelectability;
-    /**
-     * Returns the tags that are a child of a tag.
-     */
-    private java.util.List<Tag> childTags;
-    /**
-     * The user who created the tag.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The description for the tag.
-     */
-    private String description;
-    /**
-     * Display name of the tag.
-     */
-    private String displayName;
-    /**
-     * The date and time the tag was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Returns the parent tag of the specified tag.
-     */
-    private Tag parent;
-    /**
-     * Instantiates a new tag and sets the default values.
+     * Instantiates a new Tag and sets the default values.
      */
     public Tag() {
         super();
@@ -48,7 +20,7 @@ public class Tag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tag
+     * @return a Tag
      */
     @jakarta.annotation.Nonnull
     public static Tag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,43 +29,43 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return a childSelectability
+     * @return a ChildSelectability
      */
     @jakarta.annotation.Nullable
     public ChildSelectability getChildSelectability() {
-        return this.childSelectability;
+        return this.BackingStore.get("childSelectability");
     }
     /**
      * Gets the childTags property value. Returns the tags that are a child of a tag.
-     * @return a tag
+     * @return a java.util.List<Tag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getChildTags() {
-        return this.childTags;
+        return this.BackingStore.get("childTags");
     }
     /**
      * Gets the createdBy property value. The user who created the tag.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the description property value. The description for the tag.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name of the tag.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -117,15 +89,15 @@ public class Tag extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the parent property value. Returns the parent tag of the specified tag.
-     * @return a tag
+     * @return a Tag
      */
     @jakarta.annotation.Nullable
     public Tag getParent() {
-        return this.parent;
+        return this.BackingStore.get("parent");
     }
     /**
      * Serializes information the current object
@@ -147,48 +119,48 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the childSelectability property.
      */
     public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
-        this.childSelectability = value;
+        this.BackingStore.set("childSelectability", value);
     }
     /**
      * Sets the childTags property value. Returns the tags that are a child of a tag.
      * @param value Value to set for the childTags property.
      */
     public void setChildTags(@jakarta.annotation.Nullable final java.util.List<Tag> value) {
-        this.childTags = value;
+        this.BackingStore.set("childTags", value);
     }
     /**
      * Sets the createdBy property value. The user who created the tag.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the description property value. The description for the tag.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name of the tag.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the tag was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the parent property value. Returns the parent tag of the specified tag.
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final Tag value) {
-        this.parent = value;
+        this.BackingStore.set("parent", value);
     }
 }

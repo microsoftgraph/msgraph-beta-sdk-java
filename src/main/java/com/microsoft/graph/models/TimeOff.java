@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
-     * The draft version of this timeOff that is viewable by managers. Required.
-     */
-    private TimeOffItem draftTimeOff;
-    /**
-     * The isStagedForDeletion property
-     */
-    private Boolean isStagedForDeletion;
-    /**
-     * The shared version of this timeOff that is viewable by both employees and managers. Required.
-     */
-    private TimeOffItem sharedTimeOff;
-    /**
-     * ID of the user assigned to the timeOff. Required.
-     */
-    private String userId;
-    /**
-     * Instantiates a new timeOff and sets the default values.
+     * Instantiates a new TimeOff and sets the default values.
      */
     public TimeOff() {
         super();
@@ -34,7 +18,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeOff
+     * @return a TimeOff
      */
     @jakarta.annotation.Nonnull
     public static TimeOff createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
-     * @return a timeOffItem
+     * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
     public TimeOffItem getDraftTimeOff() {
-        return this.draftTimeOff;
+        return this.BackingStore.get("draftTimeOff");
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +48,27 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
-        return this.isStagedForDeletion;
+        return this.BackingStore.get("isStagedForDeletion");
     }
     /**
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
-     * @return a timeOffItem
+     * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
     public TimeOffItem getSharedTimeOff() {
-        return this.sharedTimeOff;
+        return this.BackingStore.get("sharedTimeOff");
     }
     /**
      * Gets the userId property value. ID of the user assigned to the timeOff. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftTimeOff property.
      */
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
-        this.draftTimeOff = value;
+        this.BackingStore.set("draftTimeOff", value);
     }
     /**
      * Sets the isStagedForDeletion property value. The isStagedForDeletion property
      * @param value Value to set for the isStagedForDeletion property.
      */
     public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isStagedForDeletion = value;
+        this.BackingStore.set("isStagedForDeletion", value);
     }
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
      * @param value Value to set for the sharedTimeOff property.
      */
     public void setSharedTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
-        this.sharedTimeOff = value;
+        this.BackingStore.set("sharedTimeOff", value);
     }
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InboundActivityResults extends IndustryDataActivityStatistics implements Parsable {
     /**
-     * Number of errors encountered while processing the inbound flow.
-     */
-    private Integer errors;
-    /**
-     * Counts of active and inactive groups processed by the inbound flow.
-     */
-    private IndustryDataRunEntityCountMetric groups;
-    /**
-     * Number of people matched to an Azure Active Directory user, by role.
-     */
-    private java.util.List<IndustryDataRunRoleCountMetric> matchedPeopleByRole;
-    /**
-     * Counts of active and inactive memberships processed by the inbound flow.
-     */
-    private IndustryDataRunEntityCountMetric memberships;
-    /**
-     * Counts of active and inactive organizations processed by the inbound flow.
-     */
-    private IndustryDataRunEntityCountMetric organizations;
-    /**
-     * Counts of active and inactive people processed by the inbound flow.
-     */
-    private IndustryDataRunEntityCountMetric people;
-    /**
-     * Number of people not matched to an Azure Active Directory user, by role.
-     */
-    private java.util.List<IndustryDataRunRoleCountMetric> unmatchedPeopleByRole;
-    /**
-     * Number of warnings encountered while processing the inbound flow.
-     */
-    private Integer warnings;
-    /**
-     * Instantiates a new inboundActivityResults and sets the default values.
+     * Instantiates a new InboundActivityResults and sets the default values.
      */
     public InboundActivityResults() {
         super();
@@ -50,7 +18,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inboundActivityResults
+     * @return a InboundActivityResults
      */
     @jakarta.annotation.Nonnull
     public static InboundActivityResults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +27,11 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the errors property value. Number of errors encountered while processing the inbound flow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrors() {
-        return this.errors;
+        return this.BackingStore.get("errors");
     }
     /**
      * The deserialization information for the current model
@@ -84,59 +52,59 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the groups property value. Counts of active and inactive groups processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getGroups() {
-        return this.groups;
+        return this.BackingStore.get("groups");
     }
     /**
-     * Gets the matchedPeopleByRole property value. Number of people matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * Gets the matchedPeopleByRole property value. Number of people matched to a Microsoft Entra user, by role.
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
-        return this.matchedPeopleByRole;
+        return this.BackingStore.get("matchedPeopleByRole");
     }
     /**
      * Gets the memberships property value. Counts of active and inactive memberships processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getMemberships() {
-        return this.memberships;
+        return this.BackingStore.get("memberships");
     }
     /**
      * Gets the organizations property value. Counts of active and inactive organizations processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getOrganizations() {
-        return this.organizations;
+        return this.BackingStore.get("organizations");
     }
     /**
      * Gets the people property value. Counts of active and inactive people processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getPeople() {
-        return this.people;
+        return this.BackingStore.get("people");
     }
     /**
-     * Gets the unmatchedPeopleByRole property value. Number of people not matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * Gets the unmatchedPeopleByRole property value. Number of people not matched to a Microsoft Entra user, by role.
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
-        return this.unmatchedPeopleByRole;
+        return this.BackingStore.get("unmatchedPeopleByRole");
     }
     /**
      * Gets the warnings property value. Number of warnings encountered while processing the inbound flow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWarnings() {
-        return this.warnings;
+        return this.BackingStore.get("warnings");
     }
     /**
      * Serializes information the current object
@@ -151,55 +119,55 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final Integer value) {
-        this.errors = value;
+        this.BackingStore.set("errors", value);
     }
     /**
      * Sets the groups property value. Counts of active and inactive groups processed by the inbound flow.
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
-        this.groups = value;
+        this.BackingStore.set("groups", value);
     }
     /**
-     * Sets the matchedPeopleByRole property value. Number of people matched to an Azure Active Directory user, by role.
+     * Sets the matchedPeopleByRole property value. Number of people matched to a Microsoft Entra user, by role.
      * @param value Value to set for the matchedPeopleByRole property.
      */
     public void setMatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
-        this.matchedPeopleByRole = value;
+        this.BackingStore.set("matchedPeopleByRole", value);
     }
     /**
      * Sets the memberships property value. Counts of active and inactive memberships processed by the inbound flow.
      * @param value Value to set for the memberships property.
      */
     public void setMemberships(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
-        this.memberships = value;
+        this.BackingStore.set("memberships", value);
     }
     /**
      * Sets the organizations property value. Counts of active and inactive organizations processed by the inbound flow.
      * @param value Value to set for the organizations property.
      */
     public void setOrganizations(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
-        this.organizations = value;
+        this.BackingStore.set("organizations", value);
     }
     /**
      * Sets the people property value. Counts of active and inactive people processed by the inbound flow.
      * @param value Value to set for the people property.
      */
     public void setPeople(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
-        this.people = value;
+        this.BackingStore.set("people", value);
     }
     /**
-     * Sets the unmatchedPeopleByRole property value. Number of people not matched to an Azure Active Directory user, by role.
+     * Sets the unmatchedPeopleByRole property value. Number of people not matched to a Microsoft Entra user, by role.
      * @param value Value to set for the unmatchedPeopleByRole property.
      */
     public void setUnmatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
-        this.unmatchedPeopleByRole = value;
+        this.BackingStore.set("unmatchedPeopleByRole", value);
     }
     /**
      * Sets the warnings property value. Number of warnings encountered while processing the inbound flow.
      * @param value Value to set for the warnings property.
      */
     public void setWarnings(@jakarta.annotation.Nullable final Integer value) {
-        this.warnings = value;
+        this.BackingStore.set("warnings", value);
     }
 }

@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessScheduleRequest implements Parsable {
     /**
-     * The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
-     */
-    private PrivilegedAccessGroupRelationships accessId;
-    /**
-     * References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
-     */
-    private Group group;
-    /**
-     * The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
-     */
-    private String groupId;
-    /**
-     * References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
-     */
-    private DirectoryObject principal;
-    /**
-     * The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
-     */
-    private String principalId;
-    /**
-     * Schedule created by this request.
-     */
-    private PrivilegedAccessGroupEligibilitySchedule targetSchedule;
-    /**
-     * The identifier of the schedule that's created from the eligibility request. Optional.
-     */
-    private String targetScheduleId;
-    /**
-     * Instantiates a new privilegedAccessGroupEligibilityScheduleRequest and sets the default values.
+     * Instantiates a new PrivilegedAccessGroupEligibilityScheduleRequest and sets the default values.
      */
     public PrivilegedAccessGroupEligibilityScheduleRequest() {
         super();
@@ -46,7 +18,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessGroupEligibilityScheduleRequest
+     * @return a PrivilegedAccessGroupEligibilityScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupEligibilityScheduleRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
     }
     /**
      * Gets the accessId property value. The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
-     * @return a privilegedAccessGroupRelationships
+     * @return a PrivilegedAccessGroupRelationships
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
-        return this.accessId;
+        return this.BackingStore.get("accessId");
     }
     /**
      * The deserialization information for the current model
@@ -79,51 +51,51 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
     }
     /**
      * Gets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
-     * @return a group
+     * @return a Group
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
-        return this.group;
+        return this.BackingStore.get("group");
     }
     /**
      * Gets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.BackingStore.get("groupId");
     }
     /**
      * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
-        return this.principal;
+        return this.BackingStore.get("principal");
     }
     /**
      * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.BackingStore.get("principalId");
     }
     /**
      * Gets the targetSchedule property value. Schedule created by this request.
-     * @return a privilegedAccessGroupEligibilitySchedule
+     * @return a PrivilegedAccessGroupEligibilitySchedule
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilitySchedule getTargetSchedule() {
-        return this.targetSchedule;
+        return this.BackingStore.get("targetSchedule");
     }
     /**
      * Gets the targetScheduleId property value. The identifier of the schedule that's created from the eligibility request. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetScheduleId() {
-        return this.targetScheduleId;
+        return this.BackingStore.get("targetScheduleId");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
      * @param value Value to set for the accessId property.
      */
     public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
-        this.accessId = value;
+        this.BackingStore.set("accessId", value);
     }
     /**
      * Sets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
-        this.group = value;
+        this.BackingStore.set("group", value);
     }
     /**
      * Sets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.BackingStore.set("groupId", value);
     }
     /**
      * Sets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.principal = value;
+        this.BackingStore.set("principal", value);
     }
     /**
      * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.BackingStore.set("principalId", value);
     }
     /**
      * Sets the targetSchedule property value. Schedule created by this request.
      * @param value Value to set for the targetSchedule property.
      */
     public void setTargetSchedule(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilitySchedule value) {
-        this.targetSchedule = value;
+        this.BackingStore.set("targetSchedule", value);
     }
     /**
      * Sets the targetScheduleId property value. The identifier of the schedule that's created from the eligibility request. Optional.
      * @param value Value to set for the targetScheduleId property.
      */
     public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {
-        this.targetScheduleId = value;
+        this.BackingStore.set("targetScheduleId", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleAssignmentRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrivilegedRoleAssignmentRequest> value;
-    /**
-     * Instantiates a new privilegedRoleAssignmentRequestCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedRoleAssignmentRequestCollectionResponse and sets the default values.
      */
     public PrivilegedRoleAssignmentRequestCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrivilegedRoleAssignmentRequestCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleAssignmentRequestCollectionResponse
+     * @return a PrivilegedRoleAssignmentRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleAssignmentRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrivilegedRoleAssignmentRequestCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedRoleAssignmentRequest
+     * @return a java.util.List<PrivilegedRoleAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedRoleAssignmentRequest> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedRoleAssignmentRequestCollectionResponse extends BaseColle
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrivilegedRoleAssignmentRequest> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

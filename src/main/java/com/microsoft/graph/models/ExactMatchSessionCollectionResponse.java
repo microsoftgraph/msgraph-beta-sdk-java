@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchSessionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ExactMatchSession> value;
-    /**
-     * Instantiates a new exactMatchSessionCollectionResponse and sets the default values.
+     * Instantiates a new ExactMatchSessionCollectionResponse and sets the default values.
      */
     public ExactMatchSessionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ExactMatchSessionCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchSessionCollectionResponse
+     * @return a ExactMatchSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchSessionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ExactMatchSessionCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a exactMatchSession
+     * @return a java.util.List<ExactMatchSession>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactMatchSession> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ExactMatchSessionCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ExactMatchSession> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

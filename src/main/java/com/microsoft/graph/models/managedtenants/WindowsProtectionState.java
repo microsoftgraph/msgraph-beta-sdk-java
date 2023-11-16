@@ -11,107 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsProtectionState extends Entity implements Parsable {
     /**
-     * The anti-malware version for the managed device. Optional. Read-only.
-     */
-    private String antiMalwareVersion;
-    /**
-     * A flag indicating whether attention is required for the managed device. Optional. Read-only.
-     */
-    private Boolean attentionRequired;
-    /**
-     * A flag indicating whether the managed device has been deleted. Optional. Read-only.
-     */
-    private Boolean deviceDeleted;
-    /**
-     * The date and time the device property has been refreshed. Optional. Read-only.
-     */
-    private OffsetDateTime devicePropertyRefreshDateTime;
-    /**
-     * The anti-virus engine version for the managed device. Optional. Read-only.
-     */
-    private String engineVersion;
-    /**
-     * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
-     */
-    private Boolean fullScanOverdue;
-    /**
-     * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
-     */
-    private Boolean fullScanRequired;
-    /**
-     * The date and time a full scan was completed. Optional. Read-only.
-     */
-    private OffsetDateTime lastFullScanDateTime;
-    /**
-     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
-     */
-    private String lastFullScanSignatureVersion;
-    /**
-     * The date and time a quick scan was completed. Optional. Read-only.
-     */
-    private OffsetDateTime lastQuickScanDateTime;
-    /**
-     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
-     */
-    private String lastQuickScanSignatureVersion;
-    /**
-     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * The date and time the protection state was last reported for the managed device. Optional. Read-only.
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
-     */
-    private Boolean malwareProtectionEnabled;
-    /**
-     * The health state for the managed device. Optional. Read-only.
-     */
-    private String managedDeviceHealthState;
-    /**
-     * The unique identifier for the managed device. Optional. Read-only.
-     */
-    private String managedDeviceId;
-    /**
-     * The display name for the managed device. Optional. Read-only.
-     */
-    private String managedDeviceName;
-    /**
-     * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
-     */
-    private Boolean networkInspectionSystemEnabled;
-    /**
-     * A flag indicating weather a quick scan is overdue. Optional. Read-only.
-     */
-    private Boolean quickScanOverdue;
-    /**
-     * A flag indicating whether real time protection is enabled. Optional. Read-only.
-     */
-    private Boolean realTimeProtectionEnabled;
-    /**
-     * A flag indicating whether a reboot is required. Optional. Read-only.
-     */
-    private Boolean rebootRequired;
-    /**
-     * A flag indicating whether an signature update is overdue. Optional. Read-only.
-     */
-    private Boolean signatureUpdateOverdue;
-    /**
-     * The signature version for the managed device. Optional. Read-only.
-     */
-    private String signatureVersion;
-    /**
-     * The display name for the managed tenant. Optional. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new windowsProtectionState and sets the default values.
+     * Instantiates a new WindowsProtectionState and sets the default values.
      */
     public WindowsProtectionState() {
         super();
@@ -119,7 +19,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsProtectionState
+     * @return a WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public static WindowsProtectionState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -128,27 +28,27 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the antiMalwareVersion property value. The anti-malware version for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAntiMalwareVersion() {
-        return this.antiMalwareVersion;
+        return this.BackingStore.get("antiMalwareVersion");
     }
     /**
      * Gets the attentionRequired property value. A flag indicating whether attention is required for the managed device. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAttentionRequired() {
-        return this.attentionRequired;
+        return this.BackingStore.get("attentionRequired");
     }
     /**
      * Gets the deviceDeleted property value. A flag indicating whether the managed device has been deleted. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceDeleted() {
-        return this.deviceDeleted;
+        return this.BackingStore.get("deviceDeleted");
     }
     /**
      * Gets the devicePropertyRefreshDateTime property value. The date and time the device property has been refreshed. Optional. Read-only.
@@ -156,15 +56,15 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDevicePropertyRefreshDateTime() {
-        return this.devicePropertyRefreshDateTime;
+        return this.BackingStore.get("devicePropertyRefreshDateTime");
     }
     /**
      * Gets the engineVersion property value. The anti-virus engine version for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEngineVersion() {
-        return this.engineVersion;
+        return this.BackingStore.get("engineVersion");
     }
     /**
      * The deserialization information for the current model
@@ -202,19 +102,19 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the fullScanOverdue property value. A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScanOverdue() {
-        return this.fullScanOverdue;
+        return this.BackingStore.get("fullScanOverdue");
     }
     /**
      * Gets the fullScanRequired property value. A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScanRequired() {
-        return this.fullScanRequired;
+        return this.BackingStore.get("fullScanRequired");
     }
     /**
      * Gets the lastFullScanDateTime property value. The date and time a full scan was completed. Optional. Read-only.
@@ -222,15 +122,15 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastFullScanDateTime() {
-        return this.lastFullScanDateTime;
+        return this.BackingStore.get("lastFullScanDateTime");
     }
     /**
      * Gets the lastFullScanSignatureVersion property value. The version anti-malware version used to perform the last full scan. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastFullScanSignatureVersion() {
-        return this.lastFullScanSignatureVersion;
+        return this.BackingStore.get("lastFullScanSignatureVersion");
     }
     /**
      * Gets the lastQuickScanDateTime property value. The date and time a quick scan was completed. Optional. Read-only.
@@ -238,15 +138,15 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastQuickScanDateTime() {
-        return this.lastQuickScanDateTime;
+        return this.BackingStore.get("lastQuickScanDateTime");
     }
     /**
      * Gets the lastQuickScanSignatureVersion property value. The version anti-malware version used to perform the last full scan. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastQuickScanSignatureVersion() {
-        return this.lastQuickScanSignatureVersion;
+        return this.BackingStore.get("lastQuickScanSignatureVersion");
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -254,7 +154,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.BackingStore.get("lastRefreshedDateTime");
     }
     /**
      * Gets the lastReportedDateTime property value. The date and time the protection state was last reported for the managed device. Optional. Read-only.
@@ -262,103 +162,103 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.BackingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the malwareProtectionEnabled property value. A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMalwareProtectionEnabled() {
-        return this.malwareProtectionEnabled;
+        return this.BackingStore.get("malwareProtectionEnabled");
     }
     /**
      * Gets the managedDeviceHealthState property value. The health state for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceHealthState() {
-        return this.managedDeviceHealthState;
+        return this.BackingStore.get("managedDeviceHealthState");
     }
     /**
      * Gets the managedDeviceId property value. The unique identifier for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.BackingStore.get("managedDeviceId");
     }
     /**
      * Gets the managedDeviceName property value. The display name for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
-        return this.managedDeviceName;
+        return this.BackingStore.get("managedDeviceName");
     }
     /**
      * Gets the networkInspectionSystemEnabled property value. A flag indicating whether the network inspection system is enabled. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNetworkInspectionSystemEnabled() {
-        return this.networkInspectionSystemEnabled;
+        return this.BackingStore.get("networkInspectionSystemEnabled");
     }
     /**
      * Gets the quickScanOverdue property value. A flag indicating weather a quick scan is overdue. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getQuickScanOverdue() {
-        return this.quickScanOverdue;
+        return this.BackingStore.get("quickScanOverdue");
     }
     /**
      * Gets the realTimeProtectionEnabled property value. A flag indicating whether real time protection is enabled. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRealTimeProtectionEnabled() {
-        return this.realTimeProtectionEnabled;
+        return this.BackingStore.get("realTimeProtectionEnabled");
     }
     /**
      * Gets the rebootRequired property value. A flag indicating whether a reboot is required. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRebootRequired() {
-        return this.rebootRequired;
+        return this.BackingStore.get("rebootRequired");
     }
     /**
      * Gets the signatureUpdateOverdue property value. A flag indicating whether an signature update is overdue. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSignatureUpdateOverdue() {
-        return this.signatureUpdateOverdue;
+        return this.BackingStore.get("signatureUpdateOverdue");
     }
     /**
      * Gets the signatureVersion property value. The signature version for the managed device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignatureVersion() {
-        return this.signatureVersion;
+        return this.BackingStore.get("signatureVersion");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.BackingStore.get("tenantDisplayName");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -398,174 +298,174 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the antiMalwareVersion property.
      */
     public void setAntiMalwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.antiMalwareVersion = value;
+        this.BackingStore.set("antiMalwareVersion", value);
     }
     /**
      * Sets the attentionRequired property value. A flag indicating whether attention is required for the managed device. Optional. Read-only.
      * @param value Value to set for the attentionRequired property.
      */
     public void setAttentionRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.attentionRequired = value;
+        this.BackingStore.set("attentionRequired", value);
     }
     /**
      * Sets the deviceDeleted property value. A flag indicating whether the managed device has been deleted. Optional. Read-only.
      * @param value Value to set for the deviceDeleted property.
      */
     public void setDeviceDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceDeleted = value;
+        this.BackingStore.set("deviceDeleted", value);
     }
     /**
      * Sets the devicePropertyRefreshDateTime property value. The date and time the device property has been refreshed. Optional. Read-only.
      * @param value Value to set for the devicePropertyRefreshDateTime property.
      */
     public void setDevicePropertyRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.devicePropertyRefreshDateTime = value;
+        this.BackingStore.set("devicePropertyRefreshDateTime", value);
     }
     /**
      * Sets the engineVersion property value. The anti-virus engine version for the managed device. Optional. Read-only.
      * @param value Value to set for the engineVersion property.
      */
     public void setEngineVersion(@jakarta.annotation.Nullable final String value) {
-        this.engineVersion = value;
+        this.BackingStore.set("engineVersion", value);
     }
     /**
      * Sets the fullScanOverdue property value. A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
      * @param value Value to set for the fullScanOverdue property.
      */
     public void setFullScanOverdue(@jakarta.annotation.Nullable final Boolean value) {
-        this.fullScanOverdue = value;
+        this.BackingStore.set("fullScanOverdue", value);
     }
     /**
      * Sets the fullScanRequired property value. A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
      * @param value Value to set for the fullScanRequired property.
      */
     public void setFullScanRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.fullScanRequired = value;
+        this.BackingStore.set("fullScanRequired", value);
     }
     /**
      * Sets the lastFullScanDateTime property value. The date and time a full scan was completed. Optional. Read-only.
      * @param value Value to set for the lastFullScanDateTime property.
      */
     public void setLastFullScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastFullScanDateTime = value;
+        this.BackingStore.set("lastFullScanDateTime", value);
     }
     /**
      * Sets the lastFullScanSignatureVersion property value. The version anti-malware version used to perform the last full scan. Optional. Read-only.
      * @param value Value to set for the lastFullScanSignatureVersion property.
      */
     public void setLastFullScanSignatureVersion(@jakarta.annotation.Nullable final String value) {
-        this.lastFullScanSignatureVersion = value;
+        this.BackingStore.set("lastFullScanSignatureVersion", value);
     }
     /**
      * Sets the lastQuickScanDateTime property value. The date and time a quick scan was completed. Optional. Read-only.
      * @param value Value to set for the lastQuickScanDateTime property.
      */
     public void setLastQuickScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastQuickScanDateTime = value;
+        this.BackingStore.set("lastQuickScanDateTime", value);
     }
     /**
      * Sets the lastQuickScanSignatureVersion property value. The version anti-malware version used to perform the last full scan. Optional. Read-only.
      * @param value Value to set for the lastQuickScanSignatureVersion property.
      */
     public void setLastQuickScanSignatureVersion(@jakarta.annotation.Nullable final String value) {
-        this.lastQuickScanSignatureVersion = value;
+        this.BackingStore.set("lastQuickScanSignatureVersion", value);
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.BackingStore.set("lastRefreshedDateTime", value);
     }
     /**
      * Sets the lastReportedDateTime property value. The date and time the protection state was last reported for the managed device. Optional. Read-only.
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.BackingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the malwareProtectionEnabled property value. A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
      * @param value Value to set for the malwareProtectionEnabled property.
      */
     public void setMalwareProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.malwareProtectionEnabled = value;
+        this.BackingStore.set("malwareProtectionEnabled", value);
     }
     /**
      * Sets the managedDeviceHealthState property value. The health state for the managed device. Optional. Read-only.
      * @param value Value to set for the managedDeviceHealthState property.
      */
     public void setManagedDeviceHealthState(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceHealthState = value;
+        this.BackingStore.set("managedDeviceHealthState", value);
     }
     /**
      * Sets the managedDeviceId property value. The unique identifier for the managed device. Optional. Read-only.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.BackingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the managedDeviceName property value. The display name for the managed device. Optional. Read-only.
      * @param value Value to set for the managedDeviceName property.
      */
     public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceName = value;
+        this.BackingStore.set("managedDeviceName", value);
     }
     /**
      * Sets the networkInspectionSystemEnabled property value. A flag indicating whether the network inspection system is enabled. Optional. Read-only.
      * @param value Value to set for the networkInspectionSystemEnabled property.
      */
     public void setNetworkInspectionSystemEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.networkInspectionSystemEnabled = value;
+        this.BackingStore.set("networkInspectionSystemEnabled", value);
     }
     /**
      * Sets the quickScanOverdue property value. A flag indicating weather a quick scan is overdue. Optional. Read-only.
      * @param value Value to set for the quickScanOverdue property.
      */
     public void setQuickScanOverdue(@jakarta.annotation.Nullable final Boolean value) {
-        this.quickScanOverdue = value;
+        this.BackingStore.set("quickScanOverdue", value);
     }
     /**
      * Sets the realTimeProtectionEnabled property value. A flag indicating whether real time protection is enabled. Optional. Read-only.
      * @param value Value to set for the realTimeProtectionEnabled property.
      */
     public void setRealTimeProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.realTimeProtectionEnabled = value;
+        this.BackingStore.set("realTimeProtectionEnabled", value);
     }
     /**
      * Sets the rebootRequired property value. A flag indicating whether a reboot is required. Optional. Read-only.
      * @param value Value to set for the rebootRequired property.
      */
     public void setRebootRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.rebootRequired = value;
+        this.BackingStore.set("rebootRequired", value);
     }
     /**
      * Sets the signatureUpdateOverdue property value. A flag indicating whether an signature update is overdue. Optional. Read-only.
      * @param value Value to set for the signatureUpdateOverdue property.
      */
     public void setSignatureUpdateOverdue(@jakarta.annotation.Nullable final Boolean value) {
-        this.signatureUpdateOverdue = value;
+        this.BackingStore.set("signatureUpdateOverdue", value);
     }
     /**
      * Sets the signatureVersion property value. The signature version for the managed device. Optional. Read-only.
      * @param value Value to set for the signatureVersion property.
      */
     public void setSignatureVersion(@jakarta.annotation.Nullable final String value) {
-        this.signatureVersion = value;
+        this.BackingStore.set("signatureVersion", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.BackingStore.set("tenantDisplayName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesDirectorySynchronization extends Entity implements Parsable {
     /**
-     * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
-     */
-    private OnPremisesDirectorySynchronizationConfiguration configuration;
-    /**
-     * The features property
-     */
-    private OnPremisesDirectorySynchronizationFeature features;
-    /**
-     * Instantiates a new onPremisesDirectorySynchronization and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronization and sets the default values.
      */
     public OnPremisesDirectorySynchronization() {
         super();
@@ -25,7 +17,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesDirectorySynchronization
+     * @return a OnPremisesDirectorySynchronization
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,19 +26,19 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     }
     /**
      * Gets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
-     * @return a onPremisesDirectorySynchronizationConfiguration
+     * @return a OnPremisesDirectorySynchronizationConfiguration
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationConfiguration getConfiguration() {
-        return this.configuration;
+        return this.BackingStore.get("configuration");
     }
     /**
      * Gets the features property value. The features property
-     * @return a onPremisesDirectorySynchronizationFeature
+     * @return a OnPremisesDirectorySynchronizationFeature
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationFeature getFeatures() {
-        return this.features;
+        return this.BackingStore.get("features");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
-        this.configuration = value;
+        this.BackingStore.set("configuration", value);
     }
     /**
      * Sets the features property value. The features property
      * @param value Value to set for the features property.
      */
     public void setFeatures(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationFeature value) {
-        this.features = value;
+        this.BackingStore.set("features", value);
     }
 }

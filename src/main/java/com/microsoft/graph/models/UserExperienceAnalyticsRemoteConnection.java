@@ -12,59 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {
     /**
-     * The sign in failure percentage of Cloud PC Device. Valid values 0 to 100
-     */
-    private Double cloudPcFailurePercentage;
-    /**
-     * The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double cloudPcRoundTripTime;
-    /**
-     * The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double cloudPcSignInTime;
-    /**
-     * The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double coreBootTime;
-    /**
-     * The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double coreSignInTime;
-    /**
-     * The count of remote connection. Valid values 0 to 2147483647
-     */
-    private Integer deviceCount;
-    /**
-     * The id of the device.
-     */
-    private String deviceId;
-    /**
-     * The name of the device.
-     */
-    private String deviceName;
-    /**
-     * The user experience analytics manufacturer.
-     */
-    private String manufacturer;
-    /**
-     * The user experience analytics device model.
-     */
-    private String model;
-    /**
-     * The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double remoteSignInTime;
-    /**
-     * The user experience analytics userPrincipalName.
-     */
-    private String userPrincipalName;
-    /**
-     * The user experience analytics virtual network.
-     */
-    private String virtualNetwork;
-    /**
-     * Instantiates a new userExperienceAnalyticsRemoteConnection and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsRemoteConnection and sets the default values.
      */
     public UserExperienceAnalyticsRemoteConnection() {
         super();
@@ -72,7 +20,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsRemoteConnection
+     * @return a UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsRemoteConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,67 +29,67 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the cloudPcFailurePercentage property value. The sign in failure percentage of Cloud PC Device. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcFailurePercentage() {
-        return this.cloudPcFailurePercentage;
+        return this.BackingStore.get("cloudPcFailurePercentage");
     }
     /**
      * Gets the cloudPcRoundTripTime property value. The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcRoundTripTime() {
-        return this.cloudPcRoundTripTime;
+        return this.BackingStore.get("cloudPcRoundTripTime");
     }
     /**
      * Gets the cloudPcSignInTime property value. The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcSignInTime() {
-        return this.cloudPcSignInTime;
+        return this.BackingStore.get("cloudPcSignInTime");
     }
     /**
      * Gets the coreBootTime property value. The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCoreBootTime() {
-        return this.coreBootTime;
+        return this.BackingStore.get("coreBootTime");
     }
     /**
      * Gets the coreSignInTime property value. The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCoreSignInTime() {
-        return this.coreSignInTime;
+        return this.BackingStore.get("coreSignInTime");
     }
     /**
      * Gets the deviceCount property value. The count of remote connection. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
-        return this.deviceCount;
+        return this.BackingStore.get("deviceCount");
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. The name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -167,43 +115,43 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the manufacturer property value. The user experience analytics manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. The user experience analytics device model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the remoteSignInTime property value. The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRemoteSignInTime() {
-        return this.remoteSignInTime;
+        return this.BackingStore.get("remoteSignInTime");
     }
     /**
      * Gets the userPrincipalName property value. The user experience analytics userPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Gets the virtualNetwork property value. The user experience analytics virtual network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualNetwork() {
-        return this.virtualNetwork;
+        return this.BackingStore.get("virtualNetwork");
     }
     /**
      * Serializes information the current object
@@ -231,90 +179,90 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the cloudPcFailurePercentage property.
      */
     public void setCloudPcFailurePercentage(@jakarta.annotation.Nullable final Double value) {
-        this.cloudPcFailurePercentage = value;
+        this.BackingStore.set("cloudPcFailurePercentage", value);
     }
     /**
      * Sets the cloudPcRoundTripTime property value. The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the cloudPcRoundTripTime property.
      */
     public void setCloudPcRoundTripTime(@jakarta.annotation.Nullable final Double value) {
-        this.cloudPcRoundTripTime = value;
+        this.BackingStore.set("cloudPcRoundTripTime", value);
     }
     /**
      * Sets the cloudPcSignInTime property value. The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the cloudPcSignInTime property.
      */
     public void setCloudPcSignInTime(@jakarta.annotation.Nullable final Double value) {
-        this.cloudPcSignInTime = value;
+        this.BackingStore.set("cloudPcSignInTime", value);
     }
     /**
      * Sets the coreBootTime property value. The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the coreBootTime property.
      */
     public void setCoreBootTime(@jakarta.annotation.Nullable final Double value) {
-        this.coreBootTime = value;
+        this.BackingStore.set("coreBootTime", value);
     }
     /**
      * Sets the coreSignInTime property value. The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the coreSignInTime property.
      */
     public void setCoreSignInTime(@jakarta.annotation.Nullable final Double value) {
-        this.coreSignInTime = value;
+        this.BackingStore.set("coreSignInTime", value);
     }
     /**
      * Sets the deviceCount property value. The count of remote connection. Valid values 0 to 2147483647
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCount = value;
+        this.BackingStore.set("deviceCount", value);
     }
     /**
      * Sets the deviceId property value. The id of the device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. The name of the device.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the manufacturer property value. The user experience analytics manufacturer.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. The user experience analytics device model.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the remoteSignInTime property value. The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the remoteSignInTime property.
      */
     public void setRemoteSignInTime(@jakarta.annotation.Nullable final Double value) {
-        this.remoteSignInTime = value;
+        this.BackingStore.set("remoteSignInTime", value);
     }
     /**
      * Sets the userPrincipalName property value. The user experience analytics userPrincipalName.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
     /**
      * Sets the virtualNetwork property value. The user experience analytics virtual network.
      * @param value Value to set for the virtualNetwork property.
      */
     public void setVirtualNetwork(@jakarta.annotation.Nullable final String value) {
-        this.virtualNetwork = value;
+        this.BackingStore.set("virtualNetwork", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedTeam extends Entity implements Parsable {
     /**
-     * The channels those are either shared with this deleted team or created in this deleted team.
-     */
-    private java.util.List<Channel> channels;
-    /**
-     * Instantiates a new deletedTeam and sets the default values.
+     * Instantiates a new DeletedTeam and sets the default values.
      */
     public DeletedTeam() {
         super();
@@ -21,7 +17,7 @@ public class DeletedTeam extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deletedTeam
+     * @return a DeletedTeam
      */
     @jakarta.annotation.Nonnull
     public static DeletedTeam createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class DeletedTeam extends Entity implements Parsable {
     }
     /**
      * Gets the channels property value. The channels those are either shared with this deleted team or created in this deleted team.
-     * @return a channel
+     * @return a java.util.List<Channel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Channel> getChannels() {
-        return this.channels;
+        return this.BackingStore.get("channels");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class DeletedTeam extends Entity implements Parsable {
      * @param value Value to set for the channels property.
      */
     public void setChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
-        this.channels = value;
+        this.BackingStore.set("channels", value);
     }
 }

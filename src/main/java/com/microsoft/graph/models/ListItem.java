@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ListItem extends BaseItem implements Parsable {
     /**
-     * The list of recent activities that took place on this item.
-     */
-    private java.util.List<ItemActivityOLD> activities;
-    /**
-     * Analytics about the view activities that took place on this item.
-     */
-    private ItemAnalytics analytics;
-    /**
-     * The content type of this list item
-     */
-    private ContentTypeInfo contentType;
-    /**
-     * The deleted property
-     */
-    private Deleted deleted;
-    /**
-     * Version information for a document set version created by a user.
-     */
-    private java.util.List<DocumentSetVersion> documentSetVersions;
-    /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-     */
-    private DriveItem driveItem;
-    /**
-     * The values of the columns set on this list item.
-     */
-    private FieldValueSet fields;
-    /**
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     */
-    private SharepointIds sharepointIds;
-    /**
-     * The list of previous versions of the list item.
-     */
-    private java.util.List<ListItemVersion> versions;
-    /**
-     * Instantiates a new listItem and sets the default values.
+     * Instantiates a new ListItem and sets the default values.
      */
     public ListItem() {
         super();
@@ -54,7 +18,7 @@ public class ListItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nonnull
     public static ListItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,51 +27,51 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the activities property value. The list of recent activities that took place on this item.
-     * @return a itemActivityOLD
+     * @return a java.util.List<ItemActivityOLD>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityOLD> getActivities() {
-        return this.activities;
+        return this.BackingStore.get("activities");
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
-     * @return a itemAnalytics
+     * @return a ItemAnalytics
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
-        return this.analytics;
+        return this.BackingStore.get("analytics");
     }
     /**
      * Gets the contentType property value. The content type of this list item
-     * @return a contentTypeInfo
+     * @return a ContentTypeInfo
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * Gets the deleted property value. The deleted property
-     * @return a deleted
+     * @return a Deleted
      */
     @jakarta.annotation.Nullable
     public Deleted getDeleted() {
-        return this.deleted;
+        return this.BackingStore.get("deleted");
     }
     /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
-     * @return a documentSetVersion
+     * @return a java.util.List<DocumentSetVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
-        return this.documentSetVersions;
+        return this.BackingStore.get("documentSetVersions");
     }
     /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this.driveItem;
+        return this.BackingStore.get("driveItem");
     }
     /**
      * The deserialization information for the current model
@@ -129,27 +93,27 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the fields property value. The values of the columns set on this list item.
-     * @return a fieldValueSet
+     * @return a FieldValueSet
      */
     @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
-        return this.fields;
+        return this.BackingStore.get("fields");
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this.sharepointIds;
+        return this.BackingStore.get("sharepointIds");
     }
     /**
      * Gets the versions property value. The list of previous versions of the list item.
-     * @return a listItemVersion
+     * @return a java.util.List<ListItemVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ListItemVersion> getVersions() {
-        return this.versions;
+        return this.BackingStore.get("versions");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
-        this.activities = value;
+        this.BackingStore.set("activities", value);
     }
     /**
      * Sets the analytics property value. Analytics about the view activities that took place on this item.
      * @param value Value to set for the analytics property.
      */
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
-        this.analytics = value;
+        this.BackingStore.set("analytics", value);
     }
     /**
      * Sets the contentType property value. The content type of this list item
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the deleted property value. The deleted property
      * @param value Value to set for the deleted property.
      */
     public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
-        this.deleted = value;
+        this.BackingStore.set("deleted", value);
     }
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.
      * @param value Value to set for the documentSetVersions property.
      */
     public void setDocumentSetVersions(@jakarta.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
-        this.documentSetVersions = value;
+        this.BackingStore.set("documentSetVersions", value);
     }
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
-        this.driveItem = value;
+        this.BackingStore.set("driveItem", value);
     }
     /**
      * Sets the fields property value. The values of the columns set on this list item.
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final FieldValueSet value) {
-        this.fields = value;
+        this.BackingStore.set("fields", value);
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
      */
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
-        this.sharepointIds = value;
+        this.BackingStore.set("sharepointIds", value);
     }
     /**
      * Sets the versions property value. The list of previous versions of the list item.
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<ListItemVersion> value) {
-        this.versions = value;
+        this.BackingStore.set("versions", value);
     }
 }

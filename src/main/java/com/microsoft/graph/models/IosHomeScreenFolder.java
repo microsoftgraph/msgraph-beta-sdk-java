@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
-     * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IosHomeScreenFolderPage> pages;
-    /**
-     * Instantiates a new iosHomeScreenFolder and sets the default values.
+     * Instantiates a new IosHomeScreenFolder and sets the default values.
      */
     public IosHomeScreenFolder() {
         super();
@@ -25,7 +21,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosHomeScreenFolder
+     * @return a IosHomeScreenFolder
      */
     @jakarta.annotation.Nonnull
     public static IosHomeScreenFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenFolderPage
+     * @return a java.util.List<IosHomeScreenFolderPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenFolderPage> getPages() {
-        return this.pages;
+        return this.BackingStore.get("pages");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenFolderPage> value) {
-        this.pages = value;
+        this.BackingStore.set("pages", value);
     }
 }

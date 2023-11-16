@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
@@ -11,101 +14,22 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Employee implements AdditionalDataHolder, Parsable {
+public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The address property
-     */
-    private PostalAddressType address;
-    /**
-     * The birthDate property
-     */
-    private LocalDate birthDate;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The email property
-     */
-    private String email;
-    /**
-     * The employmentDate property
-     */
-    private LocalDate employmentDate;
-    /**
-     * The givenName property
-     */
-    private String givenName;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The jobTitle property
-     */
-    private String jobTitle;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The middleName property
-     */
-    private String middleName;
-    /**
-     * The mobilePhone property
-     */
-    private String mobilePhone;
-    /**
-     * The number property
-     */
-    private String number;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The personalEmail property
-     */
-    private String personalEmail;
-    /**
-     * The phoneNumber property
-     */
-    private String phoneNumber;
-    /**
-     * The picture property
-     */
-    private java.util.List<Picture> picture;
-    /**
-     * The statisticsGroupCode property
-     */
-    private String statisticsGroupCode;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The surname property
-     */
-    private String surname;
-    /**
-     * The terminationDate property
-     */
-    private LocalDate terminationDate;
-    /**
-     * Instantiates a new employee and sets the default values.
+     * Instantiates a new Employee and sets the default values.
      */
     public Employee() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a employee
+     * @return a Employee
      */
     @jakarta.annotation.Nonnull
     public static Employee createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -113,20 +37,33 @@ public class Employee implements AdditionalDataHolder, Parsable {
         return new Employee();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The address property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
-        return this.address;
+        return this.BackingStore.get("address");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the birthDate property value. The birthDate property
@@ -134,23 +71,23 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getBirthDate() {
-        return this.birthDate;
+        return this.BackingStore.get("birthDate");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * Gets the employmentDate property value. The employmentDate property
@@ -158,7 +95,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getEmploymentDate() {
-        return this.employmentDate;
+        return this.BackingStore.get("employmentDate");
     }
     /**
      * The deserialization information for the current model
@@ -191,11 +128,11 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the givenName property value. The givenName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
-        return this.givenName;
+        return this.BackingStore.get("givenName");
     }
     /**
      * Gets the id property value. The id property
@@ -203,15 +140,15 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the jobTitle property value. The jobTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
-        return this.jobTitle;
+        return this.BackingStore.get("jobTitle");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -219,87 +156,87 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the middleName property value. The middleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMiddleName() {
-        return this.middleName;
+        return this.BackingStore.get("middleName");
     }
     /**
      * Gets the mobilePhone property value. The mobilePhone property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
-        return this.mobilePhone;
+        return this.BackingStore.get("mobilePhone");
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.BackingStore.get("number");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the personalEmail property value. The personalEmail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalEmail() {
-        return this.personalEmail;
+        return this.BackingStore.get("personalEmail");
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return this.BackingStore.get("phoneNumber");
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
-        return this.picture;
+        return this.BackingStore.get("picture");
     }
     /**
      * Gets the statisticsGroupCode property value. The statisticsGroupCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatisticsGroupCode() {
-        return this.statisticsGroupCode;
+        return this.BackingStore.get("statisticsGroupCode");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the surname property value. The surname property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
-        return this.surname;
+        return this.BackingStore.get("surname");
     }
     /**
      * Gets the terminationDate property value. The terminationDate property
@@ -307,7 +244,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getTerminationDate() {
-        return this.terminationDate;
+        return this.BackingStore.get("terminationDate");
     }
     /**
      * Serializes information the current object
@@ -338,150 +275,158 @@ public class Employee implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the address property value. The address property
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
-        this.address = value;
+        this.BackingStore.set("address", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the birthDate property value. The birthDate property
      * @param value Value to set for the birthDate property.
      */
     public void setBirthDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.birthDate = value;
+        this.BackingStore.set("birthDate", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the employmentDate property value. The employmentDate property
      * @param value Value to set for the employmentDate property.
      */
     public void setEmploymentDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.employmentDate = value;
+        this.BackingStore.set("employmentDate", value);
     }
     /**
      * Sets the givenName property value. The givenName property
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
-        this.givenName = value;
+        this.BackingStore.set("givenName", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the jobTitle property value. The jobTitle property
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
-        this.jobTitle = value;
+        this.BackingStore.set("jobTitle", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the middleName property value. The middleName property
      * @param value Value to set for the middleName property.
      */
     public void setMiddleName(@jakarta.annotation.Nullable final String value) {
-        this.middleName = value;
+        this.BackingStore.set("middleName", value);
     }
     /**
      * Sets the mobilePhone property value. The mobilePhone property
      * @param value Value to set for the mobilePhone property.
      */
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
-        this.mobilePhone = value;
+        this.BackingStore.set("mobilePhone", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.BackingStore.set("number", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the personalEmail property value. The personalEmail property
      * @param value Value to set for the personalEmail property.
      */
     public void setPersonalEmail(@jakarta.annotation.Nullable final String value) {
-        this.personalEmail = value;
+        this.BackingStore.set("personalEmail", value);
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.phoneNumber = value;
+        this.BackingStore.set("phoneNumber", value);
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      */
     public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
-        this.picture = value;
+        this.BackingStore.set("picture", value);
     }
     /**
      * Sets the statisticsGroupCode property value. The statisticsGroupCode property
      * @param value Value to set for the statisticsGroupCode property.
      */
     public void setStatisticsGroupCode(@jakarta.annotation.Nullable final String value) {
-        this.statisticsGroupCode = value;
+        this.BackingStore.set("statisticsGroupCode", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
-        this.surname = value;
+        this.BackingStore.set("surname", value);
     }
     /**
      * Sets the terminationDate property value. The terminationDate property
      * @param value Value to set for the terminationDate property.
      */
     public void setTerminationDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.terminationDate = value;
+        this.BackingStore.set("terminationDate", value);
     }
 }

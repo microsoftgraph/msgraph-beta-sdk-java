@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable {
+public class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Not yet documented
-     */
-    private Boolean calendarSyncEnabled;
-    /**
-     * Not yet documented
-     */
-    private WindowsDeviceAccount deviceAccount;
-    /**
-     * Not yet documented
-     */
-    private String deviceAccountEmail;
-    /**
-     * Not yet documented
-     */
-    private String exchangeServer;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Not yet documented
-     */
-    private Boolean passwordRotationEnabled;
-    /**
-     * Not yet documented
-     */
-    private String sessionInitiationProtocalAddress;
-    /**
-     * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
+     * Instantiates a new UpdateWindowsDeviceAccountActionParameter and sets the default values.
      */
     public UpdateWindowsDeviceAccountActionParameter() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateWindowsDeviceAccountActionParameter
+     * @return a UpdateWindowsDeviceAccountActionParameter
      */
     @jakarta.annotation.Nonnull
     public static UpdateWindowsDeviceAccountActionParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,44 +34,57 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return new UpdateWindowsDeviceAccountActionParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the calendarSyncEnabled property value. Not yet documented
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCalendarSyncEnabled() {
-        return this.calendarSyncEnabled;
+        return this.BackingStore.get("calendarSyncEnabled");
     }
     /**
      * Gets the deviceAccount property value. Not yet documented
-     * @return a windowsDeviceAccount
+     * @return a WindowsDeviceAccount
      */
     @jakarta.annotation.Nullable
     public WindowsDeviceAccount getDeviceAccount() {
-        return this.deviceAccount;
+        return this.BackingStore.get("deviceAccount");
     }
     /**
      * Gets the deviceAccountEmail property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountEmail() {
-        return this.deviceAccountEmail;
+        return this.BackingStore.get("deviceAccountEmail");
     }
     /**
      * Gets the exchangeServer property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExchangeServer() {
-        return this.exchangeServer;
+        return this.BackingStore.get("exchangeServer");
     }
     /**
      * The deserialization information for the current model
@@ -115,27 +104,27 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the passwordRotationEnabled property value. Not yet documented
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRotationEnabled() {
-        return this.passwordRotationEnabled;
+        return this.BackingStore.get("passwordRotationEnabled");
     }
     /**
      * Gets the sessionInitiationProtocalAddress property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionInitiationProtocalAddress() {
-        return this.sessionInitiationProtocalAddress;
+        return this.BackingStore.get("sessionInitiationProtocalAddress");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the calendarSyncEnabled property value. Not yet documented
      * @param value Value to set for the calendarSyncEnabled property.
      */
     public void setCalendarSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.calendarSyncEnabled = value;
+        this.BackingStore.set("calendarSyncEnabled", value);
     }
     /**
      * Sets the deviceAccount property value. Not yet documented
      * @param value Value to set for the deviceAccount property.
      */
     public void setDeviceAccount(@jakarta.annotation.Nullable final WindowsDeviceAccount value) {
-        this.deviceAccount = value;
+        this.BackingStore.set("deviceAccount", value);
     }
     /**
      * Sets the deviceAccountEmail property value. Not yet documented
      * @param value Value to set for the deviceAccountEmail property.
      */
     public void setDeviceAccountEmail(@jakarta.annotation.Nullable final String value) {
-        this.deviceAccountEmail = value;
+        this.BackingStore.set("deviceAccountEmail", value);
     }
     /**
      * Sets the exchangeServer property value. Not yet documented
      * @param value Value to set for the exchangeServer property.
      */
     public void setExchangeServer(@jakarta.annotation.Nullable final String value) {
-        this.exchangeServer = value;
+        this.BackingStore.set("exchangeServer", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the passwordRotationEnabled property value. Not yet documented
      * @param value Value to set for the passwordRotationEnabled property.
      */
     public void setPasswordRotationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRotationEnabled = value;
+        this.BackingStore.set("passwordRotationEnabled", value);
     }
     /**
      * Sets the sessionInitiationProtocalAddress property value. Not yet documented
      * @param value Value to set for the sessionInitiationProtocalAddress property.
      */
     public void setSessionInitiationProtocalAddress(@jakarta.annotation.Nullable final String value) {
-        this.sessionInitiationProtocalAddress = value;
+        this.BackingStore.set("sessionInitiationProtocalAddress", value);
     }
 }

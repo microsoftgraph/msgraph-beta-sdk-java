@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnUserCreateStartListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     */
-    private OnUserCreateStartHandler handler;
-    /**
-     * Instantiates a new onUserCreateStartListener and sets the default values.
+     * Instantiates a new OnUserCreateStartListener and sets the default values.
      */
     public OnUserCreateStartListener() {
         super();
@@ -22,7 +18,7 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onUserCreateStartListener
+     * @return a OnUserCreateStartListener
      */
     @jakarta.annotation.Nonnull
     public static OnUserCreateStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a onUserCreateStartHandler
+     * @return a OnUserCreateStartHandler
      */
     @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getHandler() {
-        return this.handler;
+        return this.BackingStore.get("handler");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnUserCreateStartHandler value) {
-        this.handler = value;
+        this.BackingStore.set("handler", value);
     }
 }

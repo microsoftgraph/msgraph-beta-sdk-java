@@ -5,37 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable {
+public class TbillPricePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The discount property
-     */
-    private Json discount;
-    /**
-     * The maturity property
-     */
-    private Json maturity;
-    /**
-     * The settlement property
-     */
-    private Json settlement;
-    /**
-     * Instantiates a new tbillPricePostRequestBody and sets the default values.
+     * Instantiates a new TbillPricePostRequestBody and sets the default values.
      */
     public TbillPricePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tbillPricePostRequestBody
+     * @return a TbillPricePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static TbillPricePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +35,25 @@ public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable
         return new TbillPricePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the discount property value. The discount property
@@ -56,7 +61,7 @@ public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Json getDiscount() {
-        return this.discount;
+        return this.BackingStore.get("discount");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Json getMaturity() {
-        return this.maturity;
+        return this.BackingStore.get("maturity");
     }
     /**
      * Gets the settlement property value. The settlement property
@@ -84,7 +89,7 @@ public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Json getSettlement() {
-        return this.settlement;
+        return this.BackingStore.get("settlement");
     }
     /**
      * Serializes information the current object
@@ -98,31 +103,39 @@ public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the discount property value. The discount property
      * @param value Value to set for the discount property.
      */
     public void setDiscount(@jakarta.annotation.Nullable final Json value) {
-        this.discount = value;
+        this.BackingStore.set("discount", value);
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
     public void setMaturity(@jakarta.annotation.Nullable final Json value) {
-        this.maturity = value;
+        this.BackingStore.set("maturity", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
-        this.settlement = value;
+        this.BackingStore.set("settlement", value);
     }
 }

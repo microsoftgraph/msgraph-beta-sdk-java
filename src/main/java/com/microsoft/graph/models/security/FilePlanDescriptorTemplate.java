@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     /**
-     * Represents the user who created the filePlanDescriptorTemplate column.
-     */
-    private IdentitySet createdBy;
-    /**
-     * Represents the date and time in which the filePlanDescriptorTemplate is created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Unique string that defines a filePlanDescriptorTemplate name.
-     */
-    private String displayName;
-    /**
-     * Instantiates a new filePlanDescriptorTemplate and sets the default values.
+     * Instantiates a new FilePlanDescriptorTemplate and sets the default values.
      */
     public FilePlanDescriptorTemplate() {
         super();
@@ -32,7 +20,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filePlanDescriptorTemplate
+     * @return a FilePlanDescriptorTemplate
      */
     @jakarta.annotation.Nonnull
     public static FilePlanDescriptorTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,11 +41,11 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
@@ -65,15 +53,15 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Unique string that defines a filePlanDescriptorTemplate name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -103,20 +91,20 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Unique string that defines a filePlanDescriptorTemplate name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
 }

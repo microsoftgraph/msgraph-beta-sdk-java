@@ -4,66 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Photo implements AdditionalDataHolder, Parsable {
+public class Photo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Camera manufacturer. Read-only.
-     */
-    private String cameraMake;
-    /**
-     * Camera model. Read-only.
-     */
-    private String cameraModel;
-    /**
-     * The denominator for the exposure time fraction from the camera. Read-only.
-     */
-    private Double exposureDenominator;
-    /**
-     * The numerator for the exposure time fraction from the camera. Read-only.
-     */
-    private Double exposureNumerator;
-    /**
-     * The F-stop value from the camera. Read-only.
-     */
-    private Double fNumber;
-    /**
-     * The focal length from the camera. Read-only.
-     */
-    private Double focalLength;
-    /**
-     * The ISO value from the camera. Read-only.
-     */
-    private Integer iso;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The orientation value from the camera. Writable on OneDrive Personal.
-     */
-    private Integer orientation;
-    /**
-     * The date and time the photo was taken in UTC time. Read-only.
-     */
-    private OffsetDateTime takenDateTime;
-    /**
-     * Instantiates a new photo and sets the default values.
+     * Instantiates a new Photo and sets the default values.
      */
     public Photo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a photo
+     * @return a Photo
      */
     @jakarta.annotation.Nonnull
     public static Photo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,44 +35,57 @@ public class Photo implements AdditionalDataHolder, Parsable {
         return new Photo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cameraMake property value. Camera manufacturer. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCameraMake() {
-        return this.cameraMake;
+        return this.BackingStore.get("cameraMake");
     }
     /**
      * Gets the cameraModel property value. Camera model. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCameraModel() {
-        return this.cameraModel;
+        return this.BackingStore.get("cameraModel");
     }
     /**
      * Gets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getExposureDenominator() {
-        return this.exposureDenominator;
+        return this.BackingStore.get("exposureDenominator");
     }
     /**
      * Gets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getExposureNumerator() {
-        return this.exposureNumerator;
+        return this.BackingStore.get("exposureNumerator");
     }
     /**
      * The deserialization information for the current model
@@ -131,43 +108,43 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fNumber property value. The F-stop value from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getFNumber() {
-        return this.fNumber;
+        return this.BackingStore.get("fNumber");
     }
     /**
      * Gets the focalLength property value. The focal length from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getFocalLength() {
-        return this.focalLength;
+        return this.BackingStore.get("focalLength");
     }
     /**
      * Gets the iso property value. The ISO value from the camera. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIso() {
-        return this.iso;
+        return this.BackingStore.get("iso");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOrientation() {
-        return this.orientation;
+        return this.BackingStore.get("orientation");
     }
     /**
      * Gets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
@@ -175,7 +152,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTakenDateTime() {
-        return this.takenDateTime;
+        return this.BackingStore.get("takenDateTime");
     }
     /**
      * Serializes information the current object
@@ -196,80 +173,88 @@ public class Photo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the cameraMake property value. Camera manufacturer. Read-only.
      * @param value Value to set for the cameraMake property.
      */
     public void setCameraMake(@jakarta.annotation.Nullable final String value) {
-        this.cameraMake = value;
+        this.BackingStore.set("cameraMake", value);
     }
     /**
      * Sets the cameraModel property value. Camera model. Read-only.
      * @param value Value to set for the cameraModel property.
      */
     public void setCameraModel(@jakarta.annotation.Nullable final String value) {
-        this.cameraModel = value;
+        this.BackingStore.set("cameraModel", value);
     }
     /**
      * Sets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureDenominator property.
      */
     public void setExposureDenominator(@jakarta.annotation.Nullable final Double value) {
-        this.exposureDenominator = value;
+        this.BackingStore.set("exposureDenominator", value);
     }
     /**
      * Sets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureNumerator property.
      */
     public void setExposureNumerator(@jakarta.annotation.Nullable final Double value) {
-        this.exposureNumerator = value;
+        this.BackingStore.set("exposureNumerator", value);
     }
     /**
      * Sets the fNumber property value. The F-stop value from the camera. Read-only.
      * @param value Value to set for the fNumber property.
      */
     public void setFNumber(@jakarta.annotation.Nullable final Double value) {
-        this.fNumber = value;
+        this.BackingStore.set("fNumber", value);
     }
     /**
      * Sets the focalLength property value. The focal length from the camera. Read-only.
      * @param value Value to set for the focalLength property.
      */
     public void setFocalLength(@jakarta.annotation.Nullable final Double value) {
-        this.focalLength = value;
+        this.BackingStore.set("focalLength", value);
     }
     /**
      * Sets the iso property value. The ISO value from the camera. Read-only.
      * @param value Value to set for the iso property.
      */
     public void setIso(@jakarta.annotation.Nullable final Integer value) {
-        this.iso = value;
+        this.BackingStore.set("iso", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
      * @param value Value to set for the orientation property.
      */
     public void setOrientation(@jakarta.annotation.Nullable final Integer value) {
-        this.orientation = value;
+        this.BackingStore.set("orientation", value);
     }
     /**
      * Sets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
      * @param value Value to set for the takenDateTime property.
      */
     public void setTakenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.takenDateTime = value;
+        this.BackingStore.set("takenDateTime", value);
     }
 }

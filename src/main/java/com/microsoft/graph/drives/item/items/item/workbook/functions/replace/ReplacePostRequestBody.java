@@ -5,41 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ReplacePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The newText property
-     */
-    private Json newText;
-    /**
-     * The numChars property
-     */
-    private Json numChars;
-    /**
-     * The oldText property
-     */
-    private Json oldText;
-    /**
-     * The startNum property
-     */
-    private Json startNum;
-    /**
-     * Instantiates a new replacePostRequestBody and sets the default values.
+     * Instantiates a new ReplacePostRequestBody and sets the default values.
      */
     public ReplacePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a replacePostRequestBody
+     * @return a ReplacePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ReplacePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,12 +35,25 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
         return new ReplacePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +74,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNewText() {
-        return this.newText;
+        return this.BackingStore.get("newText");
     }
     /**
      * Gets the numChars property value. The numChars property
@@ -81,7 +82,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumChars() {
-        return this.numChars;
+        return this.BackingStore.get("numChars");
     }
     /**
      * Gets the oldText property value. The oldText property
@@ -89,7 +90,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getOldText() {
-        return this.oldText;
+        return this.BackingStore.get("oldText");
     }
     /**
      * Gets the startNum property value. The startNum property
@@ -97,7 +98,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getStartNum() {
-        return this.startNum;
+        return this.BackingStore.get("startNum");
     }
     /**
      * Serializes information the current object
@@ -112,38 +113,46 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the newText property value. The newText property
      * @param value Value to set for the newText property.
      */
     public void setNewText(@jakarta.annotation.Nullable final Json value) {
-        this.newText = value;
+        this.BackingStore.set("newText", value);
     }
     /**
      * Sets the numChars property value. The numChars property
      * @param value Value to set for the numChars property.
      */
     public void setNumChars(@jakarta.annotation.Nullable final Json value) {
-        this.numChars = value;
+        this.BackingStore.set("numChars", value);
     }
     /**
      * Sets the oldText property value. The oldText property
      * @param value Value to set for the oldText property.
      */
     public void setOldText(@jakarta.annotation.Nullable final Json value) {
-        this.oldText = value;
+        this.BackingStore.set("oldText", value);
     }
     /**
      * Sets the startNum property value. The startNum property
      * @param value Value to set for the startNum property.
      */
     public void setStartNum(@jakarta.annotation.Nullable final Json value) {
-        this.startNum = value;
+        this.BackingStore.set("startNum", value);
     }
 }

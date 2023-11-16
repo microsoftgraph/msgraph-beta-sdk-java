@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceSubject extends Entity implements Parsable {
     /**
-     * The display name of the subject.
-     */
-    private String displayName;
-    /**
-     * The email address of the user subject. If the subject is in other types, it is empty.
-     */
-    private String email;
-    /**
-     * The principal name of the user subject. If the subject is in other types, it is empty.
-     */
-    private String principalName;
-    /**
-     * The type of the subject. The value can be User, Group, and ServicePrincipal.
-     */
-    private String type;
-    /**
-     * Instantiates a new governanceSubject and sets the default values.
+     * Instantiates a new GovernanceSubject and sets the default values.
      */
     public GovernanceSubject() {
         super();
@@ -33,7 +17,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceSubject
+     * @return a GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public static GovernanceSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +26,19 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
-     * Gets the email property value. The email address of the user subject. If the subject is in other types, it is empty.
-     * @return a string
+     * Gets the email property value. The email address of the user subject. If the subject is in other types, it's empty.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -70,20 +54,20 @@ public class GovernanceSubject extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it is empty.
-     * @return a string
+     * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it's empty.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
-        return this.principalName;
+        return this.BackingStore.get("principalName");
     }
     /**
      * Gets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
-     * Sets the email property value. The email address of the user subject. If the subject is in other types, it is empty.
+     * Sets the email property value. The email address of the user subject. If the subject is in other types, it's empty.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
-     * Sets the principalName property value. The principal name of the user subject. If the subject is in other types, it is empty.
+     * Sets the principalName property value. The principal name of the user subject. If the subject is in other types, it's empty.
      * @param value Value to set for the principalName property.
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.principalName = value;
+        this.BackingStore.set("principalName", value);
     }
     /**
      * Sets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

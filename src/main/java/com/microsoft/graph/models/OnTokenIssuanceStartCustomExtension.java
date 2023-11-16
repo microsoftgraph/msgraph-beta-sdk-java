@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExtension implements Parsable {
     /**
-     * Collection of claims to be returned by the API called by this custom authentication extension.
-     */
-    private java.util.List<OnTokenIssuanceStartReturnClaim> claimsForTokenConfiguration;
-    /**
-     * Instantiates a new onTokenIssuanceStartCustomExtension and sets the default values.
+     * Instantiates a new OnTokenIssuanceStartCustomExtension and sets the default values.
      */
     public OnTokenIssuanceStartCustomExtension() {
         super();
@@ -22,7 +18,7 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onTokenIssuanceStartCustomExtension
+     * @return a OnTokenIssuanceStartCustomExtension
      */
     @jakarta.annotation.Nonnull
     public static OnTokenIssuanceStartCustomExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
     }
     /**
      * Gets the claimsForTokenConfiguration property value. Collection of claims to be returned by the API called by this custom authentication extension.
-     * @return a onTokenIssuanceStartReturnClaim
+     * @return a java.util.List<OnTokenIssuanceStartReturnClaim>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnTokenIssuanceStartReturnClaim> getClaimsForTokenConfiguration() {
-        return this.claimsForTokenConfiguration;
+        return this.BackingStore.get("claimsForTokenConfiguration");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
      * @param value Value to set for the claimsForTokenConfiguration property.
      */
     public void setClaimsForTokenConfiguration(@jakarta.annotation.Nullable final java.util.List<OnTokenIssuanceStartReturnClaim> value) {
-        this.claimsForTokenConfiguration = value;
+        this.BackingStore.set("claimsForTokenConfiguration", value);
     }
 }

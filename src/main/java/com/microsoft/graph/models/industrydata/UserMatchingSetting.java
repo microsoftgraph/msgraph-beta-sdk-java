@@ -4,45 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
+public class UserMatchingSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
-     */
-    private UserMatchTargetReferenceValue matchTarget;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The priority order to apply when a user has multiple RefRole codes assigned.
-     */
-    private Integer priorityOrder;
-    /**
-     * The roleGroup property
-     */
-    private RoleGroup roleGroup;
-    /**
-     * The sourceIdentifier property
-     */
-    private IdentifierTypeReferenceValue sourceIdentifier;
-    /**
-     * Instantiates a new userMatchingSetting and sets the default values.
+     * Instantiates a new UserMatchingSetting and sets the default values.
      */
     public UserMatchingSetting() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userMatchingSetting
+     * @return a UserMatchingSetting
      */
     @jakarta.annotation.Nonnull
     public static UserMatchingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +34,25 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         return new UserMatchingSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,44 +69,44 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
-     * @return a userMatchTargetReferenceValue
+     * Gets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
+     * @return a UserMatchTargetReferenceValue
      */
     @jakarta.annotation.Nullable
     public UserMatchTargetReferenceValue getMatchTarget() {
-        return this.matchTarget;
+        return this.BackingStore.get("matchTarget");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the priorityOrder property value. The priority order to apply when a user has multiple RefRole codes assigned.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriorityOrder() {
-        return this.priorityOrder;
+        return this.BackingStore.get("priorityOrder");
     }
     /**
      * Gets the roleGroup property value. The roleGroup property
-     * @return a roleGroup
+     * @return a RoleGroup
      */
     @jakarta.annotation.Nullable
     public RoleGroup getRoleGroup() {
-        return this.roleGroup;
+        return this.BackingStore.get("roleGroup");
     }
     /**
      * Gets the sourceIdentifier property value. The sourceIdentifier property
-     * @return a identifierTypeReferenceValue
+     * @return a IdentifierTypeReferenceValue
      */
     @jakarta.annotation.Nullable
     public IdentifierTypeReferenceValue getSourceIdentifier() {
-        return this.sourceIdentifier;
+        return this.BackingStore.get("sourceIdentifier");
     }
     /**
      * Serializes information the current object
@@ -125,45 +122,53 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
-     * Sets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
+    }
+    /**
+     * Sets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
      * @param value Value to set for the matchTarget property.
      */
     public void setMatchTarget(@jakarta.annotation.Nullable final UserMatchTargetReferenceValue value) {
-        this.matchTarget = value;
+        this.BackingStore.set("matchTarget", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the priorityOrder property value. The priority order to apply when a user has multiple RefRole codes assigned.
      * @param value Value to set for the priorityOrder property.
      */
     public void setPriorityOrder(@jakarta.annotation.Nullable final Integer value) {
-        this.priorityOrder = value;
+        this.BackingStore.set("priorityOrder", value);
     }
     /**
      * Sets the roleGroup property value. The roleGroup property
      * @param value Value to set for the roleGroup property.
      */
     public void setRoleGroup(@jakarta.annotation.Nullable final RoleGroup value) {
-        this.roleGroup = value;
+        this.BackingStore.set("roleGroup", value);
     }
     /**
      * Sets the sourceIdentifier property value. The sourceIdentifier property
      * @param value Value to set for the sourceIdentifier property.
      */
     public void setSourceIdentifier(@jakarta.annotation.Nullable final IdentifierTypeReferenceValue value) {
-        this.sourceIdentifier = value;
+        this.BackingStore.set("sourceIdentifier", value);
     }
 }

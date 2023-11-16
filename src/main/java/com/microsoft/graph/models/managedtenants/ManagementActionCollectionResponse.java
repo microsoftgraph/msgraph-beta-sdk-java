@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementActionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagementAction> value;
-    /**
-     * Instantiates a new managementActionCollectionResponse and sets the default values.
+     * Instantiates a new ManagementActionCollectionResponse and sets the default values.
      */
     public ManagementActionCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class ManagementActionCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementActionCollectionResponse
+     * @return a ManagementActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagementActionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ManagementActionCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a managementAction
+     * @return a java.util.List<ManagementAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementAction> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ManagementActionCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagementAction> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

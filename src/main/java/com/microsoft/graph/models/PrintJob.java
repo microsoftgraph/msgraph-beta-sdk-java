@@ -10,59 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintJob extends Entity implements Parsable {
     /**
-     * The acknowledgedDateTime property
-     */
-    private OffsetDateTime acknowledgedDateTime;
-    /**
-     * The completedDateTime property
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * The configuration property
-     */
-    private PrintJobConfiguration configuration;
-    /**
-     * The createdBy property
-     */
-    private UserIdentity createdBy;
-    /**
-     * The DateTimeOffset when the job was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The name of the print job.
-     */
-    private String displayName;
-    /**
-     * The documents property
-     */
-    private java.util.List<PrintDocument> documents;
-    /**
-     * The errorCode property
-     */
-    private Integer errorCode;
-    /**
-     * If true, document can be fetched by printer.
-     */
-    private Boolean isFetchable;
-    /**
-     * Contains the source job URL, if the job has been redirected from another printer.
-     */
-    private String redirectedFrom;
-    /**
-     * Contains the destination job URL, if the job has been redirected to another printer.
-     */
-    private String redirectedTo;
-    /**
-     * The status property
-     */
-    private PrintJobStatus status;
-    /**
-     * A list of printTasks that were triggered by this print job.
-     */
-    private java.util.List<PrintTask> tasks;
-    /**
-     * Instantiates a new printJob and sets the default values.
+     * Instantiates a new PrintJob and sets the default values.
      */
     public PrintJob() {
         super();
@@ -70,7 +18,7 @@ public class PrintJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printJob
+     * @return a PrintJob
      */
     @jakarta.annotation.Nonnull
     public static PrintJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +31,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcknowledgedDateTime() {
-        return this.acknowledgedDateTime;
+        return this.BackingStore.get("acknowledgedDateTime");
     }
     /**
      * Gets the completedDateTime property value. The completedDateTime property
@@ -91,23 +39,23 @@ public class PrintJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a printJobConfiguration
+     * @return a PrintJobConfiguration
      */
     @jakarta.annotation.Nullable
     public PrintJobConfiguration getConfiguration() {
-        return this.configuration;
+        return this.BackingStore.get("configuration");
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
@@ -115,31 +63,31 @@ public class PrintJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The name of the print job.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the documents property value. The documents property
-     * @return a printDocument
+     * @return a java.util.List<PrintDocument>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintDocument> getDocuments() {
-        return this.documents;
+        return this.BackingStore.get("documents");
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -165,43 +113,43 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the isFetchable property value. If true, document can be fetched by printer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFetchable() {
-        return this.isFetchable;
+        return this.BackingStore.get("isFetchable");
     }
     /**
      * Gets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRedirectedFrom() {
-        return this.redirectedFrom;
+        return this.BackingStore.get("redirectedFrom");
     }
     /**
      * Gets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRedirectedTo() {
-        return this.redirectedTo;
+        return this.BackingStore.get("redirectedTo");
     }
     /**
      * Gets the status property value. The status property
-     * @return a printJobStatus
+     * @return a PrintJobStatus
      */
     @jakarta.annotation.Nullable
     public PrintJobStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the tasks property value. A list of printTasks that were triggered by this print job.
-     * @return a printTask
+     * @return a java.util.List<PrintTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
-        return this.tasks;
+        return this.BackingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the acknowledgedDateTime property.
      */
     public void setAcknowledgedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.acknowledgedDateTime = value;
+        this.BackingStore.set("acknowledgedDateTime", value);
     }
     /**
      * Sets the completedDateTime property value. The completedDateTime property
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the configuration property value. The configuration property
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final PrintJobConfiguration value) {
-        this.configuration = value;
+        this.BackingStore.set("configuration", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The name of the print job.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the documents property value. The documents property
      * @param value Value to set for the documents property.
      */
     public void setDocuments(@jakarta.annotation.Nullable final java.util.List<PrintDocument> value) {
-        this.documents = value;
+        this.BackingStore.set("documents", value);
     }
     /**
      * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
     /**
      * Sets the isFetchable property value. If true, document can be fetched by printer.
      * @param value Value to set for the isFetchable property.
      */
     public void setIsFetchable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFetchable = value;
+        this.BackingStore.set("isFetchable", value);
     }
     /**
      * Sets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
      * @param value Value to set for the redirectedFrom property.
      */
     public void setRedirectedFrom(@jakarta.annotation.Nullable final String value) {
-        this.redirectedFrom = value;
+        this.BackingStore.set("redirectedFrom", value);
     }
     /**
      * Sets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
      * @param value Value to set for the redirectedTo property.
      */
     public void setRedirectedTo(@jakarta.annotation.Nullable final String value) {
-        this.redirectedTo = value;
+        this.BackingStore.set("redirectedTo", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PrintJobStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the tasks property value. A list of printTasks that were triggered by this print job.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PrintTask> value) {
-        this.tasks = value;
+        this.BackingStore.set("tasks", value);
     }
 }

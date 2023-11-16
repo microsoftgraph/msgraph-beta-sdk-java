@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosStoreApp extends MobileApp implements Parsable {
     /**
-     * Contains properties of the possible iOS device types the mobile app can run on.
-     */
-    private IosDeviceType applicableDeviceType;
-    /**
-     * The Apple App Store URL
-     */
-    private String appStoreUrl;
-    /**
-     * The Identity Name.
-     */
-    private String bundleId;
-    /**
-     * The value for the minimum applicable operating system.
-     */
-    private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * Instantiates a new iosStoreApp and sets the default values.
+     * Instantiates a new IosStoreApp and sets the default values.
      */
     public IosStoreApp() {
         super();
@@ -37,7 +21,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosStoreApp
+     * @return a IosStoreApp
      */
     @jakarta.annotation.Nonnull
     public static IosStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,27 +30,27 @@ public class IosStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a iosDeviceType
+     * @return a IosDeviceType
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
-        return this.applicableDeviceType;
+        return this.BackingStore.get("applicableDeviceType");
     }
     /**
      * Gets the appStoreUrl property value. The Apple App Store URL
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
-        return this.appStoreUrl;
+        return this.BackingStore.get("appStoreUrl");
     }
     /**
      * Gets the bundleId property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.BackingStore.get("bundleId");
     }
     /**
      * The deserialization information for the current model
@@ -83,11 +67,11 @@ public class IosStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a iosMinimumOperatingSystem
+     * @return a IosMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.BackingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      */
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
-        this.applicableDeviceType = value;
+        this.BackingStore.set("applicableDeviceType", value);
     }
     /**
      * Sets the appStoreUrl property value. The Apple App Store URL
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.appStoreUrl = value;
+        this.BackingStore.set("appStoreUrl", value);
     }
     /**
      * Sets the bundleId property value. The Identity Name.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.BackingStore.set("bundleId", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.BackingStore.set("minimumSupportedOperatingSystem", value);
     }
 }

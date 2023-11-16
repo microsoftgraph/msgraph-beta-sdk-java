@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject implements Parsable {
     /**
-     * Collection of trusted certificate authorities.
-     */
-    private java.util.List<CertificateAuthorityAsEntity> trustedCertificateAuthorities;
-    /**
-     * Instantiates a new trustedCertificateAuthorityAsEntityBase and sets the default values.
+     * Instantiates a new TrustedCertificateAuthorityAsEntityBase and sets the default values.
      */
     public TrustedCertificateAuthorityAsEntityBase() {
         super();
@@ -22,7 +18,7 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trustedCertificateAuthorityAsEntityBase
+     * @return a TrustedCertificateAuthorityAsEntityBase
      */
     @jakarta.annotation.Nonnull
     public static TrustedCertificateAuthorityAsEntityBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,11 +44,11 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
     }
     /**
      * Gets the trustedCertificateAuthorities property value. Collection of trusted certificate authorities.
-     * @return a certificateAuthorityAsEntity
+     * @return a java.util.List<CertificateAuthorityAsEntity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateAuthorityAsEntity> getTrustedCertificateAuthorities() {
-        return this.trustedCertificateAuthorities;
+        return this.BackingStore.get("trustedCertificateAuthorities");
     }
     /**
      * Serializes information the current object
@@ -68,6 +64,6 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
      * @param value Value to set for the trustedCertificateAuthorities property.
      */
     public void setTrustedCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthorityAsEntity> value) {
-        this.trustedCertificateAuthorities = value;
+        this.BackingStore.set("trustedCertificateAuthorities", value);
     }
 }

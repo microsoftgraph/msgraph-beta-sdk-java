@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEmailProfileBase implements Parsable {
     /**
-     * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
-     */
-    private Boolean syncCalendar;
-    /**
-     * Toggles syncing contacts. If set to false contacts are turned off on the device.
-     */
-    private Boolean syncContacts;
-    /**
-     * Toggles syncing tasks. If set to false tasks are turned off on the device.
-     */
-    private Boolean syncTasks;
-    /**
-     * Instantiates a new androidForWorkNineWorkEasConfiguration and sets the default values.
+     * Instantiates a new AndroidForWorkNineWorkEasConfiguration and sets the default values.
      */
     public AndroidForWorkNineWorkEasConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkNineWorkEasConfiguration
+     * @return a AndroidForWorkNineWorkEasConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkNineWorkEasConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
     }
     /**
      * Gets the syncCalendar property value. Toggles syncing the calendar. If set to false the calendar is turned off on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncCalendar() {
-        return this.syncCalendar;
+        return this.BackingStore.get("syncCalendar");
     }
     /**
      * Gets the syncContacts property value. Toggles syncing contacts. If set to false contacts are turned off on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncContacts() {
-        return this.syncContacts;
+        return this.BackingStore.get("syncContacts");
     }
     /**
      * Gets the syncTasks property value. Toggles syncing tasks. If set to false tasks are turned off on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncTasks() {
-        return this.syncTasks;
+        return this.BackingStore.get("syncTasks");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
      * @param value Value to set for the syncCalendar property.
      */
     public void setSyncCalendar(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncCalendar = value;
+        this.BackingStore.set("syncCalendar", value);
     }
     /**
      * Sets the syncContacts property value. Toggles syncing contacts. If set to false contacts are turned off on the device.
      * @param value Value to set for the syncContacts property.
      */
     public void setSyncContacts(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncContacts = value;
+        this.BackingStore.set("syncContacts", value);
     }
     /**
      * Sets the syncTasks property value. Toggles syncing tasks. If set to false tasks are turned off on the device.
      * @param value Value to set for the syncTasks property.
      */
     public void setSyncTasks(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncTasks = value;
+        this.BackingStore.set("syncTasks", value);
     }
 }

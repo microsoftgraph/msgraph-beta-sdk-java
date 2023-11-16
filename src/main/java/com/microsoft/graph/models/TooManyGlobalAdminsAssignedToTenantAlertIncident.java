@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
-     * Display name of the subject that the incident applies to.
-     */
-    private String assigneeDisplayName;
-    /**
-     * The identifier of the subject that the incident applies to.
-     */
-    private String assigneeId;
-    /**
-     * User principal name of the subject that the incident applies to. Applies to user principals.
-     */
-    private String assigneeUserPrincipalName;
-    /**
-     * Instantiates a new tooManyGlobalAdminsAssignedToTenantAlertIncident and sets the default values.
+     * Instantiates a new TooManyGlobalAdminsAssignedToTenantAlertIncident and sets the default values.
      */
     public TooManyGlobalAdminsAssignedToTenantAlertIncident() {
         super();
@@ -30,7 +18,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tooManyGlobalAdminsAssignedToTenantAlertIncident
+     * @return a TooManyGlobalAdminsAssignedToTenantAlertIncident
      */
     @jakarta.annotation.Nonnull
     public static TooManyGlobalAdminsAssignedToTenantAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,27 +27,27 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     }
     /**
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
-        return this.assigneeDisplayName;
+        return this.BackingStore.get("assigneeDisplayName");
     }
     /**
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeId() {
-        return this.assigneeId;
+        return this.BackingStore.get("assigneeId");
     }
     /**
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
-        return this.assigneeUserPrincipalName;
+        return this.BackingStore.get("assigneeUserPrincipalName");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
      * @param value Value to set for the assigneeDisplayName property.
      */
     public void setAssigneeDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.assigneeDisplayName = value;
+        this.BackingStore.set("assigneeDisplayName", value);
     }
     /**
      * Sets the assigneeId property value. The identifier of the subject that the incident applies to.
      * @param value Value to set for the assigneeId property.
      */
     public void setAssigneeId(@jakarta.annotation.Nullable final String value) {
-        this.assigneeId = value;
+        this.BackingStore.set("assigneeId", value);
     }
     /**
      * Sets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
      * @param value Value to set for the assigneeUserPrincipalName property.
      */
     public void setAssigneeUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.assigneeUserPrincipalName = value;
+        this.BackingStore.set("assigneeUserPrincipalName", value);
     }
 }

@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
-     * The approvalOnElevation property
-     */
-    private Boolean approvalOnElevation;
-    /**
-     * The approverIds property
-     */
-    private java.util.List<String> approverIds;
-    /**
-     * The elevationDuration property
-     */
-    private PeriodAndDuration elevationDuration;
-    /**
-     * The isMfaOnElevationConfigurable property
-     */
-    private Boolean isMfaOnElevationConfigurable;
-    /**
-     * The lastGlobalAdmin property
-     */
-    private Boolean lastGlobalAdmin;
-    /**
-     * The maxElavationDuration property
-     */
-    private PeriodAndDuration maxElavationDuration;
-    /**
-     * The mfaOnElevation property
-     */
-    private Boolean mfaOnElevation;
-    /**
-     * The minElevationDuration property
-     */
-    private PeriodAndDuration minElevationDuration;
-    /**
-     * The notificationToUserOnElevation property
-     */
-    private Boolean notificationToUserOnElevation;
-    /**
-     * The ticketingInfoOnElevation property
-     */
-    private Boolean ticketingInfoOnElevation;
-    /**
-     * Instantiates a new privilegedRoleSettings and sets the default values.
+     * Instantiates a new PrivilegedRoleSettings and sets the default values.
      */
     public PrivilegedRoleSettings() {
         super();
@@ -58,7 +18,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleSettings
+     * @return a PrivilegedRoleSettings
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,19 +27,19 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the approvalOnElevation property value. The approvalOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApprovalOnElevation() {
-        return this.approvalOnElevation;
+        return this.BackingStore.get("approvalOnElevation");
     }
     /**
      * Gets the approverIds property value. The approverIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApproverIds() {
-        return this.approverIds;
+        return this.BackingStore.get("approverIds");
     }
     /**
      * Gets the elevationDuration property value. The elevationDuration property
@@ -87,7 +47,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getElevationDuration() {
-        return this.elevationDuration;
+        return this.BackingStore.get("elevationDuration");
     }
     /**
      * The deserialization information for the current model
@@ -110,19 +70,19 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isMfaOnElevationConfigurable property value. The isMfaOnElevationConfigurable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaOnElevationConfigurable() {
-        return this.isMfaOnElevationConfigurable;
+        return this.BackingStore.get("isMfaOnElevationConfigurable");
     }
     /**
      * Gets the lastGlobalAdmin property value. The lastGlobalAdmin property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLastGlobalAdmin() {
-        return this.lastGlobalAdmin;
+        return this.BackingStore.get("lastGlobalAdmin");
     }
     /**
      * Gets the maxElavationDuration property value. The maxElavationDuration property
@@ -130,15 +90,15 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxElavationDuration() {
-        return this.maxElavationDuration;
+        return this.BackingStore.get("maxElavationDuration");
     }
     /**
      * Gets the mfaOnElevation property value. The mfaOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMfaOnElevation() {
-        return this.mfaOnElevation;
+        return this.BackingStore.get("mfaOnElevation");
     }
     /**
      * Gets the minElevationDuration property value. The minElevationDuration property
@@ -146,23 +106,23 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMinElevationDuration() {
-        return this.minElevationDuration;
+        return this.BackingStore.get("minElevationDuration");
     }
     /**
      * Gets the notificationToUserOnElevation property value. The notificationToUserOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNotificationToUserOnElevation() {
-        return this.notificationToUserOnElevation;
+        return this.BackingStore.get("notificationToUserOnElevation");
     }
     /**
      * Gets the ticketingInfoOnElevation property value. The ticketingInfoOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTicketingInfoOnElevation() {
-        return this.ticketingInfoOnElevation;
+        return this.BackingStore.get("ticketingInfoOnElevation");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the approvalOnElevation property.
      */
     public void setApprovalOnElevation(@jakarta.annotation.Nullable final Boolean value) {
-        this.approvalOnElevation = value;
+        this.BackingStore.set("approvalOnElevation", value);
     }
     /**
      * Sets the approverIds property value. The approverIds property
      * @param value Value to set for the approverIds property.
      */
     public void setApproverIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.approverIds = value;
+        this.BackingStore.set("approverIds", value);
     }
     /**
      * Sets the elevationDuration property value. The elevationDuration property
      * @param value Value to set for the elevationDuration property.
      */
     public void setElevationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.elevationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("elevationDuration", value);
     }
     /**
      * Sets the isMfaOnElevationConfigurable property value. The isMfaOnElevationConfigurable property
      * @param value Value to set for the isMfaOnElevationConfigurable property.
      */
     public void setIsMfaOnElevationConfigurable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMfaOnElevationConfigurable = value;
+        this.BackingStore.set("isMfaOnElevationConfigurable", value);
     }
     /**
      * Sets the lastGlobalAdmin property value. The lastGlobalAdmin property
      * @param value Value to set for the lastGlobalAdmin property.
      */
     public void setLastGlobalAdmin(@jakarta.annotation.Nullable final Boolean value) {
-        this.lastGlobalAdmin = value;
+        this.BackingStore.set("lastGlobalAdmin", value);
     }
     /**
      * Sets the maxElavationDuration property value. The maxElavationDuration property
      * @param value Value to set for the maxElavationDuration property.
      */
     public void setMaxElavationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maxElavationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("maxElavationDuration", value);
     }
     /**
      * Sets the mfaOnElevation property value. The mfaOnElevation property
      * @param value Value to set for the mfaOnElevation property.
      */
     public void setMfaOnElevation(@jakarta.annotation.Nullable final Boolean value) {
-        this.mfaOnElevation = value;
+        this.BackingStore.set("mfaOnElevation", value);
     }
     /**
      * Sets the minElevationDuration property value. The minElevationDuration property
      * @param value Value to set for the minElevationDuration property.
      */
     public void setMinElevationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.minElevationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("minElevationDuration", value);
     }
     /**
      * Sets the notificationToUserOnElevation property value. The notificationToUserOnElevation property
      * @param value Value to set for the notificationToUserOnElevation property.
      */
     public void setNotificationToUserOnElevation(@jakarta.annotation.Nullable final Boolean value) {
-        this.notificationToUserOnElevation = value;
+        this.BackingStore.set("notificationToUserOnElevation", value);
     }
     /**
      * Sets the ticketingInfoOnElevation property value. The ticketingInfoOnElevation property
      * @param value Value to set for the ticketingInfoOnElevation property.
      */
     public void setTicketingInfoOnElevation(@jakarta.annotation.Nullable final Boolean value) {
-        this.ticketingInfoOnElevation = value;
+        this.BackingStore.set("ticketingInfoOnElevation", value);
     }
 }

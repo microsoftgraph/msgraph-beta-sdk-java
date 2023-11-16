@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     /**
-     * The identity version.
-     */
-    private String identityVersion;
-    /**
-     * The minimum operating system required for a Windows mobile app.
-     */
-    private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The Product Identifier.
-     */
-    private String productIdentifier;
-    /**
-     * Instantiates a new windowsPhoneXAP and sets the default values.
+     * Instantiates a new WindowsPhoneXAP and sets the default values.
      */
     public WindowsPhoneXAP() {
         super();
@@ -33,7 +21,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhoneXAP
+     * @return a WindowsPhoneXAP
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhoneXAP createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
-        return this.identityVersion;
+        return this.BackingStore.get("identityVersion");
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.BackingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the productIdentifier property value. The Product Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductIdentifier() {
-        return this.productIdentifier;
+        return this.BackingStore.get("productIdentifier");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
-        this.identityVersion = value;
+        this.BackingStore.set("identityVersion", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.BackingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the productIdentifier property value. The Product Identifier.
      * @param value Value to set for the productIdentifier property.
      */
     public void setProductIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.productIdentifier = value;
+        this.BackingStore.set("productIdentifier", value);
     }
 }

@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingRegistration extends MeetingRegistrationBase implements Parsable {
     /**
-     * Custom registration questions.
-     */
-    private java.util.List<MeetingRegistrationQuestion> customQuestions;
-    /**
-     * The description of the meeting.
-     */
-    private String description;
-    /**
-     * The meeting end time in UTC.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The number of times the registration page has been visited. Read-only.
-     */
-    private Integer registrationPageViewCount;
-    /**
-     * The URL of the registration page. Read-only.
-     */
-    private String registrationPageWebUrl;
-    /**
-     * The meeting speaker's information.
-     */
-    private java.util.List<MeetingSpeaker> speakers;
-    /**
-     * The meeting start time in UTC.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The subject of the meeting.
-     */
-    private String subject;
-    /**
-     * Instantiates a new meetingRegistration and sets the default values.
+     * Instantiates a new MeetingRegistration and sets the default values.
      */
     public MeetingRegistration() {
         super();
@@ -51,7 +19,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingRegistration
+     * @return a MeetingRegistration
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,19 +28,19 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the customQuestions property value. Custom registration questions.
-     * @return a meetingRegistrationQuestion
+     * @return a java.util.List<MeetingRegistrationQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrationQuestion> getCustomQuestions() {
-        return this.customQuestions;
+        return this.BackingStore.get("customQuestions");
     }
     /**
      * Gets the description property value. The description of the meeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the endDateTime property value. The meeting end time in UTC.
@@ -80,7 +48,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -101,27 +69,27 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the registrationPageViewCount property value. The number of times the registration page has been visited. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRegistrationPageViewCount() {
-        return this.registrationPageViewCount;
+        return this.BackingStore.get("registrationPageViewCount");
     }
     /**
      * Gets the registrationPageWebUrl property value. The URL of the registration page. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistrationPageWebUrl() {
-        return this.registrationPageWebUrl;
+        return this.BackingStore.get("registrationPageWebUrl");
     }
     /**
      * Gets the speakers property value. The meeting speaker's information.
-     * @return a meetingSpeaker
+     * @return a java.util.List<MeetingSpeaker>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingSpeaker> getSpeakers() {
-        return this.speakers;
+        return this.BackingStore.get("speakers");
     }
     /**
      * Gets the startDateTime property value. The meeting start time in UTC.
@@ -129,15 +97,15 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the subject property value. The subject of the meeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the customQuestions property.
      */
     public void setCustomQuestions(@jakarta.annotation.Nullable final java.util.List<MeetingRegistrationQuestion> value) {
-        this.customQuestions = value;
+        this.BackingStore.set("customQuestions", value);
     }
     /**
      * Sets the description property value. The description of the meeting.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the endDateTime property value. The meeting end time in UTC.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the registrationPageViewCount property value. The number of times the registration page has been visited. Read-only.
      * @param value Value to set for the registrationPageViewCount property.
      */
     public void setRegistrationPageViewCount(@jakarta.annotation.Nullable final Integer value) {
-        this.registrationPageViewCount = value;
+        this.BackingStore.set("registrationPageViewCount", value);
     }
     /**
      * Sets the registrationPageWebUrl property value. The URL of the registration page. Read-only.
      * @param value Value to set for the registrationPageWebUrl property.
      */
     public void setRegistrationPageWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.registrationPageWebUrl = value;
+        this.BackingStore.set("registrationPageWebUrl", value);
     }
     /**
      * Sets the speakers property value. The meeting speaker's information.
      * @param value Value to set for the speakers property.
      */
     public void setSpeakers(@jakarta.annotation.Nullable final java.util.List<MeetingSpeaker> value) {
-        this.speakers = value;
+        this.BackingStore.set("speakers", value);
     }
     /**
      * Sets the startDateTime property value. The meeting start time in UTC.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the subject property value. The subject of the meeting.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
 }

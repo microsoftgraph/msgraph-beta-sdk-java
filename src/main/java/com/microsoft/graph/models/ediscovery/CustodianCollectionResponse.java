@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustodianCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Custodian> value;
-    /**
-     * Instantiates a new custodianCollectionResponse and sets the default values.
+     * Instantiates a new CustodianCollectionResponse and sets the default values.
      */
     public CustodianCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class CustodianCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a custodianCollectionResponse
+     * @return a CustodianCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CustodianCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class CustodianCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a custodian
+     * @return a java.util.List<Custodian>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Custodian> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CustodianCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Custodian> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

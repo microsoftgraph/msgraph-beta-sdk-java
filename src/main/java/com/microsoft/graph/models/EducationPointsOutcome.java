@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
     /**
-     * The numeric grade the teacher has given the student for this assignment.
-     */
-    private EducationAssignmentPointsGrade points;
-    /**
-     * A copy of the points property that is made when the grade is released to the student.
-     */
-    private EducationAssignmentPointsGrade publishedPoints;
-    /**
-     * Instantiates a new educationPointsOutcome and sets the default values.
+     * Instantiates a new EducationPointsOutcome and sets the default values.
      */
     public EducationPointsOutcome() {
         super();
@@ -26,7 +18,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationPointsOutcome
+     * @return a EducationPointsOutcome
      */
     @jakarta.annotation.Nonnull
     public static EducationPointsOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the points property value. The numeric grade the teacher has given the student for this assignment.
-     * @return a educationAssignmentPointsGrade
+     * @return a EducationAssignmentPointsGrade
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPoints() {
-        return this.points;
+        return this.BackingStore.get("points");
     }
     /**
      * Gets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
-     * @return a educationAssignmentPointsGrade
+     * @return a EducationAssignmentPointsGrade
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPublishedPoints() {
-        return this.publishedPoints;
+        return this.BackingStore.get("publishedPoints");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this.points = value;
+        this.BackingStore.set("points", value);
     }
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      * @param value Value to set for the publishedPoints property.
      */
     public void setPublishedPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this.publishedPoints = value;
+        this.BackingStore.set("publishedPoints", value);
     }
 }

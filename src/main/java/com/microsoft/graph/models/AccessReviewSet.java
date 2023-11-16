@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewSet extends Entity implements Parsable {
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
-     */
-    private java.util.List<AccessReviewInstanceDecisionItem> decisions;
-    /**
-     * Represents the template and scheduling for an access review.
-     */
-    private java.util.List<AccessReviewScheduleDefinition> definitions;
-    /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
-     */
-    private java.util.List<AccessReviewHistoryDefinition> historyDefinitions;
-    /**
-     * Resource that enables administrators to manage directory-level access review policies in their tenant.
-     */
-    private AccessReviewPolicy policy;
-    /**
-     * Instantiates a new accessReviewSet and sets the default values.
+     * Instantiates a new AccessReviewSet and sets the default values.
      */
     public AccessReviewSet() {
         super();
@@ -33,7 +17,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewSet
+     * @return a AccessReviewSet
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,20 +25,20 @@ public class AccessReviewSet extends Entity implements Parsable {
         return new AccessReviewSet();
     }
     /**
-     * Gets the decisions property value. Represents an Azure AD access review decision on an instance of a review.
-     * @return a accessReviewInstanceDecisionItem
+     * Gets the decisions property value. Represents a Microsoft Entra access review decision on an instance of a review.
+     * @return a java.util.List<AccessReviewInstanceDecisionItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewInstanceDecisionItem> getDecisions() {
-        return this.decisions;
+        return this.BackingStore.get("decisions");
     }
     /**
      * Gets the definitions property value. Represents the template and scheduling for an access review.
-     * @return a accessReviewScheduleDefinition
+     * @return a java.util.List<AccessReviewScheduleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getDefinitions() {
-        return this.definitions;
+        return this.BackingStore.get("definitions");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +55,19 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * Gets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
-     * @return a accessReviewHistoryDefinition
+     * @return a java.util.List<AccessReviewHistoryDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDefinition> getHistoryDefinitions() {
-        return this.historyDefinitions;
+        return this.BackingStore.get("historyDefinitions");
     }
     /**
      * Gets the policy property value. Resource that enables administrators to manage directory-level access review policies in their tenant.
-     * @return a accessReviewPolicy
+     * @return a AccessReviewPolicy
      */
     @jakarta.annotation.Nullable
     public AccessReviewPolicy getPolicy() {
-        return this.policy;
+        return this.BackingStore.get("policy");
     }
     /**
      * Serializes information the current object
@@ -98,31 +82,31 @@ public class AccessReviewSet extends Entity implements Parsable {
         writer.writeObjectValue("policy", this.getPolicy());
     }
     /**
-     * Sets the decisions property value. Represents an Azure AD access review decision on an instance of a review.
+     * Sets the decisions property value. Represents a Microsoft Entra access review decision on an instance of a review.
      * @param value Value to set for the decisions property.
      */
     public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewInstanceDecisionItem> value) {
-        this.decisions = value;
+        this.BackingStore.set("decisions", value);
     }
     /**
      * Sets the definitions property value. Represents the template and scheduling for an access review.
      * @param value Value to set for the definitions property.
      */
     public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
-        this.definitions = value;
+        this.BackingStore.set("definitions", value);
     }
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
      * @param value Value to set for the historyDefinitions property.
      */
     public void setHistoryDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
-        this.historyDefinitions = value;
+        this.BackingStore.set("historyDefinitions", value);
     }
     /**
      * Sets the policy property value. Resource that enables administrators to manage directory-level access review policies in their tenant.
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final AccessReviewPolicy value) {
-        this.policy = value;
+        this.BackingStore.set("policy", value);
     }
 }

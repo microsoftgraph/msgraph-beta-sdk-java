@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * VPN Authentication Method.
-     */
-    private VpnAuthenticationMethod authenticationMethod;
-    /**
-     * Connection name displayed to the user.
-     */
-    private String connectionName;
-    /**
-     * Realm when connection type is set to Pulse Secure.
-     */
-    private String realm;
-    /**
-     * Role when connection type is set to Pulse Secure.
-     */
-    private String role;
-    /**
-     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<VpnServer> servers;
-    /**
-     * Instantiates a new vpnConfiguration and sets the default values.
+     * Instantiates a new VpnConfiguration and sets the default values.
      */
     public VpnConfiguration() {
         super();
@@ -41,7 +21,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnConfiguration
+     * @return a VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,19 +37,19 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.BackingStore.get("authenticationMethod");
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
-        return this.connectionName;
+        return this.BackingStore.get("connectionName");
     }
     /**
      * The deserialization information for the current model
@@ -87,27 +67,27 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
-        return this.realm;
+        return this.BackingStore.get("realm");
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
-        return this.role;
+        return this.BackingStore.get("role");
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {
-        return this.servers;
+        return this.BackingStore.get("servers");
     }
     /**
      * Serializes information the current object
@@ -127,34 +107,34 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final VpnAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.BackingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the connectionName property value. Connection name displayed to the user.
      * @param value Value to set for the connectionName property.
      */
     public void setConnectionName(@jakarta.annotation.Nullable final String value) {
-        this.connectionName = value;
+        this.BackingStore.set("connectionName", value);
     }
     /**
      * Sets the realm property value. Realm when connection type is set to Pulse Secure.
      * @param value Value to set for the realm property.
      */
     public void setRealm(@jakarta.annotation.Nullable final String value) {
-        this.realm = value;
+        this.BackingStore.set("realm", value);
     }
     /**
      * Sets the role property value. Role when connection type is set to Pulse Secure.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
-        this.role = value;
+        this.BackingStore.set("role", value);
     }
     /**
      * Sets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the servers property.
      */
     public void setServers(@jakarta.annotation.Nullable final java.util.List<VpnServer> value) {
-        this.servers = value;
+        this.BackingStore.set("servers", value);
     }
 }

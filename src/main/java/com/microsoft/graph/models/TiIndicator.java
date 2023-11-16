@@ -10,239 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TiIndicator extends Entity implements Parsable {
     /**
-     * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
-     */
-    private TiAction action;
-    /**
-     * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
-     */
-    private java.util.List<String> activityGroupNames;
-    /**
-     * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
-     */
-    private String additionalInformation;
-    /**
-     * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
-     */
-    private String azureTenantId;
-    /**
-     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
-     */
-    private Integer confidence;
-    /**
-     * Brief description (100 characters or less) of the threat represented by the indicator. Required.
-     */
-    private String description;
-    /**
-     * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
-     */
-    private DiamondModel diamondModel;
-    /**
-     * The domainName property
-     */
-    private String domainName;
-    /**
-     * The emailEncoding property
-     */
-    private String emailEncoding;
-    /**
-     * The emailLanguage property
-     */
-    private String emailLanguage;
-    /**
-     * The emailRecipient property
-     */
-    private String emailRecipient;
-    /**
-     * The emailSenderAddress property
-     */
-    private String emailSenderAddress;
-    /**
-     * The emailSenderName property
-     */
-    private String emailSenderName;
-    /**
-     * The emailSourceDomain property
-     */
-    private String emailSourceDomain;
-    /**
-     * The emailSourceIpAddress property
-     */
-    private String emailSourceIpAddress;
-    /**
-     * The emailSubject property
-     */
-    private String emailSubject;
-    /**
-     * The emailXMailer property
-     */
-    private String emailXMailer;
-    /**
-     * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * An identification number that ties the indicator back to the indicator providers system (for example, a foreign key).
-     */
-    private String externalId;
-    /**
-     * The fileCompileDateTime property
-     */
-    private OffsetDateTime fileCompileDateTime;
-    /**
-     * The fileCreatedDateTime property
-     */
-    private OffsetDateTime fileCreatedDateTime;
-    /**
-     * The fileHashType property
-     */
-    private FileHashType fileHashType;
-    /**
-     * The fileHashValue property
-     */
-    private String fileHashValue;
-    /**
-     * The fileMutexName property
-     */
-    private String fileMutexName;
-    /**
-     * The fileName property
-     */
-    private String fileName;
-    /**
-     * The filePacker property
-     */
-    private String filePacker;
-    /**
-     * The filePath property
-     */
-    private String filePath;
-    /**
-     * The fileSize property
-     */
-    private Long fileSize;
-    /**
-     * The fileType property
-     */
-    private String fileType;
-    /**
-     * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime ingestedDateTime;
-    /**
-     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
-     */
-    private Boolean isActive;
-    /**
-     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
-     */
-    private java.util.List<String> killChain;
-    /**
-     * Scenarios in which the indicator may cause false positives. This should be human-readable text.
-     */
-    private String knownFalsePositives;
-    /**
-     * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
-     */
-    private java.util.List<String> malwareFamilyNames;
-    /**
-     * The networkCidrBlock property
-     */
-    private String networkCidrBlock;
-    /**
-     * The networkDestinationAsn property
-     */
-    private Long networkDestinationAsn;
-    /**
-     * The networkDestinationCidrBlock property
-     */
-    private String networkDestinationCidrBlock;
-    /**
-     * The networkDestinationIPv4 property
-     */
-    private String networkDestinationIPv4;
-    /**
-     * The networkDestinationIPv6 property
-     */
-    private String networkDestinationIPv6;
-    /**
-     * The networkDestinationPort property
-     */
-    private Integer networkDestinationPort;
-    /**
-     * The networkIPv4 property
-     */
-    private String networkIPv4;
-    /**
-     * The networkIPv6 property
-     */
-    private String networkIPv6;
-    /**
-     * The networkPort property
-     */
-    private Integer networkPort;
-    /**
-     * The networkProtocol property
-     */
-    private Integer networkProtocol;
-    /**
-     * The networkSourceAsn property
-     */
-    private Long networkSourceAsn;
-    /**
-     * The networkSourceCidrBlock property
-     */
-    private String networkSourceCidrBlock;
-    /**
-     * The networkSourceIPv4 property
-     */
-    private String networkSourceIPv4;
-    /**
-     * The networkSourceIPv6 property
-     */
-    private String networkSourceIPv6;
-    /**
-     * The networkSourcePort property
-     */
-    private Integer networkSourcePort;
-    /**
-     * Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
-     */
-    private Boolean passiveOnly;
-    /**
-     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
-     */
-    private Integer severity;
-    /**
-     * A JSON array of strings that stores arbitrary tags/keywords.
-     */
-    private java.util.List<String> tags;
-    /**
-     * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
-     */
-    private String targetProduct;
-    /**
-     * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
-     */
-    private String threatType;
-    /**
-     * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
-     */
-    private TlpLevel tlpLevel;
-    /**
-     * The url property
-     */
-    private String url;
-    /**
-     * The userAgent property
-     */
-    private String userAgent;
-    /**
-     * Instantiates a new tiIndicator and sets the default values.
+     * Instantiates a new TiIndicator and sets the default values.
      */
     public TiIndicator() {
         super();
@@ -250,7 +18,7 @@ public class TiIndicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tiIndicator
+     * @return a TiIndicator
      */
     @jakarta.annotation.Nonnull
     public static TiIndicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -259,139 +27,139 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
-     * @return a tiAction
+     * @return a TiAction
      */
     @jakarta.annotation.Nullable
     public TiAction getAction() {
-        return this.action;
+        return this.BackingStore.get("action");
     }
     /**
      * Gets the activityGroupNames property value. The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
-        return this.activityGroupNames;
+        return this.BackingStore.get("activityGroupNames");
     }
     /**
-     * Gets the additionalInformation property value. A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
-     * @return a string
+     * Gets the additionalInformation property value. A catchall area for extra data from the indicator that is not specifically covered by other tiIndicator properties. The security tool specified by targetProduct typically does not utilize this data.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
-        return this.additionalInformation;
+        return this.BackingStore.get("additionalInformation");
     }
     /**
-     * Gets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
-     * @return a string
+     * Gets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Microsoft Entra tenant id of submitting client. Required.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.BackingStore.get("azureTenantId");
     }
     /**
      * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
-        return this.confidence;
+        return this.BackingStore.get("confidence");
     }
     /**
      * Gets the description property value. Brief description (100 characters or less) of the threat represented by the indicator. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
-     * @return a diamondModel
+     * @return a DiamondModel
      */
     @jakarta.annotation.Nullable
     public DiamondModel getDiamondModel() {
-        return this.diamondModel;
+        return this.BackingStore.get("diamondModel");
     }
     /**
      * Gets the domainName property value. The domainName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.BackingStore.get("domainName");
     }
     /**
      * Gets the emailEncoding property value. The emailEncoding property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailEncoding() {
-        return this.emailEncoding;
+        return this.BackingStore.get("emailEncoding");
     }
     /**
      * Gets the emailLanguage property value. The emailLanguage property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailLanguage() {
-        return this.emailLanguage;
+        return this.BackingStore.get("emailLanguage");
     }
     /**
      * Gets the emailRecipient property value. The emailRecipient property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailRecipient() {
-        return this.emailRecipient;
+        return this.BackingStore.get("emailRecipient");
     }
     /**
      * Gets the emailSenderAddress property value. The emailSenderAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailSenderAddress() {
-        return this.emailSenderAddress;
+        return this.BackingStore.get("emailSenderAddress");
     }
     /**
      * Gets the emailSenderName property value. The emailSenderName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailSenderName() {
-        return this.emailSenderName;
+        return this.BackingStore.get("emailSenderName");
     }
     /**
      * Gets the emailSourceDomain property value. The emailSourceDomain property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailSourceDomain() {
-        return this.emailSourceDomain;
+        return this.BackingStore.get("emailSourceDomain");
     }
     /**
      * Gets the emailSourceIpAddress property value. The emailSourceIpAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailSourceIpAddress() {
-        return this.emailSourceIpAddress;
+        return this.BackingStore.get("emailSourceIpAddress");
     }
     /**
      * Gets the emailSubject property value. The emailSubject property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailSubject() {
-        return this.emailSubject;
+        return this.BackingStore.get("emailSubject");
     }
     /**
      * Gets the emailXMailer property value. The emailXMailer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailXMailer() {
-        return this.emailXMailer;
+        return this.BackingStore.get("emailXMailer");
     }
     /**
      * Gets the expirationDateTime property value. DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -399,15 +167,15 @@ public class TiIndicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * Gets the externalId property value. An identification number that ties the indicator back to the indicator providers system (for example, a foreign key).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -482,7 +250,7 @@ public class TiIndicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFileCompileDateTime() {
-        return this.fileCompileDateTime;
+        return this.BackingStore.get("fileCompileDateTime");
     }
     /**
      * Gets the fileCreatedDateTime property value. The fileCreatedDateTime property
@@ -490,71 +258,71 @@ public class TiIndicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFileCreatedDateTime() {
-        return this.fileCreatedDateTime;
+        return this.BackingStore.get("fileCreatedDateTime");
     }
     /**
      * Gets the fileHashType property value. The fileHashType property
-     * @return a fileHashType
+     * @return a FileHashType
      */
     @jakarta.annotation.Nullable
     public FileHashType getFileHashType() {
-        return this.fileHashType;
+        return this.BackingStore.get("fileHashType");
     }
     /**
      * Gets the fileHashValue property value. The fileHashValue property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileHashValue() {
-        return this.fileHashValue;
+        return this.BackingStore.get("fileHashValue");
     }
     /**
      * Gets the fileMutexName property value. The fileMutexName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileMutexName() {
-        return this.fileMutexName;
+        return this.BackingStore.get("fileMutexName");
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.BackingStore.get("fileName");
     }
     /**
      * Gets the filePacker property value. The filePacker property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePacker() {
-        return this.filePacker;
+        return this.BackingStore.get("filePacker");
     }
     /**
      * Gets the filePath property value. The filePath property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
-        return this.filePath;
+        return this.BackingStore.get("filePath");
     }
     /**
      * Gets the fileSize property value. The fileSize property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
-        return this.fileSize;
+        return this.BackingStore.get("fileSize");
     }
     /**
      * Gets the fileType property value. The fileType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileType() {
-        return this.fileType;
+        return this.BackingStore.get("fileType");
     }
     /**
      * Gets the ingestedDateTime property value. Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -562,31 +330,31 @@ public class TiIndicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIngestedDateTime() {
-        return this.ingestedDateTime;
+        return this.BackingStore.get("ingestedDateTime");
     }
     /**
      * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKillChain() {
-        return this.killChain;
+        return this.BackingStore.get("killChain");
     }
     /**
      * Gets the knownFalsePositives property value. Scenarios in which the indicator may cause false positives. This should be human-readable text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKnownFalsePositives() {
-        return this.knownFalsePositives;
+        return this.BackingStore.get("knownFalsePositives");
     }
     /**
      * Gets the lastReportedDateTime property value. The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -594,199 +362,199 @@ public class TiIndicator extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.BackingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the malwareFamilyNames property value. The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMalwareFamilyNames() {
-        return this.malwareFamilyNames;
+        return this.BackingStore.get("malwareFamilyNames");
     }
     /**
      * Gets the networkCidrBlock property value. The networkCidrBlock property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkCidrBlock() {
-        return this.networkCidrBlock;
+        return this.BackingStore.get("networkCidrBlock");
     }
     /**
      * Gets the networkDestinationAsn property value. The networkDestinationAsn property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNetworkDestinationAsn() {
-        return this.networkDestinationAsn;
+        return this.BackingStore.get("networkDestinationAsn");
     }
     /**
      * Gets the networkDestinationCidrBlock property value. The networkDestinationCidrBlock property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationCidrBlock() {
-        return this.networkDestinationCidrBlock;
+        return this.BackingStore.get("networkDestinationCidrBlock");
     }
     /**
      * Gets the networkDestinationIPv4 property value. The networkDestinationIPv4 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv4() {
-        return this.networkDestinationIPv4;
+        return this.BackingStore.get("networkDestinationIPv4");
     }
     /**
      * Gets the networkDestinationIPv6 property value. The networkDestinationIPv6 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv6() {
-        return this.networkDestinationIPv6;
+        return this.BackingStore.get("networkDestinationIPv6");
     }
     /**
      * Gets the networkDestinationPort property value. The networkDestinationPort property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkDestinationPort() {
-        return this.networkDestinationPort;
+        return this.BackingStore.get("networkDestinationPort");
     }
     /**
      * Gets the networkIPv4 property value. The networkIPv4 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkIPv4() {
-        return this.networkIPv4;
+        return this.BackingStore.get("networkIPv4");
     }
     /**
      * Gets the networkIPv6 property value. The networkIPv6 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkIPv6() {
-        return this.networkIPv6;
+        return this.BackingStore.get("networkIPv6");
     }
     /**
      * Gets the networkPort property value. The networkPort property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkPort() {
-        return this.networkPort;
+        return this.BackingStore.get("networkPort");
     }
     /**
      * Gets the networkProtocol property value. The networkProtocol property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkProtocol() {
-        return this.networkProtocol;
+        return this.BackingStore.get("networkProtocol");
     }
     /**
      * Gets the networkSourceAsn property value. The networkSourceAsn property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNetworkSourceAsn() {
-        return this.networkSourceAsn;
+        return this.BackingStore.get("networkSourceAsn");
     }
     /**
      * Gets the networkSourceCidrBlock property value. The networkSourceCidrBlock property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceCidrBlock() {
-        return this.networkSourceCidrBlock;
+        return this.BackingStore.get("networkSourceCidrBlock");
     }
     /**
      * Gets the networkSourceIPv4 property value. The networkSourceIPv4 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceIPv4() {
-        return this.networkSourceIPv4;
+        return this.BackingStore.get("networkSourceIPv4");
     }
     /**
      * Gets the networkSourceIPv6 property value. The networkSourceIPv6 property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceIPv6() {
-        return this.networkSourceIPv6;
+        return this.BackingStore.get("networkSourceIPv6");
     }
     /**
      * Gets the networkSourcePort property value. The networkSourcePort property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkSourcePort() {
-        return this.networkSourcePort;
+        return this.BackingStore.get("networkSourcePort");
     }
     /**
      * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPassiveOnly() {
-        return this.passiveOnly;
+        return this.BackingStore.get("passiveOnly");
     }
     /**
      * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSeverity() {
-        return this.severity;
+        return this.BackingStore.get("severity");
     }
     /**
      * Gets the tags property value. A JSON array of strings that stores arbitrary tags/keywords.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Gets the targetProduct property value. A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetProduct() {
-        return this.targetProduct;
+        return this.BackingStore.get("targetProduct");
     }
     /**
      * Gets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThreatType() {
-        return this.threatType;
+        return this.BackingStore.get("threatType");
     }
     /**
      * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
-     * @return a tlpLevel
+     * @return a TlpLevel
      */
     @jakarta.annotation.Nullable
     public TlpLevel getTlpLevel() {
-        return this.tlpLevel;
+        return this.BackingStore.get("tlpLevel");
     }
     /**
      * Gets the url property value. The url property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Gets the userAgent property value. The userAgent property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {
-        return this.userAgent;
+        return this.BackingStore.get("userAgent");
     }
     /**
      * Serializes information the current object
@@ -859,405 +627,405 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final TiAction value) {
-        this.action = value;
+        this.BackingStore.set("action", value);
     }
     /**
      * Sets the activityGroupNames property value. The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
      * @param value Value to set for the activityGroupNames property.
      */
     public void setActivityGroupNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.activityGroupNames = value;
+        this.BackingStore.set("activityGroupNames", value);
     }
     /**
-     * Sets the additionalInformation property value. A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
+     * Sets the additionalInformation property value. A catchall area for extra data from the indicator that is not specifically covered by other tiIndicator properties. The security tool specified by targetProduct typically does not utilize this data.
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
-        this.additionalInformation = value;
+        this.BackingStore.set("additionalInformation", value);
     }
     /**
-     * Sets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
+     * Sets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Microsoft Entra tenant id of submitting client. Required.
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.BackingStore.set("azureTenantId", value);
     }
     /**
      * Sets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @param value Value to set for the confidence property.
      */
     public void setConfidence(@jakarta.annotation.Nullable final Integer value) {
-        this.confidence = value;
+        this.BackingStore.set("confidence", value);
     }
     /**
      * Sets the description property value. Brief description (100 characters or less) of the threat represented by the indicator. Required.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
      * @param value Value to set for the diamondModel property.
      */
     public void setDiamondModel(@jakarta.annotation.Nullable final DiamondModel value) {
-        this.diamondModel = value;
+        this.BackingStore.set("diamondModel", value);
     }
     /**
      * Sets the domainName property value. The domainName property
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.BackingStore.set("domainName", value);
     }
     /**
      * Sets the emailEncoding property value. The emailEncoding property
      * @param value Value to set for the emailEncoding property.
      */
     public void setEmailEncoding(@jakarta.annotation.Nullable final String value) {
-        this.emailEncoding = value;
+        this.BackingStore.set("emailEncoding", value);
     }
     /**
      * Sets the emailLanguage property value. The emailLanguage property
      * @param value Value to set for the emailLanguage property.
      */
     public void setEmailLanguage(@jakarta.annotation.Nullable final String value) {
-        this.emailLanguage = value;
+        this.BackingStore.set("emailLanguage", value);
     }
     /**
      * Sets the emailRecipient property value. The emailRecipient property
      * @param value Value to set for the emailRecipient property.
      */
     public void setEmailRecipient(@jakarta.annotation.Nullable final String value) {
-        this.emailRecipient = value;
+        this.BackingStore.set("emailRecipient", value);
     }
     /**
      * Sets the emailSenderAddress property value. The emailSenderAddress property
      * @param value Value to set for the emailSenderAddress property.
      */
     public void setEmailSenderAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailSenderAddress = value;
+        this.BackingStore.set("emailSenderAddress", value);
     }
     /**
      * Sets the emailSenderName property value. The emailSenderName property
      * @param value Value to set for the emailSenderName property.
      */
     public void setEmailSenderName(@jakarta.annotation.Nullable final String value) {
-        this.emailSenderName = value;
+        this.BackingStore.set("emailSenderName", value);
     }
     /**
      * Sets the emailSourceDomain property value. The emailSourceDomain property
      * @param value Value to set for the emailSourceDomain property.
      */
     public void setEmailSourceDomain(@jakarta.annotation.Nullable final String value) {
-        this.emailSourceDomain = value;
+        this.BackingStore.set("emailSourceDomain", value);
     }
     /**
      * Sets the emailSourceIpAddress property value. The emailSourceIpAddress property
      * @param value Value to set for the emailSourceIpAddress property.
      */
     public void setEmailSourceIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailSourceIpAddress = value;
+        this.BackingStore.set("emailSourceIpAddress", value);
     }
     /**
      * Sets the emailSubject property value. The emailSubject property
      * @param value Value to set for the emailSubject property.
      */
     public void setEmailSubject(@jakarta.annotation.Nullable final String value) {
-        this.emailSubject = value;
+        this.BackingStore.set("emailSubject", value);
     }
     /**
      * Sets the emailXMailer property value. The emailXMailer property
      * @param value Value to set for the emailXMailer property.
      */
     public void setEmailXMailer(@jakarta.annotation.Nullable final String value) {
-        this.emailXMailer = value;
+        this.BackingStore.set("emailXMailer", value);
     }
     /**
      * Sets the expirationDateTime property value. DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the externalId property value. An identification number that ties the indicator back to the indicator providers system (for example, a foreign key).
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the fileCompileDateTime property value. The fileCompileDateTime property
      * @param value Value to set for the fileCompileDateTime property.
      */
     public void setFileCompileDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.fileCompileDateTime = value;
+        this.BackingStore.set("fileCompileDateTime", value);
     }
     /**
      * Sets the fileCreatedDateTime property value. The fileCreatedDateTime property
      * @param value Value to set for the fileCreatedDateTime property.
      */
     public void setFileCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.fileCreatedDateTime = value;
+        this.BackingStore.set("fileCreatedDateTime", value);
     }
     /**
      * Sets the fileHashType property value. The fileHashType property
      * @param value Value to set for the fileHashType property.
      */
     public void setFileHashType(@jakarta.annotation.Nullable final FileHashType value) {
-        this.fileHashType = value;
+        this.BackingStore.set("fileHashType", value);
     }
     /**
      * Sets the fileHashValue property value. The fileHashValue property
      * @param value Value to set for the fileHashValue property.
      */
     public void setFileHashValue(@jakarta.annotation.Nullable final String value) {
-        this.fileHashValue = value;
+        this.BackingStore.set("fileHashValue", value);
     }
     /**
      * Sets the fileMutexName property value. The fileMutexName property
      * @param value Value to set for the fileMutexName property.
      */
     public void setFileMutexName(@jakarta.annotation.Nullable final String value) {
-        this.fileMutexName = value;
+        this.BackingStore.set("fileMutexName", value);
     }
     /**
      * Sets the fileName property value. The fileName property
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.BackingStore.set("fileName", value);
     }
     /**
      * Sets the filePacker property value. The filePacker property
      * @param value Value to set for the filePacker property.
      */
     public void setFilePacker(@jakarta.annotation.Nullable final String value) {
-        this.filePacker = value;
+        this.BackingStore.set("filePacker", value);
     }
     /**
      * Sets the filePath property value. The filePath property
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
-        this.filePath = value;
+        this.BackingStore.set("filePath", value);
     }
     /**
      * Sets the fileSize property value. The fileSize property
      * @param value Value to set for the fileSize property.
      */
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {
-        this.fileSize = value;
+        this.BackingStore.set("fileSize", value);
     }
     /**
      * Sets the fileType property value. The fileType property
      * @param value Value to set for the fileType property.
      */
     public void setFileType(@jakarta.annotation.Nullable final String value) {
-        this.fileType = value;
+        this.BackingStore.set("fileType", value);
     }
     /**
      * Sets the ingestedDateTime property value. Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the ingestedDateTime property.
      */
     public void setIngestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.ingestedDateTime = value;
+        this.BackingStore.set("ingestedDateTime", value);
     }
     /**
      * Sets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @param value Value to set for the killChain property.
      */
     public void setKillChain(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.killChain = value;
+        this.BackingStore.set("killChain", value);
     }
     /**
      * Sets the knownFalsePositives property value. Scenarios in which the indicator may cause false positives. This should be human-readable text.
      * @param value Value to set for the knownFalsePositives property.
      */
     public void setKnownFalsePositives(@jakarta.annotation.Nullable final String value) {
-        this.knownFalsePositives = value;
+        this.BackingStore.set("knownFalsePositives", value);
     }
     /**
      * Sets the lastReportedDateTime property value. The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.BackingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the malwareFamilyNames property value. The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
      * @param value Value to set for the malwareFamilyNames property.
      */
     public void setMalwareFamilyNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.malwareFamilyNames = value;
+        this.BackingStore.set("malwareFamilyNames", value);
     }
     /**
      * Sets the networkCidrBlock property value. The networkCidrBlock property
      * @param value Value to set for the networkCidrBlock property.
      */
     public void setNetworkCidrBlock(@jakarta.annotation.Nullable final String value) {
-        this.networkCidrBlock = value;
+        this.BackingStore.set("networkCidrBlock", value);
     }
     /**
      * Sets the networkDestinationAsn property value. The networkDestinationAsn property
      * @param value Value to set for the networkDestinationAsn property.
      */
     public void setNetworkDestinationAsn(@jakarta.annotation.Nullable final Long value) {
-        this.networkDestinationAsn = value;
+        this.BackingStore.set("networkDestinationAsn", value);
     }
     /**
      * Sets the networkDestinationCidrBlock property value. The networkDestinationCidrBlock property
      * @param value Value to set for the networkDestinationCidrBlock property.
      */
     public void setNetworkDestinationCidrBlock(@jakarta.annotation.Nullable final String value) {
-        this.networkDestinationCidrBlock = value;
+        this.BackingStore.set("networkDestinationCidrBlock", value);
     }
     /**
      * Sets the networkDestinationIPv4 property value. The networkDestinationIPv4 property
      * @param value Value to set for the networkDestinationIPv4 property.
      */
     public void setNetworkDestinationIPv4(@jakarta.annotation.Nullable final String value) {
-        this.networkDestinationIPv4 = value;
+        this.BackingStore.set("networkDestinationIPv4", value);
     }
     /**
      * Sets the networkDestinationIPv6 property value. The networkDestinationIPv6 property
      * @param value Value to set for the networkDestinationIPv6 property.
      */
     public void setNetworkDestinationIPv6(@jakarta.annotation.Nullable final String value) {
-        this.networkDestinationIPv6 = value;
+        this.BackingStore.set("networkDestinationIPv6", value);
     }
     /**
      * Sets the networkDestinationPort property value. The networkDestinationPort property
      * @param value Value to set for the networkDestinationPort property.
      */
     public void setNetworkDestinationPort(@jakarta.annotation.Nullable final Integer value) {
-        this.networkDestinationPort = value;
+        this.BackingStore.set("networkDestinationPort", value);
     }
     /**
      * Sets the networkIPv4 property value. The networkIPv4 property
      * @param value Value to set for the networkIPv4 property.
      */
     public void setNetworkIPv4(@jakarta.annotation.Nullable final String value) {
-        this.networkIPv4 = value;
+        this.BackingStore.set("networkIPv4", value);
     }
     /**
      * Sets the networkIPv6 property value. The networkIPv6 property
      * @param value Value to set for the networkIPv6 property.
      */
     public void setNetworkIPv6(@jakarta.annotation.Nullable final String value) {
-        this.networkIPv6 = value;
+        this.BackingStore.set("networkIPv6", value);
     }
     /**
      * Sets the networkPort property value. The networkPort property
      * @param value Value to set for the networkPort property.
      */
     public void setNetworkPort(@jakarta.annotation.Nullable final Integer value) {
-        this.networkPort = value;
+        this.BackingStore.set("networkPort", value);
     }
     /**
      * Sets the networkProtocol property value. The networkProtocol property
      * @param value Value to set for the networkProtocol property.
      */
     public void setNetworkProtocol(@jakarta.annotation.Nullable final Integer value) {
-        this.networkProtocol = value;
+        this.BackingStore.set("networkProtocol", value);
     }
     /**
      * Sets the networkSourceAsn property value. The networkSourceAsn property
      * @param value Value to set for the networkSourceAsn property.
      */
     public void setNetworkSourceAsn(@jakarta.annotation.Nullable final Long value) {
-        this.networkSourceAsn = value;
+        this.BackingStore.set("networkSourceAsn", value);
     }
     /**
      * Sets the networkSourceCidrBlock property value. The networkSourceCidrBlock property
      * @param value Value to set for the networkSourceCidrBlock property.
      */
     public void setNetworkSourceCidrBlock(@jakarta.annotation.Nullable final String value) {
-        this.networkSourceCidrBlock = value;
+        this.BackingStore.set("networkSourceCidrBlock", value);
     }
     /**
      * Sets the networkSourceIPv4 property value. The networkSourceIPv4 property
      * @param value Value to set for the networkSourceIPv4 property.
      */
     public void setNetworkSourceIPv4(@jakarta.annotation.Nullable final String value) {
-        this.networkSourceIPv4 = value;
+        this.BackingStore.set("networkSourceIPv4", value);
     }
     /**
      * Sets the networkSourceIPv6 property value. The networkSourceIPv6 property
      * @param value Value to set for the networkSourceIPv6 property.
      */
     public void setNetworkSourceIPv6(@jakarta.annotation.Nullable final String value) {
-        this.networkSourceIPv6 = value;
+        this.BackingStore.set("networkSourceIPv6", value);
     }
     /**
      * Sets the networkSourcePort property value. The networkSourcePort property
      * @param value Value to set for the networkSourcePort property.
      */
     public void setNetworkSourcePort(@jakarta.annotation.Nullable final Integer value) {
-        this.networkSourcePort = value;
+        this.BackingStore.set("networkSourcePort", value);
     }
     /**
      * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
      * @param value Value to set for the passiveOnly property.
      */
     public void setPassiveOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.passiveOnly = value;
+        this.BackingStore.set("passiveOnly", value);
     }
     /**
      * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final Integer value) {
-        this.severity = value;
+        this.BackingStore.set("severity", value);
     }
     /**
      * Sets the tags property value. A JSON array of strings that stores arbitrary tags/keywords.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
      * Sets the targetProduct property value. A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
      * @param value Value to set for the targetProduct property.
      */
     public void setTargetProduct(@jakarta.annotation.Nullable final String value) {
-        this.targetProduct = value;
+        this.BackingStore.set("targetProduct", value);
     }
     /**
      * Sets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final String value) {
-        this.threatType = value;
+        this.BackingStore.set("threatType", value);
     }
     /**
      * Sets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
      * @param value Value to set for the tlpLevel property.
      */
     public void setTlpLevel(@jakarta.annotation.Nullable final TlpLevel value) {
-        this.tlpLevel = value;
+        this.BackingStore.set("tlpLevel", value);
     }
     /**
      * Sets the url property value. The url property
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
     /**
      * Sets the userAgent property value. The userAgent property
      * @param value Value to set for the userAgent property.
      */
     public void setUserAgent(@jakarta.annotation.Nullable final String value) {
-        this.userAgent = value;
+        this.BackingStore.set("userAgent", value);
     }
 }

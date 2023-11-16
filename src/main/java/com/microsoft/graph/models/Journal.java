@@ -4,63 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Journal implements AdditionalDataHolder, Parsable {
+public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The account property
+     * Stores model information.
      */
-    private Account account;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The balancingAccountId property
-     */
-    private UUID balancingAccountId;
-    /**
-     * The balancingAccountNumber property
-     */
-    private String balancingAccountNumber;
-    /**
-     * The code property
-     */
-    private String code;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The journalLines property
-     */
-    private java.util.List<JournalLine> journalLines;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new journal and sets the default values.
+     * Instantiates a new Journal and sets the default values.
      */
     public Journal() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a journal
+     * @return a Journal
      */
     @jakarta.annotation.Nonnull
     public static Journal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,19 +37,32 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
-        return this.account;
+        return this.BackingStore.get("account");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the balancingAccountId property value. The balancingAccountId property
@@ -89,31 +70,31 @@ public class Journal implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getBalancingAccountId() {
-        return this.balancingAccountId;
+        return this.BackingStore.get("balancingAccountId");
     }
     /**
      * Gets the balancingAccountNumber property value. The balancingAccountNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBalancingAccountNumber() {
-        return this.balancingAccountNumber;
+        return this.BackingStore.get("balancingAccountNumber");
     }
     /**
      * Gets the code property value. The code property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.BackingStore.get("code");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -139,15 +120,15 @@ public class Journal implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the journalLines property value. The journalLines property
-     * @return a journalLine
+     * @return a java.util.List<JournalLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
-        return this.journalLines;
+        return this.BackingStore.get("journalLines");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -155,15 +136,15 @@ public class Journal implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -187,69 +168,77 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the account property.
      */
     public void setAccount(@jakarta.annotation.Nullable final Account value) {
-        this.account = value;
+        this.BackingStore.set("account", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the balancingAccountId property value. The balancingAccountId property
      * @param value Value to set for the balancingAccountId property.
      */
     public void setBalancingAccountId(@jakarta.annotation.Nullable final UUID value) {
-        this.balancingAccountId = value;
+        this.BackingStore.set("balancingAccountId", value);
     }
     /**
      * Sets the balancingAccountNumber property value. The balancingAccountNumber property
      * @param value Value to set for the balancingAccountNumber property.
      */
     public void setBalancingAccountNumber(@jakarta.annotation.Nullable final String value) {
-        this.balancingAccountNumber = value;
+        this.BackingStore.set("balancingAccountNumber", value);
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.BackingStore.set("code", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the journalLines property value. The journalLines property
      * @param value Value to set for the journalLines property.
      */
     public void setJournalLines(@jakarta.annotation.Nullable final java.util.List<JournalLine> value) {
-        this.journalLines = value;
+        this.BackingStore.set("journalLines", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

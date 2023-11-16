@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivityOLD extends Entity implements Parsable {
     /**
-     * The action property
-     */
-    private ItemActionSet action;
-    /**
-     * The actor property
-     */
-    private IdentitySet actor;
-    /**
-     * The driveItem property
-     */
-    private DriveItem driveItem;
-    /**
-     * The listItem property
-     */
-    private ListItem listItem;
-    /**
-     * The times property
-     */
-    private ItemActivityTimeSet times;
-    /**
-     * Instantiates a new itemActivityOLD and sets the default values.
+     * Instantiates a new ItemActivityOLD and sets the default values.
      */
     public ItemActivityOLD() {
         super();
@@ -37,7 +17,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemActivityOLD
+     * @return a ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public static ItemActivityOLD createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,27 +26,27 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a itemActionSet
+     * @return a ItemActionSet
      */
     @jakarta.annotation.Nullable
     public ItemActionSet getAction() {
-        return this.action;
+        return this.BackingStore.get("action");
     }
     /**
      * Gets the actor property value. The actor property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getActor() {
-        return this.actor;
+        return this.BackingStore.get("actor");
     }
     /**
      * Gets the driveItem property value. The driveItem property
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this.driveItem;
+        return this.BackingStore.get("driveItem");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +64,19 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the listItem property value. The listItem property
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nullable
     public ListItem getListItem() {
-        return this.listItem;
+        return this.BackingStore.get("listItem");
     }
     /**
      * Gets the times property value. The times property
-     * @return a itemActivityTimeSet
+     * @return a ItemActivityTimeSet
      */
     @jakarta.annotation.Nullable
     public ItemActivityTimeSet getTimes() {
-        return this.times;
+        return this.BackingStore.get("times");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final ItemActionSet value) {
-        this.action = value;
+        this.BackingStore.set("action", value);
     }
     /**
      * Sets the actor property value. The actor property
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.actor = value;
+        this.BackingStore.set("actor", value);
     }
     /**
      * Sets the driveItem property value. The driveItem property
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
-        this.driveItem = value;
+        this.BackingStore.set("driveItem", value);
     }
     /**
      * Sets the listItem property value. The listItem property
      * @param value Value to set for the listItem property.
      */
     public void setListItem(@jakarta.annotation.Nullable final ListItem value) {
-        this.listItem = value;
+        this.BackingStore.set("listItem", value);
     }
     /**
      * Sets the times property value. The times property
      * @param value Value to set for the times property.
      */
     public void setTimes(@jakarta.annotation.Nullable final ItemActivityTimeSet value) {
-        this.times = value;
+        this.BackingStore.set("times", value);
     }
 }

@@ -4,61 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetConfigurationPolicyDevicesReportPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GetConfigurationPolicyDevicesReportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The filter property
-     */
-    private String filter;
-    /**
-     * The groupBy property
-     */
-    private java.util.List<String> groupBy;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The orderBy property
-     */
-    private java.util.List<String> orderBy;
-    /**
-     * The search property
-     */
-    private String search;
-    /**
-     * The select property
-     */
-    private java.util.List<String> select;
-    /**
-     * The sessionId property
-     */
-    private String sessionId;
-    /**
-     * The skip property
-     */
-    private Integer skip;
-    /**
-     * The top property
-     */
-    private Integer top;
-    /**
-     * Instantiates a new getConfigurationPolicyDevicesReportPostRequestBody and sets the default values.
+     * Instantiates a new GetConfigurationPolicyDevicesReportPostRequestBody and sets the default values.
      */
     public GetConfigurationPolicyDevicesReportPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getConfigurationPolicyDevicesReportPostRequestBody
+     * @return a GetConfigurationPolicyDevicesReportPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetConfigurationPolicyDevicesReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,12 +34,25 @@ public class GetConfigurationPolicyDevicesReportPostRequestBody implements Addit
         return new GetConfigurationPolicyDevicesReportPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -93,75 +74,75 @@ public class GetConfigurationPolicyDevicesReportPostRequestBody implements Addit
     }
     /**
      * Gets the filter property value. The filter property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
-        return this.filter;
+        return this.BackingStore.get("filter");
     }
     /**
      * Gets the groupBy property value. The groupBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
-        return this.groupBy;
+        return this.BackingStore.get("groupBy");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the orderBy property value. The orderBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
-        return this.orderBy;
+        return this.BackingStore.get("orderBy");
     }
     /**
      * Gets the search property value. The search property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
-        return this.search;
+        return this.BackingStore.get("search");
     }
     /**
      * Gets the select property value. The select property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
-        return this.select;
+        return this.BackingStore.get("select");
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
-        return this.sessionId;
+        return this.BackingStore.get("sessionId");
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
-        return this.skip;
+        return this.BackingStore.get("skip");
     }
     /**
      * Gets the top property value. The top property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
-        return this.top;
+        return this.BackingStore.get("top");
     }
     /**
      * Serializes information the current object
@@ -181,73 +162,81 @@ public class GetConfigurationPolicyDevicesReportPostRequestBody implements Addit
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the filter property value. The filter property
      * @param value Value to set for the filter property.
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
-        this.filter = value;
+        this.BackingStore.set("filter", value);
     }
     /**
      * Sets the groupBy property value. The groupBy property
      * @param value Value to set for the groupBy property.
      */
     public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.groupBy = value;
+        this.BackingStore.set("groupBy", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the orderBy property value. The orderBy property
      * @param value Value to set for the orderBy property.
      */
     public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.orderBy = value;
+        this.BackingStore.set("orderBy", value);
     }
     /**
      * Sets the search property value. The search property
      * @param value Value to set for the search property.
      */
     public void setSearch(@jakarta.annotation.Nullable final String value) {
-        this.search = value;
+        this.BackingStore.set("search", value);
     }
     /**
      * Sets the select property value. The select property
      * @param value Value to set for the select property.
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.select = value;
+        this.BackingStore.set("select", value);
     }
     /**
      * Sets the sessionId property value. The sessionId property
      * @param value Value to set for the sessionId property.
      */
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
-        this.sessionId = value;
+        this.BackingStore.set("sessionId", value);
     }
     /**
      * Sets the skip property value. The skip property
      * @param value Value to set for the skip property.
      */
     public void setSkip(@jakarta.annotation.Nullable final Integer value) {
-        this.skip = value;
+        this.BackingStore.set("skip", value);
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
      */
     public void setTop(@jakarta.annotation.Nullable final Integer value) {
-        this.top = value;
+        this.BackingStore.set("top", value);
     }
 }

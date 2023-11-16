@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
     /**
-     * The actual feedback resource.
-     */
-    private EducationResource feedbackResource;
-    /**
-     * The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     */
-    private EducationFeedbackResourceOutcomeStatus resourceStatus;
-    /**
-     * Instantiates a new educationFeedbackResourceOutcome and sets the default values.
+     * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
      */
     public EducationFeedbackResourceOutcome() {
         super();
@@ -26,7 +18,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationFeedbackResourceOutcome
+     * @return a EducationFeedbackResourceOutcome
      */
     @jakarta.annotation.Nonnull
     public static EducationFeedbackResourceOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     }
     /**
      * Gets the feedbackResource property value. The actual feedback resource.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getFeedbackResource() {
-        return this.feedbackResource;
+        return this.BackingStore.get("feedbackResource");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     }
     /**
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     * @return a educationFeedbackResourceOutcomeStatus
+     * @return a EducationFeedbackResourceOutcomeStatus
      */
     @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcomeStatus getResourceStatus() {
-        return this.resourceStatus;
+        return this.BackingStore.get("resourceStatus");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the feedbackResource property.
      */
     public void setFeedbackResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.feedbackResource = value;
+        this.BackingStore.set("feedbackResource", value);
     }
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @param value Value to set for the resourceStatus property.
      */
     public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
-        this.resourceStatus = value;
+        this.BackingStore.set("resourceStatus", value);
     }
 }

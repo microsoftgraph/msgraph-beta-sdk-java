@@ -11,55 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationsSummary extends Entity implements Parsable {
     /**
-     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
-     */
-    private Integer mfaAndSsprCapableUserCount;
-    /**
-     * The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
-     */
-    private String mfaConditionalAccessPolicyState;
-    /**
-     * The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
-     */
-    private Integer mfaExcludedUserCount;
-    /**
-     * The number of users registered for multi-factor authentication. Optional. Read-only.
-     */
-    private Integer mfaRegisteredUserCount;
-    /**
-     * A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
-     */
-    private Boolean securityDefaultsEnabled;
-    /**
-     * The number of users enabled for self service password reset. Optional. Read-only.
-     */
-    private Integer ssprEnabledUserCount;
-    /**
-     * The number of users registered for self service password reset. Optional. Read-only.
-     */
-    private Integer ssprRegisteredUserCount;
-    /**
-     * The display name for the managed tenant. Required. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     */
-    private String tenantId;
-    /**
-     * The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
-     */
-    private String tenantLicenseType;
-    /**
-     * The total number of users in the given managed tenant. Optional. Read-only.
-     */
-    private Integer totalUserCount;
-    /**
-     * Instantiates a new credentialUserRegistrationsSummary and sets the default values.
+     * Instantiates a new CredentialUserRegistrationsSummary and sets the default values.
      */
     public CredentialUserRegistrationsSummary() {
         super();
@@ -67,7 +19,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationsSummary
+     * @return a CredentialUserRegistrationsSummary
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationsSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -101,95 +53,95 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.BackingStore.get("lastRefreshedDateTime");
     }
     /**
      * Gets the mfaAndSsprCapableUserCount property value. The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMfaAndSsprCapableUserCount() {
-        return this.mfaAndSsprCapableUserCount;
+        return this.BackingStore.get("mfaAndSsprCapableUserCount");
     }
     /**
      * Gets the mfaConditionalAccessPolicyState property value. The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMfaConditionalAccessPolicyState() {
-        return this.mfaConditionalAccessPolicyState;
+        return this.BackingStore.get("mfaConditionalAccessPolicyState");
     }
     /**
      * Gets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMfaExcludedUserCount() {
-        return this.mfaExcludedUserCount;
+        return this.BackingStore.get("mfaExcludedUserCount");
     }
     /**
      * Gets the mfaRegisteredUserCount property value. The number of users registered for multi-factor authentication. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMfaRegisteredUserCount() {
-        return this.mfaRegisteredUserCount;
+        return this.BackingStore.get("mfaRegisteredUserCount");
     }
     /**
      * Gets the securityDefaultsEnabled property value. A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDefaultsEnabled() {
-        return this.securityDefaultsEnabled;
+        return this.BackingStore.get("securityDefaultsEnabled");
     }
     /**
      * Gets the ssprEnabledUserCount property value. The number of users enabled for self service password reset. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSsprEnabledUserCount() {
-        return this.ssprEnabledUserCount;
+        return this.BackingStore.get("ssprEnabledUserCount");
     }
     /**
      * Gets the ssprRegisteredUserCount property value. The number of users registered for self service password reset. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSsprRegisteredUserCount() {
-        return this.ssprRegisteredUserCount;
+        return this.BackingStore.get("ssprRegisteredUserCount");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.BackingStore.get("tenantDisplayName");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the tenantLicenseType property value. The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantLicenseType() {
-        return this.tenantLicenseType;
+        return this.BackingStore.get("tenantLicenseType");
     }
     /**
      * Gets the totalUserCount property value. The total number of users in the given managed tenant. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUserCount() {
-        return this.totalUserCount;
+        return this.BackingStore.get("totalUserCount");
     }
     /**
      * Serializes information the current object
@@ -216,83 +168,83 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.BackingStore.set("lastRefreshedDateTime", value);
     }
     /**
      * Sets the mfaAndSsprCapableUserCount property value. The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
      * @param value Value to set for the mfaAndSsprCapableUserCount property.
      */
     public void setMfaAndSsprCapableUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mfaAndSsprCapableUserCount = value;
+        this.BackingStore.set("mfaAndSsprCapableUserCount", value);
     }
     /**
      * Sets the mfaConditionalAccessPolicyState property value. The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
      * @param value Value to set for the mfaConditionalAccessPolicyState property.
      */
     public void setMfaConditionalAccessPolicyState(@jakarta.annotation.Nullable final String value) {
-        this.mfaConditionalAccessPolicyState = value;
+        this.BackingStore.set("mfaConditionalAccessPolicyState", value);
     }
     /**
      * Sets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
      * @param value Value to set for the mfaExcludedUserCount property.
      */
     public void setMfaExcludedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mfaExcludedUserCount = value;
+        this.BackingStore.set("mfaExcludedUserCount", value);
     }
     /**
      * Sets the mfaRegisteredUserCount property value. The number of users registered for multi-factor authentication. Optional. Read-only.
      * @param value Value to set for the mfaRegisteredUserCount property.
      */
     public void setMfaRegisteredUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mfaRegisteredUserCount = value;
+        this.BackingStore.set("mfaRegisteredUserCount", value);
     }
     /**
      * Sets the securityDefaultsEnabled property value. A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
      * @param value Value to set for the securityDefaultsEnabled property.
      */
     public void setSecurityDefaultsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.securityDefaultsEnabled = value;
+        this.BackingStore.set("securityDefaultsEnabled", value);
     }
     /**
      * Sets the ssprEnabledUserCount property value. The number of users enabled for self service password reset. Optional. Read-only.
      * @param value Value to set for the ssprEnabledUserCount property.
      */
     public void setSsprEnabledUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ssprEnabledUserCount = value;
+        this.BackingStore.set("ssprEnabledUserCount", value);
     }
     /**
      * Sets the ssprRegisteredUserCount property value. The number of users registered for self service password reset. Optional. Read-only.
      * @param value Value to set for the ssprRegisteredUserCount property.
      */
     public void setSsprRegisteredUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ssprRegisteredUserCount = value;
+        this.BackingStore.set("ssprRegisteredUserCount", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.BackingStore.set("tenantDisplayName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the tenantLicenseType property value. The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
      * @param value Value to set for the tenantLicenseType property.
      */
     public void setTenantLicenseType(@jakarta.annotation.Nullable final String value) {
-        this.tenantLicenseType = value;
+        this.BackingStore.set("tenantLicenseType", value);
     }
     /**
      * Sets the totalUserCount property value. The total number of users in the given managed tenant. Optional. Read-only.
      * @param value Value to set for the totalUserCount property.
      */
     public void setTotalUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUserCount = value;
+        this.BackingStore.set("totalUserCount", value);
     }
 }

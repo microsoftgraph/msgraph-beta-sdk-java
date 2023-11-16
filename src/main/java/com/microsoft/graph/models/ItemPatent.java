@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemPatent extends ItemFacet implements Parsable {
     /**
-     * Descpription of the patent or filing.
-     */
-    private String description;
-    /**
-     * Title of the patent or filing.
-     */
-    private String displayName;
-    /**
-     * Indicates the patent is pending.
-     */
-    private Boolean isPending;
-    /**
-     * The date that the patent was granted.
-     */
-    private LocalDate issuedDate;
-    /**
-     * Authority which granted the patent.
-     */
-    private String issuingAuthority;
-    /**
-     * The patent number.
-     */
-    private String number;
-    /**
-     * URL referencing the patent or filing.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new itemPatent and sets the default values.
+     * Instantiates a new ItemPatent and sets the default values.
      */
     public ItemPatent() {
         super();
@@ -47,7 +19,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPatent
+     * @return a ItemPatent
      */
     @jakarta.annotation.Nonnull
     public static ItemPatent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,19 +28,19 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Descpription of the patent or filing.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Title of the patent or filing.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -88,11 +60,11 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the isPending property value. Indicates the patent is pending.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPending() {
-        return this.isPending;
+        return this.BackingStore.get("isPending");
     }
     /**
      * Gets the issuedDate property value. The date that the patent was granted.
@@ -100,31 +72,31 @@ public class ItemPatent extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getIssuedDate() {
-        return this.issuedDate;
+        return this.BackingStore.get("issuedDate");
     }
     /**
      * Gets the issuingAuthority property value. Authority which granted the patent.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuingAuthority() {
-        return this.issuingAuthority;
+        return this.BackingStore.get("issuingAuthority");
     }
     /**
      * Gets the number property value. The patent number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.BackingStore.get("number");
     }
     /**
      * Gets the webUrl property value. URL referencing the patent or filing.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.BackingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Title of the patent or filing.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isPending property value. Indicates the patent is pending.
      * @param value Value to set for the isPending property.
      */
     public void setIsPending(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPending = value;
+        this.BackingStore.set("isPending", value);
     }
     /**
      * Sets the issuedDate property value. The date that the patent was granted.
      * @param value Value to set for the issuedDate property.
      */
     public void setIssuedDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.issuedDate = value;
+        this.BackingStore.set("issuedDate", value);
     }
     /**
      * Sets the issuingAuthority property value. Authority which granted the patent.
      * @param value Value to set for the issuingAuthority property.
      */
     public void setIssuingAuthority(@jakarta.annotation.Nullable final String value) {
-        this.issuingAuthority = value;
+        this.BackingStore.set("issuingAuthority", value);
     }
     /**
      * Sets the number property value. The patent number.
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.BackingStore.set("number", value);
     }
     /**
      * Sets the webUrl property value. URL referencing the patent or filing.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.BackingStore.set("webUrl", value);
     }
 }

@@ -9,47 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertDefinition extends Entity implements Parsable {
     /**
-     * The description of the alert.
-     */
-    private String description;
-    /**
-     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
-     */
-    private String displayName;
-    /**
-     * Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
-     */
-    private String howToPrevent;
-    /**
-     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
-     */
-    private Boolean isConfigurable;
-    /**
-     * true if the alert can be remediated, and false otherwise.
-     */
-    private Boolean isRemediatable;
-    /**
-     * The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
-     */
-    private String mitigationSteps;
-    /**
-     * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     */
-    private String scopeId;
-    /**
-     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
-     */
-    private String scopeType;
-    /**
-     * Security impact of the alert. For example, it could be information leaks or unauthorized access.
-     */
-    private String securityImpact;
-    /**
-     * Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
-     */
-    private AlertSeverity severityLevel;
-    /**
-     * Instantiates a new unifiedRoleManagementAlertDefinition and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlertDefinition and sets the default values.
      */
     public UnifiedRoleManagementAlertDefinition() {
         super();
@@ -57,7 +17,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,19 +26,19 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the description property value. The description of the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
-     * @return a string
+     * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -101,67 +61,67 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHowToPrevent() {
-        return this.howToPrevent;
+        return this.BackingStore.get("howToPrevent");
     }
     /**
-     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
-     * @return a boolean
+     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsConfigurable() {
-        return this.isConfigurable;
+        return this.BackingStore.get("isConfigurable");
     }
     /**
      * Gets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemediatable() {
-        return this.isRemediatable;
+        return this.BackingStore.get("isRemediatable");
     }
     /**
      * Gets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMitigationSteps() {
-        return this.mitigationSteps;
+        return this.BackingStore.get("mitigationSteps");
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
-        return this.scopeId;
+        return this.BackingStore.get("scopeId");
     }
     /**
-     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
-     * @return a string
+     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
-        return this.scopeType;
+        return this.BackingStore.get("scopeType");
     }
     /**
      * Gets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityImpact() {
-        return this.securityImpact;
+        return this.BackingStore.get("securityImpact");
     }
     /**
      * Gets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverityLevel() {
-        return this.severityLevel;
+        return this.BackingStore.get("severityLevel");
     }
     /**
      * Serializes information the current object
@@ -186,69 +146,69 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+     * Sets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
      * @param value Value to set for the howToPrevent property.
      */
     public void setHowToPrevent(@jakarta.annotation.Nullable final String value) {
-        this.howToPrevent = value;
+        this.BackingStore.set("howToPrevent", value);
     }
     /**
-     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
      * @param value Value to set for the isConfigurable property.
      */
     public void setIsConfigurable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isConfigurable = value;
+        this.BackingStore.set("isConfigurable", value);
     }
     /**
      * Sets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
      * @param value Value to set for the isRemediatable property.
      */
     public void setIsRemediatable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRemediatable = value;
+        this.BackingStore.set("isRemediatable", value);
     }
     /**
      * Sets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
      * @param value Value to set for the mitigationSteps property.
      */
     public void setMitigationSteps(@jakarta.annotation.Nullable final String value) {
-        this.mitigationSteps = value;
+        this.BackingStore.set("mitigationSteps", value);
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
-        this.scopeId = value;
+        this.BackingStore.set("scopeId", value);
     }
     /**
-     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
+     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
-        this.scopeType = value;
+        this.BackingStore.set("scopeType", value);
     }
     /**
      * Sets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
      * @param value Value to set for the securityImpact property.
      */
     public void setSecurityImpact(@jakarta.annotation.Nullable final String value) {
-        this.securityImpact = value;
+        this.BackingStore.set("securityImpact", value);
     }
     /**
      * Sets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      * @param value Value to set for the severityLevel property.
      */
     public void setSeverityLevel(@jakarta.annotation.Nullable final AlertSeverity value) {
-        this.severityLevel = value;
+        this.BackingStore.set("severityLevel", value);
     }
 }

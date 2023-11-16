@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable {
+public class BookingQuestionAssignment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Indicates whether it is mandatory to answer the custom question.
-     */
-    private Boolean isRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If it is mandatory to answer the custom question.
-     */
-    private String questionId;
-    /**
-     * Instantiates a new bookingQuestionAssignment and sets the default values.
+     * Instantiates a new BookingQuestionAssignment and sets the default values.
      */
     public BookingQuestionAssignment() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingQuestionAssignment
+     * @return a BookingQuestionAssignment
      */
     @jakarta.annotation.Nonnull
     public static BookingQuestionAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         return new BookingQuestionAssignment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -62,28 +67,28 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
-     * @return a boolean
+     * Gets the isRequired property value. Indicates whether it's mandatory to answer the custom question.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.BackingStore.get("isRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
-     * Gets the questionId property value. If it is mandatory to answer the custom question.
-     * @return a string
+     * Gets the questionId property value. If it's mandatory to answer the custom question.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
-        return this.questionId;
+        return this.BackingStore.get("questionId");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
-     * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
+    }
+    /**
+     * Sets the isRequired property value. Indicates whether it's mandatory to answer the custom question.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.BackingStore.set("isRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
-     * Sets the questionId property value. If it is mandatory to answer the custom question.
+     * Sets the questionId property value. If it's mandatory to answer the custom question.
      * @param value Value to set for the questionId property.
      */
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {
-        this.questionId = value;
+        this.BackingStore.set("questionId", value);
     }
 }

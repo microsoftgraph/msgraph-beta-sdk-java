@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Localized string value identifying the default choice of the list of items.
-     */
-    private GroupPolicyPresentationDropdownListItem defaultItem;
-    /**
-     * Represents a set of localized display names and their associated values.
-     */
-    private java.util.List<GroupPolicyPresentationDropdownListItem> items;
-    /**
-     * Requirement to enter a value in the parameter box. The default value is false.
-     */
-    private Boolean required;
-    /**
-     * Instantiates a new groupPolicyPresentationDropdownList and sets the default values.
+     * Instantiates a new GroupPolicyPresentationDropdownList and sets the default values.
      */
     public GroupPolicyPresentationDropdownList() {
         super();
@@ -33,7 +21,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationDropdownList
+     * @return a GroupPolicyPresentationDropdownList
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationDropdownList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * Gets the defaultItem property value. Localized string value identifying the default choice of the list of items.
-     * @return a groupPolicyPresentationDropdownListItem
+     * @return a GroupPolicyPresentationDropdownListItem
      */
     @jakarta.annotation.Nullable
     public GroupPolicyPresentationDropdownListItem getDefaultItem() {
-        return this.defaultItem;
+        return this.BackingStore.get("defaultItem");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * Gets the items property value. Represents a set of localized display names and their associated values.
-     * @return a groupPolicyPresentationDropdownListItem
+     * @return a java.util.List<GroupPolicyPresentationDropdownListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyPresentationDropdownListItem> getItems() {
-        return this.items;
+        return this.BackingStore.get("items");
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.BackingStore.get("required");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param value Value to set for the defaultItem property.
      */
     public void setDefaultItem(@jakarta.annotation.Nullable final GroupPolicyPresentationDropdownListItem value) {
-        this.defaultItem = value;
+        this.BackingStore.set("defaultItem", value);
     }
     /**
      * Sets the items property value. Represents a set of localized display names and their associated values.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<GroupPolicyPresentationDropdownListItem> value) {
-        this.items = value;
+        this.BackingStore.set("items", value);
     }
     /**
      * Sets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.BackingStore.set("required", value);
     }
 }

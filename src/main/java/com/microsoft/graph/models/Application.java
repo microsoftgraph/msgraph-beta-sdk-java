@@ -11,195 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Application extends DirectoryObject implements Parsable {
     /**
-     * Specifies settings for an application that implements a web API.
-     */
-    private ApiApplication api;
-    /**
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
-     */
-    private String appId;
-    /**
-     * The appManagementPolicy applied to this application.
-     */
-    private java.util.List<AppManagementPolicy> appManagementPolicies;
-    /**
-     * The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     */
-    private java.util.List<AppRole> appRoles;
-    /**
-     * The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
-     */
-    private AuthenticationBehaviors authenticationBehaviors;
-    /**
-     * Specifies the certification status of the application.
-     */
-    private Certification certification;
-    /**
-     * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
-     */
-    private ConnectorGroup connectorGroup;
-    /**
-     * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
-     */
-    private DirectoryObject createdOnBehalfOf;
-    /**
-     * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
-     */
-    private String defaultRedirectUri;
-    /**
-     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     */
-    private String description;
-    /**
-     * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     */
-    private String disabledByMicrosoftStatus;
-    /**
-     * The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     */
-    private String displayName;
-    /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     */
-    private java.util.List<ExtensionProperty> extensionProperties;
-    /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
-     */
-    private java.util.List<FederatedIdentityCredential> federatedIdentityCredentials;
-    /**
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
-     */
-    private String groupMembershipClaims;
-    /**
-     * The homeRealmDiscoveryPolicies property
-     */
-    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
-    /**
-     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
-     */
-    private java.util.List<String> identifierUris;
-    /**
-     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     */
-    private InformationalUrl info;
-    /**
-     * Specifies whether this application supports device authentication without a user. The default is false.
-     */
-    private Boolean isDeviceOnlyAuthSupported;
-    /**
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
-     */
-    private Boolean isFallbackPublicClient;
-    /**
-     * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     */
-    private java.util.List<KeyCredential> keyCredentials;
-    /**
-     * The main logo for the application. Not nullable.
-     */
-    private byte[] logo;
-    /**
-     * Notes relevant for the management of the application.
-     */
-    private String notes;
-    /**
-     * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
-     */
-    private OnPremisesPublishing onPremisesPublishing;
-    /**
-     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
-     */
-    private OptionalClaims optionalClaims;
-    /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     */
-    private java.util.List<DirectoryObject> owners;
-    /**
-     * Specifies parental control settings for an application.
-     */
-    private ParentalControlSettings parentalControlSettings;
-    /**
-     * The collection of password credentials associated with the application. Not nullable.
-     */
-    private java.util.List<PasswordCredential> passwordCredentials;
-    /**
-     * Specifies settings for installed clients such as desktop or mobile devices.
-     */
-    private PublicClientApplication publicClient;
-    /**
-     * The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
-     */
-    private String publisherDomain;
-    /**
-     * Specifies whether this application requires Azure AD to verify the signed authentication requests.
-     */
-    private RequestSignatureVerification requestSignatureVerification;
-    /**
-     * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     */
-    private java.util.List<RequiredResourceAccess> requiredResourceAccess;
-    /**
-     * The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     */
-    private String samlMetadataUrl;
-    /**
-     * References application or service contact information from a Service or Asset Management database. Nullable.
-     */
-    private String serviceManagementReference;
-    /**
-     * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
-     */
-    private ServicePrincipalLockConfiguration servicePrincipalLockConfiguration;
-    /**
-     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
-     */
-    private String signInAudience;
-    /**
-     * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
-     */
-    private SpaApplication spa;
-    /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
-     */
-    private Synchronization synchronization;
-    /**
-     * Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
-     */
-    private java.util.List<String> tags;
-    /**
-     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     */
-    private UUID tokenEncryptionKeyId;
-    /**
-     * The tokenIssuancePolicies property
-     */
-    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
-    /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
-     */
-    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
-    /**
-     * The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
-     */
-    private String uniqueName;
-    /**
-     * Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
-     */
-    private VerifiedPublisher verifiedPublisher;
-    /**
-     * Specifies settings for a web application.
-     */
-    private WebApplication web;
-    /**
-     * Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
-     */
-    private WindowsApplication windows;
-    /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
      */
     public Application() {
         super();
@@ -208,7 +20,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a application
+     * @return a Application
      */
     @jakarta.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -217,59 +29,59 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the api property value. Specifies settings for an application that implements a web API.
-     * @return a apiApplication
+     * @return a ApiApplication
      */
     @jakarta.annotation.Nullable
     public ApiApplication getApi() {
-        return this.api;
+        return this.BackingStore.get("api");
     }
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
-     * @return a string
+     * Gets the appId property value. The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.BackingStore.get("appId");
     }
     /**
      * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
-     * @return a appManagementPolicy
+     * @return a java.util.List<AppManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
-        return this.appManagementPolicies;
+        return this.BackingStore.get("appManagementPolicies");
     }
     /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     * @return a appRole
+     * @return a java.util.List<AppRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
-        return this.appRoles;
+        return this.BackingStore.get("appRoles");
     }
     /**
      * Gets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
-     * @return a authenticationBehaviors
+     * @return a AuthenticationBehaviors
      */
     @jakarta.annotation.Nullable
     public AuthenticationBehaviors getAuthenticationBehaviors() {
-        return this.authenticationBehaviors;
+        return this.BackingStore.get("authenticationBehaviors");
     }
     /**
      * Gets the certification property value. Specifies the certification status of the application.
-     * @return a certification
+     * @return a Certification
      */
     @jakarta.annotation.Nullable
     public Certification getCertification() {
-        return this.certification;
+        return this.BackingStore.get("certification");
     }
     /**
-     * Gets the connectorGroup property value. The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
-     * @return a connectorGroup
+     * Gets the connectorGroup property value. The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
+     * @return a ConnectorGroup
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup getConnectorGroup() {
-        return this.connectorGroup;
+        return this.BackingStore.get("connectorGroup");
     }
     /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.
@@ -277,63 +89,63 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getCreatedOnBehalfOf() {
-        return this.createdOnBehalfOf;
+        return this.BackingStore.get("createdOnBehalfOf");
     }
     /**
-     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
-     * @return a string
+     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultRedirectUri() {
-        return this.defaultRedirectUri;
+        return this.BackingStore.get("defaultRedirectUri");
     }
     /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
-        return this.disabledByMicrosoftStatus;
+        return this.BackingStore.get("disabledByMicrosoftStatus");
     }
     /**
      * Gets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a extensionProperty
+     * @return a java.util.List<ExtensionProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtensionProperty> getExtensionProperties() {
-        return this.extensionProperties;
+        return this.BackingStore.get("extensionProperties");
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
-     * @return a federatedIdentityCredential
+     * @return a java.util.List<FederatedIdentityCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
-        return this.federatedIdentityCredentials;
+        return this.BackingStore.get("federatedIdentityCredentials");
     }
     /**
      * The deserialization information for the current model
@@ -392,260 +204,260 @@ public class Application extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
-     * @return a string
+     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupMembershipClaims() {
-        return this.groupMembershipClaims;
+        return this.BackingStore.get("groupMembershipClaims");
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
-     * @return a homeRealmDiscoveryPolicy
+     * @return a java.util.List<HomeRealmDiscoveryPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this.homeRealmDiscoveryPolicies;
+        return this.BackingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
-     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a string
+     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIdentifierUris() {
-        return this.identifierUris;
+        return this.BackingStore.get("identifierUris");
     }
     /**
-     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     * @return a informationalUrl
+     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * @return a InformationalUrl
      */
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
-        return this.info;
+        return this.BackingStore.get("info");
     }
     /**
      * Gets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceOnlyAuthSupported() {
-        return this.isDeviceOnlyAuthSupported;
+        return this.BackingStore.get("isDeviceOnlyAuthSupported");
     }
     /**
-     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
-     * @return a boolean
+     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFallbackPublicClient() {
-        return this.isFallbackPublicClient;
+        return this.BackingStore.get("isFallbackPublicClient");
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a keyCredential
+     * @return a java.util.List<KeyCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
-        return this.keyCredentials;
+        return this.BackingStore.get("keyCredentials");
     }
     /**
      * Gets the logo property value. The main logo for the application. Not nullable.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
-        return this.logo;
+        return this.BackingStore.get("logo");
     }
     /**
      * Gets the notes property value. Notes relevant for the management of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.BackingStore.get("notes");
     }
     /**
      * Gets the onPremisesPublishing property value. Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
-     * @return a onPremisesPublishing
+     * @return a OnPremisesPublishing
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishing getOnPremisesPublishing() {
-        return this.onPremisesPublishing;
+        return this.BackingStore.get("onPremisesPublishing");
     }
     /**
-     * Gets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
-     * @return a optionalClaims
+     * Gets the optionalClaims property value. Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * @return a OptionalClaims
      */
     @jakarta.annotation.Nullable
     public OptionalClaims getOptionalClaims() {
-        return this.optionalClaims;
+        return this.BackingStore.get("optionalClaims");
     }
     /**
      * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
-        return this.owners;
+        return this.BackingStore.get("owners");
     }
     /**
      * Gets the parentalControlSettings property value. Specifies parental control settings for an application.
-     * @return a parentalControlSettings
+     * @return a ParentalControlSettings
      */
     @jakarta.annotation.Nullable
     public ParentalControlSettings getParentalControlSettings() {
-        return this.parentalControlSettings;
+        return this.BackingStore.get("parentalControlSettings");
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a passwordCredential
+     * @return a java.util.List<PasswordCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
-        return this.passwordCredentials;
+        return this.BackingStore.get("passwordCredentials");
     }
     /**
      * Gets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
-     * @return a publicClientApplication
+     * @return a PublicClientApplication
      */
     @jakarta.annotation.Nullable
     public PublicClientApplication getPublicClient() {
-        return this.publicClient;
+        return this.BackingStore.get("publicClient");
     }
     /**
      * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherDomain() {
-        return this.publisherDomain;
+        return this.BackingStore.get("publisherDomain");
     }
     /**
-     * Gets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
-     * @return a requestSignatureVerification
+     * Gets the requestSignatureVerification property value. Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
+     * @return a RequestSignatureVerification
      */
     @jakarta.annotation.Nullable
     public RequestSignatureVerification getRequestSignatureVerification() {
-        return this.requestSignatureVerification;
+        return this.BackingStore.get("requestSignatureVerification");
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a requiredResourceAccess
+     * @return a java.util.List<RequiredResourceAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RequiredResourceAccess> getRequiredResourceAccess() {
-        return this.requiredResourceAccess;
+        return this.BackingStore.get("requiredResourceAccess");
     }
     /**
      * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSamlMetadataUrl() {
-        return this.samlMetadataUrl;
+        return this.BackingStore.get("samlMetadataUrl");
     }
     /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceManagementReference() {
-        return this.serviceManagementReference;
+        return this.BackingStore.get("serviceManagementReference");
     }
     /**
      * Gets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
-     * @return a servicePrincipalLockConfiguration
+     * @return a ServicePrincipalLockConfiguration
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalLockConfiguration getServicePrincipalLockConfiguration() {
-        return this.servicePrincipalLockConfiguration;
+        return this.BackingStore.get("servicePrincipalLockConfiguration");
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignInAudience() {
-        return this.signInAudience;
+        return this.BackingStore.get("signInAudience");
     }
     /**
      * Gets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
-     * @return a spaApplication
+     * @return a SpaApplication
      */
     @jakarta.annotation.Nullable
     public SpaApplication getSpa() {
-        return this.spa;
+        return this.BackingStore.get("spa");
     }
     /**
-     * Gets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
-     * @return a synchronization
+     * Gets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
+     * @return a Synchronization
      */
     @jakarta.annotation.Nullable
     public Synchronization getSynchronization() {
-        return this.synchronization;
+        return this.BackingStore.get("synchronization");
     }
     /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
-     * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      * @return a UUID
      */
     @jakarta.annotation.Nullable
     public UUID getTokenEncryptionKeyId() {
-        return this.tokenEncryptionKeyId;
+        return this.BackingStore.get("tokenEncryptionKeyId");
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
-     * @return a tokenIssuancePolicy
+     * @return a java.util.List<TokenIssuancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this.tokenIssuancePolicies;
+        return this.BackingStore.get("tokenIssuancePolicies");
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
-     * @return a tokenLifetimePolicy
+     * @return a java.util.List<TokenLifetimePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this.tokenLifetimePolicies;
+        return this.BackingStore.get("tokenLifetimePolicies");
     }
     /**
      * Gets the uniqueName property value. The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueName() {
-        return this.uniqueName;
+        return this.BackingStore.get("uniqueName");
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
-     * @return a verifiedPublisher
+     * @return a VerifiedPublisher
      */
     @jakarta.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {
-        return this.verifiedPublisher;
+        return this.BackingStore.get("verifiedPublisher");
     }
     /**
      * Gets the web property value. Specifies settings for a web application.
-     * @return a webApplication
+     * @return a WebApplication
      */
     @jakarta.annotation.Nullable
     public WebApplication getWeb() {
-        return this.web;
+        return this.BackingStore.get("web");
     }
     /**
      * Gets the windows property value. Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
-     * @return a windowsApplication
+     * @return a WindowsApplication
      */
     @jakarta.annotation.Nullable
     public WindowsApplication getWindows() {
-        return this.windows;
+        return this.BackingStore.get("windows");
     }
     /**
      * Serializes information the current object
@@ -707,328 +519,328 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the api property.
      */
     public void setApi(@jakarta.annotation.Nullable final ApiApplication value) {
-        this.api = value;
+        this.BackingStore.set("api", value);
     }
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Sets the appId property value. The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.BackingStore.set("appId", value);
     }
     /**
      * Sets the appManagementPolicies property value. The appManagementPolicy applied to this application.
      * @param value Value to set for the appManagementPolicies property.
      */
     public void setAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
-        this.appManagementPolicies = value;
+        this.BackingStore.set("appManagementPolicies", value);
     }
     /**
      * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @param value Value to set for the appRoles property.
      */
     public void setAppRoles(@jakarta.annotation.Nullable final java.util.List<AppRole> value) {
-        this.appRoles = value;
+        this.BackingStore.set("appRoles", value);
     }
     /**
      * Sets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      * @param value Value to set for the authenticationBehaviors property.
      */
     public void setAuthenticationBehaviors(@jakarta.annotation.Nullable final AuthenticationBehaviors value) {
-        this.authenticationBehaviors = value;
+        this.BackingStore.set("authenticationBehaviors", value);
     }
     /**
      * Sets the certification property value. Specifies the certification status of the application.
      * @param value Value to set for the certification property.
      */
     public void setCertification(@jakarta.annotation.Nullable final Certification value) {
-        this.certification = value;
+        this.BackingStore.set("certification", value);
     }
     /**
-     * Sets the connectorGroup property value. The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
+     * Sets the connectorGroup property value. The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
      * @param value Value to set for the connectorGroup property.
      */
     public void setConnectorGroup(@jakarta.annotation.Nullable final ConnectorGroup value) {
-        this.connectorGroup = value;
+        this.BackingStore.set("connectorGroup", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      * @param value Value to set for the createdOnBehalfOf property.
      */
     public void setCreatedOnBehalfOf(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.createdOnBehalfOf = value;
+        this.BackingStore.set("createdOnBehalfOf", value);
     }
     /**
-     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      * @param value Value to set for the defaultRedirectUri property.
      */
     public void setDefaultRedirectUri(@jakarta.annotation.Nullable final String value) {
-        this.defaultRedirectUri = value;
+        this.BackingStore.set("defaultRedirectUri", value);
     }
     /**
      * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
      * @param value Value to set for the disabledByMicrosoftStatus property.
      */
     public void setDisabledByMicrosoftStatus(@jakarta.annotation.Nullable final String value) {
-        this.disabledByMicrosoftStatus = value;
+        this.BackingStore.set("disabledByMicrosoftStatus", value);
     }
     /**
      * Sets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the extensionProperties property.
      */
     public void setExtensionProperties(@jakarta.annotation.Nullable final java.util.List<ExtensionProperty> value) {
-        this.extensionProperties = value;
+        this.BackingStore.set("extensionProperties", value);
     }
     /**
      * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the federatedIdentityCredentials property.
      */
     public void setFederatedIdentityCredentials(@jakarta.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
-        this.federatedIdentityCredentials = value;
+        this.BackingStore.set("federatedIdentityCredentials", value);
     }
     /**
-     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
      * @param value Value to set for the groupMembershipClaims property.
      */
     public void setGroupMembershipClaims(@jakarta.annotation.Nullable final String value) {
-        this.groupMembershipClaims = value;
+        this.BackingStore.set("groupMembershipClaims", value);
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      */
     public void setHomeRealmDiscoveryPolicies(@jakarta.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this.homeRealmDiscoveryPolicies = value;
+        this.BackingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
-     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.identifierUris = value;
+        this.BackingStore.set("identifierUris", value);
     }
     /**
-     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @param value Value to set for the info property.
      */
     public void setInfo(@jakarta.annotation.Nullable final InformationalUrl value) {
-        this.info = value;
+        this.BackingStore.set("info", value);
     }
     /**
      * Sets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
      * @param value Value to set for the isDeviceOnlyAuthSupported property.
      */
     public void setIsDeviceOnlyAuthSupported(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeviceOnlyAuthSupported = value;
+        this.BackingStore.set("isDeviceOnlyAuthSupported", value);
     }
     /**
-     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      * @param value Value to set for the isFallbackPublicClient property.
      */
     public void setIsFallbackPublicClient(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFallbackPublicClient = value;
+        this.BackingStore.set("isFallbackPublicClient", value);
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the keyCredentials property.
      */
     public void setKeyCredentials(@jakarta.annotation.Nullable final java.util.List<KeyCredential> value) {
-        this.keyCredentials = value;
+        this.BackingStore.set("keyCredentials", value);
     }
     /**
      * Sets the logo property value. The main logo for the application. Not nullable.
      * @param value Value to set for the logo property.
      */
     public void setLogo(@jakarta.annotation.Nullable final byte[] value) {
-        this.logo = value;
+        this.BackingStore.set("logo", value);
     }
     /**
      * Sets the notes property value. Notes relevant for the management of the application.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.BackingStore.set("notes", value);
     }
     /**
      * Sets the onPremisesPublishing property value. Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
      * @param value Value to set for the onPremisesPublishing property.
      */
     public void setOnPremisesPublishing(@jakarta.annotation.Nullable final OnPremisesPublishing value) {
-        this.onPremisesPublishing = value;
+        this.BackingStore.set("onPremisesPublishing", value);
     }
     /**
-     * Sets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * Sets the optionalClaims property value. Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      * @param value Value to set for the optionalClaims property.
      */
     public void setOptionalClaims(@jakarta.annotation.Nullable final OptionalClaims value) {
-        this.optionalClaims = value;
+        this.BackingStore.set("optionalClaims", value);
     }
     /**
      * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.owners = value;
+        this.BackingStore.set("owners", value);
     }
     /**
      * Sets the parentalControlSettings property value. Specifies parental control settings for an application.
      * @param value Value to set for the parentalControlSettings property.
      */
     public void setParentalControlSettings(@jakarta.annotation.Nullable final ParentalControlSettings value) {
-        this.parentalControlSettings = value;
+        this.BackingStore.set("parentalControlSettings", value);
     }
     /**
      * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
      * @param value Value to set for the passwordCredentials property.
      */
     public void setPasswordCredentials(@jakarta.annotation.Nullable final java.util.List<PasswordCredential> value) {
-        this.passwordCredentials = value;
+        this.BackingStore.set("passwordCredentials", value);
     }
     /**
      * Sets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
      * @param value Value to set for the publicClient property.
      */
     public void setPublicClient(@jakarta.annotation.Nullable final PublicClientApplication value) {
-        this.publicClient = value;
+        this.BackingStore.set("publicClient", value);
     }
     /**
      * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the publisherDomain property.
      */
     public void setPublisherDomain(@jakarta.annotation.Nullable final String value) {
-        this.publisherDomain = value;
+        this.BackingStore.set("publisherDomain", value);
     }
     /**
-     * Sets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * Sets the requestSignatureVerification property value. Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
      * @param value Value to set for the requestSignatureVerification property.
      */
     public void setRequestSignatureVerification(@jakarta.annotation.Nullable final RequestSignatureVerification value) {
-        this.requestSignatureVerification = value;
+        this.BackingStore.set("requestSignatureVerification", value);
     }
     /**
      * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the requiredResourceAccess property.
      */
     public void setRequiredResourceAccess(@jakarta.annotation.Nullable final java.util.List<RequiredResourceAccess> value) {
-        this.requiredResourceAccess = value;
+        this.BackingStore.set("requiredResourceAccess", value);
     }
     /**
      * Sets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
      * @param value Value to set for the samlMetadataUrl property.
      */
     public void setSamlMetadataUrl(@jakarta.annotation.Nullable final String value) {
-        this.samlMetadataUrl = value;
+        this.BackingStore.set("samlMetadataUrl", value);
     }
     /**
      * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
      * @param value Value to set for the serviceManagementReference property.
      */
     public void setServiceManagementReference(@jakarta.annotation.Nullable final String value) {
-        this.serviceManagementReference = value;
+        this.BackingStore.set("serviceManagementReference", value);
     }
     /**
      * Sets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
      * @param value Value to set for the servicePrincipalLockConfiguration property.
      */
     public void setServicePrincipalLockConfiguration(@jakarta.annotation.Nullable final ServicePrincipalLockConfiguration value) {
-        this.servicePrincipalLockConfiguration = value;
+        this.BackingStore.set("servicePrincipalLockConfiguration", value);
     }
     /**
      * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
      * @param value Value to set for the signInAudience property.
      */
     public void setSignInAudience(@jakarta.annotation.Nullable final String value) {
-        this.signInAudience = value;
+        this.BackingStore.set("signInAudience", value);
     }
     /**
      * Sets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
      * @param value Value to set for the spa property.
      */
     public void setSpa(@jakarta.annotation.Nullable final SpaApplication value) {
-        this.spa = value;
+        this.BackingStore.set("spa", value);
     }
     /**
-     * Sets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Sets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @param value Value to set for the synchronization property.
      */
     public void setSynchronization(@jakarta.annotation.Nullable final Synchronization value) {
-        this.synchronization = value;
+        this.BackingStore.set("synchronization", value);
     }
     /**
      * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
-     * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      * @param value Value to set for the tokenEncryptionKeyId property.
      */
     public void setTokenEncryptionKeyId(@jakarta.annotation.Nullable final UUID value) {
-        this.tokenEncryptionKeyId = value;
+        this.BackingStore.set("tokenEncryptionKeyId", value);
     }
     /**
      * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
      * @param value Value to set for the tokenIssuancePolicies property.
      */
     public void setTokenIssuancePolicies(@jakarta.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this.tokenIssuancePolicies = value;
+        this.BackingStore.set("tokenIssuancePolicies", value);
     }
     /**
      * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
      * @param value Value to set for the tokenLifetimePolicies property.
      */
     public void setTokenLifetimePolicies(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this.tokenLifetimePolicies = value;
+        this.BackingStore.set("tokenLifetimePolicies", value);
     }
     /**
      * Sets the uniqueName property value. The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
      * @param value Value to set for the uniqueName property.
      */
     public void setUniqueName(@jakarta.annotation.Nullable final String value) {
-        this.uniqueName = value;
+        this.BackingStore.set("uniqueName", value);
     }
     /**
      * Sets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
      * @param value Value to set for the verifiedPublisher property.
      */
     public void setVerifiedPublisher(@jakarta.annotation.Nullable final VerifiedPublisher value) {
-        this.verifiedPublisher = value;
+        this.BackingStore.set("verifiedPublisher", value);
     }
     /**
      * Sets the web property value. Specifies settings for a web application.
      * @param value Value to set for the web property.
      */
     public void setWeb(@jakarta.annotation.Nullable final WebApplication value) {
-        this.web = value;
+        this.BackingStore.set("web", value);
     }
     /**
      * Sets the windows property value. Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
      * @param value Value to set for the windows property.
      */
     public void setWindows(@jakarta.annotation.Nullable final WindowsApplication value) {
-        this.windows = value;
+        this.BackingStore.set("windows", value);
     }
 }

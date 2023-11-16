@@ -4,61 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
+public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The actions property
+     * Stores model information.
      */
-    private java.util.List<DlpActionInfo> actions;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The isMostRestrictive property
-     */
-    private Boolean isMostRestrictive;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The policyId property
-     */
-    private String policyId;
-    /**
-     * The policyName property
-     */
-    private String policyName;
-    /**
-     * The priority property
-     */
-    private Integer priority;
-    /**
-     * The ruleId property
-     */
-    private String ruleId;
-    /**
-     * The ruleMode property
-     */
-    private RuleMode ruleMode;
-    /**
-     * The ruleName property
-     */
-    private String ruleName;
-    /**
-     * Instantiates a new matchingDlpRule and sets the default values.
+     * Instantiates a new MatchingDlpRule and sets the default values.
      */
     public MatchingDlpRule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a matchingDlpRule
+     * @return a MatchingDlpRule
      */
     @jakarta.annotation.Nonnull
     public static MatchingDlpRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,19 +35,32 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actions property value. The actions property
-     * @return a dlpActionInfo
+     * @return a java.util.List<DlpActionInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DlpActionInfo> getActions() {
-        return this.actions;
+        return this.BackingStore.get("actions");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -101,67 +82,67 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMostRestrictive property value. The isMostRestrictive property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMostRestrictive() {
-        return this.isMostRestrictive;
+        return this.BackingStore.get("isMostRestrictive");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the policyId property value. The policyId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
-        return this.policyId;
+        return this.BackingStore.get("policyId");
     }
     /**
      * Gets the policyName property value. The policyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
-        return this.policyName;
+        return this.BackingStore.get("policyName");
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.BackingStore.get("priority");
     }
     /**
      * Gets the ruleId property value. The ruleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {
-        return this.ruleId;
+        return this.BackingStore.get("ruleId");
     }
     /**
      * Gets the ruleMode property value. The ruleMode property
-     * @return a ruleMode
+     * @return a RuleMode
      */
     @jakarta.annotation.Nullable
     public RuleMode getRuleMode() {
-        return this.ruleMode;
+        return this.BackingStore.get("ruleMode");
     }
     /**
      * Gets the ruleName property value. The ruleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
-        return this.ruleName;
+        return this.BackingStore.get("ruleName");
     }
     /**
      * Serializes information the current object
@@ -185,69 +166,77 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actions property.
      */
     public void setActions(@jakarta.annotation.Nullable final java.util.List<DlpActionInfo> value) {
-        this.actions = value;
+        this.BackingStore.set("actions", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the isMostRestrictive property value. The isMostRestrictive property
      * @param value Value to set for the isMostRestrictive property.
      */
     public void setIsMostRestrictive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMostRestrictive = value;
+        this.BackingStore.set("isMostRestrictive", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the policyId property value. The policyId property
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.policyId = value;
+        this.BackingStore.set("policyId", value);
     }
     /**
      * Sets the policyName property value. The policyName property
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
-        this.policyName = value;
+        this.BackingStore.set("policyName", value);
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.BackingStore.set("priority", value);
     }
     /**
      * Sets the ruleId property value. The ruleId property
      * @param value Value to set for the ruleId property.
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {
-        this.ruleId = value;
+        this.BackingStore.set("ruleId", value);
     }
     /**
      * Sets the ruleMode property value. The ruleMode property
      * @param value Value to set for the ruleMode property.
      */
     public void setRuleMode(@jakarta.annotation.Nullable final RuleMode value) {
-        this.ruleMode = value;
+        this.BackingStore.set("ruleMode", value);
     }
     /**
      * Sets the ruleName property value. The ruleName property
      * @param value Value to set for the ruleName property.
      */
     public void setRuleName(@jakarta.annotation.Nullable final String value) {
-        this.ruleName = value;
+        this.BackingStore.set("ruleName", value);
     }
 }

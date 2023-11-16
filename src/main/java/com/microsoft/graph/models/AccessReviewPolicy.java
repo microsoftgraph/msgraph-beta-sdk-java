@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewPolicy extends Entity implements Parsable {
     /**
-     * Description for this policy. Read-only.
-     */
-    private String description;
-    /**
-     * Display name for this policy. Read-only.
-     */
-    private String displayName;
-    /**
-     * If true, group owners can create and manage access reviews on groups they own.
-     */
-    private Boolean isGroupOwnerManagementEnabled;
-    /**
-     * Instantiates a new accessReviewPolicy and sets the default values.
+     * Instantiates a new AccessReviewPolicy and sets the default values.
      */
     public AccessReviewPolicy() {
         super();
@@ -29,7 +17,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewPolicy
+     * @return a AccessReviewPolicy
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class AccessReviewPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description for this policy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name for this policy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class AccessReviewPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isGroupOwnerManagementEnabled property value. If true, group owners can create and manage access reviews on groups they own.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsGroupOwnerManagementEnabled() {
-        return this.isGroupOwnerManagementEnabled;
+        return this.BackingStore.get("isGroupOwnerManagementEnabled");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for this policy. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isGroupOwnerManagementEnabled property value. If true, group owners can create and manage access reviews on groups they own.
      * @param value Value to set for the isGroupOwnerManagementEnabled property.
      */
     public void setIsGroupOwnerManagementEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isGroupOwnerManagementEnabled = value;
+        this.BackingStore.set("isGroupOwnerManagementEnabled", value);
     }
 }

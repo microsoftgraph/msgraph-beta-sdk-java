@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddFooter extends MarkContent implements Parsable {
     /**
-     * The alignment property
-     */
-    private Alignment alignment;
-    /**
-     * The margin property
-     */
-    private Integer margin;
-    /**
-     * Instantiates a new addFooter and sets the default values.
+     * Instantiates a new AddFooter and sets the default values.
      */
     public AddFooter() {
         super();
@@ -26,7 +18,7 @@ public class AddFooter extends MarkContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addFooter
+     * @return a AddFooter
      */
     @jakarta.annotation.Nonnull
     public static AddFooter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class AddFooter extends MarkContent implements Parsable {
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a alignment
+     * @return a Alignment
      */
     @jakarta.annotation.Nullable
     public Alignment getAlignment() {
-        return this.alignment;
+        return this.BackingStore.get("alignment");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class AddFooter extends MarkContent implements Parsable {
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {
-        return this.margin;
+        return this.BackingStore.get("margin");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class AddFooter extends MarkContent implements Parsable {
      * @param value Value to set for the alignment property.
      */
     public void setAlignment(@jakarta.annotation.Nullable final Alignment value) {
-        this.alignment = value;
+        this.BackingStore.set("alignment", value);
     }
     /**
      * Sets the margin property value. The margin property
      * @param value Value to set for the margin property.
      */
     public void setMargin(@jakarta.annotation.Nullable final Integer value) {
-        this.margin = value;
+        this.BackingStore.set("margin", value);
     }
 }

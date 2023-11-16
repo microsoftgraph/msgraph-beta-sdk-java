@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomer extends BookingPerson implements Parsable {
     /**
-     * Addresses associated with the customer, including home, business and other addresses.
-     */
-    private java.util.List<PhysicalAddress> addresses;
-    /**
-     * Phone numbers associated with the customer, including home, business and mobile numbers.
-     */
-    private java.util.List<Phone> phones;
-    /**
-     * Instantiates a new bookingCustomer and sets the default values.
+     * Instantiates a new BookingCustomer and sets the default values.
      */
     public BookingCustomer() {
         super();
@@ -28,7 +20,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomer
+     * @return a BookingCustomer
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,11 +29,11 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
-     * @return a physicalAddress
+     * @return a java.util.List<PhysicalAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
-        return this.addresses;
+        return this.BackingStore.get("addresses");
     }
     /**
      * The deserialization information for the current model
@@ -56,11 +48,11 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this.phones;
+        return this.BackingStore.get("phones");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param value Value to set for the addresses property.
      */
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
-        this.addresses = value;
+        this.BackingStore.set("addresses", value);
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      * @param value Value to set for the phones property.
      */
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
-        this.phones = value;
+        this.BackingStore.set("phones", value);
     }
 }

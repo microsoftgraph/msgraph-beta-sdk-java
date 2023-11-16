@@ -5,37 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
+public class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The financeRate property
-     */
-    private Json financeRate;
-    /**
-     * The reinvestRate property
-     */
-    private Json reinvestRate;
-    /**
-     * The values property
-     */
-    private Json values;
-    /**
-     * Instantiates a new mirrPostRequestBody and sets the default values.
+     * Instantiates a new MirrPostRequestBody and sets the default values.
      */
     public MirrPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mirrPostRequestBody
+     * @return a MirrPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static MirrPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +35,25 @@ public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
         return new MirrPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +73,7 @@ public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getFinanceRate() {
-        return this.financeRate;
+        return this.BackingStore.get("financeRate");
     }
     /**
      * Gets the reinvestRate property value. The reinvestRate property
@@ -76,7 +81,7 @@ public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getReinvestRate() {
-        return this.reinvestRate;
+        return this.BackingStore.get("reinvestRate");
     }
     /**
      * Gets the values property value. The values property
@@ -84,7 +89,7 @@ public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.BackingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -98,31 +103,39 @@ public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the financeRate property value. The financeRate property
      * @param value Value to set for the financeRate property.
      */
     public void setFinanceRate(@jakarta.annotation.Nullable final Json value) {
-        this.financeRate = value;
+        this.BackingStore.set("financeRate", value);
     }
     /**
      * Sets the reinvestRate property value. The reinvestRate property
      * @param value Value to set for the reinvestRate property.
      */
     public void setReinvestRate(@jakarta.annotation.Nullable final Json value) {
-        this.reinvestRate = value;
+        this.BackingStore.set("reinvestRate", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.BackingStore.set("values", value);
     }
 }

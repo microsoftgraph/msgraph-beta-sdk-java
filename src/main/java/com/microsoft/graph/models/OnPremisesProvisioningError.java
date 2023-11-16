@@ -4,46 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable {
+public class OnPremisesProvisioningError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
-     */
-    private String category;
-    /**
-     * The date and time at which the error occurred.
-     */
-    private OffsetDateTime occurredDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
-     */
-    private String propertyCausingError;
-    /**
-     * Value of the property causing the error.
-     */
-    private String value;
-    /**
-     * Instantiates a new onPremisesProvisioningError and sets the default values.
+     * Instantiates a new OnPremisesProvisioningError and sets the default values.
      */
     public OnPremisesProvisioningError() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesProvisioningError
+     * @return a OnPremisesProvisioningError
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesProvisioningError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,20 +35,33 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
         return new OnPremisesProvisioningError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the category property value. Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * The deserialization information for the current model
@@ -86,31 +83,31 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOccurredDateTime() {
-        return this.occurredDateTime;
+        return this.BackingStore.get("occurredDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPropertyCausingError() {
-        return this.propertyCausingError;
+        return this.BackingStore.get("propertyCausingError");
     }
     /**
      * Gets the value property value. Value of the property causing the error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -126,45 +123,53 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the category property value. Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the occurredDateTime property value. The date and time at which the error occurred.
      * @param value Value to set for the occurredDateTime property.
      */
     public void setOccurredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.occurredDateTime = value;
+        this.BackingStore.set("occurredDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
      * @param value Value to set for the propertyCausingError property.
      */
     public void setPropertyCausingError(@jakarta.annotation.Nullable final String value) {
-        this.propertyCausingError = value;
+        this.BackingStore.set("propertyCausingError", value);
     }
     /**
      * Sets the value property value. Value of the property causing the error.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
-     * The error property
-     */
-    private String error;
-    /**
-     * The value property
-     */
-    private Json value;
-    /**
-     * Instantiates a new workbookFunctionResult and sets the default values.
+     * Instantiates a new WorkbookFunctionResult and sets the default values.
      */
     public WorkbookFunctionResult() {
         super();
@@ -25,7 +17,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookFunctionResult
+     * @return a WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFunctionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Json value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

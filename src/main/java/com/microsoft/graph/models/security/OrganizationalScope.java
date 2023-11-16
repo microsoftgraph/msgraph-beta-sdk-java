@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OrganizationalScope implements AdditionalDataHolder, Parsable {
+public class OrganizationalScope implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The scopeNames property
-     */
-    private java.util.List<String> scopeNames;
-    /**
-     * The scopeType property
-     */
-    private ScopeType scopeType;
-    /**
-     * Instantiates a new organizationalScope and sets the default values.
+     * Instantiates a new OrganizationalScope and sets the default values.
      */
     public OrganizationalScope() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a organizationalScope
+     * @return a OrganizationalScope
      */
     @jakarta.annotation.Nonnull
     public static OrganizationalScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class OrganizationalScope implements AdditionalDataHolder, Parsable {
         return new OrganizationalScope();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class OrganizationalScope implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the scopeNames property value. The scopeNames property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScopeNames() {
-        return this.scopeNames;
+        return this.BackingStore.get("scopeNames");
     }
     /**
      * Gets the scopeType property value. The scopeType property
-     * @return a scopeType
+     * @return a ScopeType
      */
     @jakarta.annotation.Nullable
     public ScopeType getScopeType() {
-        return this.scopeType;
+        return this.BackingStore.get("scopeType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class OrganizationalScope implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the scopeNames property value. The scopeNames property
      * @param value Value to set for the scopeNames property.
      */
     public void setScopeNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.scopeNames = value;
+        this.BackingStore.set("scopeNames", value);
     }
     /**
      * Sets the scopeType property value. The scopeType property
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final ScopeType value) {
-        this.scopeType = value;
+        this.BackingStore.set("scopeType", value);
     }
 }

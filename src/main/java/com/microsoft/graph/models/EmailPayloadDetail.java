@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
-     * Email address of the user.
-     */
-    private String fromEmail;
-    /**
-     * Display name of the user.
-     */
-    private String fromName;
-    /**
-     * Indicates whether the sender isn't from the user's organization.
-     */
-    private Boolean isExternalSender;
-    /**
-     * The subject of the email address sent to the user.
-     */
-    private String subject;
-    /**
-     * Instantiates a new emailPayloadDetail and sets the default values.
+     * Instantiates a new EmailPayloadDetail and sets the default values.
      */
     public EmailPayloadDetail() {
         super();
@@ -34,7 +18,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailPayloadDetail
+     * @return a EmailPayloadDetail
      */
     @jakarta.annotation.Nonnull
     public static EmailPayloadDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,35 +40,35 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     }
     /**
      * Gets the fromEmail property value. Email address of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFromEmail() {
-        return this.fromEmail;
+        return this.BackingStore.get("fromEmail");
     }
     /**
      * Gets the fromName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFromName() {
-        return this.fromName;
+        return this.BackingStore.get("fromName");
     }
     /**
      * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSender() {
-        return this.isExternalSender;
+        return this.BackingStore.get("isExternalSender");
     }
     /**
      * Gets the subject property value. The subject of the email address sent to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * @param value Value to set for the fromEmail property.
      */
     public void setFromEmail(@jakarta.annotation.Nullable final String value) {
-        this.fromEmail = value;
+        this.BackingStore.set("fromEmail", value);
     }
     /**
      * Sets the fromName property value. Display name of the user.
      * @param value Value to set for the fromName property.
      */
     public void setFromName(@jakarta.annotation.Nullable final String value) {
-        this.fromName = value;
+        this.BackingStore.set("fromName", value);
     }
     /**
      * Sets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @param value Value to set for the isExternalSender property.
      */
     public void setIsExternalSender(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalSender = value;
+        this.BackingStore.set("isExternalSender", value);
     }
     /**
      * Sets the subject property value. The subject of the email address sent to the user.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
 }

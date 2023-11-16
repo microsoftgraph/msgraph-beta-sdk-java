@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRole extends Entity implements Parsable {
     /**
-     * The assignments property
-     */
-    private java.util.List<PrivilegedRoleAssignment> assignments;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The settings property
-     */
-    private PrivilegedRoleSettings settings;
-    /**
-     * The summary property
-     */
-    private PrivilegedRoleSummary summary;
-    /**
-     * Instantiates a new privilegedRole and sets the default values.
+     * Instantiates a new PrivilegedRole and sets the default values.
      */
     public PrivilegedRole() {
         super();
@@ -33,7 +17,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +26,11 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The assignments property
-     * @return a privilegedRoleAssignment
+     * @return a java.util.List<PrivilegedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedRoleAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +47,27 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a privilegedRoleSettings
+     * @return a PrivilegedRoleSettings
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a privilegedRoleSummary
+     * @return a PrivilegedRoleSummary
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSummary getSummary() {
-        return this.summary;
+        return this.BackingStore.get("summary");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<PrivilegedRoleAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final PrivilegedRoleSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final PrivilegedRoleSummary value) {
-        this.summary = value;
+        this.BackingStore.set("summary", value);
     }
 }

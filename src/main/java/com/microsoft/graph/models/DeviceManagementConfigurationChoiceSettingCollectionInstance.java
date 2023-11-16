@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingCollectionInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * Choice setting collection value
-     */
-    private java.util.List<DeviceManagementConfigurationChoiceSettingValue> choiceSettingCollectionValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingCollectionInstance
+     * @return a DeviceManagementConfigurationChoiceSettingCollectionInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     }
     /**
      * Gets the choiceSettingCollectionValue property value. Choice setting collection value
-     * @return a deviceManagementConfigurationChoiceSettingValue
+     * @return a java.util.List<DeviceManagementConfigurationChoiceSettingValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValue> getChoiceSettingCollectionValue() {
-        return this.choiceSettingCollectionValue;
+        return this.BackingStore.get("choiceSettingCollectionValue");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * @param value Value to set for the choiceSettingCollectionValue property.
      */
     public void setChoiceSettingCollectionValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValue> value) {
-        this.choiceSettingCollectionValue = value;
+        this.BackingStore.set("choiceSettingCollectionValue", value);
     }
 }

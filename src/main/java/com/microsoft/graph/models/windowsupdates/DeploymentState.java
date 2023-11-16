@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeploymentState implements AdditionalDataHolder, Parsable {
+public class DeploymentState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The effectiveValue property
-     */
-    private DeploymentStateValue effectiveValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the reasons the deployment has its state value. Read-only.
-     */
-    private java.util.List<DeploymentStateReason> reasons;
-    /**
-     * The requestedValue property
-     */
-    private RequestedDeploymentStateValue requestedValue;
-    /**
-     * Instantiates a new deploymentState and sets the default values.
+     * Instantiates a new DeploymentState and sets the default values.
      */
     public DeploymentState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deploymentState
+     * @return a DeploymentState
      */
     @jakarta.annotation.Nonnull
     public static DeploymentState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +34,33 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         return new DeploymentState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the effectiveValue property value. The effectiveValue property
-     * @return a deploymentStateValue
+     * @return a DeploymentStateValue
      */
     @jakarta.annotation.Nullable
     public DeploymentStateValue getEffectiveValue() {
-        return this.effectiveValue;
+        return this.BackingStore.get("effectiveValue");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +77,27 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the reasons property value. Specifies the reasons the deployment has its state value. Read-only.
-     * @return a deploymentStateReason
+     * @return a java.util.List<DeploymentStateReason>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeploymentStateReason> getReasons() {
-        return this.reasons;
+        return this.BackingStore.get("reasons");
     }
     /**
      * Gets the requestedValue property value. The requestedValue property
-     * @return a requestedDeploymentStateValue
+     * @return a RequestedDeploymentStateValue
      */
     @jakarta.annotation.Nullable
     public RequestedDeploymentStateValue getRequestedValue() {
-        return this.requestedValue;
+        return this.BackingStore.get("requestedValue");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the effectiveValue property value. The effectiveValue property
      * @param value Value to set for the effectiveValue property.
      */
     public void setEffectiveValue(@jakarta.annotation.Nullable final DeploymentStateValue value) {
-        this.effectiveValue = value;
+        this.BackingStore.set("effectiveValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the reasons property value. Specifies the reasons the deployment has its state value. Read-only.
      * @param value Value to set for the reasons property.
      */
     public void setReasons(@jakarta.annotation.Nullable final java.util.List<DeploymentStateReason> value) {
-        this.reasons = value;
+        this.BackingStore.set("reasons", value);
     }
     /**
      * Sets the requestedValue property value. The requestedValue property
      * @param value Value to set for the requestedValue property.
      */
     public void setRequestedValue(@jakarta.annotation.Nullable final RequestedDeploymentStateValue value) {
-        this.requestedValue = value;
+        this.BackingStore.set("requestedValue", value);
     }
 }

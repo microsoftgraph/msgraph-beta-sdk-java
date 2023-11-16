@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity implements Parsable {
     /**
-     * The templateApplicationLevel property
-     */
-    private EnumSet<TemplateApplicationLevel> templateApplicationLevel;
-    /**
-     * Defines whether users can be synchronized from the partner tenant.
-     */
-    private CrossTenantUserSyncInbound userSyncInbound;
-    /**
-     * Instantiates a new multiTenantOrganizationIdentitySyncPolicyTemplate and sets the default values.
+     * Instantiates a new MultiTenantOrganizationIdentitySyncPolicyTemplate and sets the default values.
      */
     public MultiTenantOrganizationIdentitySyncPolicyTemplate() {
         super();
@@ -26,7 +18,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a multiTenantOrganizationIdentitySyncPolicyTemplate
+     * @return a MultiTenantOrganizationIdentitySyncPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationIdentitySyncPolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
     }
     /**
      * Gets the templateApplicationLevel property value. The templateApplicationLevel property
-     * @return a templateApplicationLevel
+     * @return a EnumSet<TemplateApplicationLevel>
      */
     @jakarta.annotation.Nullable
     public EnumSet<TemplateApplicationLevel> getTemplateApplicationLevel() {
-        return this.templateApplicationLevel;
+        return this.BackingStore.get("templateApplicationLevel");
     }
     /**
      * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
-     * @return a crossTenantUserSyncInbound
+     * @return a CrossTenantUserSyncInbound
      */
     @jakarta.annotation.Nullable
     public CrossTenantUserSyncInbound getUserSyncInbound() {
-        return this.userSyncInbound;
+        return this.BackingStore.get("userSyncInbound");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
      * @param value Value to set for the templateApplicationLevel property.
      */
     public void setTemplateApplicationLevel(@jakarta.annotation.Nullable final EnumSet<TemplateApplicationLevel> value) {
-        this.templateApplicationLevel = value;
+        this.BackingStore.set("templateApplicationLevel", value);
     }
     /**
      * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @param value Value to set for the userSyncInbound property.
      */
     public void setUserSyncInbound(@jakarta.annotation.Nullable final CrossTenantUserSyncInbound value) {
-        this.userSyncInbound = value;
+        this.BackingStore.set("userSyncInbound", value);
     }
 }

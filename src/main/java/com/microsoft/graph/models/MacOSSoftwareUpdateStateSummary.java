@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable {
     /**
-     * Human readable name of the software update
-     */
-    private String displayName;
-    /**
-     * Last date time the report for this device and product key was updated.
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * Product key of the software update.
-     */
-    private String productKey;
-    /**
-     * MacOS Software Update State
-     */
-    private MacOSSoftwareUpdateState state;
-    /**
-     * MacOS Software Update Category
-     */
-    private MacOSSoftwareUpdateCategory updateCategory;
-    /**
-     * Version of the software update
-     */
-    private String updateVersion;
-    /**
-     * Instantiates a new macOSSoftwareUpdateStateSummary and sets the default values.
+     * Instantiates a new MacOSSoftwareUpdateStateSummary and sets the default values.
      */
     public MacOSSoftwareUpdateStateSummary() {
         super();
@@ -45,7 +21,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSSoftwareUpdateStateSummary
+     * @return a MacOSSoftwareUpdateStateSummary
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +30,11 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. Human readable name of the software update
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -81,39 +57,39 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.BackingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the productKey property value. Product key of the software update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.BackingStore.get("productKey");
     }
     /**
      * Gets the state property value. MacOS Software Update State
-     * @return a macOSSoftwareUpdateState
+     * @return a MacOSSoftwareUpdateState
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the updateCategory property value. MacOS Software Update Category
-     * @return a macOSSoftwareUpdateCategory
+     * @return a MacOSSoftwareUpdateCategory
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
-        return this.updateCategory;
+        return this.BackingStore.get("updateCategory");
     }
     /**
      * Gets the updateVersion property value. Version of the software update
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpdateVersion() {
-        return this.updateVersion;
+        return this.BackingStore.get("updateVersion");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. Last date time the report for this device and product key was updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.BackingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the productKey property value. Product key of the software update.
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.BackingStore.set("productKey", value);
     }
     /**
      * Sets the state property value. MacOS Software Update State
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final MacOSSoftwareUpdateState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
      */
     public void setUpdateCategory(@jakarta.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
-        this.updateCategory = value;
+        this.BackingStore.set("updateCategory", value);
     }
     /**
      * Sets the updateVersion property value. Version of the software update
      * @param value Value to set for the updateVersion property.
      */
     public void setUpdateVersion(@jakarta.annotation.Nullable final String value) {
-        this.updateVersion = value;
+        this.BackingStore.set("updateVersion", value);
     }
 }

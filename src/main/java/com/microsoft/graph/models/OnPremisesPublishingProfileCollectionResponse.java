@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesPublishingProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<OnPremisesPublishingProfile> value;
-    /**
-     * Instantiates a new onPremisesPublishingProfileCollectionResponse and sets the default values.
+     * Instantiates a new OnPremisesPublishingProfileCollectionResponse and sets the default values.
      */
     public OnPremisesPublishingProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class OnPremisesPublishingProfileCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesPublishingProfileCollectionResponse
+     * @return a OnPremisesPublishingProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesPublishingProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class OnPremisesPublishingProfileCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a onPremisesPublishingProfile
+     * @return a java.util.List<OnPremisesPublishingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesPublishingProfile> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class OnPremisesPublishingProfileCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<OnPremisesPublishingProfile> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

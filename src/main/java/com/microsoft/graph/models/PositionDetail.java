@@ -4,58 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PositionDetail implements AdditionalDataHolder, Parsable {
+public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Detail about the company or employer.
-     */
-    private CompanyDetail company;
-    /**
-     * Description of the position in question.
-     */
-    private String description;
-    /**
-     * When the position ended.
-     */
-    private LocalDate endMonthYear;
-    /**
-     * The title held when in that position.
-     */
-    private String jobTitle;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The role the position entailed.
-     */
-    private String role;
-    /**
-     * The start month and year of the position.
-     */
-    private LocalDate startMonthYear;
-    /**
-     * Short summary of the position.
-     */
-    private String summary;
-    /**
-     * Instantiates a new positionDetail and sets the default values.
+     * Instantiates a new PositionDetail and sets the default values.
      */
     public PositionDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nonnull
     public static PositionDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,28 +35,41 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         return new PositionDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the company property value. Detail about the company or employer.
-     * @return a companyDetail
+     * @return a CompanyDetail
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getCompany() {
-        return this.company;
+        return this.BackingStore.get("company");
     }
     /**
      * Gets the description property value. Description of the position in question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the endMonthYear property value. When the position ended.
@@ -92,7 +77,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndMonthYear() {
-        return this.endMonthYear;
+        return this.BackingStore.get("endMonthYear");
     }
     /**
      * The deserialization information for the current model
@@ -100,11 +85,13 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("company", (n) -> { this.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("endMonthYear", (n) -> { this.setEndMonthYear(n.getLocalDateValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("layer", (n) -> { this.setLayer(n.getIntegerValue()); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
         deserializerMap.put("startMonthYear", (n) -> { this.setStartMonthYear(n.getLocalDateValue()); });
@@ -113,27 +100,43 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jobTitle property value. The title held when in that position.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
-        return this.jobTitle;
+        return this.BackingStore.get("jobTitle");
+    }
+    /**
+     * Gets the layer property value. The place where the employee is within the organizational hierarchy.
+     * @return a Integer
+     */
+    @jakarta.annotation.Nullable
+    public Integer getLayer() {
+        return this.BackingStore.get("layer");
+    }
+    /**
+     * Gets the level property value. The employees experience or management level.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getLevel() {
+        return this.BackingStore.get("level");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the role property value. The role the position entailed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
-        return this.role;
+        return this.BackingStore.get("role");
     }
     /**
      * Gets the startMonthYear property value. The start month and year of the position.
@@ -141,15 +144,15 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartMonthYear() {
-        return this.startMonthYear;
+        return this.BackingStore.get("startMonthYear");
     }
     /**
-     * Gets the summary property value. Short summary of the position.
-     * @return a string
+     * Gets the summary property value. summary of the position.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
-        return this.summary;
+        return this.BackingStore.get("summary");
     }
     /**
      * Serializes information the current object
@@ -161,6 +164,8 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeLocalDateValue("endMonthYear", this.getEndMonthYear());
         writer.writeStringValue("jobTitle", this.getJobTitle());
+        writer.writeIntegerValue("layer", this.getLayer());
+        writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("role", this.getRole());
         writer.writeLocalDateValue("startMonthYear", this.getStartMonthYear());
@@ -168,66 +173,88 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the company property value. Detail about the company or employer.
      * @param value Value to set for the company property.
      */
     public void setCompany(@jakarta.annotation.Nullable final CompanyDetail value) {
-        this.company = value;
+        this.BackingStore.set("company", value);
     }
     /**
      * Sets the description property value. Description of the position in question.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the endMonthYear property value. When the position ended.
      * @param value Value to set for the endMonthYear property.
      */
     public void setEndMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
-        this.endMonthYear = value;
+        this.BackingStore.set("endMonthYear", value);
     }
     /**
      * Sets the jobTitle property value. The title held when in that position.
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
-        this.jobTitle = value;
+        this.BackingStore.set("jobTitle", value);
+    }
+    /**
+     * Sets the layer property value. The place where the employee is within the organizational hierarchy.
+     * @param value Value to set for the layer property.
+     */
+    public void setLayer(@jakarta.annotation.Nullable final Integer value) {
+        this.BackingStore.set("layer", value);
+    }
+    /**
+     * Sets the level property value. The employees experience or management level.
+     * @param value Value to set for the level property.
+     */
+    public void setLevel(@jakarta.annotation.Nullable final String value) {
+        this.BackingStore.set("level", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the role property value. The role the position entailed.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
-        this.role = value;
+        this.BackingStore.set("role", value);
     }
     /**
      * Sets the startMonthYear property value. The start month and year of the position.
      * @param value Value to set for the startMonthYear property.
      */
     public void setStartMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
-        this.startMonthYear = value;
+        this.BackingStore.set("startMonthYear", value);
     }
     /**
-     * Sets the summary property value. Short summary of the position.
+     * Sets the summary property value. summary of the position.
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final String value) {
-        this.summary = value;
+        this.BackingStore.set("summary", value);
     }
 }

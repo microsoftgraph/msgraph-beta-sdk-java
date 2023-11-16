@@ -13,67 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScript extends Entity implements Parsable {
     /**
-     * The list of group assignments for the device management script.
-     */
-    private java.util.List<DeviceManagementScriptAssignment> assignments;
-    /**
-     * The date and time the device management script was created. This property is read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Optional description for the device management script.
-     */
-    private String description;
-    /**
-     * List of run states for this script across all devices.
-     */
-    private java.util.List<DeviceManagementScriptDeviceState> deviceRunStates;
-    /**
-     * Name of the device management script.
-     */
-    private String displayName;
-    /**
-     * Indicate whether the script signature needs be checked.
-     */
-    private Boolean enforceSignatureCheck;
-    /**
-     * Script file name.
-     */
-    private String fileName;
-    /**
-     * The list of group assignments for the device management script.
-     */
-    private java.util.List<DeviceManagementScriptGroupAssignment> groupAssignments;
-    /**
-     * The date and time the device management script was last modified. This property is read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tag IDs for this PowerShellScript instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * A value indicating whether the PowerShell script should run as 32-bit
-     */
-    private Boolean runAs32Bit;
-    /**
-     * Indicates the type of execution context the app runs in.
-     */
-    private RunAsAccountType runAsAccount;
-    /**
-     * Run summary for device management script.
-     */
-    private DeviceManagementScriptRunSummary runSummary;
-    /**
-     * The script content.
-     */
-    private byte[] scriptContent;
-    /**
-     * List of run states for this script across all users.
-     */
-    private java.util.List<DeviceManagementScriptUserState> userRunStates;
-    /**
-     * Instantiates a new deviceManagementScript and sets the default values.
+     * Instantiates a new DeviceManagementScript and sets the default values.
      */
     public DeviceManagementScript() {
         super();
@@ -81,7 +21,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScript
+     * @return a DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,11 +30,11 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptAssignment
+     * @return a java.util.List<DeviceManagementScriptAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. The date and time the device management script was created. This property is read-only.
@@ -102,39 +42,39 @@ public class DeviceManagementScript extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Optional description for the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices.
-     * @return a deviceManagementScriptDeviceState
+     * @return a java.util.List<DeviceManagementScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
-        return this.deviceRunStates;
+        return this.BackingStore.get("deviceRunStates");
     }
     /**
      * Gets the displayName property value. Name of the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
-        return this.enforceSignatureCheck;
+        return this.BackingStore.get("enforceSignatureCheck");
     }
     /**
      * The deserialization information for the current model
@@ -162,19 +102,19 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. Script file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.BackingStore.get("fileName");
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a java.util.List<DeviceManagementScriptGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getGroupAssignments() {
-        return this.groupAssignments;
+        return this.BackingStore.get("groupAssignments");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the device management script was last modified. This property is read-only.
@@ -182,55 +122,55 @@ public class DeviceManagementScript extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether the PowerShell script should run as 32-bit
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
-        return this.runAs32Bit;
+        return this.BackingStore.get("runAs32Bit");
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this.runAsAccount;
+        return this.BackingStore.get("runAsAccount");
     }
     /**
      * Gets the runSummary property value. Run summary for device management script.
-     * @return a deviceManagementScriptRunSummary
+     * @return a DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScriptRunSummary getRunSummary() {
-        return this.runSummary;
+        return this.BackingStore.get("runSummary");
     }
     /**
      * Gets the scriptContent property value. The script content.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getScriptContent() {
-        return this.scriptContent;
+        return this.BackingStore.get("scriptContent");
     }
     /**
      * Gets the userRunStates property value. List of run states for this script across all users.
-     * @return a deviceManagementScriptUserState
+     * @return a java.util.List<DeviceManagementScriptUserState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptUserState> getUserRunStates() {
-        return this.userRunStates;
+        return this.BackingStore.get("userRunStates");
     }
     /**
      * Serializes information the current object
@@ -258,104 +198,104 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the device management script was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Optional description for the device management script.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceRunStates property value. List of run states for this script across all devices.
      * @param value Value to set for the deviceRunStates property.
      */
     public void setDeviceRunStates(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
-        this.deviceRunStates = value;
+        this.BackingStore.set("deviceRunStates", value);
     }
     /**
      * Sets the displayName property value. Name of the device management script.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked.
      * @param value Value to set for the enforceSignatureCheck property.
      */
     public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
-        this.enforceSignatureCheck = value;
+        this.BackingStore.set("enforceSignatureCheck", value);
     }
     /**
      * Sets the fileName property value. Script file name.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.BackingStore.set("fileName", value);
     }
     /**
      * Sets the groupAssignments property value. The list of group assignments for the device management script.
      * @param value Value to set for the groupAssignments property.
      */
     public void setGroupAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptGroupAssignment> value) {
-        this.groupAssignments = value;
+        this.BackingStore.set("groupAssignments", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the device management script was last modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether the PowerShell script should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
      */
     public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
-        this.runAs32Bit = value;
+        this.BackingStore.set("runAs32Bit", value);
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      */
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
-        this.runAsAccount = value;
+        this.BackingStore.set("runAsAccount", value);
     }
     /**
      * Sets the runSummary property value. Run summary for device management script.
      * @param value Value to set for the runSummary property.
      */
     public void setRunSummary(@jakarta.annotation.Nullable final DeviceManagementScriptRunSummary value) {
-        this.runSummary = value;
+        this.BackingStore.set("runSummary", value);
     }
     /**
      * Sets the scriptContent property value. The script content.
      * @param value Value to set for the scriptContent property.
      */
     public void setScriptContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.scriptContent = value;
+        this.BackingStore.set("scriptContent", value);
     }
     /**
      * Sets the userRunStates property value. List of run states for this script across all users.
      * @param value Value to set for the userRunStates property.
      */
     public void setUserRunStates(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptUserState> value) {
-        this.userRunStates = value;
+        this.BackingStore.set("userRunStates", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebAccountCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WebAccount> value;
-    /**
-     * Instantiates a new webAccountCollectionResponse and sets the default values.
+     * Instantiates a new WebAccountCollectionResponse and sets the default values.
      */
     public WebAccountCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WebAccountCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webAccountCollectionResponse
+     * @return a WebAccountCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WebAccountCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WebAccountCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a webAccount
+     * @return a java.util.List<WebAccount>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebAccount> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WebAccountCollectionResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WebAccount> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

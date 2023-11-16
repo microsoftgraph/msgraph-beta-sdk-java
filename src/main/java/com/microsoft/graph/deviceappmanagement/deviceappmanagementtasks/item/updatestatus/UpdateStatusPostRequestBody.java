@@ -5,33 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateStatusPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The note property
-     */
-    private String note;
-    /**
-     * Device app management task status.
-     */
-    private DeviceAppManagementTaskStatus status;
-    /**
-     * Instantiates a new updateStatusPostRequestBody and sets the default values.
+     * Instantiates a new UpdateStatusPostRequestBody and sets the default values.
      */
     public UpdateStatusPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateStatusPostRequestBody
+     * @return a UpdateStatusPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,12 +35,25 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
         return new UpdateStatusPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +68,19 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the note property value. The note property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNote() {
-        return this.note;
+        return this.BackingStore.get("note");
     }
     /**
      * Gets the status property value. Device app management task status.
-     * @return a deviceAppManagementTaskStatus
+     * @return a DeviceAppManagementTaskStatus
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -84,24 +93,32 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the note property value. The note property
      * @param value Value to set for the note property.
      */
     public void setNote(@jakarta.annotation.Nullable final String value) {
-        this.note = value;
+        this.BackingStore.set("note", value);
     }
     /**
      * Sets the status property value. Device app management task status.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceAppManagementTaskStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

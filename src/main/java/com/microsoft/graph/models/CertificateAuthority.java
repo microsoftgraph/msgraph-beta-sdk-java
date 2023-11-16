@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CertificateAuthority implements AdditionalDataHolder, Parsable {
+public class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Required. The base64 encoded string representing the public certificate.
-     */
-    private byte[] certificate;
-    /**
-     * The URL of the certificate revocation list.
-     */
-    private String certificateRevocationListUrl;
-    /**
-     * The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
-     */
-    private String deltaCertificateRevocationListUrl;
-    /**
-     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
-     */
-    private Boolean isRootAuthority;
-    /**
-     * The issuer of the certificate, calculated from the certificate value. Read-only.
-     */
-    private String issuer;
-    /**
-     * The subject key identifier of the certificate, calculated from the certificate value. Read-only.
-     */
-    private String issuerSki;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new certificateAuthority and sets the default values.
+     * Instantiates a new CertificateAuthority and sets the default values.
      */
     public CertificateAuthority() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateAuthority
+     * @return a CertificateAuthority
      */
     @jakarta.annotation.Nonnull
     public static CertificateAuthority createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +34,49 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
         return new CertificateAuthority();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the certificate property value. Required. The base64 encoded string representing the public certificate.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getCertificate() {
-        return this.certificate;
+        return this.BackingStore.get("certificate");
     }
     /**
      * Gets the certificateRevocationListUrl property value. The URL of the certificate revocation list.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateRevocationListUrl() {
-        return this.certificateRevocationListUrl;
+        return this.BackingStore.get("certificateRevocationListUrl");
     }
     /**
      * Gets the deltaCertificateRevocationListUrl property value. The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeltaCertificateRevocationListUrl() {
-        return this.deltaCertificateRevocationListUrl;
+        return this.BackingStore.get("deltaCertificateRevocationListUrl");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +96,35 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRootAuthority property value. Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRootAuthority() {
-        return this.isRootAuthority;
+        return this.BackingStore.get("isRootAuthority");
     }
     /**
      * Gets the issuer property value. The issuer of the certificate, calculated from the certificate value. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
-        return this.issuer;
+        return this.BackingStore.get("issuer");
     }
     /**
      * Gets the issuerSki property value. The subject key identifier of the certificate, calculated from the certificate value. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerSki() {
-        return this.issuerSki;
+        return this.BackingStore.get("issuerSki");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the certificate property value. Required. The base64 encoded string representing the public certificate.
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
-        this.certificate = value;
+        this.BackingStore.set("certificate", value);
     }
     /**
      * Sets the certificateRevocationListUrl property value. The URL of the certificate revocation list.
      * @param value Value to set for the certificateRevocationListUrl property.
      */
     public void setCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
-        this.certificateRevocationListUrl = value;
+        this.BackingStore.set("certificateRevocationListUrl", value);
     }
     /**
      * Sets the deltaCertificateRevocationListUrl property value. The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
      * @param value Value to set for the deltaCertificateRevocationListUrl property.
      */
     public void setDeltaCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
-        this.deltaCertificateRevocationListUrl = value;
+        this.BackingStore.set("deltaCertificateRevocationListUrl", value);
     }
     /**
      * Sets the isRootAuthority property value. Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
      * @param value Value to set for the isRootAuthority property.
      */
     public void setIsRootAuthority(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRootAuthority = value;
+        this.BackingStore.set("isRootAuthority", value);
     }
     /**
      * Sets the issuer property value. The issuer of the certificate, calculated from the certificate value. Read-only.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
-        this.issuer = value;
+        this.BackingStore.set("issuer", value);
     }
     /**
      * Sets the issuerSki property value. The subject key identifier of the certificate, calculated from the certificate value. Read-only.
      * @param value Value to set for the issuerSki property.
      */
     public void setIssuerSki(@jakarta.annotation.Nullable final String value) {
-        this.issuerSki = value;
+        this.BackingStore.set("issuerSki", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

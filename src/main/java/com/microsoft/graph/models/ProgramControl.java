@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProgramControl extends Entity implements Parsable {
     /**
-     * The controlId of the control, in particular the identifier of an access review. Required on create.
-     */
-    private String controlId;
-    /**
-     * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
-     */
-    private String controlTypeId;
-    /**
-     * The creation date and time of the program control.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The name of the control.
-     */
-    private String displayName;
-    /**
-     * The user who created the program control.
-     */
-    private UserIdentity owner;
-    /**
-     * The program this control is part of.
-     */
-    private Program program;
-    /**
-     * The programId of the program this control is a part of. Required on create.
-     */
-    private String programId;
-    /**
-     * The resource, a group or an app, targeted by this program control's access review.
-     */
-    private ProgramResource resource;
-    /**
-     * The life cycle status of the control.
-     */
-    private String status;
-    /**
-     * Instantiates a new programControl and sets the default values.
+     * Instantiates a new ProgramControl and sets the default values.
      */
     public ProgramControl() {
         super();
@@ -54,7 +18,7 @@ public class ProgramControl extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programControl
+     * @return a ProgramControl
      */
     @jakarta.annotation.Nonnull
     public static ProgramControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,19 +27,19 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the controlId property value. The controlId of the control, in particular the identifier of an access review. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlId() {
-        return this.controlId;
+        return this.BackingStore.get("controlId");
     }
     /**
      * Gets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlTypeId() {
-        return this.controlTypeId;
+        return this.BackingStore.get("controlTypeId");
     }
     /**
      * Gets the createdDateTime property value. The creation date and time of the program control.
@@ -83,15 +47,15 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The name of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -113,43 +77,43 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The user who created the program control.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getOwner() {
-        return this.owner;
+        return this.BackingStore.get("owner");
     }
     /**
      * Gets the program property value. The program this control is part of.
-     * @return a program
+     * @return a Program
      */
     @jakarta.annotation.Nullable
     public Program getProgram() {
-        return this.program;
+        return this.BackingStore.get("program");
     }
     /**
      * Gets the programId property value. The programId of the program this control is a part of. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProgramId() {
-        return this.programId;
+        return this.BackingStore.get("programId");
     }
     /**
      * Gets the resource property value. The resource, a group or an app, targeted by this program control's access review.
-     * @return a programResource
+     * @return a ProgramResource
      */
     @jakarta.annotation.Nullable
     public ProgramResource getResource() {
-        return this.resource;
+        return this.BackingStore.get("resource");
     }
     /**
      * Gets the status property value. The life cycle status of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the controlId property.
      */
     public void setControlId(@jakarta.annotation.Nullable final String value) {
-        this.controlId = value;
+        this.BackingStore.set("controlId", value);
     }
     /**
      * Sets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
      * @param value Value to set for the controlTypeId property.
      */
     public void setControlTypeId(@jakarta.annotation.Nullable final String value) {
-        this.controlTypeId = value;
+        this.BackingStore.set("controlTypeId", value);
     }
     /**
      * Sets the createdDateTime property value. The creation date and time of the program control.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The name of the control.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the owner property value. The user who created the program control.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final UserIdentity value) {
-        this.owner = value;
+        this.BackingStore.set("owner", value);
     }
     /**
      * Sets the program property value. The program this control is part of.
      * @param value Value to set for the program property.
      */
     public void setProgram(@jakarta.annotation.Nullable final Program value) {
-        this.program = value;
+        this.BackingStore.set("program", value);
     }
     /**
      * Sets the programId property value. The programId of the program this control is a part of. Required on create.
      * @param value Value to set for the programId property.
      */
     public void setProgramId(@jakarta.annotation.Nullable final String value) {
-        this.programId = value;
+        this.BackingStore.set("programId", value);
     }
     /**
      * Sets the resource property value. The resource, a group or an app, targeted by this program control's access review.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final ProgramResource value) {
-        this.resource = value;
+        this.BackingStore.set("resource", value);
     }
     /**
      * Sets the status property value. The life cycle status of the control.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

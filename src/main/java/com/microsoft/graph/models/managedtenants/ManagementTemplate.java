@@ -12,71 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplate extends Entity implements Parsable {
     /**
-     * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
-     */
-    private ManagementCategory category;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description for the management template. Optional. Read-only.
-     */
-    private String description;
-    /**
-     * The display name for the management template. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The informationLinks property
-     */
-    private java.util.List<ActionUrl> informationLinks;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The managementTemplateCollections property
-     */
-    private java.util.List<ManagementTemplateCollection> managementTemplateCollections;
-    /**
-     * The managementTemplateSteps property
-     */
-    private java.util.List<ManagementTemplateStep> managementTemplateSteps;
-    /**
-     * The collection of parameters used by the management template. Optional. Read-only.
-     */
-    private java.util.List<TemplateParameter> parameters;
-    /**
-     * The priority property
-     */
-    private Integer priority;
-    /**
-     * The provider property
-     */
-    private ManagementProvider provider;
-    /**
-     * The userImpact property
-     */
-    private String userImpact;
-    /**
-     * The version property
-     */
-    private Integer version;
-    /**
-     * The collection of workload actions associated with the management template. Optional. Read-only.
-     */
-    private java.util.List<WorkloadAction> workloadActions;
-    /**
-     * Instantiates a new managementTemplate and sets the default values.
+     * Instantiates a new ManagementTemplate and sets the default values.
      */
     public ManagementTemplate() {
         super();
@@ -84,7 +20,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplate
+     * @return a ManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -93,19 +29,19 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.BackingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -113,23 +49,23 @@ public class ManagementTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description for the management template. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -158,19 +94,19 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the informationLinks property value. The informationLinks property
-     * @return a actionUrl
+     * @return a java.util.List<ActionUrl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActionUrl> getInformationLinks() {
-        return this.informationLinks;
+        return this.BackingStore.get("informationLinks");
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.BackingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -178,71 +114,71 @@ public class ManagementTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.BackingStore.get("lastActionDateTime");
     }
     /**
      * Gets the managementTemplateCollections property value. The managementTemplateCollections property
-     * @return a managementTemplateCollection
+     * @return a java.util.List<ManagementTemplateCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateCollection> getManagementTemplateCollections() {
-        return this.managementTemplateCollections;
+        return this.BackingStore.get("managementTemplateCollections");
     }
     /**
      * Gets the managementTemplateSteps property value. The managementTemplateSteps property
-     * @return a managementTemplateStep
+     * @return a java.util.List<ManagementTemplateStep>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStep> getManagementTemplateSteps() {
-        return this.managementTemplateSteps;
+        return this.BackingStore.get("managementTemplateSteps");
     }
     /**
      * Gets the parameters property value. The collection of parameters used by the management template. Optional. Read-only.
-     * @return a templateParameter
+     * @return a java.util.List<TemplateParameter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemplateParameter> getParameters() {
-        return this.parameters;
+        return this.BackingStore.get("parameters");
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.BackingStore.get("priority");
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a managementProvider
+     * @return a ManagementProvider
      */
     @jakarta.annotation.Nullable
     public ManagementProvider getProvider() {
-        return this.provider;
+        return this.BackingStore.get("provider");
     }
     /**
      * Gets the userImpact property value. The userImpact property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserImpact() {
-        return this.userImpact;
+        return this.BackingStore.get("userImpact");
     }
     /**
      * Gets the version property value. The version property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Gets the workloadActions property value. The collection of workload actions associated with the management template. Optional. Read-only.
-     * @return a workloadAction
+     * @return a java.util.List<WorkloadAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {
-        return this.workloadActions;
+        return this.BackingStore.get("workloadActions");
     }
     /**
      * Serializes information the current object
@@ -273,111 +209,111 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.BackingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description for the management template. Optional. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the management template. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the informationLinks property value. The informationLinks property
      * @param value Value to set for the informationLinks property.
      */
     public void setInformationLinks(@jakarta.annotation.Nullable final java.util.List<ActionUrl> value) {
-        this.informationLinks = value;
+        this.BackingStore.set("informationLinks", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.BackingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.BackingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the managementTemplateCollections property value. The managementTemplateCollections property
      * @param value Value to set for the managementTemplateCollections property.
      */
     public void setManagementTemplateCollections(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
-        this.managementTemplateCollections = value;
+        this.BackingStore.set("managementTemplateCollections", value);
     }
     /**
      * Sets the managementTemplateSteps property value. The managementTemplateSteps property
      * @param value Value to set for the managementTemplateSteps property.
      */
     public void setManagementTemplateSteps(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
-        this.managementTemplateSteps = value;
+        this.BackingStore.set("managementTemplateSteps", value);
     }
     /**
      * Sets the parameters property value. The collection of parameters used by the management template. Optional. Read-only.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<TemplateParameter> value) {
-        this.parameters = value;
+        this.BackingStore.set("parameters", value);
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.BackingStore.set("priority", value);
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final ManagementProvider value) {
-        this.provider = value;
+        this.BackingStore.set("provider", value);
     }
     /**
      * Sets the userImpact property value. The userImpact property
      * @param value Value to set for the userImpact property.
      */
     public void setUserImpact(@jakarta.annotation.Nullable final String value) {
-        this.userImpact = value;
+        this.BackingStore.set("userImpact", value);
     }
     /**
      * Sets the version property value. The version property
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
     /**
      * Sets the workloadActions property value. The collection of workload actions associated with the management template. Optional. Read-only.
      * @param value Value to set for the workloadActions property.
      */
     public void setWorkloadActions(@jakarta.annotation.Nullable final java.util.List<WorkloadAction> value) {
-        this.workloadActions = value;
+        this.BackingStore.set("workloadActions", value);
     }
 }

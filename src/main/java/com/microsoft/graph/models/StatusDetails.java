@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StatusDetails extends StatusBase implements Parsable {
     /**
-     * Additional details in case of error.
-     */
-    private String additionalDetails;
-    /**
-     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
-     */
-    private ProvisioningStatusErrorCategory errorCategory;
-    /**
-     * Unique error code if any occurred. Learn more
-     */
-    private String errorCode;
-    /**
-     * Summarizes the status and describes why the status happened.
-     */
-    private String reason;
-    /**
-     * Provides the resolution for the corresponding error.
-     */
-    private String recommendedAction;
-    /**
-     * Instantiates a new statusDetails and sets the default values.
+     * Instantiates a new StatusDetails and sets the default values.
      */
     public StatusDetails() {
         super();
@@ -38,7 +18,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a statusDetails
+     * @return a StatusDetails
      */
     @jakarta.annotation.Nonnull
     public static StatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +26,28 @@ public class StatusDetails extends StatusBase implements Parsable {
         return new StatusDetails();
     }
     /**
-     * Gets the additionalDetails property value. Additional details in case of error.
-     * @return a string
+     * Gets the additionalDetails property value. Additional details if there is an error.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
-        return this.additionalDetails;
+        return this.BackingStore.get("additionalDetails");
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
-     * @return a provisioningStatusErrorCategory
+     * @return a ProvisioningStatusErrorCategory
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
-        return this.errorCategory;
+        return this.BackingStore.get("errorCategory");
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +65,19 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.BackingStore.get("reason");
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
-        return this.recommendedAction;
+        return this.BackingStore.get("recommendedAction");
     }
     /**
      * Serializes information the current object
@@ -113,38 +93,38 @@ public class StatusDetails extends StatusBase implements Parsable {
         writer.writeStringValue("recommendedAction", this.getRecommendedAction());
     }
     /**
-     * Sets the additionalDetails property value. Additional details in case of error.
+     * Sets the additionalDetails property value. Additional details if there is an error.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
-        this.additionalDetails = value;
+        this.BackingStore.set("additionalDetails", value);
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      * @param value Value to set for the errorCategory property.
      */
     public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
-        this.errorCategory = value;
+        this.BackingStore.set("errorCategory", value);
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.BackingStore.set("reason", value);
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @param value Value to set for the recommendedAction property.
      */
     public void setRecommendedAction(@jakarta.annotation.Nullable final String value) {
-        this.recommendedAction = value;
+        this.BackingStore.set("recommendedAction", value);
     }
 }

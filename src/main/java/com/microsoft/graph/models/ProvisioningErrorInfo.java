@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
+public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Additional details in case of error.
-     */
-    private String additionalDetails;
-    /**
-     * Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     */
-    private ProvisioningStatusErrorCategory errorCategory;
-    /**
-     * Unique error code if any occurred. Learn more
-     */
-    private String errorCode;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Summarizes the status and describes why the status happened.
-     */
-    private String reason;
-    /**
-     * Provides the resolution for the corresponding error.
-     */
-    private String recommendedAction;
-    /**
-     * Instantiates a new provisioningErrorInfo and sets the default values.
+     * Instantiates a new ProvisioningErrorInfo and sets the default values.
      */
     public ProvisioningErrorInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisioningErrorInfo
+     * @return a ProvisioningErrorInfo
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningErrorInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,36 +34,49 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
         return new ProvisioningErrorInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the additionalDetails property value. Additional details in case of error.
-     * @return a string
+     * Gets the additionalDetails property value. Additional details if there is error.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
-        return this.additionalDetails;
+        return this.BackingStore.get("additionalDetails");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @return a provisioningStatusErrorCategory
+     * @return a ProvisioningStatusErrorCategory
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
-        return this.errorCategory;
+        return this.BackingStore.get("errorCategory");
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -102,27 +95,27 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.BackingStore.get("reason");
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
-        return this.recommendedAction;
+        return this.BackingStore.get("recommendedAction");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
-     * Sets the additionalDetails property value. Additional details in case of error.
+     * Sets the additionalDetails property value. Additional details if there is error.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
-        this.additionalDetails = value;
+        this.BackingStore.set("additionalDetails", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
      * @param value Value to set for the errorCategory property.
      */
     public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
-        this.errorCategory = value;
+        this.BackingStore.set("errorCategory", value);
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.BackingStore.set("reason", value);
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @param value Value to set for the recommendedAction property.
      */
     public void setRecommendedAction(@jakarta.annotation.Nullable final String value) {
-        this.recommendedAction = value;
+        this.BackingStore.set("recommendedAction", value);
     }
 }

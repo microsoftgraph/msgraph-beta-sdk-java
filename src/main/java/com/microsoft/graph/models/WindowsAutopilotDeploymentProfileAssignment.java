@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeploymentProfileAssignment extends Entity implements Parsable {
     /**
-     * Represents source of assignment.
-     */
-    private DeviceAndAppManagementAssignmentSource source;
-    /**
-     * Identifier for resource used for deployment to a group
-     */
-    private String sourceId;
-    /**
-     * The assignment target for the Windows Autopilot deployment profile.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new windowsAutopilotDeploymentProfileAssignment and sets the default values.
+     * Instantiates a new WindowsAutopilotDeploymentProfileAssignment and sets the default values.
      */
     public WindowsAutopilotDeploymentProfileAssignment() {
         super();
@@ -32,7 +20,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotDeploymentProfileAssignment
+     * @return a WindowsAutopilotDeploymentProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +41,27 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     }
     /**
      * Gets the source property value. Represents source of assignment.
-     * @return a deviceAndAppManagementAssignmentSource
+     * @return a DeviceAndAppManagementAssignmentSource
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentSource getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Gets the sourceId property value. Identifier for resource used for deployment to a group
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
-        return this.sourceId;
+        return this.BackingStore.get("sourceId");
     }
     /**
      * Gets the target property value. The assignment target for the Windows Autopilot deployment profile.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentSource value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
     /**
      * Sets the sourceId property value. Identifier for resource used for deployment to a group
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
-        this.sourceId = value;
+        this.BackingStore.set("sourceId", value);
     }
     /**
      * Sets the target property value. The assignment target for the Windows Autopilot deployment profile.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
 }

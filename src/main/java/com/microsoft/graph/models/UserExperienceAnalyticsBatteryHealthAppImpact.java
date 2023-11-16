@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implements Parsable {
     /**
-     * Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
-     */
-    private Integer activeDevices;
-    /**
-     * User friendly display name for the app. Eg: Outlook
-     */
-    private String appDisplayName;
-    /**
-     * App name. Eg: oltk.exe
-     */
-    private String appName;
-    /**
-     * App publisher. Eg: Microsoft Corporation
-     */
-    private String appPublisher;
-    /**
-     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
-     */
-    private Double batteryUsagePercentage;
-    /**
-     * true if the user had active interaction with the app.
-     */
-    private Boolean isForegroundApp;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
         super();
@@ -44,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,43 +29,43 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
-        return this.activeDevices;
+        return this.BackingStore.get("activeDevices");
     }
     /**
      * Gets the appDisplayName property value. User friendly display name for the app. Eg: Outlook
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.BackingStore.get("appDisplayName");
     }
     /**
      * Gets the appName property value. App name. Eg: oltk.exe
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.BackingStore.get("appName");
     }
     /**
      * Gets the appPublisher property value. App publisher. Eg: Microsoft Corporation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.BackingStore.get("appPublisher");
     }
     /**
      * Gets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBatteryUsagePercentage() {
-        return this.batteryUsagePercentage;
+        return this.BackingStore.get("batteryUsagePercentage");
     }
     /**
      * The deserialization information for the current model
@@ -108,11 +84,11 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsForegroundApp() {
-        return this.isForegroundApp;
+        return this.BackingStore.get("isForegroundApp");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the activeDevices property.
      */
     public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDevices = value;
+        this.BackingStore.set("activeDevices", value);
     }
     /**
      * Sets the appDisplayName property value. User friendly display name for the app. Eg: Outlook
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.BackingStore.set("appDisplayName", value);
     }
     /**
      * Sets the appName property value. App name. Eg: oltk.exe
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.BackingStore.set("appName", value);
     }
     /**
      * Sets the appPublisher property value. App publisher. Eg: Microsoft Corporation
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.BackingStore.set("appPublisher", value);
     }
     /**
      * Sets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the batteryUsagePercentage property.
      */
     public void setBatteryUsagePercentage(@jakarta.annotation.Nullable final Double value) {
-        this.batteryUsagePercentage = value;
+        this.BackingStore.set("batteryUsagePercentage", value);
     }
     /**
      * Sets the isForegroundApp property value. true if the user had active interaction with the app.
      * @param value Value to set for the isForegroundApp property.
      */
     public void setIsForegroundApp(@jakarta.annotation.Nullable final Boolean value) {
-        this.isForegroundApp = value;
+        this.BackingStore.set("isForegroundApp", value);
     }
 }

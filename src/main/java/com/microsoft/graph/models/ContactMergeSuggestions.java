@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContactMergeSuggestions extends Entity implements Parsable {
     /**
-     * true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true.
-     */
-    private Boolean isEnabled;
-    /**
-     * Instantiates a new contactMergeSuggestions and sets the default values.
+     * Instantiates a new ContactMergeSuggestions and sets the default values.
      */
     public ContactMergeSuggestions() {
         super();
@@ -21,7 +17,7 @@ public class ContactMergeSuggestions extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contactMergeSuggestions
+     * @return a ContactMergeSuggestions
      */
     @jakarta.annotation.Nonnull
     public static ContactMergeSuggestions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ContactMergeSuggestions extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ContactMergeSuggestions extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
 }

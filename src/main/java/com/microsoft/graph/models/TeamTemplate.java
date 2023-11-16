@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamTemplate extends Entity implements Parsable {
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
-     */
-    private java.util.List<TeamTemplateDefinition> definitions;
-    /**
-     * Instantiates a new teamTemplate and sets the default values.
+     * Instantiates a new TeamTemplate and sets the default values.
      */
     public TeamTemplate() {
         super();
@@ -21,7 +17,7 @@ public class TeamTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamTemplate
+     * @return a TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public static TeamTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class TeamTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the definitions property value. A generic representation of a team template definition for a team with a specific structure and configuration.
-     * @return a teamTemplateDefinition
+     * @return a java.util.List<TeamTemplateDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamTemplateDefinition> getDefinitions() {
-        return this.definitions;
+        return this.BackingStore.get("definitions");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class TeamTemplate extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      */
     public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<TeamTemplateDefinition> value) {
-        this.definitions = value;
+        this.BackingStore.set("definitions", value);
     }
 }

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EncryptWithUserDefinedRights extends EncryptContent implements Parsable {
     /**
-     * The allowAdHocPermissions property
-     */
-    private Boolean allowAdHocPermissions;
-    /**
-     * The allowMailForwarding property
-     */
-    private Boolean allowMailForwarding;
-    /**
-     * The decryptionRightsManagementTemplateId property
-     */
-    private String decryptionRightsManagementTemplateId;
-    /**
-     * Instantiates a new encryptWithUserDefinedRights and sets the default values.
+     * Instantiates a new EncryptWithUserDefinedRights and sets the default values.
      */
     public EncryptWithUserDefinedRights() {
         super();
@@ -30,7 +18,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a encryptWithUserDefinedRights
+     * @return a EncryptWithUserDefinedRights
      */
     @jakarta.annotation.Nonnull
     public static EncryptWithUserDefinedRights createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,27 +27,27 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the allowAdHocPermissions property value. The allowAdHocPermissions property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAdHocPermissions() {
-        return this.allowAdHocPermissions;
+        return this.BackingStore.get("allowAdHocPermissions");
     }
     /**
      * Gets the allowMailForwarding property value. The allowMailForwarding property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMailForwarding() {
-        return this.allowMailForwarding;
+        return this.BackingStore.get("allowMailForwarding");
     }
     /**
      * Gets the decryptionRightsManagementTemplateId property value. The decryptionRightsManagementTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDecryptionRightsManagementTemplateId() {
-        return this.decryptionRightsManagementTemplateId;
+        return this.BackingStore.get("decryptionRightsManagementTemplateId");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      * @param value Value to set for the allowAdHocPermissions property.
      */
     public void setAllowAdHocPermissions(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAdHocPermissions = value;
+        this.BackingStore.set("allowAdHocPermissions", value);
     }
     /**
      * Sets the allowMailForwarding property value. The allowMailForwarding property
      * @param value Value to set for the allowMailForwarding property.
      */
     public void setAllowMailForwarding(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowMailForwarding = value;
+        this.BackingStore.set("allowMailForwarding", value);
     }
     /**
      * Sets the decryptionRightsManagementTemplateId property value. The decryptionRightsManagementTemplateId property
      * @param value Value to set for the decryptionRightsManagementTemplateId property.
      */
     public void setDecryptionRightsManagementTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.decryptionRightsManagementTemplateId = value;
+        this.BackingStore.set("decryptionRightsManagementTemplateId", value);
     }
 }

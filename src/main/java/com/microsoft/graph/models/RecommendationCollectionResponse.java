@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecommendationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Recommendation> value;
-    /**
-     * Instantiates a new recommendationCollectionResponse and sets the default values.
+     * Instantiates a new RecommendationCollectionResponse and sets the default values.
      */
     public RecommendationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class RecommendationCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recommendationCollectionResponse
+     * @return a RecommendationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RecommendationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class RecommendationCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a recommendation
+     * @return a java.util.List<Recommendation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recommendation> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class RecommendationCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Recommendation> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

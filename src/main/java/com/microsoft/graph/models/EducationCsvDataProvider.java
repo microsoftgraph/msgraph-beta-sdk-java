@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationCsvDataProvider extends EducationSynchronizationDataProvider implements Parsable {
     /**
-     * Optional customizations to be applied to the synchronization profile.
-     */
-    private EducationSynchronizationCustomizations customizations;
-    /**
-     * Instantiates a new educationCsvDataProvider and sets the default values.
+     * Instantiates a new EducationCsvDataProvider and sets the default values.
      */
     public EducationCsvDataProvider() {
         super();
@@ -22,7 +18,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationCsvDataProvider
+     * @return a EducationCsvDataProvider
      */
     @jakarta.annotation.Nonnull
     public static EducationCsvDataProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     }
     /**
      * Gets the customizations property value. Optional customizations to be applied to the synchronization profile.
-     * @return a educationSynchronizationCustomizations
+     * @return a EducationSynchronizationCustomizations
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations getCustomizations() {
-        return this.customizations;
+        return this.BackingStore.get("customizations");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
      * @param value Value to set for the customizations property.
      */
     public void setCustomizations(@jakarta.annotation.Nullable final EducationSynchronizationCustomizations value) {
-        this.customizations = value;
+        this.BackingStore.set("customizations", value);
     }
 }

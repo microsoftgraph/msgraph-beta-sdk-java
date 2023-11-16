@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectorGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ConnectorGroup> value;
-    /**
-     * Instantiates a new connectorGroupCollectionResponse and sets the default values.
+     * Instantiates a new ConnectorGroupCollectionResponse and sets the default values.
      */
     public ConnectorGroupCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ConnectorGroupCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectorGroupCollectionResponse
+     * @return a ConnectorGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ConnectorGroupCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ConnectorGroupCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a connectorGroup
+     * @return a java.util.List<ConnectorGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ConnectorGroupCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ConnectorGroup> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

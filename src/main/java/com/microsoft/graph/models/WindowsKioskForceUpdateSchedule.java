@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,45 +15,22 @@ import java.util.Objects;
  * Windows 10 force update schedule for Kiosk devices.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Parsable {
+public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Day of month. Valid values 1 to 31
-     */
-    private Integer dayofMonth;
-    /**
-     * The dayofWeek property
-     */
-    private DayOfWeek dayofWeek;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Possible values for App update on Windows10 recurrence.
-     */
-    private Windows10AppsUpdateRecurrence recurrence;
-    /**
-     * If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
-     */
-    private Boolean runImmediatelyIfAfterStartDateTime;
-    /**
-     * The start time for the force restart.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Instantiates a new windowsKioskForceUpdateSchedule and sets the default values.
+     * Instantiates a new WindowsKioskForceUpdateSchedule and sets the default values.
      */
     public WindowsKioskForceUpdateSchedule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskForceUpdateSchedule
+     * @return a WindowsKioskForceUpdateSchedule
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskForceUpdateSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,28 +38,41 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         return new WindowsKioskForceUpdateSchedule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dayofMonth property value. Day of month. Valid values 1 to 31
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDayofMonth() {
-        return this.dayofMonth;
+        return this.BackingStore.get("dayofMonth");
     }
     /**
      * Gets the dayofWeek property value. The dayofWeek property
-     * @return a dayOfWeek
+     * @return a DayOfWeek
      */
     @jakarta.annotation.Nullable
     public DayOfWeek getDayofWeek() {
-        return this.dayofWeek;
+        return this.BackingStore.get("dayofWeek");
     }
     /**
      * The deserialization information for the current model
@@ -98,27 +91,27 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
-     * @return a windows10AppsUpdateRecurrence
+     * @return a Windows10AppsUpdateRecurrence
      */
     @jakarta.annotation.Nullable
     public Windows10AppsUpdateRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.BackingStore.get("recurrence");
     }
     /**
      * Gets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunImmediatelyIfAfterStartDateTime() {
-        return this.runImmediatelyIfAfterStartDateTime;
+        return this.BackingStore.get("runImmediatelyIfAfterStartDateTime");
     }
     /**
      * Gets the startDateTime property value. The start time for the force restart.
@@ -126,7 +119,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -143,52 +136,60 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the dayofMonth property value. Day of month. Valid values 1 to 31
      * @param value Value to set for the dayofMonth property.
      */
     public void setDayofMonth(@jakarta.annotation.Nullable final Integer value) {
-        this.dayofMonth = value;
+        this.BackingStore.set("dayofMonth", value);
     }
     /**
      * Sets the dayofWeek property value. The dayofWeek property
      * @param value Value to set for the dayofWeek property.
      */
     public void setDayofWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
-        this.dayofWeek = value;
+        this.BackingStore.set("dayofWeek", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final Windows10AppsUpdateRecurrence value) {
-        this.recurrence = value;
+        this.BackingStore.set("recurrence", value);
     }
     /**
      * Sets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      * @param value Value to set for the runImmediatelyIfAfterStartDateTime property.
      */
     public void setRunImmediatelyIfAfterStartDateTime(@jakarta.annotation.Nullable final Boolean value) {
-        this.runImmediatelyIfAfterStartDateTime = value;
+        this.BackingStore.set("runImmediatelyIfAfterStartDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The start time for the force restart.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
 }

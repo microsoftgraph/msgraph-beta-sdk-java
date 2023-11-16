@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedIOSLobAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedIOSLobApp> value;
-    /**
-     * Instantiates a new managedIOSLobAppCollectionResponse and sets the default values.
+     * Instantiates a new ManagedIOSLobAppCollectionResponse and sets the default values.
      */
     public ManagedIOSLobAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ManagedIOSLobAppCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedIOSLobAppCollectionResponse
+     * @return a ManagedIOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedIOSLobAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ManagedIOSLobAppCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedIOSLobApp
+     * @return a java.util.List<ManagedIOSLobApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedIOSLobApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ManagedIOSLobAppCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedIOSLobApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

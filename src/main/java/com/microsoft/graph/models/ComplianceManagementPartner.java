@@ -13,43 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
-     * User groups which enroll Android devices through partner.
-     */
-    private java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
-    /**
-     * Partner onboarded for Android devices.
-     */
-    private Boolean androidOnboarded;
-    /**
-     * Partner display name
-     */
-    private String displayName;
-    /**
-     * User groups which enroll ios devices through partner.
-     */
-    private java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
-    /**
-     * Partner onboarded for ios devices.
-     */
-    private Boolean iosOnboarded;
-    /**
-     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
-     */
-    private OffsetDateTime lastHeartbeatDateTime;
-    /**
-     * User groups which enroll Mac devices through partner.
-     */
-    private java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
-    /**
-     * Partner onboarded for Mac devices.
-     */
-    private Boolean macOsOnboarded;
-    /**
-     * Partner state of this tenant.
-     */
-    private DeviceManagementPartnerTenantState partnerState;
-    /**
-     * Instantiates a new complianceManagementPartner and sets the default values.
+     * Instantiates a new ComplianceManagementPartner and sets the default values.
      */
     public ComplianceManagementPartner() {
         super();
@@ -57,7 +21,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceManagementPartner
+     * @return a ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public static ComplianceManagementPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,27 +30,27 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the androidEnrollmentAssignments property value. User groups which enroll Android devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getAndroidEnrollmentAssignments() {
-        return this.androidEnrollmentAssignments;
+        return this.BackingStore.get("androidEnrollmentAssignments");
     }
     /**
      * Gets the androidOnboarded property value. Partner onboarded for Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidOnboarded() {
-        return this.androidOnboarded;
+        return this.BackingStore.get("androidOnboarded");
     }
     /**
      * Gets the displayName property value. Partner display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -108,19 +72,19 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getIosEnrollmentAssignments() {
-        return this.iosEnrollmentAssignments;
+        return this.BackingStore.get("iosEnrollmentAssignments");
     }
     /**
      * Gets the iosOnboarded property value. Partner onboarded for ios devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIosOnboarded() {
-        return this.iosOnboarded;
+        return this.BackingStore.get("iosOnboarded");
     }
     /**
      * Gets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
@@ -128,31 +92,31 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
-        return this.lastHeartbeatDateTime;
+        return this.BackingStore.get("lastHeartbeatDateTime");
     }
     /**
      * Gets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getMacOsEnrollmentAssignments() {
-        return this.macOsEnrollmentAssignments;
+        return this.BackingStore.get("macOsEnrollmentAssignments");
     }
     /**
      * Gets the macOsOnboarded property value. Partner onboarded for Mac devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMacOsOnboarded() {
-        return this.macOsOnboarded;
+        return this.BackingStore.get("macOsOnboarded");
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a deviceManagementPartnerTenantState
+     * @return a DeviceManagementPartnerTenantState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {
-        return this.partnerState;
+        return this.BackingStore.get("partnerState");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the androidEnrollmentAssignments property.
      */
     public void setAndroidEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this.androidEnrollmentAssignments = value;
+        this.BackingStore.set("androidEnrollmentAssignments", value);
     }
     /**
      * Sets the androidOnboarded property value. Partner onboarded for Android devices.
      * @param value Value to set for the androidOnboarded property.
      */
     public void setAndroidOnboarded(@jakarta.annotation.Nullable final Boolean value) {
-        this.androidOnboarded = value;
+        this.BackingStore.set("androidOnboarded", value);
     }
     /**
      * Sets the displayName property value. Partner display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
      * @param value Value to set for the iosEnrollmentAssignments property.
      */
     public void setIosEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this.iosEnrollmentAssignments = value;
+        this.BackingStore.set("iosEnrollmentAssignments", value);
     }
     /**
      * Sets the iosOnboarded property value. Partner onboarded for ios devices.
      * @param value Value to set for the iosOnboarded property.
      */
     public void setIosOnboarded(@jakarta.annotation.Nullable final Boolean value) {
-        this.iosOnboarded = value;
+        this.BackingStore.set("iosOnboarded", value);
     }
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
      * @param value Value to set for the lastHeartbeatDateTime property.
      */
     public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastHeartbeatDateTime = value;
+        this.BackingStore.set("lastHeartbeatDateTime", value);
     }
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
      * @param value Value to set for the macOsEnrollmentAssignments property.
      */
     public void setMacOsEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this.macOsEnrollmentAssignments = value;
+        this.BackingStore.set("macOsEnrollmentAssignments", value);
     }
     /**
      * Sets the macOsOnboarded property value. Partner onboarded for Mac devices.
      * @param value Value to set for the macOsOnboarded property.
      */
     public void setMacOsOnboarded(@jakarta.annotation.Nullable final Boolean value) {
-        this.macOsOnboarded = value;
+        this.BackingStore.set("macOsOnboarded", value);
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      */
     public void setPartnerState(@jakarta.annotation.Nullable final DeviceManagementPartnerTenantState value) {
-        this.partnerState = value;
+        this.BackingStore.set("partnerState", value);
     }
 }

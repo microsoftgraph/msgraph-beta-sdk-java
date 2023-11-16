@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementResourceAccessProfileBase extends Entity implements Parsable {
     /**
-     * The list of assignments for the device configuration profile.
-     */
-    private java.util.List<DeviceManagementResourceAccessProfileAssignment> assignments;
-    /**
-     * DateTime profile was created
-     */
-    private OffsetDateTime creationDateTime;
-    /**
-     * Profile description
-     */
-    private String description;
-    /**
-     * Profile display name
-     */
-    private String displayName;
-    /**
-     * DateTime profile was last modified
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Scope Tags
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Version of the profile
-     */
-    private Integer version;
-    /**
-     * Instantiates a new deviceManagementResourceAccessProfileBase and sets the default values.
+     * Instantiates a new DeviceManagementResourceAccessProfileBase and sets the default values.
      */
     public DeviceManagementResourceAccessProfileBase() {
         super();
@@ -49,7 +21,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementResourceAccessProfileBase
+     * @return a DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,11 +41,11 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the assignments property value. The list of assignments for the device configuration profile.
-     * @return a deviceManagementResourceAccessProfileAssignment
+     * @return a java.util.List<DeviceManagementResourceAccessProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementResourceAccessProfileAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the creationDateTime property value. DateTime profile was created
@@ -81,23 +53,23 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this.creationDateTime;
+        return this.BackingStore.get("creationDateTime");
     }
     /**
      * Gets the description property value. Profile description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Profile display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -121,23 +93,23 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. Scope Tags
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the version property value. Version of the profile
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -159,48 +131,48 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementResourceAccessProfileAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the creationDateTime property value. DateTime profile was created
      * @param value Value to set for the creationDateTime property.
      */
     public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.creationDateTime = value;
+        this.BackingStore.set("creationDateTime", value);
     }
     /**
      * Sets the description property value. Profile description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Profile display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime profile was last modified
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. Scope Tags
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the version property value. Version of the profile
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

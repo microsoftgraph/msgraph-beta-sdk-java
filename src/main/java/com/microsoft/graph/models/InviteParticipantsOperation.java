@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InviteParticipantsOperation extends CommsOperation implements Parsable {
     /**
-     * The participants to invite.
-     */
-    private java.util.List<InvitationParticipantInfo> participants;
-    /**
-     * Instantiates a new inviteParticipantsOperation and sets the default values.
+     * Instantiates a new InviteParticipantsOperation and sets the default values.
      */
     public InviteParticipantsOperation() {
         super();
@@ -21,7 +17,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inviteParticipantsOperation
+     * @return a InviteParticipantsOperation
      */
     @jakarta.annotation.Nonnull
     public static InviteParticipantsOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     }
     /**
      * Gets the participants property value. The participants to invite.
-     * @return a invitationParticipantInfo
+     * @return a java.util.List<InvitationParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
-        return this.participants;
+        return this.BackingStore.get("participants");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.participants = value;
+        this.BackingStore.set("participants", value);
     }
 }

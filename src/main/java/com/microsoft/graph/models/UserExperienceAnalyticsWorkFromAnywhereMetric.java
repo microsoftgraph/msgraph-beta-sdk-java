@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable {
     /**
-     * The work from anywhere metric devices. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> metricDevices;
-    /**
-     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereMetric() {
         super();
@@ -24,7 +20,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereMetric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     }
     /**
      * Gets the metricDevices property value. The work from anywhere metric devices. Read-only.
-     * @return a userExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> getMetricDevices() {
-        return this.metricDevices;
+        return this.BackingStore.get("metricDevices");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
      * @param value Value to set for the metricDevices property.
      */
     public void setMetricDevices(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value) {
-        this.metricDevices = value;
+        this.BackingStore.set("metricDevices", value);
     }
 }

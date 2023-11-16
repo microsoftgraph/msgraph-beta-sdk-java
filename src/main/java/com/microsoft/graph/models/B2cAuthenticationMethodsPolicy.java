@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
-     * The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
-     */
-    private Boolean isEmailPasswordAuthenticationEnabled;
-    /**
-     * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
-     */
-    private Boolean isPhoneOneTimePasswordAuthenticationEnabled;
-    /**
-     * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
-     */
-    private Boolean isUserNameAuthenticationEnabled;
-    /**
-     * Instantiates a new b2cAuthenticationMethodsPolicy and sets the default values.
+     * Instantiates a new B2cAuthenticationMethodsPolicy and sets the default values.
      */
     public B2cAuthenticationMethodsPolicy() {
         super();
@@ -29,7 +17,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a b2cAuthenticationMethodsPolicy
+     * @return a B2cAuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nonnull
     public static B2cAuthenticationMethodsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +38,27 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isEmailPasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEmailPasswordAuthenticationEnabled() {
-        return this.isEmailPasswordAuthenticationEnabled;
+        return this.BackingStore.get("isEmailPasswordAuthenticationEnabled");
     }
     /**
      * Gets the isPhoneOneTimePasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPhoneOneTimePasswordAuthenticationEnabled() {
-        return this.isPhoneOneTimePasswordAuthenticationEnabled;
+        return this.BackingStore.get("isPhoneOneTimePasswordAuthenticationEnabled");
     }
     /**
      * Gets the isUserNameAuthenticationEnabled property value. The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUserNameAuthenticationEnabled() {
-        return this.isUserNameAuthenticationEnabled;
+        return this.BackingStore.get("isUserNameAuthenticationEnabled");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEmailPasswordAuthenticationEnabled property.
      */
     public void setIsEmailPasswordAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEmailPasswordAuthenticationEnabled = value;
+        this.BackingStore.set("isEmailPasswordAuthenticationEnabled", value);
     }
     /**
      * Sets the isPhoneOneTimePasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
      * @param value Value to set for the isPhoneOneTimePasswordAuthenticationEnabled property.
      */
     public void setIsPhoneOneTimePasswordAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPhoneOneTimePasswordAuthenticationEnabled = value;
+        this.BackingStore.set("isPhoneOneTimePasswordAuthenticationEnabled", value);
     }
     /**
      * Sets the isUserNameAuthenticationEnabled property value. The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
      * @param value Value to set for the isUserNameAuthenticationEnabled property.
      */
     public void setIsUserNameAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isUserNameAuthenticationEnabled = value;
+        this.BackingStore.set("isUserNameAuthenticationEnabled", value);
     }
 }

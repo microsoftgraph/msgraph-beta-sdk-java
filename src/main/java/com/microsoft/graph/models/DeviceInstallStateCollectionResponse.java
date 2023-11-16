@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceInstallStateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceInstallState> value;
-    /**
-     * Instantiates a new deviceInstallStateCollectionResponse and sets the default values.
+     * Instantiates a new DeviceInstallStateCollectionResponse and sets the default values.
      */
     public DeviceInstallStateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceInstallStateCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceInstallStateCollectionResponse
+     * @return a DeviceInstallStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceInstallStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceInstallStateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceInstallState
+     * @return a java.util.List<DeviceInstallState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceInstallState> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceInstallStateCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceInstallState> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

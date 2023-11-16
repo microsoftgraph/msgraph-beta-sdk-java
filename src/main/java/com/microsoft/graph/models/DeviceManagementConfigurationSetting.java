@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSetting extends Entity implements Parsable {
     /**
-     * List of related Setting Definitions. This property is read-only.
-     */
-    private java.util.List<DeviceManagementConfigurationSettingDefinition> settingDefinitions;
-    /**
-     * Setting instance within policy
-     */
-    private DeviceManagementConfigurationSettingInstance settingInstance;
-    /**
-     * Instantiates a new deviceManagementConfigurationSetting and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSetting and sets the default values.
      */
     public DeviceManagementConfigurationSetting() {
         super();
@@ -28,7 +20,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSetting
+     * @return a DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,19 +40,19 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
     }
     /**
      * Gets the settingDefinitions property value. List of related Setting Definitions. This property is read-only.
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getSettingDefinitions() {
-        return this.settingDefinitions;
+        return this.BackingStore.get("settingDefinitions");
     }
     /**
      * Gets the settingInstance property value. Setting instance within policy
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a DeviceManagementConfigurationSettingInstance
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstance getSettingInstance() {
-        return this.settingInstance;
+        return this.BackingStore.get("settingInstance");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param value Value to set for the settingDefinitions property.
      */
     public void setSettingDefinitions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
-        this.settingDefinitions = value;
+        this.BackingStore.set("settingDefinitions", value);
     }
     /**
      * Sets the settingInstance property value. Setting instance within policy
      * @param value Value to set for the settingInstance property.
      */
     public void setSettingInstance(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
-        this.settingInstance = value;
+        this.BackingStore.set("settingInstance", value);
     }
 }

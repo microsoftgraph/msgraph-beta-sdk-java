@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable {
+public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
+     * Stores model information.
      */
-    private String actualValue;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The localized display values shown to the requestor and approvers. Required.
-     */
-    private AccessPackageLocalizedContent displayValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new accessPackageAnswerChoice and sets the default values.
+     * Instantiates a new AccessPackageAnswerChoice and sets the default values.
      */
     public AccessPackageAnswerChoice() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAnswerChoice
+     * @return a AccessPackageAnswerChoice
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAnswerChoice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,27 +35,40 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the actualValue property value. The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActualValue() {
-        return this.actualValue;
+        return this.BackingStore.get("actualValue");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the displayValue property value. The localized display values shown to the requestor and approvers. Required.
-     * @return a accessPackageLocalizedContent
+     * @return a AccessPackageLocalizedContent
      */
     @jakarta.annotation.Nullable
     public AccessPackageLocalizedContent getDisplayValue() {
-        return this.displayValue;
+        return this.BackingStore.get("displayValue");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +84,11 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable
      * @param value Value to set for the actualValue property.
      */
     public void setActualValue(@jakarta.annotation.Nullable final String value) {
-        this.actualValue = value;
+        this.BackingStore.set("actualValue", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the displayValue property value. The localized display values shown to the requestor and approvers. Required.
      * @param value Value to set for the displayValue property.
      */
     public void setDisplayValue(@jakarta.annotation.Nullable final AccessPackageLocalizedContent value) {
-        this.displayValue = value;
+        this.BackingStore.set("displayValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

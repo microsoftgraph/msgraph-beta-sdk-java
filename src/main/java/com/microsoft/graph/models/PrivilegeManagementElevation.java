@@ -13,71 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegeManagementElevation extends Entity implements Parsable {
     /**
-     * The certificate payload of the application. This is computed by hashing the certificate information on the client. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a50`
-     */
-    private String certificatePayload;
-    /**
-     * The company name of the application. This value is set by the creator of the application. Example: `Microsoft Corporation`
-     */
-    private String companyName;
-    /**
-     * The Intune deviceId. Unique identifier for the managed device. Example: `92ce5047-9553-4731-817f-9b401a999a1b`
-     */
-    private String deviceId;
-    /**
-     * The name associated with the device in the intune database. Example: `JOHNDOE-LAPTOP`.
-     */
-    private String deviceName;
-    /**
-     * Indicates the type of elevation occured
-     */
-    private PrivilegeManagementElevationType elevationType;
-    /**
-     * The date and time when the application was elevated. Example:`2014-01-01T00:00:00Z`
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * The file description of the application. This value is set by the creator of the application. Example: `Editor of multiple coding languages.`
-     */
-    private String fileDescription;
-    /**
-     * The full file path of the application including the filename and file extension. Example: `C:/Program Files/vscode.exe`
-     */
-    private String filePath;
-    /**
-     * The version of the application. This value is set by the creator of the application. Example: `6.2211.1035.1000`
-     */
-    private String fileVersion;
-    /**
-     * The sha256 hash of the application. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a57`
-     */
-    private String hash;
-    /**
-     * The internal name of the application. This value is set by the creator of the application. Example: `VS code`
-     */
-    private String internalName;
-    /**
-     * The justification to elevate the application. This is an input by the user when the privilegeManagementElevationType is of type userConfirmedElevation or support approved elevation. This will be null in all other scenarios. The length is capped at 256 char, enforced on the client side. Example: `To install debug tool.`.
-     */
-    private String justification;
-    /**
-     * The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
-     */
-    private String productName;
-    /**
-     * The result of the elevation action with 0 being success, and everything else being exit code if the elevation was unsuccessful. The value will always be 0 on all unmanaged elevation. Example: `0`. Valid values 0 to 2147483647
-     */
-    private Integer result;
-    /**
-     * The User Principal Name of the user who performed the elevation. Example: `john@domain.com`
-     */
-    private String upn;
-    /**
-     * The type of user account on Windows that was used to performed the elevation.
-     */
-    private PrivilegeManagementEndUserType userType;
-    /**
-     * Instantiates a new privilegeManagementElevation and sets the default values.
+     * Instantiates a new PrivilegeManagementElevation and sets the default values.
      */
     public PrivilegeManagementElevation() {
         super();
@@ -85,7 +21,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegeManagementElevation
+     * @return a PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public static PrivilegeManagementElevation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -94,43 +30,43 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
     }
     /**
      * Gets the certificatePayload property value. The certificate payload of the application. This is computed by hashing the certificate information on the client. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a50`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificatePayload() {
-        return this.certificatePayload;
+        return this.BackingStore.get("certificatePayload");
     }
     /**
      * Gets the companyName property value. The company name of the application. This value is set by the creator of the application. Example: `Microsoft Corporation`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
-        return this.companyName;
+        return this.BackingStore.get("companyName");
     }
     /**
      * Gets the deviceId property value. The Intune deviceId. Unique identifier for the managed device. Example: `92ce5047-9553-4731-817f-9b401a999a1b`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. The name associated with the device in the intune database. Example: `JOHNDOE-LAPTOP`.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * Gets the elevationType property value. Indicates the type of elevation occured
-     * @return a privilegeManagementElevationType
+     * @return a PrivilegeManagementElevationType
      */
     @jakarta.annotation.Nullable
     public PrivilegeManagementElevationType getElevationType() {
-        return this.elevationType;
+        return this.BackingStore.get("elevationType");
     }
     /**
      * Gets the eventDateTime property value. The date and time when the application was elevated. Example:`2014-01-01T00:00:00Z`
@@ -138,7 +74,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.BackingStore.get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -159,91 +95,136 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
         deserializerMap.put("hash", (n) -> { this.setHash(n.getStringValue()); });
         deserializerMap.put("internalName", (n) -> { this.setInternalName(n.getStringValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("parentProcessName", (n) -> { this.setParentProcessName(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
+        deserializerMap.put("processType", (n) -> { this.setProcessType(n.getEnumValue(PrivilegeManagementProcessType.class)); });
         deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
         deserializerMap.put("result", (n) -> { this.setResult(n.getIntegerValue()); });
+        deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
         deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
         deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(PrivilegeManagementEndUserType.class)); });
         return deserializerMap;
     }
     /**
      * Gets the fileDescription property value. The file description of the application. This value is set by the creator of the application. Example: `Editor of multiple coding languages.`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileDescription() {
-        return this.fileDescription;
+        return this.BackingStore.get("fileDescription");
     }
     /**
      * Gets the filePath property value. The full file path of the application including the filename and file extension. Example: `C:/Program Files/vscode.exe`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
-        return this.filePath;
+        return this.BackingStore.get("filePath");
     }
     /**
      * Gets the fileVersion property value. The version of the application. This value is set by the creator of the application. Example: `6.2211.1035.1000`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileVersion() {
-        return this.fileVersion;
+        return this.BackingStore.get("fileVersion");
     }
     /**
      * Gets the hash property value. The sha256 hash of the application. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a57`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHash() {
-        return this.hash;
+        return this.BackingStore.get("hash");
     }
     /**
      * Gets the internalName property value. The internal name of the application. This value is set by the creator of the application. Example: `VS code`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalName() {
-        return this.internalName;
+        return this.BackingStore.get("internalName");
     }
     /**
      * Gets the justification property value. The justification to elevate the application. This is an input by the user when the privilegeManagementElevationType is of type userConfirmedElevation or support approved elevation. This will be null in all other scenarios. The length is capped at 256 char, enforced on the client side. Example: `To install debug tool.`.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.BackingStore.get("justification");
+    }
+    /**
+     * Gets the parentProcessName property value. The name of parent process associated with the elevated process. This is always populated for both parent and child process types
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getParentProcessName() {
+        return this.BackingStore.get("parentProcessName");
+    }
+    /**
+     * Gets the policyId property value. Unique Identifier of the policy configured to run the application with elevated access
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyId() {
+        return this.BackingStore.get("policyId");
+    }
+    /**
+     * Gets the policyName property value. The name of the policy configured to run the application in elevated access
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyName() {
+        return this.BackingStore.get("policyName");
+    }
+    /**
+     * Gets the processType property value. Indicates the type of elevated process
+     * @return a PrivilegeManagementProcessType
+     */
+    @jakarta.annotation.Nullable
+    public PrivilegeManagementProcessType getProcessType() {
+        return this.BackingStore.get("processType");
     }
     /**
      * Gets the productName property value. The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.BackingStore.get("productName");
     }
     /**
      * Gets the result property value. The result of the elevation action with 0 being success, and everything else being exit code if the elevation was unsuccessful. The value will always be 0 on all unmanaged elevation. Example: `0`. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getResult() {
-        return this.result;
+        return this.BackingStore.get("result");
+    }
+    /**
+     * Gets the ruleId property value. Unique identifier of the rule configured to run the application with elevated access
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getRuleId() {
+        return this.BackingStore.get("ruleId");
     }
     /**
      * Gets the upn property value. The User Principal Name of the user who performed the elevation. Example: `john@domain.com`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpn() {
-        return this.upn;
+        return this.BackingStore.get("upn");
     }
     /**
      * Gets the userType property value. The type of user account on Windows that was used to performed the elevation.
-     * @return a privilegeManagementEndUserType
+     * @return a PrivilegeManagementEndUserType
      */
     @jakarta.annotation.Nullable
     public PrivilegeManagementEndUserType getUserType() {
-        return this.userType;
+        return this.BackingStore.get("userType");
     }
     /**
      * Serializes information the current object
@@ -264,8 +245,13 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
         writer.writeStringValue("hash", this.getHash());
         writer.writeStringValue("internalName", this.getInternalName());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeStringValue("parentProcessName", this.getParentProcessName());
+        writer.writeStringValue("policyId", this.getPolicyId());
+        writer.writeStringValue("policyName", this.getPolicyName());
+        writer.writeEnumValue("processType", this.getProcessType());
         writer.writeStringValue("productName", this.getProductName());
         writer.writeIntegerValue("result", this.getResult());
+        writer.writeStringValue("ruleId", this.getRuleId());
         writer.writeStringValue("upn", this.getUpn());
         writer.writeEnumValue("userType", this.getUserType());
     }
@@ -274,111 +260,146 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the certificatePayload property.
      */
     public void setCertificatePayload(@jakarta.annotation.Nullable final String value) {
-        this.certificatePayload = value;
+        this.BackingStore.set("certificatePayload", value);
     }
     /**
      * Sets the companyName property value. The company name of the application. This value is set by the creator of the application. Example: `Microsoft Corporation`
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
-        this.companyName = value;
+        this.BackingStore.set("companyName", value);
     }
     /**
      * Sets the deviceId property value. The Intune deviceId. Unique identifier for the managed device. Example: `92ce5047-9553-4731-817f-9b401a999a1b`
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. The name associated with the device in the intune database. Example: `JOHNDOE-LAPTOP`.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the elevationType property value. Indicates the type of elevation occured
      * @param value Value to set for the elevationType property.
      */
     public void setElevationType(@jakarta.annotation.Nullable final PrivilegeManagementElevationType value) {
-        this.elevationType = value;
+        this.BackingStore.set("elevationType", value);
     }
     /**
      * Sets the eventDateTime property value. The date and time when the application was elevated. Example:`2014-01-01T00:00:00Z`
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.BackingStore.set("eventDateTime", value);
     }
     /**
      * Sets the fileDescription property value. The file description of the application. This value is set by the creator of the application. Example: `Editor of multiple coding languages.`
      * @param value Value to set for the fileDescription property.
      */
     public void setFileDescription(@jakarta.annotation.Nullable final String value) {
-        this.fileDescription = value;
+        this.BackingStore.set("fileDescription", value);
     }
     /**
      * Sets the filePath property value. The full file path of the application including the filename and file extension. Example: `C:/Program Files/vscode.exe`
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
-        this.filePath = value;
+        this.BackingStore.set("filePath", value);
     }
     /**
      * Sets the fileVersion property value. The version of the application. This value is set by the creator of the application. Example: `6.2211.1035.1000`
      * @param value Value to set for the fileVersion property.
      */
     public void setFileVersion(@jakarta.annotation.Nullable final String value) {
-        this.fileVersion = value;
+        this.BackingStore.set("fileVersion", value);
     }
     /**
      * Sets the hash property value. The sha256 hash of the application. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a57`
      * @param value Value to set for the hash property.
      */
     public void setHash(@jakarta.annotation.Nullable final String value) {
-        this.hash = value;
+        this.BackingStore.set("hash", value);
     }
     /**
      * Sets the internalName property value. The internal name of the application. This value is set by the creator of the application. Example: `VS code`
      * @param value Value to set for the internalName property.
      */
     public void setInternalName(@jakarta.annotation.Nullable final String value) {
-        this.internalName = value;
+        this.BackingStore.set("internalName", value);
     }
     /**
      * Sets the justification property value. The justification to elevate the application. This is an input by the user when the privilegeManagementElevationType is of type userConfirmedElevation or support approved elevation. This will be null in all other scenarios. The length is capped at 256 char, enforced on the client side. Example: `To install debug tool.`.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.BackingStore.set("justification", value);
+    }
+    /**
+     * Sets the parentProcessName property value. The name of parent process associated with the elevated process. This is always populated for both parent and child process types
+     * @param value Value to set for the parentProcessName property.
+     */
+    public void setParentProcessName(@jakarta.annotation.Nullable final String value) {
+        this.BackingStore.set("parentProcessName", value);
+    }
+    /**
+     * Sets the policyId property value. Unique Identifier of the policy configured to run the application with elevated access
+     * @param value Value to set for the policyId property.
+     */
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.BackingStore.set("policyId", value);
+    }
+    /**
+     * Sets the policyName property value. The name of the policy configured to run the application in elevated access
+     * @param value Value to set for the policyName property.
+     */
+    public void setPolicyName(@jakarta.annotation.Nullable final String value) {
+        this.BackingStore.set("policyName", value);
+    }
+    /**
+     * Sets the processType property value. Indicates the type of elevated process
+     * @param value Value to set for the processType property.
+     */
+    public void setProcessType(@jakarta.annotation.Nullable final PrivilegeManagementProcessType value) {
+        this.BackingStore.set("processType", value);
     }
     /**
      * Sets the productName property value. The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.BackingStore.set("productName", value);
     }
     /**
      * Sets the result property value. The result of the elevation action with 0 being success, and everything else being exit code if the elevation was unsuccessful. The value will always be 0 on all unmanaged elevation. Example: `0`. Valid values 0 to 2147483647
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final Integer value) {
-        this.result = value;
+        this.BackingStore.set("result", value);
+    }
+    /**
+     * Sets the ruleId property value. Unique identifier of the rule configured to run the application with elevated access
+     * @param value Value to set for the ruleId property.
+     */
+    public void setRuleId(@jakarta.annotation.Nullable final String value) {
+        this.BackingStore.set("ruleId", value);
     }
     /**
      * Sets the upn property value. The User Principal Name of the user who performed the elevation. Example: `john@domain.com`
      * @param value Value to set for the upn property.
      */
     public void setUpn(@jakarta.annotation.Nullable final String value) {
-        this.upn = value;
+        this.BackingStore.set("upn", value);
     }
     /**
      * Sets the userType property value. The type of user account on Windows that was used to performed the elevation.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final PrivilegeManagementEndUserType value) {
-        this.userType = value;
+        this.BackingStore.set("userType", value);
     }
 }

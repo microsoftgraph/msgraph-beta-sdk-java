@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationalActivity extends ItemFacet implements Parsable {
     /**
-     * The month and year the user graduated or completed the activity.
-     */
-    private LocalDate completionMonthYear;
-    /**
-     * The month and year the user completed the educational activity referenced.
-     */
-    private LocalDate endMonthYear;
-    /**
-     * The institution property
-     */
-    private InstitutionData institution;
-    /**
-     * The program property
-     */
-    private EducationalActivityDetail program;
-    /**
-     * The month and year the user commenced the activity referenced.
-     */
-    private LocalDate startMonthYear;
-    /**
-     * Instantiates a new educationalActivity and sets the default values.
+     * Instantiates a new EducationalActivity and sets the default values.
      */
     public EducationalActivity() {
         super();
@@ -39,7 +19,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationalActivity
+     * @return a EducationalActivity
      */
     @jakarta.annotation.Nonnull
     public static EducationalActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +32,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getCompletionMonthYear() {
-        return this.completionMonthYear;
+        return this.BackingStore.get("completionMonthYear");
     }
     /**
      * Gets the endMonthYear property value. The month and year the user completed the educational activity referenced.
@@ -60,7 +40,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndMonthYear() {
-        return this.endMonthYear;
+        return this.BackingStore.get("endMonthYear");
     }
     /**
      * The deserialization information for the current model
@@ -78,19 +58,19 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the institution property value. The institution property
-     * @return a institutionData
+     * @return a InstitutionData
      */
     @jakarta.annotation.Nullable
     public InstitutionData getInstitution() {
-        return this.institution;
+        return this.BackingStore.get("institution");
     }
     /**
      * Gets the program property value. The program property
-     * @return a educationalActivityDetail
+     * @return a EducationalActivityDetail
      */
     @jakarta.annotation.Nullable
     public EducationalActivityDetail getProgram() {
-        return this.program;
+        return this.BackingStore.get("program");
     }
     /**
      * Gets the startMonthYear property value. The month and year the user commenced the activity referenced.
@@ -98,7 +78,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartMonthYear() {
-        return this.startMonthYear;
+        return this.BackingStore.get("startMonthYear");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the completionMonthYear property.
      */
     public void setCompletionMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
-        this.completionMonthYear = value;
+        this.BackingStore.set("completionMonthYear", value);
     }
     /**
      * Sets the endMonthYear property value. The month and year the user completed the educational activity referenced.
      * @param value Value to set for the endMonthYear property.
      */
     public void setEndMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
-        this.endMonthYear = value;
+        this.BackingStore.set("endMonthYear", value);
     }
     /**
      * Sets the institution property value. The institution property
      * @param value Value to set for the institution property.
      */
     public void setInstitution(@jakarta.annotation.Nullable final InstitutionData value) {
-        this.institution = value;
+        this.BackingStore.set("institution", value);
     }
     /**
      * Sets the program property value. The program property
      * @param value Value to set for the program property.
      */
     public void setProgram(@jakarta.annotation.Nullable final EducationalActivityDetail value) {
-        this.program = value;
+        this.BackingStore.set("program", value);
     }
     /**
      * Sets the startMonthYear property value. The month and year the user commenced the activity referenced.
      * @param value Value to set for the startMonthYear property.
      */
     public void setStartMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
-        this.startMonthYear = value;
+        this.BackingStore.set("startMonthYear", value);
     }
 }

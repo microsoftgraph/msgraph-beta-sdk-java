@@ -4,86 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsable {
+public class SynchronizationTaskExecution implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Identifier of the job run.
+     * Stores model information.
      */
-    private String activityIdentifier;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Count of processed entries that were assigned for this application.
-     */
-    private Long countEntitled;
-    /**
-     * Count of processed entries that were assigned for provisioning.
-     */
-    private Long countEntitledForProvisioning;
-    /**
-     * Count of entries that were escrowed (errors).
-     */
-    private Long countEscrowed;
-    /**
-     * Count of entries that were escrowed, including system-generated escrows.
-     */
-    private Long countEscrowedRaw;
-    /**
-     * Count of exported entries.
-     */
-    private Long countExported;
-    /**
-     * Count of entries that were expected to be exported.
-     */
-    private Long countExports;
-    /**
-     * Count of imported entries.
-     */
-    private Long countImported;
-    /**
-     * Count of imported delta-changes.
-     */
-    private Long countImportedDeltas;
-    /**
-     * Count of imported delta-changes pertaining to reference changes.
-     */
-    private Long countImportedReferenceDeltas;
-    /**
-     * If an error was encountered, contains a synchronizationError object with details.
-     */
-    private SynchronizationError error;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The state property
-     */
-    private SynchronizationTaskExecutionResult state;
-    /**
-     * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime timeBegan;
-    /**
-     * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime timeEnded;
-    /**
-     * Instantiates a new synchronizationTaskExecution and sets the default values.
+     * Instantiates a new SynchronizationTaskExecution and sets the default values.
      */
     public SynchronizationTaskExecution() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationTaskExecution
+     * @return a SynchronizationTaskExecution
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationTaskExecution createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,99 +36,112 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the activityIdentifier property value. Identifier of the job run.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityIdentifier() {
-        return this.activityIdentifier;
+        return this.BackingStore.get("activityIdentifier");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the countEntitled property value. Count of processed entries that were assigned for this application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEntitled() {
-        return this.countEntitled;
+        return this.BackingStore.get("countEntitled");
     }
     /**
      * Gets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEntitledForProvisioning() {
-        return this.countEntitledForProvisioning;
+        return this.BackingStore.get("countEntitledForProvisioning");
     }
     /**
      * Gets the countEscrowed property value. Count of entries that were escrowed (errors).
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEscrowed() {
-        return this.countEscrowed;
+        return this.BackingStore.get("countEscrowed");
     }
     /**
      * Gets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEscrowedRaw() {
-        return this.countEscrowedRaw;
+        return this.BackingStore.get("countEscrowedRaw");
     }
     /**
      * Gets the countExported property value. Count of exported entries.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountExported() {
-        return this.countExported;
+        return this.BackingStore.get("countExported");
     }
     /**
      * Gets the countExports property value. Count of entries that were expected to be exported.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountExports() {
-        return this.countExports;
+        return this.BackingStore.get("countExports");
     }
     /**
      * Gets the countImported property value. Count of imported entries.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImported() {
-        return this.countImported;
+        return this.BackingStore.get("countImported");
     }
     /**
      * Gets the countImportedDeltas property value. Count of imported delta-changes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImportedDeltas() {
-        return this.countImportedDeltas;
+        return this.BackingStore.get("countImportedDeltas");
     }
     /**
      * Gets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImportedReferenceDeltas() {
-        return this.countImportedReferenceDeltas;
+        return this.BackingStore.get("countImportedReferenceDeltas");
     }
     /**
      * Gets the error property value. If an error was encountered, contains a synchronizationError object with details.
-     * @return a synchronizationError
+     * @return a SynchronizationError
      */
     @jakarta.annotation.Nullable
     public SynchronizationError getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -212,19 +169,19 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the state property value. The state property
-     * @return a synchronizationTaskExecutionResult
+     * @return a SynchronizationTaskExecutionResult
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecutionResult getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -232,7 +189,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTimeBegan() {
-        return this.timeBegan;
+        return this.BackingStore.get("timeBegan");
     }
     /**
      * Gets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -240,7 +197,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTimeEnded() {
-        return this.timeEnded;
+        return this.BackingStore.get("timeEnded");
     }
     /**
      * Serializes information the current object
@@ -270,111 +227,119 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the activityIdentifier property.
      */
     public void setActivityIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.activityIdentifier = value;
+        this.BackingStore.set("activityIdentifier", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @param value Value to set for the countEntitled property.
      */
     public void setCountEntitled(@jakarta.annotation.Nullable final Long value) {
-        this.countEntitled = value;
+        this.BackingStore.set("countEntitled", value);
     }
     /**
      * Sets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @param value Value to set for the countEntitledForProvisioning property.
      */
     public void setCountEntitledForProvisioning(@jakarta.annotation.Nullable final Long value) {
-        this.countEntitledForProvisioning = value;
+        this.BackingStore.set("countEntitledForProvisioning", value);
     }
     /**
      * Sets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @param value Value to set for the countEscrowed property.
      */
     public void setCountEscrowed(@jakarta.annotation.Nullable final Long value) {
-        this.countEscrowed = value;
+        this.BackingStore.set("countEscrowed", value);
     }
     /**
      * Sets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @param value Value to set for the countEscrowedRaw property.
      */
     public void setCountEscrowedRaw(@jakarta.annotation.Nullable final Long value) {
-        this.countEscrowedRaw = value;
+        this.BackingStore.set("countEscrowedRaw", value);
     }
     /**
      * Sets the countExported property value. Count of exported entries.
      * @param value Value to set for the countExported property.
      */
     public void setCountExported(@jakarta.annotation.Nullable final Long value) {
-        this.countExported = value;
+        this.BackingStore.set("countExported", value);
     }
     /**
      * Sets the countExports property value. Count of entries that were expected to be exported.
      * @param value Value to set for the countExports property.
      */
     public void setCountExports(@jakarta.annotation.Nullable final Long value) {
-        this.countExports = value;
+        this.BackingStore.set("countExports", value);
     }
     /**
      * Sets the countImported property value. Count of imported entries.
      * @param value Value to set for the countImported property.
      */
     public void setCountImported(@jakarta.annotation.Nullable final Long value) {
-        this.countImported = value;
+        this.BackingStore.set("countImported", value);
     }
     /**
      * Sets the countImportedDeltas property value. Count of imported delta-changes.
      * @param value Value to set for the countImportedDeltas property.
      */
     public void setCountImportedDeltas(@jakarta.annotation.Nullable final Long value) {
-        this.countImportedDeltas = value;
+        this.BackingStore.set("countImportedDeltas", value);
     }
     /**
      * Sets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @param value Value to set for the countImportedReferenceDeltas property.
      */
     public void setCountImportedReferenceDeltas(@jakarta.annotation.Nullable final Long value) {
-        this.countImportedReferenceDeltas = value;
+        this.BackingStore.set("countImportedReferenceDeltas", value);
     }
     /**
      * Sets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final SynchronizationError value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final SynchronizationTaskExecutionResult value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeBegan property.
      */
     public void setTimeBegan(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.timeBegan = value;
+        this.BackingStore.set("timeBegan", value);
     }
     /**
      * Sets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeEnded property.
      */
     public void setTimeEnded(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.timeEnded = value;
+        this.BackingStore.set("timeEnded", value);
     }
 }

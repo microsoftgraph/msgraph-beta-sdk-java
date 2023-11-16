@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, Parsable {
+public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The includeTarget property
-     */
-    private IncludeTarget includeTarget;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The state property
-     */
-    private AdvancedConfigState state;
-    /**
-     * Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
-     */
-    private Integer voiceReportingCode;
-    /**
-     * Instantiates a new reportSuspiciousActivitySettings and sets the default values.
+     * Instantiates a new ReportSuspiciousActivitySettings and sets the default values.
      */
     public ReportSuspiciousActivitySettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reportSuspiciousActivitySettings
+     * @return a ReportSuspiciousActivitySettings
      */
     @jakarta.annotation.Nonnull
     public static ReportSuspiciousActivitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +34,25 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
         return new ReportSuspiciousActivitySettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +69,35 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
     }
     /**
      * Gets the includeTarget property value. The includeTarget property
-     * @return a includeTarget
+     * @return a IncludeTarget
      */
     @jakarta.annotation.Nullable
     public IncludeTarget getIncludeTarget() {
-        return this.includeTarget;
+        return this.BackingStore.get("includeTarget");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the state property value. The state property
-     * @return a advancedConfigState
+     * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
-     * Gets the voiceReportingCode property value. Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
-     * @return a integer
+     * Gets the voiceReportingCode property value. Specifies the number the user enters on their phone to report the MFA prompt as suspicious.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVoiceReportingCode() {
-        return this.voiceReportingCode;
+        return this.BackingStore.get("voiceReportingCode");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the includeTarget property value. The includeTarget property
      * @param value Value to set for the includeTarget property.
      */
     public void setIncludeTarget(@jakarta.annotation.Nullable final IncludeTarget value) {
-        this.includeTarget = value;
+        this.BackingStore.set("includeTarget", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
-     * Sets the voiceReportingCode property value. Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
+     * Sets the voiceReportingCode property value. Specifies the number the user enters on their phone to report the MFA prompt as suspicious.
      * @param value Value to set for the voiceReportingCode property.
      */
     public void setVoiceReportingCode(@jakarta.annotation.Nullable final Integer value) {
-        this.voiceReportingCode = value;
+        this.BackingStore.set("voiceReportingCode", value);
     }
 }

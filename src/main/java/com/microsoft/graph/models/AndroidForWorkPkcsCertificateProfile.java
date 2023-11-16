@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProfileBase implements Parsable {
     /**
-     * PKCS Certificate Template Name
-     */
-    private String certificateTemplateName;
-    /**
-     * PKCS Certification Authority
-     */
-    private String certificationAuthority;
-    /**
-     * PKCS Certification Authority Name
-     */
-    private String certificationAuthorityName;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Instantiates a new androidForWorkPkcsCertificateProfile and sets the default values.
+     * Instantiates a new AndroidForWorkPkcsCertificateProfile and sets the default values.
      */
     public AndroidForWorkPkcsCertificateProfile() {
         super();
@@ -41,7 +21,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkPkcsCertificateProfile
+     * @return a AndroidForWorkPkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +30,27 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this.certificateTemplateName;
+        return this.BackingStore.get("certificateTemplateName");
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
-        return this.certificationAuthority;
+        return this.BackingStore.get("certificationAuthority");
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this.certificationAuthorityName;
+        return this.BackingStore.get("certificationAuthorityName");
     }
     /**
      * The deserialization information for the current model
@@ -88,19 +68,19 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.BackingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.BackingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      * @param value Value to set for the certificateTemplateName property.
      */
     public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
-        this.certificateTemplateName = value;
+        this.BackingStore.set("certificateTemplateName", value);
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
      */
     public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthority = value;
+        this.BackingStore.set("certificationAuthority", value);
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
      */
     public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthorityName = value;
+        this.BackingStore.set("certificationAuthorityName", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.BackingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.BackingStore.set("subjectAlternativeNameFormatString", value);
     }
 }

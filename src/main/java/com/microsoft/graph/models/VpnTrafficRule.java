@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,69 +14,22 @@ import java.util.Objects;
  * VPN Traffic Rule definition.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
+public class VpnTrafficRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * App identifier, if this traffic rule is triggered by an app.
-     */
-    private String appId;
-    /**
-     * Indicates the type of app that a VPN traffic rule is associated with.
-     */
-    private VpnTrafficRuleAppType appType;
-    /**
-     * Claims associated with this traffic rule.
-     */
-    private String claims;
-    /**
-     * Local address range. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IPv4Range> localAddressRanges;
-    /**
-     * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<NumberRange> localPortRanges;
-    /**
-     * Name.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Protocols (0-255). Valid values 0 to 255
-     */
-    private Integer protocols;
-    /**
-     * Remote address range. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IPv4Range> remoteAddressRanges;
-    /**
-     * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<NumberRange> remotePortRanges;
-    /**
-     * Specifies the routing policy for a VPN traffic rule.
-     */
-    private VpnTrafficRuleRoutingPolicyType routingPolicyType;
-    /**
-     * Specify whether the rule applies to inbound traffic or outbound traffic.
-     */
-    private VpnTrafficDirection vpnTrafficDirection;
-    /**
-     * Instantiates a new vpnTrafficRule and sets the default values.
+     * Instantiates a new VpnTrafficRule and sets the default values.
      */
     public VpnTrafficRule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnTrafficRule
+     * @return a VpnTrafficRule
      */
     @jakarta.annotation.Nonnull
     public static VpnTrafficRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,36 +37,49 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         return new VpnTrafficRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appId property value. App identifier, if this traffic rule is triggered by an app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.BackingStore.get("appId");
     }
     /**
      * Gets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
-     * @return a vpnTrafficRuleAppType
+     * @return a VpnTrafficRuleAppType
      */
     @jakarta.annotation.Nullable
     public VpnTrafficRuleAppType getAppType() {
-        return this.appType;
+        return this.BackingStore.get("appType");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the claims property value. Claims associated with this traffic rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClaims() {
-        return this.claims;
+        return this.BackingStore.get("claims");
     }
     /**
      * The deserialization information for the current model
@@ -135,75 +104,75 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localAddressRanges property value. Local address range. This collection can contain a maximum of 500 elements.
-     * @return a iPv4Range
+     * @return a java.util.List<IPv4Range>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IPv4Range> getLocalAddressRanges() {
-        return this.localAddressRanges;
+        return this.BackingStore.get("localAddressRanges");
     }
     /**
      * Gets the localPortRanges property value. Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     * @return a numberRange
+     * @return a java.util.List<NumberRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NumberRange> getLocalPortRanges() {
-        return this.localPortRanges;
+        return this.BackingStore.get("localPortRanges");
     }
     /**
      * Gets the name property value. Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the protocols property value. Protocols (0-255). Valid values 0 to 255
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProtocols() {
-        return this.protocols;
+        return this.BackingStore.get("protocols");
     }
     /**
      * Gets the remoteAddressRanges property value. Remote address range. This collection can contain a maximum of 500 elements.
-     * @return a iPv4Range
+     * @return a java.util.List<IPv4Range>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IPv4Range> getRemoteAddressRanges() {
-        return this.remoteAddressRanges;
+        return this.BackingStore.get("remoteAddressRanges");
     }
     /**
      * Gets the remotePortRanges property value. Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     * @return a numberRange
+     * @return a java.util.List<NumberRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NumberRange> getRemotePortRanges() {
-        return this.remotePortRanges;
+        return this.BackingStore.get("remotePortRanges");
     }
     /**
      * Gets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
-     * @return a vpnTrafficRuleRoutingPolicyType
+     * @return a VpnTrafficRuleRoutingPolicyType
      */
     @jakarta.annotation.Nullable
     public VpnTrafficRuleRoutingPolicyType getRoutingPolicyType() {
-        return this.routingPolicyType;
+        return this.BackingStore.get("routingPolicyType");
     }
     /**
      * Gets the vpnTrafficDirection property value. Specify whether the rule applies to inbound traffic or outbound traffic.
-     * @return a vpnTrafficDirection
+     * @return a VpnTrafficDirection
      */
     @jakarta.annotation.Nullable
     public VpnTrafficDirection getVpnTrafficDirection() {
-        return this.vpnTrafficDirection;
+        return this.BackingStore.get("vpnTrafficDirection");
     }
     /**
      * Serializes information the current object
@@ -226,94 +195,102 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the appId property value. App identifier, if this traffic rule is triggered by an app.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.BackingStore.set("appId", value);
     }
     /**
      * Sets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
      * @param value Value to set for the appType property.
      */
     public void setAppType(@jakarta.annotation.Nullable final VpnTrafficRuleAppType value) {
-        this.appType = value;
+        this.BackingStore.set("appType", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the claims property value. Claims associated with this traffic rule.
      * @param value Value to set for the claims property.
      */
     public void setClaims(@jakarta.annotation.Nullable final String value) {
-        this.claims = value;
+        this.BackingStore.set("claims", value);
     }
     /**
      * Sets the localAddressRanges property value. Local address range. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localAddressRanges property.
      */
     public void setLocalAddressRanges(@jakarta.annotation.Nullable final java.util.List<IPv4Range> value) {
-        this.localAddressRanges = value;
+        this.BackingStore.set("localAddressRanges", value);
     }
     /**
      * Sets the localPortRanges property value. Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localPortRanges property.
      */
     public void setLocalPortRanges(@jakarta.annotation.Nullable final java.util.List<NumberRange> value) {
-        this.localPortRanges = value;
+        this.BackingStore.set("localPortRanges", value);
     }
     /**
      * Sets the name property value. Name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the protocols property value. Protocols (0-255). Valid values 0 to 255
      * @param value Value to set for the protocols property.
      */
     public void setProtocols(@jakarta.annotation.Nullable final Integer value) {
-        this.protocols = value;
+        this.BackingStore.set("protocols", value);
     }
     /**
      * Sets the remoteAddressRanges property value. Remote address range. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the remoteAddressRanges property.
      */
     public void setRemoteAddressRanges(@jakarta.annotation.Nullable final java.util.List<IPv4Range> value) {
-        this.remoteAddressRanges = value;
+        this.BackingStore.set("remoteAddressRanges", value);
     }
     /**
      * Sets the remotePortRanges property value. Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the remotePortRanges property.
      */
     public void setRemotePortRanges(@jakarta.annotation.Nullable final java.util.List<NumberRange> value) {
-        this.remotePortRanges = value;
+        this.BackingStore.set("remotePortRanges", value);
     }
     /**
      * Sets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
      * @param value Value to set for the routingPolicyType property.
      */
     public void setRoutingPolicyType(@jakarta.annotation.Nullable final VpnTrafficRuleRoutingPolicyType value) {
-        this.routingPolicyType = value;
+        this.BackingStore.set("routingPolicyType", value);
     }
     /**
      * Sets the vpnTrafficDirection property value. Specify whether the rule applies to inbound traffic or outbound traffic.
      * @param value Value to set for the vpnTrafficDirection property.
      */
     public void setVpnTrafficDirection(@jakarta.annotation.Nullable final VpnTrafficDirection value) {
-        this.vpnTrafficDirection = value;
+        this.BackingStore.set("vpnTrafficDirection", value);
     }
 }

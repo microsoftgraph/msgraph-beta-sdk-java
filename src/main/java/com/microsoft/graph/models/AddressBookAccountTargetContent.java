@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddressBookAccountTargetContent extends AccountTargetContent implements Parsable {
     /**
-     * List of user emails targeted for an attack simulation training campaign.
-     */
-    private java.util.List<String> accountTargetEmails;
-    /**
-     * Instantiates a new addressBookAccountTargetContent and sets the default values.
+     * Instantiates a new AddressBookAccountTargetContent and sets the default values.
      */
     public AddressBookAccountTargetContent() {
         super();
@@ -22,7 +18,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addressBookAccountTargetContent
+     * @return a AddressBookAccountTargetContent
      */
     @jakarta.annotation.Nonnull
     public static AddressBookAccountTargetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
     }
     /**
      * Gets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAccountTargetEmails() {
-        return this.accountTargetEmails;
+        return this.BackingStore.get("accountTargetEmails");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      * @param value Value to set for the accountTargetEmails property.
      */
     public void setAccountTargetEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.accountTargetEmails = value;
+        this.BackingStore.set("accountTargetEmails", value);
     }
 }

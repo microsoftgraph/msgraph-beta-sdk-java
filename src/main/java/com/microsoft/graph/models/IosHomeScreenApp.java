@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
-     * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     */
-    private String bundleID;
-    /**
-     * When true, the bundle ID will be handled as a URL for a web clip.
-     */
-    private Boolean isWebClip;
-    /**
-     * Instantiates a new iosHomeScreenApp and sets the default values.
+     * Instantiates a new IosHomeScreenApp and sets the default values.
      */
     public IosHomeScreenApp() {
         super();
@@ -29,7 +21,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosHomeScreenApp
+     * @return a IosHomeScreenApp
      */
     @jakarta.annotation.Nonnull
     public static IosHomeScreenApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +30,11 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the bundleID property value. BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
-        return this.bundleID;
+        return this.BackingStore.get("bundleID");
     }
     /**
      * The deserialization information for the current model
@@ -57,11 +49,11 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the isWebClip property value. When true, the bundle ID will be handled as a URL for a web clip.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWebClip() {
-        return this.isWebClip;
+        return this.BackingStore.get("isWebClip");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
      * @param value Value to set for the bundleID property.
      */
     public void setBundleID(@jakarta.annotation.Nullable final String value) {
-        this.bundleID = value;
+        this.BackingStore.set("bundleID", value);
     }
     /**
      * Sets the isWebClip property value. When true, the bundle ID will be handled as a URL for a web clip.
      * @param value Value to set for the isWebClip property.
      */
     public void setIsWebClip(@jakarta.annotation.Nullable final Boolean value) {
-        this.isWebClip = value;
+        this.BackingStore.set("isWebClip", value);
     }
 }

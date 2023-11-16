@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationManagerActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Delivery state of Configuration Manager device action
-     */
-    private ConfigurationManagerActionDeliveryStatus actionDeliveryStatus;
-    /**
-     * Error code of Configuration Manager action from client
-     */
-    private Integer errorCode;
-    /**
-     * Instantiates a new configurationManagerActionResult and sets the default values.
+     * Instantiates a new ConfigurationManagerActionResult and sets the default values.
      */
     public ConfigurationManagerActionResult() {
         super();
@@ -28,7 +20,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configurationManagerActionResult
+     * @return a ConfigurationManagerActionResult
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,19 +29,19 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     }
     /**
      * Gets the actionDeliveryStatus property value. Delivery state of Configuration Manager device action
-     * @return a configurationManagerActionDeliveryStatus
+     * @return a ConfigurationManagerActionDeliveryStatus
      */
     @jakarta.annotation.Nullable
     public ConfigurationManagerActionDeliveryStatus getActionDeliveryStatus() {
-        return this.actionDeliveryStatus;
+        return this.BackingStore.get("actionDeliveryStatus");
     }
     /**
      * Gets the errorCode property value. Error code of Configuration Manager action from client
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.BackingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -77,13 +69,13 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * @param value Value to set for the actionDeliveryStatus property.
      */
     public void setActionDeliveryStatus(@jakarta.annotation.Nullable final ConfigurationManagerActionDeliveryStatus value) {
-        this.actionDeliveryStatus = value;
+        this.BackingStore.set("actionDeliveryStatus", value);
     }
     /**
      * Sets the errorCode property value. Error code of Configuration Manager action from client
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.BackingStore.set("errorCode", value);
     }
 }

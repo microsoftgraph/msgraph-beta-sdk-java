@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaArtifactCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ZebraFotaArtifact> value;
-    /**
-     * Instantiates a new zebraFotaArtifactCollectionResponse and sets the default values.
+     * Instantiates a new ZebraFotaArtifactCollectionResponse and sets the default values.
      */
     public ZebraFotaArtifactCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ZebraFotaArtifactCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaArtifactCollectionResponse
+     * @return a ZebraFotaArtifactCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaArtifactCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ZebraFotaArtifactCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a zebraFotaArtifact
+     * @return a java.util.List<ZebraFotaArtifact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ZebraFotaArtifact> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ZebraFotaArtifactCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ZebraFotaArtifact> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

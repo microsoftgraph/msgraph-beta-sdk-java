@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionWipeActionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsInformationProtectionWipeAction> value;
-    /**
-     * Instantiates a new windowsInformationProtectionWipeActionCollectionResponse and sets the default values.
+     * Instantiates a new WindowsInformationProtectionWipeActionCollectionResponse and sets the default values.
      */
     public WindowsInformationProtectionWipeActionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsInformationProtectionWipeActionCollectionResponse extends Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionWipeActionCollectionResponse
+     * @return a WindowsInformationProtectionWipeActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionWipeActionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsInformationProtectionWipeActionCollectionResponse extends Ba
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsInformationProtectionWipeAction
+     * @return a java.util.List<WindowsInformationProtectionWipeAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionWipeAction> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsInformationProtectionWipeActionCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionWipeAction> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

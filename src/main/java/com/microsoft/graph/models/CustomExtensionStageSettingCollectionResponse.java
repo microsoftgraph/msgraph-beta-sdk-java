@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionStageSettingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CustomExtensionStageSetting> value;
-    /**
-     * Instantiates a new customExtensionStageSettingCollectionResponse and sets the default values.
+     * Instantiates a new CustomExtensionStageSettingCollectionResponse and sets the default values.
      */
     public CustomExtensionStageSettingCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CustomExtensionStageSettingCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionStageSettingCollectionResponse
+     * @return a CustomExtensionStageSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionStageSettingCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CustomExtensionStageSettingCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a customExtensionStageSetting
+     * @return a java.util.List<CustomExtensionStageSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CustomExtensionStageSettingCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

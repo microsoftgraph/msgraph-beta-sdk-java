@@ -6,41 +6,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The addedPolicySetItems property
+     * Stores model information.
      */
-    private java.util.List<PolicySetItem> addedPolicySetItems;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The assignments property
-     */
-    private java.util.List<PolicySetAssignment> assignments;
-    /**
-     * The deletedPolicySetItems property
-     */
-    private java.util.List<String> deletedPolicySetItems;
-    /**
-     * The updatedPolicySetItems property
-     */
-    private java.util.List<PolicySetItem> updatedPolicySetItems;
-    /**
-     * Instantiates a new updatePostRequestBody and sets the default values.
+     * Instantiates a new UpdatePostRequestBody and sets the default values.
      */
     public UpdatePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatePostRequestBody
+     * @return a UpdatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,35 +37,48 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the addedPolicySetItems property value. The addedPolicySetItems property
-     * @return a policySetItem
+     * @return a java.util.List<PolicySetItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getAddedPolicySetItems() {
-        return this.addedPolicySetItems;
+        return this.BackingStore.get("addedPolicySetItems");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignments property value. The assignments property
-     * @return a policySetAssignment
+     * @return a java.util.List<PolicySetAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deletedPolicySetItems property value. The deletedPolicySetItems property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeletedPolicySetItems() {
-        return this.deletedPolicySetItems;
+        return this.BackingStore.get("deletedPolicySetItems");
     }
     /**
      * The deserialization information for the current model
@@ -94,11 +95,11 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the updatedPolicySetItems property value. The updatedPolicySetItems property
-     * @return a policySetItem
+     * @return a java.util.List<PolicySetItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getUpdatedPolicySetItems() {
-        return this.updatedPolicySetItems;
+        return this.BackingStore.get("updatedPolicySetItems");
     }
     /**
      * Serializes information the current object
@@ -117,34 +118,42 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the addedPolicySetItems property.
      */
     public void setAddedPolicySetItems(@jakarta.annotation.Nullable final java.util.List<PolicySetItem> value) {
-        this.addedPolicySetItems = value;
+        this.BackingStore.set("addedPolicySetItems", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the assignments property value. The assignments property
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deletedPolicySetItems property value. The deletedPolicySetItems property
      * @param value Value to set for the deletedPolicySetItems property.
      */
     public void setDeletedPolicySetItems(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.deletedPolicySetItems = value;
+        this.BackingStore.set("deletedPolicySetItems", value);
     }
     /**
      * Sets the updatedPolicySetItems property value. The updatedPolicySetItems property
      * @param value Value to set for the updatedPolicySetItems property.
      */
     public void setUpdatedPolicySetItems(@jakarta.annotation.Nullable final java.util.List<PolicySetItem> value) {
-        this.updatedPolicySetItems = value;
+        this.BackingStore.set("updatedPolicySetItems", value);
     }
 }

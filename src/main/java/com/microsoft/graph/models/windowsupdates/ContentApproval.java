@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentApproval extends ComplianceChange implements Parsable {
     /**
-     * The content property
-     */
-    private DeployableContent content;
-    /**
-     * Deployments created as a result of applying the approval.
-     */
-    private java.util.List<Deployment> deployments;
-    /**
-     * Settings for governing how to deploy content.
-     */
-    private DeploymentSettings deploymentSettings;
-    /**
-     * Instantiates a new contentApproval and sets the default values.
+     * Instantiates a new ContentApproval and sets the default values.
      */
     public ContentApproval() {
         super();
@@ -30,7 +18,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentApproval
+     * @return a ContentApproval
      */
     @jakarta.annotation.Nonnull
     public static ContentApproval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,27 +27,27 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a deployableContent
+     * @return a DeployableContent
      */
     @jakarta.annotation.Nullable
     public DeployableContent getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the deployments property value. Deployments created as a result of applying the approval.
-     * @return a deployment
+     * @return a java.util.List<Deployment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Deployment> getDeployments() {
-        return this.deployments;
+        return this.BackingStore.get("deployments");
     }
     /**
      * Gets the deploymentSettings property value. Settings for governing how to deploy content.
-     * @return a deploymentSettings
+     * @return a DeploymentSettings
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getDeploymentSettings() {
-        return this.deploymentSettings;
+        return this.BackingStore.get("deploymentSettings");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class ContentApproval extends ComplianceChange implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final DeployableContent value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the deployments property value. Deployments created as a result of applying the approval.
      * @param value Value to set for the deployments property.
      */
     public void setDeployments(@jakarta.annotation.Nullable final java.util.List<Deployment> value) {
-        this.deployments = value;
+        this.BackingStore.set("deployments", value);
     }
     /**
      * Sets the deploymentSettings property value. Settings for governing how to deploy content.
      * @param value Value to set for the deploymentSettings property.
      */
     public void setDeploymentSettings(@jakarta.annotation.Nullable final DeploymentSettings value) {
-        this.deploymentSettings = value;
+        this.BackingStore.set("deploymentSettings", value);
     }
 }

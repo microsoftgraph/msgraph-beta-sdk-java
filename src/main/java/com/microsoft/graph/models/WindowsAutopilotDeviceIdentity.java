@@ -13,119 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
-     * Addressable user name.
-     */
-    private String addressableUserName;
-    /**
-     * AAD Device ID - to be deprecated
-     */
-    private String azureActiveDirectoryDeviceId;
-    /**
-     * AAD Device ID
-     */
-    private String azureAdDeviceId;
-    /**
-     * Deployment profile currently assigned to the Windows autopilot device.
-     */
-    private WindowsAutopilotDeploymentProfile deploymentProfile;
-    /**
-     * Profile set time of the Windows autopilot device.
-     */
-    private OffsetDateTime deploymentProfileAssignedDateTime;
-    /**
-     * The deploymentProfileAssignmentDetailedStatus property
-     */
-    private WindowsAutopilotProfileAssignmentDetailedStatus deploymentProfileAssignmentDetailedStatus;
-    /**
-     * The deploymentProfileAssignmentStatus property
-     */
-    private WindowsAutopilotProfileAssignmentStatus deploymentProfileAssignmentStatus;
-    /**
-     * Surface Hub Device Account Password
-     */
-    private String deviceAccountPassword;
-    /**
-     * Surface Hub Device Account Upn
-     */
-    private String deviceAccountUpn;
-    /**
-     * Surface Hub Device Friendly Name
-     */
-    private String deviceFriendlyName;
-    /**
-     * Display Name
-     */
-    private String displayName;
-    /**
-     * The enrollmentState property
-     */
-    private EnrollmentState enrollmentState;
-    /**
-     * Group Tag of the Windows autopilot device.
-     */
-    private String groupTag;
-    /**
-     * Deployment profile intended to be assigned to the Windows autopilot device.
-     */
-    private WindowsAutopilotDeploymentProfile intendedDeploymentProfile;
-    /**
-     * Intune Last Contacted Date Time of the Windows autopilot device.
-     */
-    private OffsetDateTime lastContactedDateTime;
-    /**
-     * Managed Device ID
-     */
-    private String managedDeviceId;
-    /**
-     * Oem manufacturer of the Windows autopilot device.
-     */
-    private String manufacturer;
-    /**
-     * Model name of the Windows autopilot device.
-     */
-    private String model;
-    /**
-     * Product Key of the Windows autopilot device.
-     */
-    private String productKey;
-    /**
-     * Purchase Order Identifier of the Windows autopilot device.
-     */
-    private String purchaseOrderIdentifier;
-    /**
-     * Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
-     */
-    private WindowsAutopilotDeviceRemediationState remediationState;
-    /**
-     * RemediationState set time of Autopilot device.
-     */
-    private OffsetDateTime remediationStateLastModifiedDateTime;
-    /**
-     * Resource Name.
-     */
-    private String resourceName;
-    /**
-     * Serial number of the Windows autopilot device.
-     */
-    private String serialNumber;
-    /**
-     * SKU Number
-     */
-    private String skuNumber;
-    /**
-     * System Family
-     */
-    private String systemFamily;
-    /**
-     * Userless enrollment block status, indicating whether the next device enrollment will be blocked.
-     */
-    private WindowsAutopilotUserlessEnrollmentStatus userlessEnrollmentStatus;
-    /**
-     * User Principal Name.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
+     * Instantiates a new WindowsAutopilotDeviceIdentity and sets the default values.
      */
     public WindowsAutopilotDeviceIdentity() {
         super();
@@ -133,7 +21,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotDeviceIdentity
+     * @return a WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -142,35 +30,35 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the addressableUserName property value. Addressable user name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddressableUserName() {
-        return this.addressableUserName;
+        return this.BackingStore.get("addressableUserName");
     }
     /**
      * Gets the azureActiveDirectoryDeviceId property value. AAD Device ID - to be deprecated
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureActiveDirectoryDeviceId() {
-        return this.azureActiveDirectoryDeviceId;
+        return this.BackingStore.get("azureActiveDirectoryDeviceId");
     }
     /**
      * Gets the azureAdDeviceId property value. AAD Device ID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
-        return this.azureAdDeviceId;
+        return this.BackingStore.get("azureAdDeviceId");
     }
     /**
      * Gets the deploymentProfile property value. Deployment profile currently assigned to the Windows autopilot device.
-     * @return a windowsAutopilotDeploymentProfile
+     * @return a WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile getDeploymentProfile() {
-        return this.deploymentProfile;
+        return this.BackingStore.get("deploymentProfile");
     }
     /**
      * Gets the deploymentProfileAssignedDateTime property value. Profile set time of the Windows autopilot device.
@@ -178,63 +66,63 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentProfileAssignedDateTime() {
-        return this.deploymentProfileAssignedDateTime;
+        return this.BackingStore.get("deploymentProfileAssignedDateTime");
     }
     /**
      * Gets the deploymentProfileAssignmentDetailedStatus property value. The deploymentProfileAssignmentDetailedStatus property
-     * @return a windowsAutopilotProfileAssignmentDetailedStatus
+     * @return a WindowsAutopilotProfileAssignmentDetailedStatus
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotProfileAssignmentDetailedStatus getDeploymentProfileAssignmentDetailedStatus() {
-        return this.deploymentProfileAssignmentDetailedStatus;
+        return this.BackingStore.get("deploymentProfileAssignmentDetailedStatus");
     }
     /**
      * Gets the deploymentProfileAssignmentStatus property value. The deploymentProfileAssignmentStatus property
-     * @return a windowsAutopilotProfileAssignmentStatus
+     * @return a WindowsAutopilotProfileAssignmentStatus
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotProfileAssignmentStatus getDeploymentProfileAssignmentStatus() {
-        return this.deploymentProfileAssignmentStatus;
+        return this.BackingStore.get("deploymentProfileAssignmentStatus");
     }
     /**
      * Gets the deviceAccountPassword property value. Surface Hub Device Account Password
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountPassword() {
-        return this.deviceAccountPassword;
+        return this.BackingStore.get("deviceAccountPassword");
     }
     /**
      * Gets the deviceAccountUpn property value. Surface Hub Device Account Upn
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountUpn() {
-        return this.deviceAccountUpn;
+        return this.BackingStore.get("deviceAccountUpn");
     }
     /**
      * Gets the deviceFriendlyName property value. Surface Hub Device Friendly Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceFriendlyName() {
-        return this.deviceFriendlyName;
+        return this.BackingStore.get("deviceFriendlyName");
     }
     /**
      * Gets the displayName property value. Display Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
-        return this.enrollmentState;
+        return this.BackingStore.get("enrollmentState");
     }
     /**
      * The deserialization information for the current model
@@ -275,19 +163,19 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
-        return this.groupTag;
+        return this.BackingStore.get("groupTag");
     }
     /**
      * Gets the intendedDeploymentProfile property value. Deployment profile intended to be assigned to the Windows autopilot device.
-     * @return a windowsAutopilotDeploymentProfile
+     * @return a WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile getIntendedDeploymentProfile() {
-        return this.intendedDeploymentProfile;
+        return this.BackingStore.get("intendedDeploymentProfile");
     }
     /**
      * Gets the lastContactedDateTime property value. Intune Last Contacted Date Time of the Windows autopilot device.
@@ -295,55 +183,55 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
-        return this.lastContactedDateTime;
+        return this.BackingStore.get("lastContactedDateTime");
     }
     /**
      * Gets the managedDeviceId property value. Managed Device ID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.BackingStore.get("managedDeviceId");
     }
     /**
      * Gets the manufacturer property value. Oem manufacturer of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. Model name of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the productKey property value. Product Key of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.BackingStore.get("productKey");
     }
     /**
      * Gets the purchaseOrderIdentifier property value. Purchase Order Identifier of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPurchaseOrderIdentifier() {
-        return this.purchaseOrderIdentifier;
+        return this.BackingStore.get("purchaseOrderIdentifier");
     }
     /**
      * Gets the remediationState property value. Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
-     * @return a windowsAutopilotDeviceRemediationState
+     * @return a WindowsAutopilotDeviceRemediationState
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceRemediationState getRemediationState() {
-        return this.remediationState;
+        return this.BackingStore.get("remediationState");
     }
     /**
      * Gets the remediationStateLastModifiedDateTime property value. RemediationState set time of Autopilot device.
@@ -351,55 +239,55 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRemediationStateLastModifiedDateTime() {
-        return this.remediationStateLastModifiedDateTime;
+        return this.BackingStore.get("remediationStateLastModifiedDateTime");
     }
     /**
      * Gets the resourceName property value. Resource Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.BackingStore.get("resourceName");
     }
     /**
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Gets the skuNumber property value. SKU Number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSkuNumber() {
-        return this.skuNumber;
+        return this.BackingStore.get("skuNumber");
     }
     /**
      * Gets the systemFamily property value. System Family
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSystemFamily() {
-        return this.systemFamily;
+        return this.BackingStore.get("systemFamily");
     }
     /**
      * Gets the userlessEnrollmentStatus property value. Userless enrollment block status, indicating whether the next device enrollment will be blocked.
-     * @return a windowsAutopilotUserlessEnrollmentStatus
+     * @return a WindowsAutopilotUserlessEnrollmentStatus
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotUserlessEnrollmentStatus getUserlessEnrollmentStatus() {
-        return this.userlessEnrollmentStatus;
+        return this.BackingStore.get("userlessEnrollmentStatus");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -442,195 +330,195 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the addressableUserName property.
      */
     public void setAddressableUserName(@jakarta.annotation.Nullable final String value) {
-        this.addressableUserName = value;
+        this.BackingStore.set("addressableUserName", value);
     }
     /**
      * Sets the azureActiveDirectoryDeviceId property value. AAD Device ID - to be deprecated
      * @param value Value to set for the azureActiveDirectoryDeviceId property.
      */
     public void setAzureActiveDirectoryDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.azureActiveDirectoryDeviceId = value;
+        this.BackingStore.set("azureActiveDirectoryDeviceId", value);
     }
     /**
      * Sets the azureAdDeviceId property value. AAD Device ID
      * @param value Value to set for the azureAdDeviceId property.
      */
     public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.azureAdDeviceId = value;
+        this.BackingStore.set("azureAdDeviceId", value);
     }
     /**
      * Sets the deploymentProfile property value. Deployment profile currently assigned to the Windows autopilot device.
      * @param value Value to set for the deploymentProfile property.
      */
     public void setDeploymentProfile(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentProfile value) {
-        this.deploymentProfile = value;
+        this.BackingStore.set("deploymentProfile", value);
     }
     /**
      * Sets the deploymentProfileAssignedDateTime property value. Profile set time of the Windows autopilot device.
      * @param value Value to set for the deploymentProfileAssignedDateTime property.
      */
     public void setDeploymentProfileAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deploymentProfileAssignedDateTime = value;
+        this.BackingStore.set("deploymentProfileAssignedDateTime", value);
     }
     /**
      * Sets the deploymentProfileAssignmentDetailedStatus property value. The deploymentProfileAssignmentDetailedStatus property
      * @param value Value to set for the deploymentProfileAssignmentDetailedStatus property.
      */
     public void setDeploymentProfileAssignmentDetailedStatus(@jakarta.annotation.Nullable final WindowsAutopilotProfileAssignmentDetailedStatus value) {
-        this.deploymentProfileAssignmentDetailedStatus = value;
+        this.BackingStore.set("deploymentProfileAssignmentDetailedStatus", value);
     }
     /**
      * Sets the deploymentProfileAssignmentStatus property value. The deploymentProfileAssignmentStatus property
      * @param value Value to set for the deploymentProfileAssignmentStatus property.
      */
     public void setDeploymentProfileAssignmentStatus(@jakarta.annotation.Nullable final WindowsAutopilotProfileAssignmentStatus value) {
-        this.deploymentProfileAssignmentStatus = value;
+        this.BackingStore.set("deploymentProfileAssignmentStatus", value);
     }
     /**
      * Sets the deviceAccountPassword property value. Surface Hub Device Account Password
      * @param value Value to set for the deviceAccountPassword property.
      */
     public void setDeviceAccountPassword(@jakarta.annotation.Nullable final String value) {
-        this.deviceAccountPassword = value;
+        this.BackingStore.set("deviceAccountPassword", value);
     }
     /**
      * Sets the deviceAccountUpn property value. Surface Hub Device Account Upn
      * @param value Value to set for the deviceAccountUpn property.
      */
     public void setDeviceAccountUpn(@jakarta.annotation.Nullable final String value) {
-        this.deviceAccountUpn = value;
+        this.BackingStore.set("deviceAccountUpn", value);
     }
     /**
      * Sets the deviceFriendlyName property value. Surface Hub Device Friendly Name
      * @param value Value to set for the deviceFriendlyName property.
      */
     public void setDeviceFriendlyName(@jakarta.annotation.Nullable final String value) {
-        this.deviceFriendlyName = value;
+        this.BackingStore.set("deviceFriendlyName", value);
     }
     /**
      * Sets the displayName property value. Display Name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      */
     public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
-        this.enrollmentState = value;
+        this.BackingStore.set("enrollmentState", value);
     }
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
      * @param value Value to set for the groupTag property.
      */
     public void setGroupTag(@jakarta.annotation.Nullable final String value) {
-        this.groupTag = value;
+        this.BackingStore.set("groupTag", value);
     }
     /**
      * Sets the intendedDeploymentProfile property value. Deployment profile intended to be assigned to the Windows autopilot device.
      * @param value Value to set for the intendedDeploymentProfile property.
      */
     public void setIntendedDeploymentProfile(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentProfile value) {
-        this.intendedDeploymentProfile = value;
+        this.BackingStore.set("intendedDeploymentProfile", value);
     }
     /**
      * Sets the lastContactedDateTime property value. Intune Last Contacted Date Time of the Windows autopilot device.
      * @param value Value to set for the lastContactedDateTime property.
      */
     public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastContactedDateTime = value;
+        this.BackingStore.set("lastContactedDateTime", value);
     }
     /**
      * Sets the managedDeviceId property value. Managed Device ID
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.BackingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the manufacturer property value. Oem manufacturer of the Windows autopilot device.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. Model name of the Windows autopilot device.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.BackingStore.set("productKey", value);
     }
     /**
      * Sets the purchaseOrderIdentifier property value. Purchase Order Identifier of the Windows autopilot device.
      * @param value Value to set for the purchaseOrderIdentifier property.
      */
     public void setPurchaseOrderIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.purchaseOrderIdentifier = value;
+        this.BackingStore.set("purchaseOrderIdentifier", value);
     }
     /**
      * Sets the remediationState property value. Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
      * @param value Value to set for the remediationState property.
      */
     public void setRemediationState(@jakarta.annotation.Nullable final WindowsAutopilotDeviceRemediationState value) {
-        this.remediationState = value;
+        this.BackingStore.set("remediationState", value);
     }
     /**
      * Sets the remediationStateLastModifiedDateTime property value. RemediationState set time of Autopilot device.
      * @param value Value to set for the remediationStateLastModifiedDateTime property.
      */
     public void setRemediationStateLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.remediationStateLastModifiedDateTime = value;
+        this.BackingStore.set("remediationStateLastModifiedDateTime", value);
     }
     /**
      * Sets the resourceName property value. Resource Name.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.BackingStore.set("resourceName", value);
     }
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
     /**
      * Sets the skuNumber property value. SKU Number
      * @param value Value to set for the skuNumber property.
      */
     public void setSkuNumber(@jakarta.annotation.Nullable final String value) {
-        this.skuNumber = value;
+        this.BackingStore.set("skuNumber", value);
     }
     /**
      * Sets the systemFamily property value. System Family
      * @param value Value to set for the systemFamily property.
      */
     public void setSystemFamily(@jakarta.annotation.Nullable final String value) {
-        this.systemFamily = value;
+        this.BackingStore.set("systemFamily", value);
     }
     /**
      * Sets the userlessEnrollmentStatus property value. Userless enrollment block status, indicating whether the next device enrollment will be blocked.
      * @param value Value to set for the userlessEnrollmentStatus property.
      */
     public void setUserlessEnrollmentStatus(@jakarta.annotation.Nullable final WindowsAutopilotUserlessEnrollmentStatus value) {
-        this.userlessEnrollmentStatus = value;
+        this.BackingStore.set("userlessEnrollmentStatus", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

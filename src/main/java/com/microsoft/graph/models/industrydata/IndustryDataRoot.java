@@ -11,39 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IndustryDataRoot extends Entity implements Parsable {
     /**
-     * Set of connectors for importing data from source systems.
-     */
-    private java.util.List<IndustryDataConnector> dataConnectors;
-    /**
-     * Set of data import flow activities to bring data into the canonical store via a connector.
-     */
-    private java.util.List<InboundFlow> inboundFlows;
-    /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
-     */
-    private java.util.List<LongRunningOperation> operations;
-    /**
-     * Set of user modifiable system picker types.
-     */
-    private java.util.List<ReferenceDefinition> referenceDefinitions;
-    /**
-     * Set of groups of individual roles that makes role-based admin simpler.
-     */
-    private java.util.List<RoleGroup> roleGroups;
-    /**
-     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
-     */
-    private java.util.List<IndustryDataRun> runs;
-    /**
-     * Set of source definitions that represents real-world external systems.
-     */
-    private java.util.List<SourceSystemDefinition> sourceSystems;
-    /**
-     * Set of years represented in the system.
-     */
-    private java.util.List<YearTimePeriodDefinition> years;
-    /**
-     * Instantiates a new industryDataRoot and sets the default values.
+     * Instantiates a new IndustryDataRoot and sets the default values.
      */
     public IndustryDataRoot() {
         super();
@@ -51,7 +19,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataRoot
+     * @return a IndustryDataRoot
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,11 +28,11 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the dataConnectors property value. Set of connectors for importing data from source systems.
-     * @return a industryDataConnector
+     * @return a java.util.List<IndustryDataConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataConnector> getDataConnectors() {
-        return this.dataConnectors;
+        return this.BackingStore.get("dataConnectors");
     }
     /**
      * The deserialization information for the current model
@@ -85,59 +53,59 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inboundFlows property value. Set of data import flow activities to bring data into the canonical store via a connector.
-     * @return a inboundFlow
+     * @return a java.util.List<InboundFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundFlow> getInboundFlows() {
-        return this.inboundFlows;
+        return this.BackingStore.get("inboundFlows");
     }
     /**
      * Gets the operations property value. Set of ephemeral operations that the system runs currently. Read-only.
-     * @return a longRunningOperation
+     * @return a java.util.List<LongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the referenceDefinitions property value. Set of user modifiable system picker types.
-     * @return a referenceDefinition
+     * @return a java.util.List<ReferenceDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReferenceDefinition> getReferenceDefinitions() {
-        return this.referenceDefinitions;
+        return this.BackingStore.get("referenceDefinitions");
     }
     /**
      * Gets the roleGroups property value. Set of groups of individual roles that makes role-based admin simpler.
-     * @return a roleGroup
+     * @return a java.util.List<RoleGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleGroup> getRoleGroups() {
-        return this.roleGroups;
+        return this.BackingStore.get("roleGroups");
     }
     /**
      * Gets the runs property value. Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
-     * @return a industryDataRun
+     * @return a java.util.List<IndustryDataRun>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRun> getRuns() {
-        return this.runs;
+        return this.BackingStore.get("runs");
     }
     /**
      * Gets the sourceSystems property value. Set of source definitions that represents real-world external systems.
-     * @return a sourceSystemDefinition
+     * @return a java.util.List<SourceSystemDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceSystemDefinition> getSourceSystems() {
-        return this.sourceSystems;
+        return this.BackingStore.get("sourceSystems");
     }
     /**
      * Gets the years property value. Set of years represented in the system.
-     * @return a yearTimePeriodDefinition
+     * @return a java.util.List<YearTimePeriodDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<YearTimePeriodDefinition> getYears() {
-        return this.years;
+        return this.BackingStore.get("years");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class IndustryDataRoot extends Entity implements Parsable {
      * @param value Value to set for the dataConnectors property.
      */
     public void setDataConnectors(@jakarta.annotation.Nullable final java.util.List<IndustryDataConnector> value) {
-        this.dataConnectors = value;
+        this.BackingStore.set("dataConnectors", value);
     }
     /**
      * Sets the inboundFlows property value. Set of data import flow activities to bring data into the canonical store via a connector.
      * @param value Value to set for the inboundFlows property.
      */
     public void setInboundFlows(@jakarta.annotation.Nullable final java.util.List<InboundFlow> value) {
-        this.inboundFlows = value;
+        this.BackingStore.set("inboundFlows", value);
     }
     /**
      * Sets the operations property value. Set of ephemeral operations that the system runs currently. Read-only.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the referenceDefinitions property value. Set of user modifiable system picker types.
      * @param value Value to set for the referenceDefinitions property.
      */
     public void setReferenceDefinitions(@jakarta.annotation.Nullable final java.util.List<ReferenceDefinition> value) {
-        this.referenceDefinitions = value;
+        this.BackingStore.set("referenceDefinitions", value);
     }
     /**
      * Sets the roleGroups property value. Set of groups of individual roles that makes role-based admin simpler.
      * @param value Value to set for the roleGroups property.
      */
     public void setRoleGroups(@jakarta.annotation.Nullable final java.util.List<RoleGroup> value) {
-        this.roleGroups = value;
+        this.BackingStore.set("roleGroups", value);
     }
     /**
      * Sets the runs property value. Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      * @param value Value to set for the runs property.
      */
     public void setRuns(@jakarta.annotation.Nullable final java.util.List<IndustryDataRun> value) {
-        this.runs = value;
+        this.BackingStore.set("runs", value);
     }
     /**
      * Sets the sourceSystems property value. Set of source definitions that represents real-world external systems.
      * @param value Value to set for the sourceSystems property.
      */
     public void setSourceSystems(@jakarta.annotation.Nullable final java.util.List<SourceSystemDefinition> value) {
-        this.sourceSystems = value;
+        this.BackingStore.set("sourceSystems", value);
     }
     /**
      * Sets the years property value. Set of years represented in the system.
      * @param value Value to set for the years property.
      */
     public void setYears(@jakarta.annotation.Nullable final java.util.List<YearTimePeriodDefinition> value) {
-        this.years = value;
+        this.BackingStore.set("years", value);
     }
 }

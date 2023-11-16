@@ -12,755 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Indicates whether or not to allow account modification when the device is in supervised mode.
-     */
-    private Boolean accountBlockModification;
-    /**
-     * Indicates whether or not to allow activation lock when the device is in the supervised mode.
-     */
-    private Boolean activationLockAllowWhenSupervised;
-    /**
-     * Indicates whether or not to allow AirDrop when the device is in supervised mode.
-     */
-    private Boolean airDropBlocked;
-    /**
-     * Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
-     */
-    private Boolean airDropForceUnmanagedDropTarget;
-    /**
-     * Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
-     */
-    private Boolean airPlayForcePairingPasswordForOutgoingRequests;
-    /**
-     * Indicates whether or not keychain storage of username and password for Airprint is blocked (iOS 11.0 and later).
-     */
-    private Boolean airPrintBlockCredentialsStorage;
-    /**
-     * Indicates whether or not AirPrint is blocked (iOS 11.0 and later).
-     */
-    private Boolean airPrintBlocked;
-    /**
-     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (iOS 11.0 and later).
-     */
-    private Boolean airPrintBlockiBeaconDiscovery;
-    /**
-     * Indicates if trusted certificates are required for TLS printing communication (iOS 11.0 and later).
-     */
-    private Boolean airPrintForceTrustedTLS;
-    /**
-     * Prevents a user from adding any App Clips and removes any existing App Clips on the device.
-     */
-    private Boolean appClipsBlocked;
-    /**
-     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-     */
-    private Boolean appleNewsBlocked;
-    /**
-     * Limits Apple personalized advertising when true. Available in iOS 14 and later.
-     */
-    private Boolean applePersonalizedAdsBlocked;
-    /**
-     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
-     */
-    private Boolean appleWatchBlockPairing;
-    /**
-     * Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
-     */
-    private Boolean appleWatchForceWristDetection;
-    /**
-     * Indicates if the removal of apps is allowed.
-     */
-    private Boolean appRemovalBlocked;
-    /**
-     * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<AppListItem> appsSingleAppModeList;
-    /**
-     * Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
-     */
-    private Boolean appStoreBlockAutomaticDownloads;
-    /**
-     * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean appStoreBlocked;
-    /**
-     * Indicates whether or not to block the user from making in app purchases.
-     */
-    private Boolean appStoreBlockInAppPurchases;
-    /**
-     * Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
-     */
-    private Boolean appStoreBlockUIAppInstallation;
-    /**
-     * Indicates whether or not to require a password when using the app store.
-     */
-    private Boolean appStoreRequirePassword;
-    /**
-     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     */
-    private java.util.List<AppListItem> appsVisibilityList;
-    /**
-     * Possible values of the compliance app list.
-     */
-    private AppListType appsVisibilityListType;
-    /**
-     * Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
-     */
-    private Boolean autoFillForceAuthentication;
-    /**
-     * Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
-     */
-    private Boolean autoUnlockBlocked;
-    /**
-     * Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
-     */
-    private Boolean blockSystemAppRemoval;
-    /**
-     * Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
-     */
-    private Boolean bluetoothBlockModification;
-    /**
-     * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean cameraBlocked;
-    /**
-     * Indicates whether or not to block data roaming.
-     */
-    private Boolean cellularBlockDataRoaming;
-    /**
-     * Indicates whether or not to block global background fetch while roaming.
-     */
-    private Boolean cellularBlockGlobalBackgroundFetchWhileRoaming;
-    /**
-     * Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
-     */
-    private Boolean cellularBlockPerAppDataModification;
-    /**
-     * Indicates whether or not to block Personal Hotspot.
-     */
-    private Boolean cellularBlockPersonalHotspot;
-    /**
-     * Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
-     */
-    private Boolean cellularBlockPersonalHotspotModification;
-    /**
-     * Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
-     */
-    private Boolean cellularBlockPlanModification;
-    /**
-     * Indicates whether or not to block voice roaming.
-     */
-    private Boolean cellularBlockVoiceRoaming;
-    /**
-     * Indicates whether or not to block untrusted TLS certificates.
-     */
-    private Boolean certificatesBlockUntrustedTlsCertificates;
-    /**
-     * Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
-     */
-    private Boolean classroomAppBlockRemoteScreenObservation;
-    /**
-     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
-     */
-    private Boolean classroomAppForceUnpromptedScreenObservation;
-    /**
-     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student, when the device is in supervised mode.
-     */
-    private Boolean classroomForceAutomaticallyJoinClasses;
-    /**
-     * Indicates whether a student enrolled in an unmanaged course via Classroom will request permission from the teacher when attempting to leave the course (iOS 11.3 and later).
-     */
-    private Boolean classroomForceRequestPermissionToLeaveClasses;
-    /**
-     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
-     */
-    private Boolean classroomForceUnpromptedAppAndDeviceLock;
-    /**
-     * Possible values of the compliance app list.
-     */
-    private AppListType compliantAppListType;
-    /**
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    private java.util.List<AppListItem> compliantAppsList;
-    /**
-     * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
-     */
-    private Boolean configurationProfileBlockChanges;
-    /**
-     * Indicates whether or not managed apps can write contacts to unmanaged contacts accounts (iOS 12.0 and later).
-     */
-    private Boolean contactsAllowManagedToUnmanagedWrite;
-    /**
-     * Indicates whether or not unmanaged apps can read from managed contacts accounts (iOS 12.0 or later).
-     */
-    private Boolean contactsAllowUnmanagedToManagedRead;
-    /**
-     * Indicates whether or not to block the continuous path keyboard when the device is supervised (iOS 13 or later).
-     */
-    private Boolean continuousPathKeyboardBlocked;
-    /**
-     * Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
-     */
-    private Boolean dateAndTimeForceSetAutomatically;
-    /**
-     * Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
-     */
-    private Boolean definitionLookupBlocked;
-    /**
-     * Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
-     */
-    private Boolean deviceBlockEnableRestrictions;
-    /**
-     * Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
-     */
-    private Boolean deviceBlockEraseContentAndSettings;
-    /**
-     * Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
-     */
-    private Boolean deviceBlockNameModification;
-    /**
-     * Indicates whether or not to block diagnostic data submission.
-     */
-    private Boolean diagnosticDataBlockSubmission;
-    /**
-     * Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
-     */
-    private Boolean diagnosticDataBlockSubmissionModification;
-    /**
-     * Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
-     */
-    private Boolean documentsBlockManagedDocumentsInUnmanagedApps;
-    /**
-     * Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
-     */
-    private Boolean documentsBlockUnmanagedDocumentsInManagedApps;
-    /**
-     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     */
-    private java.util.List<String> emailInDomainSuffixes;
-    /**
-     * Indicates whether or not to block the user from trusting an enterprise app.
-     */
-    private Boolean enterpriseAppBlockTrust;
-    /**
-     * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
-     */
-    private Boolean enterpriseAppBlockTrustModification;
-    /**
-     * Indicates whether or not Enterprise book back up is blocked.
-     */
-    private Boolean enterpriseBookBlockBackup;
-    /**
-     * Indicates whether or not Enterprise book notes and highlights sync is blocked.
-     */
-    private Boolean enterpriseBookBlockMetadataSync;
-    /**
-     * Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
-     */
-    private Boolean esimBlockModification;
-    /**
-     * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean faceTimeBlocked;
-    /**
-     * Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     */
-    private Boolean filesNetworkDriveAccessBlocked;
-    /**
-     * Indicates if sevices with access can connect to and open files on a USB drive. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     */
-    private Boolean filesUsbDriveAccessBlocked;
-    /**
-     * Indicates whether or not to block Find My Device when the device is supervised (iOS 13 or later).
-     */
-    private Boolean findMyDeviceInFindMyAppBlocked;
-    /**
-     * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
-     */
-    private Boolean findMyFriendsBlocked;
-    /**
-     * Indicates whether or not to block Find My Friends when the device is supervised (iOS 13 or later).
-     */
-    private Boolean findMyFriendsInFindMyAppBlocked;
-    /**
-     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     */
-    private Boolean gameCenterBlocked;
-    /**
-     * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean gamingBlockGameCenterFriends;
-    /**
-     * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean gamingBlockMultiplayer;
-    /**
-     * indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
-     */
-    private Boolean hostPairingBlocked;
-    /**
-     * Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
-     */
-    private Boolean iBooksStoreBlocked;
-    /**
-     * Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
-     */
-    private Boolean iBooksStoreBlockErotica;
-    /**
-     * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
-     */
-    private Boolean iCloudBlockActivityContinuation;
-    /**
-     * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean iCloudBlockBackup;
-    /**
-     * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean iCloudBlockDocumentSync;
-    /**
-     * Indicates whether or not to block Managed Apps Cloud Sync.
-     */
-    private Boolean iCloudBlockManagedAppsSync;
-    /**
-     * Indicates whether or not to block iCloud Photo Library.
-     */
-    private Boolean iCloudBlockPhotoLibrary;
-    /**
-     * Indicates whether or not to block iCloud Photo Stream Sync.
-     */
-    private Boolean iCloudBlockPhotoStreamSync;
-    /**
-     * Indicates whether or not to block Shared Photo Stream.
-     */
-    private Boolean iCloudBlockSharedPhotoStream;
-    /**
-     * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
-     */
-    private Boolean iCloudPrivateRelayBlocked;
-    /**
-     * Indicates whether or not to require backups to iCloud be encrypted.
-     */
-    private Boolean iCloudRequireEncryptedBackup;
-    /**
-     * Indicates whether or not to block the iTunes app. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean iTunesBlocked;
-    /**
-     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean iTunesBlockExplicitContent;
-    /**
-     * Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
-     */
-    private Boolean iTunesBlockMusicService;
-    /**
-     * Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
-     */
-    private Boolean iTunesBlockRadio;
-    /**
-     * Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
-     */
-    private Boolean keyboardBlockAutoCorrect;
-    /**
-     * Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
-     */
-    private Boolean keyboardBlockDictation;
-    /**
-     * Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
-     */
-    private Boolean keyboardBlockPredictive;
-    /**
-     * Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
-     */
-    private Boolean keyboardBlockShortcuts;
-    /**
-     * Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
-     */
-    private Boolean keyboardBlockSpellCheck;
-    /**
-     * Indicates whether or not iCloud keychain synchronization is blocked. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean keychainBlockCloudSync;
-    /**
-     * Indicates whether or not to allow assistive speak while in kiosk mode.
-     */
-    private Boolean kioskModeAllowAssistiveSpeak;
-    /**
-     * Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
-     */
-    private Boolean kioskModeAllowAssistiveTouchSettings;
-    /**
-     * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
-     */
-    private Boolean kioskModeAllowAutoLock;
-    /**
-     * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
-     */
-    private Boolean kioskModeAllowColorInversionSettings;
-    /**
-     * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
-     */
-    private Boolean kioskModeAllowRingerSwitch;
-    /**
-     * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
-     */
-    private Boolean kioskModeAllowScreenRotation;
-    /**
-     * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
-     */
-    private Boolean kioskModeAllowSleepButton;
-    /**
-     * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
-     */
-    private Boolean kioskModeAllowTouchscreen;
-    /**
-     * Indicates whether or not to allow the user to toggle voice control in kiosk mode.
-     */
-    private Boolean kioskModeAllowVoiceControlModification;
-    /**
-     * Indicates whether or not to allow access to the voice over settings while in kiosk mode.
-     */
-    private Boolean kioskModeAllowVoiceOverSettings;
-    /**
-     * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
-     */
-    private Boolean kioskModeAllowVolumeButtons;
-    /**
-     * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
-     */
-    private Boolean kioskModeAllowZoomSettings;
-    /**
-     * URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-     */
-    private String kioskModeAppStoreUrl;
-    /**
-     * App source options for iOS kiosk mode.
-     */
-    private IosKioskModeAppType kioskModeAppType;
-    /**
-     * Indicates whether or not to block device auto lock while in kiosk mode.
-     */
-    private Boolean kioskModeBlockAutoLock;
-    /**
-     * Indicates whether or not to block use of the ringer switch while in kiosk mode.
-     */
-    private Boolean kioskModeBlockRingerSwitch;
-    /**
-     * Indicates whether or not to block screen rotation while in kiosk mode.
-     */
-    private Boolean kioskModeBlockScreenRotation;
-    /**
-     * Indicates whether or not to block use of the sleep button while in kiosk mode.
-     */
-    private Boolean kioskModeBlockSleepButton;
-    /**
-     * Indicates whether or not to block use of the touchscreen while in kiosk mode.
-     */
-    private Boolean kioskModeBlockTouchscreen;
-    /**
-     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
-     */
-    private Boolean kioskModeBlockVolumeButtons;
-    /**
-     * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-     */
-    private String kioskModeBuiltInAppId;
-    /**
-     * Indicates whether or not to enable voice control in kiosk mode.
-     */
-    private Boolean kioskModeEnableVoiceControl;
-    /**
-     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     */
-    private String kioskModeManagedAppId;
-    /**
-     * Indicates whether or not to require assistive touch while in kiosk mode.
-     */
-    private Boolean kioskModeRequireAssistiveTouch;
-    /**
-     * Indicates whether or not to require color inversion while in kiosk mode.
-     */
-    private Boolean kioskModeRequireColorInversion;
-    /**
-     * Indicates whether or not to require mono audio while in kiosk mode.
-     */
-    private Boolean kioskModeRequireMonoAudio;
-    /**
-     * Indicates whether or not to require voice over while in kiosk mode.
-     */
-    private Boolean kioskModeRequireVoiceOver;
-    /**
-     * Indicates whether or not to require zoom while in kiosk mode.
-     */
-    private Boolean kioskModeRequireZoom;
-    /**
-     * Indicates whether or not to block the user from using control center on the lock screen.
-     */
-    private Boolean lockScreenBlockControlCenter;
-    /**
-     * Indicates whether or not to block the user from using the notification view on the lock screen.
-     */
-    private Boolean lockScreenBlockNotificationView;
-    /**
-     * Indicates whether or not to block the user from using passbook when the device is locked.
-     */
-    private Boolean lockScreenBlockPassbook;
-    /**
-     * Indicates whether or not to block the user from using the Today View on the lock screen.
-     */
-    private Boolean lockScreenBlockTodayView;
-    /**
-     * Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.
-     */
-    private Boolean managedPasteboardRequired;
-    /**
-     * Apps rating as in media content
-     */
-    private RatingAppsType mediaContentRatingApps;
-    /**
-     * Media content rating settings for Australia
-     */
-    private MediaContentRatingAustralia mediaContentRatingAustralia;
-    /**
-     * Media content rating settings for Canada
-     */
-    private MediaContentRatingCanada mediaContentRatingCanada;
-    /**
-     * Media content rating settings for France
-     */
-    private MediaContentRatingFrance mediaContentRatingFrance;
-    /**
-     * Media content rating settings for Germany
-     */
-    private MediaContentRatingGermany mediaContentRatingGermany;
-    /**
-     * Media content rating settings for Ireland
-     */
-    private MediaContentRatingIreland mediaContentRatingIreland;
-    /**
-     * Media content rating settings for Japan
-     */
-    private MediaContentRatingJapan mediaContentRatingJapan;
-    /**
-     * Media content rating settings for New Zealand
-     */
-    private MediaContentRatingNewZealand mediaContentRatingNewZealand;
-    /**
-     * Media content rating settings for United Kingdom
-     */
-    private MediaContentRatingUnitedKingdom mediaContentRatingUnitedKingdom;
-    /**
-     * Media content rating settings for United States
-     */
-    private MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
-    /**
-     * Indicates whether or not to block the user from using the Messages app on the supervised device.
-     */
-    private Boolean messagesBlocked;
-    /**
-     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     */
-    private java.util.List<IosNetworkUsageRule> networkUsageRules;
-    /**
-     * Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
-     */
-    private Boolean nfcBlocked;
-    /**
-     * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
-     */
-    private Boolean notificationsBlockSettingsModification;
-    /**
-     * Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
-     */
-    private Boolean onDeviceOnlyDictationForced;
-    /**
-     * When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
-     */
-    private Boolean onDeviceOnlyTranslationForced;
-    /**
-     * Block modification of registered Touch ID fingerprints when in supervised mode.
-     */
-    private Boolean passcodeBlockFingerprintModification;
-    /**
-     * Indicates whether or not to block fingerprint unlock.
-     */
-    private Boolean passcodeBlockFingerprintUnlock;
-    /**
-     * Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
-     */
-    private Boolean passcodeBlockModification;
-    /**
-     * Indicates whether or not to block simple passcodes.
-     */
-    private Boolean passcodeBlockSimple;
-    /**
-     * Number of days before the passcode expires. Valid values 1 to 65535
-     */
-    private Integer passcodeExpirationDays;
-    /**
-     * Number of character sets a passcode must contain. Valid values 0 to 4
-     */
-    private Integer passcodeMinimumCharacterSetCount;
-    /**
-     * Minimum length of passcode. Valid values 4 to 14
-     */
-    private Integer passcodeMinimumLength;
-    /**
-     * Minutes of inactivity before a passcode is required.
-     */
-    private Integer passcodeMinutesOfInactivityBeforeLock;
-    /**
-     * Minutes of inactivity before the screen times out.
-     */
-    private Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
-    /**
-     * Number of previous passcodes to block. Valid values 1 to 24
-     */
-    private Integer passcodePreviousPasscodeBlockCount;
-    /**
-     * Indicates whether or not to require a passcode.
-     */
-    private Boolean passcodeRequired;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passcodeRequiredType;
-    /**
-     * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
-     */
-    private Integer passcodeSignInFailureCountBeforeWipe;
-    /**
-     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature iOS 12.0 and later).
-     */
-    private Boolean passwordBlockAirDropSharing;
-    /**
-     * Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).
-     */
-    private Boolean passwordBlockAutoFill;
-    /**
-     * Indicates whether or not to block requesting passwords from nearby devices (iOS 12.0 and later).
-     */
-    private Boolean passwordBlockProximityRequests;
-    /**
-     * Indicates whether or not over-the-air PKI updates are blocked. Setting this restriction to false does not disable CRL and OCSP checks (iOS 7.0 and later).
-     */
-    private Boolean pkiBlockOTAUpdates;
-    /**
-     * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
-     */
-    private Boolean podcastsBlocked;
-    /**
-     * Indicates if ad tracking is limited.(iOS 7.0 and later).
-     */
-    private Boolean privacyForceLimitAdTracking;
-    /**
-     * Indicates whether or not to enable the prompt to setup nearby devices with a supervised device.
-     */
-    private Boolean proximityBlockSetupToNewDevice;
-    /**
-     * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean safariBlockAutofill;
-    /**
-     * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
-     */
-    private Boolean safariBlocked;
-    /**
-     * Indicates whether or not to block JavaScript in Safari.
-     */
-    private Boolean safariBlockJavaScript;
-    /**
-     * Indicates whether or not to block popups in Safari.
-     */
-    private Boolean safariBlockPopups;
-    /**
-     * Web Browser Cookie Settings.
-     */
-    private WebBrowserCookieSettings safariCookieSettings;
-    /**
-     * URLs matching the patterns listed here will be considered managed.
-     */
-    private java.util.List<String> safariManagedDomains;
-    /**
-     * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
-     */
-    private java.util.List<String> safariPasswordAutoFillDomains;
-    /**
-     * Indicates whether or not to require fraud warning in Safari.
-     */
-    private Boolean safariRequireFraudWarning;
-    /**
-     * Indicates whether or not to block the user from taking Screenshots.
-     */
-    private Boolean screenCaptureBlocked;
-    /**
-     * Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 or later).
-     */
-    private Boolean sharedDeviceBlockTemporarySessions;
-    /**
-     * Indicates whether or not to block the user from using Siri.
-     */
-    private Boolean siriBlocked;
-    /**
-     * Indicates whether or not to block the user from using Siri when locked.
-     */
-    private Boolean siriBlockedWhenLocked;
-    /**
-     * Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
-     */
-    private Boolean siriBlockUserGeneratedContent;
-    /**
-     * Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
-     */
-    private Boolean siriRequireProfanityFilter;
-    /**
-     * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
-     */
-    private Integer softwareUpdatesEnforcedDelayInDays;
-    /**
-     * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
-     */
-    private Boolean softwareUpdatesForceDelayed;
-    /**
-     * Indicates whether or not to block Spotlight search from returning internet results on supervised device.
-     */
-    private Boolean spotlightBlockInternetResults;
-    /**
-     * Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
-     */
-    private Boolean unpairedExternalBootToRecoveryAllowed;
-    /**
-     * Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
-     */
-    private Boolean usbRestrictedModeBlocked;
-    /**
-     * Indicates whether or not to block voice dialing.
-     */
-    private Boolean voiceDialingBlocked;
-    /**
-     * Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0 and later).
-     */
-    private Boolean vpnBlockCreation;
-    /**
-     * Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
-     */
-    private Boolean wallpaperBlockModification;
-    /**
-     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
-     */
-    private Boolean wiFiConnectOnlyToConfiguredNetworks;
-    /**
-     * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
-     */
-    private Boolean wiFiConnectToAllowedNetworksOnlyForced;
-    /**
-     * Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     */
-    private Boolean wifiPowerOnForced;
-    /**
-     * Instantiates a new iosGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
      */
     public IosGeneralDeviceConfiguration() {
         super();
@@ -769,7 +21,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosGeneralDeviceConfiguration
+     * @return a IosGeneralDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -778,507 +30,507 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the accountBlockModification property value. Indicates whether or not to allow account modification when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountBlockModification() {
-        return this.accountBlockModification;
+        return this.BackingStore.get("accountBlockModification");
     }
     /**
      * Gets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getActivationLockAllowWhenSupervised() {
-        return this.activationLockAllowWhenSupervised;
+        return this.BackingStore.get("activationLockAllowWhenSupervised");
     }
     /**
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirDropBlocked() {
-        return this.airDropBlocked;
+        return this.BackingStore.get("airDropBlocked");
     }
     /**
      * Gets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirDropForceUnmanagedDropTarget() {
-        return this.airDropForceUnmanagedDropTarget;
+        return this.BackingStore.get("airDropForceUnmanagedDropTarget");
     }
     /**
      * Gets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPlayForcePairingPasswordForOutgoingRequests() {
-        return this.airPlayForcePairingPasswordForOutgoingRequests;
+        return this.BackingStore.get("airPlayForcePairingPasswordForOutgoingRequests");
     }
     /**
      * Gets the airPrintBlockCredentialsStorage property value. Indicates whether or not keychain storage of username and password for Airprint is blocked (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPrintBlockCredentialsStorage() {
-        return this.airPrintBlockCredentialsStorage;
+        return this.BackingStore.get("airPrintBlockCredentialsStorage");
     }
     /**
      * Gets the airPrintBlocked property value. Indicates whether or not AirPrint is blocked (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPrintBlocked() {
-        return this.airPrintBlocked;
+        return this.BackingStore.get("airPrintBlocked");
     }
     /**
      * Gets the airPrintBlockiBeaconDiscovery property value. Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPrintBlockiBeaconDiscovery() {
-        return this.airPrintBlockiBeaconDiscovery;
+        return this.BackingStore.get("airPrintBlockiBeaconDiscovery");
     }
     /**
      * Gets the airPrintForceTrustedTLS property value. Indicates if trusted certificates are required for TLS printing communication (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAirPrintForceTrustedTLS() {
-        return this.airPrintForceTrustedTLS;
+        return this.BackingStore.get("airPrintForceTrustedTLS");
     }
     /**
      * Gets the appClipsBlocked property value. Prevents a user from adding any App Clips and removes any existing App Clips on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppClipsBlocked() {
-        return this.appClipsBlocked;
+        return this.BackingStore.get("appClipsBlocked");
     }
     /**
      * Gets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleNewsBlocked() {
-        return this.appleNewsBlocked;
+        return this.BackingStore.get("appleNewsBlocked");
     }
     /**
      * Gets the applePersonalizedAdsBlocked property value. Limits Apple personalized advertising when true. Available in iOS 14 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplePersonalizedAdsBlocked() {
-        return this.applePersonalizedAdsBlocked;
+        return this.BackingStore.get("applePersonalizedAdsBlocked");
     }
     /**
      * Gets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleWatchBlockPairing() {
-        return this.appleWatchBlockPairing;
+        return this.BackingStore.get("appleWatchBlockPairing");
     }
     /**
      * Gets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleWatchForceWristDetection() {
-        return this.appleWatchForceWristDetection;
+        return this.BackingStore.get("appleWatchForceWristDetection");
     }
     /**
      * Gets the appRemovalBlocked property value. Indicates if the removal of apps is allowed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppRemovalBlocked() {
-        return this.appRemovalBlocked;
+        return this.BackingStore.get("appRemovalBlocked");
     }
     /**
      * Gets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
-     * @return a appListItem
+     * @return a java.util.List<AppListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsSingleAppModeList() {
-        return this.appsSingleAppModeList;
+        return this.BackingStore.get("appsSingleAppModeList");
     }
     /**
      * Gets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockAutomaticDownloads() {
-        return this.appStoreBlockAutomaticDownloads;
+        return this.BackingStore.get("appStoreBlockAutomaticDownloads");
     }
     /**
      * Gets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlocked() {
-        return this.appStoreBlocked;
+        return this.BackingStore.get("appStoreBlocked");
     }
     /**
      * Gets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockInAppPurchases() {
-        return this.appStoreBlockInAppPurchases;
+        return this.BackingStore.get("appStoreBlockInAppPurchases");
     }
     /**
      * Gets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockUIAppInstallation() {
-        return this.appStoreBlockUIAppInstallation;
+        return this.BackingStore.get("appStoreBlockUIAppInstallation");
     }
     /**
      * Gets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppStoreRequirePassword() {
-        return this.appStoreRequirePassword;
+        return this.BackingStore.get("appStoreRequirePassword");
     }
     /**
      * Gets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     * @return a appListItem
+     * @return a java.util.List<AppListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsVisibilityList() {
-        return this.appsVisibilityList;
+        return this.BackingStore.get("appsVisibilityList");
     }
     /**
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @jakarta.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
-        return this.appsVisibilityListType;
+        return this.BackingStore.get("appsVisibilityListType");
     }
     /**
      * Gets the autoFillForceAuthentication property value. Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoFillForceAuthentication() {
-        return this.autoFillForceAuthentication;
+        return this.BackingStore.get("autoFillForceAuthentication");
     }
     /**
      * Gets the autoUnlockBlocked property value. Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoUnlockBlocked() {
-        return this.autoUnlockBlocked;
+        return this.BackingStore.get("autoUnlockBlocked");
     }
     /**
      * Gets the blockSystemAppRemoval property value. Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSystemAppRemoval() {
-        return this.blockSystemAppRemoval;
+        return this.BackingStore.get("blockSystemAppRemoval");
     }
     /**
      * Gets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockModification() {
-        return this.bluetoothBlockModification;
+        return this.BackingStore.get("bluetoothBlockModification");
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
-        return this.cameraBlocked;
+        return this.BackingStore.get("cameraBlocked");
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
-        return this.cellularBlockDataRoaming;
+        return this.BackingStore.get("cellularBlockDataRoaming");
     }
     /**
      * Gets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockGlobalBackgroundFetchWhileRoaming() {
-        return this.cellularBlockGlobalBackgroundFetchWhileRoaming;
+        return this.BackingStore.get("cellularBlockGlobalBackgroundFetchWhileRoaming");
     }
     /**
      * Gets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPerAppDataModification() {
-        return this.cellularBlockPerAppDataModification;
+        return this.BackingStore.get("cellularBlockPerAppDataModification");
     }
     /**
      * Gets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPersonalHotspot() {
-        return this.cellularBlockPersonalHotspot;
+        return this.BackingStore.get("cellularBlockPersonalHotspot");
     }
     /**
      * Gets the cellularBlockPersonalHotspotModification property value. Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPersonalHotspotModification() {
-        return this.cellularBlockPersonalHotspotModification;
+        return this.BackingStore.get("cellularBlockPersonalHotspotModification");
     }
     /**
      * Gets the cellularBlockPlanModification property value. Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockPlanModification() {
-        return this.cellularBlockPlanModification;
+        return this.BackingStore.get("cellularBlockPlanModification");
     }
     /**
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
-        return this.cellularBlockVoiceRoaming;
+        return this.BackingStore.get("cellularBlockVoiceRoaming");
     }
     /**
      * Gets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCertificatesBlockUntrustedTlsCertificates() {
-        return this.certificatesBlockUntrustedTlsCertificates;
+        return this.BackingStore.get("certificatesBlockUntrustedTlsCertificates");
     }
     /**
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
-        return this.classroomAppBlockRemoteScreenObservation;
+        return this.BackingStore.get("classroomAppBlockRemoteScreenObservation");
     }
     /**
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
-        return this.classroomAppForceUnpromptedScreenObservation;
+        return this.BackingStore.get("classroomAppForceUnpromptedScreenObservation");
     }
     /**
      * Gets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student, when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceAutomaticallyJoinClasses() {
-        return this.classroomForceAutomaticallyJoinClasses;
+        return this.BackingStore.get("classroomForceAutomaticallyJoinClasses");
     }
     /**
      * Gets the classroomForceRequestPermissionToLeaveClasses property value. Indicates whether a student enrolled in an unmanaged course via Classroom will request permission from the teacher when attempting to leave the course (iOS 11.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceRequestPermissionToLeaveClasses() {
-        return this.classroomForceRequestPermissionToLeaveClasses;
+        return this.BackingStore.get("classroomForceRequestPermissionToLeaveClasses");
     }
     /**
      * Gets the classroomForceUnpromptedAppAndDeviceLock property value. Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceUnpromptedAppAndDeviceLock() {
-        return this.classroomForceUnpromptedAppAndDeviceLock;
+        return this.BackingStore.get("classroomForceUnpromptedAppAndDeviceLock");
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
-        return this.compliantAppListType;
+        return this.BackingStore.get("compliantAppListType");
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     * @return a appListItem
+     * @return a java.util.List<AppListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
-        return this.compliantAppsList;
+        return this.BackingStore.get("compliantAppsList");
     }
     /**
      * Gets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigurationProfileBlockChanges() {
-        return this.configurationProfileBlockChanges;
+        return this.BackingStore.get("configurationProfileBlockChanges");
     }
     /**
      * Gets the contactsAllowManagedToUnmanagedWrite property value. Indicates whether or not managed apps can write contacts to unmanaged contacts accounts (iOS 12.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContactsAllowManagedToUnmanagedWrite() {
-        return this.contactsAllowManagedToUnmanagedWrite;
+        return this.BackingStore.get("contactsAllowManagedToUnmanagedWrite");
     }
     /**
      * Gets the contactsAllowUnmanagedToManagedRead property value. Indicates whether or not unmanaged apps can read from managed contacts accounts (iOS 12.0 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContactsAllowUnmanagedToManagedRead() {
-        return this.contactsAllowUnmanagedToManagedRead;
+        return this.BackingStore.get("contactsAllowUnmanagedToManagedRead");
     }
     /**
      * Gets the continuousPathKeyboardBlocked property value. Indicates whether or not to block the continuous path keyboard when the device is supervised (iOS 13 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContinuousPathKeyboardBlocked() {
-        return this.continuousPathKeyboardBlocked;
+        return this.BackingStore.get("continuousPathKeyboardBlocked");
     }
     /**
      * Gets the dateAndTimeForceSetAutomatically property value. Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDateAndTimeForceSetAutomatically() {
-        return this.dateAndTimeForceSetAutomatically;
+        return this.BackingStore.get("dateAndTimeForceSetAutomatically");
     }
     /**
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
-        return this.definitionLookupBlocked;
+        return this.BackingStore.get("definitionLookupBlocked");
     }
     /**
      * Gets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEnableRestrictions() {
-        return this.deviceBlockEnableRestrictions;
+        return this.BackingStore.get("deviceBlockEnableRestrictions");
     }
     /**
      * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEraseContentAndSettings() {
-        return this.deviceBlockEraseContentAndSettings;
+        return this.BackingStore.get("deviceBlockEraseContentAndSettings");
     }
     /**
      * Gets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceBlockNameModification() {
-        return this.deviceBlockNameModification;
+        return this.BackingStore.get("deviceBlockNameModification");
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
-        return this.diagnosticDataBlockSubmission;
+        return this.BackingStore.get("diagnosticDataBlockSubmission");
     }
     /**
      * Gets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmissionModification() {
-        return this.diagnosticDataBlockSubmissionModification;
+        return this.BackingStore.get("diagnosticDataBlockSubmissionModification");
     }
     /**
      * Gets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockManagedDocumentsInUnmanagedApps() {
-        return this.documentsBlockManagedDocumentsInUnmanagedApps;
+        return this.BackingStore.get("documentsBlockManagedDocumentsInUnmanagedApps");
     }
     /**
      * Gets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockUnmanagedDocumentsInManagedApps() {
-        return this.documentsBlockUnmanagedDocumentsInManagedApps;
+        return this.BackingStore.get("documentsBlockUnmanagedDocumentsInManagedApps");
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
-        return this.emailInDomainSuffixes;
+        return this.BackingStore.get("emailInDomainSuffixes");
     }
     /**
      * Gets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrust() {
-        return this.enterpriseAppBlockTrust;
+        return this.BackingStore.get("enterpriseAppBlockTrust");
     }
     /**
      * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrustModification() {
-        return this.enterpriseAppBlockTrustModification;
+        return this.BackingStore.get("enterpriseAppBlockTrustModification");
     }
     /**
      * Gets the enterpriseBookBlockBackup property value. Indicates whether or not Enterprise book back up is blocked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseBookBlockBackup() {
-        return this.enterpriseBookBlockBackup;
+        return this.BackingStore.get("enterpriseBookBlockBackup");
     }
     /**
      * Gets the enterpriseBookBlockMetadataSync property value. Indicates whether or not Enterprise book notes and highlights sync is blocked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseBookBlockMetadataSync() {
-        return this.enterpriseBookBlockMetadataSync;
+        return this.BackingStore.get("enterpriseBookBlockMetadataSync");
     }
     /**
      * Gets the esimBlockModification property value. Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEsimBlockModification() {
-        return this.esimBlockModification;
+        return this.BackingStore.get("esimBlockModification");
     }
     /**
      * Gets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceTimeBlocked() {
-        return this.faceTimeBlocked;
+        return this.BackingStore.get("faceTimeBlocked");
     }
     /**
      * The deserialization information for the current model
@@ -1478,995 +730,995 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the filesNetworkDriveAccessBlocked property value. Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFilesNetworkDriveAccessBlocked() {
-        return this.filesNetworkDriveAccessBlocked;
+        return this.BackingStore.get("filesNetworkDriveAccessBlocked");
     }
     /**
      * Gets the filesUsbDriveAccessBlocked property value. Indicates if sevices with access can connect to and open files on a USB drive. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFilesUsbDriveAccessBlocked() {
-        return this.filesUsbDriveAccessBlocked;
+        return this.BackingStore.get("filesUsbDriveAccessBlocked");
     }
     /**
      * Gets the findMyDeviceInFindMyAppBlocked property value. Indicates whether or not to block Find My Device when the device is supervised (iOS 13 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFindMyDeviceInFindMyAppBlocked() {
-        return this.findMyDeviceInFindMyAppBlocked;
+        return this.BackingStore.get("findMyDeviceInFindMyAppBlocked");
     }
     /**
      * Gets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFindMyFriendsBlocked() {
-        return this.findMyFriendsBlocked;
+        return this.BackingStore.get("findMyFriendsBlocked");
     }
     /**
      * Gets the findMyFriendsInFindMyAppBlocked property value. Indicates whether or not to block Find My Friends when the device is supervised (iOS 13 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFindMyFriendsInFindMyAppBlocked() {
-        return this.findMyFriendsInFindMyAppBlocked;
+        return this.BackingStore.get("findMyFriendsInFindMyAppBlocked");
     }
     /**
      * Gets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGameCenterBlocked() {
-        return this.gameCenterBlocked;
+        return this.BackingStore.get("gameCenterBlocked");
     }
     /**
      * Gets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGamingBlockGameCenterFriends() {
-        return this.gamingBlockGameCenterFriends;
+        return this.BackingStore.get("gamingBlockGameCenterFriends");
     }
     /**
      * Gets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGamingBlockMultiplayer() {
-        return this.gamingBlockMultiplayer;
+        return this.BackingStore.get("gamingBlockMultiplayer");
     }
     /**
      * Gets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHostPairingBlocked() {
-        return this.hostPairingBlocked;
+        return this.BackingStore.get("hostPairingBlocked");
     }
     /**
      * Gets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlocked() {
-        return this.iBooksStoreBlocked;
+        return this.BackingStore.get("iBooksStoreBlocked");
     }
     /**
      * Gets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlockErotica() {
-        return this.iBooksStoreBlockErotica;
+        return this.BackingStore.get("iBooksStoreBlockErotica");
     }
     /**
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
-        return this.iCloudBlockActivityContinuation;
+        return this.BackingStore.get("iCloudBlockActivityContinuation");
     }
     /**
      * Gets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockBackup() {
-        return this.iCloudBlockBackup;
+        return this.BackingStore.get("iCloudBlockBackup");
     }
     /**
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
-        return this.iCloudBlockDocumentSync;
+        return this.BackingStore.get("iCloudBlockDocumentSync");
     }
     /**
      * Gets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockManagedAppsSync() {
-        return this.iCloudBlockManagedAppsSync;
+        return this.BackingStore.get("iCloudBlockManagedAppsSync");
     }
     /**
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
-        return this.iCloudBlockPhotoLibrary;
+        return this.BackingStore.get("iCloudBlockPhotoLibrary");
     }
     /**
      * Gets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoStreamSync() {
-        return this.iCloudBlockPhotoStreamSync;
+        return this.BackingStore.get("iCloudBlockPhotoStreamSync");
     }
     /**
      * Gets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockSharedPhotoStream() {
-        return this.iCloudBlockSharedPhotoStream;
+        return this.BackingStore.get("iCloudBlockSharedPhotoStream");
     }
     /**
      * Gets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudPrivateRelayBlocked() {
-        return this.iCloudPrivateRelayBlocked;
+        return this.BackingStore.get("iCloudPrivateRelayBlocked");
     }
     /**
      * Gets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudRequireEncryptedBackup() {
-        return this.iCloudRequireEncryptedBackup;
+        return this.BackingStore.get("iCloudRequireEncryptedBackup");
     }
     /**
      * Gets the iTunesBlocked property value. Indicates whether or not to block the iTunes app. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlocked() {
-        return this.iTunesBlocked;
+        return this.BackingStore.get("iTunesBlocked");
     }
     /**
      * Gets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockExplicitContent() {
-        return this.iTunesBlockExplicitContent;
+        return this.BackingStore.get("iTunesBlockExplicitContent");
     }
     /**
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
-        return this.iTunesBlockMusicService;
+        return this.BackingStore.get("iTunesBlockMusicService");
     }
     /**
      * Gets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockRadio() {
-        return this.iTunesBlockRadio;
+        return this.BackingStore.get("iTunesBlockRadio");
     }
     /**
      * Gets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockAutoCorrect() {
-        return this.keyboardBlockAutoCorrect;
+        return this.BackingStore.get("keyboardBlockAutoCorrect");
     }
     /**
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
-        return this.keyboardBlockDictation;
+        return this.BackingStore.get("keyboardBlockDictation");
     }
     /**
      * Gets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockPredictive() {
-        return this.keyboardBlockPredictive;
+        return this.BackingStore.get("keyboardBlockPredictive");
     }
     /**
      * Gets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockShortcuts() {
-        return this.keyboardBlockShortcuts;
+        return this.BackingStore.get("keyboardBlockShortcuts");
     }
     /**
      * Gets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockSpellCheck() {
-        return this.keyboardBlockSpellCheck;
+        return this.BackingStore.get("keyboardBlockSpellCheck");
     }
     /**
      * Gets the keychainBlockCloudSync property value. Indicates whether or not iCloud keychain synchronization is blocked. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeychainBlockCloudSync() {
-        return this.keychainBlockCloudSync;
+        return this.BackingStore.get("keychainBlockCloudSync");
     }
     /**
      * Gets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveSpeak() {
-        return this.kioskModeAllowAssistiveSpeak;
+        return this.BackingStore.get("kioskModeAllowAssistiveSpeak");
     }
     /**
      * Gets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveTouchSettings() {
-        return this.kioskModeAllowAssistiveTouchSettings;
+        return this.BackingStore.get("kioskModeAllowAssistiveTouchSettings");
     }
     /**
      * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAutoLock() {
-        return this.kioskModeAllowAutoLock;
+        return this.BackingStore.get("kioskModeAllowAutoLock");
     }
     /**
      * Gets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowColorInversionSettings() {
-        return this.kioskModeAllowColorInversionSettings;
+        return this.BackingStore.get("kioskModeAllowColorInversionSettings");
     }
     /**
      * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowRingerSwitch() {
-        return this.kioskModeAllowRingerSwitch;
+        return this.BackingStore.get("kioskModeAllowRingerSwitch");
     }
     /**
      * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowScreenRotation() {
-        return this.kioskModeAllowScreenRotation;
+        return this.BackingStore.get("kioskModeAllowScreenRotation");
     }
     /**
      * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowSleepButton() {
-        return this.kioskModeAllowSleepButton;
+        return this.BackingStore.get("kioskModeAllowSleepButton");
     }
     /**
      * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowTouchscreen() {
-        return this.kioskModeAllowTouchscreen;
+        return this.BackingStore.get("kioskModeAllowTouchscreen");
     }
     /**
      * Gets the kioskModeAllowVoiceControlModification property value. Indicates whether or not to allow the user to toggle voice control in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVoiceControlModification() {
-        return this.kioskModeAllowVoiceControlModification;
+        return this.BackingStore.get("kioskModeAllowVoiceControlModification");
     }
     /**
      * Gets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVoiceOverSettings() {
-        return this.kioskModeAllowVoiceOverSettings;
+        return this.BackingStore.get("kioskModeAllowVoiceOverSettings");
     }
     /**
      * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVolumeButtons() {
-        return this.kioskModeAllowVolumeButtons;
+        return this.BackingStore.get("kioskModeAllowVolumeButtons");
     }
     /**
      * Gets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowZoomSettings() {
-        return this.kioskModeAllowZoomSettings;
+        return this.BackingStore.get("kioskModeAllowZoomSettings");
     }
     /**
      * Gets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKioskModeAppStoreUrl() {
-        return this.kioskModeAppStoreUrl;
+        return this.BackingStore.get("kioskModeAppStoreUrl");
     }
     /**
      * Gets the kioskModeAppType property value. App source options for iOS kiosk mode.
-     * @return a iosKioskModeAppType
+     * @return a IosKioskModeAppType
      */
     @jakarta.annotation.Nullable
     public IosKioskModeAppType getKioskModeAppType() {
-        return this.kioskModeAppType;
+        return this.BackingStore.get("kioskModeAppType");
     }
     /**
      * Gets the kioskModeBlockAutoLock property value. Indicates whether or not to block device auto lock while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockAutoLock() {
-        return this.kioskModeBlockAutoLock;
+        return this.BackingStore.get("kioskModeBlockAutoLock");
     }
     /**
      * Gets the kioskModeBlockRingerSwitch property value. Indicates whether or not to block use of the ringer switch while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockRingerSwitch() {
-        return this.kioskModeBlockRingerSwitch;
+        return this.BackingStore.get("kioskModeBlockRingerSwitch");
     }
     /**
      * Gets the kioskModeBlockScreenRotation property value. Indicates whether or not to block screen rotation while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockScreenRotation() {
-        return this.kioskModeBlockScreenRotation;
+        return this.BackingStore.get("kioskModeBlockScreenRotation");
     }
     /**
      * Gets the kioskModeBlockSleepButton property value. Indicates whether or not to block use of the sleep button while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockSleepButton() {
-        return this.kioskModeBlockSleepButton;
+        return this.BackingStore.get("kioskModeBlockSleepButton");
     }
     /**
      * Gets the kioskModeBlockTouchscreen property value. Indicates whether or not to block use of the touchscreen while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockTouchscreen() {
-        return this.kioskModeBlockTouchscreen;
+        return this.BackingStore.get("kioskModeBlockTouchscreen");
     }
     /**
      * Gets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockVolumeButtons() {
-        return this.kioskModeBlockVolumeButtons;
+        return this.BackingStore.get("kioskModeBlockVolumeButtons");
     }
     /**
      * Gets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKioskModeBuiltInAppId() {
-        return this.kioskModeBuiltInAppId;
+        return this.BackingStore.get("kioskModeBuiltInAppId");
     }
     /**
      * Gets the kioskModeEnableVoiceControl property value. Indicates whether or not to enable voice control in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeEnableVoiceControl() {
-        return this.kioskModeEnableVoiceControl;
+        return this.BackingStore.get("kioskModeEnableVoiceControl");
     }
     /**
      * Gets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKioskModeManagedAppId() {
-        return this.kioskModeManagedAppId;
+        return this.BackingStore.get("kioskModeManagedAppId");
     }
     /**
      * Gets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireAssistiveTouch() {
-        return this.kioskModeRequireAssistiveTouch;
+        return this.BackingStore.get("kioskModeRequireAssistiveTouch");
     }
     /**
      * Gets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireColorInversion() {
-        return this.kioskModeRequireColorInversion;
+        return this.BackingStore.get("kioskModeRequireColorInversion");
     }
     /**
      * Gets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireMonoAudio() {
-        return this.kioskModeRequireMonoAudio;
+        return this.BackingStore.get("kioskModeRequireMonoAudio");
     }
     /**
      * Gets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireVoiceOver() {
-        return this.kioskModeRequireVoiceOver;
+        return this.BackingStore.get("kioskModeRequireVoiceOver");
     }
     /**
      * Gets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireZoom() {
-        return this.kioskModeRequireZoom;
+        return this.BackingStore.get("kioskModeRequireZoom");
     }
     /**
      * Gets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockControlCenter() {
-        return this.lockScreenBlockControlCenter;
+        return this.BackingStore.get("lockScreenBlockControlCenter");
     }
     /**
      * Gets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockNotificationView() {
-        return this.lockScreenBlockNotificationView;
+        return this.BackingStore.get("lockScreenBlockNotificationView");
     }
     /**
      * Gets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockPassbook() {
-        return this.lockScreenBlockPassbook;
+        return this.BackingStore.get("lockScreenBlockPassbook");
     }
     /**
      * Gets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockTodayView() {
-        return this.lockScreenBlockTodayView;
+        return this.BackingStore.get("lockScreenBlockTodayView");
     }
     /**
      * Gets the managedPasteboardRequired property value. Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getManagedPasteboardRequired() {
-        return this.managedPasteboardRequired;
+        return this.BackingStore.get("managedPasteboardRequired");
     }
     /**
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
-     * @return a ratingAppsType
+     * @return a RatingAppsType
      */
     @jakarta.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
-        return this.mediaContentRatingApps;
+        return this.BackingStore.get("mediaContentRatingApps");
     }
     /**
      * Gets the mediaContentRatingAustralia property value. Media content rating settings for Australia
-     * @return a mediaContentRatingAustralia
+     * @return a MediaContentRatingAustralia
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingAustralia getMediaContentRatingAustralia() {
-        return this.mediaContentRatingAustralia;
+        return this.BackingStore.get("mediaContentRatingAustralia");
     }
     /**
      * Gets the mediaContentRatingCanada property value. Media content rating settings for Canada
-     * @return a mediaContentRatingCanada
+     * @return a MediaContentRatingCanada
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingCanada getMediaContentRatingCanada() {
-        return this.mediaContentRatingCanada;
+        return this.BackingStore.get("mediaContentRatingCanada");
     }
     /**
      * Gets the mediaContentRatingFrance property value. Media content rating settings for France
-     * @return a mediaContentRatingFrance
+     * @return a MediaContentRatingFrance
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingFrance getMediaContentRatingFrance() {
-        return this.mediaContentRatingFrance;
+        return this.BackingStore.get("mediaContentRatingFrance");
     }
     /**
      * Gets the mediaContentRatingGermany property value. Media content rating settings for Germany
-     * @return a mediaContentRatingGermany
+     * @return a MediaContentRatingGermany
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingGermany getMediaContentRatingGermany() {
-        return this.mediaContentRatingGermany;
+        return this.BackingStore.get("mediaContentRatingGermany");
     }
     /**
      * Gets the mediaContentRatingIreland property value. Media content rating settings for Ireland
-     * @return a mediaContentRatingIreland
+     * @return a MediaContentRatingIreland
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingIreland getMediaContentRatingIreland() {
-        return this.mediaContentRatingIreland;
+        return this.BackingStore.get("mediaContentRatingIreland");
     }
     /**
      * Gets the mediaContentRatingJapan property value. Media content rating settings for Japan
-     * @return a mediaContentRatingJapan
+     * @return a MediaContentRatingJapan
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingJapan getMediaContentRatingJapan() {
-        return this.mediaContentRatingJapan;
+        return this.BackingStore.get("mediaContentRatingJapan");
     }
     /**
      * Gets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
-     * @return a mediaContentRatingNewZealand
+     * @return a MediaContentRatingNewZealand
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingNewZealand getMediaContentRatingNewZealand() {
-        return this.mediaContentRatingNewZealand;
+        return this.BackingStore.get("mediaContentRatingNewZealand");
     }
     /**
      * Gets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
-     * @return a mediaContentRatingUnitedKingdom
+     * @return a MediaContentRatingUnitedKingdom
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingUnitedKingdom getMediaContentRatingUnitedKingdom() {
-        return this.mediaContentRatingUnitedKingdom;
+        return this.BackingStore.get("mediaContentRatingUnitedKingdom");
     }
     /**
      * Gets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
-     * @return a mediaContentRatingUnitedStates
+     * @return a MediaContentRatingUnitedStates
      */
     @jakarta.annotation.Nullable
     public MediaContentRatingUnitedStates getMediaContentRatingUnitedStates() {
-        return this.mediaContentRatingUnitedStates;
+        return this.BackingStore.get("mediaContentRatingUnitedStates");
     }
     /**
      * Gets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMessagesBlocked() {
-        return this.messagesBlocked;
+        return this.BackingStore.get("messagesBlocked");
     }
     /**
      * Gets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     * @return a iosNetworkUsageRule
+     * @return a java.util.List<IosNetworkUsageRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosNetworkUsageRule> getNetworkUsageRules() {
-        return this.networkUsageRules;
+        return this.BackingStore.get("networkUsageRules");
     }
     /**
      * Gets the nfcBlocked property value. Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNfcBlocked() {
-        return this.nfcBlocked;
+        return this.BackingStore.get("nfcBlocked");
     }
     /**
      * Gets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNotificationsBlockSettingsModification() {
-        return this.notificationsBlockSettingsModification;
+        return this.BackingStore.get("notificationsBlockSettingsModification");
     }
     /**
      * Gets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnDeviceOnlyDictationForced() {
-        return this.onDeviceOnlyDictationForced;
+        return this.BackingStore.get("onDeviceOnlyDictationForced");
     }
     /**
      * Gets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnDeviceOnlyTranslationForced() {
-        return this.onDeviceOnlyTranslationForced;
+        return this.BackingStore.get("onDeviceOnlyTranslationForced");
     }
     /**
      * Gets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintModification() {
-        return this.passcodeBlockFingerprintModification;
+        return this.BackingStore.get("passcodeBlockFingerprintModification");
     }
     /**
      * Gets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintUnlock() {
-        return this.passcodeBlockFingerprintUnlock;
+        return this.BackingStore.get("passcodeBlockFingerprintUnlock");
     }
     /**
      * Gets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockModification() {
-        return this.passcodeBlockModification;
+        return this.BackingStore.get("passcodeBlockModification");
     }
     /**
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
-        return this.passcodeBlockSimple;
+        return this.BackingStore.get("passcodeBlockSimple");
     }
     /**
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
-        return this.passcodeExpirationDays;
+        return this.BackingStore.get("passcodeExpirationDays");
     }
     /**
      * Gets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
-        return this.passcodeMinimumCharacterSetCount;
+        return this.BackingStore.get("passcodeMinimumCharacterSetCount");
     }
     /**
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
-        return this.passcodeMinimumLength;
+        return this.BackingStore.get("passcodeMinimumLength");
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
-        return this.passcodeMinutesOfInactivityBeforeLock;
+        return this.BackingStore.get("passcodeMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeScreenTimeout() {
-        return this.passcodeMinutesOfInactivityBeforeScreenTimeout;
+        return this.BackingStore.get("passcodeMinutesOfInactivityBeforeScreenTimeout");
     }
     /**
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
-        return this.passcodePreviousPasscodeBlockCount;
+        return this.BackingStore.get("passcodePreviousPasscodeBlockCount");
     }
     /**
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasscodeRequired() {
-        return this.passcodeRequired;
+        return this.BackingStore.get("passcodeRequired");
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
-        return this.passcodeRequiredType;
+        return this.BackingStore.get("passcodeRequiredType");
     }
     /**
      * Gets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeSignInFailureCountBeforeWipe() {
-        return this.passcodeSignInFailureCountBeforeWipe;
+        return this.BackingStore.get("passcodeSignInFailureCountBeforeWipe");
     }
     /**
      * Gets the passwordBlockAirDropSharing property value. Indicates whether or not to block sharing passwords with the AirDrop passwords feature iOS 12.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockAirDropSharing() {
-        return this.passwordBlockAirDropSharing;
+        return this.BackingStore.get("passwordBlockAirDropSharing");
     }
     /**
      * Gets the passwordBlockAutoFill property value. Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockAutoFill() {
-        return this.passwordBlockAutoFill;
+        return this.BackingStore.get("passwordBlockAutoFill");
     }
     /**
      * Gets the passwordBlockProximityRequests property value. Indicates whether or not to block requesting passwords from nearby devices (iOS 12.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockProximityRequests() {
-        return this.passwordBlockProximityRequests;
+        return this.BackingStore.get("passwordBlockProximityRequests");
     }
     /**
      * Gets the pkiBlockOTAUpdates property value. Indicates whether or not over-the-air PKI updates are blocked. Setting this restriction to false does not disable CRL and OCSP checks (iOS 7.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPkiBlockOTAUpdates() {
-        return this.pkiBlockOTAUpdates;
+        return this.BackingStore.get("pkiBlockOTAUpdates");
     }
     /**
      * Gets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPodcastsBlocked() {
-        return this.podcastsBlocked;
+        return this.BackingStore.get("podcastsBlocked");
     }
     /**
      * Gets the privacyForceLimitAdTracking property value. Indicates if ad tracking is limited.(iOS 7.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrivacyForceLimitAdTracking() {
-        return this.privacyForceLimitAdTracking;
+        return this.BackingStore.get("privacyForceLimitAdTracking");
     }
     /**
      * Gets the proximityBlockSetupToNewDevice property value. Indicates whether or not to enable the prompt to setup nearby devices with a supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getProximityBlockSetupToNewDevice() {
-        return this.proximityBlockSetupToNewDevice;
+        return this.BackingStore.get("proximityBlockSetupToNewDevice");
     }
     /**
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
-        return this.safariBlockAutofill;
+        return this.BackingStore.get("safariBlockAutofill");
     }
     /**
      * Gets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlocked() {
-        return this.safariBlocked;
+        return this.BackingStore.get("safariBlocked");
     }
     /**
      * Gets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockJavaScript() {
-        return this.safariBlockJavaScript;
+        return this.BackingStore.get("safariBlockJavaScript");
     }
     /**
      * Gets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockPopups() {
-        return this.safariBlockPopups;
+        return this.BackingStore.get("safariBlockPopups");
     }
     /**
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
-     * @return a webBrowserCookieSettings
+     * @return a WebBrowserCookieSettings
      */
     @jakarta.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {
-        return this.safariCookieSettings;
+        return this.BackingStore.get("safariCookieSettings");
     }
     /**
      * Gets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariManagedDomains() {
-        return this.safariManagedDomains;
+        return this.BackingStore.get("safariManagedDomains");
     }
     /**
      * Gets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariPasswordAutoFillDomains() {
-        return this.safariPasswordAutoFillDomains;
+        return this.BackingStore.get("safariPasswordAutoFillDomains");
     }
     /**
      * Gets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariRequireFraudWarning() {
-        return this.safariRequireFraudWarning;
+        return this.BackingStore.get("safariRequireFraudWarning");
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this.screenCaptureBlocked;
+        return this.BackingStore.get("screenCaptureBlocked");
     }
     /**
      * Gets the sharedDeviceBlockTemporarySessions property value. Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 or later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSharedDeviceBlockTemporarySessions() {
-        return this.sharedDeviceBlockTemporarySessions;
+        return this.BackingStore.get("sharedDeviceBlockTemporarySessions");
     }
     /**
      * Gets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlocked() {
-        return this.siriBlocked;
+        return this.BackingStore.get("siriBlocked");
     }
     /**
      * Gets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlockedWhenLocked() {
-        return this.siriBlockedWhenLocked;
+        return this.BackingStore.get("siriBlockedWhenLocked");
     }
     /**
      * Gets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriBlockUserGeneratedContent() {
-        return this.siriBlockUserGeneratedContent;
+        return this.BackingStore.get("siriBlockUserGeneratedContent");
     }
     /**
      * Gets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriRequireProfanityFilter() {
-        return this.siriRequireProfanityFilter;
+        return this.BackingStore.get("siriRequireProfanityFilter");
     }
     /**
      * Gets the softwareUpdatesEnforcedDelayInDays property value. Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSoftwareUpdatesEnforcedDelayInDays() {
-        return this.softwareUpdatesEnforcedDelayInDays;
+        return this.BackingStore.get("softwareUpdatesEnforcedDelayInDays");
     }
     /**
      * Gets the softwareUpdatesForceDelayed property value. Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSoftwareUpdatesForceDelayed() {
-        return this.softwareUpdatesForceDelayed;
+        return this.BackingStore.get("softwareUpdatesForceDelayed");
     }
     /**
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
-        return this.spotlightBlockInternetResults;
+        return this.BackingStore.get("spotlightBlockInternetResults");
     }
     /**
      * Gets the unpairedExternalBootToRecoveryAllowed property value. Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnpairedExternalBootToRecoveryAllowed() {
-        return this.unpairedExternalBootToRecoveryAllowed;
+        return this.BackingStore.get("unpairedExternalBootToRecoveryAllowed");
     }
     /**
      * Gets the usbRestrictedModeBlocked property value. Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUsbRestrictedModeBlocked() {
-        return this.usbRestrictedModeBlocked;
+        return this.BackingStore.get("usbRestrictedModeBlocked");
     }
     /**
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
-        return this.voiceDialingBlocked;
+        return this.BackingStore.get("voiceDialingBlocked");
     }
     /**
      * Gets the vpnBlockCreation property value. Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0 and later).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVpnBlockCreation() {
-        return this.vpnBlockCreation;
+        return this.BackingStore.get("vpnBlockCreation");
     }
     /**
      * Gets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWallpaperBlockModification() {
-        return this.wallpaperBlockModification;
+        return this.BackingStore.get("wallpaperBlockModification");
     }
     /**
      * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiConnectOnlyToConfiguredNetworks() {
-        return this.wiFiConnectOnlyToConfiguredNetworks;
+        return this.BackingStore.get("wiFiConnectOnlyToConfiguredNetworks");
     }
     /**
      * Gets the wiFiConnectToAllowedNetworksOnlyForced property value. Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiConnectToAllowedNetworksOnlyForced() {
-        return this.wiFiConnectToAllowedNetworksOnlyForced;
+        return this.BackingStore.get("wiFiConnectToAllowedNetworksOnlyForced");
     }
     /**
      * Gets the wifiPowerOnForced property value. Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiPowerOnForced() {
-        return this.wifiPowerOnForced;
+        return this.BackingStore.get("wifiPowerOnForced");
     }
     /**
      * Serializes information the current object
@@ -2668,1308 +1920,1308 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountBlockModification property.
      */
     public void setAccountBlockModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.accountBlockModification = value;
+        this.BackingStore.set("accountBlockModification", value);
     }
     /**
      * Sets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
      * @param value Value to set for the activationLockAllowWhenSupervised property.
      */
     public void setActivationLockAllowWhenSupervised(@jakarta.annotation.Nullable final Boolean value) {
-        this.activationLockAllowWhenSupervised = value;
+        this.BackingStore.set("activationLockAllowWhenSupervised", value);
     }
     /**
      * Sets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
      * @param value Value to set for the airDropBlocked property.
      */
     public void setAirDropBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.airDropBlocked = value;
+        this.BackingStore.set("airDropBlocked", value);
     }
     /**
      * Sets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
      * @param value Value to set for the airDropForceUnmanagedDropTarget property.
      */
     public void setAirDropForceUnmanagedDropTarget(@jakarta.annotation.Nullable final Boolean value) {
-        this.airDropForceUnmanagedDropTarget = value;
+        this.BackingStore.set("airDropForceUnmanagedDropTarget", value);
     }
     /**
      * Sets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
      * @param value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
      */
     public void setAirPlayForcePairingPasswordForOutgoingRequests(@jakarta.annotation.Nullable final Boolean value) {
-        this.airPlayForcePairingPasswordForOutgoingRequests = value;
+        this.BackingStore.set("airPlayForcePairingPasswordForOutgoingRequests", value);
     }
     /**
      * Sets the airPrintBlockCredentialsStorage property value. Indicates whether or not keychain storage of username and password for Airprint is blocked (iOS 11.0 and later).
      * @param value Value to set for the airPrintBlockCredentialsStorage property.
      */
     public void setAirPrintBlockCredentialsStorage(@jakarta.annotation.Nullable final Boolean value) {
-        this.airPrintBlockCredentialsStorage = value;
+        this.BackingStore.set("airPrintBlockCredentialsStorage", value);
     }
     /**
      * Sets the airPrintBlocked property value. Indicates whether or not AirPrint is blocked (iOS 11.0 and later).
      * @param value Value to set for the airPrintBlocked property.
      */
     public void setAirPrintBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.airPrintBlocked = value;
+        this.BackingStore.set("airPrintBlocked", value);
     }
     /**
      * Sets the airPrintBlockiBeaconDiscovery property value. Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (iOS 11.0 and later).
      * @param value Value to set for the airPrintBlockiBeaconDiscovery property.
      */
     public void setAirPrintBlockiBeaconDiscovery(@jakarta.annotation.Nullable final Boolean value) {
-        this.airPrintBlockiBeaconDiscovery = value;
+        this.BackingStore.set("airPrintBlockiBeaconDiscovery", value);
     }
     /**
      * Sets the airPrintForceTrustedTLS property value. Indicates if trusted certificates are required for TLS printing communication (iOS 11.0 and later).
      * @param value Value to set for the airPrintForceTrustedTLS property.
      */
     public void setAirPrintForceTrustedTLS(@jakarta.annotation.Nullable final Boolean value) {
-        this.airPrintForceTrustedTLS = value;
+        this.BackingStore.set("airPrintForceTrustedTLS", value);
     }
     /**
      * Sets the appClipsBlocked property value. Prevents a user from adding any App Clips and removes any existing App Clips on the device.
      * @param value Value to set for the appClipsBlocked property.
      */
     public void setAppClipsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.appClipsBlocked = value;
+        this.BackingStore.set("appClipsBlocked", value);
     }
     /**
      * Sets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
      * @param value Value to set for the appleNewsBlocked property.
      */
     public void setAppleNewsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.appleNewsBlocked = value;
+        this.BackingStore.set("appleNewsBlocked", value);
     }
     /**
      * Sets the applePersonalizedAdsBlocked property value. Limits Apple personalized advertising when true. Available in iOS 14 and later.
      * @param value Value to set for the applePersonalizedAdsBlocked property.
      */
     public void setApplePersonalizedAdsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.applePersonalizedAdsBlocked = value;
+        this.BackingStore.set("applePersonalizedAdsBlocked", value);
     }
     /**
      * Sets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      * @param value Value to set for the appleWatchBlockPairing property.
      */
     public void setAppleWatchBlockPairing(@jakarta.annotation.Nullable final Boolean value) {
-        this.appleWatchBlockPairing = value;
+        this.BackingStore.set("appleWatchBlockPairing", value);
     }
     /**
      * Sets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
      * @param value Value to set for the appleWatchForceWristDetection property.
      */
     public void setAppleWatchForceWristDetection(@jakarta.annotation.Nullable final Boolean value) {
-        this.appleWatchForceWristDetection = value;
+        this.BackingStore.set("appleWatchForceWristDetection", value);
     }
     /**
      * Sets the appRemovalBlocked property value. Indicates if the removal of apps is allowed.
      * @param value Value to set for the appRemovalBlocked property.
      */
     public void setAppRemovalBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.appRemovalBlocked = value;
+        this.BackingStore.set("appRemovalBlocked", value);
     }
     /**
      * Sets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appsSingleAppModeList property.
      */
     public void setAppsSingleAppModeList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.appsSingleAppModeList = value;
+        this.BackingStore.set("appsSingleAppModeList", value);
     }
     /**
      * Sets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
      * @param value Value to set for the appStoreBlockAutomaticDownloads property.
      */
     public void setAppStoreBlockAutomaticDownloads(@jakarta.annotation.Nullable final Boolean value) {
-        this.appStoreBlockAutomaticDownloads = value;
+        this.BackingStore.set("appStoreBlockAutomaticDownloads", value);
     }
     /**
      * Sets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the appStoreBlocked property.
      */
     public void setAppStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.appStoreBlocked = value;
+        this.BackingStore.set("appStoreBlocked", value);
     }
     /**
      * Sets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
      * @param value Value to set for the appStoreBlockInAppPurchases property.
      */
     public void setAppStoreBlockInAppPurchases(@jakarta.annotation.Nullable final Boolean value) {
-        this.appStoreBlockInAppPurchases = value;
+        this.BackingStore.set("appStoreBlockInAppPurchases", value);
     }
     /**
      * Sets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
      * @param value Value to set for the appStoreBlockUIAppInstallation property.
      */
     public void setAppStoreBlockUIAppInstallation(@jakarta.annotation.Nullable final Boolean value) {
-        this.appStoreBlockUIAppInstallation = value;
+        this.BackingStore.set("appStoreBlockUIAppInstallation", value);
     }
     /**
      * Sets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
      * @param value Value to set for the appStoreRequirePassword property.
      */
     public void setAppStoreRequirePassword(@jakarta.annotation.Nullable final Boolean value) {
-        this.appStoreRequirePassword = value;
+        this.BackingStore.set("appStoreRequirePassword", value);
     }
     /**
      * Sets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the appsVisibilityList property.
      */
     public void setAppsVisibilityList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.appsVisibilityList = value;
+        this.BackingStore.set("appsVisibilityList", value);
     }
     /**
      * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
      * @param value Value to set for the appsVisibilityListType property.
      */
     public void setAppsVisibilityListType(@jakarta.annotation.Nullable final AppListType value) {
-        this.appsVisibilityListType = value;
+        this.BackingStore.set("appsVisibilityListType", value);
     }
     /**
      * Sets the autoFillForceAuthentication property value. Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
      * @param value Value to set for the autoFillForceAuthentication property.
      */
     public void setAutoFillForceAuthentication(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoFillForceAuthentication = value;
+        this.BackingStore.set("autoFillForceAuthentication", value);
     }
     /**
      * Sets the autoUnlockBlocked property value. Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the autoUnlockBlocked property.
      */
     public void setAutoUnlockBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoUnlockBlocked = value;
+        this.BackingStore.set("autoUnlockBlocked", value);
     }
     /**
      * Sets the blockSystemAppRemoval property value. Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
      * @param value Value to set for the blockSystemAppRemoval property.
      */
     public void setBlockSystemAppRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockSystemAppRemoval = value;
+        this.BackingStore.set("blockSystemAppRemoval", value);
     }
     /**
      * Sets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
      * @param value Value to set for the bluetoothBlockModification property.
      */
     public void setBluetoothBlockModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.bluetoothBlockModification = value;
+        this.BackingStore.set("bluetoothBlockModification", value);
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the cameraBlocked property.
      */
     public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.cameraBlocked = value;
+        this.BackingStore.set("cameraBlocked", value);
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @param value Value to set for the cellularBlockDataRoaming property.
      */
     public void setCellularBlockDataRoaming(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockDataRoaming = value;
+        this.BackingStore.set("cellularBlockDataRoaming", value);
     }
     /**
      * Sets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
      * @param value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
      */
     public void setCellularBlockGlobalBackgroundFetchWhileRoaming(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockGlobalBackgroundFetchWhileRoaming = value;
+        this.BackingStore.set("cellularBlockGlobalBackgroundFetchWhileRoaming", value);
     }
     /**
      * Sets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
      * @param value Value to set for the cellularBlockPerAppDataModification property.
      */
     public void setCellularBlockPerAppDataModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockPerAppDataModification = value;
+        this.BackingStore.set("cellularBlockPerAppDataModification", value);
     }
     /**
      * Sets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
      * @param value Value to set for the cellularBlockPersonalHotspot property.
      */
     public void setCellularBlockPersonalHotspot(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockPersonalHotspot = value;
+        this.BackingStore.set("cellularBlockPersonalHotspot", value);
     }
     /**
      * Sets the cellularBlockPersonalHotspotModification property value. Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
      * @param value Value to set for the cellularBlockPersonalHotspotModification property.
      */
     public void setCellularBlockPersonalHotspotModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockPersonalHotspotModification = value;
+        this.BackingStore.set("cellularBlockPersonalHotspotModification", value);
     }
     /**
      * Sets the cellularBlockPlanModification property value. Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
      * @param value Value to set for the cellularBlockPlanModification property.
      */
     public void setCellularBlockPlanModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockPlanModification = value;
+        this.BackingStore.set("cellularBlockPlanModification", value);
     }
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
      * @param value Value to set for the cellularBlockVoiceRoaming property.
      */
     public void setCellularBlockVoiceRoaming(@jakarta.annotation.Nullable final Boolean value) {
-        this.cellularBlockVoiceRoaming = value;
+        this.BackingStore.set("cellularBlockVoiceRoaming", value);
     }
     /**
      * Sets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
      * @param value Value to set for the certificatesBlockUntrustedTlsCertificates property.
      */
     public void setCertificatesBlockUntrustedTlsCertificates(@jakarta.annotation.Nullable final Boolean value) {
-        this.certificatesBlockUntrustedTlsCertificates = value;
+        this.BackingStore.set("certificatesBlockUntrustedTlsCertificates", value);
     }
     /**
      * Sets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
      * @param value Value to set for the classroomAppBlockRemoteScreenObservation property.
      */
     public void setClassroomAppBlockRemoteScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
-        this.classroomAppBlockRemoteScreenObservation = value;
+        this.BackingStore.set("classroomAppBlockRemoteScreenObservation", value);
     }
     /**
      * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      */
     public void setClassroomAppForceUnpromptedScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
-        this.classroomAppForceUnpromptedScreenObservation = value;
+        this.BackingStore.set("classroomAppForceUnpromptedScreenObservation", value);
     }
     /**
      * Sets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student, when the device is in supervised mode.
      * @param value Value to set for the classroomForceAutomaticallyJoinClasses property.
      */
     public void setClassroomForceAutomaticallyJoinClasses(@jakarta.annotation.Nullable final Boolean value) {
-        this.classroomForceAutomaticallyJoinClasses = value;
+        this.BackingStore.set("classroomForceAutomaticallyJoinClasses", value);
     }
     /**
      * Sets the classroomForceRequestPermissionToLeaveClasses property value. Indicates whether a student enrolled in an unmanaged course via Classroom will request permission from the teacher when attempting to leave the course (iOS 11.3 and later).
      * @param value Value to set for the classroomForceRequestPermissionToLeaveClasses property.
      */
     public void setClassroomForceRequestPermissionToLeaveClasses(@jakarta.annotation.Nullable final Boolean value) {
-        this.classroomForceRequestPermissionToLeaveClasses = value;
+        this.BackingStore.set("classroomForceRequestPermissionToLeaveClasses", value);
     }
     /**
      * Sets the classroomForceUnpromptedAppAndDeviceLock property value. Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
      * @param value Value to set for the classroomForceUnpromptedAppAndDeviceLock property.
      */
     public void setClassroomForceUnpromptedAppAndDeviceLock(@jakarta.annotation.Nullable final Boolean value) {
-        this.classroomForceUnpromptedAppAndDeviceLock = value;
+        this.BackingStore.set("classroomForceUnpromptedAppAndDeviceLock", value);
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      */
     public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
-        this.compliantAppListType = value;
+        this.BackingStore.set("compliantAppListType", value);
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the compliantAppsList property.
      */
     public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.compliantAppsList = value;
+        this.BackingStore.set("compliantAppsList", value);
     }
     /**
      * Sets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
      * @param value Value to set for the configurationProfileBlockChanges property.
      */
     public void setConfigurationProfileBlockChanges(@jakarta.annotation.Nullable final Boolean value) {
-        this.configurationProfileBlockChanges = value;
+        this.BackingStore.set("configurationProfileBlockChanges", value);
     }
     /**
      * Sets the contactsAllowManagedToUnmanagedWrite property value. Indicates whether or not managed apps can write contacts to unmanaged contacts accounts (iOS 12.0 and later).
      * @param value Value to set for the contactsAllowManagedToUnmanagedWrite property.
      */
     public void setContactsAllowManagedToUnmanagedWrite(@jakarta.annotation.Nullable final Boolean value) {
-        this.contactsAllowManagedToUnmanagedWrite = value;
+        this.BackingStore.set("contactsAllowManagedToUnmanagedWrite", value);
     }
     /**
      * Sets the contactsAllowUnmanagedToManagedRead property value. Indicates whether or not unmanaged apps can read from managed contacts accounts (iOS 12.0 or later).
      * @param value Value to set for the contactsAllowUnmanagedToManagedRead property.
      */
     public void setContactsAllowUnmanagedToManagedRead(@jakarta.annotation.Nullable final Boolean value) {
-        this.contactsAllowUnmanagedToManagedRead = value;
+        this.BackingStore.set("contactsAllowUnmanagedToManagedRead", value);
     }
     /**
      * Sets the continuousPathKeyboardBlocked property value. Indicates whether or not to block the continuous path keyboard when the device is supervised (iOS 13 or later).
      * @param value Value to set for the continuousPathKeyboardBlocked property.
      */
     public void setContinuousPathKeyboardBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.continuousPathKeyboardBlocked = value;
+        this.BackingStore.set("continuousPathKeyboardBlocked", value);
     }
     /**
      * Sets the dateAndTimeForceSetAutomatically property value. Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
      * @param value Value to set for the dateAndTimeForceSetAutomatically property.
      */
     public void setDateAndTimeForceSetAutomatically(@jakarta.annotation.Nullable final Boolean value) {
-        this.dateAndTimeForceSetAutomatically = value;
+        this.BackingStore.set("dateAndTimeForceSetAutomatically", value);
     }
     /**
      * Sets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
      * @param value Value to set for the definitionLookupBlocked property.
      */
     public void setDefinitionLookupBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.definitionLookupBlocked = value;
+        this.BackingStore.set("definitionLookupBlocked", value);
     }
     /**
      * Sets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
      * @param value Value to set for the deviceBlockEnableRestrictions property.
      */
     public void setDeviceBlockEnableRestrictions(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceBlockEnableRestrictions = value;
+        this.BackingStore.set("deviceBlockEnableRestrictions", value);
     }
     /**
      * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
      * @param value Value to set for the deviceBlockEraseContentAndSettings property.
      */
     public void setDeviceBlockEraseContentAndSettings(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceBlockEraseContentAndSettings = value;
+        this.BackingStore.set("deviceBlockEraseContentAndSettings", value);
     }
     /**
      * Sets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
      * @param value Value to set for the deviceBlockNameModification property.
      */
     public void setDeviceBlockNameModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceBlockNameModification = value;
+        this.BackingStore.set("deviceBlockNameModification", value);
     }
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      */
     public void setDiagnosticDataBlockSubmission(@jakarta.annotation.Nullable final Boolean value) {
-        this.diagnosticDataBlockSubmission = value;
+        this.BackingStore.set("diagnosticDataBlockSubmission", value);
     }
     /**
      * Sets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
      * @param value Value to set for the diagnosticDataBlockSubmissionModification property.
      */
     public void setDiagnosticDataBlockSubmissionModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.diagnosticDataBlockSubmissionModification = value;
+        this.BackingStore.set("diagnosticDataBlockSubmissionModification", value);
     }
     /**
      * Sets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
      * @param value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
      */
     public void setDocumentsBlockManagedDocumentsInUnmanagedApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.documentsBlockManagedDocumentsInUnmanagedApps = value;
+        this.BackingStore.set("documentsBlockManagedDocumentsInUnmanagedApps", value);
     }
     /**
      * Sets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
      * @param value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
      */
     public void setDocumentsBlockUnmanagedDocumentsInManagedApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.documentsBlockUnmanagedDocumentsInManagedApps = value;
+        this.BackingStore.set("documentsBlockUnmanagedDocumentsInManagedApps", value);
     }
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      * @param value Value to set for the emailInDomainSuffixes property.
      */
     public void setEmailInDomainSuffixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.emailInDomainSuffixes = value;
+        this.BackingStore.set("emailInDomainSuffixes", value);
     }
     /**
      * Sets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
      * @param value Value to set for the enterpriseAppBlockTrust property.
      */
     public void setEnterpriseAppBlockTrust(@jakarta.annotation.Nullable final Boolean value) {
-        this.enterpriseAppBlockTrust = value;
+        this.BackingStore.set("enterpriseAppBlockTrust", value);
     }
     /**
      * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
      * @param value Value to set for the enterpriseAppBlockTrustModification property.
      */
     public void setEnterpriseAppBlockTrustModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.enterpriseAppBlockTrustModification = value;
+        this.BackingStore.set("enterpriseAppBlockTrustModification", value);
     }
     /**
      * Sets the enterpriseBookBlockBackup property value. Indicates whether or not Enterprise book back up is blocked.
      * @param value Value to set for the enterpriseBookBlockBackup property.
      */
     public void setEnterpriseBookBlockBackup(@jakarta.annotation.Nullable final Boolean value) {
-        this.enterpriseBookBlockBackup = value;
+        this.BackingStore.set("enterpriseBookBlockBackup", value);
     }
     /**
      * Sets the enterpriseBookBlockMetadataSync property value. Indicates whether or not Enterprise book notes and highlights sync is blocked.
      * @param value Value to set for the enterpriseBookBlockMetadataSync property.
      */
     public void setEnterpriseBookBlockMetadataSync(@jakarta.annotation.Nullable final Boolean value) {
-        this.enterpriseBookBlockMetadataSync = value;
+        this.BackingStore.set("enterpriseBookBlockMetadataSync", value);
     }
     /**
      * Sets the esimBlockModification property value. Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
      * @param value Value to set for the esimBlockModification property.
      */
     public void setEsimBlockModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.esimBlockModification = value;
+        this.BackingStore.set("esimBlockModification", value);
     }
     /**
      * Sets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the faceTimeBlocked property.
      */
     public void setFaceTimeBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.faceTimeBlocked = value;
+        this.BackingStore.set("faceTimeBlocked", value);
     }
     /**
      * Sets the filesNetworkDriveAccessBlocked property value. Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
      * @param value Value to set for the filesNetworkDriveAccessBlocked property.
      */
     public void setFilesNetworkDriveAccessBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.filesNetworkDriveAccessBlocked = value;
+        this.BackingStore.set("filesNetworkDriveAccessBlocked", value);
     }
     /**
      * Sets the filesUsbDriveAccessBlocked property value. Indicates if sevices with access can connect to and open files on a USB drive. Available for devices running iOS and iPadOS, versions 13.0 and later.
      * @param value Value to set for the filesUsbDriveAccessBlocked property.
      */
     public void setFilesUsbDriveAccessBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.filesUsbDriveAccessBlocked = value;
+        this.BackingStore.set("filesUsbDriveAccessBlocked", value);
     }
     /**
      * Sets the findMyDeviceInFindMyAppBlocked property value. Indicates whether or not to block Find My Device when the device is supervised (iOS 13 or later).
      * @param value Value to set for the findMyDeviceInFindMyAppBlocked property.
      */
     public void setFindMyDeviceInFindMyAppBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.findMyDeviceInFindMyAppBlocked = value;
+        this.BackingStore.set("findMyDeviceInFindMyAppBlocked", value);
     }
     /**
      * Sets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
      * @param value Value to set for the findMyFriendsBlocked property.
      */
     public void setFindMyFriendsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.findMyFriendsBlocked = value;
+        this.BackingStore.set("findMyFriendsBlocked", value);
     }
     /**
      * Sets the findMyFriendsInFindMyAppBlocked property value. Indicates whether or not to block Find My Friends when the device is supervised (iOS 13 or later).
      * @param value Value to set for the findMyFriendsInFindMyAppBlocked property.
      */
     public void setFindMyFriendsInFindMyAppBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.findMyFriendsInFindMyAppBlocked = value;
+        this.BackingStore.set("findMyFriendsInFindMyAppBlocked", value);
     }
     /**
      * Sets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
      * @param value Value to set for the gameCenterBlocked property.
      */
     public void setGameCenterBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.gameCenterBlocked = value;
+        this.BackingStore.set("gameCenterBlocked", value);
     }
     /**
      * Sets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the gamingBlockGameCenterFriends property.
      */
     public void setGamingBlockGameCenterFriends(@jakarta.annotation.Nullable final Boolean value) {
-        this.gamingBlockGameCenterFriends = value;
+        this.BackingStore.set("gamingBlockGameCenterFriends", value);
     }
     /**
      * Sets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the gamingBlockMultiplayer property.
      */
     public void setGamingBlockMultiplayer(@jakarta.annotation.Nullable final Boolean value) {
-        this.gamingBlockMultiplayer = value;
+        this.BackingStore.set("gamingBlockMultiplayer", value);
     }
     /**
      * Sets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
      * @param value Value to set for the hostPairingBlocked property.
      */
     public void setHostPairingBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.hostPairingBlocked = value;
+        this.BackingStore.set("hostPairingBlocked", value);
     }
     /**
      * Sets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
      * @param value Value to set for the iBooksStoreBlocked property.
      */
     public void setIBooksStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.iBooksStoreBlocked = value;
+        this.BackingStore.set("iBooksStoreBlocked", value);
     }
     /**
      * Sets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
      * @param value Value to set for the iBooksStoreBlockErotica property.
      */
     public void setIBooksStoreBlockErotica(@jakarta.annotation.Nullable final Boolean value) {
-        this.iBooksStoreBlockErotica = value;
+        this.BackingStore.set("iBooksStoreBlockErotica", value);
     }
     /**
      * Sets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
      * @param value Value to set for the iCloudBlockActivityContinuation property.
      */
     public void setICloudBlockActivityContinuation(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockActivityContinuation = value;
+        this.BackingStore.set("iCloudBlockActivityContinuation", value);
     }
     /**
      * Sets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the iCloudBlockBackup property.
      */
     public void setICloudBlockBackup(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockBackup = value;
+        this.BackingStore.set("iCloudBlockBackup", value);
     }
     /**
      * Sets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the iCloudBlockDocumentSync property.
      */
     public void setICloudBlockDocumentSync(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockDocumentSync = value;
+        this.BackingStore.set("iCloudBlockDocumentSync", value);
     }
     /**
      * Sets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
      * @param value Value to set for the iCloudBlockManagedAppsSync property.
      */
     public void setICloudBlockManagedAppsSync(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockManagedAppsSync = value;
+        this.BackingStore.set("iCloudBlockManagedAppsSync", value);
     }
     /**
      * Sets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
      * @param value Value to set for the iCloudBlockPhotoLibrary property.
      */
     public void setICloudBlockPhotoLibrary(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockPhotoLibrary = value;
+        this.BackingStore.set("iCloudBlockPhotoLibrary", value);
     }
     /**
      * Sets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
      * @param value Value to set for the iCloudBlockPhotoStreamSync property.
      */
     public void setICloudBlockPhotoStreamSync(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockPhotoStreamSync = value;
+        this.BackingStore.set("iCloudBlockPhotoStreamSync", value);
     }
     /**
      * Sets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
      * @param value Value to set for the iCloudBlockSharedPhotoStream property.
      */
     public void setICloudBlockSharedPhotoStream(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudBlockSharedPhotoStream = value;
+        this.BackingStore.set("iCloudBlockSharedPhotoStream", value);
     }
     /**
      * Sets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
      * @param value Value to set for the iCloudPrivateRelayBlocked property.
      */
     public void setICloudPrivateRelayBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudPrivateRelayBlocked = value;
+        this.BackingStore.set("iCloudPrivateRelayBlocked", value);
     }
     /**
      * Sets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
      * @param value Value to set for the iCloudRequireEncryptedBackup property.
      */
     public void setICloudRequireEncryptedBackup(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudRequireEncryptedBackup = value;
+        this.BackingStore.set("iCloudRequireEncryptedBackup", value);
     }
     /**
      * Sets the iTunesBlocked property value. Indicates whether or not to block the iTunes app. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the iTunesBlocked property.
      */
     public void setITunesBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.iTunesBlocked = value;
+        this.BackingStore.set("iTunesBlocked", value);
     }
     /**
      * Sets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the iTunesBlockExplicitContent property.
      */
     public void setITunesBlockExplicitContent(@jakarta.annotation.Nullable final Boolean value) {
-        this.iTunesBlockExplicitContent = value;
+        this.BackingStore.set("iTunesBlockExplicitContent", value);
     }
     /**
      * Sets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
      * @param value Value to set for the iTunesBlockMusicService property.
      */
     public void setITunesBlockMusicService(@jakarta.annotation.Nullable final Boolean value) {
-        this.iTunesBlockMusicService = value;
+        this.BackingStore.set("iTunesBlockMusicService", value);
     }
     /**
      * Sets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
      * @param value Value to set for the iTunesBlockRadio property.
      */
     public void setITunesBlockRadio(@jakarta.annotation.Nullable final Boolean value) {
-        this.iTunesBlockRadio = value;
+        this.BackingStore.set("iTunesBlockRadio", value);
     }
     /**
      * Sets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
      * @param value Value to set for the keyboardBlockAutoCorrect property.
      */
     public void setKeyboardBlockAutoCorrect(@jakarta.annotation.Nullable final Boolean value) {
-        this.keyboardBlockAutoCorrect = value;
+        this.BackingStore.set("keyboardBlockAutoCorrect", value);
     }
     /**
      * Sets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
      * @param value Value to set for the keyboardBlockDictation property.
      */
     public void setKeyboardBlockDictation(@jakarta.annotation.Nullable final Boolean value) {
-        this.keyboardBlockDictation = value;
+        this.BackingStore.set("keyboardBlockDictation", value);
     }
     /**
      * Sets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
      * @param value Value to set for the keyboardBlockPredictive property.
      */
     public void setKeyboardBlockPredictive(@jakarta.annotation.Nullable final Boolean value) {
-        this.keyboardBlockPredictive = value;
+        this.BackingStore.set("keyboardBlockPredictive", value);
     }
     /**
      * Sets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
      * @param value Value to set for the keyboardBlockShortcuts property.
      */
     public void setKeyboardBlockShortcuts(@jakarta.annotation.Nullable final Boolean value) {
-        this.keyboardBlockShortcuts = value;
+        this.BackingStore.set("keyboardBlockShortcuts", value);
     }
     /**
      * Sets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
      * @param value Value to set for the keyboardBlockSpellCheck property.
      */
     public void setKeyboardBlockSpellCheck(@jakarta.annotation.Nullable final Boolean value) {
-        this.keyboardBlockSpellCheck = value;
+        this.BackingStore.set("keyboardBlockSpellCheck", value);
     }
     /**
      * Sets the keychainBlockCloudSync property value. Indicates whether or not iCloud keychain synchronization is blocked. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the keychainBlockCloudSync property.
      */
     public void setKeychainBlockCloudSync(@jakarta.annotation.Nullable final Boolean value) {
-        this.keychainBlockCloudSync = value;
+        this.BackingStore.set("keychainBlockCloudSync", value);
     }
     /**
      * Sets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
      * @param value Value to set for the kioskModeAllowAssistiveSpeak property.
      */
     public void setKioskModeAllowAssistiveSpeak(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowAssistiveSpeak = value;
+        this.BackingStore.set("kioskModeAllowAssistiveSpeak", value);
     }
     /**
      * Sets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
      * @param value Value to set for the kioskModeAllowAssistiveTouchSettings property.
      */
     public void setKioskModeAllowAssistiveTouchSettings(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowAssistiveTouchSettings = value;
+        this.BackingStore.set("kioskModeAllowAssistiveTouchSettings", value);
     }
     /**
      * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
      * @param value Value to set for the kioskModeAllowAutoLock property.
      */
     public void setKioskModeAllowAutoLock(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowAutoLock = value;
+        this.BackingStore.set("kioskModeAllowAutoLock", value);
     }
     /**
      * Sets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
      * @param value Value to set for the kioskModeAllowColorInversionSettings property.
      */
     public void setKioskModeAllowColorInversionSettings(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowColorInversionSettings = value;
+        this.BackingStore.set("kioskModeAllowColorInversionSettings", value);
     }
     /**
      * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
      * @param value Value to set for the kioskModeAllowRingerSwitch property.
      */
     public void setKioskModeAllowRingerSwitch(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowRingerSwitch = value;
+        this.BackingStore.set("kioskModeAllowRingerSwitch", value);
     }
     /**
      * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
      * @param value Value to set for the kioskModeAllowScreenRotation property.
      */
     public void setKioskModeAllowScreenRotation(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowScreenRotation = value;
+        this.BackingStore.set("kioskModeAllowScreenRotation", value);
     }
     /**
      * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
      * @param value Value to set for the kioskModeAllowSleepButton property.
      */
     public void setKioskModeAllowSleepButton(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowSleepButton = value;
+        this.BackingStore.set("kioskModeAllowSleepButton", value);
     }
     /**
      * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
      * @param value Value to set for the kioskModeAllowTouchscreen property.
      */
     public void setKioskModeAllowTouchscreen(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowTouchscreen = value;
+        this.BackingStore.set("kioskModeAllowTouchscreen", value);
     }
     /**
      * Sets the kioskModeAllowVoiceControlModification property value. Indicates whether or not to allow the user to toggle voice control in kiosk mode.
      * @param value Value to set for the kioskModeAllowVoiceControlModification property.
      */
     public void setKioskModeAllowVoiceControlModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowVoiceControlModification = value;
+        this.BackingStore.set("kioskModeAllowVoiceControlModification", value);
     }
     /**
      * Sets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
      * @param value Value to set for the kioskModeAllowVoiceOverSettings property.
      */
     public void setKioskModeAllowVoiceOverSettings(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowVoiceOverSettings = value;
+        this.BackingStore.set("kioskModeAllowVoiceOverSettings", value);
     }
     /**
      * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
      * @param value Value to set for the kioskModeAllowVolumeButtons property.
      */
     public void setKioskModeAllowVolumeButtons(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowVolumeButtons = value;
+        this.BackingStore.set("kioskModeAllowVolumeButtons", value);
     }
     /**
      * Sets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
      * @param value Value to set for the kioskModeAllowZoomSettings property.
      */
     public void setKioskModeAllowZoomSettings(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeAllowZoomSettings = value;
+        this.BackingStore.set("kioskModeAllowZoomSettings", value);
     }
     /**
      * Sets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
      * @param value Value to set for the kioskModeAppStoreUrl property.
      */
     public void setKioskModeAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.kioskModeAppStoreUrl = value;
+        this.BackingStore.set("kioskModeAppStoreUrl", value);
     }
     /**
      * Sets the kioskModeAppType property value. App source options for iOS kiosk mode.
      * @param value Value to set for the kioskModeAppType property.
      */
     public void setKioskModeAppType(@jakarta.annotation.Nullable final IosKioskModeAppType value) {
-        this.kioskModeAppType = value;
+        this.BackingStore.set("kioskModeAppType", value);
     }
     /**
      * Sets the kioskModeBlockAutoLock property value. Indicates whether or not to block device auto lock while in kiosk mode.
      * @param value Value to set for the kioskModeBlockAutoLock property.
      */
     public void setKioskModeBlockAutoLock(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockAutoLock = value;
+        this.BackingStore.set("kioskModeBlockAutoLock", value);
     }
     /**
      * Sets the kioskModeBlockRingerSwitch property value. Indicates whether or not to block use of the ringer switch while in kiosk mode.
      * @param value Value to set for the kioskModeBlockRingerSwitch property.
      */
     public void setKioskModeBlockRingerSwitch(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockRingerSwitch = value;
+        this.BackingStore.set("kioskModeBlockRingerSwitch", value);
     }
     /**
      * Sets the kioskModeBlockScreenRotation property value. Indicates whether or not to block screen rotation while in kiosk mode.
      * @param value Value to set for the kioskModeBlockScreenRotation property.
      */
     public void setKioskModeBlockScreenRotation(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockScreenRotation = value;
+        this.BackingStore.set("kioskModeBlockScreenRotation", value);
     }
     /**
      * Sets the kioskModeBlockSleepButton property value. Indicates whether or not to block use of the sleep button while in kiosk mode.
      * @param value Value to set for the kioskModeBlockSleepButton property.
      */
     public void setKioskModeBlockSleepButton(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockSleepButton = value;
+        this.BackingStore.set("kioskModeBlockSleepButton", value);
     }
     /**
      * Sets the kioskModeBlockTouchscreen property value. Indicates whether or not to block use of the touchscreen while in kiosk mode.
      * @param value Value to set for the kioskModeBlockTouchscreen property.
      */
     public void setKioskModeBlockTouchscreen(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockTouchscreen = value;
+        this.BackingStore.set("kioskModeBlockTouchscreen", value);
     }
     /**
      * Sets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
      * @param value Value to set for the kioskModeBlockVolumeButtons property.
      */
     public void setKioskModeBlockVolumeButtons(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeBlockVolumeButtons = value;
+        this.BackingStore.set("kioskModeBlockVolumeButtons", value);
     }
     /**
      * Sets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      * @param value Value to set for the kioskModeBuiltInAppId property.
      */
     public void setKioskModeBuiltInAppId(@jakarta.annotation.Nullable final String value) {
-        this.kioskModeBuiltInAppId = value;
+        this.BackingStore.set("kioskModeBuiltInAppId", value);
     }
     /**
      * Sets the kioskModeEnableVoiceControl property value. Indicates whether or not to enable voice control in kiosk mode.
      * @param value Value to set for the kioskModeEnableVoiceControl property.
      */
     public void setKioskModeEnableVoiceControl(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeEnableVoiceControl = value;
+        this.BackingStore.set("kioskModeEnableVoiceControl", value);
     }
     /**
      * Sets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
      * @param value Value to set for the kioskModeManagedAppId property.
      */
     public void setKioskModeManagedAppId(@jakarta.annotation.Nullable final String value) {
-        this.kioskModeManagedAppId = value;
+        this.BackingStore.set("kioskModeManagedAppId", value);
     }
     /**
      * Sets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
      * @param value Value to set for the kioskModeRequireAssistiveTouch property.
      */
     public void setKioskModeRequireAssistiveTouch(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeRequireAssistiveTouch = value;
+        this.BackingStore.set("kioskModeRequireAssistiveTouch", value);
     }
     /**
      * Sets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
      * @param value Value to set for the kioskModeRequireColorInversion property.
      */
     public void setKioskModeRequireColorInversion(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeRequireColorInversion = value;
+        this.BackingStore.set("kioskModeRequireColorInversion", value);
     }
     /**
      * Sets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
      * @param value Value to set for the kioskModeRequireMonoAudio property.
      */
     public void setKioskModeRequireMonoAudio(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeRequireMonoAudio = value;
+        this.BackingStore.set("kioskModeRequireMonoAudio", value);
     }
     /**
      * Sets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
      * @param value Value to set for the kioskModeRequireVoiceOver property.
      */
     public void setKioskModeRequireVoiceOver(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeRequireVoiceOver = value;
+        this.BackingStore.set("kioskModeRequireVoiceOver", value);
     }
     /**
      * Sets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
      * @param value Value to set for the kioskModeRequireZoom property.
      */
     public void setKioskModeRequireZoom(@jakarta.annotation.Nullable final Boolean value) {
-        this.kioskModeRequireZoom = value;
+        this.BackingStore.set("kioskModeRequireZoom", value);
     }
     /**
      * Sets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
      * @param value Value to set for the lockScreenBlockControlCenter property.
      */
     public void setLockScreenBlockControlCenter(@jakarta.annotation.Nullable final Boolean value) {
-        this.lockScreenBlockControlCenter = value;
+        this.BackingStore.set("lockScreenBlockControlCenter", value);
     }
     /**
      * Sets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
      * @param value Value to set for the lockScreenBlockNotificationView property.
      */
     public void setLockScreenBlockNotificationView(@jakarta.annotation.Nullable final Boolean value) {
-        this.lockScreenBlockNotificationView = value;
+        this.BackingStore.set("lockScreenBlockNotificationView", value);
     }
     /**
      * Sets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
      * @param value Value to set for the lockScreenBlockPassbook property.
      */
     public void setLockScreenBlockPassbook(@jakarta.annotation.Nullable final Boolean value) {
-        this.lockScreenBlockPassbook = value;
+        this.BackingStore.set("lockScreenBlockPassbook", value);
     }
     /**
      * Sets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
      * @param value Value to set for the lockScreenBlockTodayView property.
      */
     public void setLockScreenBlockTodayView(@jakarta.annotation.Nullable final Boolean value) {
-        this.lockScreenBlockTodayView = value;
+        this.BackingStore.set("lockScreenBlockTodayView", value);
     }
     /**
      * Sets the managedPasteboardRequired property value. Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.
      * @param value Value to set for the managedPasteboardRequired property.
      */
     public void setManagedPasteboardRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.managedPasteboardRequired = value;
+        this.BackingStore.set("managedPasteboardRequired", value);
     }
     /**
      * Sets the mediaContentRatingApps property value. Apps rating as in media content
      * @param value Value to set for the mediaContentRatingApps property.
      */
     public void setMediaContentRatingApps(@jakarta.annotation.Nullable final RatingAppsType value) {
-        this.mediaContentRatingApps = value;
+        this.BackingStore.set("mediaContentRatingApps", value);
     }
     /**
      * Sets the mediaContentRatingAustralia property value. Media content rating settings for Australia
      * @param value Value to set for the mediaContentRatingAustralia property.
      */
     public void setMediaContentRatingAustralia(@jakarta.annotation.Nullable final MediaContentRatingAustralia value) {
-        this.mediaContentRatingAustralia = value;
+        this.BackingStore.set("mediaContentRatingAustralia", value);
     }
     /**
      * Sets the mediaContentRatingCanada property value. Media content rating settings for Canada
      * @param value Value to set for the mediaContentRatingCanada property.
      */
     public void setMediaContentRatingCanada(@jakarta.annotation.Nullable final MediaContentRatingCanada value) {
-        this.mediaContentRatingCanada = value;
+        this.BackingStore.set("mediaContentRatingCanada", value);
     }
     /**
      * Sets the mediaContentRatingFrance property value. Media content rating settings for France
      * @param value Value to set for the mediaContentRatingFrance property.
      */
     public void setMediaContentRatingFrance(@jakarta.annotation.Nullable final MediaContentRatingFrance value) {
-        this.mediaContentRatingFrance = value;
+        this.BackingStore.set("mediaContentRatingFrance", value);
     }
     /**
      * Sets the mediaContentRatingGermany property value. Media content rating settings for Germany
      * @param value Value to set for the mediaContentRatingGermany property.
      */
     public void setMediaContentRatingGermany(@jakarta.annotation.Nullable final MediaContentRatingGermany value) {
-        this.mediaContentRatingGermany = value;
+        this.BackingStore.set("mediaContentRatingGermany", value);
     }
     /**
      * Sets the mediaContentRatingIreland property value. Media content rating settings for Ireland
      * @param value Value to set for the mediaContentRatingIreland property.
      */
     public void setMediaContentRatingIreland(@jakarta.annotation.Nullable final MediaContentRatingIreland value) {
-        this.mediaContentRatingIreland = value;
+        this.BackingStore.set("mediaContentRatingIreland", value);
     }
     /**
      * Sets the mediaContentRatingJapan property value. Media content rating settings for Japan
      * @param value Value to set for the mediaContentRatingJapan property.
      */
     public void setMediaContentRatingJapan(@jakarta.annotation.Nullable final MediaContentRatingJapan value) {
-        this.mediaContentRatingJapan = value;
+        this.BackingStore.set("mediaContentRatingJapan", value);
     }
     /**
      * Sets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
      * @param value Value to set for the mediaContentRatingNewZealand property.
      */
     public void setMediaContentRatingNewZealand(@jakarta.annotation.Nullable final MediaContentRatingNewZealand value) {
-        this.mediaContentRatingNewZealand = value;
+        this.BackingStore.set("mediaContentRatingNewZealand", value);
     }
     /**
      * Sets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
      * @param value Value to set for the mediaContentRatingUnitedKingdom property.
      */
     public void setMediaContentRatingUnitedKingdom(@jakarta.annotation.Nullable final MediaContentRatingUnitedKingdom value) {
-        this.mediaContentRatingUnitedKingdom = value;
+        this.BackingStore.set("mediaContentRatingUnitedKingdom", value);
     }
     /**
      * Sets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
      * @param value Value to set for the mediaContentRatingUnitedStates property.
      */
     public void setMediaContentRatingUnitedStates(@jakarta.annotation.Nullable final MediaContentRatingUnitedStates value) {
-        this.mediaContentRatingUnitedStates = value;
+        this.BackingStore.set("mediaContentRatingUnitedStates", value);
     }
     /**
      * Sets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
      * @param value Value to set for the messagesBlocked property.
      */
     public void setMessagesBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.messagesBlocked = value;
+        this.BackingStore.set("messagesBlocked", value);
     }
     /**
      * Sets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the networkUsageRules property.
      */
     public void setNetworkUsageRules(@jakarta.annotation.Nullable final java.util.List<IosNetworkUsageRule> value) {
-        this.networkUsageRules = value;
+        this.BackingStore.set("networkUsageRules", value);
     }
     /**
      * Sets the nfcBlocked property value. Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
      * @param value Value to set for the nfcBlocked property.
      */
     public void setNfcBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.nfcBlocked = value;
+        this.BackingStore.set("nfcBlocked", value);
     }
     /**
      * Sets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
      * @param value Value to set for the notificationsBlockSettingsModification property.
      */
     public void setNotificationsBlockSettingsModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.notificationsBlockSettingsModification = value;
+        this.BackingStore.set("notificationsBlockSettingsModification", value);
     }
     /**
      * Sets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the onDeviceOnlyDictationForced property.
      */
     public void setOnDeviceOnlyDictationForced(@jakarta.annotation.Nullable final Boolean value) {
-        this.onDeviceOnlyDictationForced = value;
+        this.BackingStore.set("onDeviceOnlyDictationForced", value);
     }
     /**
      * Sets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
      * @param value Value to set for the onDeviceOnlyTranslationForced property.
      */
     public void setOnDeviceOnlyTranslationForced(@jakarta.annotation.Nullable final Boolean value) {
-        this.onDeviceOnlyTranslationForced = value;
+        this.BackingStore.set("onDeviceOnlyTranslationForced", value);
     }
     /**
      * Sets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
      * @param value Value to set for the passcodeBlockFingerprintModification property.
      */
     public void setPasscodeBlockFingerprintModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.passcodeBlockFingerprintModification = value;
+        this.BackingStore.set("passcodeBlockFingerprintModification", value);
     }
     /**
      * Sets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      * @param value Value to set for the passcodeBlockFingerprintUnlock property.
      */
     public void setPasscodeBlockFingerprintUnlock(@jakarta.annotation.Nullable final Boolean value) {
-        this.passcodeBlockFingerprintUnlock = value;
+        this.BackingStore.set("passcodeBlockFingerprintUnlock", value);
     }
     /**
      * Sets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
      * @param value Value to set for the passcodeBlockModification property.
      */
     public void setPasscodeBlockModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.passcodeBlockModification = value;
+        this.BackingStore.set("passcodeBlockModification", value);
     }
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
      * @param value Value to set for the passcodeBlockSimple property.
      */
     public void setPasscodeBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passcodeBlockSimple = value;
+        this.BackingStore.set("passcodeBlockSimple", value);
     }
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
      * @param value Value to set for the passcodeExpirationDays property.
      */
     public void setPasscodeExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeExpirationDays = value;
+        this.BackingStore.set("passcodeExpirationDays", value);
     }
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
      */
     public void setPasscodeMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeMinimumCharacterSetCount = value;
+        this.BackingStore.set("passcodeMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
      * @param value Value to set for the passcodeMinimumLength property.
      */
     public void setPasscodeMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeMinimumLength = value;
+        this.BackingStore.set("passcodeMinimumLength", value);
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
      */
     public void setPasscodeMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeMinutesOfInactivityBeforeLock = value;
+        this.BackingStore.set("passcodeMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
      */
     public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeMinutesOfInactivityBeforeScreenTimeout = value;
+        this.BackingStore.set("passcodeMinutesOfInactivityBeforeScreenTimeout", value);
     }
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
      */
     public void setPasscodePreviousPasscodeBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodePreviousPasscodeBlockCount = value;
+        this.BackingStore.set("passcodePreviousPasscodeBlockCount", value);
     }
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
      * @param value Value to set for the passcodeRequired property.
      */
     public void setPasscodeRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passcodeRequired = value;
+        this.BackingStore.set("passcodeRequired", value);
     }
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passcodeRequiredType property.
      */
     public void setPasscodeRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passcodeRequiredType = value;
+        this.BackingStore.set("passcodeRequiredType", value);
     }
     /**
      * Sets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
      * @param value Value to set for the passcodeSignInFailureCountBeforeWipe property.
      */
     public void setPasscodeSignInFailureCountBeforeWipe(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeSignInFailureCountBeforeWipe = value;
+        this.BackingStore.set("passcodeSignInFailureCountBeforeWipe", value);
     }
     /**
      * Sets the passwordBlockAirDropSharing property value. Indicates whether or not to block sharing passwords with the AirDrop passwords feature iOS 12.0 and later).
      * @param value Value to set for the passwordBlockAirDropSharing property.
      */
     public void setPasswordBlockAirDropSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockAirDropSharing = value;
+        this.BackingStore.set("passwordBlockAirDropSharing", value);
     }
     /**
      * Sets the passwordBlockAutoFill property value. Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).
      * @param value Value to set for the passwordBlockAutoFill property.
      */
     public void setPasswordBlockAutoFill(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockAutoFill = value;
+        this.BackingStore.set("passwordBlockAutoFill", value);
     }
     /**
      * Sets the passwordBlockProximityRequests property value. Indicates whether or not to block requesting passwords from nearby devices (iOS 12.0 and later).
      * @param value Value to set for the passwordBlockProximityRequests property.
      */
     public void setPasswordBlockProximityRequests(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockProximityRequests = value;
+        this.BackingStore.set("passwordBlockProximityRequests", value);
     }
     /**
      * Sets the pkiBlockOTAUpdates property value. Indicates whether or not over-the-air PKI updates are blocked. Setting this restriction to false does not disable CRL and OCSP checks (iOS 7.0 and later).
      * @param value Value to set for the pkiBlockOTAUpdates property.
      */
     public void setPkiBlockOTAUpdates(@jakarta.annotation.Nullable final Boolean value) {
-        this.pkiBlockOTAUpdates = value;
+        this.BackingStore.set("pkiBlockOTAUpdates", value);
     }
     /**
      * Sets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
      * @param value Value to set for the podcastsBlocked property.
      */
     public void setPodcastsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.podcastsBlocked = value;
+        this.BackingStore.set("podcastsBlocked", value);
     }
     /**
      * Sets the privacyForceLimitAdTracking property value. Indicates if ad tracking is limited.(iOS 7.0 and later).
      * @param value Value to set for the privacyForceLimitAdTracking property.
      */
     public void setPrivacyForceLimitAdTracking(@jakarta.annotation.Nullable final Boolean value) {
-        this.privacyForceLimitAdTracking = value;
+        this.BackingStore.set("privacyForceLimitAdTracking", value);
     }
     /**
      * Sets the proximityBlockSetupToNewDevice property value. Indicates whether or not to enable the prompt to setup nearby devices with a supervised device.
      * @param value Value to set for the proximityBlockSetupToNewDevice property.
      */
     public void setProximityBlockSetupToNewDevice(@jakarta.annotation.Nullable final Boolean value) {
-        this.proximityBlockSetupToNewDevice = value;
+        this.BackingStore.set("proximityBlockSetupToNewDevice", value);
     }
     /**
      * Sets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the safariBlockAutofill property.
      */
     public void setSafariBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
-        this.safariBlockAutofill = value;
+        this.BackingStore.set("safariBlockAutofill", value);
     }
     /**
      * Sets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
      * @param value Value to set for the safariBlocked property.
      */
     public void setSafariBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.safariBlocked = value;
+        this.BackingStore.set("safariBlocked", value);
     }
     /**
      * Sets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
      * @param value Value to set for the safariBlockJavaScript property.
      */
     public void setSafariBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
-        this.safariBlockJavaScript = value;
+        this.BackingStore.set("safariBlockJavaScript", value);
     }
     /**
      * Sets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
      * @param value Value to set for the safariBlockPopups property.
      */
     public void setSafariBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
-        this.safariBlockPopups = value;
+        this.BackingStore.set("safariBlockPopups", value);
     }
     /**
      * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
      * @param value Value to set for the safariCookieSettings property.
      */
     public void setSafariCookieSettings(@jakarta.annotation.Nullable final WebBrowserCookieSettings value) {
-        this.safariCookieSettings = value;
+        this.BackingStore.set("safariCookieSettings", value);
     }
     /**
      * Sets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
      * @param value Value to set for the safariManagedDomains property.
      */
     public void setSafariManagedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.safariManagedDomains = value;
+        this.BackingStore.set("safariManagedDomains", value);
     }
     /**
      * Sets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
      * @param value Value to set for the safariPasswordAutoFillDomains property.
      */
     public void setSafariPasswordAutoFillDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.safariPasswordAutoFillDomains = value;
+        this.BackingStore.set("safariPasswordAutoFillDomains", value);
     }
     /**
      * Sets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
      * @param value Value to set for the safariRequireFraudWarning property.
      */
     public void setSafariRequireFraudWarning(@jakarta.annotation.Nullable final Boolean value) {
-        this.safariRequireFraudWarning = value;
+        this.BackingStore.set("safariRequireFraudWarning", value);
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
      */
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.screenCaptureBlocked = value;
+        this.BackingStore.set("screenCaptureBlocked", value);
     }
     /**
      * Sets the sharedDeviceBlockTemporarySessions property value. Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 or later).
      * @param value Value to set for the sharedDeviceBlockTemporarySessions property.
      */
     public void setSharedDeviceBlockTemporarySessions(@jakarta.annotation.Nullable final Boolean value) {
-        this.sharedDeviceBlockTemporarySessions = value;
+        this.BackingStore.set("sharedDeviceBlockTemporarySessions", value);
     }
     /**
      * Sets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
      * @param value Value to set for the siriBlocked property.
      */
     public void setSiriBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.siriBlocked = value;
+        this.BackingStore.set("siriBlocked", value);
     }
     /**
      * Sets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
      * @param value Value to set for the siriBlockedWhenLocked property.
      */
     public void setSiriBlockedWhenLocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.siriBlockedWhenLocked = value;
+        this.BackingStore.set("siriBlockedWhenLocked", value);
     }
     /**
      * Sets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
      * @param value Value to set for the siriBlockUserGeneratedContent property.
      */
     public void setSiriBlockUserGeneratedContent(@jakarta.annotation.Nullable final Boolean value) {
-        this.siriBlockUserGeneratedContent = value;
+        this.BackingStore.set("siriBlockUserGeneratedContent", value);
     }
     /**
      * Sets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
      * @param value Value to set for the siriRequireProfanityFilter property.
      */
     public void setSiriRequireProfanityFilter(@jakarta.annotation.Nullable final Boolean value) {
-        this.siriRequireProfanityFilter = value;
+        this.BackingStore.set("siriRequireProfanityFilter", value);
     }
     /**
      * Sets the softwareUpdatesEnforcedDelayInDays property value. Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
      * @param value Value to set for the softwareUpdatesEnforcedDelayInDays property.
      */
     public void setSoftwareUpdatesEnforcedDelayInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.softwareUpdatesEnforcedDelayInDays = value;
+        this.BackingStore.set("softwareUpdatesEnforcedDelayInDays", value);
     }
     /**
      * Sets the softwareUpdatesForceDelayed property value. Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
      * @param value Value to set for the softwareUpdatesForceDelayed property.
      */
     public void setSoftwareUpdatesForceDelayed(@jakarta.annotation.Nullable final Boolean value) {
-        this.softwareUpdatesForceDelayed = value;
+        this.BackingStore.set("softwareUpdatesForceDelayed", value);
     }
     /**
      * Sets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
      * @param value Value to set for the spotlightBlockInternetResults property.
      */
     public void setSpotlightBlockInternetResults(@jakarta.annotation.Nullable final Boolean value) {
-        this.spotlightBlockInternetResults = value;
+        this.BackingStore.set("spotlightBlockInternetResults", value);
     }
     /**
      * Sets the unpairedExternalBootToRecoveryAllowed property value. Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the unpairedExternalBootToRecoveryAllowed property.
      */
     public void setUnpairedExternalBootToRecoveryAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.unpairedExternalBootToRecoveryAllowed = value;
+        this.BackingStore.set("unpairedExternalBootToRecoveryAllowed", value);
     }
     /**
      * Sets the usbRestrictedModeBlocked property value. Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
      * @param value Value to set for the usbRestrictedModeBlocked property.
      */
     public void setUsbRestrictedModeBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.usbRestrictedModeBlocked = value;
+        this.BackingStore.set("usbRestrictedModeBlocked", value);
     }
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
      * @param value Value to set for the voiceDialingBlocked property.
      */
     public void setVoiceDialingBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.voiceDialingBlocked = value;
+        this.BackingStore.set("voiceDialingBlocked", value);
     }
     /**
      * Sets the vpnBlockCreation property value. Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0 and later).
      * @param value Value to set for the vpnBlockCreation property.
      */
     public void setVpnBlockCreation(@jakarta.annotation.Nullable final Boolean value) {
-        this.vpnBlockCreation = value;
+        this.BackingStore.set("vpnBlockCreation", value);
     }
     /**
      * Sets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
      * @param value Value to set for the wallpaperBlockModification property.
      */
     public void setWallpaperBlockModification(@jakarta.annotation.Nullable final Boolean value) {
-        this.wallpaperBlockModification = value;
+        this.BackingStore.set("wallpaperBlockModification", value);
     }
     /**
      * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
      * @param value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
      */
     public void setWiFiConnectOnlyToConfiguredNetworks(@jakarta.annotation.Nullable final Boolean value) {
-        this.wiFiConnectOnlyToConfiguredNetworks = value;
+        this.BackingStore.set("wiFiConnectOnlyToConfiguredNetworks", value);
     }
     /**
      * Sets the wiFiConnectToAllowedNetworksOnlyForced property value. Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the wiFiConnectToAllowedNetworksOnlyForced property.
      */
     public void setWiFiConnectToAllowedNetworksOnlyForced(@jakarta.annotation.Nullable final Boolean value) {
-        this.wiFiConnectToAllowedNetworksOnlyForced = value;
+        this.BackingStore.set("wiFiConnectToAllowedNetworksOnlyForced", value);
     }
     /**
      * Sets the wifiPowerOnForced property value. Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
      * @param value Value to set for the wifiPowerOnForced property.
      */
     public void setWifiPowerOnForced(@jakarta.annotation.Nullable final Boolean value) {
-        this.wifiPowerOnForced = value;
+        this.BackingStore.set("wifiPowerOnForced", value);
     }
 }

@@ -13,75 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfiguration extends Entity implements Parsable {
     /**
-     * The list of assignments for the device configuration profile.
-     */
-    private java.util.List<DeviceConfigurationAssignment> assignments;
-    /**
-     * DateTime the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Admin provided description of the Device Configuration.
-     */
-    private String description;
-    /**
-     * The device mode applicability rule for this Policy.
-     */
-    private DeviceManagementApplicabilityRuleDeviceMode deviceManagementApplicabilityRuleDeviceMode;
-    /**
-     * The OS edition applicability for this Policy.
-     */
-    private DeviceManagementApplicabilityRuleOsEdition deviceManagementApplicabilityRuleOsEdition;
-    /**
-     * The OS version applicability rule for this Policy.
-     */
-    private DeviceManagementApplicabilityRuleOsVersion deviceManagementApplicabilityRuleOsVersion;
-    /**
-     * Device Configuration Setting State Device Summary
-     */
-    private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
-    /**
-     * Device configuration installation status by device.
-     */
-    private java.util.List<DeviceConfigurationDeviceStatus> deviceStatuses;
-    /**
-     * Device Configuration devices status overview
-     */
-    private DeviceConfigurationDeviceOverview deviceStatusOverview;
-    /**
-     * Admin provided name of the device configuration.
-     */
-    private String displayName;
-    /**
-     * The list of group assignments for the device configuration profile.
-     */
-    private java.util.List<DeviceConfigurationGroupAssignment> groupAssignments;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
-     */
-    private Boolean supportsScopeTags;
-    /**
-     * Device configuration installation status by user.
-     */
-    private java.util.List<DeviceConfigurationUserStatus> userStatuses;
-    /**
-     * Device Configuration users status overview
-     */
-    private DeviceConfigurationUserOverview userStatusOverview;
-    /**
-     * Version of the device configuration.
-     */
-    private Integer version;
-    /**
-     * Instantiates a new deviceConfiguration and sets the default values.
+     * Instantiates a new DeviceConfiguration and sets the default values.
      */
     public DeviceConfiguration() {
         super();
@@ -89,7 +21,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfiguration
+     * @return a DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -241,11 +173,11 @@ public class DeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of assignments for the device configuration profile.
-     * @return a deviceConfigurationAssignment
+     * @return a java.util.List<DeviceConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -253,71 +185,71 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceManagementApplicabilityRuleDeviceMode property value. The device mode applicability rule for this Policy.
-     * @return a deviceManagementApplicabilityRuleDeviceMode
+     * @return a DeviceManagementApplicabilityRuleDeviceMode
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleDeviceMode getDeviceManagementApplicabilityRuleDeviceMode() {
-        return this.deviceManagementApplicabilityRuleDeviceMode;
+        return this.BackingStore.get("deviceManagementApplicabilityRuleDeviceMode");
     }
     /**
      * Gets the deviceManagementApplicabilityRuleOsEdition property value. The OS edition applicability for this Policy.
-     * @return a deviceManagementApplicabilityRuleOsEdition
+     * @return a DeviceManagementApplicabilityRuleOsEdition
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleOsEdition getDeviceManagementApplicabilityRuleOsEdition() {
-        return this.deviceManagementApplicabilityRuleOsEdition;
+        return this.BackingStore.get("deviceManagementApplicabilityRuleOsEdition");
     }
     /**
      * Gets the deviceManagementApplicabilityRuleOsVersion property value. The OS version applicability rule for this Policy.
-     * @return a deviceManagementApplicabilityRuleOsVersion
+     * @return a DeviceManagementApplicabilityRuleOsVersion
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleOsVersion getDeviceManagementApplicabilityRuleOsVersion() {
-        return this.deviceManagementApplicabilityRuleOsVersion;
+        return this.BackingStore.get("deviceManagementApplicabilityRuleOsVersion");
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
-     * @return a settingStateDeviceSummary
+     * @return a java.util.List<SettingStateDeviceSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
-        return this.deviceSettingStateSummaries;
+        return this.BackingStore.get("deviceSettingStateSummaries");
     }
     /**
      * Gets the deviceStatuses property value. Device configuration installation status by device.
-     * @return a deviceConfigurationDeviceStatus
+     * @return a java.util.List<DeviceConfigurationDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationDeviceStatus> getDeviceStatuses() {
-        return this.deviceStatuses;
+        return this.BackingStore.get("deviceStatuses");
     }
     /**
      * Gets the deviceStatusOverview property value. Device Configuration devices status overview
-     * @return a deviceConfigurationDeviceOverview
+     * @return a DeviceConfigurationDeviceOverview
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceOverview getDeviceStatusOverview() {
-        return this.deviceStatusOverview;
+        return this.BackingStore.get("deviceStatusOverview");
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -347,11 +279,11 @@ public class DeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device configuration profile.
-     * @return a deviceConfigurationGroupAssignment
+     * @return a java.util.List<DeviceConfigurationGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationGroupAssignment> getGroupAssignments() {
-        return this.groupAssignments;
+        return this.BackingStore.get("groupAssignments");
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -359,47 +291,47 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the supportsScopeTags property value. Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSupportsScopeTags() {
-        return this.supportsScopeTags;
+        return this.BackingStore.get("supportsScopeTags");
     }
     /**
      * Gets the userStatuses property value. Device configuration installation status by user.
-     * @return a deviceConfigurationUserStatus
+     * @return a java.util.List<DeviceConfigurationUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationUserStatus> getUserStatuses() {
-        return this.userStatuses;
+        return this.BackingStore.get("userStatuses");
     }
     /**
      * Gets the userStatusOverview property value. Device Configuration users status overview
-     * @return a deviceConfigurationUserOverview
+     * @return a DeviceConfigurationUserOverview
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserOverview getUserStatusOverview() {
-        return this.userStatusOverview;
+        return this.BackingStore.get("userStatusOverview");
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -430,118 +362,118 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceManagementApplicabilityRuleDeviceMode property value. The device mode applicability rule for this Policy.
      * @param value Value to set for the deviceManagementApplicabilityRuleDeviceMode property.
      */
     public void setDeviceManagementApplicabilityRuleDeviceMode(@jakarta.annotation.Nullable final DeviceManagementApplicabilityRuleDeviceMode value) {
-        this.deviceManagementApplicabilityRuleDeviceMode = value;
+        this.BackingStore.set("deviceManagementApplicabilityRuleDeviceMode", value);
     }
     /**
      * Sets the deviceManagementApplicabilityRuleOsEdition property value. The OS edition applicability for this Policy.
      * @param value Value to set for the deviceManagementApplicabilityRuleOsEdition property.
      */
     public void setDeviceManagementApplicabilityRuleOsEdition(@jakarta.annotation.Nullable final DeviceManagementApplicabilityRuleOsEdition value) {
-        this.deviceManagementApplicabilityRuleOsEdition = value;
+        this.BackingStore.set("deviceManagementApplicabilityRuleOsEdition", value);
     }
     /**
      * Sets the deviceManagementApplicabilityRuleOsVersion property value. The OS version applicability rule for this Policy.
      * @param value Value to set for the deviceManagementApplicabilityRuleOsVersion property.
      */
     public void setDeviceManagementApplicabilityRuleOsVersion(@jakarta.annotation.Nullable final DeviceManagementApplicabilityRuleOsVersion value) {
-        this.deviceManagementApplicabilityRuleOsVersion = value;
+        this.BackingStore.set("deviceManagementApplicabilityRuleOsVersion", value);
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
      * @param value Value to set for the deviceSettingStateSummaries property.
      */
     public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
-        this.deviceSettingStateSummaries = value;
+        this.BackingStore.set("deviceSettingStateSummaries", value);
     }
     /**
      * Sets the deviceStatuses property value. Device configuration installation status by device.
      * @param value Value to set for the deviceStatuses property.
      */
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
-        this.deviceStatuses = value;
+        this.BackingStore.set("deviceStatuses", value);
     }
     /**
      * Sets the deviceStatusOverview property value. Device Configuration devices status overview
      * @param value Value to set for the deviceStatusOverview property.
      */
     public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
-        this.deviceStatusOverview = value;
+        this.BackingStore.set("deviceStatusOverview", value);
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the groupAssignments property value. The list of group assignments for the device configuration profile.
      * @param value Value to set for the groupAssignments property.
      */
     public void setGroupAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationGroupAssignment> value) {
-        this.groupAssignments = value;
+        this.BackingStore.set("groupAssignments", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the supportsScopeTags property value. Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
      * @param value Value to set for the supportsScopeTags property.
      */
     public void setSupportsScopeTags(@jakarta.annotation.Nullable final Boolean value) {
-        this.supportsScopeTags = value;
+        this.BackingStore.set("supportsScopeTags", value);
     }
     /**
      * Sets the userStatuses property value. Device configuration installation status by user.
      * @param value Value to set for the userStatuses property.
      */
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
-        this.userStatuses = value;
+        this.BackingStore.set("userStatuses", value);
     }
     /**
      * Sets the userStatusOverview property value. Device Configuration users status overview
      * @param value Value to set for the userStatusOverview property.
      */
     public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationUserOverview value) {
-        this.userStatusOverview = value;
+        this.BackingStore.set("userStatusOverview", value);
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

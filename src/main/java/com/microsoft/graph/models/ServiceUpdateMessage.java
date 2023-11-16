@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable {
     /**
-     * The expected deadline of the action for the message.
-     */
-    private OffsetDateTime actionRequiredByDateTime;
-    /**
-     * A collection of serviceAnnouncementAttachments.
-     */
-    private java.util.List<ServiceAnnouncementAttachment> attachments;
-    /**
-     * The zip file of all attachments for a message.
-     */
-    private byte[] attachmentsArchive;
-    /**
-     * The body property
-     */
-    private ItemBody body;
-    /**
-     * The category property
-     */
-    private ServiceUpdateCategory category;
-    /**
-     * Indicates whether the message has any attachment.
-     */
-    private Boolean hasAttachments;
-    /**
-     * Indicates whether the message describes a major update for the service.
-     */
-    private Boolean isMajorChange;
-    /**
-     * The affected services by the service message.
-     */
-    private java.util.List<String> services;
-    /**
-     * The severity property
-     */
-    private ServiceUpdateSeverity severity;
-    /**
-     * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
-     */
-    private java.util.List<String> tags;
-    /**
-     * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
-     */
-    private ServiceUpdateMessageViewpoint viewPoint;
-    /**
-     * Instantiates a new serviceUpdateMessage and sets the default values.
+     * Instantiates a new ServiceUpdateMessage and sets the default values.
      */
     public ServiceUpdateMessage() {
         super();
@@ -63,7 +19,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceUpdateMessage
+     * @return a ServiceUpdateMessage
      */
     @jakarta.annotation.Nonnull
     public static ServiceUpdateMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,39 +32,39 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActionRequiredByDateTime() {
-        return this.actionRequiredByDateTime;
+        return this.BackingStore.get("actionRequiredByDateTime");
     }
     /**
      * Gets the attachments property value. A collection of serviceAnnouncementAttachments.
-     * @return a serviceAnnouncementAttachment
+     * @return a java.util.List<ServiceAnnouncementAttachment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceAnnouncementAttachment> getAttachments() {
-        return this.attachments;
+        return this.BackingStore.get("attachments");
     }
     /**
      * Gets the attachmentsArchive property value. The zip file of all attachments for a message.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getAttachmentsArchive() {
-        return this.attachmentsArchive;
+        return this.BackingStore.get("attachmentsArchive");
     }
     /**
      * Gets the body property value. The body property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the category property value. The category property
-     * @return a serviceUpdateCategory
+     * @return a ServiceUpdateCategory
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * The deserialization information for the current model
@@ -132,51 +88,51 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has any attachment.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.BackingStore.get("hasAttachments");
     }
     /**
      * Gets the isMajorChange property value. Indicates whether the message describes a major update for the service.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMajorChange() {
-        return this.isMajorChange;
+        return this.BackingStore.get("isMajorChange");
     }
     /**
      * Gets the services property value. The affected services by the service message.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServices() {
-        return this.services;
+        return this.BackingStore.get("services");
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a serviceUpdateSeverity
+     * @return a ServiceUpdateSeverity
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateSeverity getSeverity() {
-        return this.severity;
+        return this.BackingStore.get("severity");
     }
     /**
      * Gets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Gets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
-     * @return a serviceUpdateMessageViewpoint
+     * @return a ServiceUpdateMessageViewpoint
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessageViewpoint getViewPoint() {
-        return this.viewPoint;
+        return this.BackingStore.get("viewPoint");
     }
     /**
      * Serializes information the current object
@@ -202,76 +158,76 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the actionRequiredByDateTime property.
      */
     public void setActionRequiredByDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.actionRequiredByDateTime = value;
+        this.BackingStore.set("actionRequiredByDateTime", value);
     }
     /**
      * Sets the attachments property value. A collection of serviceAnnouncementAttachments.
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<ServiceAnnouncementAttachment> value) {
-        this.attachments = value;
+        this.BackingStore.set("attachments", value);
     }
     /**
      * Sets the attachmentsArchive property value. The zip file of all attachments for a message.
      * @param value Value to set for the attachmentsArchive property.
      */
     public void setAttachmentsArchive(@jakarta.annotation.Nullable final byte[] value) {
-        this.attachmentsArchive = value;
+        this.BackingStore.set("attachmentsArchive", value);
     }
     /**
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ServiceUpdateCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the message has any attachment.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.BackingStore.set("hasAttachments", value);
     }
     /**
      * Sets the isMajorChange property value. Indicates whether the message describes a major update for the service.
      * @param value Value to set for the isMajorChange property.
      */
     public void setIsMajorChange(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMajorChange = value;
+        this.BackingStore.set("isMajorChange", value);
     }
     /**
      * Sets the services property value. The affected services by the service message.
      * @param value Value to set for the services property.
      */
     public void setServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.services = value;
+        this.BackingStore.set("services", value);
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final ServiceUpdateSeverity value) {
-        this.severity = value;
+        this.BackingStore.set("severity", value);
     }
     /**
      * Sets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
      * Sets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
      * @param value Value to set for the viewPoint property.
      */
     public void setViewPoint(@jakarta.annotation.Nullable final ServiceUpdateMessageViewpoint value) {
-        this.viewPoint = value;
+        this.BackingStore.set("viewPoint", value);
     }
 }

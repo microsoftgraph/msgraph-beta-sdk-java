@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantGroup extends Entity implements Parsable {
     /**
-     * A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
-     */
-    private Boolean allTenantsIncluded;
-    /**
-     * The display name for the tenant group. Optional. Read-only.
-     */
-    private String displayName;
-    /**
-     * The collection of management action associated with the tenant group. Optional. Read-only.
-     */
-    private java.util.List<ManagementActionInfo> managementActions;
-    /**
-     * The collection of management intents associated with the tenant group. Optional. Read-only.
-     */
-    private java.util.List<ManagementIntentInfo> managementIntents;
-    /**
-     * The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
-     */
-    private java.util.List<String> tenantIds;
-    /**
-     * Instantiates a new tenantGroup and sets the default values.
+     * Instantiates a new TenantGroup and sets the default values.
      */
     public TenantGroup() {
         super();
@@ -38,7 +18,7 @@ public class TenantGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantGroup
+     * @return a TenantGroup
      */
     @jakarta.annotation.Nonnull
     public static TenantGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the allTenantsIncluded property value. A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllTenantsIncluded() {
-        return this.allTenantsIncluded;
+        return this.BackingStore.get("allTenantsIncluded");
     }
     /**
      * Gets the displayName property value. The display name for the tenant group. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -77,27 +57,27 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the managementActions property value. The collection of management action associated with the tenant group. Optional. Read-only.
-     * @return a managementActionInfo
+     * @return a java.util.List<ManagementActionInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementActionInfo> getManagementActions() {
-        return this.managementActions;
+        return this.BackingStore.get("managementActions");
     }
     /**
      * Gets the managementIntents property value. The collection of management intents associated with the tenant group. Optional. Read-only.
-     * @return a managementIntentInfo
+     * @return a java.util.List<ManagementIntentInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementIntentInfo> getManagementIntents() {
-        return this.managementIntents;
+        return this.BackingStore.get("managementIntents");
     }
     /**
      * Gets the tenantIds property value. The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTenantIds() {
-        return this.tenantIds;
+        return this.BackingStore.get("tenantIds");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the allTenantsIncluded property.
      */
     public void setAllTenantsIncluded(@jakarta.annotation.Nullable final Boolean value) {
-        this.allTenantsIncluded = value;
+        this.BackingStore.set("allTenantsIncluded", value);
     }
     /**
      * Sets the displayName property value. The display name for the tenant group. Optional. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the managementActions property value. The collection of management action associated with the tenant group. Optional. Read-only.
      * @param value Value to set for the managementActions property.
      */
     public void setManagementActions(@jakarta.annotation.Nullable final java.util.List<ManagementActionInfo> value) {
-        this.managementActions = value;
+        this.BackingStore.set("managementActions", value);
     }
     /**
      * Sets the managementIntents property value. The collection of management intents associated with the tenant group. Optional. Read-only.
      * @param value Value to set for the managementIntents property.
      */
     public void setManagementIntents(@jakarta.annotation.Nullable final java.util.List<ManagementIntentInfo> value) {
-        this.managementIntents = value;
+        this.BackingStore.set("managementIntents", value);
     }
     /**
      * Sets the tenantIds property value. The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
      * @param value Value to set for the tenantIds property.
      */
     public void setTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tenantIds = value;
+        this.BackingStore.set("tenantIds", value);
     }
 }

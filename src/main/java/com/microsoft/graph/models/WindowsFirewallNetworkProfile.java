@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,117 +14,22 @@ import java.util.Objects;
  * Windows Firewall Profile Policies.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable {
+public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean authorizedApplicationRulesFromGroupPolicyMerged;
-    /**
-     * Configures the firewall to prevent merging authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean authorizedApplicationRulesFromGroupPolicyNotMerged;
-    /**
-     * Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean connectionSecurityRulesFromGroupPolicyMerged;
-    /**
-     * Configures the firewall to prevent merging connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean connectionSecurityRulesFromGroupPolicyNotMerged;
-    /**
-     * State Management Setting.
-     */
-    private StateManagementSetting firewallEnabled;
-    /**
-     * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean globalPortRulesFromGroupPolicyMerged;
-    /**
-     * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean globalPortRulesFromGroupPolicyNotMerged;
-    /**
-     * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
-     */
-    private Boolean inboundConnectionsBlocked;
-    /**
-     * Configures the firewall to allow all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
-     */
-    private Boolean inboundConnectionsRequired;
-    /**
-     * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     */
-    private Boolean inboundNotificationsBlocked;
-    /**
-     * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     */
-    private Boolean inboundNotificationsRequired;
-    /**
-     * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     */
-    private Boolean incomingTrafficBlocked;
-    /**
-     * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     */
-    private Boolean incomingTrafficRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
-     */
-    private Boolean outboundConnectionsBlocked;
-    /**
-     * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
-     */
-    private Boolean outboundConnectionsRequired;
-    /**
-     * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean policyRulesFromGroupPolicyMerged;
-    /**
-     * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
-     */
-    private Boolean policyRulesFromGroupPolicyNotMerged;
-    /**
-     * Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
-     */
-    private Boolean securedPacketExemptionAllowed;
-    /**
-     * Configures the firewall to block the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
-     */
-    private Boolean securedPacketExemptionBlocked;
-    /**
-     * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     */
-    private Boolean stealthModeBlocked;
-    /**
-     * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     */
-    private Boolean stealthModeRequired;
-    /**
-     * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     */
-    private Boolean unicastResponsesToMulticastBroadcastsBlocked;
-    /**
-     * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     */
-    private Boolean unicastResponsesToMulticastBroadcastsRequired;
-    /**
-     * Instantiates a new windowsFirewallNetworkProfile and sets the default values.
+     * Instantiates a new WindowsFirewallNetworkProfile and sets the default values.
      */
     public WindowsFirewallNetworkProfile() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFirewallNetworkProfile
+     * @return a WindowsFirewallNetworkProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsFirewallNetworkProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -129,44 +37,57 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         return new WindowsFirewallNetworkProfile();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the authorizedApplicationRulesFromGroupPolicyMerged property value. Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedApplicationRulesFromGroupPolicyMerged() {
-        return this.authorizedApplicationRulesFromGroupPolicyMerged;
+        return this.BackingStore.get("authorizedApplicationRulesFromGroupPolicyMerged");
     }
     /**
      * Gets the authorizedApplicationRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedApplicationRulesFromGroupPolicyNotMerged() {
-        return this.authorizedApplicationRulesFromGroupPolicyNotMerged;
+        return this.BackingStore.get("authorizedApplicationRulesFromGroupPolicyNotMerged");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the connectionSecurityRulesFromGroupPolicyMerged property value. Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectionSecurityRulesFromGroupPolicyMerged() {
-        return this.connectionSecurityRulesFromGroupPolicyMerged;
+        return this.BackingStore.get("connectionSecurityRulesFromGroupPolicyMerged");
     }
     /**
      * Gets the connectionSecurityRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectionSecurityRulesFromGroupPolicyNotMerged() {
-        return this.connectionSecurityRulesFromGroupPolicyNotMerged;
+        return this.BackingStore.get("connectionSecurityRulesFromGroupPolicyNotMerged");
     }
     /**
      * The deserialization information for the current model
@@ -203,163 +124,163 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the firewallEnabled property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getFirewallEnabled() {
-        return this.firewallEnabled;
+        return this.BackingStore.get("firewallEnabled");
     }
     /**
      * Gets the globalPortRulesFromGroupPolicyMerged property value. Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGlobalPortRulesFromGroupPolicyMerged() {
-        return this.globalPortRulesFromGroupPolicyMerged;
+        return this.BackingStore.get("globalPortRulesFromGroupPolicyMerged");
     }
     /**
      * Gets the globalPortRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGlobalPortRulesFromGroupPolicyNotMerged() {
-        return this.globalPortRulesFromGroupPolicyNotMerged;
+        return this.BackingStore.get("globalPortRulesFromGroupPolicyNotMerged");
     }
     /**
      * Gets the inboundConnectionsBlocked property value. Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundConnectionsBlocked() {
-        return this.inboundConnectionsBlocked;
+        return this.BackingStore.get("inboundConnectionsBlocked");
     }
     /**
      * Gets the inboundConnectionsRequired property value. Configures the firewall to allow all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundConnectionsRequired() {
-        return this.inboundConnectionsRequired;
+        return this.BackingStore.get("inboundConnectionsRequired");
     }
     /**
      * Gets the inboundNotificationsBlocked property value. Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundNotificationsBlocked() {
-        return this.inboundNotificationsBlocked;
+        return this.BackingStore.get("inboundNotificationsBlocked");
     }
     /**
      * Gets the inboundNotificationsRequired property value. Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundNotificationsRequired() {
-        return this.inboundNotificationsRequired;
+        return this.BackingStore.get("inboundNotificationsRequired");
     }
     /**
      * Gets the incomingTrafficBlocked property value. Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncomingTrafficBlocked() {
-        return this.incomingTrafficBlocked;
+        return this.BackingStore.get("incomingTrafficBlocked");
     }
     /**
      * Gets the incomingTrafficRequired property value. Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncomingTrafficRequired() {
-        return this.incomingTrafficRequired;
+        return this.BackingStore.get("incomingTrafficRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOutboundConnectionsBlocked() {
-        return this.outboundConnectionsBlocked;
+        return this.BackingStore.get("outboundConnectionsBlocked");
     }
     /**
      * Gets the outboundConnectionsRequired property value. Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOutboundConnectionsRequired() {
-        return this.outboundConnectionsRequired;
+        return this.BackingStore.get("outboundConnectionsRequired");
     }
     /**
      * Gets the policyRulesFromGroupPolicyMerged property value. Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPolicyRulesFromGroupPolicyMerged() {
-        return this.policyRulesFromGroupPolicyMerged;
+        return this.BackingStore.get("policyRulesFromGroupPolicyMerged");
     }
     /**
      * Gets the policyRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPolicyRulesFromGroupPolicyNotMerged() {
-        return this.policyRulesFromGroupPolicyNotMerged;
+        return this.BackingStore.get("policyRulesFromGroupPolicyNotMerged");
     }
     /**
      * Gets the securedPacketExemptionAllowed property value. Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecuredPacketExemptionAllowed() {
-        return this.securedPacketExemptionAllowed;
+        return this.BackingStore.get("securedPacketExemptionAllowed");
     }
     /**
      * Gets the securedPacketExemptionBlocked property value. Configures the firewall to block the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecuredPacketExemptionBlocked() {
-        return this.securedPacketExemptionBlocked;
+        return this.BackingStore.get("securedPacketExemptionBlocked");
     }
     /**
      * Gets the stealthModeBlocked property value. Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStealthModeBlocked() {
-        return this.stealthModeBlocked;
+        return this.BackingStore.get("stealthModeBlocked");
     }
     /**
      * Gets the stealthModeRequired property value. Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStealthModeRequired() {
-        return this.stealthModeRequired;
+        return this.BackingStore.get("stealthModeRequired");
     }
     /**
      * Gets the unicastResponsesToMulticastBroadcastsBlocked property value. Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnicastResponsesToMulticastBroadcastsBlocked() {
-        return this.unicastResponsesToMulticastBroadcastsBlocked;
+        return this.BackingStore.get("unicastResponsesToMulticastBroadcastsBlocked");
     }
     /**
      * Gets the unicastResponsesToMulticastBroadcastsRequired property value. Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnicastResponsesToMulticastBroadcastsRequired() {
-        return this.unicastResponsesToMulticastBroadcastsRequired;
+        return this.BackingStore.get("unicastResponsesToMulticastBroadcastsRequired");
     }
     /**
      * Serializes information the current object
@@ -394,178 +315,186 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the authorizedApplicationRulesFromGroupPolicyMerged property value. Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the authorizedApplicationRulesFromGroupPolicyMerged property.
      */
     public void setAuthorizedApplicationRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedApplicationRulesFromGroupPolicyMerged = value;
+        this.BackingStore.set("authorizedApplicationRulesFromGroupPolicyMerged", value);
     }
     /**
      * Sets the authorizedApplicationRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the authorizedApplicationRulesFromGroupPolicyNotMerged property.
      */
     public void setAuthorizedApplicationRulesFromGroupPolicyNotMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedApplicationRulesFromGroupPolicyNotMerged = value;
+        this.BackingStore.set("authorizedApplicationRulesFromGroupPolicyNotMerged", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the connectionSecurityRulesFromGroupPolicyMerged property value. Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the connectionSecurityRulesFromGroupPolicyMerged property.
      */
     public void setConnectionSecurityRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectionSecurityRulesFromGroupPolicyMerged = value;
+        this.BackingStore.set("connectionSecurityRulesFromGroupPolicyMerged", value);
     }
     /**
      * Sets the connectionSecurityRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the connectionSecurityRulesFromGroupPolicyNotMerged property.
      */
     public void setConnectionSecurityRulesFromGroupPolicyNotMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectionSecurityRulesFromGroupPolicyNotMerged = value;
+        this.BackingStore.set("connectionSecurityRulesFromGroupPolicyNotMerged", value);
     }
     /**
      * Sets the firewallEnabled property value. State Management Setting.
      * @param value Value to set for the firewallEnabled property.
      */
     public void setFirewallEnabled(@jakarta.annotation.Nullable final StateManagementSetting value) {
-        this.firewallEnabled = value;
+        this.BackingStore.set("firewallEnabled", value);
     }
     /**
      * Sets the globalPortRulesFromGroupPolicyMerged property value. Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the globalPortRulesFromGroupPolicyMerged property.
      */
     public void setGlobalPortRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.globalPortRulesFromGroupPolicyMerged = value;
+        this.BackingStore.set("globalPortRulesFromGroupPolicyMerged", value);
     }
     /**
      * Sets the globalPortRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the globalPortRulesFromGroupPolicyNotMerged property.
      */
     public void setGlobalPortRulesFromGroupPolicyNotMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.globalPortRulesFromGroupPolicyNotMerged = value;
+        this.BackingStore.set("globalPortRulesFromGroupPolicyNotMerged", value);
     }
     /**
      * Sets the inboundConnectionsBlocked property value. Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
      * @param value Value to set for the inboundConnectionsBlocked property.
      */
     public void setInboundConnectionsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.inboundConnectionsBlocked = value;
+        this.BackingStore.set("inboundConnectionsBlocked", value);
     }
     /**
      * Sets the inboundConnectionsRequired property value. Configures the firewall to allow all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
      * @param value Value to set for the inboundConnectionsRequired property.
      */
     public void setInboundConnectionsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.inboundConnectionsRequired = value;
+        this.BackingStore.set("inboundConnectionsRequired", value);
     }
     /**
      * Sets the inboundNotificationsBlocked property value. Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
      * @param value Value to set for the inboundNotificationsBlocked property.
      */
     public void setInboundNotificationsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.inboundNotificationsBlocked = value;
+        this.BackingStore.set("inboundNotificationsBlocked", value);
     }
     /**
      * Sets the inboundNotificationsRequired property value. Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
      * @param value Value to set for the inboundNotificationsRequired property.
      */
     public void setInboundNotificationsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.inboundNotificationsRequired = value;
+        this.BackingStore.set("inboundNotificationsRequired", value);
     }
     /**
      * Sets the incomingTrafficBlocked property value. Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
      * @param value Value to set for the incomingTrafficBlocked property.
      */
     public void setIncomingTrafficBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.incomingTrafficBlocked = value;
+        this.BackingStore.set("incomingTrafficBlocked", value);
     }
     /**
      * Sets the incomingTrafficRequired property value. Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
      * @param value Value to set for the incomingTrafficRequired property.
      */
     public void setIncomingTrafficRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.incomingTrafficRequired = value;
+        this.BackingStore.set("incomingTrafficRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
      * @param value Value to set for the outboundConnectionsBlocked property.
      */
     public void setOutboundConnectionsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.outboundConnectionsBlocked = value;
+        this.BackingStore.set("outboundConnectionsBlocked", value);
     }
     /**
      * Sets the outboundConnectionsRequired property value. Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
      * @param value Value to set for the outboundConnectionsRequired property.
      */
     public void setOutboundConnectionsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.outboundConnectionsRequired = value;
+        this.BackingStore.set("outboundConnectionsRequired", value);
     }
     /**
      * Sets the policyRulesFromGroupPolicyMerged property value. Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the policyRulesFromGroupPolicyMerged property.
      */
     public void setPolicyRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.policyRulesFromGroupPolicyMerged = value;
+        this.BackingStore.set("policyRulesFromGroupPolicyMerged", value);
     }
     /**
      * Sets the policyRulesFromGroupPolicyNotMerged property value. Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
      * @param value Value to set for the policyRulesFromGroupPolicyNotMerged property.
      */
     public void setPolicyRulesFromGroupPolicyNotMerged(@jakarta.annotation.Nullable final Boolean value) {
-        this.policyRulesFromGroupPolicyNotMerged = value;
+        this.BackingStore.set("policyRulesFromGroupPolicyNotMerged", value);
     }
     /**
      * Sets the securedPacketExemptionAllowed property value. Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
      * @param value Value to set for the securedPacketExemptionAllowed property.
      */
     public void setSecuredPacketExemptionAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.securedPacketExemptionAllowed = value;
+        this.BackingStore.set("securedPacketExemptionAllowed", value);
     }
     /**
      * Sets the securedPacketExemptionBlocked property value. Configures the firewall to block the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
      * @param value Value to set for the securedPacketExemptionBlocked property.
      */
     public void setSecuredPacketExemptionBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.securedPacketExemptionBlocked = value;
+        this.BackingStore.set("securedPacketExemptionBlocked", value);
     }
     /**
      * Sets the stealthModeBlocked property value. Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      * @param value Value to set for the stealthModeBlocked property.
      */
     public void setStealthModeBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.stealthModeBlocked = value;
+        this.BackingStore.set("stealthModeBlocked", value);
     }
     /**
      * Sets the stealthModeRequired property value. Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      * @param value Value to set for the stealthModeRequired property.
      */
     public void setStealthModeRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.stealthModeRequired = value;
+        this.BackingStore.set("stealthModeRequired", value);
     }
     /**
      * Sets the unicastResponsesToMulticastBroadcastsBlocked property value. Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
      * @param value Value to set for the unicastResponsesToMulticastBroadcastsBlocked property.
      */
     public void setUnicastResponsesToMulticastBroadcastsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.unicastResponsesToMulticastBroadcastsBlocked = value;
+        this.BackingStore.set("unicastResponsesToMulticastBroadcastsBlocked", value);
     }
     /**
      * Sets the unicastResponsesToMulticastBroadcastsRequired property value. Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
      * @param value Value to set for the unicastResponsesToMulticastBroadcastsRequired property.
      */
     public void setUnicastResponsesToMulticastBroadcastsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.unicastResponsesToMulticastBroadcastsRequired = value;
+        this.BackingStore.set("unicastResponsesToMulticastBroadcastsRequired", value);
     }
 }

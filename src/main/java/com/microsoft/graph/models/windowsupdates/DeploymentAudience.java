@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeploymentAudience extends Entity implements Parsable {
     /**
-     * Content eligible to deploy to devices in the audience. Not nullable. Read-only.
-     */
-    private java.util.List<ApplicableContent> applicableContent;
-    /**
-     * Specifies the assets to exclude from the audience.
-     */
-    private java.util.List<UpdatableAsset> exclusions;
-    /**
-     * Specifies the assets to include in the audience.
-     */
-    private java.util.List<UpdatableAsset> members;
-    /**
-     * Instantiates a new deploymentAudience and sets the default values.
+     * Instantiates a new DeploymentAudience and sets the default values.
      */
     public DeploymentAudience() {
         super();
@@ -30,7 +18,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deploymentAudience
+     * @return a DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public static DeploymentAudience createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the applicableContent property value. Content eligible to deploy to devices in the audience. Not nullable. Read-only.
-     * @return a applicableContent
+     * @return a java.util.List<ApplicableContent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicableContent> getApplicableContent() {
-        return this.applicableContent;
+        return this.BackingStore.get("applicableContent");
     }
     /**
      * Gets the exclusions property value. Specifies the assets to exclude from the audience.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getExclusions() {
-        return this.exclusions;
+        return this.BackingStore.get("exclusions");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Specifies the assets to include in the audience.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class DeploymentAudience extends Entity implements Parsable {
      * @param value Value to set for the applicableContent property.
      */
     public void setApplicableContent(@jakarta.annotation.Nullable final java.util.List<ApplicableContent> value) {
-        this.applicableContent = value;
+        this.BackingStore.set("applicableContent", value);
     }
     /**
      * Sets the exclusions property value. Specifies the assets to exclude from the audience.
      * @param value Value to set for the exclusions property.
      */
     public void setExclusions(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.exclusions = value;
+        this.BackingStore.set("exclusions", value);
     }
     /**
      * Sets the members property value. Specifies the assets to include in the audience.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
 }

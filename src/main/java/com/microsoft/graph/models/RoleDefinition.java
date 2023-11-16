@@ -12,39 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinition extends Entity implements Parsable {
     /**
-     * Description of the Role definition.
-     */
-    private String description;
-    /**
-     * Display Name of the Role definition.
-     */
-    private String displayName;
-    /**
-     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     */
-    private Boolean isBuiltInRoleDefinition;
-    /**
-     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     */
-    private java.util.List<RolePermission> permissions;
-    /**
-     * List of Role assignments for this role definition.
-     */
-    private java.util.List<RoleAssignment> roleAssignments;
-    /**
-     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     */
-    private java.util.List<RolePermission> rolePermissions;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Instantiates a new roleDefinition and sets the default values.
+     * Instantiates a new RoleDefinition and sets the default values.
      */
     public RoleDefinition() {
         super();
@@ -52,7 +20,7 @@ public class RoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleDefinition
+     * @return a RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public static RoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,19 +36,19 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the Role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display Name of the Role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -101,51 +69,51 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.BackingStore.get("isBuiltIn");
     }
     /**
      * Gets the isBuiltInRoleDefinition property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltInRoleDefinition() {
-        return this.isBuiltInRoleDefinition;
+        return this.BackingStore.get("isBuiltInRoleDefinition");
     }
     /**
      * Gets the permissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a rolePermission
+     * @return a java.util.List<RolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getPermissions() {
-        return this.permissions;
+        return this.BackingStore.get("permissions");
     }
     /**
      * Gets the roleAssignments property value. List of Role assignments for this role definition.
-     * @return a roleAssignment
+     * @return a java.util.List<RoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleAssignment> getRoleAssignments() {
-        return this.roleAssignments;
+        return this.BackingStore.get("roleAssignments");
     }
     /**
      * Gets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a rolePermission
+     * @return a java.util.List<RolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getRolePermissions() {
-        return this.rolePermissions;
+        return this.BackingStore.get("rolePermissions");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -168,55 +136,55 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display Name of the Role definition.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.BackingStore.set("isBuiltIn", value);
     }
     /**
      * Sets the isBuiltInRoleDefinition property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      * @param value Value to set for the isBuiltInRoleDefinition property.
      */
     public void setIsBuiltInRoleDefinition(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltInRoleDefinition = value;
+        this.BackingStore.set("isBuiltInRoleDefinition", value);
     }
     /**
      * Sets the permissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<RolePermission> value) {
-        this.permissions = value;
+        this.BackingStore.set("permissions", value);
     }
     /**
      * Sets the roleAssignments property value. List of Role assignments for this role definition.
      * @param value Value to set for the roleAssignments property.
      */
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<RoleAssignment> value) {
-        this.roleAssignments = value;
+        this.BackingStore.set("roleAssignments", value);
     }
     /**
      * Sets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      * @param value Value to set for the rolePermissions property.
      */
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<RolePermission> value) {
-        this.rolePermissions = value;
+        this.BackingStore.set("rolePermissions", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
 }

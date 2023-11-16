@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RetentionEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<RetentionEvent> value;
-    /**
-     * Instantiates a new retentionEventCollectionResponse and sets the default values.
+     * Instantiates a new RetentionEventCollectionResponse and sets the default values.
      */
     public RetentionEventCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class RetentionEventCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retentionEventCollectionResponse
+     * @return a RetentionEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RetentionEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class RetentionEventCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a retentionEvent
+     * @return a java.util.List<RetentionEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RetentionEvent> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class RetentionEventCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RetentionEvent> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

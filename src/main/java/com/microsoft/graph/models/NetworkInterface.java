@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NetworkInterface implements AdditionalDataHolder, Parsable {
+public class NetworkInterface implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
-     */
-    private String description;
-    /**
-     * Last IPv4 address associated with this NIC.
-     */
-    private String ipV4Address;
-    /**
-     * Last Public (also known as global) IPv6 address associated with this NIC.
-     */
-    private String ipV6Address;
-    /**
-     * Last local (link-local or site-local) IPv6 address associated with this NIC.
-     */
-    private String localIpV6Address;
-    /**
-     * MAC address of the NIC on this host.
-     */
-    private String macAddress;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new networkInterface and sets the default values.
+     * Instantiates a new NetworkInterface and sets the default values.
      */
     public NetworkInterface() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkInterface
+     * @return a NetworkInterface
      */
     @jakarta.annotation.Nonnull
     public static NetworkInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +34,33 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return new NetworkInterface();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the description property value. Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +79,43 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipV4Address property value. Last IPv4 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpV4Address() {
-        return this.ipV4Address;
+        return this.BackingStore.get("ipV4Address");
     }
     /**
      * Gets the ipV6Address property value. Last Public (also known as global) IPv6 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpV6Address() {
-        return this.ipV6Address;
+        return this.BackingStore.get("ipV6Address");
     }
     /**
      * Gets the localIpV6Address property value. Last local (link-local or site-local) IPv6 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalIpV6Address() {
-        return this.localIpV6Address;
+        return this.BackingStore.get("localIpV6Address");
     }
     /**
      * Gets the macAddress property value. MAC address of the NIC on this host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
-        return this.macAddress;
+        return this.BackingStore.get("macAddress");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the description property value. Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the ipV4Address property value. Last IPv4 address associated with this NIC.
      * @param value Value to set for the ipV4Address property.
      */
     public void setIpV4Address(@jakarta.annotation.Nullable final String value) {
-        this.ipV4Address = value;
+        this.BackingStore.set("ipV4Address", value);
     }
     /**
      * Sets the ipV6Address property value. Last Public (also known as global) IPv6 address associated with this NIC.
      * @param value Value to set for the ipV6Address property.
      */
     public void setIpV6Address(@jakarta.annotation.Nullable final String value) {
-        this.ipV6Address = value;
+        this.BackingStore.set("ipV6Address", value);
     }
     /**
      * Sets the localIpV6Address property value. Last local (link-local or site-local) IPv6 address associated with this NIC.
      * @param value Value to set for the localIpV6Address property.
      */
     public void setLocalIpV6Address(@jakarta.annotation.Nullable final String value) {
-        this.localIpV6Address = value;
+        this.BackingStore.set("localIpV6Address", value);
     }
     /**
      * Sets the macAddress property value. MAC address of the NIC on this host.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {
-        this.macAddress = value;
+        this.BackingStore.set("macAddress", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

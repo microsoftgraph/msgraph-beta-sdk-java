@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernancePolicyTemplate extends Entity implements Parsable {
     /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The policy property
-     */
-    private GovernancePolicy policy;
-    /**
-     * The settings property
-     */
-    private BusinessFlowSettings settings;
-    /**
-     * Instantiates a new governancePolicyTemplate and sets the default values.
+     * Instantiates a new GovernancePolicyTemplate and sets the default values.
      */
     public GovernancePolicyTemplate() {
         super();
@@ -29,7 +17,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governancePolicyTemplate
+     * @return a GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public static GovernancePolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a governancePolicy
+     * @return a GovernancePolicy
      */
     @jakarta.annotation.Nullable
     public GovernancePolicy getPolicy() {
-        return this.policy;
+        return this.BackingStore.get("policy");
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a businessFlowSettings
+     * @return a BusinessFlowSettings
      */
     @jakarta.annotation.Nullable
     public BusinessFlowSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the policy property value. The policy property
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final GovernancePolicy value) {
-        this.policy = value;
+        this.BackingStore.set("policy", value);
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final BusinessFlowSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
 }

@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TextColumn implements AdditionalDataHolder, Parsable {
+public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Whether to allow multiple lines of text.
-     */
-    private Boolean allowMultipleLines;
-    /**
-     * Whether updates to this column should replace existing text, or append to it.
-     */
-    private Boolean appendChangesToExistingText;
-    /**
-     * The size of the text box.
-     */
-    private Integer linesForEditing;
-    /**
-     * The maximum number of characters for the value.
-     */
-    private Integer maxLength;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The type of text being stored. Must be one of plain or richText
-     */
-    private String textType;
-    /**
-     * Instantiates a new textColumn and sets the default values.
+     * Instantiates a new TextColumn and sets the default values.
      */
     public TextColumn() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a textColumn
+     * @return a TextColumn
      */
     @jakarta.annotation.Nonnull
     public static TextColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         return new TextColumn();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowMultipleLines property value. Whether to allow multiple lines of text.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleLines() {
-        return this.allowMultipleLines;
+        return this.BackingStore.get("allowMultipleLines");
     }
     /**
      * Gets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppendChangesToExistingText() {
-        return this.appendChangesToExistingText;
+        return this.BackingStore.get("appendChangesToExistingText");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +87,35 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the linesForEditing property value. The size of the text box.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLinesForEditing() {
-        return this.linesForEditing;
+        return this.BackingStore.get("linesForEditing");
     }
     /**
      * Gets the maxLength property value. The maximum number of characters for the value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxLength() {
-        return this.maxLength;
+        return this.BackingStore.get("maxLength");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTextType() {
-        return this.textType;
+        return this.BackingStore.get("textType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
      * @param value Value to set for the allowMultipleLines property.
      */
     public void setAllowMultipleLines(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowMultipleLines = value;
+        this.BackingStore.set("allowMultipleLines", value);
     }
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
      * @param value Value to set for the appendChangesToExistingText property.
      */
     public void setAppendChangesToExistingText(@jakarta.annotation.Nullable final Boolean value) {
-        this.appendChangesToExistingText = value;
+        this.BackingStore.set("appendChangesToExistingText", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the linesForEditing property value. The size of the text box.
      * @param value Value to set for the linesForEditing property.
      */
     public void setLinesForEditing(@jakarta.annotation.Nullable final Integer value) {
-        this.linesForEditing = value;
+        this.BackingStore.set("linesForEditing", value);
     }
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
      * @param value Value to set for the maxLength property.
      */
     public void setMaxLength(@jakarta.annotation.Nullable final Integer value) {
-        this.maxLength = value;
+        this.BackingStore.set("maxLength", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
      * @param value Value to set for the textType property.
      */
     public void setTextType(@jakarta.annotation.Nullable final String value) {
-        this.textType = value;
+        this.BackingStore.set("textType", value);
     }
 }

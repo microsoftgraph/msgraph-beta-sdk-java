@@ -4,190 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Company implements AdditionalDataHolder, Parsable {
+public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The accounts property
+     * Stores model information.
      */
-    private java.util.List<Account> accounts;
+    private BackingStore BackingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The agedAccountsPayable property
-     */
-    private java.util.List<AgedAccountsPayable> agedAccountsPayable;
-    /**
-     * The agedAccountsReceivable property
-     */
-    private java.util.List<AgedAccountsReceivable> agedAccountsReceivable;
-    /**
-     * The businessProfileId property
-     */
-    private String businessProfileId;
-    /**
-     * The companyInformation property
-     */
-    private java.util.List<CompanyInformation> companyInformation;
-    /**
-     * The countriesRegions property
-     */
-    private java.util.List<CountryRegion> countriesRegions;
-    /**
-     * The currencies property
-     */
-    private java.util.List<Currency> currencies;
-    /**
-     * The customerPaymentJournals property
-     */
-    private java.util.List<CustomerPaymentJournal> customerPaymentJournals;
-    /**
-     * The customerPayments property
-     */
-    private java.util.List<CustomerPayment> customerPayments;
-    /**
-     * The customers property
-     */
-    private java.util.List<Customer> customers;
-    /**
-     * The dimensions property
-     */
-    private java.util.List<Dimension> dimensions;
-    /**
-     * The dimensionValues property
-     */
-    private java.util.List<DimensionValue> dimensionValues;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The employees property
-     */
-    private java.util.List<Employee> employees;
-    /**
-     * The generalLedgerEntries property
-     */
-    private java.util.List<GeneralLedgerEntry> generalLedgerEntries;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The itemCategories property
-     */
-    private java.util.List<ItemCategory> itemCategories;
-    /**
-     * The items property
-     */
-    private java.util.List<Item> items;
-    /**
-     * The journalLines property
-     */
-    private java.util.List<JournalLine> journalLines;
-    /**
-     * The journals property
-     */
-    private java.util.List<Journal> journals;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The paymentMethods property
-     */
-    private java.util.List<PaymentMethod> paymentMethods;
-    /**
-     * The paymentTerms property
-     */
-    private java.util.List<PaymentTerm> paymentTerms;
-    /**
-     * The picture property
-     */
-    private java.util.List<Picture> picture;
-    /**
-     * The purchaseInvoiceLines property
-     */
-    private java.util.List<PurchaseInvoiceLine> purchaseInvoiceLines;
-    /**
-     * The purchaseInvoices property
-     */
-    private java.util.List<PurchaseInvoice> purchaseInvoices;
-    /**
-     * The salesCreditMemoLines property
-     */
-    private java.util.List<SalesCreditMemoLine> salesCreditMemoLines;
-    /**
-     * The salesCreditMemos property
-     */
-    private java.util.List<SalesCreditMemo> salesCreditMemos;
-    /**
-     * The salesInvoiceLines property
-     */
-    private java.util.List<SalesInvoiceLine> salesInvoiceLines;
-    /**
-     * The salesInvoices property
-     */
-    private java.util.List<SalesInvoice> salesInvoices;
-    /**
-     * The salesOrderLines property
-     */
-    private java.util.List<SalesOrderLine> salesOrderLines;
-    /**
-     * The salesOrders property
-     */
-    private java.util.List<SalesOrder> salesOrders;
-    /**
-     * The salesQuoteLines property
-     */
-    private java.util.List<SalesQuoteLine> salesQuoteLines;
-    /**
-     * The salesQuotes property
-     */
-    private java.util.List<SalesQuote> salesQuotes;
-    /**
-     * The shipmentMethods property
-     */
-    private java.util.List<ShipmentMethod> shipmentMethods;
-    /**
-     * The systemVersion property
-     */
-    private String systemVersion;
-    /**
-     * The taxAreas property
-     */
-    private java.util.List<TaxArea> taxAreas;
-    /**
-     * The taxGroups property
-     */
-    private java.util.List<TaxGroup> taxGroups;
-    /**
-     * The unitsOfMeasure property
-     */
-    private java.util.List<UnitOfMeasure> unitsOfMeasure;
-    /**
-     * The vendors property
-     */
-    private java.util.List<Vendor> vendors;
-    /**
-     * Instantiates a new company and sets the default values.
+     * Instantiates a new Company and sets the default values.
      */
     public Company() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a company
+     * @return a Company
      */
     @jakarta.annotation.Nonnull
     public static Company createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -196,123 +36,136 @@ public class Company implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accounts property value. The accounts property
-     * @return a account
+     * @return a java.util.List<Account>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Account> getAccounts() {
-        return this.accounts;
+        return this.BackingStore.get("accounts");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the agedAccountsPayable property value. The agedAccountsPayable property
-     * @return a agedAccountsPayable
+     * @return a java.util.List<AgedAccountsPayable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsPayable> getAgedAccountsPayable() {
-        return this.agedAccountsPayable;
+        return this.BackingStore.get("agedAccountsPayable");
     }
     /**
      * Gets the agedAccountsReceivable property value. The agedAccountsReceivable property
-     * @return a agedAccountsReceivable
+     * @return a java.util.List<AgedAccountsReceivable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsReceivable> getAgedAccountsReceivable() {
-        return this.agedAccountsReceivable;
+        return this.BackingStore.get("agedAccountsReceivable");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the businessProfileId property value. The businessProfileId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBusinessProfileId() {
-        return this.businessProfileId;
+        return this.BackingStore.get("businessProfileId");
     }
     /**
      * Gets the companyInformation property value. The companyInformation property
-     * @return a companyInformation
+     * @return a java.util.List<CompanyInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanyInformation> getCompanyInformation() {
-        return this.companyInformation;
+        return this.BackingStore.get("companyInformation");
     }
     /**
      * Gets the countriesRegions property value. The countriesRegions property
-     * @return a countryRegion
+     * @return a java.util.List<CountryRegion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CountryRegion> getCountriesRegions() {
-        return this.countriesRegions;
+        return this.BackingStore.get("countriesRegions");
     }
     /**
      * Gets the currencies property value. The currencies property
-     * @return a currency
+     * @return a java.util.List<Currency>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Currency> getCurrencies() {
-        return this.currencies;
+        return this.BackingStore.get("currencies");
     }
     /**
      * Gets the customerPaymentJournals property value. The customerPaymentJournals property
-     * @return a customerPaymentJournal
+     * @return a java.util.List<CustomerPaymentJournal>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomerPaymentJournal> getCustomerPaymentJournals() {
-        return this.customerPaymentJournals;
+        return this.BackingStore.get("customerPaymentJournals");
     }
     /**
      * Gets the customerPayments property value. The customerPayments property
-     * @return a customerPayment
+     * @return a java.util.List<CustomerPayment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomerPayment> getCustomerPayments() {
-        return this.customerPayments;
+        return this.BackingStore.get("customerPayments");
     }
     /**
      * Gets the customers property value. The customers property
-     * @return a customer
+     * @return a java.util.List<Customer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Customer> getCustomers() {
-        return this.customers;
+        return this.BackingStore.get("customers");
     }
     /**
      * Gets the dimensions property value. The dimensions property
-     * @return a dimension
+     * @return a java.util.List<Dimension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Dimension> getDimensions() {
-        return this.dimensions;
+        return this.BackingStore.get("dimensions");
     }
     /**
      * Gets the dimensionValues property value. The dimensionValues property
-     * @return a dimensionValue
+     * @return a java.util.List<DimensionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DimensionValue> getDimensionValues() {
-        return this.dimensionValues;
+        return this.BackingStore.get("dimensionValues");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the employees property value. The employees property
-     * @return a employee
+     * @return a java.util.List<Employee>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Employee> getEmployees() {
-        return this.employees;
+        return this.BackingStore.get("employees");
     }
     /**
      * The deserialization information for the current model
@@ -366,11 +219,11 @@ public class Company implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the generalLedgerEntries property value. The generalLedgerEntries property
-     * @return a generalLedgerEntry
+     * @return a java.util.List<GeneralLedgerEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GeneralLedgerEntry> getGeneralLedgerEntries() {
-        return this.generalLedgerEntries;
+        return this.BackingStore.get("generalLedgerEntries");
     }
     /**
      * Gets the id property value. The id property
@@ -378,207 +231,207 @@ public class Company implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the itemCategories property value. The itemCategories property
-     * @return a itemCategory
+     * @return a java.util.List<ItemCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemCategory> getItemCategories() {
-        return this.itemCategories;
+        return this.BackingStore.get("itemCategories");
     }
     /**
      * Gets the items property value. The items property
-     * @return a item
+     * @return a java.util.List<Item>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Item> getItems() {
-        return this.items;
+        return this.BackingStore.get("items");
     }
     /**
      * Gets the journalLines property value. The journalLines property
-     * @return a journalLine
+     * @return a java.util.List<JournalLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
-        return this.journalLines;
+        return this.BackingStore.get("journalLines");
     }
     /**
      * Gets the journals property value. The journals property
-     * @return a journal
+     * @return a java.util.List<Journal>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Journal> getJournals() {
-        return this.journals;
+        return this.BackingStore.get("journals");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the paymentMethods property value. The paymentMethods property
-     * @return a paymentMethod
+     * @return a java.util.List<PaymentMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PaymentMethod> getPaymentMethods() {
-        return this.paymentMethods;
+        return this.BackingStore.get("paymentMethods");
     }
     /**
      * Gets the paymentTerms property value. The paymentTerms property
-     * @return a paymentTerm
+     * @return a java.util.List<PaymentTerm>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PaymentTerm> getPaymentTerms() {
-        return this.paymentTerms;
+        return this.BackingStore.get("paymentTerms");
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
-        return this.picture;
+        return this.BackingStore.get("picture");
     }
     /**
      * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
-     * @return a purchaseInvoiceLine
+     * @return a java.util.List<PurchaseInvoiceLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
-        return this.purchaseInvoiceLines;
+        return this.BackingStore.get("purchaseInvoiceLines");
     }
     /**
      * Gets the purchaseInvoices property value. The purchaseInvoices property
-     * @return a purchaseInvoice
+     * @return a java.util.List<PurchaseInvoice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoice> getPurchaseInvoices() {
-        return this.purchaseInvoices;
+        return this.BackingStore.get("purchaseInvoices");
     }
     /**
      * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
-     * @return a salesCreditMemoLine
+     * @return a java.util.List<SalesCreditMemoLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
-        return this.salesCreditMemoLines;
+        return this.BackingStore.get("salesCreditMemoLines");
     }
     /**
      * Gets the salesCreditMemos property value. The salesCreditMemos property
-     * @return a salesCreditMemo
+     * @return a java.util.List<SalesCreditMemo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemo> getSalesCreditMemos() {
-        return this.salesCreditMemos;
+        return this.BackingStore.get("salesCreditMemos");
     }
     /**
      * Gets the salesInvoiceLines property value. The salesInvoiceLines property
-     * @return a salesInvoiceLine
+     * @return a java.util.List<SalesInvoiceLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
-        return this.salesInvoiceLines;
+        return this.BackingStore.get("salesInvoiceLines");
     }
     /**
      * Gets the salesInvoices property value. The salesInvoices property
-     * @return a salesInvoice
+     * @return a java.util.List<SalesInvoice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesInvoice> getSalesInvoices() {
-        return this.salesInvoices;
+        return this.BackingStore.get("salesInvoices");
     }
     /**
      * Gets the salesOrderLines property value. The salesOrderLines property
-     * @return a salesOrderLine
+     * @return a java.util.List<SalesOrderLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getSalesOrderLines() {
-        return this.salesOrderLines;
+        return this.BackingStore.get("salesOrderLines");
     }
     /**
      * Gets the salesOrders property value. The salesOrders property
-     * @return a salesOrder
+     * @return a java.util.List<SalesOrder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrder> getSalesOrders() {
-        return this.salesOrders;
+        return this.BackingStore.get("salesOrders");
     }
     /**
      * Gets the salesQuoteLines property value. The salesQuoteLines property
-     * @return a salesQuoteLine
+     * @return a java.util.List<SalesQuoteLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesQuoteLine> getSalesQuoteLines() {
-        return this.salesQuoteLines;
+        return this.BackingStore.get("salesQuoteLines");
     }
     /**
      * Gets the salesQuotes property value. The salesQuotes property
-     * @return a salesQuote
+     * @return a java.util.List<SalesQuote>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesQuote> getSalesQuotes() {
-        return this.salesQuotes;
+        return this.BackingStore.get("salesQuotes");
     }
     /**
      * Gets the shipmentMethods property value. The shipmentMethods property
-     * @return a shipmentMethod
+     * @return a java.util.List<ShipmentMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShipmentMethod> getShipmentMethods() {
-        return this.shipmentMethods;
+        return this.BackingStore.get("shipmentMethods");
     }
     /**
      * Gets the systemVersion property value. The systemVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSystemVersion() {
-        return this.systemVersion;
+        return this.BackingStore.get("systemVersion");
     }
     /**
      * Gets the taxAreas property value. The taxAreas property
-     * @return a taxArea
+     * @return a java.util.List<TaxArea>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaxArea> getTaxAreas() {
-        return this.taxAreas;
+        return this.BackingStore.get("taxAreas");
     }
     /**
      * Gets the taxGroups property value. The taxGroups property
-     * @return a taxGroup
+     * @return a java.util.List<TaxGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaxGroup> getTaxGroups() {
-        return this.taxGroups;
+        return this.BackingStore.get("taxGroups");
     }
     /**
      * Gets the unitsOfMeasure property value. The unitsOfMeasure property
-     * @return a unitOfMeasure
+     * @return a java.util.List<UnitOfMeasure>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnitOfMeasure> getUnitsOfMeasure() {
-        return this.unitsOfMeasure;
+        return this.BackingStore.get("unitsOfMeasure");
     }
     /**
      * Gets the vendors property value. The vendors property
-     * @return a vendor
+     * @return a java.util.List<Vendor>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Vendor> getVendors() {
-        return this.vendors;
+        return this.BackingStore.get("vendors");
     }
     /**
      * Serializes information the current object
@@ -634,293 +487,301 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accounts property.
      */
     public void setAccounts(@jakarta.annotation.Nullable final java.util.List<Account> value) {
-        this.accounts = value;
+        this.BackingStore.set("accounts", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the agedAccountsPayable property value. The agedAccountsPayable property
      * @param value Value to set for the agedAccountsPayable property.
      */
     public void setAgedAccountsPayable(@jakarta.annotation.Nullable final java.util.List<AgedAccountsPayable> value) {
-        this.agedAccountsPayable = value;
+        this.BackingStore.set("agedAccountsPayable", value);
     }
     /**
      * Sets the agedAccountsReceivable property value. The agedAccountsReceivable property
      * @param value Value to set for the agedAccountsReceivable property.
      */
     public void setAgedAccountsReceivable(@jakarta.annotation.Nullable final java.util.List<AgedAccountsReceivable> value) {
-        this.agedAccountsReceivable = value;
+        this.BackingStore.set("agedAccountsReceivable", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the businessProfileId property value. The businessProfileId property
      * @param value Value to set for the businessProfileId property.
      */
     public void setBusinessProfileId(@jakarta.annotation.Nullable final String value) {
-        this.businessProfileId = value;
+        this.BackingStore.set("businessProfileId", value);
     }
     /**
      * Sets the companyInformation property value. The companyInformation property
      * @param value Value to set for the companyInformation property.
      */
     public void setCompanyInformation(@jakarta.annotation.Nullable final java.util.List<CompanyInformation> value) {
-        this.companyInformation = value;
+        this.BackingStore.set("companyInformation", value);
     }
     /**
      * Sets the countriesRegions property value. The countriesRegions property
      * @param value Value to set for the countriesRegions property.
      */
     public void setCountriesRegions(@jakarta.annotation.Nullable final java.util.List<CountryRegion> value) {
-        this.countriesRegions = value;
+        this.BackingStore.set("countriesRegions", value);
     }
     /**
      * Sets the currencies property value. The currencies property
      * @param value Value to set for the currencies property.
      */
     public void setCurrencies(@jakarta.annotation.Nullable final java.util.List<Currency> value) {
-        this.currencies = value;
+        this.BackingStore.set("currencies", value);
     }
     /**
      * Sets the customerPaymentJournals property value. The customerPaymentJournals property
      * @param value Value to set for the customerPaymentJournals property.
      */
     public void setCustomerPaymentJournals(@jakarta.annotation.Nullable final java.util.List<CustomerPaymentJournal> value) {
-        this.customerPaymentJournals = value;
+        this.BackingStore.set("customerPaymentJournals", value);
     }
     /**
      * Sets the customerPayments property value. The customerPayments property
      * @param value Value to set for the customerPayments property.
      */
     public void setCustomerPayments(@jakarta.annotation.Nullable final java.util.List<CustomerPayment> value) {
-        this.customerPayments = value;
+        this.BackingStore.set("customerPayments", value);
     }
     /**
      * Sets the customers property value. The customers property
      * @param value Value to set for the customers property.
      */
     public void setCustomers(@jakarta.annotation.Nullable final java.util.List<Customer> value) {
-        this.customers = value;
+        this.BackingStore.set("customers", value);
     }
     /**
      * Sets the dimensions property value. The dimensions property
      * @param value Value to set for the dimensions property.
      */
     public void setDimensions(@jakarta.annotation.Nullable final java.util.List<Dimension> value) {
-        this.dimensions = value;
+        this.BackingStore.set("dimensions", value);
     }
     /**
      * Sets the dimensionValues property value. The dimensionValues property
      * @param value Value to set for the dimensionValues property.
      */
     public void setDimensionValues(@jakarta.annotation.Nullable final java.util.List<DimensionValue> value) {
-        this.dimensionValues = value;
+        this.BackingStore.set("dimensionValues", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the employees property value. The employees property
      * @param value Value to set for the employees property.
      */
     public void setEmployees(@jakarta.annotation.Nullable final java.util.List<Employee> value) {
-        this.employees = value;
+        this.BackingStore.set("employees", value);
     }
     /**
      * Sets the generalLedgerEntries property value. The generalLedgerEntries property
      * @param value Value to set for the generalLedgerEntries property.
      */
     public void setGeneralLedgerEntries(@jakarta.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
-        this.generalLedgerEntries = value;
+        this.BackingStore.set("generalLedgerEntries", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the itemCategories property value. The itemCategories property
      * @param value Value to set for the itemCategories property.
      */
     public void setItemCategories(@jakarta.annotation.Nullable final java.util.List<ItemCategory> value) {
-        this.itemCategories = value;
+        this.BackingStore.set("itemCategories", value);
     }
     /**
      * Sets the items property value. The items property
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<Item> value) {
-        this.items = value;
+        this.BackingStore.set("items", value);
     }
     /**
      * Sets the journalLines property value. The journalLines property
      * @param value Value to set for the journalLines property.
      */
     public void setJournalLines(@jakarta.annotation.Nullable final java.util.List<JournalLine> value) {
-        this.journalLines = value;
+        this.BackingStore.set("journalLines", value);
     }
     /**
      * Sets the journals property value. The journals property
      * @param value Value to set for the journals property.
      */
     public void setJournals(@jakarta.annotation.Nullable final java.util.List<Journal> value) {
-        this.journals = value;
+        this.BackingStore.set("journals", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the paymentMethods property value. The paymentMethods property
      * @param value Value to set for the paymentMethods property.
      */
     public void setPaymentMethods(@jakarta.annotation.Nullable final java.util.List<PaymentMethod> value) {
-        this.paymentMethods = value;
+        this.BackingStore.set("paymentMethods", value);
     }
     /**
      * Sets the paymentTerms property value. The paymentTerms property
      * @param value Value to set for the paymentTerms property.
      */
     public void setPaymentTerms(@jakarta.annotation.Nullable final java.util.List<PaymentTerm> value) {
-        this.paymentTerms = value;
+        this.BackingStore.set("paymentTerms", value);
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      */
     public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
-        this.picture = value;
+        this.BackingStore.set("picture", value);
     }
     /**
      * Sets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
      * @param value Value to set for the purchaseInvoiceLines property.
      */
     public void setPurchaseInvoiceLines(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
-        this.purchaseInvoiceLines = value;
+        this.BackingStore.set("purchaseInvoiceLines", value);
     }
     /**
      * Sets the purchaseInvoices property value. The purchaseInvoices property
      * @param value Value to set for the purchaseInvoices property.
      */
     public void setPurchaseInvoices(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
-        this.purchaseInvoices = value;
+        this.BackingStore.set("purchaseInvoices", value);
     }
     /**
      * Sets the salesCreditMemoLines property value. The salesCreditMemoLines property
      * @param value Value to set for the salesCreditMemoLines property.
      */
     public void setSalesCreditMemoLines(@jakarta.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
-        this.salesCreditMemoLines = value;
+        this.BackingStore.set("salesCreditMemoLines", value);
     }
     /**
      * Sets the salesCreditMemos property value. The salesCreditMemos property
      * @param value Value to set for the salesCreditMemos property.
      */
     public void setSalesCreditMemos(@jakarta.annotation.Nullable final java.util.List<SalesCreditMemo> value) {
-        this.salesCreditMemos = value;
+        this.BackingStore.set("salesCreditMemos", value);
     }
     /**
      * Sets the salesInvoiceLines property value. The salesInvoiceLines property
      * @param value Value to set for the salesInvoiceLines property.
      */
     public void setSalesInvoiceLines(@jakarta.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
-        this.salesInvoiceLines = value;
+        this.BackingStore.set("salesInvoiceLines", value);
     }
     /**
      * Sets the salesInvoices property value. The salesInvoices property
      * @param value Value to set for the salesInvoices property.
      */
     public void setSalesInvoices(@jakarta.annotation.Nullable final java.util.List<SalesInvoice> value) {
-        this.salesInvoices = value;
+        this.BackingStore.set("salesInvoices", value);
     }
     /**
      * Sets the salesOrderLines property value. The salesOrderLines property
      * @param value Value to set for the salesOrderLines property.
      */
     public void setSalesOrderLines(@jakarta.annotation.Nullable final java.util.List<SalesOrderLine> value) {
-        this.salesOrderLines = value;
+        this.BackingStore.set("salesOrderLines", value);
     }
     /**
      * Sets the salesOrders property value. The salesOrders property
      * @param value Value to set for the salesOrders property.
      */
     public void setSalesOrders(@jakarta.annotation.Nullable final java.util.List<SalesOrder> value) {
-        this.salesOrders = value;
+        this.BackingStore.set("salesOrders", value);
     }
     /**
      * Sets the salesQuoteLines property value. The salesQuoteLines property
      * @param value Value to set for the salesQuoteLines property.
      */
     public void setSalesQuoteLines(@jakarta.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
-        this.salesQuoteLines = value;
+        this.BackingStore.set("salesQuoteLines", value);
     }
     /**
      * Sets the salesQuotes property value. The salesQuotes property
      * @param value Value to set for the salesQuotes property.
      */
     public void setSalesQuotes(@jakarta.annotation.Nullable final java.util.List<SalesQuote> value) {
-        this.salesQuotes = value;
+        this.BackingStore.set("salesQuotes", value);
     }
     /**
      * Sets the shipmentMethods property value. The shipmentMethods property
      * @param value Value to set for the shipmentMethods property.
      */
     public void setShipmentMethods(@jakarta.annotation.Nullable final java.util.List<ShipmentMethod> value) {
-        this.shipmentMethods = value;
+        this.BackingStore.set("shipmentMethods", value);
     }
     /**
      * Sets the systemVersion property value. The systemVersion property
      * @param value Value to set for the systemVersion property.
      */
     public void setSystemVersion(@jakarta.annotation.Nullable final String value) {
-        this.systemVersion = value;
+        this.BackingStore.set("systemVersion", value);
     }
     /**
      * Sets the taxAreas property value. The taxAreas property
      * @param value Value to set for the taxAreas property.
      */
     public void setTaxAreas(@jakarta.annotation.Nullable final java.util.List<TaxArea> value) {
-        this.taxAreas = value;
+        this.BackingStore.set("taxAreas", value);
     }
     /**
      * Sets the taxGroups property value. The taxGroups property
      * @param value Value to set for the taxGroups property.
      */
     public void setTaxGroups(@jakarta.annotation.Nullable final java.util.List<TaxGroup> value) {
-        this.taxGroups = value;
+        this.BackingStore.set("taxGroups", value);
     }
     /**
      * Sets the unitsOfMeasure property value. The unitsOfMeasure property
      * @param value Value to set for the unitsOfMeasure property.
      */
     public void setUnitsOfMeasure(@jakarta.annotation.Nullable final java.util.List<UnitOfMeasure> value) {
-        this.unitsOfMeasure = value;
+        this.BackingStore.set("unitsOfMeasure", value);
     }
     /**
      * Sets the vendors property value. The vendors property
      * @param value Value to set for the vendors property.
      */
     public void setVendors(@jakarta.annotation.Nullable final java.util.List<Vendor> value) {
-        this.vendors = value;
+        this.BackingStore.set("vendors", value);
     }
 }

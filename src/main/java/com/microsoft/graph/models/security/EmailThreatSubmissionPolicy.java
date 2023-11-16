@@ -10,59 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     /**
-     * Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation.
-     */
-    private String customizedNotificationSenderEmailAddress;
-    /**
-     * Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
-     */
-    private String customizedReportRecipientEmailAddress;
-    /**
-     * Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
-     */
-    private Boolean isAlwaysReportEnabledForUsers;
-    /**
-     * Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
-     */
-    private Boolean isAskMeEnabledForUsers;
-    /**
-     * Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
-     */
-    private Boolean isCustomizedMessageEnabled;
-    /**
-     * If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
-     */
-    private Boolean isCustomizedMessageEnabledForPhishing;
-    /**
-     * Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
-     */
-    private Boolean isCustomizedNotificationSenderEnabled;
-    /**
-     * Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
-     */
-    private Boolean isNeverReportEnabledForUsers;
-    /**
-     * Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
-     */
-    private Boolean isOrganizationBrandingEnabled;
-    /**
-     * Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
-     */
-    private Boolean isReportFromQuarantineEnabled;
-    /**
-     * Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
-     */
-    private Boolean isReportToCustomizedEmailAddressEnabled;
-    /**
-     * If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
-     */
-    private Boolean isReportToMicrosoftEnabled;
-    /**
-     * Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
-     */
-    private Boolean isReviewEmailNotificationEnabled;
-    /**
-     * Instantiates a new emailThreatSubmissionPolicy and sets the default values.
+     * Instantiates a new EmailThreatSubmissionPolicy and sets the default values.
      */
     public EmailThreatSubmissionPolicy() {
         super();
@@ -70,7 +18,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailThreatSubmissionPolicy
+     * @return a EmailThreatSubmissionPolicy
      */
     @jakarta.annotation.Nonnull
     public static EmailThreatSubmissionPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,19 +27,19 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customizedNotificationSenderEmailAddress property value. Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedNotificationSenderEmailAddress() {
-        return this.customizedNotificationSenderEmailAddress;
+        return this.BackingStore.get("customizedNotificationSenderEmailAddress");
     }
     /**
-     * Gets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
-     * @return a string
+     * Gets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedReportRecipientEmailAddress() {
-        return this.customizedReportRecipientEmailAddress;
+        return this.BackingStore.get("customizedReportRecipientEmailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -117,91 +65,91 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isAlwaysReportEnabledForUsers property value. Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAlwaysReportEnabledForUsers() {
-        return this.isAlwaysReportEnabledForUsers;
+        return this.BackingStore.get("isAlwaysReportEnabledForUsers");
     }
     /**
      * Gets the isAskMeEnabledForUsers property value. Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAskMeEnabledForUsers() {
-        return this.isAskMeEnabledForUsers;
+        return this.BackingStore.get("isAskMeEnabledForUsers");
     }
     /**
-     * Gets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
-     * @return a boolean
+     * Gets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is a phish mail, spam or junk is customized or not. The default value is false. Optional for creation.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomizedMessageEnabled() {
-        return this.isCustomizedMessageEnabled;
+        return this.BackingStore.get("isCustomizedMessageEnabled");
     }
     /**
      * Gets the isCustomizedMessageEnabledForPhishing property value. If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomizedMessageEnabledForPhishing() {
-        return this.isCustomizedMessageEnabledForPhishing;
+        return this.BackingStore.get("isCustomizedMessageEnabledForPhishing");
     }
     /**
      * Gets the isCustomizedNotificationSenderEnabled property value. Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomizedNotificationSenderEnabled() {
-        return this.isCustomizedNotificationSenderEnabled;
+        return this.BackingStore.get("isCustomizedNotificationSenderEnabled");
     }
     /**
-     * Gets the isNeverReportEnabledForUsers property value. Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
-     * @return a boolean
+     * Gets the isNeverReportEnabledForUsers property value. Indicates whether end users can move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsNeverReportEnabledForUsers() {
-        return this.isNeverReportEnabledForUsers;
+        return this.BackingStore.get("isNeverReportEnabledForUsers");
     }
     /**
      * Gets the isOrganizationBrandingEnabled property value. Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizationBrandingEnabled() {
-        return this.isOrganizationBrandingEnabled;
+        return this.BackingStore.get("isOrganizationBrandingEnabled");
     }
     /**
      * Gets the isReportFromQuarantineEnabled property value. Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReportFromQuarantineEnabled() {
-        return this.isReportFromQuarantineEnabled;
+        return this.BackingStore.get("isReportFromQuarantineEnabled");
     }
     /**
-     * Gets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
-     * @return a boolean
+     * Gets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be sent to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReportToCustomizedEmailAddressEnabled() {
-        return this.isReportToCustomizedEmailAddressEnabled;
+        return this.BackingStore.get("isReportToCustomizedEmailAddressEnabled");
     }
     /**
-     * Gets the isReportToMicrosoftEnabled property value. If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
-     * @return a boolean
+     * Gets the isReportToMicrosoftEnabled property value. If enabled, the email is sent to Microsoft for analysis. The default value is false. Required for creation.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReportToMicrosoftEnabled() {
-        return this.isReportToMicrosoftEnabled;
+        return this.BackingStore.get("isReportToMicrosoftEnabled");
     }
     /**
      * Gets the isReviewEmailNotificationEnabled property value. Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReviewEmailNotificationEnabled() {
-        return this.isReviewEmailNotificationEnabled;
+        return this.BackingStore.get("isReviewEmailNotificationEnabled");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the customizedNotificationSenderEmailAddress property.
      */
     public void setCustomizedNotificationSenderEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.customizedNotificationSenderEmailAddress = value;
+        this.BackingStore.set("customizedNotificationSenderEmailAddress", value);
     }
     /**
-     * Sets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
+     * Sets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
      * @param value Value to set for the customizedReportRecipientEmailAddress property.
      */
     public void setCustomizedReportRecipientEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.customizedReportRecipientEmailAddress = value;
+        this.BackingStore.set("customizedReportRecipientEmailAddress", value);
     }
     /**
      * Sets the isAlwaysReportEnabledForUsers property value. Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
      * @param value Value to set for the isAlwaysReportEnabledForUsers property.
      */
     public void setIsAlwaysReportEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAlwaysReportEnabledForUsers = value;
+        this.BackingStore.set("isAlwaysReportEnabledForUsers", value);
     }
     /**
      * Sets the isAskMeEnabledForUsers property value. Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
      * @param value Value to set for the isAskMeEnabledForUsers property.
      */
     public void setIsAskMeEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAskMeEnabledForUsers = value;
+        this.BackingStore.set("isAskMeEnabledForUsers", value);
     }
     /**
-     * Sets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
+     * Sets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is a phish mail, spam or junk is customized or not. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedMessageEnabled property.
      */
     public void setIsCustomizedMessageEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCustomizedMessageEnabled = value;
+        this.BackingStore.set("isCustomizedMessageEnabled", value);
     }
     /**
      * Sets the isCustomizedMessageEnabledForPhishing property value. If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedMessageEnabledForPhishing property.
      */
     public void setIsCustomizedMessageEnabledForPhishing(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCustomizedMessageEnabledForPhishing = value;
+        this.BackingStore.set("isCustomizedMessageEnabledForPhishing", value);
     }
     /**
      * Sets the isCustomizedNotificationSenderEnabled property value. Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
      * @param value Value to set for the isCustomizedNotificationSenderEnabled property.
      */
     public void setIsCustomizedNotificationSenderEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCustomizedNotificationSenderEnabled = value;
+        this.BackingStore.set("isCustomizedNotificationSenderEnabled", value);
     }
     /**
-     * Sets the isNeverReportEnabledForUsers property value. Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
+     * Sets the isNeverReportEnabledForUsers property value. Indicates whether end users can move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
      * @param value Value to set for the isNeverReportEnabledForUsers property.
      */
     public void setIsNeverReportEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.isNeverReportEnabledForUsers = value;
+        this.BackingStore.set("isNeverReportEnabledForUsers", value);
     }
     /**
      * Sets the isOrganizationBrandingEnabled property value. Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
      * @param value Value to set for the isOrganizationBrandingEnabled property.
      */
     public void setIsOrganizationBrandingEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOrganizationBrandingEnabled = value;
+        this.BackingStore.set("isOrganizationBrandingEnabled", value);
     }
     /**
      * Sets the isReportFromQuarantineEnabled property value. Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
      * @param value Value to set for the isReportFromQuarantineEnabled property.
      */
     public void setIsReportFromQuarantineEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReportFromQuarantineEnabled = value;
+        this.BackingStore.set("isReportFromQuarantineEnabled", value);
     }
     /**
-     * Sets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
+     * Sets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be sent to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
      * @param value Value to set for the isReportToCustomizedEmailAddressEnabled property.
      */
     public void setIsReportToCustomizedEmailAddressEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReportToCustomizedEmailAddressEnabled = value;
+        this.BackingStore.set("isReportToCustomizedEmailAddressEnabled", value);
     }
     /**
-     * Sets the isReportToMicrosoftEnabled property value. If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
+     * Sets the isReportToMicrosoftEnabled property value. If enabled, the email is sent to Microsoft for analysis. The default value is false. Required for creation.
      * @param value Value to set for the isReportToMicrosoftEnabled property.
      */
     public void setIsReportToMicrosoftEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReportToMicrosoftEnabled = value;
+        this.BackingStore.set("isReportToMicrosoftEnabled", value);
     }
     /**
      * Sets the isReviewEmailNotificationEnabled property value. Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
      * @param value Value to set for the isReviewEmailNotificationEnabled property.
      */
     public void setIsReviewEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReviewEmailNotificationEnabled = value;
+        this.BackingStore.set("isReviewEmailNotificationEnabled", value);
     }
 }

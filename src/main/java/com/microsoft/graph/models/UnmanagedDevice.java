@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,69 +15,22 @@ import java.util.Objects;
  * Unmanaged device discovered in the network.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
+public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Device name.
-     */
-    private String deviceName;
-    /**
-     * Domain.
-     */
-    private String domain;
-    /**
-     * IP address.
-     */
-    private String ipAddress;
-    /**
-     * Last logged on user.
-     */
-    private String lastLoggedOnUser;
-    /**
-     * Last seen date and time.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * Location.
-     */
-    private String location;
-    /**
-     * MAC address.
-     */
-    private String macAddress;
-    /**
-     * Manufacturer.
-     */
-    private String manufacturer;
-    /**
-     * Model.
-     */
-    private String model;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Operating system.
-     */
-    private String os;
-    /**
-     * Operating system version.
-     */
-    private String osVersion;
-    /**
-     * Instantiates a new unmanagedDevice and sets the default values.
+     * Instantiates a new UnmanagedDevice and sets the default values.
      */
     public UnmanagedDevice() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unmanagedDevice
+     * @return a UnmanagedDevice
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,28 +38,41 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         return new UnmanagedDevice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * Gets the domain property value. Domain.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
-        return this.domain;
+        return this.BackingStore.get("domain");
     }
     /**
      * The deserialization information for the current model
@@ -128,19 +97,19 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the lastLoggedOnUser property value. Last logged on user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastLoggedOnUser() {
-        return this.lastLoggedOnUser;
+        return this.BackingStore.get("lastLoggedOnUser");
     }
     /**
      * Gets the lastSeenDateTime property value. Last seen date and time.
@@ -148,63 +117,63 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the location property value. Location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
-        return this.location;
+        return this.BackingStore.get("location");
     }
     /**
      * Gets the macAddress property value. MAC address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
-        return this.macAddress;
+        return this.BackingStore.get("macAddress");
     }
     /**
      * Gets the manufacturer property value. Manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. Model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the os property value. Operating system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOs() {
-        return this.os;
+        return this.BackingStore.get("os");
     }
     /**
      * Gets the osVersion property value. Operating system version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Serializes information the current object
@@ -227,94 +196,102 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the domain property value. Domain.
      * @param value Value to set for the domain property.
      */
     public void setDomain(@jakarta.annotation.Nullable final String value) {
-        this.domain = value;
+        this.BackingStore.set("domain", value);
     }
     /**
      * Sets the ipAddress property value. IP address.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the lastLoggedOnUser property value. Last logged on user.
      * @param value Value to set for the lastLoggedOnUser property.
      */
     public void setLastLoggedOnUser(@jakarta.annotation.Nullable final String value) {
-        this.lastLoggedOnUser = value;
+        this.BackingStore.set("lastLoggedOnUser", value);
     }
     /**
      * Sets the lastSeenDateTime property value. Last seen date and time.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the location property value. Location.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {
-        this.location = value;
+        this.BackingStore.set("location", value);
     }
     /**
      * Sets the macAddress property value. MAC address.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {
-        this.macAddress = value;
+        this.BackingStore.set("macAddress", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. Model.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the os property value. Operating system.
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {
-        this.os = value;
+        this.BackingStore.set("os", value);
     }
     /**
      * Sets the osVersion property value. Operating system version.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
 }

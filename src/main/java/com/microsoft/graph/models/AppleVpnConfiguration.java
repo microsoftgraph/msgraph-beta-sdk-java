@@ -12,95 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleVpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Associated Domains
-     */
-    private java.util.List<String> associatedDomains;
-    /**
-     * VPN Authentication Method.
-     */
-    private VpnAuthenticationMethod authenticationMethod;
-    /**
-     * Connection name displayed to the user.
-     */
-    private String connectionName;
-    /**
-     * Apple VPN connection type.
-     */
-    private AppleVpnConnectionType connectionType;
-    /**
-     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     */
-    private java.util.List<KeyValue> customData;
-    /**
-     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     */
-    private java.util.List<KeyValuePair> customKeyValueData;
-    /**
-     * Toggle to prevent user from disabling automatic VPN in the Settings app
-     */
-    private Boolean disableOnDemandUserOverride;
-    /**
-     * Whether to disconnect after on-demand connection idles
-     */
-    private Boolean disconnectOnIdle;
-    /**
-     * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
-     */
-    private Integer disconnectOnIdleTimerInSeconds;
-    /**
-     * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
-     */
-    private Boolean enablePerApp;
-    /**
-     * Send all network traffic through VPN.
-     */
-    private Boolean enableSplitTunneling;
-    /**
-     * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
-     */
-    private java.util.List<String> excludedDomains;
-    /**
-     * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
-     */
-    private String identifier;
-    /**
-     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     */
-    private String loginGroupOrDomain;
-    /**
-     * On-Demand Rules. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<VpnOnDemandRule> onDemandRules;
-    /**
-     * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
-     */
-    private Boolean optInToDeviceIdSharing;
-    /**
-     * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
-     */
-    private VpnProviderType providerType;
-    /**
-     * Proxy Server.
-     */
-    private VpnProxyServer proxyServer;
-    /**
-     * Realm when connection type is set to Pulse Secure.
-     */
-    private String realm;
-    /**
-     * Role when connection type is set to Pulse Secure.
-     */
-    private String role;
-    /**
-     * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
-     */
-    private java.util.List<String> safariDomains;
-    /**
-     * VPN Server definition.
-     */
-    private VpnServer server;
-    /**
-     * Instantiates a new appleVpnConfiguration and sets the default values.
+     * Instantiates a new AppleVpnConfiguration and sets the default values.
      */
     public AppleVpnConfiguration() {
         super();
@@ -109,7 +21,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleVpnConfiguration
+     * @return a AppleVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AppleVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,99 +39,99 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the associatedDomains property value. Associated Domains
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssociatedDomains() {
-        return this.associatedDomains;
+        return this.BackingStore.get("associatedDomains");
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.BackingStore.get("authenticationMethod");
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
-        return this.connectionName;
+        return this.BackingStore.get("connectionName");
     }
     /**
      * Gets the connectionType property value. Apple VPN connection type.
-     * @return a appleVpnConnectionType
+     * @return a AppleVpnConnectionType
      */
     @jakarta.annotation.Nullable
     public AppleVpnConnectionType getConnectionType() {
-        return this.connectionType;
+        return this.BackingStore.get("connectionType");
     }
     /**
      * Gets the customData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
-        return this.customData;
+        return this.BackingStore.get("customData");
     }
     /**
      * Gets the customKeyValueData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
-        return this.customKeyValueData;
+        return this.BackingStore.get("customKeyValueData");
     }
     /**
      * Gets the disableOnDemandUserOverride property value. Toggle to prevent user from disabling automatic VPN in the Settings app
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableOnDemandUserOverride() {
-        return this.disableOnDemandUserOverride;
+        return this.BackingStore.get("disableOnDemandUserOverride");
     }
     /**
      * Gets the disconnectOnIdle property value. Whether to disconnect after on-demand connection idles
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisconnectOnIdle() {
-        return this.disconnectOnIdle;
+        return this.BackingStore.get("disconnectOnIdle");
     }
     /**
      * Gets the disconnectOnIdleTimerInSeconds property value. The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisconnectOnIdleTimerInSeconds() {
-        return this.disconnectOnIdleTimerInSeconds;
+        return this.BackingStore.get("disconnectOnIdleTimerInSeconds");
     }
     /**
      * Gets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnablePerApp() {
-        return this.enablePerApp;
+        return this.BackingStore.get("enablePerApp");
     }
     /**
      * Gets the enableSplitTunneling property value. Send all network traffic through VPN.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
-        return this.enableSplitTunneling;
+        return this.BackingStore.get("enableSplitTunneling");
     }
     /**
      * Gets the excludedDomains property value. Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludedDomains() {
-        return this.excludedDomains;
+        return this.BackingStore.get("excludedDomains");
     }
     /**
      * The deserialization information for the current model
@@ -254,83 +166,83 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the identifier property value. Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
-        return this.identifier;
+        return this.BackingStore.get("identifier");
     }
     /**
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoginGroupOrDomain() {
-        return this.loginGroupOrDomain;
+        return this.BackingStore.get("loginGroupOrDomain");
     }
     /**
      * Gets the onDemandRules property value. On-Demand Rules. This collection can contain a maximum of 500 elements.
-     * @return a vpnOnDemandRule
+     * @return a java.util.List<VpnOnDemandRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnOnDemandRule> getOnDemandRules() {
-        return this.onDemandRules;
+        return this.BackingStore.get("onDemandRules");
     }
     /**
      * Gets the optInToDeviceIdSharing property value. Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOptInToDeviceIdSharing() {
-        return this.optInToDeviceIdSharing;
+        return this.BackingStore.get("optInToDeviceIdSharing");
     }
     /**
      * Gets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
-     * @return a vpnProviderType
+     * @return a VpnProviderType
      */
     @jakarta.annotation.Nullable
     public VpnProviderType getProviderType() {
-        return this.providerType;
+        return this.BackingStore.get("providerType");
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a vpnProxyServer
+     * @return a VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
-        return this.proxyServer;
+        return this.BackingStore.get("proxyServer");
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
-        return this.realm;
+        return this.BackingStore.get("realm");
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
-        return this.role;
+        return this.BackingStore.get("role");
     }
     /**
      * Gets the safariDomains property value. Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariDomains() {
-        return this.safariDomains;
+        return this.BackingStore.get("safariDomains");
     }
     /**
      * Gets the server property value. VPN Server definition.
-     * @return a vpnServer
+     * @return a VpnServer
      */
     @jakarta.annotation.Nullable
     public VpnServer getServer() {
-        return this.server;
+        return this.BackingStore.get("server");
     }
     /**
      * Serializes information the current object
@@ -367,153 +279,153 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the associatedDomains property.
      */
     public void setAssociatedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.associatedDomains = value;
+        this.BackingStore.set("associatedDomains", value);
     }
     /**
      * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final VpnAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.BackingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the connectionName property value. Connection name displayed to the user.
      * @param value Value to set for the connectionName property.
      */
     public void setConnectionName(@jakarta.annotation.Nullable final String value) {
-        this.connectionName = value;
+        this.BackingStore.set("connectionName", value);
     }
     /**
      * Sets the connectionType property value. Apple VPN connection type.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final AppleVpnConnectionType value) {
-        this.connectionType = value;
+        this.BackingStore.set("connectionType", value);
     }
     /**
      * Sets the customData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customData property.
      */
     public void setCustomData(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.customData = value;
+        this.BackingStore.set("customData", value);
     }
     /**
      * Sets the customKeyValueData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customKeyValueData property.
      */
     public void setCustomKeyValueData(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.customKeyValueData = value;
+        this.BackingStore.set("customKeyValueData", value);
     }
     /**
      * Sets the disableOnDemandUserOverride property value. Toggle to prevent user from disabling automatic VPN in the Settings app
      * @param value Value to set for the disableOnDemandUserOverride property.
      */
     public void setDisableOnDemandUserOverride(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableOnDemandUserOverride = value;
+        this.BackingStore.set("disableOnDemandUserOverride", value);
     }
     /**
      * Sets the disconnectOnIdle property value. Whether to disconnect after on-demand connection idles
      * @param value Value to set for the disconnectOnIdle property.
      */
     public void setDisconnectOnIdle(@jakarta.annotation.Nullable final Boolean value) {
-        this.disconnectOnIdle = value;
+        this.BackingStore.set("disconnectOnIdle", value);
     }
     /**
      * Sets the disconnectOnIdleTimerInSeconds property value. The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
      * @param value Value to set for the disconnectOnIdleTimerInSeconds property.
      */
     public void setDisconnectOnIdleTimerInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.disconnectOnIdleTimerInSeconds = value;
+        this.BackingStore.set("disconnectOnIdleTimerInSeconds", value);
     }
     /**
      * Sets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
      * @param value Value to set for the enablePerApp property.
      */
     public void setEnablePerApp(@jakarta.annotation.Nullable final Boolean value) {
-        this.enablePerApp = value;
+        this.BackingStore.set("enablePerApp", value);
     }
     /**
      * Sets the enableSplitTunneling property value. Send all network traffic through VPN.
      * @param value Value to set for the enableSplitTunneling property.
      */
     public void setEnableSplitTunneling(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableSplitTunneling = value;
+        this.BackingStore.set("enableSplitTunneling", value);
     }
     /**
      * Sets the excludedDomains property value. Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
      * @param value Value to set for the excludedDomains property.
      */
     public void setExcludedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludedDomains = value;
+        this.BackingStore.set("excludedDomains", value);
     }
     /**
      * Sets the identifier property value. Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.identifier = value;
+        this.BackingStore.set("identifier", value);
     }
     /**
      * Sets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
      * @param value Value to set for the loginGroupOrDomain property.
      */
     public void setLoginGroupOrDomain(@jakarta.annotation.Nullable final String value) {
-        this.loginGroupOrDomain = value;
+        this.BackingStore.set("loginGroupOrDomain", value);
     }
     /**
      * Sets the onDemandRules property value. On-Demand Rules. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the onDemandRules property.
      */
     public void setOnDemandRules(@jakarta.annotation.Nullable final java.util.List<VpnOnDemandRule> value) {
-        this.onDemandRules = value;
+        this.BackingStore.set("onDemandRules", value);
     }
     /**
      * Sets the optInToDeviceIdSharing property value. Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
      * @param value Value to set for the optInToDeviceIdSharing property.
      */
     public void setOptInToDeviceIdSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.optInToDeviceIdSharing = value;
+        this.BackingStore.set("optInToDeviceIdSharing", value);
     }
     /**
      * Sets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
      * @param value Value to set for the providerType property.
      */
     public void setProviderType(@jakarta.annotation.Nullable final VpnProviderType value) {
-        this.providerType = value;
+        this.BackingStore.set("providerType", value);
     }
     /**
      * Sets the proxyServer property value. Proxy Server.
      * @param value Value to set for the proxyServer property.
      */
     public void setProxyServer(@jakarta.annotation.Nullable final VpnProxyServer value) {
-        this.proxyServer = value;
+        this.BackingStore.set("proxyServer", value);
     }
     /**
      * Sets the realm property value. Realm when connection type is set to Pulse Secure.
      * @param value Value to set for the realm property.
      */
     public void setRealm(@jakarta.annotation.Nullable final String value) {
-        this.realm = value;
+        this.BackingStore.set("realm", value);
     }
     /**
      * Sets the role property value. Role when connection type is set to Pulse Secure.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
-        this.role = value;
+        this.BackingStore.set("role", value);
     }
     /**
      * Sets the safariDomains property value. Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
      * @param value Value to set for the safariDomains property.
      */
     public void setSafariDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.safariDomains = value;
+        this.BackingStore.set("safariDomains", value);
     }
     /**
      * Sets the server property value. VPN Server definition.
      * @param value Value to set for the server property.
      */
     public void setServer(@jakarta.annotation.Nullable final VpnServer value) {
-        this.server = value;
+        this.BackingStore.set("server", value);
     }
 }

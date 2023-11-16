@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
+public class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
-     */
-    private Double compromisedRate;
-    /**
-     * List of simulation events in an attack simulation and training campaign.
-     */
-    private java.util.List<SimulationEvent> events;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new simulationEventsContent and sets the default values.
+     * Instantiates a new SimulationEventsContent and sets the default values.
      */
     public SimulationEventsContent() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a simulationEventsContent
+     * @return a SimulationEventsContent
      */
     @jakarta.annotation.Nonnull
     public static SimulationEventsContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,28 +34,41 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
         return new SimulationEventsContent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCompromisedRate() {
-        return this.compromisedRate;
+        return this.BackingStore.get("compromisedRate");
     }
     /**
      * Gets the events property value. List of simulation events in an attack simulation and training campaign.
-     * @return a simulationEvent
+     * @return a java.util.List<SimulationEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationEvent> getEvents() {
-        return this.events;
+        return this.BackingStore.get("events");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +84,11 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
      * @param value Value to set for the compromisedRate property.
      */
     public void setCompromisedRate(@jakarta.annotation.Nullable final Double value) {
-        this.compromisedRate = value;
+        this.BackingStore.set("compromisedRate", value);
     }
     /**
      * Sets the events property value. List of simulation events in an attack simulation and training campaign.
      * @param value Value to set for the events property.
      */
     public void setEvents(@jakarta.annotation.Nullable final java.util.List<SimulationEvent> value) {
-        this.events = value;
+        this.BackingStore.set("events", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintConnectorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrintConnector> value;
-    /**
-     * Instantiates a new printConnectorCollectionResponse and sets the default values.
+     * Instantiates a new PrintConnectorCollectionResponse and sets the default values.
      */
     public PrintConnectorCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrintConnectorCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printConnectorCollectionResponse
+     * @return a PrintConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrintConnectorCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrintConnectorCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a printConnector
+     * @return a java.util.List<PrintConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrintConnectorCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrintConnector> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

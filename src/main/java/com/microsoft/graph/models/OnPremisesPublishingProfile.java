@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
-     */
-    private java.util.List<OnPremisesAgentGroup> agentGroups;
-    /**
-     * List of existing onPremisesAgent objects. Read-only. Nullable.
-     */
-    private java.util.List<OnPremisesAgent> agents;
-    /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
-     */
-    private java.util.List<ConnectorGroup> connectorGroups;
-    /**
-     * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
-     */
-    private java.util.List<Connector> connectors;
-    /**
-     * Represents a hybridAgentUpdaterConfiguration object.
-     */
-    private HybridAgentUpdaterConfiguration hybridAgentUpdaterConfiguration;
-    /**
-     * The isDefaultAccessEnabled property
-     */
-    private Boolean isDefaultAccessEnabled;
-    /**
-     * Represents if Azure AD Application Proxy is enabled for the tenant.
-     */
-    private Boolean isEnabled;
-    /**
-     * List of existing publishedResource objects. Read-only. Nullable.
-     */
-    private java.util.List<PublishedResource> publishedResources;
-    /**
-     * Instantiates a new onPremisesPublishingProfile and sets the default values.
+     * Instantiates a new OnPremisesPublishingProfile and sets the default values.
      */
     public OnPremisesPublishingProfile() {
         super();
@@ -49,7 +17,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesPublishingProfile
+     * @return a OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesPublishingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,35 +26,35 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the agentGroups property value. List of existing onPremisesAgentGroup objects. Read-only. Nullable.
-     * @return a onPremisesAgentGroup
+     * @return a java.util.List<OnPremisesAgentGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
-        return this.agentGroups;
+        return this.BackingStore.get("agentGroups");
     }
     /**
      * Gets the agents property value. List of existing onPremisesAgent objects. Read-only. Nullable.
-     * @return a onPremisesAgent
+     * @return a java.util.List<OnPremisesAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
-        return this.agents;
+        return this.BackingStore.get("agents");
     }
     /**
      * Gets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
-     * @return a connectorGroup
+     * @return a java.util.List<ConnectorGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getConnectorGroups() {
-        return this.connectorGroups;
+        return this.BackingStore.get("connectorGroups");
     }
     /**
      * Gets the connectors property value. List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
-     * @return a connector
+     * @return a java.util.List<Connector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Connector> getConnectors() {
-        return this.connectors;
+        return this.BackingStore.get("connectors");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +75,35 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
-     * @return a hybridAgentUpdaterConfiguration
+     * @return a HybridAgentUpdaterConfiguration
      */
     @jakarta.annotation.Nullable
     public HybridAgentUpdaterConfiguration getHybridAgentUpdaterConfiguration() {
-        return this.hybridAgentUpdaterConfiguration;
+        return this.BackingStore.get("hybridAgentUpdaterConfiguration");
     }
     /**
      * Gets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultAccessEnabled() {
-        return this.isDefaultAccessEnabled;
+        return this.BackingStore.get("isDefaultAccessEnabled");
     }
     /**
-     * Gets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
-     * @return a boolean
+     * Gets the isEnabled property value. Represents if Microsoft Entra application proxy is enabled for the tenant.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the publishedResources property value. List of existing publishedResource objects. Read-only. Nullable.
-     * @return a publishedResource
+     * @return a java.util.List<PublishedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
-        return this.publishedResources;
+        return this.BackingStore.get("publishedResources");
     }
     /**
      * Serializes information the current object
@@ -158,55 +126,55 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      */
     public void setAgentGroups(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
-        this.agentGroups = value;
+        this.BackingStore.set("agentGroups", value);
     }
     /**
      * Sets the agents property value. List of existing onPremisesAgent objects. Read-only. Nullable.
      * @param value Value to set for the agents property.
      */
     public void setAgents(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
-        this.agents = value;
+        this.BackingStore.set("agents", value);
     }
     /**
      * Sets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @param value Value to set for the connectorGroups property.
      */
     public void setConnectorGroups(@jakarta.annotation.Nullable final java.util.List<ConnectorGroup> value) {
-        this.connectorGroups = value;
+        this.BackingStore.set("connectorGroups", value);
     }
     /**
      * Sets the connectors property value. List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      * @param value Value to set for the connectors property.
      */
     public void setConnectors(@jakarta.annotation.Nullable final java.util.List<Connector> value) {
-        this.connectors = value;
+        this.BackingStore.set("connectors", value);
     }
     /**
      * Sets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
      * @param value Value to set for the hybridAgentUpdaterConfiguration property.
      */
     public void setHybridAgentUpdaterConfiguration(@jakarta.annotation.Nullable final HybridAgentUpdaterConfiguration value) {
-        this.hybridAgentUpdaterConfiguration = value;
+        this.BackingStore.set("hybridAgentUpdaterConfiguration", value);
     }
     /**
      * Sets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
      * @param value Value to set for the isDefaultAccessEnabled property.
      */
     public void setIsDefaultAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefaultAccessEnabled = value;
+        this.BackingStore.set("isDefaultAccessEnabled", value);
     }
     /**
-     * Sets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
+     * Sets the isEnabled property value. Represents if Microsoft Entra application proxy is enabled for the tenant.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the publishedResources property value. List of existing publishedResource objects. Read-only. Nullable.
      * @param value Value to set for the publishedResources property.
      */
     public void setPublishedResources(@jakarta.annotation.Nullable final java.util.List<PublishedResource> value) {
-        this.publishedResources = value;
+        this.BackingStore.set("publishedResources", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsHelloForBusinessAuthenticationMethod> value;
-    /**
-     * Instantiates a new windowsHelloForBusinessAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new WindowsHelloForBusinessAuthenticationMethodCollectionResponse and sets the default values.
      */
     public WindowsHelloForBusinessAuthenticationMethodCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsHelloForBusinessAuthenticationMethodCollectionResponse
+     * @return a WindowsHelloForBusinessAuthenticationMethodCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsHelloForBusinessAuthenticationMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse exten
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsHelloForBusinessAuthenticationMethod
+     * @return a java.util.List<WindowsHelloForBusinessAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsHelloForBusinessAuthenticationMethod> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse exten
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

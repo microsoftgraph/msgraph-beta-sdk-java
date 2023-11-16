@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServerLogCollectionResponseCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MicrosoftTunnelServerLogCollectionResponse> value;
-    /**
-     * Instantiates a new microsoftTunnelServerLogCollectionResponseCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelServerLogCollectionResponseCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelServerLogCollectionResponseCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MicrosoftTunnelServerLogCollectionResponseCollectionResponse extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelServerLogCollectionResponseCollectionResponse
+     * @return a MicrosoftTunnelServerLogCollectionResponseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponseCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MicrosoftTunnelServerLogCollectionResponseCollectionResponse extend
     }
     /**
      * Gets the value property value. The value property
-     * @return a microsoftTunnelServerLogCollectionResponse
+     * @return a java.util.List<MicrosoftTunnelServerLogCollectionResponse>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServerLogCollectionResponse> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MicrosoftTunnelServerLogCollectionResponseCollectionResponse extend
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MicrosoftTunnelServerLogCollectionResponse> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

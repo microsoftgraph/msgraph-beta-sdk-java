@@ -4,63 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class KeyCredential implements AdditionalDataHolder, Parsable {
+public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
-     */
-    private byte[] customKeyIdentifier;
-    /**
-     * Friendly name for the key. Optional.
-     */
-    private String displayName;
-    /**
-     * The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
-     */
-    private byte[] key;
-    /**
-     * The unique identifier for the key.
-     */
-    private UUID keyId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The type of key credential; for example, Symmetric, AsymmetricX509Cert, or X509CertAndPassword.
-     */
-    private String type;
-    /**
-     * A string that describes the purpose for which the key can be used; for example, None, Verify, PairwiseIdentifier, Delegation, Decrypt, Encrypt, HashedIdentifier, SelfSignedTls, or Sign. If usage is Sign, the type should be X509CertAndPassword, and the passwordCredentials for signing should be defined.
-     */
-    private String usage;
-    /**
-     * Instantiates a new keyCredential and sets the default values.
+     * Instantiates a new KeyCredential and sets the default values.
      */
     public KeyCredential() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @jakarta.annotation.Nonnull
     public static KeyCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,28 +36,41 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         return new KeyCredential();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomKeyIdentifier() {
-        return this.customKeyIdentifier;
+        return this.BackingStore.get("customKeyIdentifier");
     }
     /**
      * Gets the displayName property value. Friendly name for the key. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the endDateTime property value. The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -97,7 +78,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -119,11 +100,11 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getKey() {
-        return this.key;
+        return this.BackingStore.get("key");
     }
     /**
      * Gets the keyId property value. The unique identifier for the key.
@@ -131,15 +112,15 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getKeyId() {
-        return this.keyId;
+        return this.BackingStore.get("keyId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the startDateTime property value. The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -147,23 +128,23 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the type property value. The type of key credential; for example, Symmetric, AsymmetricX509Cert, or X509CertAndPassword.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Gets the usage property value. A string that describes the purpose for which the key can be used; for example, None, Verify, PairwiseIdentifier, Delegation, Decrypt, Encrypt, HashedIdentifier, SelfSignedTls, or Sign. If usage is Sign, the type should be X509CertAndPassword, and the passwordCredentials for signing should be defined.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsage() {
-        return this.usage;
+        return this.BackingStore.get("usage");
     }
     /**
      * Serializes information the current object
@@ -183,73 +164,81 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
      * @param value Value to set for the customKeyIdentifier property.
      */
     public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
-        this.customKeyIdentifier = value;
+        this.BackingStore.set("customKeyIdentifier", value);
     }
     /**
      * Sets the displayName property value. Friendly name for the key. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the endDateTime property value. The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
-        this.key = value;
+        this.BackingStore.set("key", value);
     }
     /**
      * Sets the keyId property value. The unique identifier for the key.
      * @param value Value to set for the keyId property.
      */
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
-        this.keyId = value;
+        this.BackingStore.set("keyId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the type property value. The type of key credential; for example, Symmetric, AsymmetricX509Cert, or X509CertAndPassword.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
     /**
      * Sets the usage property value. A string that describes the purpose for which the key can be used; for example, None, Verify, PairwiseIdentifier, Delegation, Decrypt, Encrypt, HashedIdentifier, SelfSignedTls, or Sign. If usage is Sign, the type should be X509CertAndPassword, and the passwordCredentials for signing should be defined.
      * @param value Value to set for the usage property.
      */
     public void setUsage(@jakarta.annotation.Nullable final String value) {
-        this.usage = value;
+        this.BackingStore.set("usage", value);
     }
 }

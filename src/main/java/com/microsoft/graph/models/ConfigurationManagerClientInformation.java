@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,22 @@ import java.util.Objects;
  * Configuration Manager client information synced from SCCM
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConfigurationManagerClientInformation implements AdditionalDataHolder, Parsable {
+public class ConfigurationManagerClientInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Configuration Manager Client Id from SCCM
-     */
-    private String clientIdentifier;
-    /**
-     * Configuration Manager Client version from SCCM
-     */
-    private String clientVersion;
-    /**
-     * Configuration Manager Client blocked status from SCCM
-     */
-    private Boolean isBlocked;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new configurationManagerClientInformation and sets the default values.
+     * Instantiates a new ConfigurationManagerClientInformation and sets the default values.
      */
     public ConfigurationManagerClientInformation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configurationManagerClientInformation
+     * @return a ConfigurationManagerClientInformation
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerClientInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,28 +37,41 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
         return new ConfigurationManagerClientInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the clientIdentifier property value. Configuration Manager Client Id from SCCM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientIdentifier() {
-        return this.clientIdentifier;
+        return this.BackingStore.get("clientIdentifier");
     }
     /**
      * Gets the clientVersion property value. Configuration Manager Client version from SCCM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientVersion() {
-        return this.clientVersion;
+        return this.BackingStore.get("clientVersion");
     }
     /**
      * The deserialization information for the current model
@@ -87,19 +88,19 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
     }
     /**
      * Gets the isBlocked property value. Configuration Manager Client blocked status from SCCM
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBlocked() {
-        return this.isBlocked;
+        return this.BackingStore.get("isBlocked");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -114,38 +115,46 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the clientIdentifier property value. Configuration Manager Client Id from SCCM
      * @param value Value to set for the clientIdentifier property.
      */
     public void setClientIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.clientIdentifier = value;
+        this.BackingStore.set("clientIdentifier", value);
     }
     /**
      * Sets the clientVersion property value. Configuration Manager Client version from SCCM
      * @param value Value to set for the clientVersion property.
      */
     public void setClientVersion(@jakarta.annotation.Nullable final String value) {
-        this.clientVersion = value;
+        this.BackingStore.set("clientVersion", value);
     }
     /**
      * Sets the isBlocked property value. Configuration Manager Client blocked status from SCCM
      * @param value Value to set for the isBlocked property.
      */
     public void setIsBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBlocked = value;
+        this.BackingStore.set("isBlocked", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

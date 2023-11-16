@@ -4,42 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ContentLabel implements AdditionalDataHolder, Parsable {
+public class ContentLabel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The assignmentMethod property
-     */
-    private AssignmentMethod assignmentMethod;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The sensitivityLabelId property
-     */
-    private String sensitivityLabelId;
-    /**
-     * Instantiates a new contentLabel and sets the default values.
+     * Instantiates a new ContentLabel and sets the default values.
      */
     public ContentLabel() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentLabel
+     * @return a ContentLabel
      */
     @jakarta.annotation.Nonnull
     public static ContentLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,20 +35,33 @@ public class ContentLabel implements AdditionalDataHolder, Parsable {
         return new ContentLabel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a assignmentMethod
+     * @return a AssignmentMethod
      */
     @jakarta.annotation.Nullable
     public AssignmentMethod getAssignmentMethod() {
-        return this.assignmentMethod;
+        return this.BackingStore.get("assignmentMethod");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -68,7 +69,7 @@ public class ContentLabel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +86,19 @@ public class ContentLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
-        return this.sensitivityLabelId;
+        return this.BackingStore.get("sensitivityLabelId");
     }
     /**
      * Serializes information the current object
@@ -112,38 +113,46 @@ public class ContentLabel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      */
     public void setAssignmentMethod(@jakarta.annotation.Nullable final AssignmentMethod value) {
-        this.assignmentMethod = value;
+        this.BackingStore.set("assignmentMethod", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the sensitivityLabelId property value. The sensitivityLabelId property
      * @param value Value to set for the sensitivityLabelId property.
      */
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
-        this.sensitivityLabelId = value;
+        this.BackingStore.set("sensitivityLabelId", value);
     }
 }

@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IpReferenceData implements AdditionalDataHolder, Parsable {
+public class IpReferenceData implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The asn property
-     */
-    private Long asn;
-    /**
-     * The city property
-     */
-    private String city;
-    /**
-     * The countryOrRegionCode property
-     */
-    private String countryOrRegionCode;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The organization property
-     */
-    private String organization;
-    /**
-     * The state property
-     */
-    private String state;
-    /**
-     * The vendor property
-     */
-    private String vendor;
-    /**
-     * Instantiates a new ipReferenceData and sets the default values.
+     * Instantiates a new IpReferenceData and sets the default values.
      */
     public IpReferenceData() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipReferenceData
+     * @return a IpReferenceData
      */
     @jakarta.annotation.Nonnull
     public static IpReferenceData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +34,49 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
         return new IpReferenceData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the asn property value. The asn property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getAsn() {
-        return this.asn;
+        return this.BackingStore.get("asn");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the city property value. The city property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
-        return this.city;
+        return this.BackingStore.get("city");
     }
     /**
      * Gets the countryOrRegionCode property value. The countryOrRegionCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegionCode() {
-        return this.countryOrRegionCode;
+        return this.BackingStore.get("countryOrRegionCode");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +96,35 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the organization property value. The organization property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganization() {
-        return this.organization;
+        return this.BackingStore.get("organization");
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
-        return this.vendor;
+        return this.BackingStore.get("vendor");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the asn property value. The asn property
      * @param value Value to set for the asn property.
      */
     public void setAsn(@jakarta.annotation.Nullable final Long value) {
-        this.asn = value;
+        this.BackingStore.set("asn", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the city property value. The city property
      * @param value Value to set for the city property.
      */
     public void setCity(@jakarta.annotation.Nullable final String value) {
-        this.city = value;
+        this.BackingStore.set("city", value);
     }
     /**
      * Sets the countryOrRegionCode property value. The countryOrRegionCode property
      * @param value Value to set for the countryOrRegionCode property.
      */
     public void setCountryOrRegionCode(@jakarta.annotation.Nullable final String value) {
-        this.countryOrRegionCode = value;
+        this.BackingStore.set("countryOrRegionCode", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the organization property value. The organization property
      * @param value Value to set for the organization property.
      */
     public void setOrganization(@jakarta.annotation.Nullable final String value) {
-        this.organization = value;
+        this.BackingStore.set("organization", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.vendor = value;
+        this.BackingStore.set("vendor", value);
     }
 }

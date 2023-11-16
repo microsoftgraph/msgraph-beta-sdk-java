@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostPairCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<HostPair> value;
-    /**
-     * Instantiates a new hostPairCollectionResponse and sets the default values.
+     * Instantiates a new HostPairCollectionResponse and sets the default values.
      */
     public HostPairCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class HostPairCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPairCollectionResponse
+     * @return a HostPairCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static HostPairCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class HostPairCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a hostPair
+     * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class HostPairCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

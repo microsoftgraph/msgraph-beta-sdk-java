@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsable {
     /**
-     * Define the DesktopApplicationID of the app
-     */
-    private String desktopApplicationId;
-    /**
-     * Define the DesktopApplicationLinkPath of the app
-     */
-    private String desktopApplicationLinkPath;
-    /**
-     * Define the path of a desktop app
-     */
-    private String path;
-    /**
-     * Instantiates a new windowsKioskDesktopApp and sets the default values.
+     * Instantiates a new WindowsKioskDesktopApp and sets the default values.
      */
     public WindowsKioskDesktopApp() {
         super();
@@ -33,7 +21,7 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskDesktopApp
+     * @return a WindowsKioskDesktopApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskDesktopApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +30,19 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
     }
     /**
      * Gets the desktopApplicationId property value. Define the DesktopApplicationID of the app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDesktopApplicationId() {
-        return this.desktopApplicationId;
+        return this.BackingStore.get("desktopApplicationId");
     }
     /**
      * Gets the desktopApplicationLinkPath property value. Define the DesktopApplicationLinkPath of the app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDesktopApplicationLinkPath() {
-        return this.desktopApplicationLinkPath;
+        return this.BackingStore.get("desktopApplicationLinkPath");
     }
     /**
      * The deserialization information for the current model
@@ -70,11 +58,11 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
     }
     /**
      * Gets the path property value. Define the path of a desktop app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {
-        return this.path;
+        return this.BackingStore.get("path");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      * @param value Value to set for the desktopApplicationId property.
      */
     public void setDesktopApplicationId(@jakarta.annotation.Nullable final String value) {
-        this.desktopApplicationId = value;
+        this.BackingStore.set("desktopApplicationId", value);
     }
     /**
      * Sets the desktopApplicationLinkPath property value. Define the DesktopApplicationLinkPath of the app
      * @param value Value to set for the desktopApplicationLinkPath property.
      */
     public void setDesktopApplicationLinkPath(@jakarta.annotation.Nullable final String value) {
-        this.desktopApplicationLinkPath = value;
+        this.BackingStore.set("desktopApplicationLinkPath", value);
     }
     /**
      * Sets the path property value. Define the path of a desktop app
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
-        this.path = value;
+        this.BackingStore.set("path", value);
     }
 }

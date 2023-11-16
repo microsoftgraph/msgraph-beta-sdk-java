@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationIdentity extends Identity implements Parsable {
     /**
-     * First party Microsoft application presenting this identity.
-     */
-    private String applicationType;
-    /**
-     * True if the participant wouldn't like to be shown in other participants' rosters.
-     */
-    private Boolean hidden;
-    /**
-     * Instantiates a new communicationsApplicationIdentity and sets the default values.
+     * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
      */
     public CommunicationsApplicationIdentity() {
         super();
@@ -26,7 +18,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a communicationsApplicationIdentity
+     * @return a CommunicationsApplicationIdentity
      */
     @jakarta.annotation.Nonnull
     public static CommunicationsApplicationIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,12 +26,12 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return new CommunicationsApplicationIdentity();
     }
     /**
-     * Gets the applicationType property value. First party Microsoft application presenting this identity.
-     * @return a string
+     * Gets the applicationType property value. First-party Microsoft application that presents this identity.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationType() {
-        return this.applicationType;
+        return this.BackingStore.get("applicationType");
     }
     /**
      * The deserialization information for the current model
@@ -53,12 +45,12 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. True if the participant wouldn't like to be shown in other participants' rosters.
-     * @return a boolean
+     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.BackingStore.get("hidden");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         writer.writeBooleanValue("hidden", this.getHidden());
     }
     /**
-     * Sets the applicationType property value. First party Microsoft application presenting this identity.
+     * Sets the applicationType property value. First-party Microsoft application that presents this identity.
      * @param value Value to set for the applicationType property.
      */
     public void setApplicationType(@jakarta.annotation.Nullable final String value) {
-        this.applicationType = value;
+        this.BackingStore.set("applicationType", value);
     }
     /**
-     * Sets the hidden property value. True if the participant wouldn't like to be shown in other participants' rosters.
+     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.BackingStore.set("hidden", value);
     }
 }

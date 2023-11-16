@@ -6,37 +6,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The keyCredential property
-     */
-    private KeyCredential keyCredential;
-    /**
-     * The passwordCredential property
-     */
-    private PasswordCredential passwordCredential;
-    /**
-     * The proof property
-     */
-    private String proof;
-    /**
-     * Instantiates a new addKeyPostRequestBody and sets the default values.
+     * Instantiates a new AddKeyPostRequestBody and sets the default values.
      */
     public AddKeyPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addKeyPostRequestBody
+     * @return a AddKeyPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AddKeyPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,12 +36,25 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
         return new AddKeyPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -65,27 +70,27 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keyCredential property value. The keyCredential property
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @jakarta.annotation.Nullable
     public KeyCredential getKeyCredential() {
-        return this.keyCredential;
+        return this.BackingStore.get("keyCredential");
     }
     /**
      * Gets the passwordCredential property value. The passwordCredential property
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @jakarta.annotation.Nullable
     public PasswordCredential getPasswordCredential() {
-        return this.passwordCredential;
+        return this.BackingStore.get("passwordCredential");
     }
     /**
      * Gets the proof property value. The proof property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProof() {
-        return this.proof;
+        return this.BackingStore.get("proof");
     }
     /**
      * Serializes information the current object
@@ -99,31 +104,39 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the keyCredential property value. The keyCredential property
      * @param value Value to set for the keyCredential property.
      */
     public void setKeyCredential(@jakarta.annotation.Nullable final KeyCredential value) {
-        this.keyCredential = value;
+        this.BackingStore.set("keyCredential", value);
     }
     /**
      * Sets the passwordCredential property value. The passwordCredential property
      * @param value Value to set for the passwordCredential property.
      */
     public void setPasswordCredential(@jakarta.annotation.Nullable final PasswordCredential value) {
-        this.passwordCredential = value;
+        this.BackingStore.set("passwordCredential", value);
     }
     /**
      * Sets the proof property value. The proof property
      * @param value Value to set for the proof property.
      */
     public void setProof(@jakarta.annotation.Nullable final String value) {
-        this.proof = value;
+        this.BackingStore.set("proof", value);
     }
 }

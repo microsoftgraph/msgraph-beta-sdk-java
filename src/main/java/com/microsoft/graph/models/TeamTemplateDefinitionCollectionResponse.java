@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamTemplateDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TeamTemplateDefinition> value;
-    /**
-     * Instantiates a new teamTemplateDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new TeamTemplateDefinitionCollectionResponse and sets the default values.
      */
     public TeamTemplateDefinitionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class TeamTemplateDefinitionCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamTemplateDefinitionCollectionResponse
+     * @return a TeamTemplateDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TeamTemplateDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class TeamTemplateDefinitionCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a teamTemplateDefinition
+     * @return a java.util.List<TeamTemplateDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamTemplateDefinition> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TeamTemplateDefinitionCollectionResponse extends BaseCollectionPagi
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TeamTemplateDefinition> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

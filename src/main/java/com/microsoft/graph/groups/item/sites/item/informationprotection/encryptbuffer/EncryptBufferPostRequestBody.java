@@ -4,34 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsable {
+public class EncryptBufferPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The buffer property
-     */
-    private byte[] buffer;
-    /**
-     * The labelId property
-     */
-    private UUID labelId;
-    /**
-     * Instantiates a new encryptBufferPostRequestBody and sets the default values.
+     * Instantiates a new EncryptBufferPostRequestBody and sets the default values.
      */
     public EncryptBufferPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a encryptBufferPostRequestBody
+     * @return a EncryptBufferPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static EncryptBufferPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,20 +35,33 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
         return new EncryptBufferPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the buffer property value. The buffer property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getBuffer() {
-        return this.buffer;
+        return this.BackingStore.get("buffer");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +80,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public UUID getLabelId() {
-        return this.labelId;
+        return this.BackingStore.get("labelId");
     }
     /**
      * Serializes information the current object
@@ -84,24 +93,32 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the buffer property value. The buffer property
      * @param value Value to set for the buffer property.
      */
     public void setBuffer(@jakarta.annotation.Nullable final byte[] value) {
-        this.buffer = value;
+        this.BackingStore.set("buffer", value);
     }
     /**
      * Sets the labelId property value. The labelId property
      * @param value Value to set for the labelId property.
      */
     public void setLabelId(@jakarta.annotation.Nullable final UUID value) {
-        this.labelId = value;
+        this.BackingStore.set("labelId", value);
     }
 }

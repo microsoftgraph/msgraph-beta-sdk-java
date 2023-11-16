@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UrlThreatSubmissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UrlThreatSubmission> value;
-    /**
-     * Instantiates a new urlThreatSubmissionCollectionResponse and sets the default values.
+     * Instantiates a new UrlThreatSubmissionCollectionResponse and sets the default values.
      */
     public UrlThreatSubmissionCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class UrlThreatSubmissionCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a urlThreatSubmissionCollectionResponse
+     * @return a UrlThreatSubmissionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UrlThreatSubmissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UrlThreatSubmissionCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a urlThreatSubmission
+     * @return a java.util.List<UrlThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UrlThreatSubmission> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UrlThreatSubmissionCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UrlThreatSubmission> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

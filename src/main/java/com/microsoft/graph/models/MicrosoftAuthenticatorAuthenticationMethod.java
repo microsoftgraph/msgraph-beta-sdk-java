@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
-     */
-    private MicrosoftAuthenticatorAuthenticationMethodClientAppName clientAppName;
-    /**
-     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     */
-    private Device device;
-    /**
-     * Tags containing app metadata.
-     */
-    private String deviceTag;
-    /**
-     * The name of the device on which this app is registered.
-     */
-    private String displayName;
-    /**
-     * Numerical version of this instance of the Authenticator app.
-     */
-    private String phoneAppVersion;
-    /**
-     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
@@ -43,7 +19,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAuthenticatorAuthenticationMethod
+     * @return a MicrosoftAuthenticatorAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,11 +28,11 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the clientAppName property value. The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
-     * @return a microsoftAuthenticatorAuthenticationMethodClientAppName
+     * @return a MicrosoftAuthenticatorAuthenticationMethodClientAppName
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodClientAppName getClientAppName() {
-        return this.clientAppName;
+        return this.BackingStore.get("clientAppName");
     }
     /**
      * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
@@ -64,31 +40,31 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @return a device
+     * @return a Device
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
-        return this.device;
+        return this.BackingStore.get("device");
     }
     /**
      * Gets the deviceTag property value. Tags containing app metadata.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
-        return this.deviceTag;
+        return this.BackingStore.get("deviceTag");
     }
     /**
      * Gets the displayName property value. The name of the device on which this app is registered.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -107,11 +83,11 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {
-        return this.phoneAppVersion;
+        return this.BackingStore.get("phoneAppVersion");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the clientAppName property.
      */
     public void setClientAppName(@jakarta.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMethodClientAppName value) {
-        this.clientAppName = value;
+        this.BackingStore.set("clientAppName", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {
-        this.device = value;
+        this.BackingStore.set("device", value);
     }
     /**
      * Sets the deviceTag property value. Tags containing app metadata.
      * @param value Value to set for the deviceTag property.
      */
     public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
-        this.deviceTag = value;
+        this.BackingStore.set("deviceTag", value);
     }
     /**
      * Sets the displayName property value. The name of the device on which this app is registered.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
      * @param value Value to set for the phoneAppVersion property.
      */
     public void setPhoneAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.phoneAppVersion = value;
+        this.BackingStore.set("phoneAppVersion", value);
     }
 }

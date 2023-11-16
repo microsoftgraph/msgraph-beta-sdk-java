@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     */
-    private UserFlowApiConnectorConfiguration apiConnectorConfiguration;
-    /**
-     * The identityProviders property
-     */
-    private java.util.List<IdentityProvider> identityProviders;
-    /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
-     */
-    private java.util.List<UserFlowLanguageConfiguration> languages;
-    /**
-     * The user attribute assignments included in the user flow.
-     */
-    private java.util.List<IdentityUserFlowAttributeAssignment> userAttributeAssignments;
-    /**
-     * The userFlowIdentityProviders property
-     */
-    private java.util.List<IdentityProviderBase> userFlowIdentityProviders;
-    /**
-     * Instantiates a new b2xIdentityUserFlow and sets the default values.
+     * Instantiates a new B2xIdentityUserFlow and sets the default values.
      */
     public B2xIdentityUserFlow() {
         super();
@@ -37,7 +17,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a b2xIdentityUserFlow
+     * @return a B2xIdentityUserFlow
      */
     @jakarta.annotation.Nonnull
     public static B2xIdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +26,11 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     * @return a userFlowApiConnectorConfiguration
+     * @return a UserFlowApiConnectorConfiguration
      */
     @jakarta.annotation.Nullable
     public UserFlowApiConnectorConfiguration getApiConnectorConfiguration() {
-        return this.apiConnectorConfiguration;
+        return this.BackingStore.get("apiConnectorConfiguration");
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +48,35 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the identityProviders property value. The identityProviders property
-     * @return a identityProvider
+     * @return a java.util.List<IdentityProvider>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getIdentityProviders() {
-        return this.identityProviders;
+        return this.BackingStore.get("identityProviders");
     }
     /**
      * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
-     * @return a userFlowLanguageConfiguration
+     * @return a java.util.List<UserFlowLanguageConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguageConfiguration> getLanguages() {
-        return this.languages;
+        return this.BackingStore.get("languages");
     }
     /**
      * Gets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
-     * @return a identityUserFlowAttributeAssignment
+     * @return a java.util.List<IdentityUserFlowAttributeAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttributeAssignment> getUserAttributeAssignments() {
-        return this.userAttributeAssignments;
+        return this.BackingStore.get("userAttributeAssignments");
     }
     /**
      * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getUserFlowIdentityProviders() {
-        return this.userFlowIdentityProviders;
+        return this.BackingStore.get("userFlowIdentityProviders");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the apiConnectorConfiguration property.
      */
     public void setApiConnectorConfiguration(@jakarta.annotation.Nullable final UserFlowApiConnectorConfiguration value) {
-        this.apiConnectorConfiguration = value;
+        this.BackingStore.set("apiConnectorConfiguration", value);
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {
-        this.identityProviders = value;
+        this.BackingStore.set("identityProviders", value);
     }
     /**
      * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @param value Value to set for the languages property.
      */
     public void setLanguages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {
-        this.languages = value;
+        this.BackingStore.set("languages", value);
     }
     /**
      * Sets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
      * @param value Value to set for the userAttributeAssignments property.
      */
     public void setUserAttributeAssignments(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttributeAssignment> value) {
-        this.userAttributeAssignments = value;
+        this.BackingStore.set("userAttributeAssignments", value);
     }
     /**
      * Sets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
      * @param value Value to set for the userFlowIdentityProviders property.
      */
     public void setUserFlowIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.userFlowIdentityProviders = value;
+        this.BackingStore.set("userFlowIdentityProviders", value);
     }
 }

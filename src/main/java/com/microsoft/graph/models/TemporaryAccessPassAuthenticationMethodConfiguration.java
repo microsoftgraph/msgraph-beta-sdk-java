@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
-     */
-    private Integer defaultLength;
-    /**
-     * Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
-     */
-    private Integer defaultLifetimeInMinutes;
-    /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
-     * If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
-     */
-    private Boolean isUsableOnce;
-    /**
-     * Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
-     */
-    private Integer maximumLifetimeInMinutes;
-    /**
-     * Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
-     */
-    private Integer minimumLifetimeInMinutes;
-    /**
-     * Instantiates a new temporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
      */
     public TemporaryAccessPassAuthenticationMethodConfiguration() {
         super();
@@ -42,7 +18,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a temporaryAccessPassAuthenticationMethodConfiguration
+     * @return a TemporaryAccessPassAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +27,19 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     }
     /**
      * Gets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefaultLength() {
-        return this.defaultLength;
+        return this.BackingStore.get("defaultLength");
     }
     /**
      * Gets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefaultLifetimeInMinutes() {
-        return this.defaultLifetimeInMinutes;
+        return this.BackingStore.get("defaultLifetimeInMinutes");
     }
     /**
      * The deserialization information for the current model
@@ -82,35 +58,35 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.BackingStore.get("includeTargets");
     }
     /**
      * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableOnce() {
-        return this.isUsableOnce;
+        return this.BackingStore.get("isUsableOnce");
     }
     /**
      * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumLifetimeInMinutes() {
-        return this.maximumLifetimeInMinutes;
+        return this.BackingStore.get("maximumLifetimeInMinutes");
     }
     /**
      * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumLifetimeInMinutes() {
-        return this.minimumLifetimeInMinutes;
+        return this.BackingStore.get("minimumLifetimeInMinutes");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the defaultLength property.
      */
     public void setDefaultLength(@jakarta.annotation.Nullable final Integer value) {
-        this.defaultLength = value;
+        this.BackingStore.set("defaultLength", value);
     }
     /**
      * Sets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @param value Value to set for the defaultLifetimeInMinutes property.
      */
     public void setDefaultLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.defaultLifetimeInMinutes = value;
+        this.BackingStore.set("defaultLifetimeInMinutes", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.BackingStore.set("includeTargets", value);
     }
     /**
      * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @param value Value to set for the isUsableOnce property.
      */
     public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
-        this.isUsableOnce = value;
+        this.BackingStore.set("isUsableOnce", value);
     }
     /**
      * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the maximumLifetimeInMinutes property.
      */
     public void setMaximumLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumLifetimeInMinutes = value;
+        this.BackingStore.set("maximumLifetimeInMinutes", value);
     }
     /**
      * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the minimumLifetimeInMinutes property.
      */
     public void setMinimumLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumLifetimeInMinutes = value;
+        this.BackingStore.set("minimumLifetimeInMinutes", value);
     }
 }

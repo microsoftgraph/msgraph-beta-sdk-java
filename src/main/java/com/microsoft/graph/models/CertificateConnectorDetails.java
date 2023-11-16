@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /**
-     * Connector name (set during enrollment).
-     */
-    private String connectorName;
-    /**
-     * Version of the connector installed.
-     */
-    private String connectorVersion;
-    /**
-     * Date/time when this connector was enrolled.
-     */
-    private OffsetDateTime enrollmentDateTime;
-    /**
-     * Date/time when this connector last connected to the service.
-     */
-    private OffsetDateTime lastCheckinDateTime;
-    /**
-     * Name of the machine hosting this connector service.
-     */
-    private String machineName;
-    /**
-     * Instantiates a new certificateConnectorDetails and sets the default values.
+     * Instantiates a new CertificateConnectorDetails and sets the default values.
      */
     public CertificateConnectorDetails() {
         super();
@@ -41,7 +21,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateConnectorDetails
+     * @return a CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public static CertificateConnectorDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +30,19 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the connectorName property value. Connector name (set during enrollment).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorName() {
-        return this.connectorName;
+        return this.BackingStore.get("connectorName");
     }
     /**
      * Gets the connectorVersion property value. Version of the connector installed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
-        return this.connectorVersion;
+        return this.BackingStore.get("connectorVersion");
     }
     /**
      * Gets the enrollmentDateTime property value. Date/time when this connector was enrolled.
@@ -70,7 +50,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentDateTime() {
-        return this.enrollmentDateTime;
+        return this.BackingStore.get("enrollmentDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -92,15 +72,15 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
-        return this.lastCheckinDateTime;
+        return this.BackingStore.get("lastCheckinDateTime");
     }
     /**
      * Gets the machineName property value. Name of the machine hosting this connector service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
-        return this.machineName;
+        return this.BackingStore.get("machineName");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the connectorName property.
      */
     public void setConnectorName(@jakarta.annotation.Nullable final String value) {
-        this.connectorName = value;
+        this.BackingStore.set("connectorName", value);
     }
     /**
      * Sets the connectorVersion property value. Version of the connector installed.
      * @param value Value to set for the connectorVersion property.
      */
     public void setConnectorVersion(@jakarta.annotation.Nullable final String value) {
-        this.connectorVersion = value;
+        this.BackingStore.set("connectorVersion", value);
     }
     /**
      * Sets the enrollmentDateTime property value. Date/time when this connector was enrolled.
      * @param value Value to set for the enrollmentDateTime property.
      */
     public void setEnrollmentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.enrollmentDateTime = value;
+        this.BackingStore.set("enrollmentDateTime", value);
     }
     /**
      * Sets the lastCheckinDateTime property value. Date/time when this connector last connected to the service.
      * @param value Value to set for the lastCheckinDateTime property.
      */
     public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastCheckinDateTime = value;
+        this.BackingStore.set("lastCheckinDateTime", value);
     }
     /**
      * Sets the machineName property value. Name of the machine hosting this connector service.
      * @param value Value to set for the machineName property.
      */
     public void setMachineName(@jakarta.annotation.Nullable final String value) {
-        this.machineName = value;
+        this.BackingStore.set("machineName", value);
     }
 }

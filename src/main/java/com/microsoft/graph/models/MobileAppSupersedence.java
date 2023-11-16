@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppSupersedence extends MobileAppRelationship implements Parsable {
     /**
-     * The total number of apps directly or indirectly superseded by the child app.
-     */
-    private Integer supersededAppCount;
-    /**
-     * Indicates the supersedence type associated with a relationship between two mobile apps.
-     */
-    private MobileAppSupersedenceType supersedenceType;
-    /**
-     * The total number of apps directly or indirectly superseding the parent app.
-     */
-    private Integer supersedingAppCount;
-    /**
-     * Instantiates a new mobileAppSupersedence and sets the default values.
+     * Instantiates a new MobileAppSupersedence and sets the default values.
      */
     public MobileAppSupersedence() {
         super();
@@ -33,7 +21,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppSupersedence
+     * @return a MobileAppSupersedence
      */
     @jakarta.annotation.Nonnull
     public static MobileAppSupersedence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     }
     /**
      * Gets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupersededAppCount() {
-        return this.supersededAppCount;
+        return this.BackingStore.get("supersededAppCount");
     }
     /**
      * Gets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
-     * @return a mobileAppSupersedenceType
+     * @return a MobileAppSupersedenceType
      */
     @jakarta.annotation.Nullable
     public MobileAppSupersedenceType getSupersedenceType() {
-        return this.supersedenceType;
+        return this.BackingStore.get("supersedenceType");
     }
     /**
      * Gets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupersedingAppCount() {
-        return this.supersedingAppCount;
+        return this.BackingStore.get("supersedingAppCount");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param value Value to set for the supersededAppCount property.
      */
     public void setSupersededAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.supersededAppCount = value;
+        this.BackingStore.set("supersededAppCount", value);
     }
     /**
      * Sets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
      * @param value Value to set for the supersedenceType property.
      */
     public void setSupersedenceType(@jakarta.annotation.Nullable final MobileAppSupersedenceType value) {
-        this.supersedenceType = value;
+        this.BackingStore.set("supersedenceType", value);
     }
     /**
      * Sets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
      * @param value Value to set for the supersedingAppCount property.
      */
     public void setSupersedingAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.supersedingAppCount = value;
+        this.BackingStore.set("supersedingAppCount", value);
     }
 }

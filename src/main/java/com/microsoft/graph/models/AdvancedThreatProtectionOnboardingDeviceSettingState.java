@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity implements Parsable {
     /**
-     * The DateTime when device compliance grace period expires
-     */
-    private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /**
-     * The Device Id that is being reported
-     */
-    private String deviceId;
-    /**
-     * The device model that is being reported
-     */
-    private String deviceModel;
-    /**
-     * The Device Name that is being reported
-     */
-    private String deviceName;
-    /**
-     * Device type.
-     */
-    private DeviceType platformType;
-    /**
-     * The setting class name and property name.
-     */
-    private String setting;
-    /**
-     * The Setting Name that is being reported
-     */
-    private String settingName;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * The User email address that is being reported
-     */
-    private String userEmail;
-    /**
-     * The user Id that is being reported
-     */
-    private String userId;
-    /**
-     * The User Name that is being reported
-     */
-    private String userName;
-    /**
-     * The User PrincipalName that is being reported
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingState and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingDeviceSettingState and sets the default values.
      */
     public AdvancedThreatProtectionOnboardingDeviceSettingState() {
         super();
@@ -69,7 +21,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingDeviceSettingState
+     * @return a AdvancedThreatProtectionOnboardingDeviceSettingState
      */
     @jakarta.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingDeviceSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,31 +34,31 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this.complianceGracePeriodExpirationDateTime;
+        return this.BackingStore.get("complianceGracePeriodExpirationDateTime");
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.BackingStore.get("deviceModel");
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -131,67 +83,67 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     }
     /**
      * Gets the platformType property value. Device type.
-     * @return a deviceType
+     * @return a DeviceType
      */
     @jakarta.annotation.Nullable
     public DeviceType getPlatformType() {
-        return this.platformType;
+        return this.BackingStore.get("platformType");
     }
     /**
      * Gets the setting property value. The setting class name and property name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
-        return this.setting;
+        return this.BackingStore.get("setting");
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.BackingStore.get("settingName");
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
-        return this.userEmail;
+        return this.BackingStore.get("userEmail");
     }
     /**
      * Gets the userId property value. The user Id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.BackingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      */
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.complianceGracePeriodExpirationDateTime = value;
+        this.BackingStore.set("complianceGracePeriodExpirationDateTime", value);
     }
     /**
      * Sets the deviceId property value. The Device Id that is being reported
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.BackingStore.set("deviceModel", value);
     }
     /**
      * Sets the deviceName property value. The Device Name that is being reported
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the platformType property value. Device type.
      * @param value Value to set for the platformType property.
      */
     public void setPlatformType(@jakarta.annotation.Nullable final DeviceType value) {
-        this.platformType = value;
+        this.BackingStore.set("platformType", value);
     }
     /**
      * Sets the setting property value. The setting class name and property name.
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final String value) {
-        this.setting = value;
+        this.BackingStore.set("setting", value);
     }
     /**
      * Sets the settingName property value. The Setting Name that is being reported
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.BackingStore.set("settingName", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the userEmail property value. The User email address that is being reported
      * @param value Value to set for the userEmail property.
      */
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
-        this.userEmail = value;
+        this.BackingStore.set("userEmail", value);
     }
     /**
      * Sets the userId property value. The user Id that is being reported
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.BackingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

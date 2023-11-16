@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Trending extends Entity implements Parsable {
     /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Used for navigating to the trending document.
-     */
-    private Entity resource;
-    /**
-     * Reference properties of the trending document, such as the url and type of the document.
-     */
-    private ResourceReference resourceReference;
-    /**
-     * Properties that you can use to visualize the document in your experience.
-     */
-    private ResourceVisualization resourceVisualization;
-    /**
-     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-     */
-    private Double weight;
-    /**
-     * Instantiates a new trending and sets the default values.
+     * Instantiates a new Trending and sets the default values.
      */
     public Trending() {
         super();
@@ -38,7 +18,7 @@ public class Trending extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trending
+     * @return a Trending
      */
     @jakarta.annotation.Nonnull
     public static Trending createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,39 +45,39 @@ public class Trending extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the resource property value. Used for navigating to the trending document.
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nullable
     public Entity getResource() {
-        return this.resource;
+        return this.BackingStore.get("resource");
     }
     /**
      * Gets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
-     * @return a resourceReference
+     * @return a ResourceReference
      */
     @jakarta.annotation.Nullable
     public ResourceReference getResourceReference() {
-        return this.resourceReference;
+        return this.BackingStore.get("resourceReference");
     }
     /**
      * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
-     * @return a resourceVisualization
+     * @return a ResourceVisualization
      */
     @jakarta.annotation.Nullable
     public ResourceVisualization getResourceVisualization() {
-        return this.resourceVisualization;
+        return this.BackingStore.get("resourceVisualization");
     }
     /**
      * Gets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getWeight() {
-        return this.weight;
+        return this.BackingStore.get("weight");
     }
     /**
      * Serializes information the current object
@@ -115,34 +95,34 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the resource property value. Used for navigating to the trending document.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
-        this.resource = value;
+        this.BackingStore.set("resource", value);
     }
     /**
      * Sets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
      * @param value Value to set for the resourceReference property.
      */
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
-        this.resourceReference = value;
+        this.BackingStore.set("resourceReference", value);
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
      * @param value Value to set for the resourceVisualization property.
      */
     public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
-        this.resourceVisualization = value;
+        this.BackingStore.set("resourceVisualization", value);
     }
     /**
      * Sets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      * @param value Value to set for the weight property.
      */
     public void setWeight(@jakarta.annotation.Nullable final Double value) {
-        this.weight = value;
+        this.BackingStore.set("weight", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,77 +14,22 @@ import java.util.Objects;
  * The minimum operating system required for a Windows mobile app.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
+public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Windows version 10.0 or later.
-     */
-    private Boolean v100;
-    /**
-     * Windows 10 1607 or later.
-     */
-    private Boolean v101607;
-    /**
-     * Windows 10 1703 or later.
-     */
-    private Boolean v101703;
-    /**
-     * Windows 10 1709 or later.
-     */
-    private Boolean v101709;
-    /**
-     * Windows 10 1803 or later.
-     */
-    private Boolean v101803;
-    /**
-     * Windows 10 1809 or later.
-     */
-    private Boolean v101809;
-    /**
-     * Windows 10 1903 or later.
-     */
-    private Boolean v101903;
-    /**
-     * Windows 10 1909 or later.
-     */
-    private Boolean v101909;
-    /**
-     * Windows 10 2004 or later.
-     */
-    private Boolean v102004;
-    /**
-     * Windows 10 21H1 or later.
-     */
-    private Boolean v1021H1;
-    /**
-     * Windows 10 2H20 or later.
-     */
-    private Boolean v102H20;
-    /**
-     * Windows version 8.0 or later.
-     */
-    private Boolean v80;
-    /**
-     * Windows version 8.1 or later.
-     */
-    private Boolean v81;
-    /**
-     * Instantiates a new windowsMinimumOperatingSystem and sets the default values.
+     * Instantiates a new WindowsMinimumOperatingSystem and sets the default values.
      */
     public WindowsMinimumOperatingSystem() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nonnull
     public static WindowsMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,12 +37,25 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
         return new WindowsMinimumOperatingSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -121,115 +82,115 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the v10_0 property value. Windows version 10.0 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
-        return this.v100;
+        return this.BackingStore.get("v100");
     }
     /**
      * Gets the v10_1607 property value. Windows 10 1607 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101607() {
-        return this.v101607;
+        return this.BackingStore.get("v101607");
     }
     /**
      * Gets the v10_1703 property value. Windows 10 1703 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101703() {
-        return this.v101703;
+        return this.BackingStore.get("v101703");
     }
     /**
      * Gets the v10_1709 property value. Windows 10 1709 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101709() {
-        return this.v101709;
+        return this.BackingStore.get("v101709");
     }
     /**
      * Gets the v10_1803 property value. Windows 10 1803 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101803() {
-        return this.v101803;
+        return this.BackingStore.get("v101803");
     }
     /**
      * Gets the v10_1809 property value. Windows 10 1809 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101809() {
-        return this.v101809;
+        return this.BackingStore.get("v101809");
     }
     /**
      * Gets the v10_1903 property value. Windows 10 1903 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101903() {
-        return this.v101903;
+        return this.BackingStore.get("v101903");
     }
     /**
      * Gets the v10_1909 property value. Windows 10 1909 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101909() {
-        return this.v101909;
+        return this.BackingStore.get("v101909");
     }
     /**
      * Gets the v10_2004 property value. Windows 10 2004 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV102004() {
-        return this.v102004;
+        return this.BackingStore.get("v102004");
     }
     /**
      * Gets the v10_21H1 property value. Windows 10 21H1 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1021H1() {
-        return this.v1021H1;
+        return this.BackingStore.get("v1021H1");
     }
     /**
      * Gets the v10_2H20 property value. Windows 10 2H20 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV102H20() {
-        return this.v102H20;
+        return this.BackingStore.get("v102H20");
     }
     /**
      * Gets the v8_0 property value. Windows version 8.0 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
-        return this.v80;
+        return this.BackingStore.get("v80");
     }
     /**
      * Gets the v8_1 property value. Windows version 8.1 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV81() {
-        return this.v81;
+        return this.BackingStore.get("v81");
     }
     /**
      * Serializes information the current object
@@ -254,108 +215,116 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the v10_0 property value. Windows version 10.0 or later.
      * @param value Value to set for the v10_0 property.
      */
     public void setV100(@jakarta.annotation.Nullable final Boolean value) {
-        this.v100 = value;
+        this.BackingStore.set("v100", value);
     }
     /**
      * Sets the v10_1607 property value. Windows 10 1607 or later.
      * @param value Value to set for the v10_1607 property.
      */
     public void setV101607(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101607 = value;
+        this.BackingStore.set("v101607", value);
     }
     /**
      * Sets the v10_1703 property value. Windows 10 1703 or later.
      * @param value Value to set for the v10_1703 property.
      */
     public void setV101703(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101703 = value;
+        this.BackingStore.set("v101703", value);
     }
     /**
      * Sets the v10_1709 property value. Windows 10 1709 or later.
      * @param value Value to set for the v10_1709 property.
      */
     public void setV101709(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101709 = value;
+        this.BackingStore.set("v101709", value);
     }
     /**
      * Sets the v10_1803 property value. Windows 10 1803 or later.
      * @param value Value to set for the v10_1803 property.
      */
     public void setV101803(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101803 = value;
+        this.BackingStore.set("v101803", value);
     }
     /**
      * Sets the v10_1809 property value. Windows 10 1809 or later.
      * @param value Value to set for the v10_1809 property.
      */
     public void setV101809(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101809 = value;
+        this.BackingStore.set("v101809", value);
     }
     /**
      * Sets the v10_1903 property value. Windows 10 1903 or later.
      * @param value Value to set for the v10_1903 property.
      */
     public void setV101903(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101903 = value;
+        this.BackingStore.set("v101903", value);
     }
     /**
      * Sets the v10_1909 property value. Windows 10 1909 or later.
      * @param value Value to set for the v10_1909 property.
      */
     public void setV101909(@jakarta.annotation.Nullable final Boolean value) {
-        this.v101909 = value;
+        this.BackingStore.set("v101909", value);
     }
     /**
      * Sets the v10_2004 property value. Windows 10 2004 or later.
      * @param value Value to set for the v10_2004 property.
      */
     public void setV102004(@jakarta.annotation.Nullable final Boolean value) {
-        this.v102004 = value;
+        this.BackingStore.set("v102004", value);
     }
     /**
      * Sets the v10_21H1 property value. Windows 10 21H1 or later.
      * @param value Value to set for the v10_21H1 property.
      */
     public void setV1021H1(@jakarta.annotation.Nullable final Boolean value) {
-        this.v1021H1 = value;
+        this.BackingStore.set("v1021H1", value);
     }
     /**
      * Sets the v10_2H20 property value. Windows 10 2H20 or later.
      * @param value Value to set for the v10_2H20 property.
      */
     public void setV102H20(@jakarta.annotation.Nullable final Boolean value) {
-        this.v102H20 = value;
+        this.BackingStore.set("v102H20", value);
     }
     /**
      * Sets the v8_0 property value. Windows version 8.0 or later.
      * @param value Value to set for the v8_0 property.
      */
     public void setV80(@jakarta.annotation.Nullable final Boolean value) {
-        this.v80 = value;
+        this.BackingStore.set("v80", value);
     }
     /**
      * Sets the v8_1 property value. Windows version 8.1 or later.
      * @param value Value to set for the v8_1 property.
      */
     public void setV81(@jakarta.annotation.Nullable final Boolean value) {
-        this.v81 = value;
+        this.BackingStore.set("v81", value);
     }
 }

@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase implements Parsable {
     /**
-     * AllowAllAppsAccess setting
-     */
-    private Boolean allowAllAppsAccess;
-    /**
-     * Target store certificate. Possible values are: user, machine.
-     */
-    private CertificateStore certificateStore;
-    /**
-     * PKCS certificate template name.
-     */
-    private String certificateTemplateName;
-    /**
-     * PKCS certification authority FQDN.
-     */
-    private String certificationAuthority;
-    /**
-     * PKCS certification authority Name.
-     */
-    private String certificationAuthorityName;
-    /**
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Format string that defines the subject alternative name.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new macOSPkcsCertificateProfile and sets the default values.
+     * Instantiates a new MacOSPkcsCertificateProfile and sets the default values.
      */
     public MacOSPkcsCertificateProfile() {
         super();
@@ -57,7 +21,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSPkcsCertificateProfile
+     * @return a MacOSPkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static MacOSPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +30,51 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the allowAllAppsAccess property value. AllowAllAppsAccess setting
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAllAppsAccess() {
-        return this.allowAllAppsAccess;
+        return this.BackingStore.get("allowAllAppsAccess");
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this.certificateStore;
+        return this.BackingStore.get("certificateStore");
     }
     /**
      * Gets the certificateTemplateName property value. PKCS certificate template name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this.certificateTemplateName;
+        return this.BackingStore.get("certificateTemplateName");
     }
     /**
      * Gets the certificationAuthority property value. PKCS certification authority FQDN.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
-        return this.certificationAuthority;
+        return this.BackingStore.get("certificationAuthority");
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS certification authority Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this.certificationAuthorityName;
+        return this.BackingStore.get("certificationAuthorityName");
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this.customSubjectAlternativeNames;
+        return this.BackingStore.get("customSubjectAlternativeNames");
     }
     /**
      * The deserialization information for the current model
@@ -132,27 +96,27 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.BackingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Format string that defines the subject alternative name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.BackingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.BackingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the allowAllAppsAccess property.
      */
     public void setAllowAllAppsAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAllAppsAccess = value;
+        this.BackingStore.set("allowAllAppsAccess", value);
     }
     /**
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
-        this.certificateStore = value;
+        this.BackingStore.set("certificateStore", value);
     }
     /**
      * Sets the certificateTemplateName property value. PKCS certificate template name.
      * @param value Value to set for the certificateTemplateName property.
      */
     public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
-        this.certificateTemplateName = value;
+        this.BackingStore.set("certificateTemplateName", value);
     }
     /**
      * Sets the certificationAuthority property value. PKCS certification authority FQDN.
      * @param value Value to set for the certificationAuthority property.
      */
     public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthority = value;
+        this.BackingStore.set("certificationAuthority", value);
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS certification authority Name.
      * @param value Value to set for the certificationAuthorityName property.
      */
     public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthorityName = value;
+        this.BackingStore.set("certificationAuthorityName", value);
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this.customSubjectAlternativeNames = value;
+        this.BackingStore.set("customSubjectAlternativeNames", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.BackingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Format string that defines the subject alternative name.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.BackingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.BackingStore.set("subjectNameFormatString", value);
     }
 }

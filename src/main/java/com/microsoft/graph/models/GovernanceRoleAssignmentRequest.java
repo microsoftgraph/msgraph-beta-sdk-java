@@ -10,59 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleAssignmentRequest extends Entity implements Parsable {
     /**
-     * Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
-     */
-    private String assignmentState;
-    /**
-     * If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
-     */
-    private String linkedEligibleRoleAssignmentId;
-    /**
-     * A message provided by users and administrators when create the request about why it is needed.
-     */
-    private String reason;
-    /**
-     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime requestedDateTime;
-    /**
-     * Read-only. The resource that the request aims to.
-     */
-    private GovernanceResource resource;
-    /**
-     * Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
-     */
-    private String resourceId;
-    /**
-     * Read-only. The role definition that the request aims to.
-     */
-    private GovernanceRoleDefinition roleDefinition;
-    /**
-     * Required. The identifier of the Azure role definition that the role assignment request is associated with.
-     */
-    private String roleDefinitionId;
-    /**
-     * The schedule object of the role assignment request.
-     */
-    private GovernanceSchedule schedule;
-    /**
-     * The status of the role assignment request.
-     */
-    private GovernanceRoleAssignmentRequestStatus status;
-    /**
-     * Read-only. The user/group principal.
-     */
-    private GovernanceSubject subject;
-    /**
-     * Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
-     */
-    private String subjectId;
-    /**
-     * Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
-     */
-    private String type;
-    /**
-     * Instantiates a new governanceRoleAssignmentRequest and sets the default values.
+     * Instantiates a new GovernanceRoleAssignmentRequest and sets the default values.
      */
     public GovernanceRoleAssignmentRequest() {
         super();
@@ -70,7 +18,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRoleAssignmentRequest
+     * @return a GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,11 +27,11 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the assignmentState property value. Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
-        return this.assignmentState;
+        return this.BackingStore.get("assignmentState");
     }
     /**
      * The deserialization information for the current model
@@ -109,19 +57,19 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
-        return this.linkedEligibleRoleAssignmentId;
+        return this.BackingStore.get("linkedEligibleRoleAssignmentId");
     }
     /**
      * Gets the reason property value. A message provided by users and administrators when create the request about why it is needed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.BackingStore.get("reason");
     }
     /**
      * Gets the requestedDateTime property value. Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -129,79 +77,79 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
-        return this.requestedDateTime;
+        return this.BackingStore.get("requestedDateTime");
     }
     /**
      * Gets the resource property value. Read-only. The resource that the request aims to.
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
-        return this.resource;
+        return this.BackingStore.get("resource");
     }
     /**
      * Gets the resourceId property value. Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.BackingStore.get("resourceId");
     }
     /**
      * Gets the roleDefinition property value. Read-only. The role definition that the request aims to.
-     * @return a governanceRoleDefinition
+     * @return a GovernanceRoleDefinition
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
-        return this.roleDefinition;
+        return this.BackingStore.get("roleDefinition");
     }
     /**
      * Gets the roleDefinitionId property value. Required. The identifier of the Azure role definition that the role assignment request is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this.roleDefinitionId;
+        return this.BackingStore.get("roleDefinitionId");
     }
     /**
      * Gets the schedule property value. The schedule object of the role assignment request.
-     * @return a governanceSchedule
+     * @return a GovernanceSchedule
      */
     @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
-        return this.schedule;
+        return this.BackingStore.get("schedule");
     }
     /**
      * Gets the status property value. The status of the role assignment request.
-     * @return a governanceRoleAssignmentRequestStatus
+     * @return a GovernanceRoleAssignmentRequestStatus
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequestStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the subject property value. Read-only. The user/group principal.
-     * @return a governanceSubject
+     * @return a GovernanceSubject
      */
     @jakarta.annotation.Nullable
     public GovernanceSubject getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the subjectId property value. Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {
-        return this.subjectId;
+        return this.BackingStore.get("subjectId");
     }
     /**
      * Gets the type property value. Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the assignmentState property.
      */
     public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
-        this.assignmentState = value;
+        this.BackingStore.set("assignmentState", value);
     }
     /**
      * Sets the linkedEligibleRoleAssignmentId property value. If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
      * @param value Value to set for the linkedEligibleRoleAssignmentId property.
      */
     public void setLinkedEligibleRoleAssignmentId(@jakarta.annotation.Nullable final String value) {
-        this.linkedEligibleRoleAssignmentId = value;
+        this.BackingStore.set("linkedEligibleRoleAssignmentId", value);
     }
     /**
      * Sets the reason property value. A message provided by users and administrators when create the request about why it is needed.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.BackingStore.set("reason", value);
     }
     /**
      * Sets the requestedDateTime property value. Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the requestedDateTime property.
      */
     public void setRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestedDateTime = value;
+        this.BackingStore.set("requestedDateTime", value);
     }
     /**
      * Sets the resource property value. Read-only. The resource that the request aims to.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final GovernanceResource value) {
-        this.resource = value;
+        this.BackingStore.set("resource", value);
     }
     /**
      * Sets the resourceId property value. Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.BackingStore.set("resourceId", value);
     }
     /**
      * Sets the roleDefinition property value. Read-only. The role definition that the request aims to.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final GovernanceRoleDefinition value) {
-        this.roleDefinition = value;
+        this.BackingStore.set("roleDefinition", value);
     }
     /**
      * Sets the roleDefinitionId property value. Required. The identifier of the Azure role definition that the role assignment request is associated with.
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.roleDefinitionId = value;
+        this.BackingStore.set("roleDefinitionId", value);
     }
     /**
      * Sets the schedule property value. The schedule object of the role assignment request.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final GovernanceSchedule value) {
-        this.schedule = value;
+        this.BackingStore.set("schedule", value);
     }
     /**
      * Sets the status property value. The status of the role assignment request.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final GovernanceRoleAssignmentRequestStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the subject property value. Read-only. The user/group principal.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final GovernanceSubject value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the subjectId property value. Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
      * @param value Value to set for the subjectId property.
      */
     public void setSubjectId(@jakarta.annotation.Nullable final String value) {
-        this.subjectId = value;
+        this.BackingStore.set("subjectId", value);
     }
     /**
      * Sets the type property value. Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

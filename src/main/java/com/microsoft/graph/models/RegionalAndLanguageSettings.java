@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegionalAndLanguageSettings extends Entity implements Parsable {
     /**
-     * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
-     */
-    private java.util.List<LocaleInfo> authoringLanguages;
-    /**
-     * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
-     */
-    private LocaleInfo defaultDisplayLanguage;
-    /**
-     * The locale that drives the default date, time, and calendar formatting.Returned by default.
-     */
-    private LocaleInfo defaultRegionalFormat;
-    /**
-     * The language a user expected to use as input for text to speech scenarios.Returned by default.
-     */
-    private LocaleInfo defaultSpeechInputLanguage;
-    /**
-     * The language a user expects to have documents, emails, and messages translated into.Returned by default.
-     */
-    private LocaleInfo defaultTranslationLanguage;
-    /**
-     * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
-     */
-    private RegionalFormatOverrides regionalFormatOverrides;
-    /**
-     * The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
-     */
-    private TranslationPreferences translationPreferences;
-    /**
-     * Instantiates a new regionalAndLanguageSettings and sets the default values.
+     * Instantiates a new RegionalAndLanguageSettings and sets the default values.
      */
     public RegionalAndLanguageSettings() {
         super();
@@ -45,7 +17,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a regionalAndLanguageSettings
+     * @return a RegionalAndLanguageSettings
      */
     @jakarta.annotation.Nonnull
     public static RegionalAndLanguageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,43 +26,43 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the authoringLanguages property value. Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
-     * @return a localeInfo
+     * @return a java.util.List<LocaleInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocaleInfo> getAuthoringLanguages() {
-        return this.authoringLanguages;
+        return this.BackingStore.get("authoringLanguages");
     }
     /**
      * Gets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultDisplayLanguage() {
-        return this.defaultDisplayLanguage;
+        return this.BackingStore.get("defaultDisplayLanguage");
     }
     /**
      * Gets the defaultRegionalFormat property value. The locale that drives the default date, time, and calendar formatting.Returned by default.
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultRegionalFormat() {
-        return this.defaultRegionalFormat;
+        return this.BackingStore.get("defaultRegionalFormat");
     }
     /**
      * Gets the defaultSpeechInputLanguage property value. The language a user expected to use as input for text to speech scenarios.Returned by default.
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultSpeechInputLanguage() {
-        return this.defaultSpeechInputLanguage;
+        return this.BackingStore.get("defaultSpeechInputLanguage");
     }
     /**
      * Gets the defaultTranslationLanguage property value. The language a user expects to have documents, emails, and messages translated into.Returned by default.
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultTranslationLanguage() {
-        return this.defaultTranslationLanguage;
+        return this.BackingStore.get("defaultTranslationLanguage");
     }
     /**
      * The deserialization information for the current model
@@ -110,19 +82,19 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
-     * @return a regionalFormatOverrides
+     * @return a RegionalFormatOverrides
      */
     @jakarta.annotation.Nullable
     public RegionalFormatOverrides getRegionalFormatOverrides() {
-        return this.regionalFormatOverrides;
+        return this.BackingStore.get("regionalFormatOverrides");
     }
     /**
      * Gets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
-     * @return a translationPreferences
+     * @return a TranslationPreferences
      */
     @jakarta.annotation.Nullable
     public TranslationPreferences getTranslationPreferences() {
-        return this.translationPreferences;
+        return this.BackingStore.get("translationPreferences");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the authoringLanguages property.
      */
     public void setAuthoringLanguages(@jakarta.annotation.Nullable final java.util.List<LocaleInfo> value) {
-        this.authoringLanguages = value;
+        this.BackingStore.set("authoringLanguages", value);
     }
     /**
      * Sets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
      * @param value Value to set for the defaultDisplayLanguage property.
      */
     public void setDefaultDisplayLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
-        this.defaultDisplayLanguage = value;
+        this.BackingStore.set("defaultDisplayLanguage", value);
     }
     /**
      * Sets the defaultRegionalFormat property value. The locale that drives the default date, time, and calendar formatting.Returned by default.
      * @param value Value to set for the defaultRegionalFormat property.
      */
     public void setDefaultRegionalFormat(@jakarta.annotation.Nullable final LocaleInfo value) {
-        this.defaultRegionalFormat = value;
+        this.BackingStore.set("defaultRegionalFormat", value);
     }
     /**
      * Sets the defaultSpeechInputLanguage property value. The language a user expected to use as input for text to speech scenarios.Returned by default.
      * @param value Value to set for the defaultSpeechInputLanguage property.
      */
     public void setDefaultSpeechInputLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
-        this.defaultSpeechInputLanguage = value;
+        this.BackingStore.set("defaultSpeechInputLanguage", value);
     }
     /**
      * Sets the defaultTranslationLanguage property value. The language a user expects to have documents, emails, and messages translated into.Returned by default.
      * @param value Value to set for the defaultTranslationLanguage property.
      */
     public void setDefaultTranslationLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
-        this.defaultTranslationLanguage = value;
+        this.BackingStore.set("defaultTranslationLanguage", value);
     }
     /**
      * Sets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
      * @param value Value to set for the regionalFormatOverrides property.
      */
     public void setRegionalFormatOverrides(@jakarta.annotation.Nullable final RegionalFormatOverrides value) {
-        this.regionalFormatOverrides = value;
+        this.BackingStore.set("regionalFormatOverrides", value);
     }
     /**
      * Sets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
      * @param value Value to set for the translationPreferences property.
      */
     public void setTranslationPreferences(@jakarta.annotation.Nullable final TranslationPreferences value) {
-        this.translationPreferences = value;
+        this.BackingStore.set("translationPreferences", value);
     }
 }

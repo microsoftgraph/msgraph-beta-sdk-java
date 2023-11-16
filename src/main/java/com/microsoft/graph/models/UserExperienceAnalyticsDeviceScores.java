@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsable {
     /**
-     * Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double appReliabilityScore;
-    /**
-     * Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double batteryHealthScore;
-    /**
-     * The name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceName;
-    /**
-     * Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double endpointAnalyticsScore;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
-     */
-    private String manufacturer;
-    /**
-     * The model name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String model;
-    /**
-     * Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double startupPerformanceScore;
-    /**
-     * Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double workFromAnywhereScore;
-    /**
-     * Instantiates a new userExperienceAnalyticsDeviceScores and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScores and sets the default values.
      */
     public UserExperienceAnalyticsDeviceScores() {
         super();
@@ -56,7 +20,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,35 +29,35 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     }
     /**
      * Gets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAppReliabilityScore() {
-        return this.appReliabilityScore;
+        return this.BackingStore.get("appReliabilityScore");
     }
     /**
      * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBatteryHealthScore() {
-        return this.batteryHealthScore;
+        return this.BackingStore.get("batteryHealthScore");
     }
     /**
      * Gets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * Gets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getEndpointAnalyticsScore() {
-        return this.endpointAnalyticsScore;
+        return this.BackingStore.get("endpointAnalyticsScore");
     }
     /**
      * The deserialization information for the current model
@@ -115,43 +79,43 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.BackingStore.get("healthStatus");
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
-        return this.startupPerformanceScore;
+        return this.BackingStore.get("startupPerformanceScore");
     }
     /**
      * Gets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
-        return this.workFromAnywhereScore;
+        return this.BackingStore.get("workFromAnywhereScore");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the appReliabilityScore property.
      */
     public void setAppReliabilityScore(@jakarta.annotation.Nullable final Double value) {
-        this.appReliabilityScore = value;
+        this.BackingStore.set("appReliabilityScore", value);
     }
     /**
      * Sets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the batteryHealthScore property.
      */
     public void setBatteryHealthScore(@jakarta.annotation.Nullable final Double value) {
-        this.batteryHealthScore = value;
+        this.BackingStore.set("batteryHealthScore", value);
     }
     /**
      * Sets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the endpointAnalyticsScore property.
      */
     public void setEndpointAnalyticsScore(@jakarta.annotation.Nullable final Double value) {
-        this.endpointAnalyticsScore = value;
+        this.BackingStore.set("endpointAnalyticsScore", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.BackingStore.set("healthStatus", value);
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the startupPerformanceScore property.
      */
     public void setStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
-        this.startupPerformanceScore = value;
+        this.BackingStore.set("startupPerformanceScore", value);
     }
     /**
      * Sets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      */
     public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
-        this.workFromAnywhereScore = value;
+        this.BackingStore.set("workFromAnywhereScore", value);
     }
 }

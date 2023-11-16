@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VisualInfo implements AdditionalDataHolder, Parsable {
+public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Optional. JSON object used to represent an icon which represents the application used to generate the activity
-     */
-    private ImageInfo attribution;
-    /**
-     * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-     */
-    private String backgroundColor;
-    /**
-     * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     */
-    private Json content;
-    /**
-     * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-     */
-    private String description;
-    /**
-     * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-     */
-    private String displayText;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new visualInfo and sets the default values.
+     * Instantiates a new VisualInfo and sets the default values.
      */
     public VisualInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a visualInfo
+     * @return a VisualInfo
      */
     @jakarta.annotation.Nonnull
     public static VisualInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         return new VisualInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
-     * @return a imageInfo
+     * @return a ImageInfo
      */
     @jakarta.annotation.Nullable
     public ImageInfo getAttribution() {
-        return this.attribution;
+        return this.BackingStore.get("attribution");
     }
     /**
      * Gets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBackgroundColor() {
-        return this.backgroundColor;
+        return this.BackingStore.get("backgroundColor");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
@@ -83,23 +76,23 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayText() {
-        return this.displayText;
+        return this.BackingStore.get("displayText");
     }
     /**
      * The deserialization information for the current model
@@ -118,11 +111,11 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
      * @param value Value to set for the attribution property.
      */
     public void setAttribution(@jakarta.annotation.Nullable final ImageInfo value) {
-        this.attribution = value;
+        this.BackingStore.set("attribution", value);
     }
     /**
      * Sets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
      * @param value Value to set for the backgroundColor property.
      */
     public void setBackgroundColor(@jakarta.annotation.Nullable final String value) {
-        this.backgroundColor = value;
+        this.BackingStore.set("backgroundColor", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final Json value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
      * @param value Value to set for the displayText property.
      */
     public void setDisplayText(@jakarta.annotation.Nullable final String value) {
-        this.displayText = value;
+        this.BackingStore.set("displayText", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

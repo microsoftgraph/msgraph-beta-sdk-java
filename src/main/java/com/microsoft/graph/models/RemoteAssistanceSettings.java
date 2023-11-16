@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteAssistanceSettings extends Entity implements Parsable {
     /**
-     * Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
-     */
-    private Boolean allowSessionsToUnenrolledDevices;
-    /**
-     * Indicates if sessions to block chat function. This setting is configurable by the admin. Default value is false.
-     */
-    private Boolean blockChat;
-    /**
-     * State of remote assistance for the account
-     */
-    private RemoteAssistanceState remoteAssistanceState;
-    /**
-     * Instantiates a new remoteAssistanceSettings and sets the default values.
+     * Instantiates a new RemoteAssistanceSettings and sets the default values.
      */
     public RemoteAssistanceSettings() {
         super();
@@ -32,7 +20,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteAssistanceSettings
+     * @return a RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public static RemoteAssistanceSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     }
     /**
      * Gets the allowSessionsToUnenrolledDevices property value. Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSessionsToUnenrolledDevices() {
-        return this.allowSessionsToUnenrolledDevices;
+        return this.BackingStore.get("allowSessionsToUnenrolledDevices");
     }
     /**
      * Gets the blockChat property value. Indicates if sessions to block chat function. This setting is configurable by the admin. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockChat() {
-        return this.blockChat;
+        return this.BackingStore.get("blockChat");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistanceState property value. State of remote assistance for the account
-     * @return a remoteAssistanceState
+     * @return a RemoteAssistanceState
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceState getRemoteAssistanceState() {
-        return this.remoteAssistanceState;
+        return this.BackingStore.get("remoteAssistanceState");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
      * @param value Value to set for the allowSessionsToUnenrolledDevices property.
      */
     public void setAllowSessionsToUnenrolledDevices(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowSessionsToUnenrolledDevices = value;
+        this.BackingStore.set("allowSessionsToUnenrolledDevices", value);
     }
     /**
      * Sets the blockChat property value. Indicates if sessions to block chat function. This setting is configurable by the admin. Default value is false.
      * @param value Value to set for the blockChat property.
      */
     public void setBlockChat(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockChat = value;
+        this.BackingStore.set("blockChat", value);
     }
     /**
      * Sets the remoteAssistanceState property value. State of remote assistance for the account
      * @param value Value to set for the remoteAssistanceState property.
      */
     public void setRemoteAssistanceState(@jakarta.annotation.Nullable final RemoteAssistanceState value) {
-        this.remoteAssistanceState = value;
+        this.BackingStore.set("remoteAssistanceState", value);
     }
 }

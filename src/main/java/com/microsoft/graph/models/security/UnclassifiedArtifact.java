@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
-     * The kind for this unclassifiedArtifact resource, describing what this value means.
-     */
-    private String kind;
-    /**
-     * The value for this unclassifiedArtifact.
-     */
-    private String value;
-    /**
-     * Instantiates a new unclassifiedArtifact and sets the default values.
+     * Instantiates a new UnclassifiedArtifact and sets the default values.
      */
     public UnclassifiedArtifact() {
         super();
@@ -26,7 +18,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unclassifiedArtifact
+     * @return a UnclassifiedArtifact
      */
     @jakarta.annotation.Nonnull
     public static UnclassifiedArtifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     }
     /**
      * Gets the kind property value. The kind for this unclassifiedArtifact resource, describing what this value means.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKind() {
-        return this.kind;
+        return this.BackingStore.get("kind");
     }
     /**
      * Gets the value property value. The value for this unclassifiedArtifact.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final String value) {
-        this.kind = value;
+        this.BackingStore.set("kind", value);
     }
     /**
      * Sets the value property value. The value for this unclassifiedArtifact.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

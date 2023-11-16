@@ -4,58 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AlertEvidence implements AdditionalDataHolder, Parsable {
+public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Detailed description of the entity role/s in an alert. Values are free-form.
-     */
-    private java.util.List<String> detailedRoles;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The remediationStatus property
-     */
-    private EvidenceRemediationStatus remediationStatus;
-    /**
-     * Details about the remediation status.
-     */
-    private String remediationStatusDetails;
-    /**
-     * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
-     */
-    private java.util.List<EvidenceRole> roles;
-    /**
-     * Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
-     */
-    private java.util.List<String> tags;
-    /**
-     * The verdict property
-     */
-    private EvidenceVerdict verdict;
-    /**
-     * Instantiates a new alertEvidence and sets the default values.
+     * Instantiates a new AlertEvidence and sets the default values.
      */
     public AlertEvidence() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertEvidence
+     * @return a AlertEvidence
      */
     @jakarta.annotation.Nonnull
     public static AlertEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,12 +70,25 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return new AlertEvidence();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -111,15 +96,15 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetailedRoles() {
-        return this.detailedRoles;
+        return this.BackingStore.get("detailedRoles");
     }
     /**
      * The deserialization information for the current model
@@ -140,51 +125,51 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the remediationStatus property value. The remediationStatus property
-     * @return a evidenceRemediationStatus
+     * @return a EvidenceRemediationStatus
      */
     @jakarta.annotation.Nullable
     public EvidenceRemediationStatus getRemediationStatus() {
-        return this.remediationStatus;
+        return this.BackingStore.get("remediationStatus");
     }
     /**
      * Gets the remediationStatusDetails property value. Details about the remediation status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationStatusDetails() {
-        return this.remediationStatusDetails;
+        return this.BackingStore.get("remediationStatusDetails");
     }
     /**
-     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
-     * @return a evidenceRole
+     * Gets the roles property value. The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * @return a java.util.List<EvidenceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EvidenceRole> getRoles() {
-        return this.roles;
+        return this.BackingStore.get("roles");
     }
     /**
      * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Gets the verdict property value. The verdict property
-     * @return a evidenceVerdict
+     * @return a EvidenceVerdict
      */
     @jakarta.annotation.Nullable
     public EvidenceVerdict getVerdict() {
-        return this.verdict;
+        return this.BackingStore.get("verdict");
     }
     /**
      * Serializes information the current object
@@ -203,66 +188,74 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @param value Value to set for the detailedRoles property.
      */
     public void setDetailedRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.detailedRoles = value;
+        this.BackingStore.set("detailedRoles", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the remediationStatus property value. The remediationStatus property
      * @param value Value to set for the remediationStatus property.
      */
     public void setRemediationStatus(@jakarta.annotation.Nullable final EvidenceRemediationStatus value) {
-        this.remediationStatus = value;
+        this.BackingStore.set("remediationStatus", value);
     }
     /**
      * Sets the remediationStatusDetails property value. Details about the remediation status.
      * @param value Value to set for the remediationStatusDetails property.
      */
     public void setRemediationStatusDetails(@jakarta.annotation.Nullable final String value) {
-        this.remediationStatusDetails = value;
+        this.BackingStore.set("remediationStatusDetails", value);
     }
     /**
-     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
+     * Sets the roles property value. The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
      * @param value Value to set for the roles property.
      */
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<EvidenceRole> value) {
-        this.roles = value;
+        this.BackingStore.set("roles", value);
     }
     /**
      * Sets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
      * Sets the verdict property value. The verdict property
      * @param value Value to set for the verdict property.
      */
     public void setVerdict(@jakarta.annotation.Nullable final EvidenceVerdict value) {
-        this.verdict = value;
+        this.BackingStore.set("verdict", value);
     }
 }

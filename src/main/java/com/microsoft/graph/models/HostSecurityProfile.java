@@ -10,79 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSecurityProfile extends Entity implements Parsable {
     /**
-     * The azureSubscriptionId property
-     */
-    private String azureSubscriptionId;
-    /**
-     * The azureTenantId property
-     */
-    private String azureTenantId;
-    /**
-     * The firstSeenDateTime property
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The fqdn property
-     */
-    private String fqdn;
-    /**
-     * The isAzureAdJoined property
-     */
-    private Boolean isAzureAdJoined;
-    /**
-     * The isAzureAdRegistered property
-     */
-    private Boolean isAzureAdRegistered;
-    /**
-     * The isHybridAzureDomainJoined property
-     */
-    private Boolean isHybridAzureDomainJoined;
-    /**
-     * The lastSeenDateTime property
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The logonUsers property
-     */
-    private java.util.List<LogonUser> logonUsers;
-    /**
-     * The netBiosName property
-     */
-    private String netBiosName;
-    /**
-     * The networkInterfaces property
-     */
-    private java.util.List<NetworkInterface> networkInterfaces;
-    /**
-     * The os property
-     */
-    private String os;
-    /**
-     * The osVersion property
-     */
-    private String osVersion;
-    /**
-     * The parentHost property
-     */
-    private String parentHost;
-    /**
-     * The relatedHostIds property
-     */
-    private java.util.List<String> relatedHostIds;
-    /**
-     * The riskScore property
-     */
-    private String riskScore;
-    /**
-     * The tags property
-     */
-    private java.util.List<String> tags;
-    /**
-     * The vendorInformation property
-     */
-    private SecurityVendorInformation vendorInformation;
-    /**
-     * Instantiates a new hostSecurityProfile and sets the default values.
+     * Instantiates a new HostSecurityProfile and sets the default values.
      */
     public HostSecurityProfile() {
         super();
@@ -90,7 +18,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostSecurityProfile
+     * @return a HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public static HostSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,19 +27,19 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this.azureSubscriptionId;
+        return this.BackingStore.get("azureSubscriptionId");
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.BackingStore.get("azureTenantId");
     }
     /**
      * The deserialization information for the current model
@@ -146,39 +74,39 @@ public class HostSecurityProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the fqdn property value. The fqdn property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
-        return this.fqdn;
+        return this.BackingStore.get("fqdn");
     }
     /**
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
-        return this.isAzureAdJoined;
+        return this.BackingStore.get("isAzureAdJoined");
     }
     /**
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
-        return this.isAzureAdRegistered;
+        return this.BackingStore.get("isAzureAdRegistered");
     }
     /**
      * Gets the isHybridAzureDomainJoined property value. The isHybridAzureDomainJoined property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
-        return this.isHybridAzureDomainJoined;
+        return this.BackingStore.get("isHybridAzureDomainJoined");
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
@@ -186,87 +114,87 @@ public class HostSecurityProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the logonUsers property value. The logonUsers property
-     * @return a logonUser
+     * @return a java.util.List<LogonUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LogonUser> getLogonUsers() {
-        return this.logonUsers;
+        return this.BackingStore.get("logonUsers");
     }
     /**
      * Gets the netBiosName property value. The netBiosName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetBiosName() {
-        return this.netBiosName;
+        return this.BackingStore.get("netBiosName");
     }
     /**
      * Gets the networkInterfaces property value. The networkInterfaces property
-     * @return a networkInterface
+     * @return a java.util.List<NetworkInterface>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NetworkInterface> getNetworkInterfaces() {
-        return this.networkInterfaces;
+        return this.BackingStore.get("networkInterfaces");
     }
     /**
      * Gets the os property value. The os property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOs() {
-        return this.os;
+        return this.BackingStore.get("os");
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentHost() {
-        return this.parentHost;
+        return this.BackingStore.get("parentHost");
     }
     /**
      * Gets the relatedHostIds property value. The relatedHostIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRelatedHostIds() {
-        return this.relatedHostIds;
+        return this.BackingStore.get("relatedHostIds");
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
-        return this.riskScore;
+        return this.BackingStore.get("riskScore");
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this.vendorInformation;
+        return this.BackingStore.get("vendorInformation");
     }
     /**
      * Serializes information the current object
@@ -299,125 +227,125 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      */
     public void setAzureSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.azureSubscriptionId = value;
+        this.BackingStore.set("azureSubscriptionId", value);
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.BackingStore.set("azureTenantId", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the fqdn property value. The fqdn property
      * @param value Value to set for the fqdn property.
      */
     public void setFqdn(@jakarta.annotation.Nullable final String value) {
-        this.fqdn = value;
+        this.BackingStore.set("fqdn", value);
     }
     /**
      * Sets the isAzureAdJoined property value. The isAzureAdJoined property
      * @param value Value to set for the isAzureAdJoined property.
      */
     public void setIsAzureAdJoined(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAzureAdJoined = value;
+        this.BackingStore.set("isAzureAdJoined", value);
     }
     /**
      * Sets the isAzureAdRegistered property value. The isAzureAdRegistered property
      * @param value Value to set for the isAzureAdRegistered property.
      */
     public void setIsAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAzureAdRegistered = value;
+        this.BackingStore.set("isAzureAdRegistered", value);
     }
     /**
      * Sets the isHybridAzureDomainJoined property value. The isHybridAzureDomainJoined property
      * @param value Value to set for the isHybridAzureDomainJoined property.
      */
     public void setIsHybridAzureDomainJoined(@jakarta.annotation.Nullable final Boolean value) {
-        this.isHybridAzureDomainJoined = value;
+        this.BackingStore.set("isHybridAzureDomainJoined", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the logonUsers property value. The logonUsers property
      * @param value Value to set for the logonUsers property.
      */
     public void setLogonUsers(@jakarta.annotation.Nullable final java.util.List<LogonUser> value) {
-        this.logonUsers = value;
+        this.BackingStore.set("logonUsers", value);
     }
     /**
      * Sets the netBiosName property value. The netBiosName property
      * @param value Value to set for the netBiosName property.
      */
     public void setNetBiosName(@jakarta.annotation.Nullable final String value) {
-        this.netBiosName = value;
+        this.BackingStore.set("netBiosName", value);
     }
     /**
      * Sets the networkInterfaces property value. The networkInterfaces property
      * @param value Value to set for the networkInterfaces property.
      */
     public void setNetworkInterfaces(@jakarta.annotation.Nullable final java.util.List<NetworkInterface> value) {
-        this.networkInterfaces = value;
+        this.BackingStore.set("networkInterfaces", value);
     }
     /**
      * Sets the os property value. The os property
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {
-        this.os = value;
+        this.BackingStore.set("os", value);
     }
     /**
      * Sets the osVersion property value. The osVersion property
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
     /**
      * Sets the parentHost property value. The parentHost property
      * @param value Value to set for the parentHost property.
      */
     public void setParentHost(@jakarta.annotation.Nullable final String value) {
-        this.parentHost = value;
+        this.BackingStore.set("parentHost", value);
     }
     /**
      * Sets the relatedHostIds property value. The relatedHostIds property
      * @param value Value to set for the relatedHostIds property.
      */
     public void setRelatedHostIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.relatedHostIds = value;
+        this.BackingStore.set("relatedHostIds", value);
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
      */
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
-        this.riskScore = value;
+        this.BackingStore.set("riskScore", value);
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
-        this.vendorInformation = value;
+        this.BackingStore.set("vendorInformation", value);
     }
 }

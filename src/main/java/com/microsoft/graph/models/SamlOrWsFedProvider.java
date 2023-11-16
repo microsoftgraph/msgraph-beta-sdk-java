@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable {
     /**
-     * Issuer URI of the federation server.
-     */
-    private String issuerUri;
-    /**
-     * URI of the metadata exchange endpoint used for authentication from rich client applications.
-     */
-    private String metadataExchangeUri;
-    /**
-     * URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
-     */
-    private String passiveSignInUri;
-    /**
-     * Preferred authentication protocol. Supported values include saml or wsfed.
-     */
-    private AuthenticationProtocol preferredAuthenticationProtocol;
-    /**
-     * Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
-     */
-    private String signingCertificate;
-    /**
-     * Instantiates a new samlOrWsFedProvider and sets the default values.
+     * Instantiates a new SamlOrWsFedProvider and sets the default values.
      */
     public SamlOrWsFedProvider() {
         super();
@@ -38,7 +18,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a samlOrWsFedProvider
+     * @return a SamlOrWsFedProvider
      */
     @jakarta.annotation.Nonnull
     public static SamlOrWsFedProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,43 +49,43 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the issuerUri property value. Issuer URI of the federation server.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerUri() {
-        return this.issuerUri;
+        return this.BackingStore.get("issuerUri");
     }
     /**
      * Gets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetadataExchangeUri() {
-        return this.metadataExchangeUri;
+        return this.BackingStore.get("metadataExchangeUri");
     }
     /**
-     * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
-     * @return a string
+     * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Microsoft Entra services.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassiveSignInUri() {
-        return this.passiveSignInUri;
+        return this.BackingStore.get("passiveSignInUri");
     }
     /**
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
-     * @return a authenticationProtocol
+     * @return a AuthenticationProtocol
      */
     @jakarta.annotation.Nullable
     public AuthenticationProtocol getPreferredAuthenticationProtocol() {
-        return this.preferredAuthenticationProtocol;
+        return this.BackingStore.get("preferredAuthenticationProtocol");
     }
     /**
-     * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
-     * @return a string
+     * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Microsoft Entra ID updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Microsoft Entra ID monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSigningCertificate() {
-        return this.signingCertificate;
+        return this.BackingStore.get("signingCertificate");
     }
     /**
      * Serializes information the current object
@@ -125,34 +105,34 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the issuerUri property.
      */
     public void setIssuerUri(@jakarta.annotation.Nullable final String value) {
-        this.issuerUri = value;
+        this.BackingStore.set("issuerUri", value);
     }
     /**
      * Sets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
      * @param value Value to set for the metadataExchangeUri property.
      */
     public void setMetadataExchangeUri(@jakarta.annotation.Nullable final String value) {
-        this.metadataExchangeUri = value;
+        this.BackingStore.set("metadataExchangeUri", value);
     }
     /**
-     * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
+     * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Microsoft Entra services.
      * @param value Value to set for the passiveSignInUri property.
      */
     public void setPassiveSignInUri(@jakarta.annotation.Nullable final String value) {
-        this.passiveSignInUri = value;
+        this.BackingStore.set("passiveSignInUri", value);
     }
     /**
      * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
      * @param value Value to set for the preferredAuthenticationProtocol property.
      */
     public void setPreferredAuthenticationProtocol(@jakarta.annotation.Nullable final AuthenticationProtocol value) {
-        this.preferredAuthenticationProtocol = value;
+        this.BackingStore.set("preferredAuthenticationProtocol", value);
     }
     /**
-     * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
+     * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Microsoft Entra ID updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Microsoft Entra ID monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      * @param value Value to set for the signingCertificate property.
      */
     public void setSigningCertificate(@jakarta.annotation.Nullable final String value) {
-        this.signingCertificate = value;
+        this.BackingStore.set("signingCertificate", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     /**
-     * The domainNames property
-     */
-    private java.util.List<String> domainNames;
-    /**
-     * Instantiates a new enumeratedDomains and sets the default values.
+     * Instantiates a new EnumeratedDomains and sets the default values.
      */
     public EnumeratedDomains() {
         super();
@@ -22,7 +18,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enumeratedDomains
+     * @return a EnumeratedDomains
      */
     @jakarta.annotation.Nonnull
     public static EnumeratedDomains createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     }
     /**
      * Gets the domainNames property value. The domainNames property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomainNames() {
-        return this.domainNames;
+        return this.BackingStore.get("domainNames");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
      * @param value Value to set for the domainNames property.
      */
     public void setDomainNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.domainNames = value;
+        this.BackingStore.set("domainNames", value);
     }
 }

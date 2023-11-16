@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable {
     /**
-     * The dataStoreId property
-     */
-    private String dataStoreId;
-    /**
-     * The processingCompletionDateTime property
-     */
-    private OffsetDateTime processingCompletionDateTime;
-    /**
-     * The remainingBlockCount property
-     */
-    private Integer remainingBlockCount;
-    /**
-     * The remainingJobCount property
-     */
-    private Integer remainingJobCount;
-    /**
-     * The state property
-     */
-    private String state;
-    /**
-     * The totalBlockCount property
-     */
-    private Integer totalBlockCount;
-    /**
-     * The totalJobCount property
-     */
-    private Integer totalJobCount;
-    /**
-     * The uploadCompletionDateTime property
-     */
-    private OffsetDateTime uploadCompletionDateTime;
-    /**
-     * Instantiates a new exactMatchSessionBase and sets the default values.
+     * Instantiates a new ExactMatchSessionBase and sets the default values.
      */
     public ExactMatchSessionBase() {
         super();
@@ -51,7 +19,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchSessionBase
+     * @return a ExactMatchSessionBase
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchSessionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,11 +35,11 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the dataStoreId property value. The dataStoreId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataStoreId() {
-        return this.dataStoreId;
+        return this.BackingStore.get("dataStoreId");
     }
     /**
      * The deserialization information for the current model
@@ -96,47 +64,47 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessingCompletionDateTime() {
-        return this.processingCompletionDateTime;
+        return this.BackingStore.get("processingCompletionDateTime");
     }
     /**
      * Gets the remainingBlockCount property value. The remainingBlockCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemainingBlockCount() {
-        return this.remainingBlockCount;
+        return this.BackingStore.get("remainingBlockCount");
     }
     /**
      * Gets the remainingJobCount property value. The remainingJobCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemainingJobCount() {
-        return this.remainingJobCount;
+        return this.BackingStore.get("remainingJobCount");
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the totalBlockCount property value. The totalBlockCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalBlockCount() {
-        return this.totalBlockCount;
+        return this.BackingStore.get("totalBlockCount");
     }
     /**
      * Gets the totalJobCount property value. The totalJobCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalJobCount() {
-        return this.totalJobCount;
+        return this.BackingStore.get("totalJobCount");
     }
     /**
      * Gets the uploadCompletionDateTime property value. The uploadCompletionDateTime property
@@ -144,7 +112,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadCompletionDateTime() {
-        return this.uploadCompletionDateTime;
+        return this.BackingStore.get("uploadCompletionDateTime");
     }
     /**
      * Serializes information the current object
@@ -167,55 +135,55 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the dataStoreId property.
      */
     public void setDataStoreId(@jakarta.annotation.Nullable final String value) {
-        this.dataStoreId = value;
+        this.BackingStore.set("dataStoreId", value);
     }
     /**
      * Sets the processingCompletionDateTime property value. The processingCompletionDateTime property
      * @param value Value to set for the processingCompletionDateTime property.
      */
     public void setProcessingCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.processingCompletionDateTime = value;
+        this.BackingStore.set("processingCompletionDateTime", value);
     }
     /**
      * Sets the remainingBlockCount property value. The remainingBlockCount property
      * @param value Value to set for the remainingBlockCount property.
      */
     public void setRemainingBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remainingBlockCount = value;
+        this.BackingStore.set("remainingBlockCount", value);
     }
     /**
      * Sets the remainingJobCount property value. The remainingJobCount property
      * @param value Value to set for the remainingJobCount property.
      */
     public void setRemainingJobCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remainingJobCount = value;
+        this.BackingStore.set("remainingJobCount", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the totalBlockCount property value. The totalBlockCount property
      * @param value Value to set for the totalBlockCount property.
      */
     public void setTotalBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalBlockCount = value;
+        this.BackingStore.set("totalBlockCount", value);
     }
     /**
      * Sets the totalJobCount property value. The totalJobCount property
      * @param value Value to set for the totalJobCount property.
      */
     public void setTotalJobCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalJobCount = value;
+        this.BackingStore.set("totalJobCount", value);
     }
     /**
      * Sets the uploadCompletionDateTime property value. The uploadCompletionDateTime property
      * @param value Value to set for the uploadCompletionDateTime property.
      */
     public void setUploadCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.uploadCompletionDateTime = value;
+        this.BackingStore.set("uploadCompletionDateTime", value);
     }
 }

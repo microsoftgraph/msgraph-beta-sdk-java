@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationConditionsApplications implements AdditionalDataHolder, Parsable {
+public class AuthenticationConditionsApplications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Whether the custom authentication extension should trigger for all applications with appIds specified in the includeApplications relationship. This property must be set to false for listener of type onTokenIssuanceStartListener.
-     */
-    private Boolean includeAllApplications;
-    /**
-     * The includeApplications property
-     */
-    private java.util.List<AuthenticationConditionApplication> includeApplications;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new authenticationConditionsApplications and sets the default values.
+     * Instantiates a new AuthenticationConditionsApplications and sets the default values.
      */
     public AuthenticationConditionsApplications() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationConditionsApplications
+     * @return a AuthenticationConditionsApplications
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationConditionsApplications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
         return new AuthenticationConditionsApplications();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
     }
     /**
      * Gets the includeAllApplications property value. Whether the custom authentication extension should trigger for all applications with appIds specified in the includeApplications relationship. This property must be set to false for listener of type onTokenIssuanceStartListener.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeAllApplications() {
-        return this.includeAllApplications;
+        return this.BackingStore.get("includeAllApplications");
     }
     /**
      * Gets the includeApplications property value. The includeApplications property
-     * @return a authenticationConditionApplication
+     * @return a java.util.List<AuthenticationConditionApplication>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationConditionApplication> getIncludeApplications() {
-        return this.includeApplications;
+        return this.BackingStore.get("includeApplications");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the includeAllApplications property value. Whether the custom authentication extension should trigger for all applications with appIds specified in the includeApplications relationship. This property must be set to false for listener of type onTokenIssuanceStartListener.
      * @param value Value to set for the includeAllApplications property.
      */
     public void setIncludeAllApplications(@jakarta.annotation.Nullable final Boolean value) {
-        this.includeAllApplications = value;
+        this.BackingStore.set("includeAllApplications", value);
     }
     /**
      * Sets the includeApplications property value. The includeApplications property
      * @param value Value to set for the includeApplications property.
      */
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<AuthenticationConditionApplication> value) {
-        this.includeApplications = value;
+        this.BackingStore.set("includeApplications", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

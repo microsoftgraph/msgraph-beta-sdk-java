@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileClassificationRequest extends Entity implements Parsable {
     /**
-     * The file property
-     */
-    private byte[] file;
-    /**
-     * The sensitiveTypeIds property
-     */
-    private java.util.List<String> sensitiveTypeIds;
-    /**
-     * Instantiates a new fileClassificationRequest and sets the default values.
+     * Instantiates a new FileClassificationRequest and sets the default values.
      */
     public FileClassificationRequest() {
         super();
@@ -25,7 +17,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileClassificationRequest
+     * @return a FileClassificationRequest
      */
     @jakarta.annotation.Nonnull
     public static FileClassificationRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class FileClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the file property value. The file property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getFile() {
-        return this.file;
+        return this.BackingStore.get("file");
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
-        return this.sensitiveTypeIds;
+        return this.BackingStore.get("sensitiveTypeIds");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the file property.
      */
     public void setFile(@jakarta.annotation.Nullable final byte[] value) {
-        this.file = value;
+        this.BackingStore.set("file", value);
     }
     /**
      * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @param value Value to set for the sensitiveTypeIds property.
      */
     public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.sensitiveTypeIds = value;
+        this.BackingStore.set("sensitiveTypeIds", value);
     }
 }

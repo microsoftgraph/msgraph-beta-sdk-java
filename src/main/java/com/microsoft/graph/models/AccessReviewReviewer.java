@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewReviewer extends Entity implements Parsable {
     /**
-     * The date when the reviewer was added for the access review.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Name of reviewer.
-     */
-    private String displayName;
-    /**
-     * User principal name of the user.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new accessReviewReviewer and sets the default values.
+     * Instantiates a new AccessReviewReviewer and sets the default values.
      */
     public AccessReviewReviewer() {
         super();
@@ -30,7 +18,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewReviewer
+     * @return a AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewReviewer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,15 +31,15 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Name of reviewer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Name of reviewer.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the user.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

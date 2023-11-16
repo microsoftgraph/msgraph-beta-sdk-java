@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
-     */
-    private java.util.List<String> enabledRules;
-    /**
-     * Instantiates a new unifiedRoleManagementPolicyEnablementRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyEnablementRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyEnablementRule() {
         super();
@@ -22,7 +18,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyEnablementRule
+     * @return a UnifiedRoleManagementPolicyEnablementRule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyEnablementRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     }
     /**
      * Gets the enabledRules property value. The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledRules() {
-        return this.enabledRules;
+        return this.BackingStore.get("enabledRules");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      * @param value Value to set for the enabledRules property.
      */
     public void setEnabledRules(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enabledRules = value;
+        this.BackingStore.set("enabledRules", value);
     }
 }

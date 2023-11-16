@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Monitoring extends Entity implements Parsable {
     /**
-     * The collection of records of alert events.
-     */
-    private java.util.List<AlertRecord> alertRecords;
-    /**
-     * The collection of alert rules.
-     */
-    private java.util.List<AlertRule> alertRules;
-    /**
-     * Instantiates a new monitoring and sets the default values.
+     * Instantiates a new Monitoring and sets the default values.
      */
     public Monitoring() {
         super();
@@ -26,7 +18,7 @@ public class Monitoring extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a monitoring
+     * @return a Monitoring
      */
     @jakarta.annotation.Nonnull
     public static Monitoring createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,19 +27,19 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * Gets the alertRecords property value. The collection of records of alert events.
-     * @return a alertRecord
+     * @return a java.util.List<AlertRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRecord> getAlertRecords() {
-        return this.alertRecords;
+        return this.BackingStore.get("alertRecords");
     }
     /**
      * Gets the alertRules property value. The collection of alert rules.
-     * @return a alertRule
+     * @return a java.util.List<AlertRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRule> getAlertRules() {
-        return this.alertRules;
+        return this.BackingStore.get("alertRules");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class Monitoring extends Entity implements Parsable {
      * @param value Value to set for the alertRecords property.
      */
     public void setAlertRecords(@jakarta.annotation.Nullable final java.util.List<AlertRecord> value) {
-        this.alertRecords = value;
+        this.BackingStore.set("alertRecords", value);
     }
     /**
      * Sets the alertRules property value. The collection of alert rules.
      * @param value Value to set for the alertRules property.
      */
     public void setAlertRules(@jakarta.annotation.Nullable final java.util.List<AlertRule> value) {
-        this.alertRules = value;
+        this.BackingStore.set("alertRules", value);
     }
 }

@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * The email address of the user.
-     */
-    private String email;
-    /**
-     * TenantId which the Azure AD user belongs to.
-     */
-    private String tenantId;
-    /**
-     * The user property
-     */
-    private User user;
-    /**
-     * The GUID of the user.
-     */
-    private String userId;
-    /**
-     * Instantiates a new aadUserConversationMember and sets the default values.
+     * Instantiates a new AadUserConversationMember and sets the default values.
      */
     public AadUserConversationMember() {
         super();
@@ -34,7 +18,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aadUserConversationMember
+     * @return a AadUserConversationMember
      */
     @jakarta.annotation.Nonnull
     public static AadUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class AadUserConversationMember extends ConversationMember implements Par
     }
     /**
      * Gets the email property value. The email address of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -63,28 +47,28 @@ public class AadUserConversationMember extends ConversationMember implements Par
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. TenantId which the Azure AD user belongs to.
-     * @return a string
+     * Gets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the user property value. The user property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getUser() {
-        return this.user;
+        return this.BackingStore.get("user");
     }
     /**
      * Gets the userId property value. The GUID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
-     * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
+     * Sets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the user property value. The user property
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final User value) {
-        this.user = value;
+        this.BackingStore.set("user", value);
     }
     /**
      * Sets the userId property value. The GUID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

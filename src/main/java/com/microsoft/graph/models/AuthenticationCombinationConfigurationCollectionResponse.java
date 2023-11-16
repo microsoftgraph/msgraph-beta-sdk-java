@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationCombinationConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AuthenticationCombinationConfiguration> value;
-    /**
-     * Instantiates a new authenticationCombinationConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new AuthenticationCombinationConfigurationCollectionResponse and sets the default values.
      */
     public AuthenticationCombinationConfigurationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AuthenticationCombinationConfigurationCollectionResponse extends Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationCombinationConfigurationCollectionResponse
+     * @return a AuthenticationCombinationConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationCombinationConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AuthenticationCombinationConfigurationCollectionResponse extends Ba
     }
     /**
      * Gets the value property value. The value property
-     * @return a authenticationCombinationConfiguration
+     * @return a java.util.List<AuthenticationCombinationConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationCombinationConfiguration> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthenticationCombinationConfigurationCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AuthenticationCombinationConfiguration> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

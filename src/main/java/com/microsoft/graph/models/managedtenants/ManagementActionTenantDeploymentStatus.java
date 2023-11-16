@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementActionTenantDeploymentStatus extends Entity implements Parsable {
     /**
-     * The collection of deployment status for each instance of a management action. Optional.
-     */
-    private java.util.List<ManagementActionDeploymentStatus> statuses;
-    /**
-     * The identifier for the tenant group that is associated with the management action. Required. Read-only.
-     */
-    private String tenantGroupId;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new managementActionTenantDeploymentStatus and sets the default values.
+     * Instantiates a new ManagementActionTenantDeploymentStatus and sets the default values.
      */
     public ManagementActionTenantDeploymentStatus() {
         super();
@@ -30,7 +18,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementActionTenantDeploymentStatus
+     * @return a ManagementActionTenantDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public static ManagementActionTenantDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     }
     /**
      * Gets the statuses property value. The collection of deployment status for each instance of a management action. Optional.
-     * @return a managementActionDeploymentStatus
+     * @return a java.util.List<ManagementActionDeploymentStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementActionDeploymentStatus> getStatuses() {
-        return this.statuses;
+        return this.BackingStore.get("statuses");
     }
     /**
      * Gets the tenantGroupId property value. The identifier for the tenant group that is associated with the management action. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantGroupId() {
-        return this.tenantGroupId;
+        return this.BackingStore.get("tenantGroupId");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param value Value to set for the statuses property.
      */
     public void setStatuses(@jakarta.annotation.Nullable final java.util.List<ManagementActionDeploymentStatus> value) {
-        this.statuses = value;
+        this.BackingStore.set("statuses", value);
     }
     /**
      * Sets the tenantGroupId property value. The identifier for the tenant group that is associated with the management action. Required. Read-only.
      * @param value Value to set for the tenantGroupId property.
      */
     public void setTenantGroupId(@jakarta.annotation.Nullable final String value) {
-        this.tenantGroupId = value;
+        this.BackingStore.set("tenantGroupId", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

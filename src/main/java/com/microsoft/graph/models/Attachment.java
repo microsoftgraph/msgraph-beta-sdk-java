@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attachment extends Entity implements Parsable {
     /**
-     * The MIME type.
-     */
-    private String contentType;
-    /**
-     * true if the attachment is an inline attachment; otherwise, false.
-     */
-    private Boolean isInline;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The display name of the attachment. This does not need to be the actual file name.
-     */
-    private String name;
-    /**
-     * The length of the attachment in bytes.
-     */
-    private Integer size;
-    /**
-     * Instantiates a new attachment and sets the default values.
+     * Instantiates a new Attachment and sets the default values.
      */
     public Attachment() {
         super();
@@ -38,7 +18,7 @@ public class Attachment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachment
+     * @return a Attachment
      */
     @jakarta.annotation.Nonnull
     public static Attachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,11 +36,11 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. The MIME type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -78,11 +58,11 @@ public class Attachment extends Entity implements Parsable {
     }
     /**
      * Gets the isInline property value. true if the attachment is an inline attachment; otherwise, false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
-        return this.isInline;
+        return this.BackingStore.get("isInline");
     }
     /**
      * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -90,23 +70,23 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The display name of the attachment. This does not need to be the actual file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the size property value. The length of the attachment in bytes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.BackingStore.get("size");
     }
     /**
      * Serializes information the current object
@@ -126,34 +106,34 @@ public class Attachment extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false.
      * @param value Value to set for the isInline property.
      */
     public void setIsInline(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInline = value;
+        this.BackingStore.set("isInline", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The display name of the attachment. This does not need to be the actual file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the size property value. The length of the attachment in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.BackingStore.set("size", value);
     }
 }

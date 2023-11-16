@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
     /**
-     * Collection of certificate authorities which creates a trusted certificate chain.
-     */
-    private java.util.List<CertificateAuthority> certificateAuthorities;
-    /**
-     * Instantiates a new certificateBasedAuthConfiguration and sets the default values.
+     * Instantiates a new CertificateBasedAuthConfiguration and sets the default values.
      */
     public CertificateBasedAuthConfiguration() {
         super();
@@ -21,7 +17,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateBasedAuthConfiguration
+     * @return a CertificateBasedAuthConfiguration
      */
     @jakarta.annotation.Nonnull
     public static CertificateBasedAuthConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
-     * @return a certificateAuthority
+     * @return a java.util.List<CertificateAuthority>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateAuthority> getCertificateAuthorities() {
-        return this.certificateAuthorities;
+        return this.BackingStore.get("certificateAuthorities");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthority> value) {
-        this.certificateAuthorities = value;
+        this.BackingStore.set("certificateAuthorities", value);
     }
 }

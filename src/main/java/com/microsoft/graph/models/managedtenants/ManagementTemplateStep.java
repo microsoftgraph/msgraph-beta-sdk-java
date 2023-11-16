@@ -12,55 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateStep extends Entity implements Parsable {
     /**
-     * The acceptedVersion property
-     */
-    private ManagementTemplateStepVersion acceptedVersion;
-    /**
-     * The category property
-     */
-    private ManagementCategory category;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The managementTemplate property
-     */
-    private ManagementTemplate managementTemplate;
-    /**
-     * The portalLink property
-     */
-    private ActionUrl portalLink;
-    /**
-     * The priority property
-     */
-    private Integer priority;
-    /**
-     * The versions property
-     */
-    private java.util.List<ManagementTemplateStepVersion> versions;
-    /**
-     * Instantiates a new managementTemplateStep and sets the default values.
+     * Instantiates a new ManagementTemplateStep and sets the default values.
      */
     public ManagementTemplateStep() {
         super();
@@ -68,7 +20,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStep
+     * @return a ManagementTemplateStep
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,27 +29,27 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the acceptedVersion property value. The acceptedVersion property
-     * @return a managementTemplateStepVersion
+     * @return a ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion getAcceptedVersion() {
-        return this.acceptedVersion;
+        return this.BackingStore.get("acceptedVersion");
     }
     /**
      * Gets the category property value. The category property
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.BackingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -105,23 +57,23 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -146,11 +98,11 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.BackingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -158,39 +110,39 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.BackingStore.get("lastActionDateTime");
     }
     /**
      * Gets the managementTemplate property value. The managementTemplate property
-     * @return a managementTemplate
+     * @return a ManagementTemplate
      */
     @jakarta.annotation.Nullable
     public ManagementTemplate getManagementTemplate() {
-        return this.managementTemplate;
+        return this.BackingStore.get("managementTemplate");
     }
     /**
      * Gets the portalLink property value. The portalLink property
-     * @return a actionUrl
+     * @return a ActionUrl
      */
     @jakarta.annotation.Nullable
     public ActionUrl getPortalLink() {
-        return this.portalLink;
+        return this.BackingStore.get("portalLink");
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.BackingStore.get("priority");
     }
     /**
      * Gets the versions property value. The versions property
-     * @return a managementTemplateStepVersion
+     * @return a java.util.List<ManagementTemplateStepVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepVersion> getVersions() {
-        return this.versions;
+        return this.BackingStore.get("versions");
     }
     /**
      * Serializes information the current object
@@ -217,83 +169,83 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the acceptedVersion property.
      */
     public void setAcceptedVersion(@jakarta.annotation.Nullable final ManagementTemplateStepVersion value) {
-        this.acceptedVersion = value;
+        this.BackingStore.set("acceptedVersion", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.BackingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.BackingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.BackingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the managementTemplate property value. The managementTemplate property
      * @param value Value to set for the managementTemplate property.
      */
     public void setManagementTemplate(@jakarta.annotation.Nullable final ManagementTemplate value) {
-        this.managementTemplate = value;
+        this.BackingStore.set("managementTemplate", value);
     }
     /**
      * Sets the portalLink property value. The portalLink property
      * @param value Value to set for the portalLink property.
      */
     public void setPortalLink(@jakarta.annotation.Nullable final ActionUrl value) {
-        this.portalLink = value;
+        this.BackingStore.set("portalLink", value);
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.BackingStore.set("priority", value);
     }
     /**
      * Sets the versions property value. The versions property
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
-        this.versions = value;
+        this.BackingStore.set("versions", value);
     }
 }

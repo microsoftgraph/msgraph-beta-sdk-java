@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /**
-     * The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
-     */
-    private TeamworkCameraConfiguration cameraConfiguration;
-    /**
-     * Identity of the user who created the device configuration document.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The UTC date and time when the device configuration document was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The display configuration.
-     */
-    private TeamworkDisplayConfiguration displayConfiguration;
-    /**
-     * The hardware configuration. Applicable only for Teams Rooms-enabled devices.
-     */
-    private TeamworkHardwareConfiguration hardwareConfiguration;
-    /**
-     * Identity of the user who last modified the device configuration.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The UTC date and time when the device configuration was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The microphone configuration. Applicable only for Teams Rooms-enabled devices.
-     */
-    private TeamworkMicrophoneConfiguration microphoneConfiguration;
-    /**
-     * Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
-     */
-    private TeamworkDeviceSoftwareVersions softwareVersions;
-    /**
-     * The speaker configuration. Applicable only for Teams Rooms-enabled devices.
-     */
-    private TeamworkSpeakerConfiguration speakerConfiguration;
-    /**
-     * The system configuration. Not applicable for Teams Rooms-enabled devices.
-     */
-    private TeamworkSystemConfiguration systemConfiguration;
-    /**
-     * The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
-     */
-    private TeamworkTeamsClientConfiguration teamsClientConfiguration;
-    /**
-     * Instantiates a new teamworkDeviceConfiguration and sets the default values.
+     * Instantiates a new TeamworkDeviceConfiguration and sets the default values.
      */
     public TeamworkDeviceConfiguration() {
         super();
@@ -66,7 +18,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceConfiguration
+     * @return a TeamworkDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,19 +27,19 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the cameraConfiguration property value. The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
-     * @return a teamworkCameraConfiguration
+     * @return a TeamworkCameraConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkCameraConfiguration getCameraConfiguration() {
-        return this.cameraConfiguration;
+        return this.BackingStore.get("cameraConfiguration");
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device configuration document.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The UTC date and time when the device configuration document was created.
@@ -95,15 +47,15 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayConfiguration property value. The display configuration.
-     * @return a teamworkDisplayConfiguration
+     * @return a TeamworkDisplayConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDisplayConfiguration getDisplayConfiguration() {
-        return this.displayConfiguration;
+        return this.BackingStore.get("displayConfiguration");
     }
     /**
      * The deserialization information for the current model
@@ -128,19 +80,19 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the hardwareConfiguration property value. The hardware configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkHardwareConfiguration
+     * @return a TeamworkHardwareConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkHardwareConfiguration getHardwareConfiguration() {
-        return this.hardwareConfiguration;
+        return this.BackingStore.get("hardwareConfiguration");
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device configuration.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The UTC date and time when the device configuration was last modified.
@@ -148,47 +100,47 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the microphoneConfiguration property value. The microphone configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkMicrophoneConfiguration
+     * @return a TeamworkMicrophoneConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkMicrophoneConfiguration getMicrophoneConfiguration() {
-        return this.microphoneConfiguration;
+        return this.BackingStore.get("microphoneConfiguration");
     }
     /**
      * Gets the softwareVersions property value. Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
-     * @return a teamworkDeviceSoftwareVersions
+     * @return a TeamworkDeviceSoftwareVersions
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceSoftwareVersions getSoftwareVersions() {
-        return this.softwareVersions;
+        return this.BackingStore.get("softwareVersions");
     }
     /**
      * Gets the speakerConfiguration property value. The speaker configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkSpeakerConfiguration
+     * @return a TeamworkSpeakerConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkSpeakerConfiguration getSpeakerConfiguration() {
-        return this.speakerConfiguration;
+        return this.BackingStore.get("speakerConfiguration");
     }
     /**
      * Gets the systemConfiguration property value. The system configuration. Not applicable for Teams Rooms-enabled devices.
-     * @return a teamworkSystemConfiguration
+     * @return a TeamworkSystemConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkSystemConfiguration getSystemConfiguration() {
-        return this.systemConfiguration;
+        return this.BackingStore.get("systemConfiguration");
     }
     /**
      * Gets the teamsClientConfiguration property value. The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkTeamsClientConfiguration
+     * @return a TeamworkTeamsClientConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkTeamsClientConfiguration getTeamsClientConfiguration() {
-        return this.teamsClientConfiguration;
+        return this.BackingStore.get("teamsClientConfiguration");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the cameraConfiguration property.
      */
     public void setCameraConfiguration(@jakarta.annotation.Nullable final TeamworkCameraConfiguration value) {
-        this.cameraConfiguration = value;
+        this.BackingStore.set("cameraConfiguration", value);
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the device configuration document.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The UTC date and time when the device configuration document was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayConfiguration property value. The display configuration.
      * @param value Value to set for the displayConfiguration property.
      */
     public void setDisplayConfiguration(@jakarta.annotation.Nullable final TeamworkDisplayConfiguration value) {
-        this.displayConfiguration = value;
+        this.BackingStore.set("displayConfiguration", value);
     }
     /**
      * Sets the hardwareConfiguration property value. The hardware configuration. Applicable only for Teams Rooms-enabled devices.
      * @param value Value to set for the hardwareConfiguration property.
      */
     public void setHardwareConfiguration(@jakarta.annotation.Nullable final TeamworkHardwareConfiguration value) {
-        this.hardwareConfiguration = value;
+        this.BackingStore.set("hardwareConfiguration", value);
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who last modified the device configuration.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The UTC date and time when the device configuration was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the microphoneConfiguration property value. The microphone configuration. Applicable only for Teams Rooms-enabled devices.
      * @param value Value to set for the microphoneConfiguration property.
      */
     public void setMicrophoneConfiguration(@jakarta.annotation.Nullable final TeamworkMicrophoneConfiguration value) {
-        this.microphoneConfiguration = value;
+        this.BackingStore.set("microphoneConfiguration", value);
     }
     /**
      * Sets the softwareVersions property value. Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
      * @param value Value to set for the softwareVersions property.
      */
     public void setSoftwareVersions(@jakarta.annotation.Nullable final TeamworkDeviceSoftwareVersions value) {
-        this.softwareVersions = value;
+        this.BackingStore.set("softwareVersions", value);
     }
     /**
      * Sets the speakerConfiguration property value. The speaker configuration. Applicable only for Teams Rooms-enabled devices.
      * @param value Value to set for the speakerConfiguration property.
      */
     public void setSpeakerConfiguration(@jakarta.annotation.Nullable final TeamworkSpeakerConfiguration value) {
-        this.speakerConfiguration = value;
+        this.BackingStore.set("speakerConfiguration", value);
     }
     /**
      * Sets the systemConfiguration property value. The system configuration. Not applicable for Teams Rooms-enabled devices.
      * @param value Value to set for the systemConfiguration property.
      */
     public void setSystemConfiguration(@jakarta.annotation.Nullable final TeamworkSystemConfiguration value) {
-        this.systemConfiguration = value;
+        this.BackingStore.set("systemConfiguration", value);
     }
     /**
      * Sets the teamsClientConfiguration property value. The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
      * @param value Value to set for the teamsClientConfiguration property.
      */
     public void setTeamsClientConfiguration(@jakarta.annotation.Nullable final TeamworkTeamsClientConfiguration value) {
-        this.teamsClientConfiguration = value;
+        this.BackingStore.set("teamsClientConfiguration", value);
     }
 }

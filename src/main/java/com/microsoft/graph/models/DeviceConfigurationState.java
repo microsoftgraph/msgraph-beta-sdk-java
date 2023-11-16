@@ -12,39 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationState extends Entity implements Parsable {
     /**
-     * The name of the policy for this policyBase
-     */
-    private String displayName;
-    /**
-     * Supported platform types for policies.
-     */
-    private PolicyPlatformType platformType;
-    /**
-     * Count of how many setting a policy holds
-     */
-    private Integer settingCount;
-    /**
-     * The settingStates property
-     */
-    private java.util.List<DeviceConfigurationSettingState> settingStates;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * User unique identifier, must be Guid
-     */
-    private String userId;
-    /**
-     * User Principal Name
-     */
-    private String userPrincipalName;
-    /**
-     * The version of the policy
-     */
-    private Integer version;
-    /**
-     * Instantiates a new deviceConfigurationState and sets the default values.
+     * Instantiates a new DeviceConfigurationState and sets the default values.
      */
     public DeviceConfigurationState() {
         super();
@@ -52,7 +20,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationState
+     * @return a DeviceConfigurationState
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,11 +29,11 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the policy for this policyBase
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -86,59 +54,59 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
-        return this.platformType;
+        return this.BackingStore.get("platformType");
     }
     /**
      * Gets the settingCount property value. Count of how many setting a policy holds
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
-        return this.settingCount;
+        return this.BackingStore.get("settingCount");
     }
     /**
      * Gets the settingStates property value. The settingStates property
-     * @return a deviceConfigurationSettingState
+     * @return a java.util.List<DeviceConfigurationSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationSettingState> getSettingStates() {
-        return this.settingStates;
+        return this.BackingStore.get("settingStates");
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the userId property value. User unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Gets the version property value. The version of the policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -161,55 +129,55 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      */
     public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
-        this.platformType = value;
+        this.BackingStore.set("platformType", value);
     }
     /**
      * Sets the settingCount property value. Count of how many setting a policy holds
      * @param value Value to set for the settingCount property.
      */
     public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.settingCount = value;
+        this.BackingStore.set("settingCount", value);
     }
     /**
      * Sets the settingStates property value. The settingStates property
      * @param value Value to set for the settingStates property.
      */
     public void setSettingStates(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationSettingState> value) {
-        this.settingStates = value;
+        this.BackingStore.set("settingStates", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the userId property value. User unique identifier, must be Guid
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
     /**
      * Sets the version property value. The version of the policy
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

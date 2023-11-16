@@ -11,31 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Profile extends Entity implements Parsable {
     /**
-     * Description.
-     */
-    private String description;
-    /**
-     * Profile last modified time.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Profile name.
-     */
-    private String name;
-    /**
-     * Traffic forwarding policies associated with this profile.
-     */
-    private java.util.List<PolicyLink> policies;
-    /**
-     * The state property
-     */
-    private Status state;
-    /**
-     * Profile version.
-     */
-    private String version;
-    /**
-     * Instantiates a new profile and sets the default values.
+     * Instantiates a new Profile and sets the default values.
      */
     public Profile() {
         super();
@@ -43,7 +19,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a profile
+     * @return a Profile
      */
     @jakarta.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +35,11 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -86,39 +62,39 @@ public class Profile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. Profile name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the policies property value. Traffic forwarding policies associated with this profile.
-     * @return a policyLink
+     * @return a java.util.List<PolicyLink>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicyLink> getPolicies() {
-        return this.policies;
+        return this.BackingStore.get("policies");
     }
     /**
      * Gets the state property value. The state property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the version property value. Profile version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -139,41 +115,41 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Profile last modified time.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. Profile name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the policies property value. Traffic forwarding policies associated with this profile.
      * @param value Value to set for the policies property.
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<PolicyLink> value) {
-        this.policies = value;
+        this.BackingStore.set("policies", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final Status value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the version property value. Profile version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

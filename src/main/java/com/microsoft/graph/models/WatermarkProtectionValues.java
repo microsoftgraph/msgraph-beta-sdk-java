@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable {
+public class WatermarkProtectionValues implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Indicates whether to apply a watermark to any shared content.
-     */
-    private Boolean isEnabledForContentSharing;
-    /**
-     * Indicates whether to apply a watermark to everyone's video feed.
-     */
-    private Boolean isEnabledForVideo;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new watermarkProtectionValues and sets the default values.
+     * Instantiates a new WatermarkProtectionValues and sets the default values.
      */
     public WatermarkProtectionValues() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a watermarkProtectionValues
+     * @return a WatermarkProtectionValues
      */
     @jakarta.annotation.Nonnull
     public static WatermarkProtectionValues createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +34,25 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
         return new WatermarkProtectionValues();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +68,27 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the isEnabledForContentSharing property value. Indicates whether to apply a watermark to any shared content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForContentSharing() {
-        return this.isEnabledForContentSharing;
+        return this.BackingStore.get("isEnabledForContentSharing");
     }
     /**
      * Gets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone's video feed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForVideo() {
-        return this.isEnabledForVideo;
+        return this.BackingStore.get("isEnabledForVideo");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +102,39 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the isEnabledForContentSharing property value. Indicates whether to apply a watermark to any shared content.
      * @param value Value to set for the isEnabledForContentSharing property.
      */
     public void setIsEnabledForContentSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabledForContentSharing = value;
+        this.BackingStore.set("isEnabledForContentSharing", value);
     }
     /**
      * Sets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone's video feed.
      * @param value Value to set for the isEnabledForVideo property.
      */
     public void setIsEnabledForVideo(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabledForVideo = value;
+        this.BackingStore.set("isEnabledForVideo", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

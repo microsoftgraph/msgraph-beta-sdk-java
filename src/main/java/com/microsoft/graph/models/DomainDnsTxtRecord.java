@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /**
-     * Value used when configuring the text property at the DNS host.
-     */
-    private String text;
-    /**
-     * Instantiates a new domainDnsTxtRecord and sets the default values.
+     * Instantiates a new DomainDnsTxtRecord and sets the default values.
      */
     public DomainDnsTxtRecord() {
         super();
@@ -21,7 +17,7 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsTxtRecord
+     * @return a DomainDnsTxtRecord
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsTxtRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the text property value. Value used when configuring the text property at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
 }

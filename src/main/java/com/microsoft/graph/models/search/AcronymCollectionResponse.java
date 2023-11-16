@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AcronymCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Acronym> value;
-    /**
-     * Instantiates a new acronymCollectionResponse and sets the default values.
+     * Instantiates a new AcronymCollectionResponse and sets the default values.
      */
     public AcronymCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class AcronymCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acronymCollectionResponse
+     * @return a AcronymCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AcronymCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class AcronymCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a acronym
+     * @return a java.util.List<Acronym>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acronym> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AcronymCollectionResponse extends BaseCollectionPaginationCountResp
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Acronym> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

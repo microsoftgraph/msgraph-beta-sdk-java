@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcSubscription extends Entity implements Parsable {
     /**
-     * The ID of the subscription.
-     */
-    private String subscriptionId;
-    /**
-     * The name of the subscription.
-     */
-    private String subscriptionName;
-    /**
-     * Instantiates a new cloudPcSubscription and sets the default values.
+     * Instantiates a new CloudPcSubscription and sets the default values.
      */
     public CloudPcSubscription() {
         super();
@@ -25,7 +17,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcSubscription
+     * @return a CloudPcSubscription
      */
     @jakarta.annotation.Nonnull
     public static CloudPcSubscription createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class CloudPcSubscription extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionId property value. The ID of the subscription.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
-        return this.subscriptionId;
+        return this.BackingStore.get("subscriptionId");
     }
     /**
      * Gets the subscriptionName property value. The name of the subscription.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionName() {
-        return this.subscriptionName;
+        return this.BackingStore.get("subscriptionName");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.subscriptionId = value;
+        this.BackingStore.set("subscriptionId", value);
     }
     /**
      * Sets the subscriptionName property value. The name of the subscription.
      * @param value Value to set for the subscriptionName property.
      */
     public void setSubscriptionName(@jakarta.annotation.Nullable final String value) {
-        this.subscriptionName = value;
+        this.BackingStore.set("subscriptionName", value);
     }
 }

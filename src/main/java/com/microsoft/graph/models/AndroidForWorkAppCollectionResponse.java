@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AndroidForWorkApp> value;
-    /**
-     * Instantiates a new androidForWorkAppCollectionResponse and sets the default values.
+     * Instantiates a new AndroidForWorkAppCollectionResponse and sets the default values.
      */
     public AndroidForWorkAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AndroidForWorkAppCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkAppCollectionResponse
+     * @return a AndroidForWorkAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AndroidForWorkAppCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a androidForWorkApp
+     * @return a java.util.List<AndroidForWorkApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AndroidForWorkAppCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AndroidForWorkApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

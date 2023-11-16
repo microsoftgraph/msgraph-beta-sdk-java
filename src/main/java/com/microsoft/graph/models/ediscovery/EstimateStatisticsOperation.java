@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EstimateStatisticsOperation extends CaseOperation implements Parsable {
     /**
-     * The estimated count of items for the sourceCollection that matched the content query.
-     */
-    private Long indexedItemCount;
-    /**
-     * The estimated size of items for the sourceCollection that matched the content query.
-     */
-    private Long indexedItemsSize;
-    /**
-     * The number of mailboxes that had search hits.
-     */
-    private Integer mailboxCount;
-    /**
-     * The number of mailboxes that had search hits.
-     */
-    private Integer siteCount;
-    /**
-     * eDiscovery collection, commonly known as a search.
-     */
-    private SourceCollection sourceCollection;
-    /**
-     * The estimated count of unindexed items for the collection.
-     */
-    private Long unindexedItemCount;
-    /**
-     * The estimated size of unindexed items for the collection.
-     */
-    private Long unindexedItemsSize;
-    /**
-     * Instantiates a new estimateStatisticsOperation and sets the default values.
+     * Instantiates a new EstimateStatisticsOperation and sets the default values.
      */
     public EstimateStatisticsOperation() {
         super();
@@ -45,7 +17,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a estimateStatisticsOperation
+     * @return a EstimateStatisticsOperation
      */
     @jakarta.annotation.Nonnull
     public static EstimateStatisticsOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,59 +42,59 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the indexedItemCount property value. The estimated count of items for the sourceCollection that matched the content query.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getIndexedItemCount() {
-        return this.indexedItemCount;
+        return this.BackingStore.get("indexedItemCount");
     }
     /**
      * Gets the indexedItemsSize property value. The estimated size of items for the sourceCollection that matched the content query.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getIndexedItemsSize() {
-        return this.indexedItemsSize;
+        return this.BackingStore.get("indexedItemsSize");
     }
     /**
      * Gets the mailboxCount property value. The number of mailboxes that had search hits.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMailboxCount() {
-        return this.mailboxCount;
+        return this.BackingStore.get("mailboxCount");
     }
     /**
      * Gets the siteCount property value. The number of mailboxes that had search hits.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSiteCount() {
-        return this.siteCount;
+        return this.BackingStore.get("siteCount");
     }
     /**
      * Gets the sourceCollection property value. eDiscovery collection, commonly known as a search.
-     * @return a sourceCollection
+     * @return a SourceCollection
      */
     @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {
-        return this.sourceCollection;
+        return this.BackingStore.get("sourceCollection");
     }
     /**
      * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUnindexedItemCount() {
-        return this.unindexedItemCount;
+        return this.BackingStore.get("unindexedItemCount");
     }
     /**
      * Gets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUnindexedItemsSize() {
-        return this.unindexedItemsSize;
+        return this.BackingStore.get("unindexedItemsSize");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the indexedItemCount property.
      */
     public void setIndexedItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.indexedItemCount = value;
+        this.BackingStore.set("indexedItemCount", value);
     }
     /**
      * Sets the indexedItemsSize property value. The estimated size of items for the sourceCollection that matched the content query.
      * @param value Value to set for the indexedItemsSize property.
      */
     public void setIndexedItemsSize(@jakarta.annotation.Nullable final Long value) {
-        this.indexedItemsSize = value;
+        this.BackingStore.set("indexedItemsSize", value);
     }
     /**
      * Sets the mailboxCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the mailboxCount property.
      */
     public void setMailboxCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mailboxCount = value;
+        this.BackingStore.set("mailboxCount", value);
     }
     /**
      * Sets the siteCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the siteCount property.
      */
     public void setSiteCount(@jakarta.annotation.Nullable final Integer value) {
-        this.siteCount = value;
+        this.BackingStore.set("siteCount", value);
     }
     /**
      * Sets the sourceCollection property value. eDiscovery collection, commonly known as a search.
      * @param value Value to set for the sourceCollection property.
      */
     public void setSourceCollection(@jakarta.annotation.Nullable final SourceCollection value) {
-        this.sourceCollection = value;
+        this.BackingStore.set("sourceCollection", value);
     }
     /**
      * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @param value Value to set for the unindexedItemCount property.
      */
     public void setUnindexedItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.unindexedItemCount = value;
+        this.BackingStore.set("unindexedItemCount", value);
     }
     /**
      * Sets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
      * @param value Value to set for the unindexedItemsSize property.
      */
     public void setUnindexedItemsSize(@jakarta.annotation.Nullable final Long value) {
-        this.unindexedItemsSize = value;
+        this.BackingStore.set("unindexedItemsSize", value);
     }
 }

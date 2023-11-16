@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * The simpleSettingValue property
-     */
-    private DeviceManagementConfigurationSimpleSettingValue simpleSettingValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationSimpleSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSimpleSettingInstance and sets the default values.
      */
     public DeviceManagementConfigurationSimpleSettingInstance() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSimpleSettingInstance
+     * @return a DeviceManagementConfigurationSimpleSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSimpleSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
     }
     /**
      * Gets the simpleSettingValue property value. The simpleSettingValue property
-     * @return a deviceManagementConfigurationSimpleSettingValue
+     * @return a DeviceManagementConfigurationSimpleSettingValue
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingValue getSimpleSettingValue() {
-        return this.simpleSettingValue;
+        return this.BackingStore.get("simpleSettingValue");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param value Value to set for the simpleSettingValue property.
      */
     public void setSimpleSettingValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationSimpleSettingValue value) {
-        this.simpleSettingValue = value;
+        this.BackingStore.set("simpleSettingValue", value);
     }
 }

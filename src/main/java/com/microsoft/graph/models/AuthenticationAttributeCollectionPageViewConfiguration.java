@@ -4,41 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationAttributeCollectionPageViewConfiguration implements AdditionalDataHolder, Parsable {
+public class AuthenticationAttributeCollectionPageViewConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The description of the page.
-     */
-    private String description;
-    /**
-     * The display configuration of attributes being collected on the attribute collection page.
-     */
-    private java.util.List<AuthenticationAttributeCollectionInputConfiguration> inputs;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The title of the attribute collection page.
-     */
-    private String title;
-    /**
-     * Instantiates a new authenticationAttributeCollectionPageViewConfiguration and sets the default values.
+     * Instantiates a new AuthenticationAttributeCollectionPageViewConfiguration and sets the default values.
      */
     public AuthenticationAttributeCollectionPageViewConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationAttributeCollectionPageViewConfiguration
+     * @return a AuthenticationAttributeCollectionPageViewConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAttributeCollectionPageViewConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +34,33 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
         return new AuthenticationAttributeCollectionPageViewConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the description property value. The description of the page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +77,27 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
-     * @return a authenticationAttributeCollectionInputConfiguration
+     * @return a java.util.List<AuthenticationAttributeCollectionInputConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionInputConfiguration> getInputs() {
-        return this.inputs;
+        return this.BackingStore.get("inputs");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the title property value. The title of the attribute collection page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -111,38 +112,46 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the description property value. The description of the page.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
      * @param value Value to set for the inputs property.
      */
     public void setInputs(@jakarta.annotation.Nullable final java.util.List<AuthenticationAttributeCollectionInputConfiguration> value) {
-        this.inputs = value;
+        this.BackingStore.set("inputs", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the title property value. The title of the attribute collection page.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
 }

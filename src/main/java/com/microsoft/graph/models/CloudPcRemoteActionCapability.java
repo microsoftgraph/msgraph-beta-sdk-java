@@ -4,37 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Parsable {
+public class CloudPcRemoteActionCapability implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
+     * Stores model information.
      */
-    private ActionCapability actionCapability;
+    private BackingStore BackingStore;
     /**
-     * The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
-     */
-    private CloudPcRemoteActionName actionName;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new cloudPcRemoteActionCapability and sets the default values.
+     * Instantiates a new CloudPcRemoteActionCapability and sets the default values.
      */
     public CloudPcRemoteActionCapability() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcRemoteActionCapability
+     * @return a CloudPcRemoteActionCapability
      */
     @jakarta.annotation.Nonnull
     public static CloudPcRemoteActionCapability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,27 +35,40 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
-     * @return a actionCapability
+     * @return a ActionCapability
      */
     @jakarta.annotation.Nullable
     public ActionCapability getActionCapability() {
-        return this.actionCapability;
+        return this.BackingStore.get("actionCapability");
     }
     /**
      * Gets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
-     * @return a cloudPcRemoteActionName
+     * @return a CloudPcRemoteActionName
      */
     @jakarta.annotation.Nullable
     public CloudPcRemoteActionName getActionName() {
-        return this.actionName;
+        return this.BackingStore.get("actionName");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +84,11 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Pars
      * @param value Value to set for the actionCapability property.
      */
     public void setActionCapability(@jakarta.annotation.Nullable final ActionCapability value) {
-        this.actionCapability = value;
+        this.BackingStore.set("actionCapability", value);
     }
     /**
      * Sets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final CloudPcRemoteActionName value) {
-        this.actionName = value;
+        this.BackingStore.set("actionName", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

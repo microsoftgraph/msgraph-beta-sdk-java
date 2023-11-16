@@ -4,49 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHolder, Parsable {
+public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Boolean answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is boolean.
-     */
-    private Boolean booleanValue;
-    /**
-     * Display name of the registration question.
-     */
-    private String displayName;
-    /**
-     * Collection of text answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is multiChoice.
-     */
-    private java.util.List<String> multiChoiceValues;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * id of the virtualEventRegistrationQuestion.
-     */
-    private String questionId;
-    /**
-     * Text answer of the virtualEventRegistrationQuestion. Appears when answerInputType is text, multilineText or singleChoice.
-     */
-    private String value;
-    /**
-     * Instantiates a new virtualEventRegistrationQuestionAnswer and sets the default values.
+     * Instantiates a new VirtualEventRegistrationQuestionAnswer and sets the default values.
      */
     public VirtualEventRegistrationQuestionAnswer() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventRegistrationQuestionAnswer
+     * @return a VirtualEventRegistrationQuestionAnswer
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationQuestionAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +34,41 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         return new VirtualEventRegistrationQuestionAnswer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the booleanValue property value. Boolean answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is boolean.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBooleanValue() {
-        return this.booleanValue;
+        return this.BackingStore.get("booleanValue");
     }
     /**
      * Gets the displayName property value. Display name of the registration question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +87,35 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
     }
     /**
      * Gets the multiChoiceValues property value. Collection of text answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is multiChoice.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMultiChoiceValues() {
-        return this.multiChoiceValues;
+        return this.BackingStore.get("multiChoiceValues");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the questionId property value. id of the virtualEventRegistrationQuestion.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
-        return this.questionId;
+        return this.BackingStore.get("questionId");
     }
     /**
      * Gets the value property value. Text answer of the virtualEventRegistrationQuestion. Appears when answerInputType is text, multilineText or singleChoice.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -139,52 +132,60 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the booleanValue property value. Boolean answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is boolean.
      * @param value Value to set for the booleanValue property.
      */
     public void setBooleanValue(@jakarta.annotation.Nullable final Boolean value) {
-        this.booleanValue = value;
+        this.BackingStore.set("booleanValue", value);
     }
     /**
      * Sets the displayName property value. Display name of the registration question.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the multiChoiceValues property value. Collection of text answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is multiChoice.
      * @param value Value to set for the multiChoiceValues property.
      */
     public void setMultiChoiceValues(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.multiChoiceValues = value;
+        this.BackingStore.set("multiChoiceValues", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the questionId property value. id of the virtualEventRegistrationQuestion.
      * @param value Value to set for the questionId property.
      */
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {
-        this.questionId = value;
+        this.BackingStore.set("questionId", value);
     }
     /**
      * Sets the value property value. Text answer of the virtualEventRegistrationQuestion. Appears when answerInputType is text, multilineText or singleChoice.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

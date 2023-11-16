@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity implements Parsable {
     /**
-     * The unique identifier of the device, Intune DeviceID or SCCM device id.
-     */
-    private String deviceId;
-    /**
-     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
-     */
-    private Integer estimatedRuntimeInMinutes;
-    /**
-     * The datetime for the instance of runtime history.
-     */
-    private String runtimeDateTime;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
         super();
@@ -32,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID or SCCM device id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
-        return this.estimatedRuntimeInMinutes;
+        return this.BackingStore.get("estimatedRuntimeInMinutes");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the runtimeDateTime property value. The datetime for the instance of runtime history.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuntimeDateTime() {
-        return this.runtimeDateTime;
+        return this.BackingStore.get("runtimeDateTime");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
      * @param value Value to set for the estimatedRuntimeInMinutes property.
      */
     public void setEstimatedRuntimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.estimatedRuntimeInMinutes = value;
+        this.BackingStore.set("estimatedRuntimeInMinutes", value);
     }
     /**
      * Sets the runtimeDateTime property value. The datetime for the instance of runtime history.
      * @param value Value to set for the runtimeDateTime property.
      */
     public void setRuntimeDateTime(@jakarta.annotation.Nullable final String value) {
-        this.runtimeDateTime = value;
+        this.BackingStore.set("runtimeDateTime", value);
     }
 }

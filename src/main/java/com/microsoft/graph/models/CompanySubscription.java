@@ -10,59 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CompanySubscription extends Entity implements Parsable {
     /**
-     * The ID of this subscription in the commerce system. Alternate key.
-     */
-    private String commerceSubscriptionId;
-    /**
-     * The date and time when this subscription was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Whether the subscription is a free trial or purchased.
-     */
-    private Boolean isTrial;
-    /**
-     * The date and time when the subscription will move to the next state (as defined by the status property) if not renewed by the tenant. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime nextLifecycleDateTime;
-    /**
-     * The ocpSubscriptionId property
-     */
-    private String ocpSubscriptionId;
-    /**
-     * The object ID of the account admin.
-     */
-    private String ownerId;
-    /**
-     * The unique identifier for the Microsoft partner tenant that created the subscription on a customer tenant.
-     */
-    private String ownerTenantId;
-    /**
-     * Indicates the entity that ownerId belongs to, for example, 'User'.
-     */
-    private String ownerType;
-    /**
-     * The provisioning status of each service that's included in this subscription.
-     */
-    private java.util.List<ServicePlanInfo> serviceStatus;
-    /**
-     * The object ID of the SKU associated with this subscription.
-     */
-    private String skuId;
-    /**
-     * The SKU associated with this subscription.
-     */
-    private String skuPartNumber;
-    /**
-     * The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
-     */
-    private String status;
-    /**
-     * The number of seats included in this subscription.
-     */
-    private Integer totalLicenses;
-    /**
-     * Instantiates a new companySubscription and sets the default values.
+     * Instantiates a new CompanySubscription and sets the default values.
      */
     public CompanySubscription() {
         super();
@@ -70,7 +18,7 @@ public class CompanySubscription extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a companySubscription
+     * @return a CompanySubscription
      */
     @jakarta.annotation.Nonnull
     public static CompanySubscription createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,11 +27,11 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the commerceSubscriptionId property value. The ID of this subscription in the commerce system. Alternate key.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommerceSubscriptionId() {
-        return this.commerceSubscriptionId;
+        return this.BackingStore.get("commerceSubscriptionId");
     }
     /**
      * Gets the createdDateTime property value. The date and time when this subscription was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -91,7 +39,7 @@ public class CompanySubscription extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -117,11 +65,11 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the isTrial property value. Whether the subscription is a free trial or purchased.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrial() {
-        return this.isTrial;
+        return this.BackingStore.get("isTrial");
     }
     /**
      * Gets the nextLifecycleDateTime property value. The date and time when the subscription will move to the next state (as defined by the status property) if not renewed by the tenant. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -129,79 +77,79 @@ public class CompanySubscription extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextLifecycleDateTime() {
-        return this.nextLifecycleDateTime;
+        return this.BackingStore.get("nextLifecycleDateTime");
     }
     /**
      * Gets the ocpSubscriptionId property value. The ocpSubscriptionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOcpSubscriptionId() {
-        return this.ocpSubscriptionId;
+        return this.BackingStore.get("ocpSubscriptionId");
     }
     /**
      * Gets the ownerId property value. The object ID of the account admin.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerId() {
-        return this.ownerId;
+        return this.BackingStore.get("ownerId");
     }
     /**
      * Gets the ownerTenantId property value. The unique identifier for the Microsoft partner tenant that created the subscription on a customer tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerTenantId() {
-        return this.ownerTenantId;
+        return this.BackingStore.get("ownerTenantId");
     }
     /**
      * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerType() {
-        return this.ownerType;
+        return this.BackingStore.get("ownerType");
     }
     /**
      * Gets the serviceStatus property value. The provisioning status of each service that's included in this subscription.
-     * @return a servicePlanInfo
+     * @return a java.util.List<ServicePlanInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServiceStatus() {
-        return this.serviceStatus;
+        return this.BackingStore.get("serviceStatus");
     }
     /**
      * Gets the skuId property value. The object ID of the SKU associated with this subscription.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSkuId() {
-        return this.skuId;
+        return this.BackingStore.get("skuId");
     }
     /**
      * Gets the skuPartNumber property value. The SKU associated with this subscription.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSkuPartNumber() {
-        return this.skuPartNumber;
+        return this.BackingStore.get("skuPartNumber");
     }
     /**
-     * Gets the status property value. The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
-     * @return a string
+     * Gets the status property value. The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the totalLicenses property value. The number of seats included in this subscription.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenses() {
-        return this.totalLicenses;
+        return this.BackingStore.get("totalLicenses");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class CompanySubscription extends Entity implements Parsable {
      * @param value Value to set for the commerceSubscriptionId property.
      */
     public void setCommerceSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.commerceSubscriptionId = value;
+        this.BackingStore.set("commerceSubscriptionId", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when this subscription was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isTrial property value. Whether the subscription is a free trial or purchased.
      * @param value Value to set for the isTrial property.
      */
     public void setIsTrial(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTrial = value;
+        this.BackingStore.set("isTrial", value);
     }
     /**
      * Sets the nextLifecycleDateTime property value. The date and time when the subscription will move to the next state (as defined by the status property) if not renewed by the tenant. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the nextLifecycleDateTime property.
      */
     public void setNextLifecycleDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.nextLifecycleDateTime = value;
+        this.BackingStore.set("nextLifecycleDateTime", value);
     }
     /**
      * Sets the ocpSubscriptionId property value. The ocpSubscriptionId property
      * @param value Value to set for the ocpSubscriptionId property.
      */
     public void setOcpSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.ocpSubscriptionId = value;
+        this.BackingStore.set("ocpSubscriptionId", value);
     }
     /**
      * Sets the ownerId property value. The object ID of the account admin.
      * @param value Value to set for the ownerId property.
      */
     public void setOwnerId(@jakarta.annotation.Nullable final String value) {
-        this.ownerId = value;
+        this.BackingStore.set("ownerId", value);
     }
     /**
      * Sets the ownerTenantId property value. The unique identifier for the Microsoft partner tenant that created the subscription on a customer tenant.
      * @param value Value to set for the ownerTenantId property.
      */
     public void setOwnerTenantId(@jakarta.annotation.Nullable final String value) {
-        this.ownerTenantId = value;
+        this.BackingStore.set("ownerTenantId", value);
     }
     /**
      * Sets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
      * @param value Value to set for the ownerType property.
      */
     public void setOwnerType(@jakarta.annotation.Nullable final String value) {
-        this.ownerType = value;
+        this.BackingStore.set("ownerType", value);
     }
     /**
      * Sets the serviceStatus property value. The provisioning status of each service that's included in this subscription.
      * @param value Value to set for the serviceStatus property.
      */
     public void setServiceStatus(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
-        this.serviceStatus = value;
+        this.BackingStore.set("serviceStatus", value);
     }
     /**
      * Sets the skuId property value. The object ID of the SKU associated with this subscription.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final String value) {
-        this.skuId = value;
+        this.BackingStore.set("skuId", value);
     }
     /**
      * Sets the skuPartNumber property value. The SKU associated with this subscription.
      * @param value Value to set for the skuPartNumber property.
      */
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {
-        this.skuPartNumber = value;
+        this.BackingStore.set("skuPartNumber", value);
     }
     /**
-     * Sets the status property value. The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
+     * Sets the status property value. The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the totalLicenses property value. The number of seats included in this subscription.
      * @param value Value to set for the totalLicenses property.
      */
     public void setTotalLicenses(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicenses = value;
+        this.BackingStore.set("totalLicenses", value);
     }
 }

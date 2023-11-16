@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DurationDrivenRolloutSettings extends GradualRolloutSettings implements Parsable {
     /**
-     * The target duration of the rollout. Given durationBetweenOffers and durationUntilDeploymentEnd, the system will automatically calculate how many devices are in each offering.
-     */
-    private PeriodAndDuration durationUntilDeploymentEnd;
-    /**
-     * Instantiates a new durationDrivenRolloutSettings and sets the default values.
+     * Instantiates a new DurationDrivenRolloutSettings and sets the default values.
      */
     public DurationDrivenRolloutSettings() {
         super();
@@ -23,7 +19,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a durationDrivenRolloutSettings
+     * @return a DurationDrivenRolloutSettings
      */
     @jakarta.annotation.Nonnull
     public static DurationDrivenRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +32,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationUntilDeploymentEnd() {
-        return this.durationUntilDeploymentEnd;
+        return this.BackingStore.get("durationUntilDeploymentEnd");
     }
     /**
      * The deserialization information for the current model
@@ -62,6 +58,6 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
      * @param value Value to set for the durationUntilDeploymentEnd property.
      */
     public void setDurationUntilDeploymentEnd(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationUntilDeploymentEnd = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("durationUntilDeploymentEnd", value);
     }
 }

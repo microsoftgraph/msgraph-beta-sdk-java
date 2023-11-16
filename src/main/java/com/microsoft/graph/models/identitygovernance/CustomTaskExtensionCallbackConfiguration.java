@@ -11,11 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackConfiguration implements Parsable {
     /**
-     * The authorizedApps property
-     */
-    private java.util.List<Application> authorizedApps;
-    /**
-     * Instantiates a new customTaskExtensionCallbackConfiguration and sets the default values.
+     * Instantiates a new CustomTaskExtensionCallbackConfiguration and sets the default values.
      */
     public CustomTaskExtensionCallbackConfiguration() {
         super();
@@ -24,7 +20,7 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTaskExtensionCallbackConfiguration
+     * @return a CustomTaskExtensionCallbackConfiguration
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtensionCallbackConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,11 +29,11 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
     }
     /**
      * Gets the authorizedApps property value. The authorizedApps property
-     * @return a application
+     * @return a java.util.List<Application>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Application> getAuthorizedApps() {
-        return this.authorizedApps;
+        return this.BackingStore.get("authorizedApps");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
      * @param value Value to set for the authorizedApps property.
      */
     public void setAuthorizedApps(@jakarta.annotation.Nullable final java.util.List<Application> value) {
-        this.authorizedApps = value;
+        this.BackingStore.set("authorizedApps", value);
     }
 }

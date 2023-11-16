@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationGroupSettingValue extends DeviceManagementConfigurationSettingValue implements Parsable {
     /**
-     * Collection of child setting instances contained within this GroupSetting
-     */
-    private java.util.List<DeviceManagementConfigurationSettingInstance> children;
-    /**
-     * Instantiates a new deviceManagementConfigurationGroupSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationGroupSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingValue() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationGroupSettingValue
+     * @return a DeviceManagementConfigurationGroupSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     }
     /**
      * Gets the children property value. Collection of child setting instances contained within this GroupSetting
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a java.util.List<DeviceManagementConfigurationSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstance> getChildren() {
-        return this.children;
+        return this.BackingStore.get("children");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstance> value) {
-        this.children = value;
+        this.BackingStore.set("children", value);
     }
 }

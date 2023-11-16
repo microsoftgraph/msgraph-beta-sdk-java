@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchEntity extends Entity implements Parsable {
     /**
-     * Administrative answer in Microsoft Search results to define common acronyms in a organization.
-     */
-    private java.util.List<Acronym> acronyms;
-    /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
-     */
-    private java.util.List<Bookmark> bookmarks;
-    /**
-     * Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
-     */
-    private java.util.List<Qna> qnas;
-    /**
-     * Instantiates a new searchEntity and sets the default values.
+     * Instantiates a new SearchEntity and sets the default values.
      */
     public SearchEntity() {
         super();
@@ -32,7 +20,7 @@ public class SearchEntity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchEntity
+     * @return a SearchEntity
      */
     @jakarta.annotation.Nonnull
     public static SearchEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class SearchEntity extends Entity implements Parsable {
     }
     /**
      * Gets the acronyms property value. Administrative answer in Microsoft Search results to define common acronyms in a organization.
-     * @return a acronym
+     * @return a java.util.List<Acronym>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acronym> getAcronyms() {
-        return this.acronyms;
+        return this.BackingStore.get("acronyms");
     }
     /**
      * Gets the bookmarks property value. Administrative answer in Microsoft Search results for common search queries in an organization.
-     * @return a bookmark
+     * @return a java.util.List<Bookmark>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Bookmark> getBookmarks() {
-        return this.bookmarks;
+        return this.BackingStore.get("bookmarks");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class SearchEntity extends Entity implements Parsable {
     }
     /**
      * Gets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
-     * @return a qna
+     * @return a java.util.List<Qna>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Qna> getQnas() {
-        return this.qnas;
+        return this.BackingStore.get("qnas");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class SearchEntity extends Entity implements Parsable {
      * @param value Value to set for the acronyms property.
      */
     public void setAcronyms(@jakarta.annotation.Nullable final java.util.List<Acronym> value) {
-        this.acronyms = value;
+        this.BackingStore.set("acronyms", value);
     }
     /**
      * Sets the bookmarks property value. Administrative answer in Microsoft Search results for common search queries in an organization.
      * @param value Value to set for the bookmarks property.
      */
     public void setBookmarks(@jakarta.annotation.Nullable final java.util.List<Bookmark> value) {
-        this.bookmarks = value;
+        this.BackingStore.set("bookmarks", value);
     }
     /**
      * Sets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
      * @param value Value to set for the qnas property.
      */
     public void setQnas(@jakarta.annotation.Nullable final java.util.List<Qna> value) {
-        this.qnas = value;
+        this.BackingStore.set("qnas", value);
     }
 }

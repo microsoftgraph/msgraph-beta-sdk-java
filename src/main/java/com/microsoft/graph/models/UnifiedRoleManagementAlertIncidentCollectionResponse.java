@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertIncidentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UnifiedRoleManagementAlertIncident> value;
-    /**
-     * Instantiates a new unifiedRoleManagementAlertIncidentCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlertIncidentCollectionResponse and sets the default values.
      */
     public UnifiedRoleManagementAlertIncidentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UnifiedRoleManagementAlertIncidentCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlertIncidentCollectionResponse
+     * @return a UnifiedRoleManagementAlertIncidentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertIncidentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UnifiedRoleManagementAlertIncidentCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleManagementAlertIncident
+     * @return a java.util.List<UnifiedRoleManagementAlertIncident>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertIncident> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UnifiedRoleManagementAlertIncidentCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertIncident> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PersonAnnualEvent extends ItemFacet implements Parsable {
     /**
-     * The date property
-     */
-    private LocalDate date;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The type property
-     */
-    private PersonAnnualEventType type;
-    /**
-     * Instantiates a new personAnnualEvent and sets the default values.
+     * Instantiates a new PersonAnnualEvent and sets the default values.
      */
     public PersonAnnualEvent() {
         super();
@@ -31,7 +19,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personAnnualEvent
+     * @return a PersonAnnualEvent
      */
     @jakarta.annotation.Nonnull
     public static PersonAnnualEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,15 +32,15 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getDate() {
-        return this.date;
+        return this.BackingStore.get("date");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -68,11 +56,11 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a personAnnualEventType
+     * @return a PersonAnnualEventType
      */
     @jakarta.annotation.Nullable
     public PersonAnnualEventType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * @param value Value to set for the date property.
      */
     public void setDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.date = value;
+        this.BackingStore.set("date", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PersonAnnualEventType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

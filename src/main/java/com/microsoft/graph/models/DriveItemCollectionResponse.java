@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriveItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DriveItem> value;
-    /**
-     * Instantiates a new driveItemCollectionResponse and sets the default values.
+     * Instantiates a new DriveItemCollectionResponse and sets the default values.
      */
     public DriveItemCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DriveItemCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveItemCollectionResponse
+     * @return a DriveItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DriveItemCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DriveItemCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DriveItemCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

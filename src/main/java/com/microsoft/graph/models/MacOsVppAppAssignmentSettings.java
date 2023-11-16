@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * When TRUE, indicates that the app should not be automatically updated with the latest version from Apple app store. When FALSE, indicates that the app may be auto updated. By default, this property is set to null which internally is treated as FALSE.
-     */
-    private Boolean preventAutoAppUpdate;
-    /**
-     * When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
-     */
-    private Boolean preventManagedAppBackup;
-    /**
-     * Whether or not to uninstall the app when device is removed from Intune.
-     */
-    private Boolean uninstallOnDeviceRemoval;
-    /**
-     * Whether or not to use device licensing.
-     */
-    private Boolean useDeviceLicensing;
-    /**
-     * Instantiates a new macOsVppAppAssignmentSettings and sets the default values.
+     * Instantiates a new MacOsVppAppAssignmentSettings and sets the default values.
      */
     public MacOsVppAppAssignmentSettings() {
         super();
@@ -37,7 +21,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOsVppAppAssignmentSettings
+     * @return a MacOsVppAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static MacOsVppAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,35 +43,35 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the preventAutoAppUpdate property value. When TRUE, indicates that the app should not be automatically updated with the latest version from Apple app store. When FALSE, indicates that the app may be auto updated. By default, this property is set to null which internally is treated as FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventAutoAppUpdate() {
-        return this.preventAutoAppUpdate;
+        return this.BackingStore.get("preventAutoAppUpdate");
     }
     /**
      * Gets the preventManagedAppBackup property value. When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventManagedAppBackup() {
-        return this.preventManagedAppBackup;
+        return this.BackingStore.get("preventManagedAppBackup");
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this.uninstallOnDeviceRemoval;
+        return this.BackingStore.get("uninstallOnDeviceRemoval");
     }
     /**
      * Gets the useDeviceLicensing property value. Whether or not to use device licensing.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceLicensing() {
-        return this.useDeviceLicensing;
+        return this.BackingStore.get("useDeviceLicensing");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the preventAutoAppUpdate property.
      */
     public void setPreventAutoAppUpdate(@jakarta.annotation.Nullable final Boolean value) {
-        this.preventAutoAppUpdate = value;
+        this.BackingStore.set("preventAutoAppUpdate", value);
     }
     /**
      * Sets the preventManagedAppBackup property value. When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
      * @param value Value to set for the preventManagedAppBackup property.
      */
     public void setPreventManagedAppBackup(@jakarta.annotation.Nullable final Boolean value) {
-        this.preventManagedAppBackup = value;
+        this.BackingStore.set("preventManagedAppBackup", value);
     }
     /**
      * Sets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      */
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.uninstallOnDeviceRemoval = value;
+        this.BackingStore.set("uninstallOnDeviceRemoval", value);
     }
     /**
      * Sets the useDeviceLicensing property value. Whether or not to use device licensing.
      * @param value Value to set for the useDeviceLicensing property.
      */
     public void setUseDeviceLicensing(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceLicensing = value;
+        this.BackingStore.set("useDeviceLicensing", value);
     }
 }

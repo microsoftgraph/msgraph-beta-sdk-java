@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
     /**
-     * A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
-     */
-    private java.util.List<String> allowedAAGUIDs;
-    /**
-     * Instantiates a new fido2CombinationConfiguration and sets the default values.
+     * Instantiates a new Fido2CombinationConfiguration and sets the default values.
      */
     public Fido2CombinationConfiguration() {
         super();
@@ -22,7 +18,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fido2CombinationConfiguration
+     * @return a Fido2CombinationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Fido2CombinationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     }
     /**
      * Gets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAAGUIDs() {
-        return this.allowedAAGUIDs;
+        return this.BackingStore.get("allowedAAGUIDs");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * @param value Value to set for the allowedAAGUIDs property.
      */
     public void setAllowedAAGUIDs(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedAAGUIDs = value;
+        this.BackingStore.set("allowedAAGUIDs", value);
     }
 }

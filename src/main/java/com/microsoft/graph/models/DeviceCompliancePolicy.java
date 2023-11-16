@@ -13,59 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
-     * The collection of assignments for this compliance policy.
-     */
-    private java.util.List<DeviceCompliancePolicyAssignment> assignments;
-    /**
-     * DateTime the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Admin provided description of the Device Configuration.
-     */
-    private String description;
-    /**
-     * Compliance Setting State Device Summary
-     */
-    private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
-    /**
-     * List of DeviceComplianceDeviceStatus.
-     */
-    private java.util.List<DeviceComplianceDeviceStatus> deviceStatuses;
-    /**
-     * Device compliance devices status overview
-     */
-    private DeviceComplianceDeviceOverview deviceStatusOverview;
-    /**
-     * Admin provided name of the device configuration.
-     */
-    private String displayName;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The list of scheduled action for this rule
-     */
-    private java.util.List<DeviceComplianceScheduledActionForRule> scheduledActionsForRule;
-    /**
-     * List of DeviceComplianceUserStatus.
-     */
-    private java.util.List<DeviceComplianceUserStatus> userStatuses;
-    /**
-     * Device compliance users status overview
-     */
-    private DeviceComplianceUserOverview userStatusOverview;
-    /**
-     * Version of the device configuration.
-     */
-    private Integer version;
-    /**
-     * Instantiates a new deviceCompliancePolicy and sets the default values.
+     * Instantiates a new DeviceCompliancePolicy and sets the default values.
      */
     public DeviceCompliancePolicy() {
         super();
@@ -73,7 +21,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicy
+     * @return a DeviceCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -100,11 +48,11 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The collection of assignments for this compliance policy.
-     * @return a deviceCompliancePolicyAssignment
+     * @return a java.util.List<DeviceCompliancePolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -112,47 +60,47 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
-     * @return a settingStateDeviceSummary
+     * @return a java.util.List<SettingStateDeviceSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
-        return this.deviceSettingStateSummaries;
+        return this.BackingStore.get("deviceSettingStateSummaries");
     }
     /**
      * Gets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
-     * @return a deviceComplianceDeviceStatus
+     * @return a java.util.List<DeviceComplianceDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceDeviceStatus> getDeviceStatuses() {
-        return this.deviceStatuses;
+        return this.BackingStore.get("deviceStatuses");
     }
     /**
      * Gets the deviceStatusOverview property value. Device compliance devices status overview
-     * @return a deviceComplianceDeviceOverview
+     * @return a DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview getDeviceStatusOverview() {
-        return this.deviceStatusOverview;
+        return this.BackingStore.get("deviceStatusOverview");
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -182,47 +130,47 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.BackingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
-     * @return a deviceComplianceScheduledActionForRule
+     * @return a java.util.List<DeviceComplianceScheduledActionForRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScheduledActionForRule> getScheduledActionsForRule() {
-        return this.scheduledActionsForRule;
+        return this.BackingStore.get("scheduledActionsForRule");
     }
     /**
      * Gets the userStatuses property value. List of DeviceComplianceUserStatus.
-     * @return a deviceComplianceUserStatus
+     * @return a java.util.List<DeviceComplianceUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getUserStatuses() {
-        return this.userStatuses;
+        return this.BackingStore.get("userStatuses");
     }
     /**
      * Gets the userStatusOverview property value. Device compliance users status overview
-     * @return a deviceComplianceUserOverview
+     * @return a DeviceComplianceUserOverview
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserOverview getUserStatusOverview() {
-        return this.userStatusOverview;
+        return this.BackingStore.get("userStatusOverview");
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -250,90 +198,90 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
      * @param value Value to set for the deviceSettingStateSummaries property.
      */
     public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
-        this.deviceSettingStateSummaries = value;
+        this.BackingStore.set("deviceSettingStateSummaries", value);
     }
     /**
      * Sets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
      */
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceDeviceStatus> value) {
-        this.deviceStatuses = value;
+        this.BackingStore.set("deviceStatuses", value);
     }
     /**
      * Sets the deviceStatusOverview property value. Device compliance devices status overview
      * @param value Value to set for the deviceStatusOverview property.
      */
     public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceDeviceOverview value) {
-        this.deviceStatusOverview = value;
+        this.BackingStore.set("deviceStatusOverview", value);
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.BackingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
      * @param value Value to set for the scheduledActionsForRule property.
      */
     public void setScheduledActionsForRule(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
-        this.scheduledActionsForRule = value;
+        this.BackingStore.set("scheduledActionsForRule", value);
     }
     /**
      * Sets the userStatuses property value. List of DeviceComplianceUserStatus.
      * @param value Value to set for the userStatuses property.
      */
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
-        this.userStatuses = value;
+        this.BackingStore.set("userStatuses", value);
     }
     /**
      * Sets the userStatusOverview property value. Device compliance users status overview
      * @param value Value to set for the userStatusOverview property.
      */
     public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceUserOverview value) {
-        this.userStatusOverview = value;
+        this.BackingStore.set("userStatusOverview", value);
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

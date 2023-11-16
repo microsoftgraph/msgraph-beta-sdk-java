@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Update behavior options for macOS software updates.
-     */
-    private MacOSSoftwareUpdateBehavior allOtherUpdateBehavior;
-    /**
-     * Update behavior options for macOS software updates.
-     */
-    private MacOSSoftwareUpdateBehavior configDataUpdateBehavior;
-    /**
-     * Update behavior options for macOS software updates.
-     */
-    private MacOSSoftwareUpdateBehavior criticalUpdateBehavior;
-    /**
-     * Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
-     */
-    private java.util.List<CustomUpdateTimeWindow> customUpdateTimeWindows;
-    /**
-     * Update behavior options for macOS software updates.
-     */
-    private MacOSSoftwareUpdateBehavior firmwareUpdateBehavior;
-    /**
-     * The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
-     */
-    private Integer maxUserDeferralsCount;
-    /**
-     * The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
-     */
-    private MacOSPriority priority;
-    /**
-     * Updatescheduletypefor macOS software updates.
-     */
-    private MacOSSoftwareUpdateScheduleType updateScheduleType;
-    /**
-     * Minutes indicating UTC offset for each update time window
-     */
-    private Integer updateTimeWindowUtcOffsetInMinutes;
-    /**
-     * Instantiates a new macOSSoftwareUpdateConfiguration and sets the default values.
+     * Instantiates a new MacOSSoftwareUpdateConfiguration and sets the default values.
      */
     public MacOSSoftwareUpdateConfiguration() {
         super();
@@ -57,7 +21,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSSoftwareUpdateConfiguration
+     * @return a MacOSSoftwareUpdateConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,35 +30,35 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getAllOtherUpdateBehavior() {
-        return this.allOtherUpdateBehavior;
+        return this.BackingStore.get("allOtherUpdateBehavior");
     }
     /**
      * Gets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getConfigDataUpdateBehavior() {
-        return this.configDataUpdateBehavior;
+        return this.BackingStore.get("configDataUpdateBehavior");
     }
     /**
      * Gets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getCriticalUpdateBehavior() {
-        return this.criticalUpdateBehavior;
+        return this.BackingStore.get("criticalUpdateBehavior");
     }
     /**
      * Gets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
-     * @return a customUpdateTimeWindow
+     * @return a java.util.List<CustomUpdateTimeWindow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
-        return this.customUpdateTimeWindows;
+        return this.BackingStore.get("customUpdateTimeWindows");
     }
     /**
      * The deserialization information for the current model
@@ -116,43 +80,43 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getFirmwareUpdateBehavior() {
-        return this.firmwareUpdateBehavior;
+        return this.BackingStore.get("firmwareUpdateBehavior");
     }
     /**
      * Gets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxUserDeferralsCount() {
-        return this.maxUserDeferralsCount;
+        return this.BackingStore.get("maxUserDeferralsCount");
     }
     /**
      * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
-     * @return a macOSPriority
+     * @return a MacOSPriority
      */
     @jakarta.annotation.Nullable
     public MacOSPriority getPriority() {
-        return this.priority;
+        return this.BackingStore.get("priority");
     }
     /**
      * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
-     * @return a macOSSoftwareUpdateScheduleType
+     * @return a MacOSSoftwareUpdateScheduleType
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateScheduleType getUpdateScheduleType() {
-        return this.updateScheduleType;
+        return this.BackingStore.get("updateScheduleType");
     }
     /**
      * Gets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUpdateTimeWindowUtcOffsetInMinutes() {
-        return this.updateTimeWindowUtcOffsetInMinutes;
+        return this.BackingStore.get("updateTimeWindowUtcOffsetInMinutes");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the allOtherUpdateBehavior property.
      */
     public void setAllOtherUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this.allOtherUpdateBehavior = value;
+        this.BackingStore.set("allOtherUpdateBehavior", value);
     }
     /**
      * Sets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the configDataUpdateBehavior property.
      */
     public void setConfigDataUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this.configDataUpdateBehavior = value;
+        this.BackingStore.set("configDataUpdateBehavior", value);
     }
     /**
      * Sets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the criticalUpdateBehavior property.
      */
     public void setCriticalUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this.criticalUpdateBehavior = value;
+        this.BackingStore.set("criticalUpdateBehavior", value);
     }
     /**
      * Sets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
      * @param value Value to set for the customUpdateTimeWindows property.
      */
     public void setCustomUpdateTimeWindows(@jakarta.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
-        this.customUpdateTimeWindows = value;
+        this.BackingStore.set("customUpdateTimeWindows", value);
     }
     /**
      * Sets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the firmwareUpdateBehavior property.
      */
     public void setFirmwareUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this.firmwareUpdateBehavior = value;
+        this.BackingStore.set("firmwareUpdateBehavior", value);
     }
     /**
      * Sets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
      * @param value Value to set for the maxUserDeferralsCount property.
      */
     public void setMaxUserDeferralsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.maxUserDeferralsCount = value;
+        this.BackingStore.set("maxUserDeferralsCount", value);
     }
     /**
      * Sets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final MacOSPriority value) {
-        this.priority = value;
+        this.BackingStore.set("priority", value);
     }
     /**
      * Sets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @param value Value to set for the updateScheduleType property.
      */
     public void setUpdateScheduleType(@jakarta.annotation.Nullable final MacOSSoftwareUpdateScheduleType value) {
-        this.updateScheduleType = value;
+        this.BackingStore.set("updateScheduleType", value);
     }
     /**
      * Sets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
      * @param value Value to set for the updateTimeWindowUtcOffsetInMinutes property.
      */
     public void setUpdateTimeWindowUtcOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.updateTimeWindowUtcOffsetInMinutes = value;
+        this.BackingStore.set("updateTimeWindowUtcOffsetInMinutes", value);
     }
 }

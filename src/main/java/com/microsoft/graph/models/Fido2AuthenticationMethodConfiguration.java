@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
-     * Determines whether attestation must be enforced for FIDO2 security key registration.
-     */
-    private Boolean isAttestationEnforced;
-    /**
-     * Determines if users can register new FIDO2 security keys.
-     */
-    private Boolean isSelfServiceRegistrationAllowed;
-    /**
-     * Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
-     */
-    private Fido2KeyRestrictions keyRestrictions;
-    /**
-     * Instantiates a new fido2AuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new Fido2AuthenticationMethodConfiguration and sets the default values.
      */
     public Fido2AuthenticationMethodConfiguration() {
         super();
@@ -34,7 +18,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fido2AuthenticationMethodConfiguration
+     * @return a Fido2AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Fido2AuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,43 +32,34 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("isAttestationEnforced", (n) -> { this.setIsAttestationEnforced(n.getBooleanValue()); });
         deserializerMap.put("isSelfServiceRegistrationAllowed", (n) -> { this.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });
         deserializerMap.put("keyRestrictions", (n) -> { this.setKeyRestrictions(n.getObjectValue(Fido2KeyRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a authenticationMethodTarget
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
-    }
-    /**
      * Gets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAttestationEnforced() {
-        return this.isAttestationEnforced;
+        return this.BackingStore.get("isAttestationEnforced");
     }
     /**
      * Gets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSelfServiceRegistrationAllowed() {
-        return this.isSelfServiceRegistrationAllowed;
+        return this.BackingStore.get("isSelfServiceRegistrationAllowed");
     }
     /**
      * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
-     * @return a fido2KeyRestrictions
+     * @return a Fido2KeyRestrictions
      */
     @jakarta.annotation.Nullable
     public Fido2KeyRestrictions getKeyRestrictions() {
-        return this.keyRestrictions;
+        return this.BackingStore.get("keyRestrictions");
     }
     /**
      * Serializes information the current object
@@ -93,37 +68,29 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeBooleanValue("isAttestationEnforced", this.getIsAttestationEnforced());
         writer.writeBooleanValue("isSelfServiceRegistrationAllowed", this.getIsSelfServiceRegistrationAllowed());
         writer.writeObjectValue("keyRestrictions", this.getKeyRestrictions());
-    }
-    /**
-     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @param value Value to set for the includeTargets property.
-     */
-    public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
     }
     /**
      * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
      * @param value Value to set for the isAttestationEnforced property.
      */
     public void setIsAttestationEnforced(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAttestationEnforced = value;
+        this.BackingStore.set("isAttestationEnforced", value);
     }
     /**
      * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
      * @param value Value to set for the isSelfServiceRegistrationAllowed property.
      */
     public void setIsSelfServiceRegistrationAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSelfServiceRegistrationAllowed = value;
+        this.BackingStore.set("isSelfServiceRegistrationAllowed", value);
     }
     /**
      * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
      * @param value Value to set for the keyRestrictions property.
      */
     public void setKeyRestrictions(@jakarta.annotation.Nullable final Fido2KeyRestrictions value) {
-        this.keyRestrictions = value;
+        this.BackingStore.set("keyRestrictions", value);
     }
 }

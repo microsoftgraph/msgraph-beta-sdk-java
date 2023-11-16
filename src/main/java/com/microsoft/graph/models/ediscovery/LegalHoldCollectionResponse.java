@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LegalHoldCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<LegalHold> value;
-    /**
-     * Instantiates a new legalHoldCollectionResponse and sets the default values.
+     * Instantiates a new LegalHoldCollectionResponse and sets the default values.
      */
     public LegalHoldCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class LegalHoldCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a legalHoldCollectionResponse
+     * @return a LegalHoldCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static LegalHoldCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class LegalHoldCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a legalHold
+     * @return a java.util.List<LegalHold>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LegalHold> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class LegalHoldCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<LegalHold> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

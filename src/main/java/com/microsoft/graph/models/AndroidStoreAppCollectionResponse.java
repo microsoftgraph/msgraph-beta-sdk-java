@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidStoreAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AndroidStoreApp> value;
-    /**
-     * Instantiates a new androidStoreAppCollectionResponse and sets the default values.
+     * Instantiates a new AndroidStoreAppCollectionResponse and sets the default values.
      */
     public AndroidStoreAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AndroidStoreAppCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidStoreAppCollectionResponse
+     * @return a AndroidStoreAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AndroidStoreAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AndroidStoreAppCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a androidStoreApp
+     * @return a java.util.List<AndroidStoreApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidStoreApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AndroidStoreAppCollectionResponse extends BaseCollectionPaginationC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AndroidStoreApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

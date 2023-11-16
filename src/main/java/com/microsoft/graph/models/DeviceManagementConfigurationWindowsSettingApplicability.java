@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceManagementConfigurationSettingApplicability implements Parsable {
     /**
-     * Version of CSP setting is a part of
-     */
-    private String configurationServiceProviderVersion;
-    /**
-     * Maximum supported version of Windows
-     */
-    private String maximumSupportedVersion;
-    /**
-     * Minimum supported version of Windows
-     */
-    private String minimumSupportedVersion;
-    /**
-     * Required AAD Trust Type
-     */
-    private DeviceManagementConfigurationAzureAdTrustType requiredAzureAdTrustType;
-    /**
-     * AzureAD setting requirement
-     */
-    private Boolean requiresAzureAd;
-    /**
-     * List of Windows SKUs that the setting is applicable for
-     */
-    private java.util.List<DeviceManagementConfigurationWindowsSkus> windowsSkus;
-    /**
-     * Instantiates a new deviceManagementConfigurationWindowsSettingApplicability and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationWindowsSettingApplicability and sets the default values.
      */
     public DeviceManagementConfigurationWindowsSettingApplicability() {
         super();
@@ -42,7 +18,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationWindowsSettingApplicability
+     * @return a DeviceManagementConfigurationWindowsSettingApplicability
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationWindowsSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,11 +27,11 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the configurationServiceProviderVersion property value. Version of CSP setting is a part of
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigurationServiceProviderVersion() {
-        return this.configurationServiceProviderVersion;
+        return this.BackingStore.get("configurationServiceProviderVersion");
     }
     /**
      * The deserialization information for the current model
@@ -74,43 +50,43 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the maximumSupportedVersion property value. Maximum supported version of Windows
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumSupportedVersion() {
-        return this.maximumSupportedVersion;
+        return this.BackingStore.get("maximumSupportedVersion");
     }
     /**
      * Gets the minimumSupportedVersion property value. Minimum supported version of Windows
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumSupportedVersion() {
-        return this.minimumSupportedVersion;
+        return this.BackingStore.get("minimumSupportedVersion");
     }
     /**
      * Gets the requiredAzureAdTrustType property value. Required AAD Trust Type
-     * @return a deviceManagementConfigurationAzureAdTrustType
+     * @return a DeviceManagementConfigurationAzureAdTrustType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationAzureAdTrustType getRequiredAzureAdTrustType() {
-        return this.requiredAzureAdTrustType;
+        return this.BackingStore.get("requiredAzureAdTrustType");
     }
     /**
      * Gets the requiresAzureAd property value. AzureAD setting requirement
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresAzureAd() {
-        return this.requiresAzureAd;
+        return this.BackingStore.get("requiresAzureAd");
     }
     /**
      * Gets the windowsSkus property value. List of Windows SKUs that the setting is applicable for
-     * @return a deviceManagementConfigurationWindowsSkus
+     * @return a java.util.List<DeviceManagementConfigurationWindowsSkus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationWindowsSkus> getWindowsSkus() {
-        return this.windowsSkus;
+        return this.BackingStore.get("windowsSkus");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the configurationServiceProviderVersion property.
      */
     public void setConfigurationServiceProviderVersion(@jakarta.annotation.Nullable final String value) {
-        this.configurationServiceProviderVersion = value;
+        this.BackingStore.set("configurationServiceProviderVersion", value);
     }
     /**
      * Sets the maximumSupportedVersion property value. Maximum supported version of Windows
      * @param value Value to set for the maximumSupportedVersion property.
      */
     public void setMaximumSupportedVersion(@jakarta.annotation.Nullable final String value) {
-        this.maximumSupportedVersion = value;
+        this.BackingStore.set("maximumSupportedVersion", value);
     }
     /**
      * Sets the minimumSupportedVersion property value. Minimum supported version of Windows
      * @param value Value to set for the minimumSupportedVersion property.
      */
     public void setMinimumSupportedVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumSupportedVersion = value;
+        this.BackingStore.set("minimumSupportedVersion", value);
     }
     /**
      * Sets the requiredAzureAdTrustType property value. Required AAD Trust Type
      * @param value Value to set for the requiredAzureAdTrustType property.
      */
     public void setRequiredAzureAdTrustType(@jakarta.annotation.Nullable final DeviceManagementConfigurationAzureAdTrustType value) {
-        this.requiredAzureAdTrustType = value;
+        this.BackingStore.set("requiredAzureAdTrustType", value);
     }
     /**
      * Sets the requiresAzureAd property value. AzureAD setting requirement
      * @param value Value to set for the requiresAzureAd property.
      */
     public void setRequiresAzureAd(@jakarta.annotation.Nullable final Boolean value) {
-        this.requiresAzureAd = value;
+        this.BackingStore.set("requiresAzureAd", value);
     }
     /**
      * Sets the windowsSkus property value. List of Windows SKUs that the setting is applicable for
      * @param value Value to set for the windowsSkus property.
      */
     public void setWindowsSkus(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationWindowsSkus> value) {
-        this.windowsSkus = value;
+        this.BackingStore.set("windowsSkus", value);
     }
 }

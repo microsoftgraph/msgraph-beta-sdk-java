@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementReusablePolicySettingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceManagementReusablePolicySetting> value;
-    /**
-     * Instantiates a new deviceManagementReusablePolicySettingCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementReusablePolicySettingCollectionResponse and sets the default values.
      */
     public DeviceManagementReusablePolicySettingCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceManagementReusablePolicySettingCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementReusablePolicySettingCollectionResponse
+     * @return a DeviceManagementReusablePolicySettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementReusablePolicySettingCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceManagementReusablePolicySettingCollectionResponse extends Bas
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementReusablePolicySetting
+     * @return a java.util.List<DeviceManagementReusablePolicySetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementReusablePolicySetting> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceManagementReusablePolicySettingCollectionResponse extends Bas
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementReusablePolicySetting> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

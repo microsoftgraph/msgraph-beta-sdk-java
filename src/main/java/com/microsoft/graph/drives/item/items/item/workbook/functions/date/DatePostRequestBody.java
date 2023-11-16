@@ -5,37 +5,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
+public class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * The day property
-     */
-    private Json day;
-    /**
-     * The month property
-     */
-    private Json month;
-    /**
-     * The year property
-     */
-    private Json year;
-    /**
-     * Instantiates a new datePostRequestBody and sets the default values.
+     * Instantiates a new DatePostRequestBody and sets the default values.
      */
     public DatePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a datePostRequestBody
+     * @return a DatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static DatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +35,25 @@ public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
         return new DatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the day property value. The day property
@@ -56,7 +61,7 @@ public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDay() {
-        return this.day;
+        return this.BackingStore.get("day");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMonth() {
-        return this.month;
+        return this.BackingStore.get("month");
     }
     /**
      * Gets the year property value. The year property
@@ -84,7 +89,7 @@ public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getYear() {
-        return this.year;
+        return this.BackingStore.get("year");
     }
     /**
      * Serializes information the current object
@@ -98,31 +103,39 @@ public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the day property value. The day property
      * @param value Value to set for the day property.
      */
     public void setDay(@jakarta.annotation.Nullable final Json value) {
-        this.day = value;
+        this.BackingStore.set("day", value);
     }
     /**
      * Sets the month property value. The month property
      * @param value Value to set for the month property.
      */
     public void setMonth(@jakarta.annotation.Nullable final Json value) {
-        this.month = value;
+        this.BackingStore.set("month", value);
     }
     /**
      * Sets the year property value. The year property
      * @param value Value to set for the year property.
      */
     public void setYear(@jakarta.annotation.Nullable final Json value) {
-        this.year = value;
+        this.BackingStore.set("year", value);
     }
 }

@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Localized default string displayed in the text box. The default value is empty.
-     */
-    private String defaultValue;
-    /**
-     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
-     */
-    private Long maxLength;
-    /**
-     * Requirement to enter a value in the text box. Default value is false.
-     */
-    private Boolean required;
-    /**
-     * Instantiates a new groupPolicyPresentationTextBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationTextBox and sets the default values.
      */
     public GroupPolicyPresentationTextBox() {
         super();
@@ -33,7 +21,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationTextBox
+     * @return a GroupPolicyPresentationTextBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the defaultValue property value. Localized default string displayed in the text box. The default value is empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
-        return this.defaultValue;
+        return this.BackingStore.get("defaultValue");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaxLength() {
-        return this.maxLength;
+        return this.BackingStore.get("maxLength");
     }
     /**
      * Gets the required property value. Requirement to enter a value in the text box. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.BackingStore.get("required");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
-        this.defaultValue = value;
+        this.BackingStore.set("defaultValue", value);
     }
     /**
      * Sets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
      * @param value Value to set for the maxLength property.
      */
     public void setMaxLength(@jakarta.annotation.Nullable final Long value) {
-        this.maxLength = value;
+        this.BackingStore.set("maxLength", value);
     }
     /**
      * Sets the required property value. Requirement to enter a value in the text box. Default value is false.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.BackingStore.set("required", value);
     }
 }

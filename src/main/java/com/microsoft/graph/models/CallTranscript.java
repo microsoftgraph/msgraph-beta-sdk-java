@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallTranscript extends Entity implements Parsable {
     /**
-     * The content of the transcript. Read-only.
-     */
-    private byte[] content;
-    /**
-     * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The unique identifier of the online meeting related to this transcript. Read-only.
-     */
-    private String meetingId;
-    /**
-     * The meetingOrganizer property
-     */
-    private IdentitySet meetingOrganizer;
-    /**
-     * The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     */
-    private String meetingOrganizerId;
-    /**
-     * The time-aligned metadata of the utterances in the transcript. Read-only.
-     */
-    private byte[] metadataContent;
-    /**
-     * The URL which can be used to access the content of the transcript. Read-only.
-     */
-    private String transcriptContentUrl;
-    /**
-     * Instantiates a new callTranscript and sets the default values.
+     * Instantiates a new CallTranscript and sets the default values.
      */
     public CallTranscript() {
         super();
@@ -46,7 +18,7 @@ public class CallTranscript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callTranscript
+     * @return a CallTranscript
      */
     @jakarta.annotation.Nonnull
     public static CallTranscript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the transcript. Read-only.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the createdDateTime property value. Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -67,7 +39,7 @@ public class CallTranscript extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -87,43 +59,43 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the meetingId property value. The unique identifier of the online meeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingId() {
-        return this.meetingId;
+        return this.BackingStore.get("meetingId");
     }
     /**
-     * Gets the meetingOrganizer property value. The meetingOrganizer property
-     * @return a identitySet
+     * Gets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
-        return this.meetingOrganizer;
+        return this.BackingStore.get("meetingOrganizer");
     }
     /**
      * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingOrganizerId() {
-        return this.meetingOrganizerId;
+        return this.BackingStore.get("meetingOrganizerId");
     }
     /**
      * Gets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getMetadataContent() {
-        return this.metadataContent;
+        return this.BackingStore.get("metadataContent");
     }
     /**
      * Gets the transcriptContentUrl property value. The URL which can be used to access the content of the transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTranscriptContentUrl() {
-        return this.transcriptContentUrl;
+        return this.BackingStore.get("transcriptContentUrl");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class CallTranscript extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the meetingId property value. The unique identifier of the online meeting related to this transcript. Read-only.
      * @param value Value to set for the meetingId property.
      */
     public void setMeetingId(@jakarta.annotation.Nullable final String value) {
-        this.meetingId = value;
+        this.BackingStore.set("meetingId", value);
     }
     /**
-     * Sets the meetingOrganizer property value. The meetingOrganizer property
+     * Sets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
      * @param value Value to set for the meetingOrganizer property.
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.meetingOrganizer = value;
+        this.BackingStore.set("meetingOrganizer", value);
     }
     /**
      * Sets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
      * @param value Value to set for the meetingOrganizerId property.
      */
     public void setMeetingOrganizerId(@jakarta.annotation.Nullable final String value) {
-        this.meetingOrganizerId = value;
+        this.BackingStore.set("meetingOrganizerId", value);
     }
     /**
      * Sets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param value Value to set for the metadataContent property.
      */
     public void setMetadataContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.metadataContent = value;
+        this.BackingStore.set("metadataContent", value);
     }
     /**
      * Sets the transcriptContentUrl property value. The URL which can be used to access the content of the transcript. Read-only.
      * @param value Value to set for the transcriptContentUrl property.
      */
     public void setTranscriptContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.transcriptContentUrl = value;
+        this.BackingStore.set("transcriptContentUrl", value);
     }
 }

@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
-     */
-    private String configurationManagerAgentCommandLineArgument;
-    /**
-     * CoManagement Authority configuration InstallConfigurationManagerAgent
-     */
-    private Boolean installConfigurationManagerAgent;
-    /**
-     * CoManagement Authority configuration ManagedDeviceAuthority
-     */
-    private Integer managedDeviceAuthority;
-    /**
-     * Instantiates a new deviceComanagementAuthorityConfiguration and sets the default values.
+     * Instantiates a new DeviceComanagementAuthorityConfiguration and sets the default values.
      */
     public DeviceComanagementAuthorityConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComanagementAuthorityConfiguration
+     * @return a DeviceComanagementAuthorityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceComanagementAuthorityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     }
     /**
      * Gets the configurationManagerAgentCommandLineArgument property value. CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigurationManagerAgentCommandLineArgument() {
-        return this.configurationManagerAgentCommandLineArgument;
+        return this.BackingStore.get("configurationManagerAgentCommandLineArgument");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     }
     /**
      * Gets the installConfigurationManagerAgent property value. CoManagement Authority configuration InstallConfigurationManagerAgent
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallConfigurationManagerAgent() {
-        return this.installConfigurationManagerAgent;
+        return this.BackingStore.get("installConfigurationManagerAgent");
     }
     /**
      * Gets the managedDeviceAuthority property value. CoManagement Authority configuration ManagedDeviceAuthority
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagedDeviceAuthority() {
-        return this.managedDeviceAuthority;
+        return this.BackingStore.get("managedDeviceAuthority");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the configurationManagerAgentCommandLineArgument property.
      */
     public void setConfigurationManagerAgentCommandLineArgument(@jakarta.annotation.Nullable final String value) {
-        this.configurationManagerAgentCommandLineArgument = value;
+        this.BackingStore.set("configurationManagerAgentCommandLineArgument", value);
     }
     /**
      * Sets the installConfigurationManagerAgent property value. CoManagement Authority configuration InstallConfigurationManagerAgent
      * @param value Value to set for the installConfigurationManagerAgent property.
      */
     public void setInstallConfigurationManagerAgent(@jakarta.annotation.Nullable final Boolean value) {
-        this.installConfigurationManagerAgent = value;
+        this.BackingStore.set("installConfigurationManagerAgent", value);
     }
     /**
      * Sets the managedDeviceAuthority property value. CoManagement Authority configuration ManagedDeviceAuthority
      * @param value Value to set for the managedDeviceAuthority property.
      */
     public void setManagedDeviceAuthority(@jakarta.annotation.Nullable final Integer value) {
-        this.managedDeviceAuthority = value;
+        this.BackingStore.set("managedDeviceAuthority", value);
     }
 }

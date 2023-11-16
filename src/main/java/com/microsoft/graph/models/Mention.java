@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Mention extends Entity implements Parsable {
     /**
-     * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
-     */
-    private String application;
-    /**
-     * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
-     */
-    private String clientReference;
-    /**
-     * The email information of the user who made the mention.
-     */
-    private EmailAddress createdBy;
-    /**
-     * The date and time that the mention is created on the client.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
-     */
-    private String deepLink;
-    /**
-     * The mentioned property
-     */
-    private EmailAddress mentioned;
-    /**
-     * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
-     */
-    private String mentionText;
-    /**
-     * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
-     */
-    private OffsetDateTime serverCreatedDateTime;
-    /**
-     * Instantiates a new mention and sets the default values.
+     * Instantiates a new Mention and sets the default values.
      */
     public Mention() {
         super();
@@ -50,7 +18,7 @@ public class Mention extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mention
+     * @return a Mention
      */
     @jakarta.annotation.Nonnull
     public static Mention createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,27 +27,27 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the application property value. The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplication() {
-        return this.application;
+        return this.BackingStore.get("application");
     }
     /**
      * Gets the clientReference property value. A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientReference() {
-        return this.clientReference;
+        return this.BackingStore.get("clientReference");
     }
     /**
      * Gets the createdBy property value. The email information of the user who made the mention.
-     * @return a emailAddress
+     * @return a EmailAddress
      */
     @jakarta.annotation.Nullable
     public EmailAddress getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date and time that the mention is created on the client.
@@ -87,15 +55,15 @@ public class Mention extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the deepLink property value. A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeepLink() {
-        return this.deepLink;
+        return this.BackingStore.get("deepLink");
     }
     /**
      * The deserialization information for the current model
@@ -116,19 +84,19 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the mentioned property value. The mentioned property
-     * @return a emailAddress
+     * @return a EmailAddress
      */
     @jakarta.annotation.Nullable
     public EmailAddress getMentioned() {
-        return this.mentioned;
+        return this.BackingStore.get("mentioned");
     }
     /**
      * Gets the mentionText property value. Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMentionText() {
-        return this.mentionText;
+        return this.BackingStore.get("mentionText");
     }
     /**
      * Gets the serverCreatedDateTime property value. The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
@@ -136,7 +104,7 @@ public class Mention extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getServerCreatedDateTime() {
-        return this.serverCreatedDateTime;
+        return this.BackingStore.get("serverCreatedDateTime");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final String value) {
-        this.application = value;
+        this.BackingStore.set("application", value);
     }
     /**
      * Sets the clientReference property value. A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the clientReference property.
      */
     public void setClientReference(@jakarta.annotation.Nullable final String value) {
-        this.clientReference = value;
+        this.BackingStore.set("clientReference", value);
     }
     /**
      * Sets the createdBy property value. The email information of the user who made the mention.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailAddress value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time that the mention is created on the client.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deepLink property value. A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the deepLink property.
      */
     public void setDeepLink(@jakarta.annotation.Nullable final String value) {
-        this.deepLink = value;
+        this.BackingStore.set("deepLink", value);
     }
     /**
      * Sets the mentioned property value. The mentioned property
      * @param value Value to set for the mentioned property.
      */
     public void setMentioned(@jakarta.annotation.Nullable final EmailAddress value) {
-        this.mentioned = value;
+        this.BackingStore.set("mentioned", value);
     }
     /**
      * Sets the mentionText property value. Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
      * @param value Value to set for the mentionText property.
      */
     public void setMentionText(@jakarta.annotation.Nullable final String value) {
-        this.mentionText = value;
+        this.BackingStore.set("mentionText", value);
     }
     /**
      * Sets the serverCreatedDateTime property value. The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the serverCreatedDateTime property.
      */
     public void setServerCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.serverCreatedDateTime = value;
+        this.BackingStore.set("serverCreatedDateTime", value);
     }
 }

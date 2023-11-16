@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageResourceAttribute implements AdditionalDataHolder, Parsable {
+public class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
-     */
-    private AccessPackageResourceAttributeDestination attributeDestination;
-    /**
-     * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
-     */
-    private String attributeName;
-    /**
-     * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
-     */
-    private AccessPackageResourceAttributeSource attributeSource;
-    /**
-     * Unique identifier for the attribute on the access package resource. Read-only.
-     */
-    private String id;
-    /**
-     * Specifies whether or not an existing attribute value can be edited by the requester.
-     */
-    private Boolean isEditable;
-    /**
-     * Specifies whether the attribute will remain in the end system after an assignment ends.
-     */
-    private Boolean isPersistedOnAssignmentRemoval;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new accessPackageResourceAttribute and sets the default values.
+     * Instantiates a new AccessPackageResourceAttribute and sets the default values.
      */
     public AccessPackageResourceAttribute() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceAttribute
+     * @return a AccessPackageResourceAttribute
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceAttribute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +34,49 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
         return new AccessPackageResourceAttribute();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attributeDestination property value. Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
-     * @return a accessPackageResourceAttributeDestination
+     * @return a AccessPackageResourceAttributeDestination
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceAttributeDestination getAttributeDestination() {
-        return this.attributeDestination;
+        return this.BackingStore.get("attributeDestination");
     }
     /**
      * Gets the attributeName property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAttributeName() {
-        return this.attributeName;
+        return this.BackingStore.get("attributeName");
     }
     /**
      * Gets the attributeSource property value. Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
-     * @return a accessPackageResourceAttributeSource
+     * @return a AccessPackageResourceAttributeSource
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceAttributeSource getAttributeSource() {
-        return this.attributeSource;
+        return this.BackingStore.get("attributeSource");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +96,35 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
     }
     /**
      * Gets the id property value. Unique identifier for the attribute on the access package resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the isEditable property value. Specifies whether or not an existing attribute value can be edited by the requester.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEditable() {
-        return this.isEditable;
+        return this.BackingStore.get("isEditable");
     }
     /**
      * Gets the isPersistedOnAssignmentRemoval property value. Specifies whether the attribute will remain in the end system after an assignment ends.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPersistedOnAssignmentRemoval() {
-        return this.isPersistedOnAssignmentRemoval;
+        return this.BackingStore.get("isPersistedOnAssignmentRemoval");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the attributeDestination property value. Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
      * @param value Value to set for the attributeDestination property.
      */
     public void setAttributeDestination(@jakarta.annotation.Nullable final AccessPackageResourceAttributeDestination value) {
-        this.attributeDestination = value;
+        this.BackingStore.set("attributeDestination", value);
     }
     /**
      * Sets the attributeName property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
      * @param value Value to set for the attributeName property.
      */
     public void setAttributeName(@jakarta.annotation.Nullable final String value) {
-        this.attributeName = value;
+        this.BackingStore.set("attributeName", value);
     }
     /**
      * Sets the attributeSource property value. Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
      * @param value Value to set for the attributeSource property.
      */
     public void setAttributeSource(@jakarta.annotation.Nullable final AccessPackageResourceAttributeSource value) {
-        this.attributeSource = value;
+        this.BackingStore.set("attributeSource", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the id property value. Unique identifier for the attribute on the access package resource. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the isEditable property value. Specifies whether or not an existing attribute value can be edited by the requester.
      * @param value Value to set for the isEditable property.
      */
     public void setIsEditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEditable = value;
+        this.BackingStore.set("isEditable", value);
     }
     /**
      * Sets the isPersistedOnAssignmentRemoval property value. Specifies whether the attribute will remain in the end system after an assignment ends.
      * @param value Value to set for the isPersistedOnAssignmentRemoval property.
      */
     public void setIsPersistedOnAssignmentRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPersistedOnAssignmentRemoval = value;
+        this.BackingStore.set("isPersistedOnAssignmentRemoval", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

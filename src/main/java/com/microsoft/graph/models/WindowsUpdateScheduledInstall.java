@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
-     * Possible values for a weekly schedule.
-     */
-    private WeeklySchedule scheduledInstallDay;
-    /**
-     * Scheduled Install Time during day
-     */
-    private LocalTime scheduledInstallTime;
-    /**
-     * Instantiates a new windowsUpdateScheduledInstall and sets the default values.
+     * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
      */
     public WindowsUpdateScheduledInstall() {
         super();
@@ -27,7 +19,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateScheduledInstall
+     * @return a WindowsUpdateScheduledInstall
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateScheduledInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,11 +39,11 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
-     * @return a weeklySchedule
+     * @return a WeeklySchedule
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {
-        return this.scheduledInstallDay;
+        return this.BackingStore.get("scheduledInstallDay");
     }
     /**
      * Gets the scheduledInstallTime property value. Scheduled Install Time during day
@@ -59,7 +51,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @jakarta.annotation.Nullable
     public LocalTime getScheduledInstallTime() {
-        return this.scheduledInstallTime;
+        return this.BackingStore.get("scheduledInstallTime");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param value Value to set for the scheduledInstallDay property.
      */
     public void setScheduledInstallDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
-        this.scheduledInstallDay = value;
+        this.BackingStore.set("scheduledInstallDay", value);
     }
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
      * @param value Value to set for the scheduledInstallTime property.
      */
     public void setScheduledInstallTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.scheduledInstallTime = value;
+        this.BackingStore.set("scheduledInstallTime", value);
     }
 }

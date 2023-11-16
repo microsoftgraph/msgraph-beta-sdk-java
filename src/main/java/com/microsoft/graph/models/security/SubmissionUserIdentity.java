@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubmissionUserIdentity extends Identity implements Parsable {
     /**
-     * The email of user who is making the submission when logged in (delegated token case).
-     */
-    private String email;
-    /**
-     * Instantiates a new submissionUserIdentity and sets the default values.
+     * Instantiates a new SubmissionUserIdentity and sets the default values.
      */
     public SubmissionUserIdentity() {
         super();
@@ -23,7 +19,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a submissionUserIdentity
+     * @return a SubmissionUserIdentity
      */
     @jakarta.annotation.Nonnull
     public static SubmissionUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,11 +28,11 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the email property value. The email of user who is making the submission when logged in (delegated token case).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -62,6 +58,6 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
 }

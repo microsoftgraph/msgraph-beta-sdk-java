@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDeviceComplianceLocalActionBase implements Parsable {
     /**
-     * Passcode to reset to Android device. This property is read-only.
-     */
-    private String passcode;
-    /**
-     * Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
-     */
-    private Integer passcodeSignInFailureCountBeforeWipe;
-    /**
-     * Instantiates a new androidDeviceComplianceLocalActionLockDeviceWithPasscode and sets the default values.
+     * Instantiates a new AndroidDeviceComplianceLocalActionLockDeviceWithPasscode and sets the default values.
      */
     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode() {
         super();
@@ -29,7 +21,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceComplianceLocalActionLockDeviceWithPasscode
+     * @return a AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceComplianceLocalActionLockDeviceWithPasscode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     }
     /**
      * Gets the passcode property value. Passcode to reset to Android device. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasscode() {
-        return this.passcode;
+        return this.BackingStore.get("passcode");
     }
     /**
      * Gets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasscodeSignInFailureCountBeforeWipe() {
-        return this.passcodeSignInFailureCountBeforeWipe;
+        return this.BackingStore.get("passcodeSignInFailureCountBeforeWipe");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * @param value Value to set for the passcode property.
      */
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
-        this.passcode = value;
+        this.BackingStore.set("passcode", value);
     }
     /**
      * Sets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
      * @param value Value to set for the passcodeSignInFailureCountBeforeWipe property.
      */
     public void setPasscodeSignInFailureCountBeforeWipe(@jakarta.annotation.Nullable final Integer value) {
-        this.passcodeSignInFailureCountBeforeWipe = value;
+        this.BackingStore.set("passcodeSignInFailureCountBeforeWipe", value);
     }
 }

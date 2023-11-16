@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserTeamwork extends Entity implements Parsable {
     /**
-     * The list of associatedTeamInfo objects that a user is associated with.
-     */
-    private java.util.List<AssociatedTeamInfo> associatedTeams;
-    /**
-     * The apps installed in the personal scope of this user.
-     */
-    private java.util.List<UserScopeTeamsAppInstallation> installedApps;
-    /**
-     * Instantiates a new userTeamwork and sets the default values.
+     * Instantiates a new UserTeamwork and sets the default values.
      */
     public UserTeamwork() {
         super();
@@ -25,7 +17,7 @@ public class UserTeamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userTeamwork
+     * @return a UserTeamwork
      */
     @jakarta.annotation.Nonnull
     public static UserTeamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class UserTeamwork extends Entity implements Parsable {
     }
     /**
      * Gets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
-     * @return a associatedTeamInfo
+     * @return a java.util.List<AssociatedTeamInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssociatedTeamInfo> getAssociatedTeams() {
-        return this.associatedTeams;
+        return this.BackingStore.get("associatedTeams");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class UserTeamwork extends Entity implements Parsable {
     }
     /**
      * Gets the installedApps property value. The apps installed in the personal scope of this user.
-     * @return a userScopeTeamsAppInstallation
+     * @return a java.util.List<UserScopeTeamsAppInstallation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getInstalledApps() {
-        return this.installedApps;
+        return this.BackingStore.get("installedApps");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the associatedTeams property.
      */
     public void setAssociatedTeams(@jakarta.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
-        this.associatedTeams = value;
+        this.BackingStore.set("associatedTeams", value);
     }
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.
      * @param value Value to set for the installedApps property.
      */
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
-        this.installedApps = value;
+        this.BackingStore.set("installedApps", value);
     }
 }

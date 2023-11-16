@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     /**
-     * The activityDateTime property
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * The activityDisplayName property
-     */
-    private String activityDisplayName;
-    /**
-     * The additionalDetails property
-     */
-    private java.util.List<KeyValue> additionalDetails;
-    /**
-     * The category property
-     */
-    private String category;
-    /**
-     * The correlationId property
-     */
-    private String correlationId;
-    /**
-     * The initiatedBy property
-     */
-    private AuditActivityInitiator initiatedBy;
-    /**
-     * The loggedByService property
-     */
-    private String loggedByService;
-    /**
-     * The operationType property
-     */
-    private String operationType;
-    /**
-     * The result property
-     */
-    private OperationResult result;
-    /**
-     * The resultReason property
-     */
-    private String resultReason;
-    /**
-     * The targetResources property
-     */
-    private java.util.List<TargetResource> targetResources;
-    /**
-     * The userAgent property
-     */
-    private String userAgent;
-    /**
-     * Instantiates a new customSecurityAttributeAudit and sets the default values.
+     * Instantiates a new CustomSecurityAttributeAudit and sets the default values.
      */
     public CustomSecurityAttributeAudit() {
         super();
@@ -66,7 +18,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customSecurityAttributeAudit
+     * @return a CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public static CustomSecurityAttributeAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,39 +31,39 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the activityDisplayName property value. The activityDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityDisplayName() {
-        return this.activityDisplayName;
+        return this.BackingStore.get("activityDisplayName");
     }
     /**
      * Gets the additionalDetails property value. The additionalDetails property
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
-        return this.additionalDetails;
+        return this.BackingStore.get("additionalDetails");
     }
     /**
      * Gets the category property value. The category property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the correlationId property value. The correlationId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.BackingStore.get("correlationId");
     }
     /**
      * The deserialization information for the current model
@@ -136,59 +88,59 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property
-     * @return a auditActivityInitiator
+     * @return a AuditActivityInitiator
      */
     @jakarta.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {
-        return this.initiatedBy;
+        return this.BackingStore.get("initiatedBy");
     }
     /**
      * Gets the loggedByService property value. The loggedByService property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoggedByService() {
-        return this.loggedByService;
+        return this.BackingStore.get("loggedByService");
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperationType() {
-        return this.operationType;
+        return this.BackingStore.get("operationType");
     }
     /**
      * Gets the result property value. The result property
-     * @return a operationResult
+     * @return a OperationResult
      */
     @jakarta.annotation.Nullable
     public OperationResult getResult() {
-        return this.result;
+        return this.BackingStore.get("result");
     }
     /**
      * Gets the resultReason property value. The resultReason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultReason() {
-        return this.resultReason;
+        return this.BackingStore.get("resultReason");
     }
     /**
      * Gets the targetResources property value. The targetResources property
-     * @return a targetResource
+     * @return a java.util.List<TargetResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetResource> getTargetResources() {
-        return this.targetResources;
+        return this.BackingStore.get("targetResources");
     }
     /**
      * Gets the userAgent property value. The userAgent property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {
-        return this.userAgent;
+        return this.BackingStore.get("userAgent");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the activityDisplayName property value. The activityDisplayName property
      * @param value Value to set for the activityDisplayName property.
      */
     public void setActivityDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.activityDisplayName = value;
+        this.BackingStore.set("activityDisplayName", value);
     }
     /**
      * Sets the additionalDetails property value. The additionalDetails property
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.additionalDetails = value;
+        this.BackingStore.set("additionalDetails", value);
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the correlationId property value. The correlationId property
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.BackingStore.set("correlationId", value);
     }
     /**
      * Sets the initiatedBy property value. The initiatedBy property
      * @param value Value to set for the initiatedBy property.
      */
     public void setInitiatedBy(@jakarta.annotation.Nullable final AuditActivityInitiator value) {
-        this.initiatedBy = value;
+        this.BackingStore.set("initiatedBy", value);
     }
     /**
      * Sets the loggedByService property value. The loggedByService property
      * @param value Value to set for the loggedByService property.
      */
     public void setLoggedByService(@jakarta.annotation.Nullable final String value) {
-        this.loggedByService = value;
+        this.BackingStore.set("loggedByService", value);
     }
     /**
      * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final String value) {
-        this.operationType = value;
+        this.BackingStore.set("operationType", value);
     }
     /**
      * Sets the result property value. The result property
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final OperationResult value) {
-        this.result = value;
+        this.BackingStore.set("result", value);
     }
     /**
      * Sets the resultReason property value. The resultReason property
      * @param value Value to set for the resultReason property.
      */
     public void setResultReason(@jakarta.annotation.Nullable final String value) {
-        this.resultReason = value;
+        this.BackingStore.set("resultReason", value);
     }
     /**
      * Sets the targetResources property value. The targetResources property
      * @param value Value to set for the targetResources property.
      */
     public void setTargetResources(@jakarta.annotation.Nullable final java.util.List<TargetResource> value) {
-        this.targetResources = value;
+        this.BackingStore.set("targetResources", value);
     }
     /**
      * Sets the userAgent property value. The userAgent property
      * @param value Value to set for the userAgent property.
      */
     public void setUserAgent(@jakarta.annotation.Nullable final String value) {
-        this.userAgent = value;
+        this.BackingStore.set("userAgent", value);
     }
 }

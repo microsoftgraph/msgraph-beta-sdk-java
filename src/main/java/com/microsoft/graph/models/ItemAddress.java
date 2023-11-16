@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAddress extends ItemFacet implements Parsable {
     /**
-     * The detail property
-     */
-    private PhysicalAddress detail;
-    /**
-     * Friendly name the user has assigned to this address.
-     */
-    private String displayName;
-    /**
-     * The geocoordinates of the address.
-     */
-    private GeoCoordinates geoCoordinates;
-    /**
-     * Instantiates a new itemAddress and sets the default values.
+     * Instantiates a new ItemAddress and sets the default values.
      */
     public ItemAddress() {
         super();
@@ -30,7 +18,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemAddress
+     * @return a ItemAddress
      */
     @jakarta.annotation.Nonnull
     public static ItemAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * Gets the detail property value. The detail property
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getDetail() {
-        return this.detail;
+        return this.BackingStore.get("detail");
     }
     /**
      * Gets the displayName property value. Friendly name the user has assigned to this address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * Gets the geoCoordinates property value. The geocoordinates of the address.
-     * @return a geoCoordinates
+     * @return a GeoCoordinates
      */
     @jakarta.annotation.Nullable
     public GeoCoordinates getGeoCoordinates() {
-        return this.geoCoordinates;
+        return this.BackingStore.get("geoCoordinates");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.detail = value;
+        this.BackingStore.set("detail", value);
     }
     /**
      * Sets the displayName property value. Friendly name the user has assigned to this address.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the geoCoordinates property value. The geocoordinates of the address.
      * @param value Value to set for the geoCoordinates property.
      */
     public void setGeoCoordinates(@jakarta.annotation.Nullable final GeoCoordinates value) {
-        this.geoCoordinates = value;
+        this.BackingStore.set("geoCoordinates", value);
     }
 }

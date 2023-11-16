@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity implements Parsable {
     /**
-     * Number of active devices within the tenant. Valid values 0 to 2147483647
-     */
-    private Integer activeDevices;
-    /**
-     * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
-     */
-    private Integer batteryCapacityFair;
-    /**
-     * Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
-     */
-    private Integer batteryCapacityGood;
-    /**
-     * Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
-     */
-    private Integer batteryCapacityPoor;
-    /**
-     * Recorded date time of this capacity details instance.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
         super();
@@ -41,7 +21,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthCapacityDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,35 +30,35 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the activeDevices property value. Number of active devices within the tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
-        return this.activeDevices;
+        return this.BackingStore.get("activeDevices");
     }
     /**
      * Gets the batteryCapacityFair property value. Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityFair() {
-        return this.batteryCapacityFair;
+        return this.BackingStore.get("batteryCapacityFair");
     }
     /**
      * Gets the batteryCapacityGood property value. Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityGood() {
-        return this.batteryCapacityGood;
+        return this.BackingStore.get("batteryCapacityGood");
     }
     /**
      * Gets the batteryCapacityPoor property value. Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityPoor() {
-        return this.batteryCapacityPoor;
+        return this.BackingStore.get("batteryCapacityPoor");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +80,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.BackingStore.get("lastRefreshedDateTime");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the activeDevices property.
      */
     public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDevices = value;
+        this.BackingStore.set("activeDevices", value);
     }
     /**
      * Sets the batteryCapacityFair property value. Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
      * @param value Value to set for the batteryCapacityFair property.
      */
     public void setBatteryCapacityFair(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryCapacityFair = value;
+        this.BackingStore.set("batteryCapacityFair", value);
     }
     /**
      * Sets the batteryCapacityGood property value. Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
      * @param value Value to set for the batteryCapacityGood property.
      */
     public void setBatteryCapacityGood(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryCapacityGood = value;
+        this.BackingStore.set("batteryCapacityGood", value);
     }
     /**
      * Sets the batteryCapacityPoor property value. Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
      * @param value Value to set for the batteryCapacityPoor property.
      */
     public void setBatteryCapacityPoor(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryCapacityPoor = value;
+        this.BackingStore.set("batteryCapacityPoor", value);
     }
     /**
      * Sets the lastRefreshedDateTime property value. Recorded date time of this capacity details instance.
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.BackingStore.set("lastRefreshedDateTime", value);
     }
 }

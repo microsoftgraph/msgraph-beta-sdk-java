@@ -12,75 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseEscaped extends Entity implements Parsable {
     /**
-     * The user who closed the case.
-     */
-    private IdentitySet closedBy;
-    /**
-     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime closedDateTime;
-    /**
-     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Returns a list of case custodian objects for this case.  Nullable.
-     */
-    private java.util.List<Custodian> custodians;
-    /**
-     * The case description.
-     */
-    private String description;
-    /**
-     * The case name.
-     */
-    private String displayName;
-    /**
-     * The external case number for customer reference.
-     */
-    private String externalId;
-    /**
-     * The last user who modified the entity.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Returns a list of case legalHold objects for this case.  Nullable.
-     */
-    private java.util.List<LegalHold> legalHolds;
-    /**
-     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
-     */
-    private java.util.List<NoncustodialDataSource> noncustodialDataSources;
-    /**
-     * Returns a list of case operation objects for this case. Nullable.
-     */
-    private java.util.List<CaseOperation> operations;
-    /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
-     */
-    private java.util.List<ReviewSet> reviewSets;
-    /**
-     * The settings property
-     */
-    private CaseSettings settings;
-    /**
-     * Returns a list of sourceCollection objects associated with this case.
-     */
-    private java.util.List<SourceCollection> sourceCollections;
-    /**
-     * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
-     */
-    private CaseStatus status;
-    /**
-     * Returns a list of tag objects associated to this case.
-     */
-    private java.util.List<Tag> tags;
-    /**
-     * Instantiates a new caseEscaped and sets the default values.
+     * Instantiates a new CaseEscaped and sets the default values.
      */
     public CaseEscaped() {
         super();
@@ -88,7 +20,7 @@ public class CaseEscaped extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a caseEscaped
+     * @return a CaseEscaped
      */
     @jakarta.annotation.Nonnull
     public static CaseEscaped createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -97,11 +29,11 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the closedBy property value. The user who closed the case.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
-        return this.closedBy;
+        return this.BackingStore.get("closedBy");
     }
     /**
      * Gets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -109,7 +41,7 @@ public class CaseEscaped extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
-        return this.closedDateTime;
+        return this.BackingStore.get("closedDateTime");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -117,39 +49,39 @@ public class CaseEscaped extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the custodians property value. Returns a list of case custodian objects for this case.  Nullable.
-     * @return a custodian
+     * @return a java.util.List<Custodian>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Custodian> getCustodians() {
-        return this.custodians;
+        return this.BackingStore.get("custodians");
     }
     /**
      * Gets the description property value. The case description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The case name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the externalId property value. The external case number for customer reference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -179,11 +111,11 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the entity.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -191,71 +123,71 @@ public class CaseEscaped extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the legalHolds property value. Returns a list of case legalHold objects for this case.  Nullable.
-     * @return a legalHold
+     * @return a java.util.List<LegalHold>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LegalHold> getLegalHolds() {
-        return this.legalHolds;
+        return this.BackingStore.get("legalHolds");
     }
     /**
      * Gets the noncustodialDataSources property value. Returns a list of case noncustodialDataSource objects for this case.  Nullable.
-     * @return a noncustodialDataSource
+     * @return a java.util.List<NoncustodialDataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialDataSources() {
-        return this.noncustodialDataSources;
+        return this.BackingStore.get("noncustodialDataSources");
     }
     /**
      * Gets the operations property value. Returns a list of case operation objects for this case. Nullable.
-     * @return a caseOperation
+     * @return a java.util.List<CaseOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the reviewSets property value. Returns a list of reviewSet objects in the case. Read-only. Nullable.
-     * @return a reviewSet
+     * @return a java.util.List<ReviewSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReviewSet> getReviewSets() {
-        return this.reviewSets;
+        return this.BackingStore.get("reviewSets");
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a caseSettings
+     * @return a CaseSettings
      */
     @jakarta.annotation.Nullable
     public CaseSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the sourceCollections property value. Returns a list of sourceCollection objects associated with this case.
-     * @return a sourceCollection
+     * @return a java.util.List<SourceCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceCollection> getSourceCollections() {
-        return this.sourceCollections;
+        return this.BackingStore.get("sourceCollections");
     }
     /**
      * Gets the status property value. The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
-     * @return a caseStatus
+     * @return a CaseStatus
      */
     @jakarta.annotation.Nullable
     public CaseStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the tags property value. Returns a list of tag objects associated to this case.
-     * @return a tag
+     * @return a java.util.List<Tag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Serializes information the current object
@@ -287,118 +219,118 @@ public class CaseEscaped extends Entity implements Parsable {
      * @param value Value to set for the closedBy property.
      */
     public void setClosedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.closedBy = value;
+        this.BackingStore.set("closedBy", value);
     }
     /**
      * Sets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the closedDateTime property.
      */
     public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.closedDateTime = value;
+        this.BackingStore.set("closedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the custodians property value. Returns a list of case custodian objects for this case.  Nullable.
      * @param value Value to set for the custodians property.
      */
     public void setCustodians(@jakarta.annotation.Nullable final java.util.List<Custodian> value) {
-        this.custodians = value;
+        this.BackingStore.set("custodians", value);
     }
     /**
      * Sets the description property value. The case description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The case name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the externalId property value. The external case number for customer reference.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the lastModifiedBy property value. The last user who modified the entity.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the legalHolds property value. Returns a list of case legalHold objects for this case.  Nullable.
      * @param value Value to set for the legalHolds property.
      */
     public void setLegalHolds(@jakarta.annotation.Nullable final java.util.List<LegalHold> value) {
-        this.legalHolds = value;
+        this.BackingStore.set("legalHolds", value);
     }
     /**
      * Sets the noncustodialDataSources property value. Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      * @param value Value to set for the noncustodialDataSources property.
      */
     public void setNoncustodialDataSources(@jakarta.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
-        this.noncustodialDataSources = value;
+        this.BackingStore.set("noncustodialDataSources", value);
     }
     /**
      * Sets the operations property value. Returns a list of case operation objects for this case. Nullable.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<CaseOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the reviewSets property value. Returns a list of reviewSet objects in the case. Read-only. Nullable.
      * @param value Value to set for the reviewSets property.
      */
     public void setReviewSets(@jakarta.annotation.Nullable final java.util.List<ReviewSet> value) {
-        this.reviewSets = value;
+        this.BackingStore.set("reviewSets", value);
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final CaseSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the sourceCollections property value. Returns a list of sourceCollection objects associated with this case.
      * @param value Value to set for the sourceCollections property.
      */
     public void setSourceCollections(@jakarta.annotation.Nullable final java.util.List<SourceCollection> value) {
-        this.sourceCollections = value;
+        this.BackingStore.set("sourceCollections", value);
     }
     /**
      * Sets the status property value. The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CaseStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the tags property value. Returns a list of tag objects associated to this case.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<Tag> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
 }

@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implements Parsable {
     /**
-     * The id of the device where the event occurred.
-     */
-    private String deviceId;
-    /**
-     * The time the event occured.
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * The details provided by the event, format depends on event type.
-     */
-    private String eventDetails;
-    /**
-     * Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
-     */
-    private DeviceEventLevel eventLevel;
-    /**
-     * The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
-     */
-    private String eventName;
-    /**
-     * The source of the event. Examples include: Intune, Sccm.
-     */
-    private String eventSource;
-    /**
-     * Instantiates a new userExperienceAnalyticsDeviceTimelineEvent and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceTimelineEvent and sets the default values.
      */
     public UserExperienceAnalyticsDeviceTimelineEvent() {
         super();
@@ -45,7 +21,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceTimelineEvent
+     * @return a UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceTimelineEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +30,11 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the deviceId property value. The id of the device where the event occurred.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the eventDateTime property value. The time the event occured.
@@ -66,39 +42,39 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.BackingStore.get("eventDateTime");
     }
     /**
      * Gets the eventDetails property value. The details provided by the event, format depends on event type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventDetails() {
-        return this.eventDetails;
+        return this.BackingStore.get("eventDetails");
     }
     /**
      * Gets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
-     * @return a deviceEventLevel
+     * @return a DeviceEventLevel
      */
     @jakarta.annotation.Nullable
     public DeviceEventLevel getEventLevel() {
-        return this.eventLevel;
+        return this.BackingStore.get("eventLevel");
     }
     /**
      * Gets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
-        return this.eventName;
+        return this.BackingStore.get("eventName");
     }
     /**
      * Gets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventSource() {
-        return this.eventSource;
+        return this.BackingStore.get("eventSource");
     }
     /**
      * The deserialization information for the current model
@@ -134,41 +110,41 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the eventDateTime property value. The time the event occured.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.BackingStore.set("eventDateTime", value);
     }
     /**
      * Sets the eventDetails property value. The details provided by the event, format depends on event type.
      * @param value Value to set for the eventDetails property.
      */
     public void setEventDetails(@jakarta.annotation.Nullable final String value) {
-        this.eventDetails = value;
+        this.BackingStore.set("eventDetails", value);
     }
     /**
      * Sets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
      * @param value Value to set for the eventLevel property.
      */
     public void setEventLevel(@jakarta.annotation.Nullable final DeviceEventLevel value) {
-        this.eventLevel = value;
+        this.BackingStore.set("eventLevel", value);
     }
     /**
      * Sets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
      * @param value Value to set for the eventName property.
      */
     public void setEventName(@jakarta.annotation.Nullable final String value) {
-        this.eventName = value;
+        this.BackingStore.set("eventName", value);
     }
     /**
      * Sets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
      * @param value Value to set for the eventSource property.
      */
     public void setEventSource(@jakarta.annotation.Nullable final String value) {
-        this.eventSource = value;
+        this.BackingStore.set("eventSource", value);
     }
 }

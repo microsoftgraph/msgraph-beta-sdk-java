@@ -9,51 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Invitation extends Entity implements Parsable {
     /**
-     * The user created as part of the invitation creation. Read-Only
-     */
-    private User invitedUser;
-    /**
-     * The display name of the user being invited.
-     */
-    private String invitedUserDisplayName;
-    /**
-     * The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
-     */
-    private String invitedUserEmailAddress;
-    /**
-     * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
-     */
-    private InvitedUserMessageInfo invitedUserMessageInfo;
-    /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
-     */
-    private java.util.List<DirectoryObject> invitedUserSponsors;
-    /**
-     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
-     */
-    private String invitedUserType;
-    /**
-     * The URL the user can use to redeem their invitation. Read-only.
-     */
-    private String inviteRedeemUrl;
-    /**
-     * The URL user should be redirected to once the invitation is redeemed. Required.
-     */
-    private String inviteRedirectUrl;
-    /**
-     * Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
-     */
-    private Boolean resetRedemption;
-    /**
-     * Indicates whether an email should be sent to the user being invited. The default is false.
-     */
-    private Boolean sendInvitationMessage;
-    /**
-     * The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
-     */
-    private String status;
-    /**
-     * Instantiates a new invitation and sets the default values.
+     * Instantiates a new Invitation and sets the default values.
      */
     public Invitation() {
         super();
@@ -61,7 +17,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitation
+     * @return a Invitation
      */
     @jakarta.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,91 +46,91 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getInvitedUser() {
-        return this.invitedUser;
+        return this.BackingStore.get("invitedUser");
     }
     /**
      * Gets the invitedUserDisplayName property value. The display name of the user being invited.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserDisplayName() {
-        return this.invitedUserDisplayName;
+        return this.BackingStore.get("invitedUserDisplayName");
     }
     /**
      * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserEmailAddress() {
-        return this.invitedUserEmailAddress;
+        return this.BackingStore.get("invitedUserEmailAddress");
     }
     /**
      * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
-     * @return a invitedUserMessageInfo
+     * @return a InvitedUserMessageInfo
      */
     @jakarta.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
-        return this.invitedUserMessageInfo;
+        return this.BackingStore.get("invitedUserMessageInfo");
     }
     /**
      * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getInvitedUserSponsors() {
-        return this.invitedUserSponsors;
+        return this.BackingStore.get("invitedUserSponsors");
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserType() {
-        return this.invitedUserType;
+        return this.BackingStore.get("invitedUserType");
     }
     /**
      * Gets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInviteRedeemUrl() {
-        return this.inviteRedeemUrl;
+        return this.BackingStore.get("inviteRedeemUrl");
     }
     /**
      * Gets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInviteRedirectUrl() {
-        return this.inviteRedirectUrl;
+        return this.BackingStore.get("inviteRedirectUrl");
     }
     /**
      * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getResetRedemption() {
-        return this.resetRedemption;
+        return this.BackingStore.get("resetRedemption");
     }
     /**
      * Gets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSendInvitationMessage() {
-        return this.sendInvitationMessage;
+        return this.BackingStore.get("sendInvitationMessage");
     }
     /**
      * Gets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -200,76 +156,76 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUser property.
      */
     public void setInvitedUser(@jakarta.annotation.Nullable final User value) {
-        this.invitedUser = value;
+        this.BackingStore.set("invitedUser", value);
     }
     /**
      * Sets the invitedUserDisplayName property value. The display name of the user being invited.
      * @param value Value to set for the invitedUserDisplayName property.
      */
     public void setInvitedUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.invitedUserDisplayName = value;
+        this.BackingStore.set("invitedUserDisplayName", value);
     }
     /**
      * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      * @param value Value to set for the invitedUserEmailAddress property.
      */
     public void setInvitedUserEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.invitedUserEmailAddress = value;
+        this.BackingStore.set("invitedUserEmailAddress", value);
     }
     /**
      * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
      * @param value Value to set for the invitedUserMessageInfo property.
      */
     public void setInvitedUserMessageInfo(@jakarta.annotation.Nullable final InvitedUserMessageInfo value) {
-        this.invitedUserMessageInfo = value;
+        this.BackingStore.set("invitedUserMessageInfo", value);
     }
     /**
      * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
      * @param value Value to set for the invitedUserSponsors property.
      */
     public void setInvitedUserSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.invitedUserSponsors = value;
+        this.BackingStore.set("invitedUserSponsors", value);
     }
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
      * @param value Value to set for the invitedUserType property.
      */
     public void setInvitedUserType(@jakarta.annotation.Nullable final String value) {
-        this.invitedUserType = value;
+        this.BackingStore.set("invitedUserType", value);
     }
     /**
      * Sets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
      * @param value Value to set for the inviteRedeemUrl property.
      */
     public void setInviteRedeemUrl(@jakarta.annotation.Nullable final String value) {
-        this.inviteRedeemUrl = value;
+        this.BackingStore.set("inviteRedeemUrl", value);
     }
     /**
      * Sets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
      * @param value Value to set for the inviteRedirectUrl property.
      */
     public void setInviteRedirectUrl(@jakarta.annotation.Nullable final String value) {
-        this.inviteRedirectUrl = value;
+        this.BackingStore.set("inviteRedirectUrl", value);
     }
     /**
      * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
      * @param value Value to set for the resetRedemption property.
      */
     public void setResetRedemption(@jakarta.annotation.Nullable final Boolean value) {
-        this.resetRedemption = value;
+        this.BackingStore.set("resetRedemption", value);
     }
     /**
      * Sets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
      * @param value Value to set for the sendInvitationMessage property.
      */
     public void setSendInvitationMessage(@jakarta.annotation.Nullable final Boolean value) {
-        this.sendInvitationMessage = value;
+        this.BackingStore.set("sendInvitationMessage", value);
     }
     /**
      * Sets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

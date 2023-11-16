@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpSegmentConfiguration extends SegmentConfiguration implements Parsable {
     /**
-     * The applicationSegments property
-     */
-    private java.util.List<IpApplicationSegment> applicationSegments;
-    /**
-     * Instantiates a new ipSegmentConfiguration and sets the default values.
+     * Instantiates a new IpSegmentConfiguration and sets the default values.
      */
     public IpSegmentConfiguration() {
         super();
@@ -22,7 +18,7 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipSegmentConfiguration
+     * @return a IpSegmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IpSegmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
     }
     /**
      * Gets the applicationSegments property value. The applicationSegments property
-     * @return a ipApplicationSegment
+     * @return a java.util.List<IpApplicationSegment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpApplicationSegment> getApplicationSegments() {
-        return this.applicationSegments;
+        return this.BackingStore.get("applicationSegments");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
      * @param value Value to set for the applicationSegments property.
      */
     public void setApplicationSegments(@jakarta.annotation.Nullable final java.util.List<IpApplicationSegment> value) {
-        this.applicationSegments = value;
+        this.BackingStore.set("applicationSegments", value);
     }
 }

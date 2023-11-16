@@ -11,51 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostPort extends Entity implements Parsable {
     /**
-     * The banners property
-     */
-    private java.util.List<HostPortBanner> banners;
-    /**
-     * The firstSeenDateTime property
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The host property
-     */
-    private Host host;
-    /**
-     * The lastScanDateTime property
-     */
-    private OffsetDateTime lastScanDateTime;
-    /**
-     * The lastSeenDateTime property
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The mostRecentSslCertificate property
-     */
-    private SslCertificate mostRecentSslCertificate;
-    /**
-     * The port property
-     */
-    private Integer port;
-    /**
-     * The protocol property
-     */
-    private HostPortProtocol protocol;
-    /**
-     * The services property
-     */
-    private java.util.List<HostPortComponent> services;
-    /**
-     * The status property
-     */
-    private HostPortStatus status;
-    /**
-     * The timesObserved property
-     */
-    private Integer timesObserved;
-    /**
-     * Instantiates a new hostPort and sets the default values.
+     * Instantiates a new HostPort and sets the default values.
      */
     public HostPort() {
         super();
@@ -63,7 +19,7 @@ public class HostPort extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPort
+     * @return a HostPort
      */
     @jakarta.annotation.Nonnull
     public static HostPort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,12 +27,12 @@ public class HostPort extends Entity implements Parsable {
         return new HostPort();
     }
     /**
-     * Gets the banners property value. The banners property
-     * @return a hostPortBanner
+     * Gets the banners property value. The hostPortBanners retrieved from scanning the port.
+     * @return a java.util.List<HostPortBanner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortBanner> getBanners() {
-        return this.banners;
+        return this.BackingStore.get("banners");
     }
     /**
      * The deserialization information for the current model
@@ -99,84 +55,84 @@ public class HostPort extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
-        return this.host;
+        return this.BackingStore.get("host");
     }
     /**
-     * Gets the lastScanDateTime property value. The lastScanDateTime property
+     * Gets the lastScanDateTime property value. The last date and time when Microsoft Defender Threat Intelligence scanned the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScanDateTime() {
-        return this.lastScanDateTime;
+        return this.BackingStore.get("lastScanDateTime");
     }
     /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Gets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
-     * Gets the mostRecentSslCertificate property value. The mostRecentSslCertificate property
-     * @return a sslCertificate
+     * Gets the mostRecentSslCertificate property value. The most recent sslCertificate used to communicate on the port.
+     * @return a SslCertificate
      */
     @jakarta.annotation.Nullable
     public SslCertificate getMostRecentSslCertificate() {
-        return this.mostRecentSslCertificate;
+        return this.BackingStore.get("mostRecentSslCertificate");
     }
     /**
-     * Gets the port property value. The port property
-     * @return a integer
+     * Gets the port property value. The numerical identifier of the port which is standardized across the internet.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
-        return this.port;
+        return this.BackingStore.get("port");
     }
     /**
-     * Gets the protocol property value. The protocol property
-     * @return a hostPortProtocol
+     * Gets the protocol property value. The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
+     * @return a HostPortProtocol
      */
     @jakarta.annotation.Nullable
     public HostPortProtocol getProtocol() {
-        return this.protocol;
+        return this.BackingStore.get("protocol");
     }
     /**
-     * Gets the services property value. The services property
-     * @return a hostPortComponent
+     * Gets the services property value. The hostPortComponents retrieved from scanning the port.
+     * @return a java.util.List<HostPortComponent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortComponent> getServices() {
-        return this.services;
+        return this.BackingStore.get("services");
     }
     /**
-     * Gets the status property value. The status property
-     * @return a hostPortStatus
+     * Gets the status property value. The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
+     * @return a HostPortStatus
      */
     @jakarta.annotation.Nullable
     public HostPortStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
-     * Gets the timesObserved property value. The timesObserved property
-     * @return a integer
+     * Gets the timesObserved property value. The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPort in all its scans.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimesObserved() {
-        return this.timesObserved;
+        return this.BackingStore.get("timesObserved");
     }
     /**
      * Serializes information the current object
@@ -198,80 +154,80 @@ public class HostPort extends Entity implements Parsable {
         writer.writeIntegerValue("timesObserved", this.getTimesObserved());
     }
     /**
-     * Sets the banners property value. The banners property
+     * Sets the banners property value. The hostPortBanners retrieved from scanning the port.
      * @param value Value to set for the banners property.
      */
     public void setBanners(@jakarta.annotation.Nullable final java.util.List<HostPortBanner> value) {
-        this.banners = value;
+        this.BackingStore.set("banners", value);
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the host property value. The host property
      * @param value Value to set for the host property.
      */
     public void setHost(@jakarta.annotation.Nullable final Host value) {
-        this.host = value;
+        this.BackingStore.set("host", value);
     }
     /**
-     * Sets the lastScanDateTime property value. The lastScanDateTime property
+     * Sets the lastScanDateTime property value. The last date and time when Microsoft Defender Threat Intelligence scanned the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastScanDateTime property.
      */
     public void setLastScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastScanDateTime = value;
+        this.BackingStore.set("lastScanDateTime", value);
     }
     /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Sets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPort. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
-     * Sets the mostRecentSslCertificate property value. The mostRecentSslCertificate property
+     * Sets the mostRecentSslCertificate property value. The most recent sslCertificate used to communicate on the port.
      * @param value Value to set for the mostRecentSslCertificate property.
      */
     public void setMostRecentSslCertificate(@jakarta.annotation.Nullable final SslCertificate value) {
-        this.mostRecentSslCertificate = value;
+        this.BackingStore.set("mostRecentSslCertificate", value);
     }
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. The numerical identifier of the port which is standardized across the internet.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
-        this.port = value;
+        this.BackingStore.set("port", value);
     }
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. The general protocol used to scan the port. The possible values are: tcp, udp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final HostPortProtocol value) {
-        this.protocol = value;
+        this.BackingStore.set("protocol", value);
     }
     /**
-     * Sets the services property value. The services property
+     * Sets the services property value. The hostPortComponents retrieved from scanning the port.
      * @param value Value to set for the services property.
      */
     public void setServices(@jakarta.annotation.Nullable final java.util.List<HostPortComponent> value) {
-        this.services = value;
+        this.BackingStore.set("services", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the port. The possible values are: open, filtered, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final HostPortStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
-     * Sets the timesObserved property value. The timesObserved property
+     * Sets the timesObserved property value. The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPort in all its scans.
      * @param value Value to set for the timesObserved property.
      */
     public void setTimesObserved(@jakarta.annotation.Nullable final Integer value) {
-        this.timesObserved = value;
+        this.BackingStore.set("timesObserved", value);
     }
 }

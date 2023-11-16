@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkEnrollmentProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AndroidForWorkEnrollmentProfile> value;
-    /**
-     * Instantiates a new androidForWorkEnrollmentProfileCollectionResponse and sets the default values.
+     * Instantiates a new AndroidForWorkEnrollmentProfileCollectionResponse and sets the default values.
      */
     public AndroidForWorkEnrollmentProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AndroidForWorkEnrollmentProfileCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkEnrollmentProfileCollectionResponse
+     * @return a AndroidForWorkEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkEnrollmentProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AndroidForWorkEnrollmentProfileCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a androidForWorkEnrollmentProfile
+     * @return a java.util.List<AndroidForWorkEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkEnrollmentProfile> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AndroidForWorkEnrollmentProfileCollectionResponse extends BaseColle
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AndroidForWorkEnrollmentProfile> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

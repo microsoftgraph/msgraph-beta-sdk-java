@@ -4,53 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WebApplication implements AdditionalDataHolder, Parsable {
+public class WebApplication implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    private BackingStore BackingStore;
     /**
-     * Home page or landing page of the application.
-     */
-    private String homePageUrl;
-    /**
-     * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
-     */
-    private ImplicitGrantSettings implicitGrantSettings;
-    /**
-     * Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
-     */
-    private String logoutUrl;
-    /**
-     * The oauth2AllowImplicitFlow property
-     */
-    private Boolean oauth2AllowImplicitFlow;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
-     */
-    private java.util.List<String> redirectUris;
-    /**
-     * Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
-     */
-    private java.util.List<RedirectUriSettings> redirectUriSettings;
-    /**
-     * Instantiates a new webApplication and sets the default values.
+     * Instantiates a new WebApplication and sets the default values.
      */
     public WebApplication() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webApplication
+     * @return a WebApplication
      */
     @jakarta.annotation.Nonnull
     public static WebApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,12 +34,25 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         return new WebApplication();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -83,59 +72,59 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the homePageUrl property value. Home page or landing page of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomePageUrl() {
-        return this.homePageUrl;
+        return this.BackingStore.get("homePageUrl");
     }
     /**
      * Gets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
-     * @return a implicitGrantSettings
+     * @return a ImplicitGrantSettings
      */
     @jakarta.annotation.Nullable
     public ImplicitGrantSettings getImplicitGrantSettings() {
-        return this.implicitGrantSettings;
+        return this.BackingStore.get("implicitGrantSettings");
     }
     /**
      * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogoutUrl() {
-        return this.logoutUrl;
+        return this.BackingStore.get("logoutUrl");
     }
     /**
      * Gets the oauth2AllowImplicitFlow property value. The oauth2AllowImplicitFlow property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOauth2AllowImplicitFlow() {
-        return this.oauth2AllowImplicitFlow;
+        return this.BackingStore.get("oauth2AllowImplicitFlow");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRedirectUris() {
-        return this.redirectUris;
+        return this.BackingStore.get("redirectUris");
     }
     /**
      * Gets the redirectUriSettings property value. Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
-     * @return a redirectUriSettings
+     * @return a java.util.List<RedirectUriSettings>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RedirectUriSettings> getRedirectUriSettings() {
-        return this.redirectUriSettings;
+        return this.BackingStore.get("redirectUriSettings");
     }
     /**
      * Serializes information the current object
@@ -153,59 +142,67 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the homePageUrl property value. Home page or landing page of the application.
      * @param value Value to set for the homePageUrl property.
      */
     public void setHomePageUrl(@jakarta.annotation.Nullable final String value) {
-        this.homePageUrl = value;
+        this.BackingStore.set("homePageUrl", value);
     }
     /**
      * Sets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      * @param value Value to set for the implicitGrantSettings property.
      */
     public void setImplicitGrantSettings(@jakarta.annotation.Nullable final ImplicitGrantSettings value) {
-        this.implicitGrantSettings = value;
+        this.BackingStore.set("implicitGrantSettings", value);
     }
     /**
      * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
      * @param value Value to set for the logoutUrl property.
      */
     public void setLogoutUrl(@jakarta.annotation.Nullable final String value) {
-        this.logoutUrl = value;
+        this.BackingStore.set("logoutUrl", value);
     }
     /**
      * Sets the oauth2AllowImplicitFlow property value. The oauth2AllowImplicitFlow property
      * @param value Value to set for the oauth2AllowImplicitFlow property.
      */
     public void setOauth2AllowImplicitFlow(@jakarta.annotation.Nullable final Boolean value) {
-        this.oauth2AllowImplicitFlow = value;
+        this.BackingStore.set("oauth2AllowImplicitFlow", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @param value Value to set for the redirectUris property.
      */
     public void setRedirectUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.redirectUris = value;
+        this.BackingStore.set("redirectUris", value);
     }
     /**
      * Sets the redirectUriSettings property value. Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
      * @param value Value to set for the redirectUriSettings property.
      */
     public void setRedirectUriSettings(@jakarta.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
-        this.redirectUriSettings = value;
+        this.BackingStore.set("redirectUriSettings", value);
     }
 }

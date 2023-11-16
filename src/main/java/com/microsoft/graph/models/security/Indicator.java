@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Indicator extends Entity implements Parsable {
     /**
-     * The artifact property
-     */
-    private Artifact artifact;
-    /**
-     * The source property
-     */
-    private IndicatorSource source;
-    /**
-     * Instantiates a new indicator and sets the default values.
+     * Instantiates a new Indicator and sets the default values.
      */
     public Indicator() {
         super();
@@ -26,7 +18,7 @@ public class Indicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a indicator
+     * @return a Indicator
      */
     @jakarta.annotation.Nonnull
     public static Indicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +35,11 @@ public class Indicator extends Entity implements Parsable {
     }
     /**
      * Gets the artifact property value. The artifact property
-     * @return a artifact
+     * @return a Artifact
      */
     @jakarta.annotation.Nullable
     public Artifact getArtifact() {
-        return this.artifact;
+        return this.BackingStore.get("artifact");
     }
     /**
      * The deserialization information for the current model
@@ -62,11 +54,11 @@ public class Indicator extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a indicatorSource
+     * @return a IndicatorSource
      */
     @jakarta.annotation.Nullable
     public IndicatorSource getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Serializes information the current object
@@ -83,13 +75,13 @@ public class Indicator extends Entity implements Parsable {
      * @param value Value to set for the artifact property.
      */
     public void setArtifact(@jakarta.annotation.Nullable final Artifact value) {
-        this.artifact = value;
+        this.BackingStore.set("artifact", value);
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final IndicatorSource value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
 }
