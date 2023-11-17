@@ -56,7 +56,7 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: ${{ matrix.language }}
-          threads: 4
+          threads: 16
           #ram: 8384
         
           # If you wish to specify custom queries, you can do so here or in a config file.
