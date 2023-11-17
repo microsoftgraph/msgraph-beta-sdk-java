@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements Parsable {
     /**
-     * Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     */
-    private String orderHint;
-    /**
-     * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
+     * Instantiates a new PlannerProgressTaskBoardTaskFormat and sets the default values.
      */
     public PlannerProgressTaskBoardTaskFormat() {
         super();
@@ -21,7 +17,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerProgressTaskBoardTaskFormat
+     * @return a PlannerProgressTaskBoardTaskFormat
      */
     @jakarta.annotation.Nonnull
     public static PlannerProgressTaskBoardTaskFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
     }
     /**
      * Gets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
-        return this.orderHint;
+        return this.backingStore.get("orderHint");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
-        this.orderHint = value;
+        this.backingStore.set("orderHint", value);
     }
 }

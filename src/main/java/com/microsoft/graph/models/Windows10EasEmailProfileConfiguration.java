@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfigurationBase implements Parsable {
     /**
-     * Account name.
-     */
-    private String accountName;
-    /**
-     * Possible values for email sync duration.
-     */
-    private EmailSyncDuration durationOfEmailToSync;
-    /**
-     * Possible values for username source or email source.
-     */
-    private UserEmailSource emailAddressSource;
-    /**
-     * Possible values for email sync schedule.
-     */
-    private EmailSyncSchedule emailSyncSchedule;
-    /**
-     * Exchange location that (URL) that the native mail app connects to.
-     */
-    private String hostName;
-    /**
-     * Indicates whether or not to use SSL.
-     */
-    private Boolean requireSsl;
-    /**
-     * Whether or not to sync the calendar.
-     */
-    private Boolean syncCalendar;
-    /**
-     * Whether or not to sync contacts.
-     */
-    private Boolean syncContacts;
-    /**
-     * Whether or not to sync tasks.
-     */
-    private Boolean syncTasks;
-    /**
-     * Instantiates a new windows10EasEmailProfileConfiguration and sets the default values.
+     * Instantiates a new Windows10EasEmailProfileConfiguration and sets the default values.
      */
     public Windows10EasEmailProfileConfiguration() {
         super();
@@ -57,7 +21,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10EasEmailProfileConfiguration
+     * @return a Windows10EasEmailProfileConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10EasEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,35 +30,35 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
     }
     /**
      * Gets the accountName property value. Account name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.backingStore.get("accountName");
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this.durationOfEmailToSync;
+        return this.backingStore.get("durationOfEmailToSync");
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this.emailAddressSource;
+        return this.backingStore.get("emailAddressSource");
     }
     /**
      * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
-     * @return a emailSyncSchedule
+     * @return a EmailSyncSchedule
      */
     @jakarta.annotation.Nullable
     public EmailSyncSchedule getEmailSyncSchedule() {
-        return this.emailSyncSchedule;
+        return this.backingStore.get("emailSyncSchedule");
     }
     /**
      * The deserialization information for the current model
@@ -116,43 +80,43 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
-        return this.hostName;
+        return this.backingStore.get("hostName");
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this.requireSsl;
+        return this.backingStore.get("requireSsl");
     }
     /**
      * Gets the syncCalendar property value. Whether or not to sync the calendar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncCalendar() {
-        return this.syncCalendar;
+        return this.backingStore.get("syncCalendar");
     }
     /**
      * Gets the syncContacts property value. Whether or not to sync contacts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncContacts() {
-        return this.syncContacts;
+        return this.backingStore.get("syncContacts");
     }
     /**
      * Gets the syncTasks property value. Whether or not to sync tasks.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncTasks() {
-        return this.syncTasks;
+        return this.backingStore.get("syncTasks");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.backingStore.set("accountName", value);
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      */
     public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
-        this.durationOfEmailToSync = value;
+        this.backingStore.set("durationOfEmailToSync", value);
     }
     /**
      * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      */
     public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
-        this.emailAddressSource = value;
+        this.backingStore.set("emailAddressSource", value);
     }
     /**
      * Sets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @param value Value to set for the emailSyncSchedule property.
      */
     public void setEmailSyncSchedule(@jakarta.annotation.Nullable final EmailSyncSchedule value) {
-        this.emailSyncSchedule = value;
+        this.backingStore.set("emailSyncSchedule", value);
     }
     /**
      * Sets the hostName property value. Exchange location that (URL) that the native mail app connects to.
      * @param value Value to set for the hostName property.
      */
     public void setHostName(@jakarta.annotation.Nullable final String value) {
-        this.hostName = value;
+        this.backingStore.set("hostName", value);
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      */
     public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSsl = value;
+        this.backingStore.set("requireSsl", value);
     }
     /**
      * Sets the syncCalendar property value. Whether or not to sync the calendar.
      * @param value Value to set for the syncCalendar property.
      */
     public void setSyncCalendar(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncCalendar = value;
+        this.backingStore.set("syncCalendar", value);
     }
     /**
      * Sets the syncContacts property value. Whether or not to sync contacts.
      * @param value Value to set for the syncContacts property.
      */
     public void setSyncContacts(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncContacts = value;
+        this.backingStore.set("syncContacts", value);
     }
     /**
      * Sets the syncTasks property value. Whether or not to sync tasks.
      * @param value Value to set for the syncTasks property.
      */
     public void setSyncTasks(@jakarta.annotation.Nullable final Boolean value) {
-        this.syncTasks = value;
+        this.backingStore.set("syncTasks", value);
     }
 }

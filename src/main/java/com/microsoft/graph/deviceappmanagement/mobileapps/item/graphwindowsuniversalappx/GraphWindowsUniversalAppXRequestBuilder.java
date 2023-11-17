@@ -1,5 +1,10 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.committedcontainedapps.CommittedContainedAppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.contentversions.ContentVersionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +26,41 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the committedContainedApps property of the microsoft.graph.windowsUniversalAppX entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CommittedContainedAppsRequestBuilder committedContainedApps() {
+        return new CommittedContainedAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ContentVersionsRequestBuilder contentVersions() {
+        return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphWindowsUniversalAppXRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,24 +78,24 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
-     * @return a CompletableFuture of windowsUniversalAppX
+     * @return a WindowsUniversalAppX
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> get() {
+    @jakarta.annotation.Nullable
+    public WindowsUniversalAppX get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsUniversalAppX
+     * @return a WindowsUniversalAppX
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsUniversalAppX get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsUniversalAppX::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsUniversalAppX::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsUniversalAppX
@@ -72,24 +112,15 @@ public class GraphWindowsUniversalAppXRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphWindowsUniversalAppXRequestBuilder
+     * @return a GraphWindowsUniversalAppXRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsUniversalAppXRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

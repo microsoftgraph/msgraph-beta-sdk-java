@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedEBookAssignment extends Entity implements Parsable {
     /**
-     * Possible values for the install intent chosen by the admin.
-     */
-    private InstallIntent installIntent;
-    /**
-     * The assignment target for eBook.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new managedEBookAssignment and sets the default values.
+     * Instantiates a new ManagedEBookAssignment and sets the default values.
      */
     public ManagedEBookAssignment() {
         super();
@@ -28,7 +20,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedEBookAssignment
+     * @return a ManagedEBookAssignment
      */
     @jakarta.annotation.Nonnull
     public static ManagedEBookAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,19 +47,19 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
-     * @return a installIntent
+     * @return a InstallIntent
      */
     @jakarta.annotation.Nullable
     public InstallIntent getInstallIntent() {
-        return this.installIntent;
+        return this.backingStore.get("installIntent");
     }
     /**
      * Gets the target property value. The assignment target for eBook.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -84,13 +76,13 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the installIntent property.
      */
     public void setInstallIntent(@jakarta.annotation.Nullable final InstallIntent value) {
-        this.installIntent = value;
+        this.backingStore.set("installIntent", value);
     }
     /**
      * Sets the target property value. The assignment target for eBook.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

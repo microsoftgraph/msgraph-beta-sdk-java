@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /**
-     * The DateTime when device compliance grace period expires
-     */
-    private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /**
-     * Device name of the DevicePolicyStatus.
-     */
-    private String deviceDisplayName;
-    /**
-     * The device id that is being reported.
-     */
-    private String deviceId;
-    /**
-     * The device model that is being reported
-     */
-    private String deviceModel;
-    /**
-     * The installStatus property
-     */
-    private IosUpdatesInstallStatus installStatus;
-    /**
-     * Last modified date time of the policy report.
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * The device version that is being reported.
-     */
-    private String osVersion;
-    /**
-     * Platform of the device that is being reported
-     */
-    private Integer platform;
-    /**
-     * The status property
-     */
-    private ComplianceStatus status;
-    /**
-     * The User id that is being reported.
-     */
-    private String userId;
-    /**
-     * The User Name that is being reported
-     */
-    private String userName;
-    /**
-     * UserPrincipalName.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new iosUpdateDeviceStatus and sets the default values.
+     * Instantiates a new IosUpdateDeviceStatus and sets the default values.
      */
     public IosUpdateDeviceStatus() {
         super();
@@ -66,7 +18,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosUpdateDeviceStatus
+     * @return a IosUpdateDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public static IosUpdateDeviceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,31 +31,31 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this.complianceGracePeriodExpirationDateTime;
+        return this.backingStore.get("complianceGracePeriodExpirationDateTime");
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.backingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. The device id that is being reported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * The deserialization information for the current model
@@ -128,11 +80,11 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the installStatus property value. The installStatus property
-     * @return a iosUpdatesInstallStatus
+     * @return a IosUpdatesInstallStatus
      */
     @jakarta.annotation.Nullable
     public IosUpdatesInstallStatus getInstallStatus() {
-        return this.installStatus;
+        return this.backingStore.get("installStatus");
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
@@ -140,55 +92,55 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.backingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the osVersion property value. The device version that is being reported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the platform property value. Platform of the device that is being reported
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPlatform() {
-        return this.platform;
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the status property value. The status property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the userId property value. The User id that is being reported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      */
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.complianceGracePeriodExpirationDateTime = value;
+        this.backingStore.set("complianceGracePeriodExpirationDateTime", value);
     }
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.backingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. The device id that is being reported.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the installStatus property value. The installStatus property
      * @param value Value to set for the installStatus property.
      */
     public void setInstallStatus(@jakarta.annotation.Nullable final IosUpdatesInstallStatus value) {
-        this.installStatus = value;
+        this.backingStore.set("installStatus", value);
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.backingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the osVersion property value. The device version that is being reported.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the platform property value. Platform of the device that is being reported
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final Integer value) {
-        this.platform = value;
+        this.backingStore.set("platform", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the userId property value. The User id that is being reported.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

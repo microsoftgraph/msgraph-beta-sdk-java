@@ -13,19 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsMetricHistory extends Entity implements Parsable {
     /**
-     * The Intune device id of the device.
-     */
-    private String deviceId;
-    /**
-     * The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
-     */
-    private OffsetDateTime metricDateTime;
-    /**
-     * The user experience analytics metric type.
-     */
-    private String metricType;
-    /**
-     * Instantiates a new userExperienceAnalyticsMetricHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsMetricHistory and sets the default values.
      */
     public UserExperienceAnalyticsMetricHistory() {
         super();
@@ -33,7 +21,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsMetricHistory
+     * @return a UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsMetricHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -66,15 +54,15 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMetricDateTime() {
-        return this.metricDateTime;
+        return this.backingStore.get("metricDateTime");
     }
     /**
      * Gets the metricType property value. The user experience analytics metric type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetricType() {
-        return this.metricType;
+        return this.backingStore.get("metricType");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @param value Value to set for the metricDateTime property.
      */
     public void setMetricDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.metricDateTime = value;
+        this.backingStore.set("metricDateTime", value);
     }
     /**
      * Sets the metricType property value. The user experience analytics metric type.
      * @param value Value to set for the metricType property.
      */
     public void setMetricType(@jakarta.annotation.Nullable final String value) {
-        this.metricType = value;
+        this.backingStore.set("metricType", value);
     }
 }

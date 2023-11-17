@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     /**
-     * The trusted certificate.
-     */
-    private byte[] certificate;
-    /**
-     * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
-     */
-    private Boolean isRootAuthority;
-    /**
-     * The issuer of the trusted certificate.
-     */
-    private String issuer;
-    /**
-     * The subject key identifier of the trusted certificate.
-     */
-    private String issuerSubjectKeyIdentifier;
-    /**
-     * Instantiates a new certificateAuthorityAsEntity and sets the default values.
+     * Instantiates a new CertificateAuthorityAsEntity and sets the default values.
      */
     public CertificateAuthorityAsEntity() {
         super();
@@ -33,7 +17,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateAuthorityAsEntity
+     * @return a CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public static CertificateAuthorityAsEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +26,11 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the certificate property value. The trusted certificate.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getCertificate() {
-        return this.certificate;
+        return this.backingStore.get("certificate");
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +47,27 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the isRootAuthority property value. Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRootAuthority() {
-        return this.isRootAuthority;
+        return this.backingStore.get("isRootAuthority");
     }
     /**
      * Gets the issuer property value. The issuer of the trusted certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
-        return this.issuer;
+        return this.backingStore.get("issuer");
     }
     /**
      * Gets the issuerSubjectKeyIdentifier property value. The subject key identifier of the trusted certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerSubjectKeyIdentifier() {
-        return this.issuerSubjectKeyIdentifier;
+        return this.backingStore.get("issuerSubjectKeyIdentifier");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
-        this.certificate = value;
+        this.backingStore.set("certificate", value);
     }
     /**
      * Sets the isRootAuthority property value. Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      * @param value Value to set for the isRootAuthority property.
      */
     public void setIsRootAuthority(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRootAuthority = value;
+        this.backingStore.set("isRootAuthority", value);
     }
     /**
      * Sets the issuer property value. The issuer of the trusted certificate.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
-        this.issuer = value;
+        this.backingStore.set("issuer", value);
     }
     /**
      * Sets the issuerSubjectKeyIdentifier property value. The subject key identifier of the trusted certificate.
      * @param value Value to set for the issuerSubjectKeyIdentifier property.
      */
     public void setIssuerSubjectKeyIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.issuerSubjectKeyIdentifier = value;
+        this.backingStore.set("issuerSubjectKeyIdentifier", value);
     }
 }

@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSharedCookie extends Entity implements Parsable {
     /**
-     * The comment for the shared cookie.
-     */
-    private String comment;
-    /**
-     * The date and time when the shared cookie was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The date and time when the shared cookie was deleted.
-     */
-    private OffsetDateTime deletedDateTime;
-    /**
-     * The name of the cookie.
-     */
-    private String displayName;
-    /**
-     * The history of modifications applied to the cookie.
-     */
-    private java.util.List<BrowserSharedCookieHistory> history;
-    /**
-     * Controls whether a cookie is a host-only or domain cookie.
-     */
-    private Boolean hostOnly;
-    /**
-     * The URL of the cookie.
-     */
-    private String hostOrDomain;
-    /**
-     * The user who last modified the cookie.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time when the cookie was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The path of the cookie.
-     */
-    private String path;
-    /**
-     * The sourceEnvironment property
-     */
-    private BrowserSharedCookieSourceEnvironment sourceEnvironment;
-    /**
-     * The status property
-     */
-    private BrowserSharedCookieStatus status;
-    /**
-     * Instantiates a new browserSharedCookie and sets the default values.
+     * Instantiates a new BrowserSharedCookie and sets the default values.
      */
     public BrowserSharedCookie() {
         super();
@@ -66,7 +18,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSharedCookie
+     * @return a BrowserSharedCookie
      */
     @jakarta.annotation.Nonnull
     public static BrowserSharedCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,11 +27,11 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment for the shared cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the shared cookie was created.
@@ -87,7 +39,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deletedDateTime property value. The date and time when the shared cookie was deleted.
@@ -95,15 +47,15 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this.deletedDateTime;
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * Gets the displayName property value. The name of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -128,35 +80,35 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the cookie.
-     * @return a browserSharedCookieHistory
+     * @return a java.util.List<BrowserSharedCookieHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookieHistory> getHistory() {
-        return this.history;
+        return this.backingStore.get("history");
     }
     /**
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
-        return this.hostOnly;
+        return this.backingStore.get("hostOnly");
     }
     /**
      * Gets the hostOrDomain property value. The URL of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostOrDomain() {
-        return this.hostOrDomain;
+        return this.backingStore.get("hostOrDomain");
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the cookie.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
@@ -164,31 +116,31 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the path property value. The path of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {
-        return this.path;
+        return this.backingStore.get("path");
     }
     /**
      * Gets the sourceEnvironment property value. The sourceEnvironment property
-     * @return a browserSharedCookieSourceEnvironment
+     * @return a BrowserSharedCookieSourceEnvironment
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
-        return this.sourceEnvironment;
+        return this.backingStore.get("sourceEnvironment");
     }
     /**
      * Gets the status property value. The status property
-     * @return a browserSharedCookieStatus
+     * @return a BrowserSharedCookieStatus
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the shared cookie was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deletedDateTime = value;
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the displayName property value. The name of the cookie.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the history property value. The history of modifications applied to the cookie.
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookieHistory> value) {
-        this.history = value;
+        this.backingStore.set("history", value);
     }
     /**
      * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param value Value to set for the hostOnly property.
      */
     public void setHostOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.hostOnly = value;
+        this.backingStore.set("hostOnly", value);
     }
     /**
      * Sets the hostOrDomain property value. The URL of the cookie.
      * @param value Value to set for the hostOrDomain property.
      */
     public void setHostOrDomain(@jakarta.annotation.Nullable final String value) {
-        this.hostOrDomain = value;
+        this.backingStore.set("hostOrDomain", value);
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the cookie.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the path property value. The path of the cookie.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
-        this.path = value;
+        this.backingStore.set("path", value);
     }
     /**
      * Sets the sourceEnvironment property value. The sourceEnvironment property
      * @param value Value to set for the sourceEnvironment property.
      */
     public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
-        this.sourceEnvironment = value;
+        this.backingStore.set("sourceEnvironment", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final BrowserSharedCookieStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

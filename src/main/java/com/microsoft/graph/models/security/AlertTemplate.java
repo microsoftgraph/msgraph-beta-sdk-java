@@ -4,57 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AlertTemplate implements AdditionalDataHolder, Parsable {
+public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The category property
-     */
-    private String category;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The impactedAssets property
-     */
-    private java.util.List<ImpactedAsset> impactedAssets;
-    /**
-     * The mitreTechniques property
-     */
-    private java.util.List<String> mitreTechniques;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The recommendedActions property
-     */
-    private String recommendedActions;
-    /**
-     * The severity property
-     */
-    private AlertSeverity severity;
-    /**
-     * The title property
-     */
-    private String title;
-    /**
-     * Instantiates a new alertTemplate and sets the default values.
+     * Instantiates a new AlertTemplate and sets the default values.
      */
     public AlertTemplate() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertTemplate
+     * @return a AlertTemplate
      */
     @jakarta.annotation.Nonnull
     public static AlertTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,28 +35,41 @@ public class AlertTemplate implements AdditionalDataHolder, Parsable {
         return new AlertTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the category property value. The category property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.backingStore.get("category");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -104,51 +90,51 @@ public class AlertTemplate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the impactedAssets property value. The impactedAssets property
-     * @return a impactedAsset
+     * @return a java.util.List<ImpactedAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedAsset> getImpactedAssets() {
-        return this.impactedAssets;
+        return this.backingStore.get("impactedAssets");
     }
     /**
      * Gets the mitreTechniques property value. The mitreTechniques property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMitreTechniques() {
-        return this.mitreTechniques;
+        return this.backingStore.get("mitreTechniques");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recommendedActions property value. The recommendedActions property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedActions() {
-        return this.recommendedActions;
+        return this.backingStore.get("recommendedActions");
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
-        return this.severity;
+        return this.backingStore.get("severity");
     }
     /**
      * Gets the title property value. The title property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -167,66 +153,74 @@ public class AlertTemplate implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the impactedAssets property value. The impactedAssets property
      * @param value Value to set for the impactedAssets property.
      */
     public void setImpactedAssets(@jakarta.annotation.Nullable final java.util.List<ImpactedAsset> value) {
-        this.impactedAssets = value;
+        this.backingStore.set("impactedAssets", value);
     }
     /**
      * Sets the mitreTechniques property value. The mitreTechniques property
      * @param value Value to set for the mitreTechniques property.
      */
     public void setMitreTechniques(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.mitreTechniques = value;
+        this.backingStore.set("mitreTechniques", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recommendedActions property value. The recommendedActions property
      * @param value Value to set for the recommendedActions property.
      */
     public void setRecommendedActions(@jakarta.annotation.Nullable final String value) {
-        this.recommendedActions = value;
+        this.backingStore.set("recommendedActions", value);
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
-        this.severity = value;
+        this.backingStore.set("severity", value);
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

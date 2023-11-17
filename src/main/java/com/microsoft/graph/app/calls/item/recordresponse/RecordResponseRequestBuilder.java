@@ -36,33 +36,33 @@ public class RecordResponseRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/recordResponse", rawUrl);
     }
     /**
-     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action is not intended to record the entire call. The maximum length of recording is 2 minutes. The recording is not saved permanently by the by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification.
+     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action isn't intended to record the entire call. The maximum length of recording is 2 minutes. The recording isn't saved permanently by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of recordOperation
+     * @return a RecordOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-record?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> post(@jakarta.annotation.Nonnull final RecordResponsePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public RecordOperation post(@jakarta.annotation.Nonnull final RecordResponsePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action is not intended to record the entire call. The maximum length of recording is 2 minutes. The recording is not saved permanently by the by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification.
+     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action isn't intended to record the entire call. The maximum length of recording is 2 minutes. The recording isn't saved permanently by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recordOperation
+     * @return a RecordOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-record?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> post(@jakarta.annotation.Nonnull final RecordResponsePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RecordOperation post(@jakarta.annotation.Nonnull final RecordResponsePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RecordOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RecordOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action is not intended to record the entire call. The maximum length of recording is 2 minutes. The recording is not saved permanently by the by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification.
+     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action isn't intended to record the entire call. The maximum length of recording is 2 minutes. The recording isn't saved permanently by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class RecordResponseRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action is not intended to record the entire call. The maximum length of recording is 2 minutes. The recording is not saved permanently by the by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification.
+     * Record a short audio response from the caller. A bot can use this to capture a voice response from a caller after they are prompted for a response. For more information about how to handle operations, see commsOperation This action isn't intended to record the entire call. The maximum length of recording is 2 minutes. The recording isn't saved permanently by the Cloud Communications Platform and is discarded shortly after the call ends. The bot must download the recording promptly after the recording operation finishes by using the recordingLocation value that's given in the completed notification. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,24 +79,16 @@ public class RecordResponseRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RecordResponsePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a recordResponseRequestBuilder
+     * @return a RecordResponseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RecordResponseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

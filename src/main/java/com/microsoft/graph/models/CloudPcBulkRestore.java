@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     /**
-     * The restorePointDateTime property
-     */
-    private OffsetDateTime restorePointDateTime;
-    /**
-     * The timeRange property
-     */
-    private RestoreTimeRange timeRange;
-    /**
-     * Instantiates a new cloudPcBulkRestore and sets the default values.
+     * Instantiates a new CloudPcBulkRestore and sets the default values.
      */
     public CloudPcBulkRestore() {
         super();
@@ -27,7 +19,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkRestore
+     * @return a CloudPcBulkRestore
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkRestore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,15 +43,15 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
-        return this.restorePointDateTime;
+        return this.backingStore.get("restorePointDateTime");
     }
     /**
      * Gets the timeRange property value. The timeRange property
-     * @return a restoreTimeRange
+     * @return a RestoreTimeRange
      */
     @jakarta.annotation.Nullable
     public RestoreTimeRange getTimeRange() {
-        return this.timeRange;
+        return this.backingStore.get("timeRange");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
      * @param value Value to set for the restorePointDateTime property.
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.restorePointDateTime = value;
+        this.backingStore.set("restorePointDateTime", value);
     }
     /**
      * Sets the timeRange property value. The timeRange property
      * @param value Value to set for the timeRange property.
      */
     public void setTimeRange(@jakarta.annotation.Nullable final RestoreTimeRange value) {
-        this.timeRange = value;
+        this.backingStore.set("timeRange", value);
     }
 }

@@ -45,77 +45,75 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/mobileAppManagementPolicies/{mobilityManagementPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get() {
+    @jakarta.annotation.Nullable
+    public MobilityManagementPolicy get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobilityManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobilityManagementPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobilityManagementPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
+    @jakarta.annotation.Nullable
+    public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobilityManagementPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobilityManagementPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,26 +121,19 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -150,28 +141,19 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +162,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -188,18 +170,10 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
@@ -219,7 +193,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

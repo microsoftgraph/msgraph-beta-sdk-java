@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServerLogCollectionResponse extends Entity implements Parsable {
     /**
-     * The end time of the logs collected
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The time when the log collection is expired
-     */
-    private OffsetDateTime expiryDateTime;
-    /**
-     * The time when the log collection was requested
-     */
-    private OffsetDateTime requestDateTime;
-    /**
-     * ID of the server the log collection is requested upon
-     */
-    private String serverId;
-    /**
-     * The size of the logs in bytes
-     */
-    private Long sizeInBytes;
-    /**
-     * The start time of the logs collected
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Enum type that represent the status of log collection
-     */
-    private MicrosoftTunnelLogCollectionStatus status;
-    /**
-     * Instantiates a new microsoftTunnelServerLogCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelServerLogCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelServerLogCollectionResponse() {
         super();
@@ -49,7 +21,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelServerLogCollectionResponse
+     * @return a MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +34,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * Gets the expiryDateTime property value. The time when the log collection is expired
@@ -70,7 +42,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryDateTime() {
-        return this.expiryDateTime;
+        return this.backingStore.get("expiryDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -94,23 +66,23 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
-        return this.requestDateTime;
+        return this.backingStore.get("requestDateTime");
     }
     /**
      * Gets the serverId property value. ID of the server the log collection is requested upon
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServerId() {
-        return this.serverId;
+        return this.backingStore.get("serverId");
     }
     /**
      * Gets the sizeInBytes property value. The size of the logs in bytes
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSizeInBytes() {
-        return this.sizeInBytes;
+        return this.backingStore.get("sizeInBytes");
     }
     /**
      * Gets the startDateTime property value. The start time of the logs collected
@@ -118,15 +90,15 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. Enum type that represent the status of log collection
-     * @return a microsoftTunnelLogCollectionStatus
+     * @return a MicrosoftTunnelLogCollectionStatus
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelLogCollectionStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the expiryDateTime property value. The time when the log collection is expired
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiryDateTime = value;
+        this.backingStore.set("expiryDateTime", value);
     }
     /**
      * Sets the requestDateTime property value. The time when the log collection was requested
      * @param value Value to set for the requestDateTime property.
      */
     public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestDateTime = value;
+        this.backingStore.set("requestDateTime", value);
     }
     /**
      * Sets the serverId property value. ID of the server the log collection is requested upon
      * @param value Value to set for the serverId property.
      */
     public void setServerId(@jakarta.annotation.Nullable final String value) {
-        this.serverId = value;
+        this.backingStore.set("serverId", value);
     }
     /**
      * Sets the sizeInBytes property value. The size of the logs in bytes
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.sizeInBytes = value;
+        this.backingStore.set("sizeInBytes", value);
     }
     /**
      * Sets the startDateTime property value. The start time of the logs collected
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. Enum type that represent the status of log collection
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final MicrosoftTunnelLogCollectionStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

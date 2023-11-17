@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreAccountEnterpriseSettings extends Entity implements Parsable {
     /**
-     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     */
-    private Boolean androidDeviceOwnerFullyManagedEnrollmentEnabled;
-    /**
-     * Bind status of the tenant with the Google EMM API
-     */
-    private AndroidManagedStoreAccountBindStatus bindStatus;
-    /**
-     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     */
-    private java.util.List<AndroidEnrollmentCompanyCode> companyCodes;
-    /**
-     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-     */
-    private Boolean deviceOwnerManagementEnabled;
-    /**
-     * Android for Work device management targeting type for the account
-     */
-    private AndroidManagedStoreAccountEnrollmentTarget enrollmentTarget;
-    /**
-     * Last completion time for app sync
-     */
-    private OffsetDateTime lastAppSyncDateTime;
-    /**
-     * Sync status of the tenant with the Google EMM API
-     */
-    private AndroidManagedStoreAccountAppSyncStatus lastAppSyncStatus;
-    /**
-     * Last modification time for Android enterprise settings
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Initial scope tags for MGP apps
-     */
-    private java.util.List<String> managedGooglePlayInitialScopeTagIds;
-    /**
-     * Organization name used when onboarding Android Enterprise
-     */
-    private String ownerOrganizationName;
-    /**
-     * Owner UPN that created the enterprise
-     */
-    private String ownerUserPrincipalName;
-    /**
-     * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
-     */
-    private java.util.List<String> targetGroupIds;
-    /**
-     * Instantiates a new androidManagedStoreAccountEnterpriseSettings and sets the default values.
+     * Instantiates a new AndroidManagedStoreAccountEnterpriseSettings and sets the default values.
      */
     public AndroidManagedStoreAccountEnterpriseSettings() {
         super();
@@ -69,7 +21,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAccountEnterpriseSettings
+     * @return a AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,43 +30,43 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     }
     /**
      * Gets the androidDeviceOwnerFullyManagedEnrollmentEnabled property value. Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidDeviceOwnerFullyManagedEnrollmentEnabled() {
-        return this.androidDeviceOwnerFullyManagedEnrollmentEnabled;
+        return this.backingStore.get("androidDeviceOwnerFullyManagedEnrollmentEnabled");
     }
     /**
      * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API
-     * @return a androidManagedStoreAccountBindStatus
+     * @return a AndroidManagedStoreAccountBindStatus
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountBindStatus getBindStatus() {
-        return this.bindStatus;
+        return this.backingStore.get("bindStatus");
     }
     /**
      * Gets the companyCodes property value. Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     * @return a androidEnrollmentCompanyCode
+     * @return a java.util.List<AndroidEnrollmentCompanyCode>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidEnrollmentCompanyCode> getCompanyCodes() {
-        return this.companyCodes;
+        return this.backingStore.get("companyCodes");
     }
     /**
      * Gets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceOwnerManagementEnabled() {
-        return this.deviceOwnerManagementEnabled;
+        return this.backingStore.get("deviceOwnerManagementEnabled");
     }
     /**
      * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
-     * @return a androidManagedStoreAccountEnrollmentTarget
+     * @return a AndroidManagedStoreAccountEnrollmentTarget
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountEnrollmentTarget getEnrollmentTarget() {
-        return this.enrollmentTarget;
+        return this.backingStore.get("enrollmentTarget");
     }
     /**
      * The deserialization information for the current model
@@ -143,15 +95,15 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAppSyncDateTime() {
-        return this.lastAppSyncDateTime;
+        return this.backingStore.get("lastAppSyncDateTime");
     }
     /**
      * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
-     * @return a androidManagedStoreAccountAppSyncStatus
+     * @return a AndroidManagedStoreAccountAppSyncStatus
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountAppSyncStatus getLastAppSyncStatus() {
-        return this.lastAppSyncStatus;
+        return this.backingStore.get("lastAppSyncStatus");
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modification time for Android enterprise settings
@@ -159,39 +111,39 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the managedGooglePlayInitialScopeTagIds property value. Initial scope tags for MGP apps
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedGooglePlayInitialScopeTagIds() {
-        return this.managedGooglePlayInitialScopeTagIds;
+        return this.backingStore.get("managedGooglePlayInitialScopeTagIds");
     }
     /**
      * Gets the ownerOrganizationName property value. Organization name used when onboarding Android Enterprise
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerOrganizationName() {
-        return this.ownerOrganizationName;
+        return this.backingStore.get("ownerOrganizationName");
     }
     /**
      * Gets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerUserPrincipalName() {
-        return this.ownerUserPrincipalName;
+        return this.backingStore.get("ownerUserPrincipalName");
     }
     /**
      * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetGroupIds() {
-        return this.targetGroupIds;
+        return this.backingStore.get("targetGroupIds");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the androidDeviceOwnerFullyManagedEnrollmentEnabled property.
      */
     public void setAndroidDeviceOwnerFullyManagedEnrollmentEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.androidDeviceOwnerFullyManagedEnrollmentEnabled = value;
+        this.backingStore.set("androidDeviceOwnerFullyManagedEnrollmentEnabled", value);
     }
     /**
      * Sets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @param value Value to set for the bindStatus property.
      */
     public void setBindStatus(@jakarta.annotation.Nullable final AndroidManagedStoreAccountBindStatus value) {
-        this.bindStatus = value;
+        this.backingStore.set("bindStatus", value);
     }
     /**
      * Sets the companyCodes property value. Company codes for AndroidManagedStoreAccountEnterpriseSettings
      * @param value Value to set for the companyCodes property.
      */
     public void setCompanyCodes(@jakarta.annotation.Nullable final java.util.List<AndroidEnrollmentCompanyCode> value) {
-        this.companyCodes = value;
+        this.backingStore.set("companyCodes", value);
     }
     /**
      * Sets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
      * @param value Value to set for the deviceOwnerManagementEnabled property.
      */
     public void setDeviceOwnerManagementEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceOwnerManagementEnabled = value;
+        this.backingStore.set("deviceOwnerManagementEnabled", value);
     }
     /**
      * Sets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @param value Value to set for the enrollmentTarget property.
      */
     public void setEnrollmentTarget(@jakarta.annotation.Nullable final AndroidManagedStoreAccountEnrollmentTarget value) {
-        this.enrollmentTarget = value;
+        this.backingStore.set("enrollmentTarget", value);
     }
     /**
      * Sets the lastAppSyncDateTime property value. Last completion time for app sync
      * @param value Value to set for the lastAppSyncDateTime property.
      */
     public void setLastAppSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastAppSyncDateTime = value;
+        this.backingStore.set("lastAppSyncDateTime", value);
     }
     /**
      * Sets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @param value Value to set for the lastAppSyncStatus property.
      */
     public void setLastAppSyncStatus(@jakarta.annotation.Nullable final AndroidManagedStoreAccountAppSyncStatus value) {
-        this.lastAppSyncStatus = value;
+        this.backingStore.set("lastAppSyncStatus", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modification time for Android enterprise settings
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the managedGooglePlayInitialScopeTagIds property value. Initial scope tags for MGP apps
      * @param value Value to set for the managedGooglePlayInitialScopeTagIds property.
      */
     public void setManagedGooglePlayInitialScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.managedGooglePlayInitialScopeTagIds = value;
+        this.backingStore.set("managedGooglePlayInitialScopeTagIds", value);
     }
     /**
      * Sets the ownerOrganizationName property value. Organization name used when onboarding Android Enterprise
      * @param value Value to set for the ownerOrganizationName property.
      */
     public void setOwnerOrganizationName(@jakarta.annotation.Nullable final String value) {
-        this.ownerOrganizationName = value;
+        this.backingStore.set("ownerOrganizationName", value);
     }
     /**
      * Sets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
      * @param value Value to set for the ownerUserPrincipalName property.
      */
     public void setOwnerUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.ownerUserPrincipalName = value;
+        this.backingStore.set("ownerUserPrincipalName", value);
     }
     /**
      * Sets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
      * @param value Value to set for the targetGroupIds property.
      */
     public void setTargetGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.targetGroupIds = value;
+        this.backingStore.set("targetGroupIds", value);
     }
 }

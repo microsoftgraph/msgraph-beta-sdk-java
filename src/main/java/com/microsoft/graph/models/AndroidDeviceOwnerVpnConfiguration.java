@@ -12,55 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration implements Parsable {
     /**
-     * Whether or not to enable always-on VPN connection.
-     */
-    private Boolean alwaysOn;
-    /**
-     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-     */
-    private Boolean alwaysOnLockdown;
-    /**
-     * Android VPN connection type.
-     */
-    private AndroidVpnConnectionType connectionType;
-    /**
-     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     */
-    private java.util.List<KeyValue> customData;
-    /**
-     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     */
-    private java.util.List<KeyValuePair> customKeyValueData;
-    /**
-     * Tenant level settings for the Derived Credentials to be used for authentication.
-     */
-    private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
-    /**
-     * Identity certificate for client authentication when authentication method is certificate.
-     */
-    private AndroidDeviceOwnerCertificateProfileBase identityCertificate;
-    /**
-     * Microsoft Tunnel site ID.
-     */
-    private String microsoftTunnelSiteId;
-    /**
-     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     */
-    private java.util.List<String> proxyExclusionList;
-    /**
-     * Proxy server.
-     */
-    private VpnProxyServer proxyServer;
-    /**
-     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<AppListItem> targetedMobileApps;
-    /**
-     * Targeted App package IDs.
-     */
-    private java.util.List<String> targetedPackageIds;
-    /**
-     * Instantiates a new androidDeviceOwnerVpnConfiguration and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerVpnConfiguration and sets the default values.
      */
     public AndroidDeviceOwnerVpnConfiguration() {
         super();
@@ -69,7 +21,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerVpnConfiguration
+     * @return a AndroidDeviceOwnerVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,51 +30,51 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the alwaysOn property value. Whether or not to enable always-on VPN connection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOn() {
-        return this.alwaysOn;
+        return this.backingStore.get("alwaysOn");
     }
     /**
      * Gets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOnLockdown() {
-        return this.alwaysOnLockdown;
+        return this.backingStore.get("alwaysOnLockdown");
     }
     /**
      * Gets the connectionType property value. Android VPN connection type.
-     * @return a androidVpnConnectionType
+     * @return a AndroidVpnConnectionType
      */
     @jakarta.annotation.Nullable
     public AndroidVpnConnectionType getConnectionType() {
-        return this.connectionType;
+        return this.backingStore.get("connectionType");
     }
     /**
      * Gets the customData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
-        return this.customData;
+        return this.backingStore.get("customData");
     }
     /**
      * Gets the customKeyValueData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
-        return this.customKeyValueData;
+        return this.backingStore.get("customKeyValueData");
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
-        return this.derivedCredentialSettings;
+        return this.backingStore.get("derivedCredentialSettings");
     }
     /**
      * The deserialization information for the current model
@@ -147,51 +99,51 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a androidDeviceOwnerCertificateProfileBase
+     * @return a AndroidDeviceOwnerCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase getIdentityCertificate() {
-        return this.identityCertificate;
+        return this.backingStore.get("identityCertificate");
     }
     /**
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
-        return this.microsoftTunnelSiteId;
+        return this.backingStore.get("microsoftTunnelSiteId");
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyExclusionList() {
-        return this.proxyExclusionList;
+        return this.backingStore.get("proxyExclusionList");
     }
     /**
      * Gets the proxyServer property value. Proxy server.
-     * @return a vpnProxyServer
+     * @return a VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
-        return this.proxyServer;
+        return this.backingStore.get("proxyServer");
     }
     /**
      * Gets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
-     * @return a appListItem
+     * @return a java.util.List<AppListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getTargetedMobileApps() {
-        return this.targetedMobileApps;
+        return this.backingStore.get("targetedMobileApps");
     }
     /**
      * Gets the targetedPackageIds property value. Targeted App package IDs.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedPackageIds() {
-        return this.targetedPackageIds;
+        return this.backingStore.get("targetedPackageIds");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the alwaysOn property.
      */
     public void setAlwaysOn(@jakarta.annotation.Nullable final Boolean value) {
-        this.alwaysOn = value;
+        this.backingStore.set("alwaysOn", value);
     }
     /**
      * Sets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
      * @param value Value to set for the alwaysOnLockdown property.
      */
     public void setAlwaysOnLockdown(@jakarta.annotation.Nullable final Boolean value) {
-        this.alwaysOnLockdown = value;
+        this.backingStore.set("alwaysOnLockdown", value);
     }
     /**
      * Sets the connectionType property value. Android VPN connection type.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final AndroidVpnConnectionType value) {
-        this.connectionType = value;
+        this.backingStore.set("connectionType", value);
     }
     /**
      * Sets the customData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customData property.
      */
     public void setCustomData(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.customData = value;
+        this.backingStore.set("customData", value);
     }
     /**
      * Sets the customKeyValueData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customKeyValueData property.
      */
     public void setCustomKeyValueData(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.customKeyValueData = value;
+        this.backingStore.set("customKeyValueData", value);
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
      */
     public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
-        this.derivedCredentialSettings = value;
+        this.backingStore.set("derivedCredentialSettings", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
-        this.identityCertificate = value;
+        this.backingStore.set("identityCertificate", value);
     }
     /**
      * Sets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
      * @param value Value to set for the microsoftTunnelSiteId property.
      */
     public void setMicrosoftTunnelSiteId(@jakarta.annotation.Nullable final String value) {
-        this.microsoftTunnelSiteId = value;
+        this.backingStore.set("microsoftTunnelSiteId", value);
     }
     /**
      * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @param value Value to set for the proxyExclusionList property.
      */
     public void setProxyExclusionList(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.proxyExclusionList = value;
+        this.backingStore.set("proxyExclusionList", value);
     }
     /**
      * Sets the proxyServer property value. Proxy server.
      * @param value Value to set for the proxyServer property.
      */
     public void setProxyServer(@jakarta.annotation.Nullable final VpnProxyServer value) {
-        this.proxyServer = value;
+        this.backingStore.set("proxyServer", value);
     }
     /**
      * Sets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the targetedMobileApps property.
      */
     public void setTargetedMobileApps(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
-        this.targetedMobileApps = value;
+        this.backingStore.set("targetedMobileApps", value);
     }
     /**
      * Sets the targetedPackageIds property value. Targeted App package IDs.
      * @param value Value to set for the targetedPackageIds property.
      */
     public void setTargetedPackageIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.targetedPackageIds = value;
+        this.backingStore.set("targetedPackageIds", value);
     }
 }

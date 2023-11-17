@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, Parsable {
+public class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-     */
-    private java.util.List<X509CertificateRule> rules;
-    /**
-     * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     */
-    private X509CertificateAuthenticationMode x509CertificateAuthenticationDefaultMode;
-    /**
-     * Instantiates a new x509CertificateAuthenticationModeConfiguration and sets the default values.
+     * Instantiates a new X509CertificateAuthenticationModeConfiguration and sets the default values.
      */
     public X509CertificateAuthenticationModeConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateAuthenticationModeConfiguration
+     * @return a X509CertificateAuthenticationModeConfiguration
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateAuthenticationModeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,25 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
         return new X509CertificateAuthenticationModeConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -55,35 +61,44 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
         deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
+        deserializerMap.put("x509CertificateDefaultRequiredAffinityLevel", (n) -> { this.setX509CertificateDefaultRequiredAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel.class)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-     * @return a x509CertificateRule
+     * @return a java.util.List<X509CertificateRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateRule> getRules() {
-        return this.rules;
+        return this.backingStore.get("rules");
     }
     /**
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     * @return a x509CertificateAuthenticationMode
+     * @return a X509CertificateAuthenticationMode
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {
-        return this.x509CertificateAuthenticationDefaultMode;
+        return this.backingStore.get("x509CertificateAuthenticationDefaultMode");
+    }
+    /**
+     * Gets the x509CertificateDefaultRequiredAffinityLevel property value. Determines the default value for the tenant affinity binding level. The possible values are: low, high, unknownFutureValue.
+     * @return a X509CertificateAffinityLevel
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateAffinityLevel getX509CertificateDefaultRequiredAffinityLevel() {
+        return this.backingStore.get("x509CertificateDefaultRequiredAffinityLevel");
     }
     /**
      * Serializes information the current object
@@ -94,34 +109,50 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeEnumValue("x509CertificateAuthenticationDefaultMode", this.getX509CertificateAuthenticationDefaultMode());
+        writer.writeEnumValue("x509CertificateDefaultRequiredAffinityLevel", this.getX509CertificateDefaultRequiredAffinityLevel());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<X509CertificateRule> value) {
-        this.rules = value;
+        this.backingStore.set("rules", value);
     }
     /**
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @param value Value to set for the x509CertificateAuthenticationDefaultMode property.
      */
     public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
-        this.x509CertificateAuthenticationDefaultMode = value;
+        this.backingStore.set("x509CertificateAuthenticationDefaultMode", value);
+    }
+    /**
+     * Sets the x509CertificateDefaultRequiredAffinityLevel property value. Determines the default value for the tenant affinity binding level. The possible values are: low, high, unknownFutureValue.
+     * @param value Value to set for the x509CertificateDefaultRequiredAffinityLevel property.
+     */
+    public void setX509CertificateDefaultRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+        this.backingStore.set("x509CertificateDefaultRequiredAffinityLevel", value);
     }
 }

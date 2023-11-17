@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingGroupCollectionDefinition extends DeviceManagementConfigurationSettingGroupDefinition implements Parsable {
     /**
-     * Maximum number of setting group count in the collection
-     */
-    private Integer maximumCount;
-    /**
-     * Minimum number of setting group count in the collection
-     */
-    private Integer minimumCount;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingGroupCollectionDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingGroupCollectionDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSettingGroupCollectionDefinition() {
         super();
@@ -25,7 +17,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingGroupCollectionDefinition
+     * @return a DeviceManagementConfigurationSettingGroupCollectionDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingGroupCollectionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
     }
     /**
      * Gets the maximumCount property value. Maximum number of setting group count in the collection
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumCount() {
-        return this.maximumCount;
+        return this.backingStore.get("maximumCount");
     }
     /**
      * Gets the minimumCount property value. Minimum number of setting group count in the collection
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumCount() {
-        return this.minimumCount;
+        return this.backingStore.get("minimumCount");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumCount = value;
+        this.backingStore.set("maximumCount", value);
     }
     /**
      * Sets the minimumCount property value. Minimum number of setting group count in the collection
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumCount = value;
+        this.backingStore.set("minimumCount", value);
     }
 }

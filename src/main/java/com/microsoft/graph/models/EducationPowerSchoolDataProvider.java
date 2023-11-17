@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvider implements Parsable {
     /**
-     * Indicates whether the source has multiple identifiers for a single student or teacher.
-     */
-    private Boolean allowTeachersInMultipleSchools;
-    /**
-     * The client ID used to connect to PowerSchool.
-     */
-    private String clientId;
-    /**
-     * The client secret to authenticate the connection to the PowerSchool instance.
-     */
-    private String clientSecret;
-    /**
-     * The connection URL to the PowerSchool instance.
-     */
-    private String connectionUrl;
-    /**
-     * Optional customization to be applied to the synchronization profile.
-     */
-    private EducationSynchronizationCustomizations customizations;
-    /**
-     * The list of schools to sync.
-     */
-    private java.util.List<String> schoolsIds;
-    /**
-     * The school year to sync.
-     */
-    private String schoolYear;
-    /**
-     * Instantiates a new educationPowerSchoolDataProvider and sets the default values.
+     * Instantiates a new EducationPowerSchoolDataProvider and sets the default values.
      */
     public EducationPowerSchoolDataProvider() {
         super();
@@ -46,7 +18,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationPowerSchoolDataProvider
+     * @return a EducationPowerSchoolDataProvider
      */
     @jakarta.annotation.Nonnull
     public static EducationPowerSchoolDataProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,43 +27,43 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the allowTeachersInMultipleSchools property value. Indicates whether the source has multiple identifiers for a single student or teacher.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeachersInMultipleSchools() {
-        return this.allowTeachersInMultipleSchools;
+        return this.backingStore.get("allowTeachersInMultipleSchools");
     }
     /**
      * Gets the clientId property value. The client ID used to connect to PowerSchool.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
-        return this.clientId;
+        return this.backingStore.get("clientId");
     }
     /**
      * Gets the clientSecret property value. The client secret to authenticate the connection to the PowerSchool instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
-        return this.clientSecret;
+        return this.backingStore.get("clientSecret");
     }
     /**
      * Gets the connectionUrl property value. The connection URL to the PowerSchool instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionUrl() {
-        return this.connectionUrl;
+        return this.backingStore.get("connectionUrl");
     }
     /**
      * Gets the customizations property value. Optional customization to be applied to the synchronization profile.
-     * @return a educationSynchronizationCustomizations
+     * @return a EducationSynchronizationCustomizations
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations getCustomizations() {
-        return this.customizations;
+        return this.backingStore.get("customizations");
     }
     /**
      * The deserialization information for the current model
@@ -111,19 +83,19 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the schoolsIds property value. The list of schools to sync.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSchoolsIds() {
-        return this.schoolsIds;
+        return this.backingStore.get("schoolsIds");
     }
     /**
      * Gets the schoolYear property value. The school year to sync.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchoolYear() {
-        return this.schoolYear;
+        return this.backingStore.get("schoolYear");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the allowTeachersInMultipleSchools property.
      */
     public void setAllowTeachersInMultipleSchools(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowTeachersInMultipleSchools = value;
+        this.backingStore.set("allowTeachersInMultipleSchools", value);
     }
     /**
      * Sets the clientId property value. The client ID used to connect to PowerSchool.
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
-        this.clientId = value;
+        this.backingStore.set("clientId", value);
     }
     /**
      * Sets the clientSecret property value. The client secret to authenticate the connection to the PowerSchool instance.
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
-        this.clientSecret = value;
+        this.backingStore.set("clientSecret", value);
     }
     /**
      * Sets the connectionUrl property value. The connection URL to the PowerSchool instance.
      * @param value Value to set for the connectionUrl property.
      */
     public void setConnectionUrl(@jakarta.annotation.Nullable final String value) {
-        this.connectionUrl = value;
+        this.backingStore.set("connectionUrl", value);
     }
     /**
      * Sets the customizations property value. Optional customization to be applied to the synchronization profile.
      * @param value Value to set for the customizations property.
      */
     public void setCustomizations(@jakarta.annotation.Nullable final EducationSynchronizationCustomizations value) {
-        this.customizations = value;
+        this.backingStore.set("customizations", value);
     }
     /**
      * Sets the schoolsIds property value. The list of schools to sync.
      * @param value Value to set for the schoolsIds property.
      */
     public void setSchoolsIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.schoolsIds = value;
+        this.backingStore.set("schoolsIds", value);
     }
     /**
      * Sets the schoolYear property value. The school year to sync.
      * @param value Value to set for the schoolYear property.
      */
     public void setSchoolYear(@jakarta.annotation.Nullable final String value) {
-        this.schoolYear = value;
+        this.backingStore.set("schoolYear", value);
     }
 }

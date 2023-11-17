@@ -36,39 +36,39 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/bulkRestoreCloudPc", rawUrl);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@jakarta.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
+    public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@jakarta.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -80,7 +80,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -91,24 +91,16 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkRestoreCloudPcRequestBuilder
+     * @return a BulkRestoreCloudPcRequestBuilder
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      */

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRespo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

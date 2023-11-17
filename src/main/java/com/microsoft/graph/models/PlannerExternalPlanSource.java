@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerExternalPlanSource extends PlannerPlanCreation implements Parsable {
     /**
-     * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     */
-    private String contextScenarioId;
-    /**
-     * Nullable. The id of the external entity's containing entity or context.
-     */
-    private String externalContextId;
-    /**
-     * Nullable. The id of the entity that an external service associates with a plan.
-     */
-    private String externalObjectId;
-    /**
-     * Instantiates a new plannerExternalPlanSource and sets the default values.
+     * Instantiates a new PlannerExternalPlanSource and sets the default values.
      */
     public PlannerExternalPlanSource() {
         super();
@@ -30,7 +18,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerExternalPlanSource
+     * @return a PlannerExternalPlanSource
      */
     @jakarta.annotation.Nonnull
     public static PlannerExternalPlanSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,27 +27,27 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     }
     /**
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContextScenarioId() {
-        return this.contextScenarioId;
+        return this.backingStore.get("contextScenarioId");
     }
     /**
-     * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
-     * @return a string
+     * Gets the externalContextId property value. Nullable. The ID of the external entity's containing entity or context.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
-        return this.externalContextId;
+        return this.backingStore.get("externalContextId");
     }
     /**
-     * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a plan.
-     * @return a string
+     * Gets the externalObjectId property value. Nullable. The ID of the entity that an external service associates with a plan.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {
-        return this.externalObjectId;
+        return this.backingStore.get("externalObjectId");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
      * @param value Value to set for the contextScenarioId property.
      */
     public void setContextScenarioId(@jakarta.annotation.Nullable final String value) {
-        this.contextScenarioId = value;
+        this.backingStore.set("contextScenarioId", value);
     }
     /**
-     * Sets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
+     * Sets the externalContextId property value. Nullable. The ID of the external entity's containing entity or context.
      * @param value Value to set for the externalContextId property.
      */
     public void setExternalContextId(@jakarta.annotation.Nullable final String value) {
-        this.externalContextId = value;
+        this.backingStore.set("externalContextId", value);
     }
     /**
-     * Sets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a plan.
+     * Sets the externalObjectId property value. Nullable. The ID of the entity that an external service associates with a plan.
      * @param value Value to set for the externalObjectId property.
      */
     public void setExternalObjectId(@jakarta.annotation.Nullable final String value) {
-        this.externalObjectId = value;
+        this.backingStore.set("externalObjectId", value);
     }
 }

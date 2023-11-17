@@ -36,33 +36,33 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/participants/invite", rawUrl);
     }
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of inviteParticipantsOperation
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
+     * @return a InviteParticipantsOperation
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inviteParticipantsOperation
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
+     * @return a InviteParticipantsOperation
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, InviteParticipantsOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, InviteParticipantsOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
+     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,24 +79,16 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a inviteRequestBuilder
+     * @return a InviteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InviteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -11,83 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlert extends Entity implements Parsable {
     /**
-     * The alertData property
-     */
-    private AlertData alertData;
-    /**
-     * The alertDataReferenceStrings property
-     */
-    private java.util.List<AlertDataReferenceString> alertDataReferenceStrings;
-    /**
-     * The alertLogs property
-     */
-    private java.util.List<ManagedTenantAlertLog> alertLogs;
-    /**
-     * The alertRule property
-     */
-    private ManagedTenantAlertRule alertRule;
-    /**
-     * The alertRuleDisplayName property
-     */
-    private String alertRuleDisplayName;
-    /**
-     * The apiNotifications property
-     */
-    private java.util.List<ManagedTenantApiNotification> apiNotifications;
-    /**
-     * The assignedToUserId property
-     */
-    private String assignedToUserId;
-    /**
-     * The correlationCount property
-     */
-    private Integer correlationCount;
-    /**
-     * The correlationId property
-     */
-    private String correlationId;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The emailNotifications property
-     */
-    private java.util.List<ManagedTenantEmailNotification> emailNotifications;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The message property
-     */
-    private String message;
-    /**
-     * The severity property
-     */
-    private AlertSeverity severity;
-    /**
-     * The status property
-     */
-    private AlertStatus status;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The title property
-     */
-    private String title;
-    /**
-     * Instantiates a new managedTenantAlert and sets the default values.
+     * Instantiates a new ManagedTenantAlert and sets the default values.
      */
     public ManagedTenantAlert() {
         super();
@@ -95,7 +19,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlert
+     * @return a ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -104,83 +28,83 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertData property value. The alertData property
-     * @return a alertData
+     * @return a AlertData
      */
     @jakarta.annotation.Nullable
     public AlertData getAlertData() {
-        return this.alertData;
+        return this.backingStore.get("alertData");
     }
     /**
      * Gets the alertDataReferenceStrings property value. The alertDataReferenceStrings property
-     * @return a alertDataReferenceString
+     * @return a java.util.List<AlertDataReferenceString>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertDataReferenceString> getAlertDataReferenceStrings() {
-        return this.alertDataReferenceStrings;
+        return this.backingStore.get("alertDataReferenceStrings");
     }
     /**
      * Gets the alertLogs property value. The alertLogs property
-     * @return a managedTenantAlertLog
+     * @return a java.util.List<ManagedTenantAlertLog>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertLog> getAlertLogs() {
-        return this.alertLogs;
+        return this.backingStore.get("alertLogs");
     }
     /**
      * Gets the alertRule property value. The alertRule property
-     * @return a managedTenantAlertRule
+     * @return a ManagedTenantAlertRule
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertRule getAlertRule() {
-        return this.alertRule;
+        return this.backingStore.get("alertRule");
     }
     /**
      * Gets the alertRuleDisplayName property value. The alertRuleDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleDisplayName() {
-        return this.alertRuleDisplayName;
+        return this.backingStore.get("alertRuleDisplayName");
     }
     /**
      * Gets the apiNotifications property value. The apiNotifications property
-     * @return a managedTenantApiNotification
+     * @return a java.util.List<ManagedTenantApiNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantApiNotification> getApiNotifications() {
-        return this.apiNotifications;
+        return this.backingStore.get("apiNotifications");
     }
     /**
      * Gets the assignedToUserId property value. The assignedToUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedToUserId() {
-        return this.assignedToUserId;
+        return this.backingStore.get("assignedToUserId");
     }
     /**
      * Gets the correlationCount property value. The correlationCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationCount() {
-        return this.correlationCount;
+        return this.backingStore.get("correlationCount");
     }
     /**
      * Gets the correlationId property value. The correlationId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.backingStore.get("correlationId");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.backingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -188,15 +112,15 @@ public class ManagedTenantAlert extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the emailNotifications property value. The emailNotifications property
-     * @return a managedTenantEmailNotification
+     * @return a java.util.List<ManagedTenantEmailNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantEmailNotification> getEmailNotifications() {
-        return this.emailNotifications;
+        return this.backingStore.get("emailNotifications");
     }
     /**
      * The deserialization information for the current model
@@ -228,11 +152,11 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.backingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -240,47 +164,47 @@ public class ManagedTenantAlert extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the message property value. The message property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
-        return this.severity;
+        return this.backingStore.get("severity");
     }
     /**
      * Gets the status property value. The status property
-     * @return a alertStatus
+     * @return a AlertStatus
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the title property value. The title property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -314,132 +238,132 @@ public class ManagedTenantAlert extends Entity implements Parsable {
      * @param value Value to set for the alertData property.
      */
     public void setAlertData(@jakarta.annotation.Nullable final AlertData value) {
-        this.alertData = value;
+        this.backingStore.set("alertData", value);
     }
     /**
      * Sets the alertDataReferenceStrings property value. The alertDataReferenceStrings property
      * @param value Value to set for the alertDataReferenceStrings property.
      */
     public void setAlertDataReferenceStrings(@jakarta.annotation.Nullable final java.util.List<AlertDataReferenceString> value) {
-        this.alertDataReferenceStrings = value;
+        this.backingStore.set("alertDataReferenceStrings", value);
     }
     /**
      * Sets the alertLogs property value. The alertLogs property
      * @param value Value to set for the alertLogs property.
      */
     public void setAlertLogs(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlertLog> value) {
-        this.alertLogs = value;
+        this.backingStore.set("alertLogs", value);
     }
     /**
      * Sets the alertRule property value. The alertRule property
      * @param value Value to set for the alertRule property.
      */
     public void setAlertRule(@jakarta.annotation.Nullable final ManagedTenantAlertRule value) {
-        this.alertRule = value;
+        this.backingStore.set("alertRule", value);
     }
     /**
      * Sets the alertRuleDisplayName property value. The alertRuleDisplayName property
      * @param value Value to set for the alertRuleDisplayName property.
      */
     public void setAlertRuleDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.alertRuleDisplayName = value;
+        this.backingStore.set("alertRuleDisplayName", value);
     }
     /**
      * Sets the apiNotifications property value. The apiNotifications property
      * @param value Value to set for the apiNotifications property.
      */
     public void setApiNotifications(@jakarta.annotation.Nullable final java.util.List<ManagedTenantApiNotification> value) {
-        this.apiNotifications = value;
+        this.backingStore.set("apiNotifications", value);
     }
     /**
      * Sets the assignedToUserId property value. The assignedToUserId property
      * @param value Value to set for the assignedToUserId property.
      */
     public void setAssignedToUserId(@jakarta.annotation.Nullable final String value) {
-        this.assignedToUserId = value;
+        this.backingStore.set("assignedToUserId", value);
     }
     /**
      * Sets the correlationCount property value. The correlationCount property
      * @param value Value to set for the correlationCount property.
      */
     public void setCorrelationCount(@jakarta.annotation.Nullable final Integer value) {
-        this.correlationCount = value;
+        this.backingStore.set("correlationCount", value);
     }
     /**
      * Sets the correlationId property value. The correlationId property
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.backingStore.set("correlationId", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.backingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the emailNotifications property value. The emailNotifications property
      * @param value Value to set for the emailNotifications property.
      */
     public void setEmailNotifications(@jakarta.annotation.Nullable final java.util.List<ManagedTenantEmailNotification> value) {
-        this.emailNotifications = value;
+        this.backingStore.set("emailNotifications", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.backingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
-        this.severity = value;
+        this.backingStore.set("severity", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

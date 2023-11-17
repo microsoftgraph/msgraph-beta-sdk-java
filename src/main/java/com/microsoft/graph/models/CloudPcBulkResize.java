@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
     /**
-     * The targetServicePlanId property
-     */
-    private String targetServicePlanId;
-    /**
-     * Instantiates a new cloudPcBulkResize and sets the default values.
+     * Instantiates a new CloudPcBulkResize and sets the default values.
      */
     public CloudPcBulkResize() {
         super();
@@ -22,7 +18,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkResize
+     * @return a CloudPcBulkResize
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkResize createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
     }
     /**
      * Gets the targetServicePlanId property value. The targetServicePlanId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetServicePlanId() {
-        return this.targetServicePlanId;
+        return this.backingStore.get("targetServicePlanId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
      * @param value Value to set for the targetServicePlanId property.
      */
     public void setTargetServicePlanId(@jakarta.annotation.Nullable final String value) {
-        this.targetServicePlanId = value;
+        this.backingStore.set("targetServicePlanId", value);
     }
 }

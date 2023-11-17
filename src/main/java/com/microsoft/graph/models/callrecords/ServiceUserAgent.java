@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceUserAgent extends UserAgent implements Parsable {
     /**
-     * The role property
-     */
-    private ServiceRole role;
-    /**
-     * Instantiates a new serviceUserAgent and sets the default values.
+     * Instantiates a new ServiceUserAgent and sets the default values.
      */
     public ServiceUserAgent() {
         super();
@@ -22,7 +18,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceUserAgent
+     * @return a ServiceUserAgent
      */
     @jakarta.annotation.Nonnull
     public static ServiceUserAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the role property value. The role property
-     * @return a serviceRole
+     * @return a ServiceRole
      */
     @jakarta.annotation.Nullable
     public ServiceRole getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final ServiceRole value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
 }

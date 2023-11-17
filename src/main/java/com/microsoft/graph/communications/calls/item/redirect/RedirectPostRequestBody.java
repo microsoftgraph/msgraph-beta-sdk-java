@@ -6,49 +6,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
+public class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The callbackUri property
-     */
-    private String callbackUri;
-    /**
-     * The maskCallee property
-     */
-    private Boolean maskCallee;
-    /**
-     * The maskCaller property
-     */
-    private Boolean maskCaller;
-    /**
-     * The targetDisposition property
-     */
-    private CallDisposition targetDisposition;
-    /**
-     * The targets property
-     */
-    private java.util.List<InvitationParticipantInfo> targets;
-    /**
-     * The timeout property
-     */
-    private Integer timeout;
-    /**
-     * Instantiates a new redirectPostRequestBody and sets the default values.
+     * Instantiates a new RedirectPostRequestBody and sets the default values.
      */
     public RedirectPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a redirectPostRequestBody
+     * @return a RedirectPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RedirectPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,20 +37,33 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
         return new RedirectPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
-        return this.callbackUri;
+        return this.backingStore.get("callbackUri");
     }
     /**
      * The deserialization information for the current model
@@ -88,43 +82,43 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maskCallee property value. The maskCallee property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMaskCallee() {
-        return this.maskCallee;
+        return this.backingStore.get("maskCallee");
     }
     /**
      * Gets the maskCaller property value. The maskCaller property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMaskCaller() {
-        return this.maskCaller;
+        return this.backingStore.get("maskCaller");
     }
     /**
      * Gets the targetDisposition property value. The targetDisposition property
-     * @return a callDisposition
+     * @return a CallDisposition
      */
     @jakarta.annotation.Nullable
     public CallDisposition getTargetDisposition() {
-        return this.targetDisposition;
+        return this.backingStore.get("targetDisposition");
     }
     /**
      * Gets the targets property value. The targets property
-     * @return a invitationParticipantInfo
+     * @return a java.util.List<InvitationParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
-        return this.targets;
+        return this.backingStore.get("targets");
     }
     /**
      * Gets the timeout property value. The timeout property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimeout() {
-        return this.timeout;
+        return this.backingStore.get("timeout");
     }
     /**
      * Serializes information the current object
@@ -141,52 +135,60 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
      * @param value Value to set for the callbackUri property.
      */
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
-        this.callbackUri = value;
+        this.backingStore.set("callbackUri", value);
     }
     /**
      * Sets the maskCallee property value. The maskCallee property
      * @param value Value to set for the maskCallee property.
      */
     public void setMaskCallee(@jakarta.annotation.Nullable final Boolean value) {
-        this.maskCallee = value;
+        this.backingStore.set("maskCallee", value);
     }
     /**
      * Sets the maskCaller property value. The maskCaller property
      * @param value Value to set for the maskCaller property.
      */
     public void setMaskCaller(@jakarta.annotation.Nullable final Boolean value) {
-        this.maskCaller = value;
+        this.backingStore.set("maskCaller", value);
     }
     /**
      * Sets the targetDisposition property value. The targetDisposition property
      * @param value Value to set for the targetDisposition property.
      */
     public void setTargetDisposition(@jakarta.annotation.Nullable final CallDisposition value) {
-        this.targetDisposition = value;
+        this.backingStore.set("targetDisposition", value);
     }
     /**
      * Sets the targets property value. The targets property
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.targets = value;
+        this.backingStore.set("targets", value);
     }
     /**
      * Sets the timeout property value. The timeout property
      * @param value Value to set for the timeout property.
      */
     public void setTimeout(@jakarta.annotation.Nullable final Integer value) {
-        this.timeout = value;
+        this.backingStore.set("timeout", value);
     }
 }

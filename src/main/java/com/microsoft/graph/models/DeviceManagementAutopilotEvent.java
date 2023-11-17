@@ -14,115 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
-     * Time spent in user ESP.
-     */
-    private PeriodAndDuration accountSetupDuration;
-    /**
-     * Deployment states for Autopilot devices
-     */
-    private WindowsAutopilotDeploymentState accountSetupStatus;
-    /**
-     * Autopilot deployment duration including enrollment.
-     */
-    private PeriodAndDuration deploymentDuration;
-    /**
-     * Deployment end time.
-     */
-    private OffsetDateTime deploymentEndDateTime;
-    /**
-     * Deployment start time.
-     */
-    private OffsetDateTime deploymentStartDateTime;
-    /**
-     * Deployment states for Autopilot devices
-     */
-    private WindowsAutopilotDeploymentState deploymentState;
-    /**
-     * Total deployment duration from enrollment to Desktop screen.
-     */
-    private PeriodAndDuration deploymentTotalDuration;
-    /**
-     * Device id associated with the object
-     */
-    private String deviceId;
-    /**
-     * Time spent in device enrollment.
-     */
-    private PeriodAndDuration devicePreparationDuration;
-    /**
-     * Device registration date.
-     */
-    private OffsetDateTime deviceRegisteredDateTime;
-    /**
-     * Device serial number.
-     */
-    private String deviceSerialNumber;
-    /**
-     * Time spent in device ESP.
-     */
-    private PeriodAndDuration deviceSetupDuration;
-    /**
-     * Deployment states for Autopilot devices
-     */
-    private WindowsAutopilotDeploymentState deviceSetupStatus;
-    /**
-     * Enrollment failure details.
-     */
-    private String enrollmentFailureDetails;
-    /**
-     * Device enrollment start date.
-     */
-    private OffsetDateTime enrollmentStartDateTime;
-    /**
-     * The enrollmentState property
-     */
-    private EnrollmentState enrollmentState;
-    /**
-     * The enrollmentType property
-     */
-    private WindowsAutopilotEnrollmentType enrollmentType;
-    /**
-     * Time when the event occurred .
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * Managed device name.
-     */
-    private String managedDeviceName;
-    /**
-     * Device operating system version.
-     */
-    private String osVersion;
-    /**
-     * Policy and application status details for this device.
-     */
-    private java.util.List<DeviceManagementAutopilotPolicyStatusDetail> policyStatusDetails;
-    /**
-     * Count of applications targeted.
-     */
-    private Integer targetedAppCount;
-    /**
-     * Count of policies targeted.
-     */
-    private Integer targetedPolicyCount;
-    /**
-     * User principal name used to enroll the device.
-     */
-    private String userPrincipalName;
-    /**
-     * Enrollment Status Page profile name
-     */
-    private String windows10EnrollmentCompletionPageConfigurationDisplayName;
-    /**
-     * Enrollment Status Page profile ID
-     */
-    private String windows10EnrollmentCompletionPageConfigurationId;
-    /**
-     * Autopilot profile name.
-     */
-    private String windowsAutopilotDeploymentProfileDisplayName;
-    /**
-     * Instantiates a new deviceManagementAutopilotEvent and sets the default values.
+     * Instantiates a new DeviceManagementAutopilotEvent and sets the default values.
      */
     public DeviceManagementAutopilotEvent() {
         super();
@@ -130,7 +22,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAutopilotEvent
+     * @return a DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -143,15 +35,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAccountSetupDuration() {
-        return this.accountSetupDuration;
+        return this.backingStore.get("accountSetupDuration");
     }
     /**
      * Gets the accountSetupStatus property value. Deployment states for Autopilot devices
-     * @return a windowsAutopilotDeploymentState
+     * @return a WindowsAutopilotDeploymentState
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getAccountSetupStatus() {
-        return this.accountSetupStatus;
+        return this.backingStore.get("accountSetupStatus");
     }
     /**
      * Gets the deploymentDuration property value. Autopilot deployment duration including enrollment.
@@ -159,7 +51,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentDuration() {
-        return this.deploymentDuration;
+        return this.backingStore.get("deploymentDuration");
     }
     /**
      * Gets the deploymentEndDateTime property value. Deployment end time.
@@ -167,7 +59,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentEndDateTime() {
-        return this.deploymentEndDateTime;
+        return this.backingStore.get("deploymentEndDateTime");
     }
     /**
      * Gets the deploymentStartDateTime property value. Deployment start time.
@@ -175,15 +67,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentStartDateTime() {
-        return this.deploymentStartDateTime;
+        return this.backingStore.get("deploymentStartDateTime");
     }
     /**
      * Gets the deploymentState property value. Deployment states for Autopilot devices
-     * @return a windowsAutopilotDeploymentState
+     * @return a WindowsAutopilotDeploymentState
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeploymentState() {
-        return this.deploymentState;
+        return this.backingStore.get("deploymentState");
     }
     /**
      * Gets the deploymentTotalDuration property value. Total deployment duration from enrollment to Desktop screen.
@@ -191,15 +83,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentTotalDuration() {
-        return this.deploymentTotalDuration;
+        return this.backingStore.get("deploymentTotalDuration");
     }
     /**
      * Gets the deviceId property value. Device id associated with the object
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the devicePreparationDuration property value. Time spent in device enrollment.
@@ -207,7 +99,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDevicePreparationDuration() {
-        return this.devicePreparationDuration;
+        return this.backingStore.get("devicePreparationDuration");
     }
     /**
      * Gets the deviceRegisteredDateTime property value. Device registration date.
@@ -215,15 +107,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeviceRegisteredDateTime() {
-        return this.deviceRegisteredDateTime;
+        return this.backingStore.get("deviceRegisteredDateTime");
     }
     /**
      * Gets the deviceSerialNumber property value. Device serial number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceSerialNumber() {
-        return this.deviceSerialNumber;
+        return this.backingStore.get("deviceSerialNumber");
     }
     /**
      * Gets the deviceSetupDuration property value. Time spent in device ESP.
@@ -231,23 +123,23 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeviceSetupDuration() {
-        return this.deviceSetupDuration;
+        return this.backingStore.get("deviceSetupDuration");
     }
     /**
      * Gets the deviceSetupStatus property value. Deployment states for Autopilot devices
-     * @return a windowsAutopilotDeploymentState
+     * @return a WindowsAutopilotDeploymentState
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeviceSetupStatus() {
-        return this.deviceSetupStatus;
+        return this.backingStore.get("deviceSetupStatus");
     }
     /**
      * Gets the enrollmentFailureDetails property value. Enrollment failure details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentFailureDetails() {
-        return this.enrollmentFailureDetails;
+        return this.backingStore.get("enrollmentFailureDetails");
     }
     /**
      * Gets the enrollmentStartDateTime property value. Device enrollment start date.
@@ -255,23 +147,23 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentStartDateTime() {
-        return this.enrollmentStartDateTime;
+        return this.backingStore.get("enrollmentStartDateTime");
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
-        return this.enrollmentState;
+        return this.backingStore.get("enrollmentState");
     }
     /**
      * Gets the enrollmentType property value. The enrollmentType property
-     * @return a windowsAutopilotEnrollmentType
+     * @return a WindowsAutopilotEnrollmentType
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotEnrollmentType getEnrollmentType() {
-        return this.enrollmentType;
+        return this.backingStore.get("enrollmentType");
     }
     /**
      * Gets the eventDateTime property value. Time when the event occurred .
@@ -279,7 +171,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.backingStore.get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -319,75 +211,75 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. Managed device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
-        return this.managedDeviceName;
+        return this.backingStore.get("managedDeviceName");
     }
     /**
      * Gets the osVersion property value. Device operating system version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the policyStatusDetails property value. Policy and application status details for this device.
-     * @return a deviceManagementAutopilotPolicyStatusDetail
+     * @return a java.util.List<DeviceManagementAutopilotPolicyStatusDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotPolicyStatusDetail> getPolicyStatusDetails() {
-        return this.policyStatusDetails;
+        return this.backingStore.get("policyStatusDetails");
     }
     /**
      * Gets the targetedAppCount property value. Count of applications targeted.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedAppCount() {
-        return this.targetedAppCount;
+        return this.backingStore.get("targetedAppCount");
     }
     /**
      * Gets the targetedPolicyCount property value. Count of policies targeted.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedPolicyCount() {
-        return this.targetedPolicyCount;
+        return this.backingStore.get("targetedPolicyCount");
     }
     /**
      * Gets the userPrincipalName property value. User principal name used to enroll the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Gets the windows10EnrollmentCompletionPageConfigurationDisplayName property value. Enrollment Status Page profile name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationDisplayName() {
-        return this.windows10EnrollmentCompletionPageConfigurationDisplayName;
+        return this.backingStore.get("windows10EnrollmentCompletionPageConfigurationDisplayName");
     }
     /**
      * Gets the windows10EnrollmentCompletionPageConfigurationId property value. Enrollment Status Page profile ID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationId() {
-        return this.windows10EnrollmentCompletionPageConfigurationId;
+        return this.backingStore.get("windows10EnrollmentCompletionPageConfigurationId");
     }
     /**
      * Gets the windowsAutopilotDeploymentProfileDisplayName property value. Autopilot profile name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindowsAutopilotDeploymentProfileDisplayName() {
-        return this.windowsAutopilotDeploymentProfileDisplayName;
+        return this.backingStore.get("windowsAutopilotDeploymentProfileDisplayName");
     }
     /**
      * Serializes information the current object
@@ -429,188 +321,188 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * @param value Value to set for the accountSetupDuration property.
      */
     public void setAccountSetupDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.accountSetupDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("accountSetupDuration", value);
     }
     /**
      * Sets the accountSetupStatus property value. Deployment states for Autopilot devices
      * @param value Value to set for the accountSetupStatus property.
      */
     public void setAccountSetupStatus(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
-        this.accountSetupStatus = value;
+        this.backingStore.set("accountSetupStatus", value);
     }
     /**
      * Sets the deploymentDuration property value. Autopilot deployment duration including enrollment.
      * @param value Value to set for the deploymentDuration property.
      */
     public void setDeploymentDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.deploymentDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("deploymentDuration", value);
     }
     /**
      * Sets the deploymentEndDateTime property value. Deployment end time.
      * @param value Value to set for the deploymentEndDateTime property.
      */
     public void setDeploymentEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deploymentEndDateTime = value;
+        this.backingStore.set("deploymentEndDateTime", value);
     }
     /**
      * Sets the deploymentStartDateTime property value. Deployment start time.
      * @param value Value to set for the deploymentStartDateTime property.
      */
     public void setDeploymentStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deploymentStartDateTime = value;
+        this.backingStore.set("deploymentStartDateTime", value);
     }
     /**
      * Sets the deploymentState property value. Deployment states for Autopilot devices
      * @param value Value to set for the deploymentState property.
      */
     public void setDeploymentState(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
-        this.deploymentState = value;
+        this.backingStore.set("deploymentState", value);
     }
     /**
      * Sets the deploymentTotalDuration property value. Total deployment duration from enrollment to Desktop screen.
      * @param value Value to set for the deploymentTotalDuration property.
      */
     public void setDeploymentTotalDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.deploymentTotalDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("deploymentTotalDuration", value);
     }
     /**
      * Sets the deviceId property value. Device id associated with the object
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the devicePreparationDuration property value. Time spent in device enrollment.
      * @param value Value to set for the devicePreparationDuration property.
      */
     public void setDevicePreparationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.devicePreparationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("devicePreparationDuration", value);
     }
     /**
      * Sets the deviceRegisteredDateTime property value. Device registration date.
      * @param value Value to set for the deviceRegisteredDateTime property.
      */
     public void setDeviceRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deviceRegisteredDateTime = value;
+        this.backingStore.set("deviceRegisteredDateTime", value);
     }
     /**
      * Sets the deviceSerialNumber property value. Device serial number.
      * @param value Value to set for the deviceSerialNumber property.
      */
     public void setDeviceSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.deviceSerialNumber = value;
+        this.backingStore.set("deviceSerialNumber", value);
     }
     /**
      * Sets the deviceSetupDuration property value. Time spent in device ESP.
      * @param value Value to set for the deviceSetupDuration property.
      */
     public void setDeviceSetupDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.deviceSetupDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("deviceSetupDuration", value);
     }
     /**
      * Sets the deviceSetupStatus property value. Deployment states for Autopilot devices
      * @param value Value to set for the deviceSetupStatus property.
      */
     public void setDeviceSetupStatus(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
-        this.deviceSetupStatus = value;
+        this.backingStore.set("deviceSetupStatus", value);
     }
     /**
      * Sets the enrollmentFailureDetails property value. Enrollment failure details.
      * @param value Value to set for the enrollmentFailureDetails property.
      */
     public void setEnrollmentFailureDetails(@jakarta.annotation.Nullable final String value) {
-        this.enrollmentFailureDetails = value;
+        this.backingStore.set("enrollmentFailureDetails", value);
     }
     /**
      * Sets the enrollmentStartDateTime property value. Device enrollment start date.
      * @param value Value to set for the enrollmentStartDateTime property.
      */
     public void setEnrollmentStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.enrollmentStartDateTime = value;
+        this.backingStore.set("enrollmentStartDateTime", value);
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      */
     public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
-        this.enrollmentState = value;
+        this.backingStore.set("enrollmentState", value);
     }
     /**
      * Sets the enrollmentType property value. The enrollmentType property
      * @param value Value to set for the enrollmentType property.
      */
     public void setEnrollmentType(@jakarta.annotation.Nullable final WindowsAutopilotEnrollmentType value) {
-        this.enrollmentType = value;
+        this.backingStore.set("enrollmentType", value);
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.backingStore.set("eventDateTime", value);
     }
     /**
      * Sets the managedDeviceName property value. Managed device name.
      * @param value Value to set for the managedDeviceName property.
      */
     public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceName = value;
+        this.backingStore.set("managedDeviceName", value);
     }
     /**
      * Sets the osVersion property value. Device operating system version.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the policyStatusDetails property value. Policy and application status details for this device.
      * @param value Value to set for the policyStatusDetails property.
      */
     public void setPolicyStatusDetails(@jakarta.annotation.Nullable final java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value) {
-        this.policyStatusDetails = value;
+        this.backingStore.set("policyStatusDetails", value);
     }
     /**
      * Sets the targetedAppCount property value. Count of applications targeted.
      * @param value Value to set for the targetedAppCount property.
      */
     public void setTargetedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.targetedAppCount = value;
+        this.backingStore.set("targetedAppCount", value);
     }
     /**
      * Sets the targetedPolicyCount property value. Count of policies targeted.
      * @param value Value to set for the targetedPolicyCount property.
      */
     public void setTargetedPolicyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.targetedPolicyCount = value;
+        this.backingStore.set("targetedPolicyCount", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name used to enroll the device.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
     /**
      * Sets the windows10EnrollmentCompletionPageConfigurationDisplayName property value. Enrollment Status Page profile name
      * @param value Value to set for the windows10EnrollmentCompletionPageConfigurationDisplayName property.
      */
     public void setWindows10EnrollmentCompletionPageConfigurationDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.windows10EnrollmentCompletionPageConfigurationDisplayName = value;
+        this.backingStore.set("windows10EnrollmentCompletionPageConfigurationDisplayName", value);
     }
     /**
      * Sets the windows10EnrollmentCompletionPageConfigurationId property value. Enrollment Status Page profile ID
      * @param value Value to set for the windows10EnrollmentCompletionPageConfigurationId property.
      */
     public void setWindows10EnrollmentCompletionPageConfigurationId(@jakarta.annotation.Nullable final String value) {
-        this.windows10EnrollmentCompletionPageConfigurationId = value;
+        this.backingStore.set("windows10EnrollmentCompletionPageConfigurationId", value);
     }
     /**
      * Sets the windowsAutopilotDeploymentProfileDisplayName property value. Autopilot profile name.
      * @param value Value to set for the windowsAutopilotDeploymentProfileDisplayName property.
      */
     public void setWindowsAutopilotDeploymentProfileDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.windowsAutopilotDeploymentProfileDisplayName = value;
+        this.backingStore.set("windowsAutopilotDeploymentProfileDisplayName", value);
     }
 }

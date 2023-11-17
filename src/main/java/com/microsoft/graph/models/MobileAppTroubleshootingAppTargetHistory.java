@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
     /**
-     * Error code for the failure, empty if no failure.
-     */
-    private String errorCode;
-    /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RunState runState;
-    /**
-     * AAD security group id to which it was targeted.
-     */
-    private String securityGroupId;
-    /**
-     * Instantiates a new mobileAppTroubleshootingAppTargetHistory and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingAppTargetHistory and sets the default values.
      */
     public MobileAppTroubleshootingAppTargetHistory() {
         super();
@@ -32,7 +20,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingAppTargetHistory
+     * @return a MobileAppTroubleshootingAppTargetHistory
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingAppTargetHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +29,11 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
     }
     /**
      * Gets the errorCode property value. Error code for the failure, empty if no failure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -61,19 +49,19 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {
-        return this.runState;
+        return this.backingStore.get("runState");
     }
     /**
      * Gets the securityGroupId property value. AAD security group id to which it was targeted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityGroupId() {
-        return this.securityGroupId;
+        return this.backingStore.get("securityGroupId");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
      */
     public void setRunState(@jakarta.annotation.Nullable final RunState value) {
-        this.runState = value;
+        this.backingStore.set("runState", value);
     }
     /**
      * Sets the securityGroupId property value. AAD security group id to which it was targeted.
      * @param value Value to set for the securityGroupId property.
      */
     public void setSecurityGroupId(@jakarta.annotation.Nullable final String value) {
-        this.securityGroupId = value;
+        this.backingStore.set("securityGroupId", value);
     }
 }

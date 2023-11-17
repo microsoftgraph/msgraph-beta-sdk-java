@@ -9,6 +9,8 @@ import com.microsoft.graph.app.onlinemeetings.item.meetingattendancereport.Meeti
 import com.microsoft.graph.app.onlinemeetings.item.recording.RecordingRequestBuilder;
 import com.microsoft.graph.app.onlinemeetings.item.recordings.RecordingsRequestBuilder;
 import com.microsoft.graph.app.onlinemeetings.item.registration.RegistrationRequestBuilder;
+import com.microsoft.graph.app.onlinemeetings.item.sendvirtualappointmentremindersms.SendVirtualAppointmentReminderSmsRequestBuilder;
+import com.microsoft.graph.app.onlinemeetings.item.sendvirtualappointmentsms.SendVirtualAppointmentSmsRequestBuilder;
 import com.microsoft.graph.app.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
@@ -38,7 +40,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return new AlternativeRecordingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
      */
     @jakarta.annotation.Nonnull
     public AttendanceReportsRequestBuilder attendanceReports() {
@@ -94,6 +96,20 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return new RegistrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the sendVirtualAppointmentReminderSms method.
+     */
+    @jakarta.annotation.Nonnull
+    public SendVirtualAppointmentReminderSmsRequestBuilder sendVirtualAppointmentReminderSms() {
+        return new SendVirtualAppointmentReminderSmsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the sendVirtualAppointmentSms method.
+     */
+    @jakarta.annotation.Nonnull
+    public SendVirtualAppointmentSmsRequestBuilder sendVirtualAppointmentSms() {
+        return new SendVirtualAppointmentSmsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
      */
     @jakarta.annotation.Nonnull
@@ -119,66 +135,64 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property onlineMeetings for app
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property onlineMeetings for app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get onlineMeetings from app
-     * @return a CompletableFuture of onlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting get() {
         return get(null);
     }
     /**
      * Get onlineMeetings from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property onlineMeetings in app
      * @param body The request body
-     * @return a CompletableFuture of onlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property onlineMeetings in app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property onlineMeetings for app
@@ -195,16 +209,9 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -222,18 +229,9 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -254,18 +252,10 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**

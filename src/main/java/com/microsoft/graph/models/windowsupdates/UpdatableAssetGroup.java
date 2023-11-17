@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
     /**
-     * Members of the group. Read-only.
-     */
-    private java.util.List<UpdatableAsset> members;
-    /**
-     * Instantiates a new updatableAssetGroup and sets the default values.
+     * Instantiates a new UpdatableAssetGroup and sets the default values.
      */
     public UpdatableAssetGroup() {
         super();
@@ -22,7 +18,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatableAssetGroup
+     * @return a UpdatableAssetGroup
      */
     @jakarta.annotation.Nonnull
     public static UpdatableAssetGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
     }
     /**
      * Gets the members property value. Members of the group. Read-only.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getMembers() {
-        return this.members;
+        return this.backingStore.get("members");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.members = value;
+        this.backingStore.set("members", value);
     }
 }

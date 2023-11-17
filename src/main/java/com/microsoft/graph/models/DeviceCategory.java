@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCategory extends Entity implements Parsable {
     /**
-     * Optional description for the device category.
-     */
-    private String description;
-    /**
-     * Display name for the device category.
-     */
-    private String displayName;
-    /**
-     * Optional role scope tags for the device category.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Instantiates a new deviceCategory and sets the default values.
+     * Instantiates a new DeviceCategory and sets the default values.
      */
     public DeviceCategory() {
         super();
@@ -32,7 +20,7 @@ public class DeviceCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCategory
+     * @return a DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public static DeviceCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional description for the device category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name for the device category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. Optional role scope tags for the device category.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class DeviceCategory extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the device category.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the roleScopeTagIds property value. Optional role scope tags for the device category.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
 }

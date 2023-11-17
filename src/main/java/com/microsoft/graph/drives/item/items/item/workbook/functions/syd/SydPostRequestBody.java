@@ -5,41 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
+public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The cost property
-     */
-    private Json cost;
-    /**
-     * The life property
-     */
-    private Json life;
-    /**
-     * The per property
-     */
-    private Json per;
-    /**
-     * The salvage property
-     */
-    private Json salvage;
-    /**
-     * Instantiates a new sydPostRequestBody and sets the default values.
+     * Instantiates a new SydPostRequestBody and sets the default values.
      */
     public SydPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sydPostRequestBody
+     * @return a SydPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SydPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,12 +36,25 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
         return new SydPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cost property value. The cost property
@@ -60,7 +62,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
-        return this.cost;
+        return this.backingStore.get("cost");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +83,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLife() {
-        return this.life;
+        return this.backingStore.get("life");
     }
     /**
      * Gets the per property value. The per property
@@ -89,7 +91,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPer() {
-        return this.per;
+        return this.backingStore.get("per");
     }
     /**
      * Gets the salvage property value. The salvage property
@@ -97,7 +99,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {
-        return this.salvage;
+        return this.backingStore.get("salvage");
     }
     /**
      * Serializes information the current object
@@ -112,38 +114,46 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
     public void setCost(@jakarta.annotation.Nullable final Json value) {
-        this.cost = value;
+        this.backingStore.set("cost", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
     public void setLife(@jakarta.annotation.Nullable final Json value) {
-        this.life = value;
+        this.backingStore.set("life", value);
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
      */
     public void setPer(@jakarta.annotation.Nullable final Json value) {
-        this.per = value;
+        this.backingStore.set("per", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
-        this.salvage = value;
+        this.backingStore.set("salvage", value);
     }
 }

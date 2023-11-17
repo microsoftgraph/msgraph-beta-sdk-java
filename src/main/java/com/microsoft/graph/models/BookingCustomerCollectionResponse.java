@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BookingCustomer> value;
-    /**
-     * Instantiates a new bookingCustomerCollectionResponse and sets the default values.
+     * Instantiates a new BookingCustomerCollectionResponse and sets the default values.
      */
     public BookingCustomerCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class BookingCustomerCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomerCollectionResponse
+     * @return a BookingCustomerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class BookingCustomerCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a bookingCustomer
+     * @return a java.util.List<BookingCustomer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomer> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BookingCustomerCollectionResponse extends BaseCollectionPaginationC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BookingCustomer> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -35,31 +35,29 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/updatePasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group.
+     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-updatepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final UpdatePasswordSingleSignOnCredentialsPostRequestBody body) {
-        return post(body, null);
+    public void post(@jakarta.annotation.Nonnull final UpdatePasswordSingleSignOnCredentialsPostRequestBody body) {
+        post(body, null);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group.
+     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-updatepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final UpdatePasswordSingleSignOnCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public void post(@jakarta.annotation.Nonnull final UpdatePasswordSingleSignOnCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group.
+     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +66,7 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group.
+     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -76,23 +74,16 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UpdatePasswordSingleSignOnCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updatePasswordSingleSignOnCredentialsRequestBuilder
+     * @return a UpdatePasswordSingleSignOnCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdatePasswordSingleSignOnCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

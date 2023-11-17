@@ -14,67 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyMigrationReport extends Entity implements Parsable {
     /**
-     * The date and time at which the GroupPolicyMigrationReport was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The name of Group Policy Object from the GPO Xml Content
-     */
-    private String displayName;
-    /**
-     * The date and time at which the GroupPolicyMigrationReport was created.
-     */
-    private OffsetDateTime groupPolicyCreatedDateTime;
-    /**
-     * The date and time at which the GroupPolicyMigrationReport was last modified.
-     */
-    private OffsetDateTime groupPolicyLastModifiedDateTime;
-    /**
-     * The Group Policy Object GUID from GPO Xml content
-     */
-    private UUID groupPolicyObjectId;
-    /**
-     * A list of group policy settings to MDM/Intune mappings.
-     */
-    private java.util.List<GroupPolicySettingMapping> groupPolicySettingMappings;
-    /**
-     * The date and time at which the GroupPolicyMigrationReport was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Indicates if the Group Policy Object file is covered and ready for Intune migration.
-     */
-    private GroupPolicyMigrationReadiness migrationReadiness;
-    /**
-     * The distinguished name of the OU.
-     */
-    private String ouDistinguishedName;
-    /**
-     * The list of scope tags for the configuration.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The number of Group Policy Settings supported by Intune.
-     */
-    private Integer supportedSettingsCount;
-    /**
-     * The Percentage of Group Policy Settings supported by Intune.
-     */
-    private Integer supportedSettingsPercent;
-    /**
-     * The Targeted in AD property from GPO Xml Content
-     */
-    private Boolean targetedInActiveDirectory;
-    /**
-     * The total number of Group Policy Settings from GPO file.
-     */
-    private Integer totalSettingsCount;
-    /**
-     * A list of unsupported group policy extensions inside the Group Policy Object.
-     */
-    private java.util.List<UnsupportedGroupPolicyExtension> unsupportedGroupPolicyExtensions;
-    /**
-     * Instantiates a new groupPolicyMigrationReport and sets the default values.
+     * Instantiates a new GroupPolicyMigrationReport and sets the default values.
      */
     public GroupPolicyMigrationReport() {
         super();
@@ -82,7 +22,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyMigrationReport
+     * @return a GroupPolicyMigrationReport
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyMigrationReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -95,15 +35,15 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The name of Group Policy Object from the GPO Xml Content
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -135,7 +75,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getGroupPolicyCreatedDateTime() {
-        return this.groupPolicyCreatedDateTime;
+        return this.backingStore.get("groupPolicyCreatedDateTime");
     }
     /**
      * Gets the groupPolicyLastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -143,7 +83,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getGroupPolicyLastModifiedDateTime() {
-        return this.groupPolicyLastModifiedDateTime;
+        return this.backingStore.get("groupPolicyLastModifiedDateTime");
     }
     /**
      * Gets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
@@ -151,15 +91,15 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getGroupPolicyObjectId() {
-        return this.groupPolicyObjectId;
+        return this.backingStore.get("groupPolicyObjectId");
     }
     /**
      * Gets the groupPolicySettingMappings property value. A list of group policy settings to MDM/Intune mappings.
-     * @return a groupPolicySettingMapping
+     * @return a java.util.List<GroupPolicySettingMapping>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicySettingMapping> getGroupPolicySettingMappings() {
-        return this.groupPolicySettingMappings;
+        return this.backingStore.get("groupPolicySettingMappings");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -167,71 +107,71 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the migrationReadiness property value. Indicates if the Group Policy Object file is covered and ready for Intune migration.
-     * @return a groupPolicyMigrationReadiness
+     * @return a GroupPolicyMigrationReadiness
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReadiness getMigrationReadiness() {
-        return this.migrationReadiness;
+        return this.backingStore.get("migrationReadiness");
     }
     /**
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
-        return this.ouDistinguishedName;
+        return this.backingStore.get("ouDistinguishedName");
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the supportedSettingsCount property value. The number of Group Policy Settings supported by Intune.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupportedSettingsCount() {
-        return this.supportedSettingsCount;
+        return this.backingStore.get("supportedSettingsCount");
     }
     /**
      * Gets the supportedSettingsPercent property value. The Percentage of Group Policy Settings supported by Intune.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupportedSettingsPercent() {
-        return this.supportedSettingsPercent;
+        return this.backingStore.get("supportedSettingsPercent");
     }
     /**
      * Gets the targetedInActiveDirectory property value. The Targeted in AD property from GPO Xml Content
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTargetedInActiveDirectory() {
-        return this.targetedInActiveDirectory;
+        return this.backingStore.get("targetedInActiveDirectory");
     }
     /**
      * Gets the totalSettingsCount property value. The total number of Group Policy Settings from GPO file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalSettingsCount() {
-        return this.totalSettingsCount;
+        return this.backingStore.get("totalSettingsCount");
     }
     /**
      * Gets the unsupportedGroupPolicyExtensions property value. A list of unsupported group policy extensions inside the Group Policy Object.
-     * @return a unsupportedGroupPolicyExtension
+     * @return a java.util.List<UnsupportedGroupPolicyExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnsupportedGroupPolicyExtension> getUnsupportedGroupPolicyExtensions() {
-        return this.unsupportedGroupPolicyExtensions;
+        return this.backingStore.get("unsupportedGroupPolicyExtensions");
     }
     /**
      * Serializes information the current object
@@ -261,104 +201,104 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The name of Group Policy Object from the GPO Xml Content
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groupPolicyCreatedDateTime property value. The date and time at which the GroupPolicyMigrationReport was created.
      * @param value Value to set for the groupPolicyCreatedDateTime property.
      */
     public void setGroupPolicyCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.groupPolicyCreatedDateTime = value;
+        this.backingStore.set("groupPolicyCreatedDateTime", value);
     }
     /**
      * Sets the groupPolicyLastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @param value Value to set for the groupPolicyLastModifiedDateTime property.
      */
     public void setGroupPolicyLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.groupPolicyLastModifiedDateTime = value;
+        this.backingStore.set("groupPolicyLastModifiedDateTime", value);
     }
     /**
      * Sets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
      * @param value Value to set for the groupPolicyObjectId property.
      */
     public void setGroupPolicyObjectId(@jakarta.annotation.Nullable final UUID value) {
-        this.groupPolicyObjectId = value;
+        this.backingStore.set("groupPolicyObjectId", value);
     }
     /**
      * Sets the groupPolicySettingMappings property value. A list of group policy settings to MDM/Intune mappings.
      * @param value Value to set for the groupPolicySettingMappings property.
      */
     public void setGroupPolicySettingMappings(@jakarta.annotation.Nullable final java.util.List<GroupPolicySettingMapping> value) {
-        this.groupPolicySettingMappings = value;
+        this.backingStore.set("groupPolicySettingMappings", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the migrationReadiness property value. Indicates if the Group Policy Object file is covered and ready for Intune migration.
      * @param value Value to set for the migrationReadiness property.
      */
     public void setMigrationReadiness(@jakarta.annotation.Nullable final GroupPolicyMigrationReadiness value) {
-        this.migrationReadiness = value;
+        this.backingStore.set("migrationReadiness", value);
     }
     /**
      * Sets the ouDistinguishedName property value. The distinguished name of the OU.
      * @param value Value to set for the ouDistinguishedName property.
      */
     public void setOuDistinguishedName(@jakarta.annotation.Nullable final String value) {
-        this.ouDistinguishedName = value;
+        this.backingStore.set("ouDistinguishedName", value);
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the supportedSettingsCount property value. The number of Group Policy Settings supported by Intune.
      * @param value Value to set for the supportedSettingsCount property.
      */
     public void setSupportedSettingsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.supportedSettingsCount = value;
+        this.backingStore.set("supportedSettingsCount", value);
     }
     /**
      * Sets the supportedSettingsPercent property value. The Percentage of Group Policy Settings supported by Intune.
      * @param value Value to set for the supportedSettingsPercent property.
      */
     public void setSupportedSettingsPercent(@jakarta.annotation.Nullable final Integer value) {
-        this.supportedSettingsPercent = value;
+        this.backingStore.set("supportedSettingsPercent", value);
     }
     /**
      * Sets the targetedInActiveDirectory property value. The Targeted in AD property from GPO Xml Content
      * @param value Value to set for the targetedInActiveDirectory property.
      */
     public void setTargetedInActiveDirectory(@jakarta.annotation.Nullable final Boolean value) {
-        this.targetedInActiveDirectory = value;
+        this.backingStore.set("targetedInActiveDirectory", value);
     }
     /**
      * Sets the totalSettingsCount property value. The total number of Group Policy Settings from GPO file.
      * @param value Value to set for the totalSettingsCount property.
      */
     public void setTotalSettingsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalSettingsCount = value;
+        this.backingStore.set("totalSettingsCount", value);
     }
     /**
      * Sets the unsupportedGroupPolicyExtensions property value. A list of unsupported group policy extensions inside the Group Policy Object.
      * @param value Value to set for the unsupportedGroupPolicyExtensions property.
      */
     public void setUnsupportedGroupPolicyExtensions(@jakarta.annotation.Nullable final java.util.List<UnsupportedGroupPolicyExtension> value) {
-        this.unsupportedGroupPolicyExtensions = value;
+        this.backingStore.set("unsupportedGroupPolicyExtensions", value);
     }
 }

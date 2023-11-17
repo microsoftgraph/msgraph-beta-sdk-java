@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
-     */
-    private AppleDeploymentChannel deploymentChannel;
-    /**
-     * Payload. (UTF8 encoded byte array)
-     */
-    private byte[] payload;
-    /**
-     * Payload file name (.mobileconfig
-     */
-    private String payloadFileName;
-    /**
-     * Name that is displayed to the user.
-     */
-    private String payloadName;
-    /**
-     * Instantiates a new macOSCustomConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomConfiguration and sets the default values.
      */
     public MacOSCustomConfiguration() {
         super();
@@ -37,7 +21,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomConfiguration
+     * @return a MacOSCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +30,11 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
-     * @return a appleDeploymentChannel
+     * @return a AppleDeploymentChannel
      */
     @jakarta.annotation.Nullable
     public AppleDeploymentChannel getDeploymentChannel() {
-        return this.deploymentChannel;
+        return this.backingStore.get("deploymentChannel");
     }
     /**
      * The deserialization information for the current model
@@ -67,27 +51,27 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
-        return this.payload;
+        return this.backingStore.get("payload");
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
-        return this.payloadFileName;
+        return this.backingStore.get("payloadFileName");
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {
-        return this.payloadName;
+        return this.backingStore.get("payloadName");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
-        this.deploymentChannel = value;
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
-        this.payload = value;
+        this.backingStore.set("payload", value);
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      * @param value Value to set for the payloadFileName property.
      */
     public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
-        this.payloadFileName = value;
+        this.backingStore.set("payloadFileName", value);
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      * @param value Value to set for the payloadName property.
      */
     public void setPayloadName(@jakarta.annotation.Nullable final String value) {
-        this.payloadName = value;
+        this.backingStore.set("payloadName", value);
     }
 }

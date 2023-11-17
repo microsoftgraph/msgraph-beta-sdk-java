@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview will automatically have email OTP enabled beginning in October 2021.
-     */
-    private ExternalEmailOtpState allowExternalIdToUseEmailOtp;
-    /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
-     * Instantiates a new emailAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.
      */
     public EmailAuthenticationMethodConfiguration() {
         super();
@@ -26,7 +18,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailAuthenticationMethodConfiguration
+     * @return a EmailAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static EmailAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview will automatically have email OTP enabled beginning in October 2021.
-     * @return a externalEmailOtpState
+     * @return a ExternalEmailOtpState
      */
     @jakarta.annotation.Nullable
     public ExternalEmailOtpState getAllowExternalIdToUseEmailOtp() {
-        return this.allowExternalIdToUseEmailOtp;
+        return this.backingStore.get("allowExternalIdToUseEmailOtp");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.backingStore.get("includeTargets");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the allowExternalIdToUseEmailOtp property.
      */
     public void setAllowExternalIdToUseEmailOtp(@jakarta.annotation.Nullable final ExternalEmailOtpState value) {
-        this.allowExternalIdToUseEmailOtp = value;
+        this.backingStore.set("allowExternalIdToUseEmailOtp", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.backingStore.set("includeTargets", value);
     }
 }

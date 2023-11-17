@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchJobBase extends Entity implements Parsable {
     /**
-     * The completionDateTime property
-     */
-    private OffsetDateTime completionDateTime;
-    /**
-     * The creationDateTime property
-     */
-    private OffsetDateTime creationDateTime;
-    /**
-     * The error property
-     */
-    private ClassificationError error;
-    /**
-     * The lastUpdatedDateTime property
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The startDateTime property
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Instantiates a new exactMatchJobBase and sets the default values.
+     * Instantiates a new ExactMatchJobBase and sets the default values.
      */
     public ExactMatchJobBase() {
         super();
@@ -38,7 +18,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchJobBase
+     * @return a ExactMatchJobBase
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchJobBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +40,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
-        return this.completionDateTime;
+        return this.backingStore.get("completionDateTime");
     }
     /**
      * Gets the creationDateTime property value. The creationDateTime property
@@ -68,15 +48,15 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this.creationDateTime;
+        return this.backingStore.get("creationDateTime");
     }
     /**
      * Gets the error property value. The error property
-     * @return a classificationError
+     * @return a ClassificationError
      */
     @jakarta.annotation.Nullable
     public ClassificationError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +78,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -106,7 +86,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -126,34 +106,34 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completionDateTime = value;
+        this.backingStore.set("completionDateTime", value);
     }
     /**
      * Sets the creationDateTime property value. The creationDateTime property
      * @param value Value to set for the creationDateTime property.
      */
     public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.creationDateTime = value;
+        this.backingStore.set("creationDateTime", value);
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final ClassificationError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
 }

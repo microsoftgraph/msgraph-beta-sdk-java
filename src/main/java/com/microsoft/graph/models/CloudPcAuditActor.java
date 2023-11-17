@@ -4,73 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
+public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Name of the application.
-     */
-    private String applicationDisplayName;
-    /**
-     * Azure AD application ID.
-     */
-    private String applicationId;
-    /**
-     * IP address.
-     */
-    private String ipAddress;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The delegated partner tenant ID.
-     */
-    private String remoteTenantId;
-    /**
-     * The delegated partner user ID.
-     */
-    private String remoteUserId;
-    /**
-     * Service Principal Name (SPN).
-     */
-    private String servicePrincipalName;
-    /**
-     * The type property
-     */
-    private CloudPcAuditActorType type;
-    /**
-     * Azure AD user ID.
-     */
-    private String userId;
-    /**
-     * List of user permissions and application permissions when the audit event was performed.
-     */
-    private java.util.List<String> userPermissions;
-    /**
-     * User Principal Name (UPN).
-     */
-    private String userPrincipalName;
-    /**
-     * List of role scope tags.
-     */
-    private java.util.List<CloudPcUserRoleScopeTagInfo> userRoleScopeTags;
-    /**
-     * Instantiates a new cloudPcAuditActor and sets the default values.
+     * Instantiates a new CloudPcAuditActor and sets the default values.
      */
     public CloudPcAuditActor() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcAuditActor
+     * @return a CloudPcAuditActor
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditActor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,28 +35,41 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         return new CloudPcAuditActor();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationDisplayName property value. Name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
-        return this.applicationDisplayName;
+        return this.backingStore.get("applicationDisplayName");
     }
     /**
-     * Gets the applicationId property value. Azure AD application ID.
-     * @return a string
+     * Gets the applicationId property value. Microsoft Entra application ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
-        return this.applicationId;
+        return this.backingStore.get("applicationId");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -124,83 +94,83 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.backingStore.get("ipAddress");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the remoteTenantId property value. The delegated partner tenant ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteTenantId() {
-        return this.remoteTenantId;
+        return this.backingStore.get("remoteTenantId");
     }
     /**
      * Gets the remoteUserId property value. The delegated partner user ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteUserId() {
-        return this.remoteUserId;
+        return this.backingStore.get("remoteUserId");
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
-        return this.servicePrincipalName;
+        return this.backingStore.get("servicePrincipalName");
     }
     /**
      * Gets the type property value. The type property
-     * @return a cloudPcAuditActorType
+     * @return a CloudPcAuditActorType
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActorType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
-     * Gets the userId property value. Azure AD user ID.
-     * @return a string
+     * Gets the userId property value. Microsoft Entra user ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
-        return this.userPermissions;
+        return this.backingStore.get("userPermissions");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Gets the userRoleScopeTags property value. List of role scope tags.
-     * @return a cloudPcUserRoleScopeTagInfo
+     * @return a java.util.List<CloudPcUserRoleScopeTagInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserRoleScopeTagInfo> getUserRoleScopeTags() {
-        return this.userRoleScopeTags;
+        return this.backingStore.get("userRoleScopeTags");
     }
     /**
      * Serializes information the current object
@@ -223,94 +193,102 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the applicationDisplayName property value. Name of the application.
      * @param value Value to set for the applicationDisplayName property.
      */
     public void setApplicationDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.applicationDisplayName = value;
+        this.backingStore.set("applicationDisplayName", value);
     }
     /**
-     * Sets the applicationId property value. Azure AD application ID.
+     * Sets the applicationId property value. Microsoft Entra application ID.
      * @param value Value to set for the applicationId property.
      */
     public void setApplicationId(@jakarta.annotation.Nullable final String value) {
-        this.applicationId = value;
+        this.backingStore.set("applicationId", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the ipAddress property value. IP address.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.backingStore.set("ipAddress", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the remoteTenantId property value. The delegated partner tenant ID.
      * @param value Value to set for the remoteTenantId property.
      */
     public void setRemoteTenantId(@jakarta.annotation.Nullable final String value) {
-        this.remoteTenantId = value;
+        this.backingStore.set("remoteTenantId", value);
     }
     /**
      * Sets the remoteUserId property value. The delegated partner user ID.
      * @param value Value to set for the remoteUserId property.
      */
     public void setRemoteUserId(@jakarta.annotation.Nullable final String value) {
-        this.remoteUserId = value;
+        this.backingStore.set("remoteUserId", value);
     }
     /**
      * Sets the servicePrincipalName property value. Service Principal Name (SPN).
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalName = value;
+        this.backingStore.set("servicePrincipalName", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcAuditActorType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
     /**
-     * Sets the userId property value. Azure AD user ID.
+     * Sets the userId property value. Microsoft Entra user ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
      * @param value Value to set for the userPermissions property.
      */
     public void setUserPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userPermissions = value;
+        this.backingStore.set("userPermissions", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name (UPN).
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
     /**
      * Sets the userRoleScopeTags property value. List of role scope tags.
      * @param value Value to set for the userRoleScopeTags property.
      */
     public void setUserRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<CloudPcUserRoleScopeTagInfo> value) {
-        this.userRoleScopeTags = value;
+        this.backingStore.set("userRoleScopeTags", value);
     }
 }

@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Planner extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
-     */
-    private java.util.List<PlannerBucket> buckets;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified plans
-     */
-    private java.util.List<PlannerPlan> plans;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
-     */
-    private java.util.List<PlannerRoster> rosters;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
-     */
-    private java.util.List<PlannerTask> tasks;
-    /**
-     * Instantiates a new planner and sets the default values.
+     * Instantiates a new Planner and sets the default values.
      */
     public Planner() {
         super();
@@ -33,7 +17,7 @@ public class Planner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a planner
+     * @return a Planner
      */
     @jakarta.annotation.Nonnull
     public static Planner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +26,11 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the buckets property value. Read-only. Nullable. Returns a collection of the specified buckets
-     * @return a plannerBucket
+     * @return a java.util.List<PlannerBucket>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
-        return this.buckets;
+        return this.backingStore.get("buckets");
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +47,27 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this.plans;
+        return this.backingStore.get("plans");
     }
     /**
      * Gets the rosters property value. Read-only. Nullable. Returns a collection of the specified rosters
-     * @return a plannerRoster
+     * @return a java.util.List<PlannerRoster>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerRoster> getRosters() {
-        return this.rosters;
+        return this.backingStore.get("rosters");
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
-        return this.tasks;
+        return this.backingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class Planner extends Entity implements Parsable {
      * @param value Value to set for the buckets property.
      */
     public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerBucket> value) {
-        this.buckets = value;
+        this.backingStore.set("buckets", value);
     }
     /**
      * Sets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
      * @param value Value to set for the plans property.
      */
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this.plans = value;
+        this.backingStore.set("plans", value);
     }
     /**
      * Sets the rosters property value. Read-only. Nullable. Returns a collection of the specified rosters
      * @param value Value to set for the rosters property.
      */
     public void setRosters(@jakarta.annotation.Nullable final java.util.List<PlannerRoster> value) {
-        this.rosters = value;
+        this.backingStore.set("rosters", value);
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
-        this.tasks = value;
+        this.backingStore.set("tasks", value);
     }
 }

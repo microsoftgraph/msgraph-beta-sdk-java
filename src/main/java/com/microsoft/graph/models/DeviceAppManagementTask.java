@@ -13,47 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAppManagementTask extends Entity implements Parsable {
     /**
-     * The name or email of the admin this task is assigned to.
-     */
-    private String assignedTo;
-    /**
-     * Device app management task category.
-     */
-    private DeviceAppManagementTaskCategory category;
-    /**
-     * The created date.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The email address of the creator.
-     */
-    private String creator;
-    /**
-     * Notes from the creator.
-     */
-    private String creatorNotes;
-    /**
-     * The description.
-     */
-    private String description;
-    /**
-     * The name.
-     */
-    private String displayName;
-    /**
-     * The due date.
-     */
-    private OffsetDateTime dueDateTime;
-    /**
-     * Device app management task priority.
-     */
-    private DeviceAppManagementTaskPriority priority;
-    /**
-     * Device app management task status.
-     */
-    private DeviceAppManagementTaskStatus status;
-    /**
-     * Instantiates a new deviceAppManagementTask and sets the default values.
+     * Instantiates a new DeviceAppManagementTask and sets the default values.
      */
     public DeviceAppManagementTask() {
         super();
@@ -61,7 +21,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppManagementTask
+     * @return a DeviceAppManagementTask
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppManagementTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,19 +39,19 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the assignedTo property value. The name or email of the admin this task is assigned to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.backingStore.get("assignedTo");
     }
     /**
      * Gets the category property value. Device app management task category.
-     * @return a deviceAppManagementTaskCategory
+     * @return a DeviceAppManagementTaskCategory
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskCategory getCategory() {
-        return this.category;
+        return this.backingStore.get("category");
     }
     /**
      * Gets the createdDateTime property value. The created date.
@@ -99,39 +59,39 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the creator property value. The email address of the creator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreator() {
-        return this.creator;
+        return this.backingStore.get("creator");
     }
     /**
      * Gets the creatorNotes property value. Notes from the creator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatorNotes() {
-        return this.creatorNotes;
+        return this.backingStore.get("creatorNotes");
     }
     /**
      * Gets the description property value. The description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the dueDateTime property value. The due date.
@@ -139,7 +99,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDueDateTime() {
-        return this.dueDateTime;
+        return this.backingStore.get("dueDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -162,19 +122,19 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Device app management task priority.
-     * @return a deviceAppManagementTaskPriority
+     * @return a DeviceAppManagementTaskPriority
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskPriority getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Gets the status property value. Device app management task status.
-     * @return a deviceAppManagementTaskStatus
+     * @return a DeviceAppManagementTaskStatus
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -199,69 +159,69 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.backingStore.set("assignedTo", value);
     }
     /**
      * Sets the category property value. Device app management task category.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final DeviceAppManagementTaskCategory value) {
-        this.category = value;
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the createdDateTime property value. The created date.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the creator property value. The email address of the creator.
      * @param value Value to set for the creator property.
      */
     public void setCreator(@jakarta.annotation.Nullable final String value) {
-        this.creator = value;
+        this.backingStore.set("creator", value);
     }
     /**
      * Sets the creatorNotes property value. Notes from the creator.
      * @param value Value to set for the creatorNotes property.
      */
     public void setCreatorNotes(@jakarta.annotation.Nullable final String value) {
-        this.creatorNotes = value;
+        this.backingStore.set("creatorNotes", value);
     }
     /**
      * Sets the description property value. The description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the dueDateTime property value. The due date.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.dueDateTime = value;
+        this.backingStore.set("dueDateTime", value);
     }
     /**
      * Sets the priority property value. Device app management task priority.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final DeviceAppManagementTaskPriority value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
     /**
      * Sets the status property value. Device app management task status.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceAppManagementTaskStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

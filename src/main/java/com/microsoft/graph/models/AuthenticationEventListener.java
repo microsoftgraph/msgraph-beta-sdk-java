@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationEventListener extends Entity implements Parsable {
     /**
-     * The identifier of the authenticationEventsFlow object.
-     */
-    private String authenticationEventsFlowId;
-    /**
-     * The conditions on which this authenticationEventListener should trigger.
-     */
-    private AuthenticationConditions conditions;
-    /**
-     * The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
-     */
-    private Integer priority;
-    /**
-     * Instantiates a new authenticationEventListener and sets the default values.
+     * Instantiates a new AuthenticationEventListener and sets the default values.
      */
     public AuthenticationEventListener() {
         super();
@@ -29,7 +17,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationEventListener
+     * @return a AuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +37,19 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationEventsFlowId property value. The identifier of the authenticationEventsFlow object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationEventsFlowId() {
-        return this.authenticationEventsFlowId;
+        return this.backingStore.get("authenticationEventsFlowId");
     }
     /**
      * Gets the conditions property value. The conditions on which this authenticationEventListener should trigger.
-     * @return a authenticationConditions
+     * @return a AuthenticationConditions
      */
     @jakarta.annotation.Nullable
     public AuthenticationConditions getConditions() {
-        return this.conditions;
+        return this.backingStore.get("conditions");
     }
     /**
      * The deserialization information for the current model
@@ -77,11 +65,11 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Serializes information the current object
@@ -99,20 +87,20 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the authenticationEventsFlowId property.
      */
     public void setAuthenticationEventsFlowId(@jakarta.annotation.Nullable final String value) {
-        this.authenticationEventsFlowId = value;
+        this.backingStore.set("authenticationEventsFlowId", value);
     }
     /**
      * Sets the conditions property value. The conditions on which this authenticationEventListener should trigger.
      * @param value Value to set for the conditions property.
      */
     public void setConditions(@jakarta.annotation.Nullable final AuthenticationConditions value) {
-        this.conditions = value;
+        this.backingStore.set("conditions", value);
     }
     /**
      * Sets the priority property value. The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
 }

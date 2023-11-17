@@ -13,19 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Possible values of a property
-     */
-    private Enablement allowDeviceHealthMonitoring;
-    /**
-     * Specifies custom set of events collected from the device where health monitoring is enabled
-     */
-    private String configDeviceHealthMonitoringCustomScope;
-    /**
-     * Device health monitoring scope
-     */
-    private EnumSet<WindowsHealthMonitoringScope> configDeviceHealthMonitoringScope;
-    /**
-     * Instantiates a new windowsHealthMonitoringConfiguration and sets the default values.
+     * Instantiates a new WindowsHealthMonitoringConfiguration and sets the default values.
      */
     public WindowsHealthMonitoringConfiguration() {
         super();
@@ -34,7 +22,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsHealthMonitoringConfiguration
+     * @return a WindowsHealthMonitoringConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsHealthMonitoringConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,27 +31,27 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the allowDeviceHealthMonitoring property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getAllowDeviceHealthMonitoring() {
-        return this.allowDeviceHealthMonitoring;
+        return this.backingStore.get("allowDeviceHealthMonitoring");
     }
     /**
      * Gets the configDeviceHealthMonitoringCustomScope property value. Specifies custom set of events collected from the device where health monitoring is enabled
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigDeviceHealthMonitoringCustomScope() {
-        return this.configDeviceHealthMonitoringCustomScope;
+        return this.backingStore.get("configDeviceHealthMonitoringCustomScope");
     }
     /**
      * Gets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
-     * @return a windowsHealthMonitoringScope
+     * @return a EnumSet<WindowsHealthMonitoringScope>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsHealthMonitoringScope> getConfigDeviceHealthMonitoringScope() {
-        return this.configDeviceHealthMonitoringScope;
+        return this.backingStore.get("configDeviceHealthMonitoringScope");
     }
     /**
      * The deserialization information for the current model
@@ -93,20 +81,20 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the allowDeviceHealthMonitoring property.
      */
     public void setAllowDeviceHealthMonitoring(@jakarta.annotation.Nullable final Enablement value) {
-        this.allowDeviceHealthMonitoring = value;
+        this.backingStore.set("allowDeviceHealthMonitoring", value);
     }
     /**
      * Sets the configDeviceHealthMonitoringCustomScope property value. Specifies custom set of events collected from the device where health monitoring is enabled
      * @param value Value to set for the configDeviceHealthMonitoringCustomScope property.
      */
     public void setConfigDeviceHealthMonitoringCustomScope(@jakarta.annotation.Nullable final String value) {
-        this.configDeviceHealthMonitoringCustomScope = value;
+        this.backingStore.set("configDeviceHealthMonitoringCustomScope", value);
     }
     /**
      * Sets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
      * @param value Value to set for the configDeviceHealthMonitoringScope property.
      */
     public void setConfigDeviceHealthMonitoringScope(@jakarta.annotation.Nullable final EnumSet<WindowsHealthMonitoringScope> value) {
-        this.configDeviceHealthMonitoringScope = value;
+        this.backingStore.set("configDeviceHealthMonitoringScope", value);
     }
 }

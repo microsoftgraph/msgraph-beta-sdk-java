@@ -59,52 +59,52 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get languageDetails from security
-     * @return a CompletableFuture of trainingLanguageDetailCollectionResponse
+     * Language specific details on a training.
+     * @return a TrainingLanguageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetailCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetailCollectionResponse
+     * @return a TrainingLanguageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TrainingLanguageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to languageDetails for security
      * @param body The request body
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a TrainingLanguageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetail post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to languageDetails for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a TrainingLanguageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetail post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,24 +112,15 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a languageDetailsRequestBuilder
+     * @return a LanguageDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LanguageDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +158,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return new LanguageDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

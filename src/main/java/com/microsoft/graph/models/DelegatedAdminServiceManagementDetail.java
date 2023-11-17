@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /**
-     * The URL of the management portal for the managed service. Read-only.
-     */
-    private String serviceManagementUrl;
-    /**
-     * The name of a managed service. Read-only.
-     */
-    private String serviceName;
-    /**
-     * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
+     * Instantiates a new DelegatedAdminServiceManagementDetail and sets the default values.
      */
     public DelegatedAdminServiceManagementDetail() {
         super();
@@ -25,7 +17,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminServiceManagementDetail
+     * @return a DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminServiceManagementDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     }
     /**
      * Gets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceManagementUrl() {
-        return this.serviceManagementUrl;
+        return this.backingStore.get("serviceManagementUrl");
     }
     /**
      * Gets the serviceName property value. The name of a managed service. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
-        return this.serviceName;
+        return this.backingStore.get("serviceName");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceManagementUrl property.
      */
     public void setServiceManagementUrl(@jakarta.annotation.Nullable final String value) {
-        this.serviceManagementUrl = value;
+        this.backingStore.set("serviceManagementUrl", value);
     }
     /**
      * Sets the serviceName property value. The name of a managed service. Read-only.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
-        this.serviceName = value;
+        this.backingStore.set("serviceName", value);
     }
 }

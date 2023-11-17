@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationGroupSettingInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * The groupSettingValue property
-     */
-    private DeviceManagementConfigurationGroupSettingValue groupSettingValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationGroupSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationGroupSettingInstance and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingInstance() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationGroupSettingInstance
+     * @return a DeviceManagementConfigurationGroupSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     }
     /**
      * Gets the groupSettingValue property value. The groupSettingValue property
-     * @return a deviceManagementConfigurationGroupSettingValue
+     * @return a DeviceManagementConfigurationGroupSettingValue
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValue getGroupSettingValue() {
-        return this.groupSettingValue;
+        return this.backingStore.get("groupSettingValue");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param value Value to set for the groupSettingValue property.
      */
     public void setGroupSettingValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationGroupSettingValue value) {
-        this.groupSettingValue = value;
+        this.backingStore.set("groupSettingValue", value);
     }
 }

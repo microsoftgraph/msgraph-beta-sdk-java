@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,65 +14,23 @@ import java.util.Objects;
  * An item describing notification setting.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
+public class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Notification Settings Alert Type.
-     */
-    private IosNotificationAlertType alertType;
-    /**
-     * Application name to be associated with the bundleID.
-     */
-    private String appName;
-    /**
-     * Indicates whether badges are allowed for this app.
-     */
-    private Boolean badgesEnabled;
-    /**
-     * Bundle id of app to which to apply these notification settings.
-     */
-    private String bundleID;
-    /**
-     * Indicates whether notifications are allowed for this app.
-     */
-    private Boolean enabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
-     */
-    private IosNotificationPreviewVisibility previewVisibility;
-    /**
-     * Publisher to be associated with the bundleID.
-     */
-    private String publisher;
-    /**
-     * Indicates whether notifications can be shown in notification center.
-     */
-    private Boolean showInNotificationCenter;
-    /**
-     * Indicates whether notifications can be shown on the lock screen.
-     */
-    private Boolean showOnLockScreen;
-    /**
-     * Indicates whether sounds are allowed for this app.
-     */
-    private Boolean soundsEnabled;
-    /**
-     * Instantiates a new iosNotificationSettings and sets the default values.
+     * Instantiates a new IosNotificationSettings and sets the default values.
      */
     public IosNotificationSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosNotificationSettings
+     * @return a IosNotificationSettings
      */
     @jakarta.annotation.Nonnull
     public static IosNotificationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,52 +38,65 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         return new IosNotificationSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
-     * @return a iosNotificationAlertType
+     * @return a IosNotificationAlertType
      */
     @jakarta.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
-        return this.alertType;
+        return this.backingStore.get("alertType");
     }
     /**
      * Gets the appName property value. Application name to be associated with the bundleID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.backingStore.get("appName");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBadgesEnabled() {
-        return this.badgesEnabled;
+        return this.backingStore.get("badgesEnabled");
     }
     /**
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
-        return this.bundleID;
+        return this.backingStore.get("bundleID");
     }
     /**
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.backingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -146,51 +120,51 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
-     * @return a iosNotificationPreviewVisibility
+     * @return a IosNotificationPreviewVisibility
      */
     @jakarta.annotation.Nullable
     public IosNotificationPreviewVisibility getPreviewVisibility() {
-        return this.previewVisibility;
+        return this.backingStore.get("previewVisibility");
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
-        return this.showInNotificationCenter;
+        return this.backingStore.get("showInNotificationCenter");
     }
     /**
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowOnLockScreen() {
-        return this.showOnLockScreen;
+        return this.backingStore.get("showOnLockScreen");
     }
     /**
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSoundsEnabled() {
-        return this.soundsEnabled;
+        return this.backingStore.get("soundsEnabled");
     }
     /**
      * Serializes information the current object
@@ -212,87 +186,95 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alertType property value. Notification Settings Alert Type.
      * @param value Value to set for the alertType property.
      */
     public void setAlertType(@jakarta.annotation.Nullable final IosNotificationAlertType value) {
-        this.alertType = value;
+        this.backingStore.set("alertType", value);
     }
     /**
      * Sets the appName property value. Application name to be associated with the bundleID.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.backingStore.set("appName", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the badgesEnabled property value. Indicates whether badges are allowed for this app.
      * @param value Value to set for the badgesEnabled property.
      */
     public void setBadgesEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.badgesEnabled = value;
+        this.backingStore.set("badgesEnabled", value);
     }
     /**
      * Sets the bundleID property value. Bundle id of app to which to apply these notification settings.
      * @param value Value to set for the bundleID property.
      */
     public void setBundleID(@jakarta.annotation.Nullable final String value) {
-        this.bundleID = value;
+        this.backingStore.set("bundleID", value);
     }
     /**
      * Sets the enabled property value. Indicates whether notifications are allowed for this app.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.backingStore.set("enabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
      * @param value Value to set for the previewVisibility property.
      */
     public void setPreviewVisibility(@jakarta.annotation.Nullable final IosNotificationPreviewVisibility value) {
-        this.previewVisibility = value;
+        this.backingStore.set("previewVisibility", value);
     }
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
     /**
      * Sets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
      * @param value Value to set for the showInNotificationCenter property.
      */
     public void setShowInNotificationCenter(@jakarta.annotation.Nullable final Boolean value) {
-        this.showInNotificationCenter = value;
+        this.backingStore.set("showInNotificationCenter", value);
     }
     /**
      * Sets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
      * @param value Value to set for the showOnLockScreen property.
      */
     public void setShowOnLockScreen(@jakarta.annotation.Nullable final Boolean value) {
-        this.showOnLockScreen = value;
+        this.backingStore.set("showOnLockScreen", value);
     }
     /**
      * Sets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
      * @param value Value to set for the soundsEnabled property.
      */
     public void setSoundsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.soundsEnabled = value;
+        this.backingStore.set("soundsEnabled", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
     /**
-     * The content property
-     */
-    private byte[] content;
-    /**
-     * The contentUrl property
-     */
-    private String contentUrl;
-    /**
-     * Instantiates a new onenoteResource and sets the default values.
+     * Instantiates a new OnenoteResource and sets the default values.
      */
     public OnenoteResource() {
         super();
@@ -26,7 +18,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteResource
+     * @return a OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public static OnenoteResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,19 +27,19 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the contentUrl property value. The contentUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.backingStore.get("contentUrl");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the contentUrl property value. The contentUrl property
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.backingStore.set("contentUrl", value);
     }
 }

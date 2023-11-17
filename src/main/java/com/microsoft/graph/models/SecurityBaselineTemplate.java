@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineTemplate extends DeviceManagementTemplate implements Parsable {
     /**
-     * The security baseline per category device state summary
-     */
-    private java.util.List<SecurityBaselineCategoryStateSummary> categoryDeviceStateSummaries;
-    /**
-     * The security baseline device states
-     */
-    private java.util.List<SecurityBaselineDeviceState> deviceStates;
-    /**
-     * The security baseline device state summary
-     */
-    private SecurityBaselineStateSummary deviceStateSummary;
-    /**
-     * Instantiates a new securityBaselineTemplate and sets the default values.
+     * Instantiates a new SecurityBaselineTemplate and sets the default values.
      */
     public SecurityBaselineTemplate() {
         super();
@@ -33,7 +21,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineTemplate
+     * @return a SecurityBaselineTemplate
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,27 +30,27 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     }
     /**
      * Gets the categoryDeviceStateSummaries property value. The security baseline per category device state summary
-     * @return a securityBaselineCategoryStateSummary
+     * @return a java.util.List<SecurityBaselineCategoryStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineCategoryStateSummary> getCategoryDeviceStateSummaries() {
-        return this.categoryDeviceStateSummaries;
+        return this.backingStore.get("categoryDeviceStateSummaries");
     }
     /**
      * Gets the deviceStates property value. The security baseline device states
-     * @return a securityBaselineDeviceState
+     * @return a java.util.List<SecurityBaselineDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineDeviceState> getDeviceStates() {
-        return this.deviceStates;
+        return this.backingStore.get("deviceStates");
     }
     /**
      * Gets the deviceStateSummary property value. The security baseline device state summary
-     * @return a securityBaselineStateSummary
+     * @return a SecurityBaselineStateSummary
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineStateSummary getDeviceStateSummary() {
-        return this.deviceStateSummary;
+        return this.backingStore.get("deviceStateSummary");
     }
     /**
      * The deserialization information for the current model
@@ -92,20 +80,20 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param value Value to set for the categoryDeviceStateSummaries property.
      */
     public void setCategoryDeviceStateSummaries(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineCategoryStateSummary> value) {
-        this.categoryDeviceStateSummaries = value;
+        this.backingStore.set("categoryDeviceStateSummaries", value);
     }
     /**
      * Sets the deviceStates property value. The security baseline device states
      * @param value Value to set for the deviceStates property.
      */
     public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineDeviceState> value) {
-        this.deviceStates = value;
+        this.backingStore.set("deviceStates", value);
     }
     /**
      * Sets the deviceStateSummary property value. The security baseline device state summary
      * @param value Value to set for the deviceStateSummary property.
      */
     public void setDeviceStateSummary(@jakarta.annotation.Nullable final SecurityBaselineStateSummary value) {
-        this.deviceStateSummary = value;
+        this.backingStore.set("deviceStateSummary", value);
     }
 }

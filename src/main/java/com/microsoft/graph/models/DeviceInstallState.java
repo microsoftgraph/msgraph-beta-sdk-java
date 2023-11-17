@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceInstallState extends Entity implements Parsable {
     /**
-     * Device Id.
-     */
-    private String deviceId;
-    /**
-     * Device name.
-     */
-    private String deviceName;
-    /**
-     * The error code for install failures.
-     */
-    private String errorCode;
-    /**
-     * Possible values for install state.
-     */
-    private InstallState installState;
-    /**
-     * Last sync date and time.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * OS Description.
-     */
-    private String osDescription;
-    /**
-     * OS Version.
-     */
-    private String osVersion;
-    /**
-     * Device User Name.
-     */
-    private String userName;
-    /**
-     * Instantiates a new deviceInstallState and sets the default values.
+     * Instantiates a new DeviceInstallState and sets the default values.
      */
     public DeviceInstallState() {
         super();
@@ -53,7 +21,7 @@ public class DeviceInstallState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceInstallState
+     * @return a DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public static DeviceInstallState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,27 +30,27 @@ public class DeviceInstallState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. Device Id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the errorCode property value. The error code for install failures.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -103,11 +71,11 @@ public class DeviceInstallState extends Entity implements Parsable {
     }
     /**
      * Gets the installState property value. Possible values for install state.
-     * @return a installState
+     * @return a InstallState
      */
     @jakarta.annotation.Nullable
     public InstallState getInstallState() {
-        return this.installState;
+        return this.backingStore.get("installState");
     }
     /**
      * Gets the lastSyncDateTime property value. Last sync date and time.
@@ -115,31 +83,31 @@ public class DeviceInstallState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the osDescription property value. OS Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
-        return this.osDescription;
+        return this.backingStore.get("osDescription");
     }
     /**
      * Gets the osVersion property value. OS Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the userName property value. Device User Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the errorCode property value. The error code for install failures.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the installState property value. Possible values for install state.
      * @param value Value to set for the installState property.
      */
     public void setInstallState(@jakarta.annotation.Nullable final InstallState value) {
-        this.installState = value;
+        this.backingStore.set("installState", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync date and time.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the osDescription property value. OS Description.
      * @param value Value to set for the osDescription property.
      */
     public void setOsDescription(@jakarta.annotation.Nullable final String value) {
-        this.osDescription = value;
+        this.backingStore.set("osDescription", value);
     }
     /**
      * Sets the osVersion property value. OS Version.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the userName property value. Device User Name.
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
 }

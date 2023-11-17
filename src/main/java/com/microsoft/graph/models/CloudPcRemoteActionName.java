@@ -14,7 +14,11 @@ public enum CloudPcRemoteActionName implements ValuedEnum {
     ChangeUserAccountType("changeUserAccountType"),
     Troubleshoot("troubleshoot"),
     PlaceUnderReview("placeUnderReview"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    CreateSnapshot("createSnapshot"),
+    PowerOn("powerOn"),
+    PowerOff("powerOff"),
+    MoveRegion("moveRegion");
     public final String value;
     CloudPcRemoteActionName(final String value) {
         this.value = value;
@@ -35,6 +39,10 @@ public enum CloudPcRemoteActionName implements ValuedEnum {
             case "troubleshoot": return Troubleshoot;
             case "placeUnderReview": return PlaceUnderReview;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "createSnapshot": return CreateSnapshot;
+            case "powerOn": return PowerOn;
+            case "powerOff": return PowerOff;
+            case "moveRegion": return MoveRegion;
             default: return null;
         }
     }

@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase implements Parsable {
     /**
-     * Target store certificate. Possible values are: user, machine.
-     */
-    private CertificateStore certificateStore;
-    /**
-     * PKCS Certificate Template Name
-     */
-    private String certificateTemplateName;
-    /**
-     * PKCS Certification Authority
-     */
-    private String certificationAuthority;
-    /**
-     * PKCS Certification Authority Name
-     */
-    private String certificationAuthorityName;
-    /**
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-    /**
-     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new windows10PkcsCertificateProfile and sets the default values.
+     * Instantiates a new Windows10PkcsCertificateProfile and sets the default values.
      */
     public Windows10PkcsCertificateProfile() {
         super();
@@ -57,7 +21,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10PkcsCertificateProfile
+     * @return a Windows10PkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static Windows10PkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +30,51 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this.certificateStore;
+        return this.backingStore.get("certificateStore");
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this.certificateTemplateName;
+        return this.backingStore.get("certificateTemplateName");
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
-        return this.certificationAuthority;
+        return this.backingStore.get("certificationAuthority");
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this.certificationAuthorityName;
+        return this.backingStore.get("certificationAuthorityName");
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this.customSubjectAlternativeNames;
+        return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this.extendedKeyUsages;
+        return this.backingStore.get("extendedKeyUsages");
     }
     /**
      * The deserialization information for the current model
@@ -132,27 +96,27 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.backingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.backingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.backingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
-        this.certificateStore = value;
+        this.backingStore.set("certificateStore", value);
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name
      * @param value Value to set for the certificateTemplateName property.
      */
     public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
-        this.certificateTemplateName = value;
+        this.backingStore.set("certificateTemplateName", value);
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
      */
     public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthority = value;
+        this.backingStore.set("certificationAuthority", value);
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
      */
     public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
-        this.certificationAuthorityName = value;
+        this.backingStore.set("certificationAuthorityName", value);
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this.customSubjectAlternativeNames = value;
+        this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
      */
     public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this.extendedKeyUsages = value;
+        this.backingStore.set("extendedKeyUsages", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.backingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.backingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.backingStore.set("subjectNameFormatString", value);
     }
 }

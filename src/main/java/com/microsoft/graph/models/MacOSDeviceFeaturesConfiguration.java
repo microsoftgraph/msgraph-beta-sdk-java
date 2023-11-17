@@ -12,175 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
-     * Whether to show admin host information on the login window.
-     */
-    private Boolean adminShowHostInfo;
-    /**
-     * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<MacOSAssociatedDomainsItem> appAssociatedDomains;
-    /**
-     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<KeyValuePair> associatedDomains;
-    /**
-     * Whether to show the name and password dialog or a list of users on the login window.
-     */
-    private Boolean authorizedUsersListHidden;
-    /**
-     * Whether to hide admin users in the authorized users list on the login window.
-     */
-    private Boolean authorizedUsersListHideAdminUsers;
-    /**
-     * Whether to show only network and system users in the authorized users list on the login window.
-     */
-    private Boolean authorizedUsersListHideLocalUsers;
-    /**
-     * Whether to hide mobile users in the authorized users list on the login window.
-     */
-    private Boolean authorizedUsersListHideMobileAccounts;
-    /**
-     * Whether to show network users in the authorized users list on the login window.
-     */
-    private Boolean authorizedUsersListIncludeNetworkUsers;
-    /**
-     * Whether to show other users in the authorized users list on the login window.
-     */
-    private Boolean authorizedUsersListShowOtherManagedUsers;
-    /**
-     * List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<MacOSLaunchItem> autoLaunchItems;
-    /**
-     * Whether the Other user will disregard use of the console special user name.
-     */
-    private Boolean consoleAccessDisabled;
-    /**
-     * Prevents content caches from purging content to free up disk space for other apps.
-     */
-    private Boolean contentCachingBlockDeletion;
-    /**
-     * A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IpRange> contentCachingClientListenRanges;
-    /**
-     * Determines which clients a content cache will serve.
-     */
-    private MacOSContentCachingClientPolicy contentCachingClientPolicy;
-    /**
-     * The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
-     */
-    private String contentCachingDataPath;
-    /**
-     * Disables internet connection sharing.
-     */
-    private Boolean contentCachingDisableConnectionSharing;
-    /**
-     * Enables content caching and prevents it from being disabled by the user.
-     */
-    private Boolean contentCachingEnabled;
-    /**
-     * Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
-     */
-    private Boolean contentCachingForceConnectionSharing;
-    /**
-     * Prevent the device from sleeping if content caching is enabled.
-     */
-    private Boolean contentCachingKeepAwake;
-    /**
-     * Enables logging of IP addresses and ports of clients that request cached content.
-     */
-    private Boolean contentCachingLogClientIdentities;
-    /**
-     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
-     */
-    private Long contentCachingMaxSizeBytes;
-    /**
-     * A list of IP addresses representing parent content caches.
-     */
-    private java.util.List<String> contentCachingParents;
-    /**
-     * Determines how content caches select a parent cache.
-     */
-    private MacOSContentCachingParentSelectionPolicy contentCachingParentSelectionPolicy;
-    /**
-     * A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IpRange> contentCachingPeerFilterRanges;
-    /**
-     * A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IpRange> contentCachingPeerListenRanges;
-    /**
-     * Determines which content caches other content caches will peer with.
-     */
-    private MacOSContentCachingPeerPolicy contentCachingPeerPolicy;
-    /**
-     * Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
-     */
-    private Integer contentCachingPort;
-    /**
-     * A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<IpRange> contentCachingPublicRanges;
-    /**
-     * Display content caching alerts as system notifications.
-     */
-    private Boolean contentCachingShowAlerts;
-    /**
-     * Indicates the type of content allowed to be cached by Apple's content caching service.
-     */
-    private MacOSContentCachingType contentCachingType;
-    /**
-     * Custom text to be displayed on the login window.
-     */
-    private String loginWindowText;
-    /**
-     * Whether the Log Out menu item on the login window will be disabled while the user is logged in.
-     */
-    private Boolean logOutDisabledWhileLoggedIn;
-    /**
-     * Gets or sets a single sign-on extension profile.
-     */
-    private MacOSSingleSignOnExtension macOSSingleSignOnExtension;
-    /**
-     * Whether the Power Off menu item on the login window will be disabled while the user is logged in.
-     */
-    private Boolean powerOffDisabledWhileLoggedIn;
-    /**
-     * Whether to hide the Restart button item on the login window.
-     */
-    private Boolean restartDisabled;
-    /**
-     * Whether the Restart menu item on the login window will be disabled while the user is logged in.
-     */
-    private Boolean restartDisabledWhileLoggedIn;
-    /**
-     * Whether to disable the immediate screen lock functions.
-     */
-    private Boolean screenLockDisableImmediate;
-    /**
-     * Whether to hide the Shut Down button item on the login window.
-     */
-    private Boolean shutDownDisabled;
-    /**
-     * Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
-     */
-    private Boolean shutDownDisabledWhileLoggedIn;
-    /**
-     * Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
-     */
-    private SingleSignOnExtension singleSignOnExtension;
-    /**
-     * PKINIT Certificate for the authentication with single sign-on extensions.
-     */
-    private MacOSCertificateProfileBase singleSignOnExtensionPkinitCertificate;
-    /**
-     * Whether to hide the Sleep menu item on the login window.
-     */
-    private Boolean sleepDisabled;
-    /**
-     * Instantiates a new macOSDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new MacOSDeviceFeaturesConfiguration and sets the default values.
      */
     public MacOSDeviceFeaturesConfiguration() {
         super();
@@ -189,7 +21,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSDeviceFeaturesConfiguration
+     * @return a MacOSDeviceFeaturesConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -198,243 +30,243 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the adminShowHostInfo property value. Whether to show admin host information on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAdminShowHostInfo() {
-        return this.adminShowHostInfo;
+        return this.backingStore.get("adminShowHostInfo");
     }
     /**
      * Gets the appAssociatedDomains property value. Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
-     * @return a macOSAssociatedDomainsItem
+     * @return a java.util.List<MacOSAssociatedDomainsItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSAssociatedDomainsItem> getAppAssociatedDomains() {
-        return this.appAssociatedDomains;
+        return this.backingStore.get("appAssociatedDomains");
     }
     /**
      * Gets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAssociatedDomains() {
-        return this.associatedDomains;
+        return this.backingStore.get("associatedDomains");
     }
     /**
      * Gets the authorizedUsersListHidden property value. Whether to show the name and password dialog or a list of users on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHidden() {
-        return this.authorizedUsersListHidden;
+        return this.backingStore.get("authorizedUsersListHidden");
     }
     /**
      * Gets the authorizedUsersListHideAdminUsers property value. Whether to hide admin users in the authorized users list on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideAdminUsers() {
-        return this.authorizedUsersListHideAdminUsers;
+        return this.backingStore.get("authorizedUsersListHideAdminUsers");
     }
     /**
      * Gets the authorizedUsersListHideLocalUsers property value. Whether to show only network and system users in the authorized users list on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideLocalUsers() {
-        return this.authorizedUsersListHideLocalUsers;
+        return this.backingStore.get("authorizedUsersListHideLocalUsers");
     }
     /**
      * Gets the authorizedUsersListHideMobileAccounts property value. Whether to hide mobile users in the authorized users list on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideMobileAccounts() {
-        return this.authorizedUsersListHideMobileAccounts;
+        return this.backingStore.get("authorizedUsersListHideMobileAccounts");
     }
     /**
      * Gets the authorizedUsersListIncludeNetworkUsers property value. Whether to show network users in the authorized users list on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListIncludeNetworkUsers() {
-        return this.authorizedUsersListIncludeNetworkUsers;
+        return this.backingStore.get("authorizedUsersListIncludeNetworkUsers");
     }
     /**
      * Gets the authorizedUsersListShowOtherManagedUsers property value. Whether to show other users in the authorized users list on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListShowOtherManagedUsers() {
-        return this.authorizedUsersListShowOtherManagedUsers;
+        return this.backingStore.get("authorizedUsersListShowOtherManagedUsers");
     }
     /**
      * Gets the autoLaunchItems property value. List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
-     * @return a macOSLaunchItem
+     * @return a java.util.List<MacOSLaunchItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSLaunchItem> getAutoLaunchItems() {
-        return this.autoLaunchItems;
+        return this.backingStore.get("autoLaunchItems");
     }
     /**
      * Gets the consoleAccessDisabled property value. Whether the Other user will disregard use of the console special user name.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConsoleAccessDisabled() {
-        return this.consoleAccessDisabled;
+        return this.backingStore.get("consoleAccessDisabled");
     }
     /**
      * Gets the contentCachingBlockDeletion property value. Prevents content caches from purging content to free up disk space for other apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingBlockDeletion() {
-        return this.contentCachingBlockDeletion;
+        return this.backingStore.get("contentCachingBlockDeletion");
     }
     /**
      * Gets the contentCachingClientListenRanges property value. A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
-     * @return a ipRange
+     * @return a java.util.List<IpRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingClientListenRanges() {
-        return this.contentCachingClientListenRanges;
+        return this.backingStore.get("contentCachingClientListenRanges");
     }
     /**
      * Gets the contentCachingClientPolicy property value. Determines which clients a content cache will serve.
-     * @return a macOSContentCachingClientPolicy
+     * @return a MacOSContentCachingClientPolicy
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingClientPolicy getContentCachingClientPolicy() {
-        return this.contentCachingClientPolicy;
+        return this.backingStore.get("contentCachingClientPolicy");
     }
     /**
      * Gets the contentCachingDataPath property value. The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentCachingDataPath() {
-        return this.contentCachingDataPath;
+        return this.backingStore.get("contentCachingDataPath");
     }
     /**
      * Gets the contentCachingDisableConnectionSharing property value. Disables internet connection sharing.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingDisableConnectionSharing() {
-        return this.contentCachingDisableConnectionSharing;
+        return this.backingStore.get("contentCachingDisableConnectionSharing");
     }
     /**
      * Gets the contentCachingEnabled property value. Enables content caching and prevents it from being disabled by the user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingEnabled() {
-        return this.contentCachingEnabled;
+        return this.backingStore.get("contentCachingEnabled");
     }
     /**
      * Gets the contentCachingForceConnectionSharing property value. Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingForceConnectionSharing() {
-        return this.contentCachingForceConnectionSharing;
+        return this.backingStore.get("contentCachingForceConnectionSharing");
     }
     /**
      * Gets the contentCachingKeepAwake property value. Prevent the device from sleeping if content caching is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingKeepAwake() {
-        return this.contentCachingKeepAwake;
+        return this.backingStore.get("contentCachingKeepAwake");
     }
     /**
      * Gets the contentCachingLogClientIdentities property value. Enables logging of IP addresses and ports of clients that request cached content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingLogClientIdentities() {
-        return this.contentCachingLogClientIdentities;
+        return this.backingStore.get("contentCachingLogClientIdentities");
     }
     /**
      * Gets the contentCachingMaxSizeBytes property value. The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getContentCachingMaxSizeBytes() {
-        return this.contentCachingMaxSizeBytes;
+        return this.backingStore.get("contentCachingMaxSizeBytes");
     }
     /**
      * Gets the contentCachingParents property value. A list of IP addresses representing parent content caches.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentCachingParents() {
-        return this.contentCachingParents;
+        return this.backingStore.get("contentCachingParents");
     }
     /**
      * Gets the contentCachingParentSelectionPolicy property value. Determines how content caches select a parent cache.
-     * @return a macOSContentCachingParentSelectionPolicy
+     * @return a MacOSContentCachingParentSelectionPolicy
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingParentSelectionPolicy getContentCachingParentSelectionPolicy() {
-        return this.contentCachingParentSelectionPolicy;
+        return this.backingStore.get("contentCachingParentSelectionPolicy");
     }
     /**
      * Gets the contentCachingPeerFilterRanges property value. A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
-     * @return a ipRange
+     * @return a java.util.List<IpRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPeerFilterRanges() {
-        return this.contentCachingPeerFilterRanges;
+        return this.backingStore.get("contentCachingPeerFilterRanges");
     }
     /**
      * Gets the contentCachingPeerListenRanges property value. A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
-     * @return a ipRange
+     * @return a java.util.List<IpRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPeerListenRanges() {
-        return this.contentCachingPeerListenRanges;
+        return this.backingStore.get("contentCachingPeerListenRanges");
     }
     /**
      * Gets the contentCachingPeerPolicy property value. Determines which content caches other content caches will peer with.
-     * @return a macOSContentCachingPeerPolicy
+     * @return a MacOSContentCachingPeerPolicy
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingPeerPolicy getContentCachingPeerPolicy() {
-        return this.contentCachingPeerPolicy;
+        return this.backingStore.get("contentCachingPeerPolicy");
     }
     /**
      * Gets the contentCachingPort property value. Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getContentCachingPort() {
-        return this.contentCachingPort;
+        return this.backingStore.get("contentCachingPort");
     }
     /**
      * Gets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
-     * @return a ipRange
+     * @return a java.util.List<IpRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPublicRanges() {
-        return this.contentCachingPublicRanges;
+        return this.backingStore.get("contentCachingPublicRanges");
     }
     /**
      * Gets the contentCachingShowAlerts property value. Display content caching alerts as system notifications.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingShowAlerts() {
-        return this.contentCachingShowAlerts;
+        return this.backingStore.get("contentCachingShowAlerts");
     }
     /**
      * Gets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
-     * @return a macOSContentCachingType
+     * @return a MacOSContentCachingType
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingType getContentCachingType() {
-        return this.contentCachingType;
+        return this.backingStore.get("contentCachingType");
     }
     /**
      * The deserialization information for the current model
@@ -489,99 +321,99 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the loginWindowText property value. Custom text to be displayed on the login window.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoginWindowText() {
-        return this.loginWindowText;
+        return this.backingStore.get("loginWindowText");
     }
     /**
      * Gets the logOutDisabledWhileLoggedIn property value. Whether the Log Out menu item on the login window will be disabled while the user is logged in.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLogOutDisabledWhileLoggedIn() {
-        return this.logOutDisabledWhileLoggedIn;
+        return this.backingStore.get("logOutDisabledWhileLoggedIn");
     }
     /**
      * Gets the macOSSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
-     * @return a macOSSingleSignOnExtension
+     * @return a MacOSSingleSignOnExtension
      */
     @jakarta.annotation.Nullable
     public MacOSSingleSignOnExtension getMacOSSingleSignOnExtension() {
-        return this.macOSSingleSignOnExtension;
+        return this.backingStore.get("macOSSingleSignOnExtension");
     }
     /**
      * Gets the powerOffDisabledWhileLoggedIn property value. Whether the Power Off menu item on the login window will be disabled while the user is logged in.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPowerOffDisabledWhileLoggedIn() {
-        return this.powerOffDisabledWhileLoggedIn;
+        return this.backingStore.get("powerOffDisabledWhileLoggedIn");
     }
     /**
      * Gets the restartDisabled property value. Whether to hide the Restart button item on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRestartDisabled() {
-        return this.restartDisabled;
+        return this.backingStore.get("restartDisabled");
     }
     /**
      * Gets the restartDisabledWhileLoggedIn property value. Whether the Restart menu item on the login window will be disabled while the user is logged in.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRestartDisabledWhileLoggedIn() {
-        return this.restartDisabledWhileLoggedIn;
+        return this.backingStore.get("restartDisabledWhileLoggedIn");
     }
     /**
      * Gets the screenLockDisableImmediate property value. Whether to disable the immediate screen lock functions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenLockDisableImmediate() {
-        return this.screenLockDisableImmediate;
+        return this.backingStore.get("screenLockDisableImmediate");
     }
     /**
      * Gets the shutDownDisabled property value. Whether to hide the Shut Down button item on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShutDownDisabled() {
-        return this.shutDownDisabled;
+        return this.backingStore.get("shutDownDisabled");
     }
     /**
      * Gets the shutDownDisabledWhileLoggedIn property value. Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShutDownDisabledWhileLoggedIn() {
-        return this.shutDownDisabledWhileLoggedIn;
+        return this.backingStore.get("shutDownDisabledWhileLoggedIn");
     }
     /**
      * Gets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
-     * @return a singleSignOnExtension
+     * @return a SingleSignOnExtension
      */
     @jakarta.annotation.Nullable
     public SingleSignOnExtension getSingleSignOnExtension() {
-        return this.singleSignOnExtension;
+        return this.backingStore.get("singleSignOnExtension");
     }
     /**
      * Gets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extensions.
-     * @return a macOSCertificateProfileBase
+     * @return a MacOSCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public MacOSCertificateProfileBase getSingleSignOnExtensionPkinitCertificate() {
-        return this.singleSignOnExtensionPkinitCertificate;
+        return this.backingStore.get("singleSignOnExtensionPkinitCertificate");
     }
     /**
      * Gets the sleepDisabled property value. Whether to hide the Sleep menu item on the login window.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSleepDisabled() {
-        return this.sleepDisabled;
+        return this.backingStore.get("sleepDisabled");
     }
     /**
      * Serializes information the current object
@@ -638,293 +470,293 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the adminShowHostInfo property.
      */
     public void setAdminShowHostInfo(@jakarta.annotation.Nullable final Boolean value) {
-        this.adminShowHostInfo = value;
+        this.backingStore.set("adminShowHostInfo", value);
     }
     /**
      * Sets the appAssociatedDomains property value. Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appAssociatedDomains property.
      */
     public void setAppAssociatedDomains(@jakarta.annotation.Nullable final java.util.List<MacOSAssociatedDomainsItem> value) {
-        this.appAssociatedDomains = value;
+        this.backingStore.set("appAssociatedDomains", value);
     }
     /**
      * Sets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the associatedDomains property.
      */
     public void setAssociatedDomains(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.associatedDomains = value;
+        this.backingStore.set("associatedDomains", value);
     }
     /**
      * Sets the authorizedUsersListHidden property value. Whether to show the name and password dialog or a list of users on the login window.
      * @param value Value to set for the authorizedUsersListHidden property.
      */
     public void setAuthorizedUsersListHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListHidden = value;
+        this.backingStore.set("authorizedUsersListHidden", value);
     }
     /**
      * Sets the authorizedUsersListHideAdminUsers property value. Whether to hide admin users in the authorized users list on the login window.
      * @param value Value to set for the authorizedUsersListHideAdminUsers property.
      */
     public void setAuthorizedUsersListHideAdminUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListHideAdminUsers = value;
+        this.backingStore.set("authorizedUsersListHideAdminUsers", value);
     }
     /**
      * Sets the authorizedUsersListHideLocalUsers property value. Whether to show only network and system users in the authorized users list on the login window.
      * @param value Value to set for the authorizedUsersListHideLocalUsers property.
      */
     public void setAuthorizedUsersListHideLocalUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListHideLocalUsers = value;
+        this.backingStore.set("authorizedUsersListHideLocalUsers", value);
     }
     /**
      * Sets the authorizedUsersListHideMobileAccounts property value. Whether to hide mobile users in the authorized users list on the login window.
      * @param value Value to set for the authorizedUsersListHideMobileAccounts property.
      */
     public void setAuthorizedUsersListHideMobileAccounts(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListHideMobileAccounts = value;
+        this.backingStore.set("authorizedUsersListHideMobileAccounts", value);
     }
     /**
      * Sets the authorizedUsersListIncludeNetworkUsers property value. Whether to show network users in the authorized users list on the login window.
      * @param value Value to set for the authorizedUsersListIncludeNetworkUsers property.
      */
     public void setAuthorizedUsersListIncludeNetworkUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListIncludeNetworkUsers = value;
+        this.backingStore.set("authorizedUsersListIncludeNetworkUsers", value);
     }
     /**
      * Sets the authorizedUsersListShowOtherManagedUsers property value. Whether to show other users in the authorized users list on the login window.
      * @param value Value to set for the authorizedUsersListShowOtherManagedUsers property.
      */
     public void setAuthorizedUsersListShowOtherManagedUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.authorizedUsersListShowOtherManagedUsers = value;
+        this.backingStore.set("authorizedUsersListShowOtherManagedUsers", value);
     }
     /**
      * Sets the autoLaunchItems property value. List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the autoLaunchItems property.
      */
     public void setAutoLaunchItems(@jakarta.annotation.Nullable final java.util.List<MacOSLaunchItem> value) {
-        this.autoLaunchItems = value;
+        this.backingStore.set("autoLaunchItems", value);
     }
     /**
      * Sets the consoleAccessDisabled property value. Whether the Other user will disregard use of the console special user name.
      * @param value Value to set for the consoleAccessDisabled property.
      */
     public void setConsoleAccessDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.consoleAccessDisabled = value;
+        this.backingStore.set("consoleAccessDisabled", value);
     }
     /**
      * Sets the contentCachingBlockDeletion property value. Prevents content caches from purging content to free up disk space for other apps.
      * @param value Value to set for the contentCachingBlockDeletion property.
      */
     public void setContentCachingBlockDeletion(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingBlockDeletion = value;
+        this.backingStore.set("contentCachingBlockDeletion", value);
     }
     /**
      * Sets the contentCachingClientListenRanges property value. A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the contentCachingClientListenRanges property.
      */
     public void setContentCachingClientListenRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
-        this.contentCachingClientListenRanges = value;
+        this.backingStore.set("contentCachingClientListenRanges", value);
     }
     /**
      * Sets the contentCachingClientPolicy property value. Determines which clients a content cache will serve.
      * @param value Value to set for the contentCachingClientPolicy property.
      */
     public void setContentCachingClientPolicy(@jakarta.annotation.Nullable final MacOSContentCachingClientPolicy value) {
-        this.contentCachingClientPolicy = value;
+        this.backingStore.set("contentCachingClientPolicy", value);
     }
     /**
      * Sets the contentCachingDataPath property value. The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
      * @param value Value to set for the contentCachingDataPath property.
      */
     public void setContentCachingDataPath(@jakarta.annotation.Nullable final String value) {
-        this.contentCachingDataPath = value;
+        this.backingStore.set("contentCachingDataPath", value);
     }
     /**
      * Sets the contentCachingDisableConnectionSharing property value. Disables internet connection sharing.
      * @param value Value to set for the contentCachingDisableConnectionSharing property.
      */
     public void setContentCachingDisableConnectionSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingDisableConnectionSharing = value;
+        this.backingStore.set("contentCachingDisableConnectionSharing", value);
     }
     /**
      * Sets the contentCachingEnabled property value. Enables content caching and prevents it from being disabled by the user.
      * @param value Value to set for the contentCachingEnabled property.
      */
     public void setContentCachingEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingEnabled = value;
+        this.backingStore.set("contentCachingEnabled", value);
     }
     /**
      * Sets the contentCachingForceConnectionSharing property value. Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
      * @param value Value to set for the contentCachingForceConnectionSharing property.
      */
     public void setContentCachingForceConnectionSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingForceConnectionSharing = value;
+        this.backingStore.set("contentCachingForceConnectionSharing", value);
     }
     /**
      * Sets the contentCachingKeepAwake property value. Prevent the device from sleeping if content caching is enabled.
      * @param value Value to set for the contentCachingKeepAwake property.
      */
     public void setContentCachingKeepAwake(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingKeepAwake = value;
+        this.backingStore.set("contentCachingKeepAwake", value);
     }
     /**
      * Sets the contentCachingLogClientIdentities property value. Enables logging of IP addresses and ports of clients that request cached content.
      * @param value Value to set for the contentCachingLogClientIdentities property.
      */
     public void setContentCachingLogClientIdentities(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingLogClientIdentities = value;
+        this.backingStore.set("contentCachingLogClientIdentities", value);
     }
     /**
      * Sets the contentCachingMaxSizeBytes property value. The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
      * @param value Value to set for the contentCachingMaxSizeBytes property.
      */
     public void setContentCachingMaxSizeBytes(@jakarta.annotation.Nullable final Long value) {
-        this.contentCachingMaxSizeBytes = value;
+        this.backingStore.set("contentCachingMaxSizeBytes", value);
     }
     /**
      * Sets the contentCachingParents property value. A list of IP addresses representing parent content caches.
      * @param value Value to set for the contentCachingParents property.
      */
     public void setContentCachingParents(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.contentCachingParents = value;
+        this.backingStore.set("contentCachingParents", value);
     }
     /**
      * Sets the contentCachingParentSelectionPolicy property value. Determines how content caches select a parent cache.
      * @param value Value to set for the contentCachingParentSelectionPolicy property.
      */
     public void setContentCachingParentSelectionPolicy(@jakarta.annotation.Nullable final MacOSContentCachingParentSelectionPolicy value) {
-        this.contentCachingParentSelectionPolicy = value;
+        this.backingStore.set("contentCachingParentSelectionPolicy", value);
     }
     /**
      * Sets the contentCachingPeerFilterRanges property value. A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the contentCachingPeerFilterRanges property.
      */
     public void setContentCachingPeerFilterRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
-        this.contentCachingPeerFilterRanges = value;
+        this.backingStore.set("contentCachingPeerFilterRanges", value);
     }
     /**
      * Sets the contentCachingPeerListenRanges property value. A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the contentCachingPeerListenRanges property.
      */
     public void setContentCachingPeerListenRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
-        this.contentCachingPeerListenRanges = value;
+        this.backingStore.set("contentCachingPeerListenRanges", value);
     }
     /**
      * Sets the contentCachingPeerPolicy property value. Determines which content caches other content caches will peer with.
      * @param value Value to set for the contentCachingPeerPolicy property.
      */
     public void setContentCachingPeerPolicy(@jakarta.annotation.Nullable final MacOSContentCachingPeerPolicy value) {
-        this.contentCachingPeerPolicy = value;
+        this.backingStore.set("contentCachingPeerPolicy", value);
     }
     /**
      * Sets the contentCachingPort property value. Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
      * @param value Value to set for the contentCachingPort property.
      */
     public void setContentCachingPort(@jakarta.annotation.Nullable final Integer value) {
-        this.contentCachingPort = value;
+        this.backingStore.set("contentCachingPort", value);
     }
     /**
      * Sets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the contentCachingPublicRanges property.
      */
     public void setContentCachingPublicRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
-        this.contentCachingPublicRanges = value;
+        this.backingStore.set("contentCachingPublicRanges", value);
     }
     /**
      * Sets the contentCachingShowAlerts property value. Display content caching alerts as system notifications.
      * @param value Value to set for the contentCachingShowAlerts property.
      */
     public void setContentCachingShowAlerts(@jakarta.annotation.Nullable final Boolean value) {
-        this.contentCachingShowAlerts = value;
+        this.backingStore.set("contentCachingShowAlerts", value);
     }
     /**
      * Sets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
      * @param value Value to set for the contentCachingType property.
      */
     public void setContentCachingType(@jakarta.annotation.Nullable final MacOSContentCachingType value) {
-        this.contentCachingType = value;
+        this.backingStore.set("contentCachingType", value);
     }
     /**
      * Sets the loginWindowText property value. Custom text to be displayed on the login window.
      * @param value Value to set for the loginWindowText property.
      */
     public void setLoginWindowText(@jakarta.annotation.Nullable final String value) {
-        this.loginWindowText = value;
+        this.backingStore.set("loginWindowText", value);
     }
     /**
      * Sets the logOutDisabledWhileLoggedIn property value. Whether the Log Out menu item on the login window will be disabled while the user is logged in.
      * @param value Value to set for the logOutDisabledWhileLoggedIn property.
      */
     public void setLogOutDisabledWhileLoggedIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.logOutDisabledWhileLoggedIn = value;
+        this.backingStore.set("logOutDisabledWhileLoggedIn", value);
     }
     /**
      * Sets the macOSSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
      * @param value Value to set for the macOSSingleSignOnExtension property.
      */
     public void setMacOSSingleSignOnExtension(@jakarta.annotation.Nullable final MacOSSingleSignOnExtension value) {
-        this.macOSSingleSignOnExtension = value;
+        this.backingStore.set("macOSSingleSignOnExtension", value);
     }
     /**
      * Sets the powerOffDisabledWhileLoggedIn property value. Whether the Power Off menu item on the login window will be disabled while the user is logged in.
      * @param value Value to set for the powerOffDisabledWhileLoggedIn property.
      */
     public void setPowerOffDisabledWhileLoggedIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.powerOffDisabledWhileLoggedIn = value;
+        this.backingStore.set("powerOffDisabledWhileLoggedIn", value);
     }
     /**
      * Sets the restartDisabled property value. Whether to hide the Restart button item on the login window.
      * @param value Value to set for the restartDisabled property.
      */
     public void setRestartDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.restartDisabled = value;
+        this.backingStore.set("restartDisabled", value);
     }
     /**
      * Sets the restartDisabledWhileLoggedIn property value. Whether the Restart menu item on the login window will be disabled while the user is logged in.
      * @param value Value to set for the restartDisabledWhileLoggedIn property.
      */
     public void setRestartDisabledWhileLoggedIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.restartDisabledWhileLoggedIn = value;
+        this.backingStore.set("restartDisabledWhileLoggedIn", value);
     }
     /**
      * Sets the screenLockDisableImmediate property value. Whether to disable the immediate screen lock functions.
      * @param value Value to set for the screenLockDisableImmediate property.
      */
     public void setScreenLockDisableImmediate(@jakarta.annotation.Nullable final Boolean value) {
-        this.screenLockDisableImmediate = value;
+        this.backingStore.set("screenLockDisableImmediate", value);
     }
     /**
      * Sets the shutDownDisabled property value. Whether to hide the Shut Down button item on the login window.
      * @param value Value to set for the shutDownDisabled property.
      */
     public void setShutDownDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.shutDownDisabled = value;
+        this.backingStore.set("shutDownDisabled", value);
     }
     /**
      * Sets the shutDownDisabledWhileLoggedIn property value. Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
      * @param value Value to set for the shutDownDisabledWhileLoggedIn property.
      */
     public void setShutDownDisabledWhileLoggedIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.shutDownDisabledWhileLoggedIn = value;
+        this.backingStore.set("shutDownDisabledWhileLoggedIn", value);
     }
     /**
      * Sets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
      * @param value Value to set for the singleSignOnExtension property.
      */
     public void setSingleSignOnExtension(@jakarta.annotation.Nullable final SingleSignOnExtension value) {
-        this.singleSignOnExtension = value;
+        this.backingStore.set("singleSignOnExtension", value);
     }
     /**
      * Sets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extensions.
      * @param value Value to set for the singleSignOnExtensionPkinitCertificate property.
      */
     public void setSingleSignOnExtensionPkinitCertificate(@jakarta.annotation.Nullable final MacOSCertificateProfileBase value) {
-        this.singleSignOnExtensionPkinitCertificate = value;
+        this.backingStore.set("singleSignOnExtensionPkinitCertificate", value);
     }
     /**
      * Sets the sleepDisabled property value. Whether to hide the Sleep menu item on the login window.
      * @param value Value to set for the sleepDisabled property.
      */
     public void setSleepDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.sleepDisabled = value;
+        this.backingStore.set("sleepDisabled", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

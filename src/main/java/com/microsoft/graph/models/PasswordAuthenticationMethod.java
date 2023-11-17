@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * For security, the password is always returned as null from a LIST or GET operation.
-     */
-    private String password;
-    /**
-     * Instantiates a new passwordAuthenticationMethod and sets the default values.
+     * Instantiates a new PasswordAuthenticationMethod and sets the default values.
      */
     public PasswordAuthenticationMethod() {
         super();
@@ -27,7 +19,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordAuthenticationMethod
+     * @return a PasswordAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static PasswordAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +32,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -55,11 +47,11 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     }
     /**
      * Gets the password property value. For security, the password is always returned as null from a LIST or GET operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.backingStore.get("password");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the password property value. For security, the password is always returned as null from a LIST or GET operation.
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.backingStore.set("password", value);
     }
 }

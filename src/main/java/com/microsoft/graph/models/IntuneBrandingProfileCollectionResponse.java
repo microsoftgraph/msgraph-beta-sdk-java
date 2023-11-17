@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntuneBrandingProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<IntuneBrandingProfile> value;
-    /**
-     * Instantiates a new intuneBrandingProfileCollectionResponse and sets the default values.
+     * Instantiates a new IntuneBrandingProfileCollectionResponse and sets the default values.
      */
     public IntuneBrandingProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class IntuneBrandingProfileCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a intuneBrandingProfileCollectionResponse
+     * @return a IntuneBrandingProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IntuneBrandingProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class IntuneBrandingProfileCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a intuneBrandingProfile
+     * @return a java.util.List<IntuneBrandingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntuneBrandingProfile> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class IntuneBrandingProfileCollectionResponse extends BaseCollectionPagin
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<IntuneBrandingProfile> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

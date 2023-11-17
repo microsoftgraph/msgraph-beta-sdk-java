@@ -61,29 +61,29 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of task change histories.
-     * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
+     * @return a WorkbookDocumentTaskChangeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChangeCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookDocumentTaskChangeCollectionResponse get() {
         return get(null);
     }
     /**
      * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
+     * @return a WorkbookDocumentTaskChangeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChangeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookDocumentTaskChangeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookDocumentTaskChangeCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookDocumentTaskChangeCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -93,26 +93,26 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to changes for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a WorkbookDocumentTaskChange
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
+    @jakarta.annotation.Nullable
+    public WorkbookDocumentTaskChange post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to changes for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a WorkbookDocumentTaskChange
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookDocumentTaskChange post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookDocumentTaskChange::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookDocumentTaskChange::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * A collection of task change histories.
@@ -129,18 +129,9 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -161,24 +152,16 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a changesRequestBuilder
+     * @return a ChangesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChangesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

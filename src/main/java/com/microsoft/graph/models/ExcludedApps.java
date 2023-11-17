@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,85 +14,23 @@ import java.util.Objects;
  * Contains properties for Excluded Office365 Apps.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ExcludedApps implements AdditionalDataHolder, Parsable {
+public class ExcludedApps implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The value for if MS Office Access should be excluded or not.
+     * Stores model information.
      */
-    private Boolean access;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The value for if Microsoft Search as default should be excluded or not.
-     */
-    private Boolean bing;
-    /**
-     * The value for if MS Office Excel should be excluded or not.
-     */
-    private Boolean excel;
-    /**
-     * The value for if MS Office OneDrive for Business - Groove should be excluded or not.
-     */
-    private Boolean groove;
-    /**
-     * The value for if MS Office InfoPath should be excluded or not.
-     */
-    private Boolean infoPath;
-    /**
-     * The value for if MS Office Skype for Business - Lync should be excluded or not.
-     */
-    private Boolean lync;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The value for if MS Office OneDrive should be excluded or not.
-     */
-    private Boolean oneDrive;
-    /**
-     * The value for if MS Office OneNote should be excluded or not.
-     */
-    private Boolean oneNote;
-    /**
-     * The value for if MS Office Outlook should be excluded or not.
-     */
-    private Boolean outlook;
-    /**
-     * The value for if MS Office PowerPoint should be excluded or not.
-     */
-    private Boolean powerPoint;
-    /**
-     * The value for if MS Office Publisher should be excluded or not.
-     */
-    private Boolean publisher;
-    /**
-     * The value for if MS Office SharePointDesigner should be excluded or not.
-     */
-    private Boolean sharePointDesigner;
-    /**
-     * The value for if MS Office Teams should be excluded or not.
-     */
-    private Boolean teams;
-    /**
-     * The value for if MS Office Visio should be excluded or not.
-     */
-    private Boolean visio;
-    /**
-     * The value for if MS Office Word should be excluded or not.
-     */
-    private Boolean word;
-    /**
-     * Instantiates a new excludedApps and sets the default values.
+     * Instantiates a new ExcludedApps and sets the default values.
      */
     public ExcludedApps() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a excludedApps
+     * @return a ExcludedApps
      */
     @jakarta.annotation.Nonnull
     public static ExcludedApps createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,35 +39,48 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the access property value. The value for if MS Office Access should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccess() {
-        return this.access;
+        return this.backingStore.get("access");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the bing property value. The value for if Microsoft Search as default should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBing() {
-        return this.bing;
+        return this.backingStore.get("bing");
     }
     /**
      * Gets the excel property value. The value for if MS Office Excel should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcel() {
-        return this.excel;
+        return this.backingStore.get("excel");
     }
     /**
      * The deserialization information for the current model
@@ -155,107 +109,107 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the groove property value. The value for if MS Office OneDrive for Business - Groove should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGroove() {
-        return this.groove;
+        return this.backingStore.get("groove");
     }
     /**
      * Gets the infoPath property value. The value for if MS Office InfoPath should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInfoPath() {
-        return this.infoPath;
+        return this.backingStore.get("infoPath");
     }
     /**
      * Gets the lync property value. The value for if MS Office Skype for Business - Lync should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLync() {
-        return this.lync;
+        return this.backingStore.get("lync");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the oneDrive property value. The value for if MS Office OneDrive should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOneDrive() {
-        return this.oneDrive;
+        return this.backingStore.get("oneDrive");
     }
     /**
      * Gets the oneNote property value. The value for if MS Office OneNote should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOneNote() {
-        return this.oneNote;
+        return this.backingStore.get("oneNote");
     }
     /**
      * Gets the outlook property value. The value for if MS Office Outlook should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOutlook() {
-        return this.outlook;
+        return this.backingStore.get("outlook");
     }
     /**
      * Gets the powerPoint property value. The value for if MS Office PowerPoint should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPowerPoint() {
-        return this.powerPoint;
+        return this.backingStore.get("powerPoint");
     }
     /**
      * Gets the publisher property value. The value for if MS Office Publisher should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Gets the sharePointDesigner property value. The value for if MS Office SharePointDesigner should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSharePointDesigner() {
-        return this.sharePointDesigner;
+        return this.backingStore.get("sharePointDesigner");
     }
     /**
      * Gets the teams property value. The value for if MS Office Teams should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTeams() {
-        return this.teams;
+        return this.backingStore.get("teams");
     }
     /**
      * Gets the visio property value. The value for if MS Office Visio should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVisio() {
-        return this.visio;
+        return this.backingStore.get("visio");
     }
     /**
      * Gets the word property value. The value for if MS Office Word should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWord() {
-        return this.word;
+        return this.backingStore.get("word");
     }
     /**
      * Serializes information the current object
@@ -286,118 +240,126 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the access property.
      */
     public void setAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.access = value;
+        this.backingStore.set("access", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the bing property value. The value for if Microsoft Search as default should be excluded or not.
      * @param value Value to set for the bing property.
      */
     public void setBing(@jakarta.annotation.Nullable final Boolean value) {
-        this.bing = value;
+        this.backingStore.set("bing", value);
     }
     /**
      * Sets the excel property value. The value for if MS Office Excel should be excluded or not.
      * @param value Value to set for the excel property.
      */
     public void setExcel(@jakarta.annotation.Nullable final Boolean value) {
-        this.excel = value;
+        this.backingStore.set("excel", value);
     }
     /**
      * Sets the groove property value. The value for if MS Office OneDrive for Business - Groove should be excluded or not.
      * @param value Value to set for the groove property.
      */
     public void setGroove(@jakarta.annotation.Nullable final Boolean value) {
-        this.groove = value;
+        this.backingStore.set("groove", value);
     }
     /**
      * Sets the infoPath property value. The value for if MS Office InfoPath should be excluded or not.
      * @param value Value to set for the infoPath property.
      */
     public void setInfoPath(@jakarta.annotation.Nullable final Boolean value) {
-        this.infoPath = value;
+        this.backingStore.set("infoPath", value);
     }
     /**
      * Sets the lync property value. The value for if MS Office Skype for Business - Lync should be excluded or not.
      * @param value Value to set for the lync property.
      */
     public void setLync(@jakarta.annotation.Nullable final Boolean value) {
-        this.lync = value;
+        this.backingStore.set("lync", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the oneDrive property value. The value for if MS Office OneDrive should be excluded or not.
      * @param value Value to set for the oneDrive property.
      */
     public void setOneDrive(@jakarta.annotation.Nullable final Boolean value) {
-        this.oneDrive = value;
+        this.backingStore.set("oneDrive", value);
     }
     /**
      * Sets the oneNote property value. The value for if MS Office OneNote should be excluded or not.
      * @param value Value to set for the oneNote property.
      */
     public void setOneNote(@jakarta.annotation.Nullable final Boolean value) {
-        this.oneNote = value;
+        this.backingStore.set("oneNote", value);
     }
     /**
      * Sets the outlook property value. The value for if MS Office Outlook should be excluded or not.
      * @param value Value to set for the outlook property.
      */
     public void setOutlook(@jakarta.annotation.Nullable final Boolean value) {
-        this.outlook = value;
+        this.backingStore.set("outlook", value);
     }
     /**
      * Sets the powerPoint property value. The value for if MS Office PowerPoint should be excluded or not.
      * @param value Value to set for the powerPoint property.
      */
     public void setPowerPoint(@jakarta.annotation.Nullable final Boolean value) {
-        this.powerPoint = value;
+        this.backingStore.set("powerPoint", value);
     }
     /**
      * Sets the publisher property value. The value for if MS Office Publisher should be excluded or not.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final Boolean value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
     /**
      * Sets the sharePointDesigner property value. The value for if MS Office SharePointDesigner should be excluded or not.
      * @param value Value to set for the sharePointDesigner property.
      */
     public void setSharePointDesigner(@jakarta.annotation.Nullable final Boolean value) {
-        this.sharePointDesigner = value;
+        this.backingStore.set("sharePointDesigner", value);
     }
     /**
      * Sets the teams property value. The value for if MS Office Teams should be excluded or not.
      * @param value Value to set for the teams property.
      */
     public void setTeams(@jakarta.annotation.Nullable final Boolean value) {
-        this.teams = value;
+        this.backingStore.set("teams", value);
     }
     /**
      * Sets the visio property value. The value for if MS Office Visio should be excluded or not.
      * @param value Value to set for the visio property.
      */
     public void setVisio(@jakarta.annotation.Nullable final Boolean value) {
-        this.visio = value;
+        this.backingStore.set("visio", value);
     }
     /**
      * Sets the word property value. The value for if MS Office Word should be excluded or not.
      * @param value Value to set for the word property.
      */
     public void setWord(@jakarta.annotation.Nullable final Boolean value) {
-        this.word = value;
+        this.backingStore.set("word", value);
     }
 }

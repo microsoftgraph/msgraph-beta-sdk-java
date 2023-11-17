@@ -38,24 +38,24 @@ public class DeviceBootPerformanceMetricsRequestBuilder extends BaseRequestBuild
     }
     /**
      * The scores and insights for the device boot performance metrics.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory get() {
         return get(null);
     }
     /**
      * The scores and insights for the device boot performance metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The scores and insights for the device boot performance metrics.
@@ -72,24 +72,15 @@ public class DeviceBootPerformanceMetricsRequestBuilder extends BaseRequestBuild
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceBootPerformanceMetricsRequestBuilder
+     * @return a DeviceBootPerformanceMetricsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceBootPerformanceMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

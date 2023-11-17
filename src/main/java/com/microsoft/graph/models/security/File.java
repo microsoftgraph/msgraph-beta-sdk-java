@@ -12,55 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class File extends Entity implements Parsable {
     /**
-     * The content property
-     */
-    private byte[] content;
-    /**
-     * The dateTime property
-     */
-    private OffsetDateTime dateTime;
-    /**
-     * The extension property
-     */
-    private String extension;
-    /**
-     * The extractedTextContent property
-     */
-    private byte[] extractedTextContent;
-    /**
-     * The mediaType property
-     */
-    private String mediaType;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The otherProperties property
-     */
-    private StringValueDictionary otherProperties;
-    /**
-     * The processingStatus property
-     */
-    private FileProcessingStatus processingStatus;
-    /**
-     * The senderOrAuthors property
-     */
-    private java.util.List<String> senderOrAuthors;
-    /**
-     * The size property
-     */
-    private Long size;
-    /**
-     * The sourceType property
-     */
-    private EnumSet<SourceType> sourceType;
-    /**
-     * The subjectTitle property
-     */
-    private String subjectTitle;
-    /**
-     * Instantiates a new file and sets the default values.
+     * Instantiates a new File and sets the default values.
      */
     public File() {
         super();
@@ -68,7 +20,7 @@ public class File extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a file
+     * @return a File
      */
     @jakarta.annotation.Nonnull
     public static File createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -84,11 +36,11 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the dateTime property value. The dateTime property
@@ -96,23 +48,23 @@ public class File extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDateTime() {
-        return this.dateTime;
+        return this.backingStore.get("dateTime");
     }
     /**
      * Gets the extension property value. The extension property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtension() {
-        return this.extension;
+        return this.backingStore.get("extension");
     }
     /**
      * Gets the extractedTextContent property value. The extractedTextContent property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getExtractedTextContent() {
-        return this.extractedTextContent;
+        return this.backingStore.get("extractedTextContent");
     }
     /**
      * The deserialization information for the current model
@@ -137,67 +89,67 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
-        return this.mediaType;
+        return this.backingStore.get("mediaType");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the otherProperties property value. The otherProperties property
-     * @return a stringValueDictionary
+     * @return a StringValueDictionary
      */
     @jakarta.annotation.Nullable
     public StringValueDictionary getOtherProperties() {
-        return this.otherProperties;
+        return this.backingStore.get("otherProperties");
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a fileProcessingStatus
+     * @return a FileProcessingStatus
      */
     @jakarta.annotation.Nullable
     public FileProcessingStatus getProcessingStatus() {
-        return this.processingStatus;
+        return this.backingStore.get("processingStatus");
     }
     /**
      * Gets the senderOrAuthors property value. The senderOrAuthors property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSenderOrAuthors() {
-        return this.senderOrAuthors;
+        return this.backingStore.get("senderOrAuthors");
     }
     /**
      * Gets the size property value. The size property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the sourceType property value. The sourceType property
-     * @return a sourceType
+     * @return a EnumSet<SourceType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getSourceType() {
-        return this.sourceType;
+        return this.backingStore.get("sourceType");
     }
     /**
      * Gets the subjectTitle property value. The subjectTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectTitle() {
-        return this.subjectTitle;
+        return this.backingStore.get("subjectTitle");
     }
     /**
      * Serializes information the current object
@@ -224,83 +176,83 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the dateTime property value. The dateTime property
      * @param value Value to set for the dateTime property.
      */
     public void setDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.dateTime = value;
+        this.backingStore.set("dateTime", value);
     }
     /**
      * Sets the extension property value. The extension property
      * @param value Value to set for the extension property.
      */
     public void setExtension(@jakarta.annotation.Nullable final String value) {
-        this.extension = value;
+        this.backingStore.set("extension", value);
     }
     /**
      * Sets the extractedTextContent property value. The extractedTextContent property
      * @param value Value to set for the extractedTextContent property.
      */
     public void setExtractedTextContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.extractedTextContent = value;
+        this.backingStore.set("extractedTextContent", value);
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
-        this.mediaType = value;
+        this.backingStore.set("mediaType", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the otherProperties property value. The otherProperties property
      * @param value Value to set for the otherProperties property.
      */
     public void setOtherProperties(@jakarta.annotation.Nullable final StringValueDictionary value) {
-        this.otherProperties = value;
+        this.backingStore.set("otherProperties", value);
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
      */
     public void setProcessingStatus(@jakarta.annotation.Nullable final FileProcessingStatus value) {
-        this.processingStatus = value;
+        this.backingStore.set("processingStatus", value);
     }
     /**
      * Sets the senderOrAuthors property value. The senderOrAuthors property
      * @param value Value to set for the senderOrAuthors property.
      */
     public void setSenderOrAuthors(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.senderOrAuthors = value;
+        this.backingStore.set("senderOrAuthors", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the sourceType property value. The sourceType property
      * @param value Value to set for the sourceType property.
      */
     public void setSourceType(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
-        this.sourceType = value;
+        this.backingStore.set("sourceType", value);
     }
     /**
      * Sets the subjectTitle property value. The subjectTitle property
      * @param value Value to set for the subjectTitle property.
      */
     public void setSubjectTitle(@jakarta.annotation.Nullable final String value) {
-        this.subjectTitle = value;
+        this.backingStore.set("subjectTitle", value);
     }
 }

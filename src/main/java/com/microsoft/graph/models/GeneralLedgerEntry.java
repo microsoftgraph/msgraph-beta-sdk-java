@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
@@ -12,69 +15,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
+public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The account property
+     * Stores model information.
      */
-    private Account account;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The accountId property
-     */
-    private UUID accountId;
-    /**
-     * The accountNumber property
-     */
-    private String accountNumber;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The creditAmount property
-     */
-    private BigDecimal creditAmount;
-    /**
-     * The debitAmount property
-     */
-    private BigDecimal debitAmount;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The documentNumber property
-     */
-    private String documentNumber;
-    /**
-     * The documentType property
-     */
-    private String documentType;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The postingDate property
-     */
-    private LocalDate postingDate;
-    /**
-     * Instantiates a new generalLedgerEntry and sets the default values.
+     * Instantiates a new GeneralLedgerEntry and sets the default values.
      */
     public GeneralLedgerEntry() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a generalLedgerEntry
+     * @return a GeneralLedgerEntry
      */
     @jakarta.annotation.Nonnull
     public static GeneralLedgerEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,11 +40,11 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
-        return this.account;
+        return this.backingStore.get("account");
     }
     /**
      * Gets the accountId property value. The accountId property
@@ -95,63 +52,76 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getAccountId() {
-        return this.accountId;
+        return this.backingStore.get("accountId");
     }
     /**
      * Gets the accountNumber property value. The accountNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountNumber() {
-        return this.accountNumber;
+        return this.backingStore.get("accountNumber");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the creditAmount property value. The creditAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCreditAmount() {
-        return this.creditAmount;
+        return this.backingStore.get("creditAmount");
     }
     /**
      * Gets the debitAmount property value. The debitAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDebitAmount() {
-        return this.debitAmount;
+        return this.backingStore.get("debitAmount");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentNumber() {
-        return this.documentNumber;
+        return this.backingStore.get("documentNumber");
     }
     /**
      * Gets the documentType property value. The documentType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentType() {
-        return this.documentType;
+        return this.backingStore.get("documentType");
     }
     /**
      * The deserialization information for the current model
@@ -180,7 +150,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -188,15 +158,15 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the postingDate property value. The postingDate property
@@ -204,7 +174,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getPostingDate() {
-        return this.postingDate;
+        return this.backingStore.get("postingDate");
     }
     /**
      * Serializes information the current object
@@ -231,90 +201,98 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the account property.
      */
     public void setAccount(@jakarta.annotation.Nullable final Account value) {
-        this.account = value;
+        this.backingStore.set("account", value);
     }
     /**
      * Sets the accountId property value. The accountId property
      * @param value Value to set for the accountId property.
      */
     public void setAccountId(@jakarta.annotation.Nullable final UUID value) {
-        this.accountId = value;
+        this.backingStore.set("accountId", value);
     }
     /**
      * Sets the accountNumber property value. The accountNumber property
      * @param value Value to set for the accountNumber property.
      */
     public void setAccountNumber(@jakarta.annotation.Nullable final String value) {
-        this.accountNumber = value;
+        this.backingStore.set("accountNumber", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the creditAmount property value. The creditAmount property
      * @param value Value to set for the creditAmount property.
      */
     public void setCreditAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.creditAmount = value;
+        this.backingStore.set("creditAmount", value);
     }
     /**
      * Sets the debitAmount property value. The debitAmount property
      * @param value Value to set for the debitAmount property.
      */
     public void setDebitAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.debitAmount = value;
+        this.backingStore.set("debitAmount", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the documentNumber property value. The documentNumber property
      * @param value Value to set for the documentNumber property.
      */
     public void setDocumentNumber(@jakarta.annotation.Nullable final String value) {
-        this.documentNumber = value;
+        this.backingStore.set("documentNumber", value);
     }
     /**
      * Sets the documentType property value. The documentType property
      * @param value Value to set for the documentType property.
      */
     public void setDocumentType(@jakarta.annotation.Nullable final String value) {
-        this.documentType = value;
+        this.backingStore.set("documentType", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the postingDate property value. The postingDate property
      * @param value Value to set for the postingDate property.
      */
     public void setPostingDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.postingDate = value;
+        this.backingStore.set("postingDate", value);
     }
 }

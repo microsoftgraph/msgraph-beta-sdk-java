@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality implements Parsable {
     /**
-     * The average inbound stream video bit rate per second.
-     */
-    private Double averageInboundBitRate;
-    /**
-     * The average inbound stream video frame rate per second.
-     */
-    private Double averageInboundFrameRate;
-    /**
-     * The average outbound stream video bit rate per second.
-     */
-    private Double averageOutboundBitRate;
-    /**
-     * The average outbound stream video frame rate per second.
-     */
-    private Double averageOutboundFrameRate;
-    /**
-     * Instantiates a new teleconferenceDeviceVideoQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.
      */
     public TeleconferenceDeviceVideoQuality() {
         super();
@@ -34,7 +18,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceVideoQuality
+     * @return a TeleconferenceDeviceVideoQuality
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceVideoQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,35 +34,35 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     }
     /**
      * Gets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageInboundBitRate() {
-        return this.averageInboundBitRate;
+        return this.backingStore.get("averageInboundBitRate");
     }
     /**
      * Gets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageInboundFrameRate() {
-        return this.averageInboundFrameRate;
+        return this.backingStore.get("averageInboundFrameRate");
     }
     /**
      * Gets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageOutboundBitRate() {
-        return this.averageOutboundBitRate;
+        return this.backingStore.get("averageOutboundBitRate");
     }
     /**
      * Gets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageOutboundFrameRate() {
-        return this.averageOutboundFrameRate;
+        return this.backingStore.get("averageOutboundFrameRate");
     }
     /**
      * The deserialization information for the current model
@@ -110,27 +94,27 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param value Value to set for the averageInboundBitRate property.
      */
     public void setAverageInboundBitRate(@jakarta.annotation.Nullable final Double value) {
-        this.averageInboundBitRate = value;
+        this.backingStore.set("averageInboundBitRate", value);
     }
     /**
      * Sets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
      * @param value Value to set for the averageInboundFrameRate property.
      */
     public void setAverageInboundFrameRate(@jakarta.annotation.Nullable final Double value) {
-        this.averageInboundFrameRate = value;
+        this.backingStore.set("averageInboundFrameRate", value);
     }
     /**
      * Sets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
      * @param value Value to set for the averageOutboundBitRate property.
      */
     public void setAverageOutboundBitRate(@jakarta.annotation.Nullable final Double value) {
-        this.averageOutboundBitRate = value;
+        this.backingStore.set("averageOutboundBitRate", value);
     }
     /**
      * Sets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
      * @param value Value to set for the averageOutboundFrameRate property.
      */
     public void setAverageOutboundFrameRate(@jakarta.annotation.Nullable final Double value) {
-        this.averageOutboundFrameRate = value;
+        this.backingStore.set("averageOutboundFrameRate", value);
     }
 }

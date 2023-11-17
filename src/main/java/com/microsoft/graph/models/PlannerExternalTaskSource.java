@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerExternalTaskSource extends PlannerTaskCreation implements Parsable {
     /**
-     * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     */
-    private String contextScenarioId;
-    /**
-     * Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
-     */
-    private PlannerExternalTaskSourceDisplayType displayLinkType;
-    /**
-     * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
-     */
-    private java.util.List<String> displayNameSegments;
-    /**
-     * Nullable. The id of the external entity's containing entity or context.
-     */
-    private String externalContextId;
-    /**
-     * Nullable. The id of the entity that an external service associates with a task.
-     */
-    private String externalObjectId;
-    /**
-     * Nullable. The external Item Version for the object specified by the externalObjectId.
-     */
-    private String externalObjectVersion;
-    /**
-     * Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new plannerExternalTaskSource and sets the default values.
+     * Instantiates a new PlannerExternalTaskSource and sets the default values.
      */
     public PlannerExternalTaskSource() {
         super();
@@ -46,7 +18,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerExternalTaskSource
+     * @return a PlannerExternalTaskSource
      */
     @jakarta.annotation.Nonnull
     public static PlannerExternalTaskSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,51 +27,51 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContextScenarioId() {
-        return this.contextScenarioId;
+        return this.backingStore.get("contextScenarioId");
     }
     /**
      * Gets the displayLinkType property value. Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
-     * @return a plannerExternalTaskSourceDisplayType
+     * @return a PlannerExternalTaskSourceDisplayType
      */
     @jakarta.annotation.Nullable
     public PlannerExternalTaskSourceDisplayType getDisplayLinkType() {
-        return this.displayLinkType;
+        return this.backingStore.get("displayLinkType");
     }
     /**
      * Gets the displayNameSegments property value. The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDisplayNameSegments() {
-        return this.displayNameSegments;
+        return this.backingStore.get("displayNameSegments");
     }
     /**
      * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
-        return this.externalContextId;
+        return this.backingStore.get("externalContextId");
     }
     /**
      * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {
-        return this.externalObjectId;
+        return this.backingStore.get("externalObjectId");
     }
     /**
      * Gets the externalObjectVersion property value. Nullable. The external Item Version for the object specified by the externalObjectId.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectVersion() {
-        return this.externalObjectVersion;
+        return this.backingStore.get("externalObjectVersion");
     }
     /**
      * The deserialization information for the current model
@@ -119,11 +91,11 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the webUrl property value. Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
      * @param value Value to set for the contextScenarioId property.
      */
     public void setContextScenarioId(@jakarta.annotation.Nullable final String value) {
-        this.contextScenarioId = value;
+        this.backingStore.set("contextScenarioId", value);
     }
     /**
      * Sets the displayLinkType property value. Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
      * @param value Value to set for the displayLinkType property.
      */
     public void setDisplayLinkType(@jakarta.annotation.Nullable final PlannerExternalTaskSourceDisplayType value) {
-        this.displayLinkType = value;
+        this.backingStore.set("displayLinkType", value);
     }
     /**
      * Sets the displayNameSegments property value. The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
      * @param value Value to set for the displayNameSegments property.
      */
     public void setDisplayNameSegments(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.displayNameSegments = value;
+        this.backingStore.set("displayNameSegments", value);
     }
     /**
      * Sets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
      * @param value Value to set for the externalContextId property.
      */
     public void setExternalContextId(@jakarta.annotation.Nullable final String value) {
-        this.externalContextId = value;
+        this.backingStore.set("externalContextId", value);
     }
     /**
      * Sets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a task.
      * @param value Value to set for the externalObjectId property.
      */
     public void setExternalObjectId(@jakarta.annotation.Nullable final String value) {
-        this.externalObjectId = value;
+        this.backingStore.set("externalObjectId", value);
     }
     /**
      * Sets the externalObjectVersion property value. Nullable. The external Item Version for the object specified by the externalObjectId.
      * @param value Value to set for the externalObjectVersion property.
      */
     public void setExternalObjectVersion(@jakarta.annotation.Nullable final String value) {
-        this.externalObjectVersion = value;
+        this.backingStore.set("externalObjectVersion", value);
     }
     /**
      * Sets the webUrl property value. Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

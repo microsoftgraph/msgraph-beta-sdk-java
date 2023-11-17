@@ -59,54 +59,54 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControlTypes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Azure AD access reviews feature, list all the programControlType objects.
-     * @return a CompletableFuture of programControlTypeCollectionResponse
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * @return a ProgramControlTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontroltype-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProgramControlTypeCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ProgramControlTypeCollectionResponse get() {
         return get(null);
     }
     /**
-     * In the Azure AD access reviews feature, list all the programControlType objects.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControlTypeCollectionResponse
+     * @return a ProgramControlTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontroltype-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProgramControlTypeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProgramControlTypeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProgramControlTypeCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProgramControlTypeCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to programControlTypes
      * @param body The request body
-     * @return a CompletableFuture of programControlType
+     * @return a ProgramControlType
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProgramControlType> post(@jakarta.annotation.Nonnull final ProgramControlType body) {
+    @jakarta.annotation.Nullable
+    public ProgramControlType post(@jakarta.annotation.Nonnull final ProgramControlType body) {
         return post(body, null);
     }
     /**
      * Add new entity to programControlTypes
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControlType
+     * @return a ProgramControlType
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProgramControlType> post(@jakarta.annotation.Nonnull final ProgramControlType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProgramControlType post(@jakarta.annotation.Nonnull final ProgramControlType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProgramControlType::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProgramControlType::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, list all the programControlType objects.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,24 +114,15 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Azure AD access reviews feature, list all the programControlType objects.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -152,24 +143,16 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ProgramControlType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a programControlTypesRequestBuilder
+     * @return a ProgramControlTypesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgramControlTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +160,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return new ProgramControlTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Azure AD access reviews feature, list all the programControlType objects.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

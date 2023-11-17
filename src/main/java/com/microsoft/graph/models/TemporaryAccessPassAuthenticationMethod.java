@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The date and time when the Temporary Access Pass was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
-     */
-    private Boolean isUsableOnce;
-    /**
-     * The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
-     */
-    private Integer lifetimeInMinutes;
-    /**
-     * The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
-     */
-    private String temporaryAccessPass;
-    /**
-     * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
+     * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
      */
     public TemporaryAccessPassAuthenticationMethod() {
         super();
@@ -39,7 +19,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a temporaryAccessPassAuthenticationMethod
+     * @return a TemporaryAccessPassAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +32,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -70,19 +50,19 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     }
     /**
      * Gets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableOnce() {
-        return this.isUsableOnce;
+        return this.backingStore.get("isUsableOnce");
     }
     /**
      * Gets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLifetimeInMinutes() {
-        return this.lifetimeInMinutes;
+        return this.backingStore.get("lifetimeInMinutes");
     }
     /**
      * Gets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
@@ -90,15 +70,15 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemporaryAccessPass() {
-        return this.temporaryAccessPass;
+        return this.backingStore.get("temporaryAccessPass");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      * @param value Value to set for the isUsableOnce property.
      */
     public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
-        this.isUsableOnce = value;
+        this.backingStore.set("isUsableOnce", value);
     }
     /**
      * Sets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
      * @param value Value to set for the lifetimeInMinutes property.
      */
     public void setLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.lifetimeInMinutes = value;
+        this.backingStore.set("lifetimeInMinutes", value);
     }
     /**
      * Sets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
      * @param value Value to set for the temporaryAccessPass property.
      */
     public void setTemporaryAccessPass(@jakarta.annotation.Nullable final String value) {
-        this.temporaryAccessPass = value;
+        this.backingStore.set("temporaryAccessPass", value);
     }
 }

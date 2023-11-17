@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RiskUserActivity implements AdditionalDataHolder, Parsable {
+public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     */
-    private RiskDetail detail;
-    /**
-     * The eventTypes property
-     */
-    private java.util.List<RiskEventType> eventTypes;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The riskEventTypes property
-     */
-    private java.util.List<String> riskEventTypes;
-    /**
-     * Instantiates a new riskUserActivity and sets the default values.
+     * Instantiates a new RiskUserActivity and sets the default values.
      */
     public RiskUserActivity() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskUserActivity
+     * @return a RiskUserActivity
      */
     @jakarta.annotation.Nonnull
     public static RiskUserActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +35,41 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
         return new RiskUserActivity();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the detail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a riskDetail
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getDetail() {
-        return this.detail;
+        return this.backingStore.get("detail");
     }
     /**
      * Gets the eventTypes property value. The eventTypes property
-     * @return a riskEventType
+     * @return a java.util.List<RiskEventType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskEventType> getEventTypes() {
-        return this.eventTypes;
+        return this.backingStore.get("eventTypes");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +86,19 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the riskEventTypes property value. The riskEventTypes property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRiskEventTypes() {
-        return this.riskEventTypes;
+        return this.backingStore.get("riskEventTypes");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the detail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
-        this.detail = value;
+        this.backingStore.set("detail", value);
     }
     /**
      * Sets the eventTypes property value. The eventTypes property
      * @param value Value to set for the eventTypes property.
      */
     public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
-        this.eventTypes = value;
+        this.backingStore.set("eventTypes", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the riskEventTypes property value. The riskEventTypes property
      * @param value Value to set for the riskEventTypes property.
      */
     public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.riskEventTypes = value;
+        this.backingStore.set("riskEventTypes", value);
     }
 }

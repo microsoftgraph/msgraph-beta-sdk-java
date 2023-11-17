@@ -13,43 +13,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
-     * The Apple ID associated with Vpp token.
-     */
-    private String appleId;
-    /**
-     * Genres.
-     */
-    private java.util.List<String> genres;
-    /**
-     * Language.
-     */
-    private String language;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Seller.
-     */
-    private String seller;
-    /**
-     * Total license count.
-     */
-    private Integer totalLicenseCount;
-    /**
-     * Used license count.
-     */
-    private Integer usedLicenseCount;
-    /**
-     * The Vpp token's organization name.
-     */
-    private String vppOrganizationName;
-    /**
-     * The Vpp token ID.
-     */
-    private UUID vppTokenId;
-    /**
-     * Instantiates a new iosVppEBook and sets the default values.
+     * Instantiates a new IosVppEBook and sets the default values.
      */
     public IosVppEBook() {
         super();
@@ -58,7 +22,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppEBook
+     * @return a IosVppEBook
      */
     @jakarta.annotation.Nonnull
     public static IosVppEBook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,11 +31,11 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the appleId property value. The Apple ID associated with Vpp token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
-        return this.appleId;
+        return this.backingStore.get("appleId");
     }
     /**
      * The deserialization information for the current model
@@ -93,59 +57,59 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the genres property value. Genres.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGenres() {
-        return this.genres;
+        return this.backingStore.get("genres");
     }
     /**
      * Gets the language property value. Language.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.backingStore.get("language");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the seller property value. Seller.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSeller() {
-        return this.seller;
+        return this.backingStore.get("seller");
     }
     /**
      * Gets the totalLicenseCount property value. Total license count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this.totalLicenseCount;
+        return this.backingStore.get("totalLicenseCount");
     }
     /**
      * Gets the usedLicenseCount property value. Used license count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this.usedLicenseCount;
+        return this.backingStore.get("usedLicenseCount");
     }
     /**
      * Gets the vppOrganizationName property value. The Vpp token's organization name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVppOrganizationName() {
-        return this.vppOrganizationName;
+        return this.backingStore.get("vppOrganizationName");
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
@@ -153,7 +117,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getVppTokenId() {
-        return this.vppTokenId;
+        return this.backingStore.get("vppTokenId");
     }
     /**
      * Serializes information the current object
@@ -177,62 +141,62 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      * @param value Value to set for the appleId property.
      */
     public void setAppleId(@jakarta.annotation.Nullable final String value) {
-        this.appleId = value;
+        this.backingStore.set("appleId", value);
     }
     /**
      * Sets the genres property value. Genres.
      * @param value Value to set for the genres property.
      */
     public void setGenres(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.genres = value;
+        this.backingStore.set("genres", value);
     }
     /**
      * Sets the language property value. Language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.backingStore.set("language", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the seller property value. Seller.
      * @param value Value to set for the seller property.
      */
     public void setSeller(@jakarta.annotation.Nullable final String value) {
-        this.seller = value;
+        this.backingStore.set("seller", value);
     }
     /**
      * Sets the totalLicenseCount property value. Total license count.
      * @param value Value to set for the totalLicenseCount property.
      */
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicenseCount = value;
+        this.backingStore.set("totalLicenseCount", value);
     }
     /**
      * Sets the usedLicenseCount property value. Used license count.
      * @param value Value to set for the usedLicenseCount property.
      */
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.usedLicenseCount = value;
+        this.backingStore.set("usedLicenseCount", value);
     }
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
      * @param value Value to set for the vppOrganizationName property.
      */
     public void setVppOrganizationName(@jakarta.annotation.Nullable final String value) {
-        this.vppOrganizationName = value;
+        this.backingStore.set("vppOrganizationName", value);
     }
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
      * @param value Value to set for the vppTokenId property.
      */
     public void setVppTokenId(@jakarta.annotation.Nullable final UUID value) {
-        this.vppTokenId = value;
+        this.backingStore.set("vppTokenId", value);
     }
 }

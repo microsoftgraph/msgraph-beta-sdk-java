@@ -12,47 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Entity implements Parsable {
     /**
-     * Indicates the number of correlation groups in the anomaly. Valid values -2147483648 to 2147483647
-     */
-    private Integer anomalyCorrelationGroupCount;
-    /**
-     * The unique identifier of the anomaly. Anomaly details such as name and type can be found in the UserExperienceAnalyticsAnomalySeverityOverview entity.
-     */
-    private String anomalyId;
-    /**
-     * Indicates the total number of devices affected by the anomaly in the correlation group. Valid values -2147483648 to 2147483647
-     */
-    private Integer correlationGroupAnomalousDeviceCount;
-    /**
-     * Indicates the total number of devices at risk in the correlation group. Valid values -2147483648 to 2147483647
-     */
-    private Integer correlationGroupAtRiskDeviceCount;
-    /**
-     * Indicates the total number of devices in a correlation group. Valid values -2147483648 to 2147483647
-     */
-    private Integer correlationGroupDeviceCount;
-    /**
-     * Describes the features of a device that are shared between all devices in a correlation group.
-     */
-    private java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> correlationGroupFeatures;
-    /**
-     * The unique identifier for the correlation group which will uniquely identify one of the correlation group within an anomaly. The correlation Id can be mapped to the correlation group name by concatinating the correlation group features. Example of correlation group name which is the indicative of concatenated features names are  for names, Contoso manufacture 4.4.1 and Windows 11.22621.1485.
-     */
-    private String correlationGroupId;
-    /**
-     * Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
-     */
-    private UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence correlationGroupPrevalence;
-    /**
-     * The percentage of the devices in the correlation group that are anomalous. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double correlationGroupPrevalencePercentage;
-    /**
-     * Indicates the total number of devices in the tenant. Valid values -2147483648 to 2147483647
-     */
-    private Integer totalDeviceCount;
-    /**
-     * Instantiates a new userExperienceAnalyticsAnomalyCorrelationGroupOverview and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomalyCorrelationGroupOverview and sets the default values.
      */
     public UserExperienceAnalyticsAnomalyCorrelationGroupOverview() {
         super();
@@ -60,7 +20,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomalyCorrelationGroupOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,75 +29,75 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the anomalyCorrelationGroupCount property value. Indicates the number of correlation groups in the anomaly. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAnomalyCorrelationGroupCount() {
-        return this.anomalyCorrelationGroupCount;
+        return this.backingStore.get("anomalyCorrelationGroupCount");
     }
     /**
      * Gets the anomalyId property value. The unique identifier of the anomaly. Anomaly details such as name and type can be found in the UserExperienceAnalyticsAnomalySeverityOverview entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyId() {
-        return this.anomalyId;
+        return this.backingStore.get("anomalyId");
     }
     /**
      * Gets the correlationGroupAnomalousDeviceCount property value. Indicates the total number of devices affected by the anomaly in the correlation group. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAnomalousDeviceCount() {
-        return this.correlationGroupAnomalousDeviceCount;
+        return this.backingStore.get("correlationGroupAnomalousDeviceCount");
     }
     /**
      * Gets the correlationGroupAtRiskDeviceCount property value. Indicates the total number of devices at risk in the correlation group. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAtRiskDeviceCount() {
-        return this.correlationGroupAtRiskDeviceCount;
+        return this.backingStore.get("correlationGroupAtRiskDeviceCount");
     }
     /**
      * Gets the correlationGroupDeviceCount property value. Indicates the total number of devices in a correlation group. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupDeviceCount() {
-        return this.correlationGroupDeviceCount;
+        return this.backingStore.get("correlationGroupDeviceCount");
     }
     /**
      * Gets the correlationGroupFeatures property value. Describes the features of a device that are shared between all devices in a correlation group.
-     * @return a userExperienceAnalyticsAnomalyCorrelationGroupFeature
+     * @return a java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> getCorrelationGroupFeatures() {
-        return this.correlationGroupFeatures;
+        return this.backingStore.get("correlationGroupFeatures");
     }
     /**
      * Gets the correlationGroupId property value. The unique identifier for the correlation group which will uniquely identify one of the correlation group within an anomaly. The correlation Id can be mapped to the correlation group name by concatinating the correlation group features. Example of correlation group name which is the indicative of concatenated features names are  for names, Contoso manufacture 4.4.1 and Windows 11.22621.1485.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationGroupId() {
-        return this.correlationGroupId;
+        return this.backingStore.get("correlationGroupId");
     }
     /**
      * Gets the correlationGroupPrevalence property value. Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
-     * @return a userExperienceAnalyticsAnomalyCorrelationGroupPrevalence
+     * @return a UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence getCorrelationGroupPrevalence() {
-        return this.correlationGroupPrevalence;
+        return this.backingStore.get("correlationGroupPrevalence");
     }
     /**
      * Gets the correlationGroupPrevalencePercentage property value. The percentage of the devices in the correlation group that are anomalous. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCorrelationGroupPrevalencePercentage() {
-        return this.correlationGroupPrevalencePercentage;
+        return this.backingStore.get("correlationGroupPrevalencePercentage");
     }
     /**
      * The deserialization information for the current model
@@ -160,11 +120,11 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the totalDeviceCount property value. Indicates the total number of devices in the tenant. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceCount() {
-        return this.totalDeviceCount;
+        return this.backingStore.get("totalDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -189,69 +149,69 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the anomalyCorrelationGroupCount property.
      */
     public void setAnomalyCorrelationGroupCount(@jakarta.annotation.Nullable final Integer value) {
-        this.anomalyCorrelationGroupCount = value;
+        this.backingStore.set("anomalyCorrelationGroupCount", value);
     }
     /**
      * Sets the anomalyId property value. The unique identifier of the anomaly. Anomaly details such as name and type can be found in the UserExperienceAnalyticsAnomalySeverityOverview entity.
      * @param value Value to set for the anomalyId property.
      */
     public void setAnomalyId(@jakarta.annotation.Nullable final String value) {
-        this.anomalyId = value;
+        this.backingStore.set("anomalyId", value);
     }
     /**
      * Sets the correlationGroupAnomalousDeviceCount property value. Indicates the total number of devices affected by the anomaly in the correlation group. Valid values -2147483648 to 2147483647
      * @param value Value to set for the correlationGroupAnomalousDeviceCount property.
      */
     public void setCorrelationGroupAnomalousDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.correlationGroupAnomalousDeviceCount = value;
+        this.backingStore.set("correlationGroupAnomalousDeviceCount", value);
     }
     /**
      * Sets the correlationGroupAtRiskDeviceCount property value. Indicates the total number of devices at risk in the correlation group. Valid values -2147483648 to 2147483647
      * @param value Value to set for the correlationGroupAtRiskDeviceCount property.
      */
     public void setCorrelationGroupAtRiskDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.correlationGroupAtRiskDeviceCount = value;
+        this.backingStore.set("correlationGroupAtRiskDeviceCount", value);
     }
     /**
      * Sets the correlationGroupDeviceCount property value. Indicates the total number of devices in a correlation group. Valid values -2147483648 to 2147483647
      * @param value Value to set for the correlationGroupDeviceCount property.
      */
     public void setCorrelationGroupDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.correlationGroupDeviceCount = value;
+        this.backingStore.set("correlationGroupDeviceCount", value);
     }
     /**
      * Sets the correlationGroupFeatures property value. Describes the features of a device that are shared between all devices in a correlation group.
      * @param value Value to set for the correlationGroupFeatures property.
      */
     public void setCorrelationGroupFeatures(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> value) {
-        this.correlationGroupFeatures = value;
+        this.backingStore.set("correlationGroupFeatures", value);
     }
     /**
      * Sets the correlationGroupId property value. The unique identifier for the correlation group which will uniquely identify one of the correlation group within an anomaly. The correlation Id can be mapped to the correlation group name by concatinating the correlation group features. Example of correlation group name which is the indicative of concatenated features names are  for names, Contoso manufacture 4.4.1 and Windows 11.22621.1485.
      * @param value Value to set for the correlationGroupId property.
      */
     public void setCorrelationGroupId(@jakarta.annotation.Nullable final String value) {
-        this.correlationGroupId = value;
+        this.backingStore.set("correlationGroupId", value);
     }
     /**
      * Sets the correlationGroupPrevalence property value. Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
      * @param value Value to set for the correlationGroupPrevalence property.
      */
     public void setCorrelationGroupPrevalence(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence value) {
-        this.correlationGroupPrevalence = value;
+        this.backingStore.set("correlationGroupPrevalence", value);
     }
     /**
      * Sets the correlationGroupPrevalencePercentage property value. The percentage of the devices in the correlation group that are anomalous. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the correlationGroupPrevalencePercentage property.
      */
     public void setCorrelationGroupPrevalencePercentage(@jakarta.annotation.Nullable final Double value) {
-        this.correlationGroupPrevalencePercentage = value;
+        this.backingStore.set("correlationGroupPrevalencePercentage", value);
     }
     /**
      * Sets the totalDeviceCount property value. Indicates the total number of devices in the tenant. Valid values -2147483648 to 2147483647
      * @param value Value to set for the totalDeviceCount property.
      */
     public void setTotalDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalDeviceCount = value;
+        this.backingStore.set("totalDeviceCount", value);
     }
 }

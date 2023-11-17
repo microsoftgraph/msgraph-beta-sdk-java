@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Instantiates a new windowsAutopilotDeploymentProfilePolicySetItem and sets the default values.
+     * Instantiates a new WindowsAutopilotDeploymentProfilePolicySetItem and sets the default values.
      */
     public WindowsAutopilotDeploymentProfilePolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetIte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotDeploymentProfilePolicySetItem
+     * @return a WindowsAutopilotDeploymentProfilePolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfilePolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

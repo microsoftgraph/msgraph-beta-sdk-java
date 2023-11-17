@@ -91,54 +91,54 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deploymentAudiences/{deploymentAudience%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the updatableAsset resources that are members of a deploymentAudience.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * List the updatableAsset resources that are members of a deploymentAudience. This API is available in the following national cloud deployments.
+     * @return a UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UpdatableAssetCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the updatableAsset resources that are members of a deploymentAudience.
+     * List the updatableAsset resources that are members of a deploymentAudience. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * @return a UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UpdatableAssetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to members for admin
      * @param body The request body
-     * @return a CompletableFuture of updatableAsset
+     * @return a UpdatableAsset
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@jakarta.annotation.Nonnull final UpdatableAsset body) {
+    @jakarta.annotation.Nullable
+    public UpdatableAsset post(@jakarta.annotation.Nonnull final UpdatableAsset body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to members for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a UpdatableAsset
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UpdatableAsset post(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the updatableAsset resources that are members of a deploymentAudience.
+     * List the updatableAsset resources that are members of a deploymentAudience. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,24 +146,15 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the updatableAsset resources that are members of a deploymentAudience.
+     * List the updatableAsset resources that are members of a deploymentAudience. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -184,24 +175,16 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a membersRequestBuilder
+     * @return a MembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +192,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the updatableAsset resources that are members of a deploymentAudience.
+     * List the updatableAsset resources that are members of a deploymentAudience. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

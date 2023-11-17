@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommsOperation extends Entity implements Parsable {
     /**
-     * Unique Client Context string. Max limit is 256 chars.
-     */
-    private String clientContext;
-    /**
-     * The result information. Read-only.
-     */
-    private ResultInfo resultInfo;
-    /**
-     * The status property
-     */
-    private OperationStatus status;
-    /**
-     * Instantiates a new commsOperation and sets the default values.
+     * Instantiates a new CommsOperation and sets the default values.
      */
     public CommsOperation() {
         super();
@@ -29,7 +17,7 @@ public class CommsOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a commsOperation
+     * @return a CommsOperation
      */
     @jakarta.annotation.Nonnull
     public static CommsOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,6 +33,7 @@ public class CommsOperation extends Entity implements Parsable {
                 case "#microsoft.graph.muteParticipantsOperation": return new MuteParticipantsOperation();
                 case "#microsoft.graph.playPromptOperation": return new PlayPromptOperation();
                 case "#microsoft.graph.recordOperation": return new RecordOperation();
+                case "#microsoft.graph.sendDtmfTonesOperation": return new SendDtmfTonesOperation();
                 case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
                 case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();
                 case "#microsoft.graph.subscribeToToneOperation": return new SubscribeToToneOperation();
@@ -56,11 +45,11 @@ public class CommsOperation extends Entity implements Parsable {
     }
     /**
      * Gets the clientContext property value. Unique Client Context string. Max limit is 256 chars.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
-        return this.clientContext;
+        return this.backingStore.get("clientContext");
     }
     /**
      * The deserialization information for the current model
@@ -76,19 +65,19 @@ public class CommsOperation extends Entity implements Parsable {
     }
     /**
      * Gets the resultInfo property value. The result information. Read-only.
-     * @return a resultInfo
+     * @return a ResultInfo
      */
     @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
-        return this.resultInfo;
+        return this.backingStore.get("resultInfo");
     }
     /**
      * Gets the status property value. The status property
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -106,20 +95,20 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      */
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
-        this.clientContext = value;
+        this.backingStore.set("clientContext", value);
     }
     /**
      * Sets the resultInfo property value. The result information. Read-only.
      * @param value Value to set for the resultInfo property.
      */
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
-        this.resultInfo = value;
+        this.backingStore.set("resultInfo", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

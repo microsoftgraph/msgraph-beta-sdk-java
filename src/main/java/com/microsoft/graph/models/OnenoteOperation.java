@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteOperation extends Operation implements Parsable {
     /**
-     * The error returned by the operation.
-     */
-    private OnenoteOperationError error;
-    /**
-     * The operation percent complete if the operation is still in running status.
-     */
-    private String percentComplete;
-    /**
-     * The resource id.
-     */
-    private String resourceId;
-    /**
-     * The resource URI for the object. For example, the resource URI for a copied page or section.
-     */
-    private String resourceLocation;
-    /**
-     * Instantiates a new onenoteOperation and sets the default values.
+     * Instantiates a new OnenoteOperation and sets the default values.
      */
     public OnenoteOperation() {
         super();
@@ -33,7 +17,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteOperation
+     * @return a OnenoteOperation
      */
     @jakarta.annotation.Nonnull
     public static OnenoteOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +26,11 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the error property value. The error returned by the operation.
-     * @return a onenoteOperationError
+     * @return a OnenoteOperationError
      */
     @jakarta.annotation.Nullable
     public OnenoteOperationError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +47,27 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPercentComplete() {
-        return this.percentComplete;
+        return this.backingStore.get("percentComplete");
     }
     /**
      * Gets the resourceId property value. The resource id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.backingStore.get("resourceId");
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {
-        return this.resourceLocation;
+        return this.backingStore.get("resourceLocation");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final OnenoteOperationError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final String value) {
-        this.percentComplete = value;
+        this.backingStore.set("percentComplete", value);
     }
     /**
      * Sets the resourceId property value. The resource id.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.backingStore.set("resourceId", value);
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
-        this.resourceLocation = value;
+        this.backingStore.set("resourceLocation", value);
     }
 }
