@@ -61,7 +61,7 @@ public class SystemCredentialPreferences implements IJsonBackedObject {
 
     /**
      * The State.
-     * Indicates whether the feature is enabled or disabled. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set, and uses the default behavior of Azure Active Directory for the setting. The default value is disabled.
+     * Indicates whether the feature is enabled or disabled. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set, and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

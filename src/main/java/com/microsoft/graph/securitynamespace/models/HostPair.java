@@ -46,7 +46,7 @@ public class HostPair extends Entity implements IJsonBackedObject {
 
     /**
      * The Link Kind.
-     * The reason the two hosts are identified as hostPairs.
+     * The reason that two hosts are identified as hostPair.
      */
     @SerializedName(value = "linkKind", alternate = {"LinkKind"})
     @Expose

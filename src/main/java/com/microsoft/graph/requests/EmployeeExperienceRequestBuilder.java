@@ -56,6 +56,16 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder<Employe
     }
 
 
+
+    /**
+     * Gets the request builder for Goals
+     *
+     * @return the GoalsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.GoalsRequestBuilder goals() {
+        return new com.microsoft.graph.requests.GoalsRequestBuilder(getRequestUrlWithAdditionalSegment("goals"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the LearningCourseActivity collection
      *

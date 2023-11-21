@@ -88,6 +88,54 @@ public enum Region
     */
     UAE_NORTH,
     /**
+    * australia East
+    */
+    AUSTRALIA_EAST,
+    /**
+    * west Central US
+    */
+    WEST_CENTRAL_US,
+    /**
+    * central India
+    */
+    CENTRAL_INDIA,
+    /**
+    * south East Asia
+    */
+    SOUTH_EAST_ASIA,
+    /**
+    * sweden Central
+    */
+    SWEDEN_CENTRAL,
+    /**
+    * south India
+    */
+    SOUTH_INDIA,
+    /**
+    * australia South East
+    */
+    AUSTRALIA_SOUTH_EAST,
+    /**
+    * korea Central
+    */
+    KOREA_CENTRAL,
+    /**
+    * poland Central
+    */
+    POLAND_CENTRAL,
+    /**
+    * brazil South
+    */
+    BRAZIL_SOUTH,
+    /**
+    * japan East
+    */
+    JAPAN_EAST,
+    /**
+    * japan West
+    */
+    JAPAN_WEST,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

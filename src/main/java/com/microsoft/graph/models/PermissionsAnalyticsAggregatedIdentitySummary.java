@@ -39,7 +39,7 @@ public class PermissionsAnalyticsAggregatedIdentitySummary implements IJsonBacke
 
     /**
      * The Findings Count.
-     * 
+     * The total number of identities of a specific kind that has a specific finding type.
      */
     @SerializedName(value = "findingsCount", alternate = {"FindingsCount"})
     @Expose
@@ -48,7 +48,7 @@ public class PermissionsAnalyticsAggregatedIdentitySummary implements IJsonBacke
 
     /**
      * The Total Count.
-     * 
+     * The total number of identities in an authorization system that Permissions Management checked for a specific finding.
      */
     @SerializedName(value = "totalCount", alternate = {"TotalCount"})
     @Expose

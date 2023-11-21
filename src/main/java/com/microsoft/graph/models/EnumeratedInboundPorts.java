@@ -28,7 +28,7 @@ public class EnumeratedInboundPorts extends InboundPorts implements IJsonBackedO
 
     /**
      * The Ports.
-     * 
+     * Collection of ports that allow inbound traffic.
      */
     @SerializedName(value = "ports", alternate = {"Ports"})
     @Expose

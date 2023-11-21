@@ -40,7 +40,7 @@ public class TransactionSummary implements IJsonBackedObject {
 
     /**
      * The Blocked Count.
-     * Count of transactions that were blocked.
+     * The number of transactions that were blocked.
      */
     @SerializedName(value = "blockedCount", alternate = {"BlockedCount"})
     @Expose
@@ -49,7 +49,7 @@ public class TransactionSummary implements IJsonBackedObject {
 
     /**
      * The Total Count.
-     * Count of transactions.
+     * The total number of transactions.
      */
     @SerializedName(value = "totalCount", alternate = {"TotalCount"})
     @Expose
@@ -58,7 +58,7 @@ public class TransactionSummary implements IJsonBackedObject {
 
     /**
      * The Traffic Type.
-     * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
+     * The trraffic classification. The possible values are internet, private, microsoft365, and all.
      */
     @SerializedName(value = "trafficType", alternate = {"TrafficType"})
     @Expose

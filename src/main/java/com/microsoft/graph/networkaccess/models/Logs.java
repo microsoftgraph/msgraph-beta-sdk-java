@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventCollectionPage;
 import com.microsoft.graph.networkaccess.requests.NetworkAccessTrafficCollectionPage;
 
 
@@ -28,8 +29,17 @@ public class Logs extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Remote Networks.
+     * A collection of remote network health events.
+     */
+    @SerializedName(value = "remoteNetworks", alternate = {"RemoteNetworks"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventCollectionPage remoteNetworks;
+
+    /**
      * The Traffic.
-     * Represents a collection of log entries in the network access traffic log.
+     * A network access traffic log entry that contains comprehensive information about network traffic events.
      */
     @SerializedName(value = "traffic", alternate = {"Traffic"})
     @Expose
@@ -45,6 +55,10 @@ public class Logs extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("remoteNetworks")) {
+            remoteNetworks = serializer.deserializeObject(json.get("remoteNetworks"), com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventCollectionPage.class);
+        }
 
         if (json.has("traffic")) {
             traffic = serializer.deserializeObject(json.get("traffic"), com.microsoft.graph.networkaccess.requests.NetworkAccessTrafficCollectionPage.class);

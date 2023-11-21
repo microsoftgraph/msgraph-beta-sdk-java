@@ -76,6 +76,14 @@ public enum ConditionalAccessConditions
     */
     SERVICE_PRINCIPAL_RISK,
     /**
+    * authentication Flows
+    */
+    AUTHENTICATION_FLOWS,
+    /**
+    * insider Risk
+    */
+    INSIDER_RISK,
+    /**
     * For ConditionalAccessConditions values that were not expected from the service
     */
     UNEXPECTED_VALUE

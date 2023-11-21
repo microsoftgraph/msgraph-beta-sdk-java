@@ -36,7 +36,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements IJ
 
     /**
      * The External Context Id.
-     * Nullable. The id of the external entity's containing entity or context.
+     * Nullable. The ID of the external entity's containing entity or context.
      */
     @SerializedName(value = "externalContextId", alternate = {"ExternalContextId"})
     @Expose
@@ -45,7 +45,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements IJ
 
     /**
      * The External Object Id.
-     * Nullable. The id of the entity that an external service associates with a plan.
+     * Nullable. The ID of the entity that an external service associates with a plan.
      */
     @SerializedName(value = "externalObjectId", alternate = {"ExternalObjectId"})
     @Expose

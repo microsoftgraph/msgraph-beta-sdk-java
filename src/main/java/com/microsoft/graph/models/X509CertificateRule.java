@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.X509CertificateAuthenticationMode;
+import com.microsoft.graph.models.X509CertificateAffinityLevel;
 import com.microsoft.graph.models.X509CertificateRuleType;
 
 
@@ -49,6 +50,24 @@ public class X509CertificateRule implements IJsonBackedObject {
     public String identifier;
 
     /**
+     * The Issuer Subject Identifier.
+     * The identifier of the certificate issuer.
+     */
+    @SerializedName(value = "issuerSubjectIdentifier", alternate = {"IssuerSubjectIdentifier"})
+    @Expose
+	@Nullable
+    public String issuerSubjectIdentifier;
+
+    /**
+     * The Policy Oid Identifier.
+     * The identifier of the X.509 certificate policyOID.
+     */
+    @SerializedName(value = "policyOidIdentifier", alternate = {"PolicyOidIdentifier"})
+    @Expose
+	@Nullable
+    public String policyOidIdentifier;
+
+    /**
      * The X509Certificate Authentication Mode.
      * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      */
@@ -58,8 +77,17 @@ public class X509CertificateRule implements IJsonBackedObject {
     public X509CertificateAuthenticationMode x509CertificateAuthenticationMode;
 
     /**
+     * The X509Certificate Required Affinity Level.
+     * The possible values are: low, high, unknownFutureValue.
+     */
+    @SerializedName(value = "x509CertificateRequiredAffinityLevel", alternate = {"X509CertificateRequiredAffinityLevel"})
+    @Expose
+	@Nullable
+    public X509CertificateAffinityLevel x509CertificateRequiredAffinityLevel;
+
+    /**
      * The X509Certificate Rule Type.
-     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
+     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      */
     @SerializedName(value = "x509CertificateRuleType", alternate = {"X509CertificateRuleType"})
     @Expose

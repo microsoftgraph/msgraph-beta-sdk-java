@@ -15,9 +15,13 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.CloudPcReportsGetActionStatusReportsParameterSet;
+import com.microsoft.graph.models.CloudPcReportsGetCloudPcRecommendationReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetConnectionQualityReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetDailyAggregatedRemoteConnectionReportsParameterSet;
+import com.microsoft.graph.models.CloudPcReportsGetFrontlineReportParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetInaccessibleCloudPcReportsParameterSet;
+import com.microsoft.graph.models.CloudPcReportsGetRawRemoteConnectionReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRemoteConnectionHistoricalReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetSharedUseLicenseUsageReportParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetTotalAggregatedRemoteConnectionReportsParameterSet;
@@ -92,6 +96,26 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public CloudPcReportsGetActionStatusReportsRequestBuilder getActionStatusReports(@Nonnull final CloudPcReportsGetActionStatusReportsParameterSet parameters) {
+        return new CloudPcReportsGetActionStatusReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActionStatusReports"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CloudPcReportsGetCloudPcRecommendationReportsRequestBuilder getCloudPcRecommendationReports(@Nonnull final CloudPcReportsGetCloudPcRecommendationReportsParameterSet parameters) {
+        return new CloudPcReportsGetCloudPcRecommendationReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCloudPcRecommendationReports"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public CloudPcReportsGetConnectionQualityReportsRequestBuilder getConnectionQualityReports(@Nonnull final CloudPcReportsGetConnectionQualityReportsParameterSet parameters) {
         return new CloudPcReportsGetConnectionQualityReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConnectionQualityReports"), getClient(), null, parameters);
     }
@@ -112,8 +136,28 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public CloudPcReportsGetFrontlineReportRequestBuilder getFrontlineReport(@Nonnull final CloudPcReportsGetFrontlineReportParameterSet parameters) {
+        return new CloudPcReportsGetFrontlineReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFrontlineReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public CloudPcReportsGetInaccessibleCloudPcReportsRequestBuilder getInaccessibleCloudPcReports(@Nonnull final CloudPcReportsGetInaccessibleCloudPcReportsParameterSet parameters) {
         return new CloudPcReportsGetInaccessibleCloudPcReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getInaccessibleCloudPcReports"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CloudPcReportsGetRawRemoteConnectionReportsRequestBuilder getRawRemoteConnectionReports(@Nonnull final CloudPcReportsGetRawRemoteConnectionReportsParameterSet parameters) {
+        return new CloudPcReportsGetRawRemoteConnectionReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRawRemoteConnectionReports"), getClient(), null, parameters);
     }
 
     /**
@@ -130,7 +174,9 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead.
      */
+    @Deprecated
     @Nonnull
     public CloudPcReportsGetSharedUseLicenseUsageReportRequestBuilder getSharedUseLicenseUsageReport(@Nonnull final CloudPcReportsGetSharedUseLicenseUsageReportParameterSet parameters) {
         return new CloudPcReportsGetSharedUseLicenseUsageReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharedUseLicenseUsageReport"), getClient(), null, parameters);

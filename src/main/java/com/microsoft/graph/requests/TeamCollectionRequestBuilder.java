@@ -16,6 +16,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.OpenShift;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -26,6 +27,7 @@ import com.microsoft.graph.requests.TeamRequestBuilder;
 import com.microsoft.graph.requests.TeamCollectionRequest;
 import com.microsoft.graph.requests.TeamAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamGetOpenShiftsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -68,6 +70,15 @@ public class TeamCollectionRequestBuilder extends BaseCollectionRequestBuilder<T
     @Nonnull
     public TeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new TeamGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public TeamGetOpenShiftsCollectionRequestBuilder getOpenShifts() {
+        return new TeamGetOpenShiftsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOpenShifts"), getClient(), null);
     }
 
     /**

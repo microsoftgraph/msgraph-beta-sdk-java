@@ -68,7 +68,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Auto Review Enabled.
-     * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      */
     @SerializedName(value = "autoReviewEnabled", alternate = {"AutoReviewEnabled"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Auto Review Settings.
-     * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+     * Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
      */
     @SerializedName(value = "autoReviewSettings", alternate = {"AutoReviewSettings"})
     @Expose

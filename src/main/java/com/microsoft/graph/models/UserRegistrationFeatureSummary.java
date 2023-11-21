@@ -52,7 +52,7 @@ public class UserRegistrationFeatureSummary implements IJsonBackedObject {
 
     /**
      * The User Registration Feature Counts.
-     * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
+     * Number of users registered or capable for multifactor authentication, self-service password reset, and passwordless authentication.
      */
     @SerializedName(value = "userRegistrationFeatureCounts", alternate = {"UserRegistrationFeatureCounts"})
     @Expose

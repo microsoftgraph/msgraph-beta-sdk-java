@@ -202,7 +202,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Module Url.
-     * 
+     * The URL of the module from which to access the assignment.
      */
     @SerializedName(value = "moduleUrl", alternate = {"ModuleUrl"})
     @Expose

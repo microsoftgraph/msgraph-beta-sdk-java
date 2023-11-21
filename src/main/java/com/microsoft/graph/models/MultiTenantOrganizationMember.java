@@ -30,7 +30,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Added By Tenant Id.
-     * 
+     * Tenant ID of the tenant that added the tenant to the multitenant organization. Read-only.
      */
     @SerializedName(value = "addedByTenantId", alternate = {"AddedByTenantId"})
     @Expose
@@ -39,7 +39,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Added Date Time.
-     * 
+     * Date and time when the tenant was added to the multitenant organization. Read-only.
      */
     @SerializedName(value = "addedDateTime", alternate = {"AddedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Display Name.
-     * 
+     * Display name of the tenant added to the multitenant organization.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Joined Date Time.
-     * 
+     * Date and time when the tenant joined the multitenant organization. Read-only.
      */
     @SerializedName(value = "joinedDateTime", alternate = {"JoinedDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Role.
-     * 
+     * Role of the tenant in the multitenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multitenant organization but tenants with the member role can only participate in a multitenant organization. There can be multiple tenants with the owner role in a multitenant organization.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose
@@ -75,7 +75,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The State.
-     * 
+     * State of the tenant in the multitenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multitenant organization to participate in the multitenant organization. Tenants in the active state can participate in the multitenant organization. Tenants in the removed state are in the process of being removed from the multitenant organization. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -84,7 +84,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Tenant Id.
-     * 
+     * Tenant ID of the Microsoft Entra tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -93,7 +93,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements IJ
 
     /**
      * The Transition Details.
-     * 
+     * Details of the processing status for a tenant in a multitenant organization. Read-only. Nullable.
      */
     @SerializedName(value = "transitionDetails", alternate = {"TransitionDetails"})
     @Expose

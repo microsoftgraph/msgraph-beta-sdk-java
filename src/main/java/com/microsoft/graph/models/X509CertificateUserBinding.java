@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.X509CertificateAffinityLevel;
 
 
 import com.google.gson.JsonObject;
@@ -39,7 +40,7 @@ public class X509CertificateUserBinding implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
+     * The priority of the binding. Microsoft Entra ID uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -47,8 +48,17 @@ public class X509CertificateUserBinding implements IJsonBackedObject {
     public Integer priority;
 
     /**
+     * The Trust Affinity Level.
+     * The affinity level of the username binding rule. The possible values are: low, high, unknownFutureValue.
+     */
+    @SerializedName(value = "trustAffinityLevel", alternate = {"TrustAffinityLevel"})
+    @Expose
+	@Nullable
+    public X509CertificateAffinityLevel trustAffinityLevel;
+
+    /**
      * The User Property.
-     * Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
+     * Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, email. Required.
      */
     @SerializedName(value = "userProperty", alternate = {"UserProperty"})
     @Expose

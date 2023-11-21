@@ -277,6 +277,24 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public Boolean keyboardsRestricted;
 
     /**
+     * The Messaging Redirect App Display Name.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app name which is allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppDisplayName", alternate = {"MessagingRedirectAppDisplayName"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppDisplayName;
+
+    /**
+     * The Messaging Redirect App Package Id.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app package id which is allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppPackageId", alternate = {"MessagingRedirectAppPackageId"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppPackageId;
+
+    /**
      * The Minimum Required Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or app access will be blocked
      */

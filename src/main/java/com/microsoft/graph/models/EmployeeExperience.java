@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.Goals;
 import com.microsoft.graph.requests.LearningCourseActivityCollectionPage;
 import com.microsoft.graph.requests.LearningProviderCollectionPage;
 
@@ -39,6 +40,15 @@ public class EmployeeExperience implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Goals.
+     * Represents a collection of goals in a Viva Goals organization.
+     */
+    @SerializedName(value = "goals", alternate = {"Goals"})
+    @Expose
+	@Nullable
+    public Goals goals;
 
     /**
      * The Learning Course Activities.

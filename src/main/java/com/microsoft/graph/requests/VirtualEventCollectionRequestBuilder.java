@@ -17,6 +17,8 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.VirtualEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.VirtualEventRequestBuilder;
 import com.microsoft.graph.requests.VirtualEventCollectionRequest;
+import com.microsoft.graph.requests.VirtualEventCancelRequestBuilder;
+import com.microsoft.graph.requests.VirtualEventPublishRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -39,6 +41,24 @@ public class VirtualEventCollectionRequestBuilder extends BaseCollectionRequestB
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public VirtualEventCancelRequestBuilder cancel() {
+        return new VirtualEventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public VirtualEventPublishRequestBuilder publish() {
+        return new VirtualEventPublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

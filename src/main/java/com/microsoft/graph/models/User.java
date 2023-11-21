@@ -42,6 +42,7 @@ import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Profile;
 import com.microsoft.graph.models.Presence;
+import com.microsoft.graph.models.UserVirtualEventsRoot;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
@@ -94,7 +95,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Activity.
-     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
      */
     @SerializedName(value = "signInActivity", alternate = {"SignInActivity"})
     @Expose
@@ -112,7 +113,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Age Group.
-     * Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in).
+     * Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
      */
     @SerializedName(value = "ageGroup", alternate = {"AgeGroup"})
     @Expose
@@ -121,7 +122,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
-     * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
+     * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
@@ -139,7 +140,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authorization Info.
-     * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
+     * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can store identifiers for smartcard-based certificates that users use to access on-premises Active Directory deployments or federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      */
     @SerializedName(value = "authorizationInfo", alternate = {"AuthorizationInfo"})
     @Expose
@@ -157,7 +158,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The City.
-     * The city in which the user is located. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The city where the user is located. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "city", alternate = {"City"})
     @Expose
@@ -166,7 +167,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Cloud Realtime Communication Info.
-     * 
+     * Microsoft realtime communication information related to the user.  Supports $filter (eq, ne,not).
      */
     @SerializedName(value = "cloudRealtimeCommunicationInfo", alternate = {"CloudRealtimeCommunicationInfo"})
     @Expose
@@ -175,7 +176,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The name of the company the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -193,7 +194,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The country or region where the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "country", alternate = {"Country"})
     @Expose
@@ -202,7 +203,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+     * The date and time the user was created in ISO 8601 format and UTC. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users synced to Microsoft Entra ID before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -220,7 +221,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Custom Security Attributes.
-     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
+     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive.
      */
     @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
     @Expose
@@ -229,7 +230,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
+     * The name of the department where the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -247,7 +248,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderBy, and $search.
+     * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created, and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -256,7 +257,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Hire Date.
-     * The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in).
+     * The date and time when the user was hired or will start work if there is a future hire. Supports $filter (eq, ne, not , ge, le, in).
      */
     @SerializedName(value = "employeeHireDate", alternate = {"EmployeeHireDate"})
     @Expose
@@ -274,7 +275,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Leave Date Time.
-     * The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
+     * The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Microsoft Entra roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      */
     @SerializedName(value = "employeeLeaveDateTime", alternate = {"EmployeeLeaveDateTime"})
     @Expose
@@ -283,7 +284,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Org Data.
-     * Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
+     * Represents organization data (for example, division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
      */
     @SerializedName(value = "employeeOrgData", alternate = {"EmployeeOrgData"})
     @Expose
@@ -337,7 +338,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identities.
-     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
+     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
      */
     @SerializedName(value = "identities", alternate = {"Identities"})
     @Expose
@@ -346,7 +347,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Im Addresses.
-     * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
+     * The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "imAddresses", alternate = {"ImAddresses"})
     @Expose
@@ -373,7 +374,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Management Restricted.
-     * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
      */
     @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
     @Expose
@@ -400,7 +401,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Last Password Change Date Time.
-     * The time when this Azure AD user last changed their password or when their password was created, , whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
+     * When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
      */
     @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
@@ -409,7 +410,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Legal Age Group Classification.
-     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select.
+     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select.
      */
     @SerializedName(value = "legalAgeGroupClassification", alternate = {"LegalAgeGroupClassification"})
     @Expose
@@ -418,7 +419,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Assignment States.
-     * State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
+     * State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Returned only on $select.
      */
     @SerializedName(value = "licenseAssignmentStates", alternate = {"LicenseAssignmentStates"})
     @Expose
@@ -427,7 +428,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * The SMTP address for the user, for example, admin@contoso.com. Changes to this property also update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -445,7 +446,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
-     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
+     * The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
      */
     @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
@@ -463,7 +464,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Distinguished Name.
-     * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+     * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
      */
     @SerializedName(value = "onPremisesDistinguishedName", alternate = {"OnPremisesDistinguishedName"})
     @Expose
@@ -472,7 +473,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Domain Name.
-     * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+     * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only.
      */
     @SerializedName(value = "onPremisesDomainName", alternate = {"OnPremisesDomainName"})
     @Expose
@@ -481,7 +482,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
+     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during the creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -490,7 +491,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Immutable Id.
-     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters cannot be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
+     * This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters can't be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
      */
     @SerializedName(value = "onPremisesImmutableId", alternate = {"OnPremisesImmutableId"})
     @Expose
@@ -499,7 +500,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -517,7 +518,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sam Account Name.
-     * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+     * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
      */
     @SerializedName(value = "onPremisesSamAccountName", alternate = {"OnPremisesSamAccountName"})
     @Expose
@@ -526,7 +527,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
+     * Contains the on-premises security identifier (SID) for the user synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
@@ -535,7 +536,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sip Info.
-     * 
+     * Contains all on-premises Session Initiation Protocol (SIP) information related to the user. Read-only.
      */
     @SerializedName(value = "onPremisesSipInfo", alternate = {"OnPremisesSipInfo"})
     @Expose
@@ -544,7 +545,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise, the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -553,7 +554,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises User Principal Name.
-     * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
+     * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
      */
     @SerializedName(value = "onPremisesUserPrincipalName", alternate = {"OnPremisesUserPrincipalName"})
     @Expose
@@ -562,7 +563,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property can't contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -571,7 +572,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, not, and eq on null values).
+     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Microsoft Entra password policies. Supports $filter (ne, not, and eq on null values).
      */
     @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
@@ -607,7 +608,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The preferred language for the user. The preferred language format is based on RFC 4646. The name combines an ISO 639 two-letter lowercase culture code associated with the language and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -625,7 +626,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while the ones prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
@@ -634,7 +635,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Refresh Tokens Valid From Date Time.
-     * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
+     * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If it happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
      */
     @SerializedName(value = "refreshTokensValidFromDateTime", alternate = {"RefreshTokensValidFromDateTime"})
     @Expose
@@ -652,7 +653,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Service Provisioning Errors.
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.
      */
     @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
     @Expose
@@ -670,7 +671,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Sessions Valid From Date Time.
-     * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+     * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application must acquire a new refresh token by requesting the authorized endpoint. Read-only. Use revokeSignInSessions to reset.
      */
     @SerializedName(value = "signInSessionsValidFromDateTime", alternate = {"SignInSessionsValidFromDateTime"})
     @Expose
@@ -706,7 +707,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Usage Location.
-     * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * A two-letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirements to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
@@ -715,7 +716,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property cannot contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderBy.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where the domain must be present in the tenant's verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -724,7 +725,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
+     * A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
@@ -760,7 +761,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The About Me.
-     * A freeform text entry field for the user to describe themselves. Returned only on $select.
+     * A freeform text entry field for users to describe themselves. Returned only on $select.
      */
     @SerializedName(value = "aboutMe", alternate = {"AboutMe"})
     @Expose
@@ -769,7 +770,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -778,7 +779,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hire Date.
-     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      */
     @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
@@ -787,7 +788,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Interests.
-     * A list for the user to describe their interests. Returned only on $select.
+     * A list for users to describe their interests. Returned only on $select.
      */
     @SerializedName(value = "interests", alternate = {"Interests"})
     @Expose
@@ -796,7 +797,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The My Site.
-     * The URL for the user's personal site. Returned only on $select.
+     * The URL for the user's site. Returned only on $select.
      */
     @SerializedName(value = "mySite", alternate = {"MySite"})
     @Expose
@@ -805,7 +806,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Past Projects.
-     * A list for the user to enumerate their past projects. Returned only on $select.
+     * A list for users to enumerate their past projects. Returned only on $select.
      */
     @SerializedName(value = "pastProjects", alternate = {"PastProjects"})
     @Expose
@@ -902,14 +903,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Objects.
-     * Directory objects that were created by the user. Read-only. Nullable.
+     * Directory objects that the user created. Read-only. Nullable.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Direct Reports.
-     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+     * The users and contacts that report to the user. (The users and contacts with their manager property set to this user.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage directReports;
@@ -934,7 +935,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups, directory roles, and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
@@ -948,21 +949,21 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owned Devices.
-     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Devices owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedDevices;
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Directory objects owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Registered Devices.
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredDevices;
@@ -978,14 +979,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sponsors.
-     * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+     * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage sponsors;
 
     /**
      * The Transitive Member Of.
-     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+     * The groups, including nested groups and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
@@ -1053,7 +1054,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Events.
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. The default is to show events under the Default Calendar. Read-only. Nullable.
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
@@ -1062,7 +1063,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Inference Classification.
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      */
     @SerializedName(value = "inferenceClassification", alternate = {"InferenceClassification"})
     @Expose
@@ -1107,7 +1108,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The People.
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration, and business relationships. A person aggregates information from mail, contacts, and social networks.
      */
     @SerializedName(value = "people", alternate = {"People"})
     @Expose
@@ -1168,7 +1169,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Pending Access Review Instances.
-     * Navigation property to get list of access reviews pending approval by reviewer.
+     * Navigation property to get a list of access reviews pending approval by the reviewer.
      */
     @SerializedName(value = "pendingAccessReviewInstances", alternate = {"PendingAccessReviewInstances"})
     @Expose
@@ -1308,7 +1309,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photos.
-     * 
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
@@ -1344,7 +1345,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Online Meetings.
-     * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
@@ -1359,6 +1360,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Presence presence;
+
+    /**
+     * The Virtual Events.
+     * 
+     */
+    @SerializedName(value = "virtualEvents", alternate = {"VirtualEvents"})
+    @Expose
+	@Nullable
+    public UserVirtualEventsRoot virtualEvents;
 
     /**
      * The Authentication.
@@ -1380,14 +1390,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Joined Teams.
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      */
 	@Nullable
     public com.microsoft.graph.requests.TeamCollectionPage joinedTeams;
 
     /**
      * The Permission Grants.
-     * 
+     * List all resource-specific permission grants of a user.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

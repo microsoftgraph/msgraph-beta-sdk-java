@@ -58,15 +58,6 @@ public class NotificationChannel implements IJsonBackedObject {
 	@Nullable
     public java.util.List<NotificationReceiver> notificationReceivers;
 
-    /**
-     * The Receivers.
-     * The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
-     */
-    @SerializedName(value = "receivers", alternate = {"Receivers"})
-    @Expose
-	@Nullable
-    public java.util.List<String> receivers;
-
 
     /**
      * Sets the raw JSON object

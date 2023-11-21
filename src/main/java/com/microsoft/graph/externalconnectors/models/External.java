@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.industrydata.models.IndustryDataRoot;
+import com.microsoft.graph.requests.AuthorizationSystemCollectionPage;
 import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionPage;
 
 
@@ -50,6 +51,15 @@ public class External implements IJsonBackedObject {
     public IndustryDataRoot industryData;
 
     /**
+     * The Authorization Systems.
+     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     */
+    @SerializedName(value = "authorizationSystems", alternate = {"AuthorizationSystems"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AuthorizationSystemCollectionPage authorizationSystems;
+
+    /**
      * The Connections.
      * 
      */
@@ -67,6 +77,10 @@ public class External implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("authorizationSystems")) {
+            authorizationSystems = serializer.deserializeObject(json.get("authorizationSystems"), com.microsoft.graph.requests.AuthorizationSystemCollectionPage.class);
+        }
 
         if (json.has("connections")) {
             connections = serializer.deserializeObject(json.get("connections"), com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionPage.class);

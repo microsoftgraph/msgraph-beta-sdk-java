@@ -1828,6 +1828,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the IdentityContainer
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IdentityContainerRequestBuilder identity() {
+        return new com.microsoft.graph.requests.IdentityContainerRequestBuilder(getServiceRoot() + "/identity", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the DeviceManagement
      */
     @Nonnull
@@ -1873,16 +1883,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.ComplianceRequestBuilder compliance() {
         return new com.microsoft.graph.requests.ComplianceRequestBuilder(getServiceRoot() + "/compliance", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the IdentityContainer
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.IdentityContainerRequestBuilder identity() {
-        return new com.microsoft.graph.requests.IdentityContainerRequestBuilder(getServiceRoot() + "/identity", this, null);
     }
 
     /**

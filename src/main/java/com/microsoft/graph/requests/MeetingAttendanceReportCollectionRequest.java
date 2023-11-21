@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.models.OnlineMeetingBase;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import java.util.Arrays;
 import java.util.EnumSet;

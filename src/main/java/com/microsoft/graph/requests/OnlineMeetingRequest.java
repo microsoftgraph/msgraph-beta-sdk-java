@@ -8,8 +8,12 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.models.RemindBeforeTimeInMinutesType;
+import com.microsoft.graph.models.VirtualAppointmentSmsType;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.CallRecording;
+import com.microsoft.graph.models.CallTranscript;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -25,21 +29,6 @@ import com.microsoft.graph.http.HttpMethod;
  */
 public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
 	
-    /**
-     * The request for the OnlineMeeting
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     * @param responseClass  the class of the response
-     */
-    public OnlineMeetingRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient<?> client,
-            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            @Nonnull final Class<? extends OnlineMeeting> responseClass) {
-        super(requestUrl, client, requestOptions, responseClass);
-    }
-
     /**
      * The request for the OnlineMeeting
      *

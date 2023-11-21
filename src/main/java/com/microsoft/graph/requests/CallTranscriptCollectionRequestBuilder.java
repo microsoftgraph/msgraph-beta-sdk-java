@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder;
 import com.microsoft.graph.requests.CallTranscriptRequestBuilder;
 import com.microsoft.graph.requests.CallTranscriptCollectionRequest;
+import com.microsoft.graph.requests.CallTranscriptDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -39,6 +40,15 @@ public class CallTranscriptCollectionRequestBuilder extends BaseCollectionReques
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public CallTranscriptDeltaCollectionRequestBuilder delta() {
+        return new CallTranscriptDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

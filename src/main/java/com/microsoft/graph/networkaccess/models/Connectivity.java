@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.networkaccess.models.WebCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.networkaccess.requests.BranchSiteCollectionPage;
 
@@ -28,8 +29,17 @@ public class Connectivity extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Web Categories.
+     * 
+     */
+    @SerializedName(value = "webCategories", alternate = {"WebCategories"})
+    @Expose
+	@Nullable
+    public java.util.List<WebCategory> webCategories;
+
+    /**
      * The Branches.
-     * Branch represent locations for connectivity.
+     * Branches represent locations for connectivity.
      */
     @SerializedName(value = "branches", alternate = {"Branches"})
     @Expose

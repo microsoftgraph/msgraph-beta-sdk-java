@@ -40,7 +40,7 @@ public class EntitiesSummary implements IJsonBackedObject {
 
     /**
      * The Device Count.
-     * Count of unique devices that were seen.
+     * The number of unique devices that were seen.
      */
     @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
@@ -49,7 +49,7 @@ public class EntitiesSummary implements IJsonBackedObject {
 
     /**
      * The Traffic Type.
-     * Traffic classification. The possible values are: internet, private, microsoft365, all, unknownFutureValue.
+     * The traffic classification. The possible values are: internet, private, microsoft365, all.
      */
     @SerializedName(value = "trafficType", alternate = {"TrafficType"})
     @Expose
@@ -58,7 +58,7 @@ public class EntitiesSummary implements IJsonBackedObject {
 
     /**
      * The User Count.
-     * Count of unique Azure Active Directoy users that were seen.
+     * The number of unique Microsoft Entra ID users that were seen.
      */
     @SerializedName(value = "userCount", alternate = {"UserCount"})
     @Expose
@@ -67,7 +67,7 @@ public class EntitiesSummary implements IJsonBackedObject {
 
     /**
      * The Workload Count.
-     * Count of unique target workloads or hosts that were seen.
+     * The number of unique target workloads/hosts that were seen.
      */
     @SerializedName(value = "workloadCount", alternate = {"WorkloadCount"})
     @Expose

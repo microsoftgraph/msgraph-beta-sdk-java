@@ -39,7 +39,7 @@ public class ActionSummary implements IJsonBackedObject {
 
     /**
      * The Assigned.
-     * 
+     * This is the number of authorization system actions that have been assigned to the identity.
      */
     @SerializedName(value = "assigned", alternate = {"Assigned"})
     @Expose
@@ -48,7 +48,7 @@ public class ActionSummary implements IJsonBackedObject {
 
     /**
      * The Available.
-     * 
+     * This is the number of authorization system actions that the identity has exercised in the last 90 days.
      */
     @SerializedName(value = "available", alternate = {"Available"})
     @Expose
@@ -57,7 +57,7 @@ public class ActionSummary implements IJsonBackedObject {
 
     /**
      * The Exercised.
-     * 
+     * This is the maximum number of actions that are available in the authorization system.
      */
     @SerializedName(value = "exercised", alternate = {"Exercised"})
     @Expose

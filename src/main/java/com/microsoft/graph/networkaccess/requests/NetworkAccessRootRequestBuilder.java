@@ -87,6 +87,46 @@ public class NetworkAccessRootRequestBuilder extends BaseRequestBuilder<NetworkA
         return new com.microsoft.graph.networkaccess.requests.ConnectivityRequestBuilder(getRequestUrlWithAdditionalSegment("connectivity"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the FilteringPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.FilteringPolicyCollectionRequestBuilder filteringPolicies() {
+        return new com.microsoft.graph.networkaccess.requests.FilteringPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("filteringPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FilteringPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.FilteringPolicyRequestBuilder filteringPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.networkaccess.requests.FilteringPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("filteringPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the FilteringProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.FilteringProfileCollectionRequestBuilder filteringProfiles() {
+        return new com.microsoft.graph.networkaccess.requests.FilteringProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("filteringProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FilteringProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.FilteringProfileRequestBuilder filteringProfiles(@Nonnull final String id) {
+        return new com.microsoft.graph.networkaccess.requests.FilteringProfileRequestBuilder(getRequestUrlWithAdditionalSegment("filteringProfiles") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ForwardingPolicy collection
      *
      * @return the collection request builder

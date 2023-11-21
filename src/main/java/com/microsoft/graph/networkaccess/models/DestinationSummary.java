@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.networkaccess.models.TrafficType;
 
 
 import com.google.gson.JsonObject;
@@ -39,7 +40,7 @@ public class DestinationSummary implements IJsonBackedObject {
 
     /**
      * The Count.
-     * Count of the aggregation.
+     * The number of the destinationSummary objects, aggregated by Global Secure Access service.
      */
     @SerializedName(value = "count", alternate = {"Count"})
     @Expose
@@ -48,12 +49,21 @@ public class DestinationSummary implements IJsonBackedObject {
 
     /**
      * The Destination.
-     * Destination FQDN or IP address.
+     * The IP address or FQDN of the destination.
      */
     @SerializedName(value = "destination", alternate = {"Destination"})
     @Expose
 	@Nullable
     public String destination;
+
+    /**
+     * The Traffic Type.
+     * The traffic classification. The allowed values are internet, private, microsoft365, all, and unknownFutureValue.
+     */
+    @SerializedName(value = "trafficType", alternate = {"TrafficType"})
+    @Expose
+	@Nullable
+    public TrafficType trafficType;
 
 
     /**

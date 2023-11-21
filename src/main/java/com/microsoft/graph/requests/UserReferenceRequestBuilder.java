@@ -9,6 +9,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;

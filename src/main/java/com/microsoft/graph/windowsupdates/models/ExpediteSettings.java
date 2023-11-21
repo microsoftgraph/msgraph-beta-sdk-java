@@ -46,6 +46,15 @@ public class ExpediteSettings implements IJsonBackedObject {
 	@Nullable
     public Boolean isExpedited;
 
+    /**
+     * The Is Readiness Test.
+     * 
+     */
+    @SerializedName(value = "isReadinessTest", alternate = {"IsReadinessTest"})
+    @Expose
+	@Nullable
+    public Boolean isReadinessTest;
+
 
     /**
      * Sets the raw JSON object

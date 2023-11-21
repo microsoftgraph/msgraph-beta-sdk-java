@@ -15,6 +15,8 @@ import com.microsoft.graph.networkaccess.models.Connectivity;
 import com.microsoft.graph.networkaccess.models.Settings;
 import com.microsoft.graph.networkaccess.models.TenantStatus;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.networkaccess.requests.FilteringPolicyCollectionPage;
+import com.microsoft.graph.networkaccess.requests.FilteringProfileCollectionPage;
 import com.microsoft.graph.networkaccess.requests.ForwardingPolicyCollectionPage;
 import com.microsoft.graph.networkaccess.requests.ForwardingProfileCollectionPage;
 
@@ -35,7 +37,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Logs.
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      */
     @SerializedName(value = "logs", alternate = {"Logs"})
     @Expose
@@ -61,8 +63,26 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
     public Connectivity connectivity;
 
     /**
+     * The Filtering Policies.
+     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     */
+    @SerializedName(value = "filteringPolicies", alternate = {"FilteringPolicies"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.networkaccess.requests.FilteringPolicyCollectionPage filteringPolicies;
+
+    /**
+     * The Filtering Profiles.
+     * A filtering profile associates network access policies with Microsoft Entra ID Conditional Access policies, so that access policies can be applied to users and groups.
+     */
+    @SerializedName(value = "filteringProfiles", alternate = {"FilteringProfiles"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.networkaccess.requests.FilteringProfileCollectionPage filteringProfiles;
+
+    /**
      * The Forwarding Policies.
-     * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
+     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
      */
     @SerializedName(value = "forwardingPolicies", alternate = {"ForwardingPolicies"})
     @Expose
@@ -105,6 +125,14 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("filteringPolicies")) {
+            filteringPolicies = serializer.deserializeObject(json.get("filteringPolicies"), com.microsoft.graph.networkaccess.requests.FilteringPolicyCollectionPage.class);
+        }
+
+        if (json.has("filteringProfiles")) {
+            filteringProfiles = serializer.deserializeObject(json.get("filteringProfiles"), com.microsoft.graph.networkaccess.requests.FilteringProfileCollectionPage.class);
+        }
 
         if (json.has("forwardingPolicies")) {
             forwardingPolicies = serializer.deserializeObject(json.get("forwardingPolicies"), com.microsoft.graph.networkaccess.requests.ForwardingPolicyCollectionPage.class);

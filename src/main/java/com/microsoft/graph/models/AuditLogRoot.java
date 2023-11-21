@@ -43,7 +43,7 @@ public class AuditLogRoot implements IJsonBackedObject {
 
     /**
      * The Custom Security Attribute Audits.
-     * 
+     * Represents a custom security attribute audit log.
      */
     @SerializedName(value = "customSecurityAttributeAudits", alternate = {"CustomSecurityAttributeAudits"})
     @Expose
@@ -70,7 +70,7 @@ public class AuditLogRoot implements IJsonBackedObject {
 
     /**
      * The Provisioning.
-     * 
+     * Represents an action performed by the Microsoft Entra provisioning service and its associated properties.
      */
     @SerializedName(value = "provisioning", alternate = {"Provisioning"})
     @Expose

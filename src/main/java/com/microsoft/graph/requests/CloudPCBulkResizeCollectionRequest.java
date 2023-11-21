@@ -25,7 +25,9 @@ import com.microsoft.graph.http.BaseActionCollectionRequest;
 
 /**
  * The class for the Cloud PCBulk Resize Collection Request.
+ * @deprecated The bulkResize action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class CloudPCBulkResizeCollectionRequest extends BaseActionCollectionRequest<CloudPcRemoteActionResult, CloudPCBulkResizeCollectionResponse, CloudPCBulkResizeCollectionPage> {
 
 

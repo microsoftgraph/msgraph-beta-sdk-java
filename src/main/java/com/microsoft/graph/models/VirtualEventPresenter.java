@@ -8,9 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CommunicationsUserIdentity;
 import com.microsoft.graph.models.VirtualEventPresenterDetails;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.VirtualEventSessionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +56,13 @@ public class VirtualEventPresenter extends Entity implements IJsonBackedObject {
 	@Nullable
     public VirtualEventPresenterDetails presenterDetails;
 
+    /**
+     * The Sessions.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventSessionCollectionPage sessions;
+
 
     /**
      * Sets the raw JSON object
@@ -63,5 +72,9 @@ public class VirtualEventPresenter extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("sessions")) {
+            sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.requests.VirtualEventSessionCollectionPage.class);
+        }
     }
 }

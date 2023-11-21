@@ -75,6 +75,24 @@ public class PositionDetail implements IJsonBackedObject {
     public String jobTitle;
 
     /**
+     * The Layer.
+     * The place where the employee is within the organizational hierarchy.
+     */
+    @SerializedName(value = "layer", alternate = {"Layer"})
+    @Expose
+	@Nullable
+    public Integer layer;
+
+    /**
+     * The Level.
+     * The employee’s experience or management level.
+     */
+    @SerializedName(value = "level", alternate = {"Level"})
+    @Expose
+	@Nullable
+    public String level;
+
+    /**
      * The Role.
      * The role the position entailed.
      */
@@ -94,7 +112,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * Short summary of the position.
+     * summary of the position.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

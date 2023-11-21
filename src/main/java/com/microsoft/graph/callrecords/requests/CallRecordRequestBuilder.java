@@ -59,6 +59,36 @@ public class CallRecordRequestBuilder extends BaseRequestBuilder<CallRecord> {
     }
 
 
+
+    /**
+     * Gets the request builder for Organizer
+     *
+     * @return the OrganizerRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.callrecords.requests.OrganizerRequestBuilder organizer_v2() {
+        return new com.microsoft.graph.callrecords.requests.OrganizerRequestBuilder(getRequestUrlWithAdditionalSegment("organizer_v2"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Participant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.callrecords.requests.ParticipantCollectionRequestBuilder participants_v2() {
+        return new com.microsoft.graph.callrecords.requests.ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants_v2"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Participant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.callrecords.requests.ParticipantRequestBuilder participants_v2(@Nonnull final String id) {
+        return new com.microsoft.graph.callrecords.requests.ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants_v2") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the Session collection
      *

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CommunicationsIdentitySet;
+import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.VirtualEventStatus;
 import com.microsoft.graph.models.Entity;
@@ -47,7 +48,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
 	@Nullable
-    public String description;
+    public ItemBody description;
 
     /**
      * The Display Name.
@@ -60,7 +61,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * End time of the virtual event.
+     * End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -69,7 +70,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * Start time of the virtual event.
+     * Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

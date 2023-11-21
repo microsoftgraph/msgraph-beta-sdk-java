@@ -65,7 +65,7 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
 
     /**
      * The Is Privileged.
-     * 
+     * Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
     @Expose

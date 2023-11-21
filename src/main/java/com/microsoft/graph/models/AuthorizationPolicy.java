@@ -40,7 +40,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
+     * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
@@ -58,7 +58,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Invites From.
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      */
     @SerializedName(value = "allowInvitesFrom", alternate = {"AllowInvitesFrom"})
     @Expose
@@ -76,7 +76,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Block Msol Power Shell.
-     * To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph.
+     * To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      */
     @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose
@@ -103,7 +103,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Guest User Role Id.
-     * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      */
     @SerializedName(value = "guestUserRoleId", alternate = {"GuestUserRoleId"})
     @Expose

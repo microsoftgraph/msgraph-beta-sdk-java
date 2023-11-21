@@ -39,7 +39,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * Number of the user or bot who received the call (E.164 format, but may include additional data).
+     * Number of the user or bot who received the call (E.164 format, but may include more data).
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * Number of the user or bot who made the call (E.164 format, but may include additional data).
+     * Number of the user or bot who made the call (E.164 format, but may include more data).
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -138,7 +138,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Invite Date Time.
-     * When the initial invite was sent.
+     * The date and time when the initial invite was sent.
      */
     @SerializedName(value = "inviteDateTime", alternate = {"InviteDateTime"})
     @Expose
@@ -165,7 +165,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Other Party Country Code.
-     * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
     @Expose
@@ -228,7 +228,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+     * The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -237,7 +237,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

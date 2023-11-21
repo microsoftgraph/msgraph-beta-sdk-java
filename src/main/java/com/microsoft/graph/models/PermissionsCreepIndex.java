@@ -39,7 +39,7 @@ public class PermissionsCreepIndex implements IJsonBackedObject {
 
     /**
      * The Score.
-     * 
+     * This value represents how much risk an identity poses. This risk range is classified in three buckets: 0-33: low, 34-66: medium, 67-100: high..
      */
     @SerializedName(value = "score", alternate = {"Score"})
     @Expose

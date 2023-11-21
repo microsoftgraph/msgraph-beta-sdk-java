@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.X509CertificateRule;
 import com.microsoft.graph.models.X509CertificateAuthenticationMode;
+import com.microsoft.graph.models.X509CertificateAffinityLevel;
 
 
 import com.google.gson.JsonObject;
@@ -57,6 +58,15 @@ public class X509CertificateAuthenticationModeConfiguration implements IJsonBack
     @Expose
 	@Nullable
     public X509CertificateAuthenticationMode x509CertificateAuthenticationDefaultMode;
+
+    /**
+     * The X509Certificate Default Required Affinity Level.
+     * Determines the default value for the tenant affinity binding level. The possible values are: low, high, unknownFutureValue.
+     */
+    @SerializedName(value = "x509CertificateDefaultRequiredAffinityLevel", alternate = {"X509CertificateDefaultRequiredAffinityLevel"})
+    @Expose
+	@Nullable
+    public X509CertificateAffinityLevel x509CertificateDefaultRequiredAffinityLevel;
 
 
     /**

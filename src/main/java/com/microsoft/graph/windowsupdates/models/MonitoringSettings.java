@@ -41,7 +41,7 @@ public class MonitoringSettings implements IJsonBackedObject {
 
     /**
      * The Monitoring Rules.
-     * Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or'.
+     * Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or.'
      */
     @SerializedName(value = "monitoringRules", alternate = {"MonitoringRules"})
     @Expose

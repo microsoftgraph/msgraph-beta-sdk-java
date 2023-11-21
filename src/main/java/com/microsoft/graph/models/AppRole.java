@@ -67,7 +67,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
+     * Unique role identifier inside the appRoles collection. You must specify a new GUID identifier when you create a new app role.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -94,7 +94,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Value.
-     * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
+     * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.networkaccess.models.ConnectivityState;
 import com.microsoft.graph.networkaccess.models.Region;
+import com.microsoft.graph.networkaccess.models.BranchConnectivityConfiguration;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.networkaccess.requests.DeviceLinkCollectionPage;
 import com.microsoft.graph.networkaccess.requests.ForwardingProfileCollectionPage;
@@ -92,6 +93,15 @@ public class BranchSite extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String version;
+
+    /**
+     * The Connectivity Configuration.
+     * Specifies the connectivity details of all device links associated with a branch.
+     */
+    @SerializedName(value = "connectivityConfiguration", alternate = {"ConnectivityConfiguration"})
+    @Expose
+	@Nullable
+    public BranchConnectivityConfiguration connectivityConfiguration;
 
     /**
      * The Device Links.

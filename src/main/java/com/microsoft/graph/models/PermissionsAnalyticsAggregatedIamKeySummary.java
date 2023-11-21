@@ -20,9 +20,7 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Permissions Analytics Aggregated Iam Key Summary.
- * @deprecated Private preview for EPM Permissions Analytics APIs
  */
-@Deprecated
 public class PermissionsAnalyticsAggregatedIamKeySummary implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */
@@ -50,7 +48,7 @@ public class PermissionsAnalyticsAggregatedIamKeySummary implements IJsonBackedO
 
     /**
      * The Total Count.
-     * 
+     * The total number of identities in an authorization system that Permissions Management checked for a specific finding.
      */
     @SerializedName(value = "totalCount", alternate = {"TotalCount"})
     @Expose

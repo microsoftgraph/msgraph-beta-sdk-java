@@ -57,8 +57,17 @@ public class RelatedPerson implements IJsonBackedObject {
     public PersonRelationship relationship;
 
     /**
+     * The User Id.
+     * The user's directory object ID (Microsoft Entra ID or CID).
+     */
+    @SerializedName(value = "userId", alternate = {"UserId"})
+    @Expose
+	@Nullable
+    public String userId;
+
+    /**
      * The User Principal Name.
-     * Email address or reference to person within organization.
+     * Email address or reference to person within the organization.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

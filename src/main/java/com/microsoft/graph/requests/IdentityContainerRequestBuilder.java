@@ -117,6 +117,26 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
         return new com.microsoft.graph.requests.AuthenticationEventsFlowRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventsFlows") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ExternalUsersSelfServiceSignUpEventsFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ExternalUsersSelfServiceSignUpEventsFlowCollectionRequestBuilder authenticationEventsFlowsAsExternalUsersSelfServiceSignUpEventsFlow() {
+        return new com.microsoft.graph.requests.ExternalUsersSelfServiceSignUpEventsFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventsFlows") + "/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ExternalUsersSelfServiceSignUpEventsFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ExternalUsersSelfServiceSignUpEventsFlowRequestBuilder authenticationEventsFlowsAsExternalUsersSelfServiceSignUpEventsFlow(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExternalUsersSelfServiceSignUpEventsFlowRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventsFlows") + "/" + id + "/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow", getClient(), null);
+    }
+    /**
      *  Gets a request builder for the B2cIdentityUserFlow collection
      *
      * @return the collection request builder

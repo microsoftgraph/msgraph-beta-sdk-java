@@ -56,4 +56,13 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplateRequestBuilder ext
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public MultiTenantOrganizationIdentitySyncPolicyTemplateResetToDefaultSettingsRequestBuilder resetToDefaultSettings() {
+        return new MultiTenantOrganizationIdentitySyncPolicyTemplateResetToDefaultSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetToDefaultSettings"), getClient(), null);
+    }
 }

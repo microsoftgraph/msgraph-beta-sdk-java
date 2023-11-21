@@ -48,7 +48,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Method Detail.
-     * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
+     * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (for example, cloud, AD FS, PTA, PHS).
      */
     @SerializedName(value = "authenticationMethodDetail", alternate = {"AuthenticationMethodDetail"})
     @Expose
@@ -66,7 +66,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Step Requirement.
-     * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
+     * The step of authentication that this satisfied. For example, primary authentication, or multifactor authentication.
      */
     @SerializedName(value = "authenticationStepRequirement", alternate = {"AuthenticationStepRequirement"})
     @Expose

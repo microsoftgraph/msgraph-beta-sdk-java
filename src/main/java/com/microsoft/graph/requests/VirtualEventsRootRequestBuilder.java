@@ -77,6 +77,26 @@ public class VirtualEventsRootRequestBuilder extends BaseRequestBuilder<VirtualE
         return new com.microsoft.graph.requests.VirtualEventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the VirtualEventTownhall collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventTownhallCollectionRequestBuilder townhalls() {
+        return new com.microsoft.graph.requests.VirtualEventTownhallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("townhalls"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the VirtualEventTownhall item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventTownhallRequestBuilder townhalls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventTownhallRequestBuilder(getRequestUrlWithAdditionalSegment("townhalls") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the VirtualEventWebinar collection
      *
      * @return the collection request builder

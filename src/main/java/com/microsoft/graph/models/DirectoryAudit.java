@@ -32,7 +32,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and $orderby.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Display Name.
-     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
+     * Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
      */
     @SerializedName(value = "activityDisplayName", alternate = {"ActivityDisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * Indicates additional details on the activity.
+     * Indicates more details on the activity.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
@@ -59,7 +59,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -95,7 +95,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Type.
-     * Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose

@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.VirtualEventCollectionPage;
+import com.microsoft.graph.requests.VirtualEventTownhallCollectionPage;
 import com.microsoft.graph.requests.VirtualEventWebinarCollectionPage;
 
 
@@ -38,6 +39,15 @@ public class VirtualEventsRoot extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.VirtualEventCollectionPage events;
 
     /**
+     * The Townhalls.
+     * 
+     */
+    @SerializedName(value = "townhalls", alternate = {"Townhalls"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventTownhallCollectionPage townhalls;
+
+    /**
      * The Webinars.
      * 
      */
@@ -58,6 +68,10 @@ public class VirtualEventsRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("events")) {
             events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.VirtualEventCollectionPage.class);
+        }
+
+        if (json.has("townhalls")) {
+            townhalls = serializer.deserializeObject(json.get("townhalls"), com.microsoft.graph.requests.VirtualEventTownhallCollectionPage.class);
         }
 
         if (json.has("webinars")) {

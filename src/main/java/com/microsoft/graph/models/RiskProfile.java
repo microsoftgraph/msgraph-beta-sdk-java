@@ -39,7 +39,7 @@ public class RiskProfile implements IJsonBackedObject {
 
     /**
      * The Human Count.
-     * 
+     * This is the count of human identities that have been assigned to this riskScoreBracket,
      */
     @SerializedName(value = "humanCount", alternate = {"HumanCount"})
     @Expose
@@ -48,7 +48,7 @@ public class RiskProfile implements IJsonBackedObject {
 
     /**
      * The Non Human Count.
-     * 
+     * This is the count of nonhuman identities that have been assigned to this riskScoreBracket
      */
     @SerializedName(value = "nonHumanCount", alternate = {"NonHumanCount"})
     @Expose

@@ -36,7 +36,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Container.
-     * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
+     * Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it's set, this property can’t be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
      */
     @SerializedName(value = "container", alternate = {"Container"})
     @Expose
@@ -45,7 +45,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Contexts.
-     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
+     * Read-only. Other user experiences in which this plan is used, represented as plannerPlanContext entries.
      */
     @SerializedName(value = "contexts", alternate = {"Contexts"})
     @Expose
@@ -119,7 +119,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Additional details about the plan. Read-only. Nullable.
+     * Extra details about the plan. Read-only. Nullable.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose

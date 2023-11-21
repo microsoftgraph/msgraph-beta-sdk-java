@@ -20,6 +20,10 @@ public enum AndroidDeviceOwnerEnrollmentTokenType
     */
     CORPORATE_OWNED_DEDICATED_DEVICE_WITH_AZURE_AD_SHARED_MODE,
     /**
+    * device Staging
+    */
+    DEVICE_STAGING,
+    /**
     * For AndroidDeviceOwnerEnrollmentTokenType values that were not expected from the service
     */
     UNEXPECTED_VALUE

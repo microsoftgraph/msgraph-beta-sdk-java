@@ -39,7 +39,7 @@ public class GradualRolloutSettings implements IJsonBackedObject {
 
     /**
      * The Duration Between Offers.
-     * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+     * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
      */
     @SerializedName(value = "durationBetweenOffers", alternate = {"DurationBetweenOffers"})
     @Expose

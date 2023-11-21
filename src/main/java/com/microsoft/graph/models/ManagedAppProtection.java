@@ -20,6 +20,7 @@ import com.microsoft.graph.models.ManagedAppDeviceThreatLevel;
 import com.microsoft.graph.models.MobileThreatDefensePartnerPriority;
 import com.microsoft.graph.models.ManagedAppNotificationRestriction;
 import com.microsoft.graph.models.ManagedAppPinCharacterSet;
+import com.microsoft.graph.models.MessagingRedirectAppType;
 import com.microsoft.graph.models.ManagedAppPolicy;
 
 
@@ -432,6 +433,15 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     @Expose
 	@Nullable
     public Boolean printBlocked;
+
+    /**
+     * The Protected Messaging Redirect App Type.
+     * Defines how app messaging redirection is protected by an App Protection Policy. Default is anyApp.
+     */
+    @SerializedName(value = "protectedMessagingRedirectAppType", alternate = {"ProtectedMessagingRedirectAppType"})
+    @Expose
+	@Nullable
+    public MessagingRedirectAppType protectedMessagingRedirectAppType;
 
     /**
      * The Save As Blocked.

@@ -57,6 +57,26 @@ public class LogsRequestBuilder extends BaseRequestBuilder<Logs> {
 
 
     /**
+     *  Gets a request builder for the RemoteNetworkHealthEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventCollectionRequestBuilder remoteNetworks() {
+        return new com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("remoteNetworks"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RemoteNetworkHealthEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventRequestBuilder remoteNetworks(@Nonnull final String id) {
+        return new com.microsoft.graph.networkaccess.requests.RemoteNetworkHealthEventRequestBuilder(getRequestUrlWithAdditionalSegment("remoteNetworks") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the NetworkAccessTraffic collection
      *
      * @return the collection request builder

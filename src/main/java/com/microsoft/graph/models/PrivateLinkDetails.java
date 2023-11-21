@@ -48,7 +48,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Policy Name.
-     * The name of the Private Link policy in Azure AD.
+     * The name of the Private Link policy in Microsoft Entra ID.
      */
     @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
@@ -57,7 +57,7 @@ public class PrivateLinkDetails implements IJsonBackedObject {
 
     /**
      * The Policy Tenant Id.
-     * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
+     * The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
      */
     @SerializedName(value = "policyTenantId", alternate = {"PolicyTenantId"})
     @Expose

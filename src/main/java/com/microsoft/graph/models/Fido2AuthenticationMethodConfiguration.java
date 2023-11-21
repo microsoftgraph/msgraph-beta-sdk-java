@@ -8,10 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Fido2KeyRestrictions;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
-import com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -55,15 +53,6 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 	@Nullable
     public Fido2KeyRestrictions keyRestrictions;
 
-    /**
-     * The Include Targets.
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage includeTargets;
-
 
     /**
      * Sets the raw JSON object
@@ -73,9 +62,5 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("includeTargets")) {
-            includeTargets = serializer.deserializeObject(json.get("includeTargets"), com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage.class);
-        }
     }
 }

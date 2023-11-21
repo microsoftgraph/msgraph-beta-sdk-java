@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OperationStatus;
 import com.microsoft.graph.models.TimeClockSettings;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.DayNoteCollectionPage;
 import com.microsoft.graph.requests.OfferShiftRequestCollectionPage;
 import com.microsoft.graph.requests.OpenShiftChangeRequestCollectionPage;
 import com.microsoft.graph.requests.OpenShiftCollectionPage;
@@ -138,6 +139,15 @@ public class Schedule extends Entity implements IJsonBackedObject {
     public java.util.List<String> workforceIntegrationIds;
 
     /**
+     * The Day Notes.
+     * 
+     */
+    @SerializedName(value = "dayNotes", alternate = {"DayNotes"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DayNoteCollectionPage dayNotes;
+
+    /**
      * The Offer Shift Requests.
      * The offer requests for shifts in the schedule.
      */
@@ -236,6 +246,10 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("dayNotes")) {
+            dayNotes = serializer.deserializeObject(json.get("dayNotes"), com.microsoft.graph.requests.DayNoteCollectionPage.class);
+        }
 
         if (json.has("offerShiftRequests")) {
             offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests"), com.microsoft.graph.requests.OfferShiftRequestCollectionPage.class);

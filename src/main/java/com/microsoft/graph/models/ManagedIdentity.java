@@ -48,6 +48,24 @@ public class ManagedIdentity implements IJsonBackedObject {
     public String associatedResourceId;
 
     /**
+     * The Federated Token Id.
+     * The unique ID of the federated token.
+     */
+    @SerializedName(value = "federatedTokenId", alternate = {"FederatedTokenId"})
+    @Expose
+	@Nullable
+    public String federatedTokenId;
+
+    /**
+     * The Federated Token Issuer.
+     * The issuer of the federated token.
+     */
+    @SerializedName(value = "federatedTokenIssuer", alternate = {"FederatedTokenIssuer"})
+    @Expose
+	@Nullable
+    public String federatedTokenIssuer;
+
+    /**
      * The Msi Type.
      * The possible values are: none, userAssigned, systemAssigned, unknownFutureValue.
      */

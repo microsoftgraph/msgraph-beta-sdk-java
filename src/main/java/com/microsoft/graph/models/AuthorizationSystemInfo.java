@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AuthorizationSystemType;
 
 
 import com.google.gson.JsonObject;
@@ -38,8 +39,17 @@ public class AuthorizationSystemInfo implements IJsonBackedObject {
     }
 
     /**
+     * The Authorization System Type.
+     * The type of authorization system.The possible values are: azure, gcp, aws, unknownFutureValue.
+     */
+    @SerializedName(value = "authorizationSystemType", alternate = {"AuthorizationSystemType"})
+    @Expose
+	@Nullable
+    public AuthorizationSystemType authorizationSystemType;
+
+    /**
      * The Display Name.
-     * 
+     * Display name for the authorization system.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +58,7 @@ public class AuthorizationSystemInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique identifier for the authorization system.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

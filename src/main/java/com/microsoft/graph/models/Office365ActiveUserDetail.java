@@ -37,7 +37,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Deleted Date.
-     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      */
     @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
@@ -46,7 +46,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -24,6 +24,10 @@ public enum X509CertificateRuleType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * issuer Subject And Policy OID
+    */
+    ISSUER_SUBJECT_AND_POLICY_OID,
+    /**
     * For X509CertificateRuleType values that were not expected from the service
     */
     UNEXPECTED_VALUE
