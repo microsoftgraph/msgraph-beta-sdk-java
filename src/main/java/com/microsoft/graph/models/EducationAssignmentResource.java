@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResource extends Entity implements Parsable {
     /**
-     * The dependentResources property
-     */
-    private java.util.List<EducationAssignmentResource> dependentResources;
-    /**
-     * Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     */
-    private Boolean distributeForStudentWork;
-    /**
-     * Resource object that has been associated with this assignment.
-     */
-    private EducationResource resource;
-    /**
-     * Instantiates a new educationAssignmentResource and sets the default values.
+     * Instantiates a new EducationAssignmentResource and sets the default values.
      */
     public EducationAssignmentResource() {
         super();
@@ -29,7 +17,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentResource
+     * @return a EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the dependentResources property value. The dependentResources property
-     * @return a educationAssignmentResource
+     * @return a java.util.List<EducationAssignmentResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationAssignmentResource> getDependentResources() {
-        return this.dependentResources;
+        return this.backingStore.get("dependentResources");
     }
     /**
      * Gets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDistributeForStudentWork() {
-        return this.distributeForStudentWork;
+        return this.backingStore.get("distributeForStudentWork");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this assignment.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      * @param value Value to set for the dependentResources property.
      */
     public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
-        this.dependentResources = value;
+        this.backingStore.set("dependentResources", value);
     }
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
      * @param value Value to set for the distributeForStudentWork property.
      */
     public void setDistributeForStudentWork(@jakarta.annotation.Nullable final Boolean value) {
-        this.distributeForStudentWork = value;
+        this.backingStore.set("distributeForStudentWork", value);
     }
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
 }

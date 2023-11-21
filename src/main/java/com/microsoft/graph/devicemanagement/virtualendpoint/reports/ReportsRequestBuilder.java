@@ -1,6 +1,8 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.reports;
 
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.exportjobs.ExportJobsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getactionstatusreports.GetActionStatusReportsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getcloudpcrecommendationreports.GetCloudPcRecommendationReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getconnectionqualityreports.GetConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getdailyaggregatedremoteconnectionreports.GetDailyAggregatedRemoteConnectionReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getfrontlinereport.GetFrontlineReportRequestBuilder;
@@ -37,6 +39,20 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
         return new ExportJobsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getActionStatusReports method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetActionStatusReportsRequestBuilder getActionStatusReports() {
+        return new GetActionStatusReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getCloudPcRecommendationReports method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetCloudPcRecommendationReportsRequestBuilder getCloudPcRecommendationReports() {
+        return new GetCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getConnectionQualityReports method.
@@ -113,47 +129,45 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Cloud PC related reports.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CloudPcReports
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcReports> get() {
+    @jakarta.annotation.Nullable
+    public CloudPcReports get() {
         return get(null);
     }
     /**
      * Cloud PC related reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CloudPcReports
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcReports> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CloudPcReports get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CloudPcReports::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CloudPcReports::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getRealTimeRemoteConnectionLatency method.
      * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
-     * @return a getRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder
+     * @return a GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionLatencyWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
@@ -163,7 +177,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRealTimeRemoteConnectionStatus method.
      * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
-     * @return a getRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder
+     * @return a GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionStatusWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
@@ -173,26 +187,26 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CloudPcReports
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcReports> patch(@jakarta.annotation.Nonnull final CloudPcReports body) {
+    @jakarta.annotation.Nullable
+    public CloudPcReports patch(@jakarta.annotation.Nonnull final CloudPcReports body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CloudPcReports
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcReports> patch(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CloudPcReports patch(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CloudPcReports::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CloudPcReports::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property reports for deviceManagement
@@ -209,16 +223,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -236,18 +243,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -268,24 +266,16 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportsRequestBuilder
+     * @return a ReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

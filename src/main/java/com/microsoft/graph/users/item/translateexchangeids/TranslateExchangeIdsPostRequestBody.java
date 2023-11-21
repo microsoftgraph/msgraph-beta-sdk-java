@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The InputIds property
-     */
-    private java.util.List<String> inputIds;
-    /**
-     * The SourceIdType property
-     */
-    private ExchangeIdFormat sourceIdType;
-    /**
-     * The TargetIdType property
-     */
-    private ExchangeIdFormat targetIdType;
-    /**
-     * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
+     * Instantiates a new TranslateExchangeIdsPostRequestBody and sets the default values.
      */
     public TranslateExchangeIdsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a translateExchangeIdsPostRequestBody
+     * @return a TranslateExchangeIdsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static TranslateExchangeIdsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +36,25 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         return new TranslateExchangeIdsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +70,27 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the InputIds property value. The InputIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInputIds() {
-        return this.inputIds;
+        return this.backingStore.get("inputIds");
     }
     /**
      * Gets the SourceIdType property value. The SourceIdType property
-     * @return a exchangeIdFormat
+     * @return a ExchangeIdFormat
      */
     @jakarta.annotation.Nullable
     public ExchangeIdFormat getSourceIdType() {
-        return this.sourceIdType;
+        return this.backingStore.get("sourceIdType");
     }
     /**
      * Gets the TargetIdType property value. The TargetIdType property
-     * @return a exchangeIdFormat
+     * @return a ExchangeIdFormat
      */
     @jakarta.annotation.Nullable
     public ExchangeIdFormat getTargetIdType() {
-        return this.targetIdType;
+        return this.backingStore.get("targetIdType");
     }
     /**
      * Serializes information the current object
@@ -98,31 +104,39 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the InputIds property value. The InputIds property
      * @param value Value to set for the InputIds property.
      */
     public void setInputIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.inputIds = value;
+        this.backingStore.set("inputIds", value);
     }
     /**
      * Sets the SourceIdType property value. The SourceIdType property
      * @param value Value to set for the SourceIdType property.
      */
     public void setSourceIdType(@jakarta.annotation.Nullable final ExchangeIdFormat value) {
-        this.sourceIdType = value;
+        this.backingStore.set("sourceIdType", value);
     }
     /**
      * Sets the TargetIdType property value. The TargetIdType property
      * @param value Value to set for the TargetIdType property.
      */
     public void setTargetIdType(@jakarta.annotation.Nullable final ExchangeIdFormat value) {
-        this.targetIdType = value;
+        this.backingStore.set("targetIdType", value);
     }
 }

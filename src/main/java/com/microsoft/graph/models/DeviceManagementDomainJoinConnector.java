@@ -13,23 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /**
-     * The connector display name.
-     */
-    private String displayName;
-    /**
-     * Last time connector contacted Intune.
-     */
-    private OffsetDateTime lastConnectionDateTime;
-    /**
-     * The ODJ request states.
-     */
-    private DeviceManagementDomainJoinConnectorState state;
-    /**
-     * The version of the connector.
-     */
-    private String version;
-    /**
-     * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
      */
     public DeviceManagementDomainJoinConnector() {
         super();
@@ -37,7 +21,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementDomainJoinConnector
+     * @return a DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +30,11 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. The connector display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,23 +55,23 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this.lastConnectionDateTime;
+        return this.backingStore.get("lastConnectionDateTime");
     }
     /**
      * Gets the state property value. The ODJ request states.
-     * @return a deviceManagementDomainJoinConnectorState
+     * @return a DeviceManagementDomainJoinConnectorState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDomainJoinConnectorState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the version property value. The version of the connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Last time connector contacted Intune.
      * @param value Value to set for the lastConnectionDateTime property.
      */
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastConnectionDateTime = value;
+        this.backingStore.set("lastConnectionDateTime", value);
     }
     /**
      * Sets the state property value. The ODJ request states.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final DeviceManagementDomainJoinConnectorState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the version property value. The version of the connector.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

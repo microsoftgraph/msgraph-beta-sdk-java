@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessProfileBase implements Parsable {
     /**
-     * File name to display in UI.
-     */
-    private String certFileName;
-    /**
-     * Possible values for the Certificate Destination Store.
-     */
-    private CertificateDestinationStore destinationStore;
-    /**
-     * Trusted Root Certificate
-     */
-    private byte[] trustedRootCertificate;
-    /**
-     * Instantiates a new windows10XTrustedRootCertificate and sets the default values.
+     * Instantiates a new Windows10XTrustedRootCertificate and sets the default values.
      */
     public Windows10XTrustedRootCertificate() {
         super();
@@ -33,7 +21,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10XTrustedRootCertificate
+     * @return a Windows10XTrustedRootCertificate
      */
     @jakarta.annotation.Nonnull
     public static Windows10XTrustedRootCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +30,19 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
-        return this.certFileName;
+        return this.backingStore.get("certFileName");
     }
     /**
      * Gets the destinationStore property value. Possible values for the Certificate Destination Store.
-     * @return a certificateDestinationStore
+     * @return a CertificateDestinationStore
      */
     @jakarta.annotation.Nullable
     public CertificateDestinationStore getDestinationStore() {
-        return this.destinationStore;
+        return this.backingStore.get("destinationStore");
     }
     /**
      * The deserialization information for the current model
@@ -70,11 +58,11 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
-        return this.trustedRootCertificate;
+        return this.backingStore.get("trustedRootCertificate");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
      * @param value Value to set for the certFileName property.
      */
     public void setCertFileName(@jakarta.annotation.Nullable final String value) {
-        this.certFileName = value;
+        this.backingStore.set("certFileName", value);
     }
     /**
      * Sets the destinationStore property value. Possible values for the Certificate Destination Store.
      * @param value Value to set for the destinationStore property.
      */
     public void setDestinationStore(@jakarta.annotation.Nullable final CertificateDestinationStore value) {
-        this.destinationStore = value;
+        this.backingStore.set("destinationStore", value);
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the trustedRootCertificate property.
      */
     public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
-        this.trustedRootCertificate = value;
+        this.backingStore.set("trustedRootCertificate", value);
     }
 }

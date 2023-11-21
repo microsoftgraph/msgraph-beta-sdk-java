@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * Represents a user rights setting.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, Parsable {
+public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<DeviceManagementUserRightsLocalUserOrGroup> localUsersOrGroups;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * State Management Setting.
-     */
-    private StateManagementSetting state;
-    /**
-     * Instantiates a new deviceManagementUserRightsSetting and sets the default values.
+     * Instantiates a new DeviceManagementUserRightsSetting and sets the default values.
      */
     public DeviceManagementUserRightsSetting() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementUserRightsSetting
+     * @return a DeviceManagementUserRightsSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementUserRightsSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,12 +38,25 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         return new DeviceManagementUserRightsSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -66,27 +72,27 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the localUsersOrGroups property value. Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
-     * @return a deviceManagementUserRightsLocalUserOrGroup
+     * @return a java.util.List<DeviceManagementUserRightsLocalUserOrGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementUserRightsLocalUserOrGroup> getLocalUsersOrGroups() {
-        return this.localUsersOrGroups;
+        return this.backingStore.get("localUsersOrGroups");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the state property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -100,31 +106,39 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the localUsersOrGroups property value. Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localUsersOrGroups property.
      */
     public void setLocalUsersOrGroups(@jakarta.annotation.Nullable final java.util.List<DeviceManagementUserRightsLocalUserOrGroup> value) {
-        this.localUsersOrGroups = value;
+        this.backingStore.set("localUsersOrGroups", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. State Management Setting.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final StateManagementSetting value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

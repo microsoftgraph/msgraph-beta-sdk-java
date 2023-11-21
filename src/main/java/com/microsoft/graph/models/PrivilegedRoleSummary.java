@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleSummary extends Entity implements Parsable {
     /**
-     * The elevatedCount property
-     */
-    private Integer elevatedCount;
-    /**
-     * The managedCount property
-     */
-    private Integer managedCount;
-    /**
-     * The mfaEnabled property
-     */
-    private Boolean mfaEnabled;
-    /**
-     * The status property
-     */
-    private RoleSummaryStatus status;
-    /**
-     * The usersCount property
-     */
-    private Integer usersCount;
-    /**
-     * Instantiates a new privilegedRoleSummary and sets the default values.
+     * Instantiates a new PrivilegedRoleSummary and sets the default values.
      */
     public PrivilegedRoleSummary() {
         super();
@@ -37,7 +17,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleSummary
+     * @return a PrivilegedRoleSummary
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +26,11 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the elevatedCount property value. The elevatedCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getElevatedCount() {
-        return this.elevatedCount;
+        return this.backingStore.get("elevatedCount");
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +48,35 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the managedCount property value. The managedCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagedCount() {
-        return this.managedCount;
+        return this.backingStore.get("managedCount");
     }
     /**
      * Gets the mfaEnabled property value. The mfaEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMfaEnabled() {
-        return this.mfaEnabled;
+        return this.backingStore.get("mfaEnabled");
     }
     /**
      * Gets the status property value. The status property
-     * @return a roleSummaryStatus
+     * @return a RoleSummaryStatus
      */
     @jakarta.annotation.Nullable
     public RoleSummaryStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the usersCount property value. The usersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsersCount() {
-        return this.usersCount;
+        return this.backingStore.get("usersCount");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the elevatedCount property.
      */
     public void setElevatedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.elevatedCount = value;
+        this.backingStore.set("elevatedCount", value);
     }
     /**
      * Sets the managedCount property value. The managedCount property
      * @param value Value to set for the managedCount property.
      */
     public void setManagedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.managedCount = value;
+        this.backingStore.set("managedCount", value);
     }
     /**
      * Sets the mfaEnabled property value. The mfaEnabled property
      * @param value Value to set for the mfaEnabled property.
      */
     public void setMfaEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.mfaEnabled = value;
+        this.backingStore.set("mfaEnabled", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final RoleSummaryStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the usersCount property value. The usersCount property
      * @param value Value to set for the usersCount property.
      */
     public void setUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.usersCount = value;
+        this.backingStore.set("usersCount", value);
     }
 }

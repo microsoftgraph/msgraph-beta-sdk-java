@@ -36,30 +36,30 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/convertToRange", rawUrl);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved.
-     * @return a CompletableFuture of workbookRange
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
+     * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRange> post() {
+    @jakarta.annotation.Nullable
+    public WorkbookRange post() {
         return post(null);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved.
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
+     * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRange> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookRange post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved.
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,29 +67,21 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Converts the table into a normal range of cells. All data is preserved.
+     * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a convertToRangeRequestBuilder
+     * @return a ConvertToRangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConvertToRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

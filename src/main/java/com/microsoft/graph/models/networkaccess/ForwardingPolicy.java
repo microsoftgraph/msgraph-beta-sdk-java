@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForwardingPolicy extends Policy implements Parsable {
     /**
-     * The trafficForwardingType property
-     */
-    private TrafficForwardingType trafficForwardingType;
-    /**
-     * Instantiates a new forwardingPolicy and sets the default values.
+     * Instantiates a new ForwardingPolicy and sets the default values.
      */
     public ForwardingPolicy() {
         super();
@@ -22,7 +18,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingPolicy
+     * @return a ForwardingPolicy
      */
     @jakarta.annotation.Nonnull
     public static ForwardingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ForwardingPolicy extends Policy implements Parsable {
     }
     /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
-     * @return a trafficForwardingType
+     * @return a TrafficForwardingType
      */
     @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {
-        return this.trafficForwardingType;
+        return this.backingStore.get("trafficForwardingType");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * @param value Value to set for the trafficForwardingType property.
      */
     public void setTrafficForwardingType(@jakarta.annotation.Nullable final TrafficForwardingType value) {
-        this.trafficForwardingType = value;
+        this.backingStore.set("trafficForwardingType", value);
     }
 }

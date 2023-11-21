@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Security extends Entity implements Parsable {
     /**
-     * The informationProtection property
-     */
-    private InformationProtection informationProtection;
-    /**
-     * Instantiates a new security and sets the default values.
+     * Instantiates a new Security and sets the default values.
      */
     public Security() {
         super();
@@ -22,7 +18,7 @@ public class Security extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a security
+     * @return a Security
      */
     @jakarta.annotation.Nonnull
     public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
-     * @return a informationProtection
+     * @return a InformationProtection
      */
     @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
-        return this.informationProtection;
+        return this.backingStore.get("informationProtection");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the informationProtection property.
      */
     public void setInformationProtection(@jakarta.annotation.Nullable final InformationProtection value) {
-        this.informationProtection = value;
+        this.backingStore.set("informationProtection", value);
     }
 }

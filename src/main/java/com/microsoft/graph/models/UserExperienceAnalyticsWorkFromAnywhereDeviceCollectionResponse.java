@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse ext
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse ext
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse ext
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

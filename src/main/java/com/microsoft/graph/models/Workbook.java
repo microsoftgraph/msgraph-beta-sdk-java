@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workbook extends Entity implements Parsable {
     /**
-     * The application property
-     */
-    private WorkbookApplication application;
-    /**
-     * The comments property
-     */
-    private java.util.List<WorkbookComment> comments;
-    /**
-     * The functions property
-     */
-    private WorkbookFunctions functions;
-    /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
-     */
-    private java.util.List<WorkbookNamedItem> names;
-    /**
-     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
-     */
-    private java.util.List<WorkbookOperation> operations;
-    /**
-     * Represents a collection of tables associated with the workbook. Read-only.
-     */
-    private java.util.List<WorkbookTable> tables;
-    /**
-     * Represents a collection of worksheets associated with the workbook. Read-only.
-     */
-    private java.util.List<WorkbookWorksheet> worksheets;
-    /**
-     * Instantiates a new workbook and sets the default values.
+     * Instantiates a new Workbook and sets the default values.
      */
     public Workbook() {
         super();
@@ -45,7 +17,7 @@ public class Workbook extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbook
+     * @return a Workbook
      */
     @jakarta.annotation.Nonnull
     public static Workbook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +26,19 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the application property value. The application property
-     * @return a workbookApplication
+     * @return a WorkbookApplication
      */
     @jakarta.annotation.Nullable
     public WorkbookApplication getApplication() {
-        return this.application;
+        return this.backingStore.get("application");
     }
     /**
      * Gets the comments property value. The comments property
-     * @return a workbookComment
+     * @return a java.util.List<WorkbookComment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookComment> getComments() {
-        return this.comments;
+        return this.backingStore.get("comments");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +58,43 @@ public class Workbook extends Entity implements Parsable {
     }
     /**
      * Gets the functions property value. The functions property
-     * @return a workbookFunctions
+     * @return a WorkbookFunctions
      */
     @jakarta.annotation.Nullable
     public WorkbookFunctions getFunctions() {
-        return this.functions;
+        return this.backingStore.get("functions");
     }
     /**
      * Gets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
-     * @return a workbookNamedItem
+     * @return a java.util.List<WorkbookNamedItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
-        return this.names;
+        return this.backingStore.get("names");
     }
     /**
      * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
-     * @return a workbookOperation
+     * @return a java.util.List<WorkbookOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookOperation> getOperations() {
-        return this.operations;
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
-     * @return a workbookTable
+     * @return a java.util.List<WorkbookTable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
-        return this.tables;
+        return this.backingStore.get("tables");
     }
     /**
      * Gets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
-     * @return a workbookWorksheet
+     * @return a java.util.List<WorkbookWorksheet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookWorksheet> getWorksheets() {
-        return this.worksheets;
+        return this.backingStore.get("worksheets");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final WorkbookApplication value) {
-        this.application = value;
+        this.backingStore.set("application", value);
     }
     /**
      * Sets the comments property value. The comments property
      * @param value Value to set for the comments property.
      */
     public void setComments(@jakarta.annotation.Nullable final java.util.List<WorkbookComment> value) {
-        this.comments = value;
+        this.backingStore.set("comments", value);
     }
     /**
      * Sets the functions property value. The functions property
      * @param value Value to set for the functions property.
      */
     public void setFunctions(@jakarta.annotation.Nullable final WorkbookFunctions value) {
-        this.functions = value;
+        this.backingStore.set("functions", value);
     }
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param value Value to set for the names property.
      */
     public void setNames(@jakarta.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
-        this.names = value;
+        this.backingStore.set("names", value);
     }
     /**
      * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<WorkbookOperation> value) {
-        this.operations = value;
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      * @param value Value to set for the tables property.
      */
     public void setTables(@jakarta.annotation.Nullable final java.util.List<WorkbookTable> value) {
-        this.tables = value;
+        this.backingStore.set("tables", value);
     }
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      * @param value Value to set for the worksheets property.
      */
     public void setWorksheets(@jakarta.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
-        this.worksheets = value;
+        this.backingStore.set("worksheets", value);
     }
 }

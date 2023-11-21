@@ -60,48 +60,48 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * @return a CertificateBasedAuthConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * @return a CertificateBasedAuthConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to certificateBasedAuthConfiguration
      * @param body The request body
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CertificateBasedAuthConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
         return post(body, null);
     }
     /**
      * Add new entity to certificateBasedAuthConfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CertificateBasedAuthConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CertificateBasedAuthConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
@@ -118,18 +118,9 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a certificateBasedAuthConfigurationRequestBuilder
+     * @return a CertificateBasedAuthConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

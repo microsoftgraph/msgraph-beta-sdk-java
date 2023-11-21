@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosEduDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * The Trusted Root and PFX certificates for Device
-     */
-    private IosEduCertificateSettings deviceCertificateSettings;
-    /**
-     * The Trusted Root and PFX certificates for Student
-     */
-    private IosEduCertificateSettings studentCertificateSettings;
-    /**
-     * Trusted Root and PFX certificates for iOS EDU.
-     */
-    private IosEduCertificateSettings teacherCertificateSettings;
-    /**
-     * Instantiates a new iosEduDeviceConfiguration and sets the default values.
+     * Instantiates a new IosEduDeviceConfiguration and sets the default values.
      */
     public IosEduDeviceConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEduDeviceConfiguration
+     * @return a IosEduDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosEduDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the deviceCertificateSettings property value. The Trusted Root and PFX certificates for Device
-     * @return a iosEduCertificateSettings
+     * @return a IosEduCertificateSettings
      */
     @jakarta.annotation.Nullable
     public IosEduCertificateSettings getDeviceCertificateSettings() {
-        return this.deviceCertificateSettings;
+        return this.backingStore.get("deviceCertificateSettings");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the studentCertificateSettings property value. The Trusted Root and PFX certificates for Student
-     * @return a iosEduCertificateSettings
+     * @return a IosEduCertificateSettings
      */
     @jakarta.annotation.Nullable
     public IosEduCertificateSettings getStudentCertificateSettings() {
-        return this.studentCertificateSettings;
+        return this.backingStore.get("studentCertificateSettings");
     }
     /**
      * Gets the teacherCertificateSettings property value. Trusted Root and PFX certificates for iOS EDU.
-     * @return a iosEduCertificateSettings
+     * @return a IosEduCertificateSettings
      */
     @jakarta.annotation.Nullable
     public IosEduCertificateSettings getTeacherCertificateSettings() {
-        return this.teacherCertificateSettings;
+        return this.backingStore.get("teacherCertificateSettings");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the deviceCertificateSettings property.
      */
     public void setDeviceCertificateSettings(@jakarta.annotation.Nullable final IosEduCertificateSettings value) {
-        this.deviceCertificateSettings = value;
+        this.backingStore.set("deviceCertificateSettings", value);
     }
     /**
      * Sets the studentCertificateSettings property value. The Trusted Root and PFX certificates for Student
      * @param value Value to set for the studentCertificateSettings property.
      */
     public void setStudentCertificateSettings(@jakarta.annotation.Nullable final IosEduCertificateSettings value) {
-        this.studentCertificateSettings = value;
+        this.backingStore.set("studentCertificateSettings", value);
     }
     /**
      * Sets the teacherCertificateSettings property value. Trusted Root and PFX certificates for iOS EDU.
      * @param value Value to set for the teacherCertificateSettings property.
      */
     public void setTeacherCertificateSettings(@jakarta.annotation.Nullable final IosEduCertificateSettings value) {
-        this.teacherCertificateSettings = value;
+        this.backingStore.set("teacherCertificateSettings", value);
     }
 }

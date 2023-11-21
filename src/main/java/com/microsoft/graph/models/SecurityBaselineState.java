@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineState extends Entity implements Parsable {
     /**
-     * The display name of the security baseline
-     */
-    private String displayName;
-    /**
-     * The security baseline template id
-     */
-    private String securityBaselineTemplateId;
-    /**
-     * The security baseline state for different settings for a device
-     */
-    private java.util.List<SecurityBaselineSettingState> settingStates;
-    /**
-     * Security Baseline Compliance State
-     */
-    private SecurityBaselineComplianceState state;
-    /**
-     * User Principal Name
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new securityBaselineState and sets the default values.
+     * Instantiates a new SecurityBaselineState and sets the default values.
      */
     public SecurityBaselineState() {
         super();
@@ -40,7 +20,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineState
+     * @return a SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,11 +29,11 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the security baseline
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,35 +51,35 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the securityBaselineTemplateId property value. The security baseline template id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityBaselineTemplateId() {
-        return this.securityBaselineTemplateId;
+        return this.backingStore.get("securityBaselineTemplateId");
     }
     /**
      * Gets the settingStates property value. The security baseline state for different settings for a device
-     * @return a securityBaselineSettingState
+     * @return a java.util.List<SecurityBaselineSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineSettingState> getSettingStates() {
-        return this.settingStates;
+        return this.backingStore.get("settingStates");
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -119,34 +99,34 @@ public class SecurityBaselineState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the securityBaselineTemplateId property value. The security baseline template id
      * @param value Value to set for the securityBaselineTemplateId property.
      */
     public void setSecurityBaselineTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.securityBaselineTemplateId = value;
+        this.backingStore.set("securityBaselineTemplateId", value);
     }
     /**
      * Sets the settingStates property value. The security baseline state for different settings for a device
      * @param value Value to set for the settingStates property.
      */
     public void setSettingStates(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineSettingState> value) {
-        this.settingStates = value;
+        this.backingStore.set("settingStates", value);
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final SecurityBaselineComplianceState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

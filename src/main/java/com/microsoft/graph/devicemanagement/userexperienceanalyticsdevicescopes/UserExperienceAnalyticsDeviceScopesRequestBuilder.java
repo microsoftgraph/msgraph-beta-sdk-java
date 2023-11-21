@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsDeviceScopesRequestBuilder extends BaseReque
     }
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScopeCollectionResponse
+     * @return a UserExperienceAnalyticsDeviceScopeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScopeCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScopeCollectionResponse get() {
         return get(null);
     }
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScopeCollectionResponse
+     * @return a UserExperienceAnalyticsDeviceScopeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScopeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScopeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceScopeCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceScopeCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceScopes for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a UserExperienceAnalyticsDeviceScope
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScope post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceScopes for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a UserExperienceAnalyticsDeviceScope
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScope post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
@@ -118,18 +118,9 @@ public class UserExperienceAnalyticsDeviceScopesRequestBuilder extends BaseReque
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class UserExperienceAnalyticsDeviceScopesRequestBuilder extends BaseReque
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDeviceScopesRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

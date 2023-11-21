@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppliedAuthenticationEventListener implements AdditionalDataHolder, Parsable {
+public class AppliedAuthenticationEventListener implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
-     */
-    private AuthenticationEventType eventType;
-    /**
-     * ID of the authentication event listener that was executed.
-     */
-    private String executedListenerId;
-    /**
-     * The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
-     */
-    private AuthenticationEventHandlerResult handlerResult;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new appliedAuthenticationEventListener and sets the default values.
+     * Instantiates a new AppliedAuthenticationEventListener and sets the default values.
      */
     public AppliedAuthenticationEventListener() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appliedAuthenticationEventListener
+     * @return a AppliedAuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public static AppliedAuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +35,41 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         return new AppliedAuthenticationEventListener();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
-     * @return a authenticationEventType
+     * @return a AuthenticationEventType
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventType getEventType() {
-        return this.eventType;
+        return this.backingStore.get("eventType");
     }
     /**
      * Gets the executedListenerId property value. ID of the authentication event listener that was executed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExecutedListenerId() {
-        return this.executedListenerId;
+        return this.backingStore.get("executedListenerId");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +86,19 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the handlerResult property value. The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
-     * @return a authenticationEventHandlerResult
+     * @return a AuthenticationEventHandlerResult
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventHandlerResult getHandlerResult() {
-        return this.handlerResult;
+        return this.backingStore.get("handlerResult");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
      * @param value Value to set for the eventType property.
      */
     public void setEventType(@jakarta.annotation.Nullable final AuthenticationEventType value) {
-        this.eventType = value;
+        this.backingStore.set("eventType", value);
     }
     /**
      * Sets the executedListenerId property value. ID of the authentication event listener that was executed.
      * @param value Value to set for the executedListenerId property.
      */
     public void setExecutedListenerId(@jakarta.annotation.Nullable final String value) {
-        this.executedListenerId = value;
+        this.backingStore.set("executedListenerId", value);
     }
     /**
      * Sets the handlerResult property value. The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
      * @param value Value to set for the handlerResult property.
      */
     public void setHandlerResult(@jakarta.annotation.Nullable final AuthenticationEventHandlerResult value) {
-        this.handlerResult = value;
+        this.backingStore.set("handlerResult", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

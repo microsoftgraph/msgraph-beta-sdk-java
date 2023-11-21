@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LandingPage extends Entity implements Parsable {
     /**
-     * The createdBy property
-     */
-    private EmailIdentity createdBy;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The details property
-     */
-    private java.util.List<LandingPageDetail> details;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The lastModifiedBy property
-     */
-    private EmailIdentity lastModifiedBy;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The locale property
-     */
-    private String locale;
-    /**
-     * The source property
-     */
-    private SimulationContentSource source;
-    /**
-     * The status property
-     */
-    private SimulationContentStatus status;
-    /**
-     * The supportedLocales property
-     */
-    private java.util.List<String> supportedLocales;
-    /**
-     * Instantiates a new landingPage and sets the default values.
+     * Instantiates a new LandingPage and sets the default values.
      */
     public LandingPage() {
         super();
@@ -62,7 +18,7 @@ public class LandingPage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a landingPage
+     * @return a LandingPage
      */
     @jakarta.annotation.Nonnull
     public static LandingPage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,44 +26,44 @@ public class LandingPage extends Entity implements Parsable {
         return new LandingPage();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
-     * @return a emailIdentity
+     * Gets the createdBy property value. Identity of the user who created the landing page.
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
-     * @return a string
+     * Gets the description property value. Description of the landing page as defined by the user.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
-     * Gets the details property value. The details property
-     * @return a landingPageDetail
+     * Gets the details property value. The detail information for a landing page associated with a simulation during its creation.
+     * @return a java.util.List<LandingPageDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LandingPageDetail> getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. The display name of the landing page.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -130,52 +86,52 @@ public class LandingPage extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a emailIdentity
+     * Gets the lastModifiedBy property value. Email identity of the user who last modified the landing page.
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the locale property value. The locale property
-     * @return a string
+     * Gets the locale property value. Content locale.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.backingStore.get("locale");
     }
     /**
-     * Gets the source property value. The source property
-     * @return a simulationContentSource
+     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * @return a SimulationContentSource
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
-        return this.source;
+        return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. The status property
-     * @return a simulationContentStatus
+     * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * @return a SimulationContentStatus
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
-     * Gets the supportedLocales property value. The supportedLocales property
-     * @return a string
+     * Gets the supportedLocales property value. Supported locales.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {
-        return this.supportedLocales;
+        return this.backingStore.get("supportedLocales");
     }
     /**
      * Serializes information the current object
@@ -197,80 +153,80 @@ public class LandingPage extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("supportedLocales", this.getSupportedLocales());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the landing page.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the landing page as defined by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. The detail information for a landing page associated with a simulation during its creation.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<LandingPageDetail> value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the landing page.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Email identity of the user who last modified the landing page.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Content locale.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.backingStore.set("locale", value);
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
-        this.source = value;
+        this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
-     * Sets the supportedLocales property value. The supportedLocales property
+     * Sets the supportedLocales property value. Supported locales.
      * @param value Value to set for the supportedLocales property.
      */
     public void setSupportedLocales(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedLocales = value;
+        this.backingStore.set("supportedLocales", value);
     }
 }

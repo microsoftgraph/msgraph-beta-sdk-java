@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaConnector extends Entity implements Parsable {
     /**
-     * Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
-     */
-    private String enrollmentAuthorizationUrl;
-    /**
-     * Tenant enrollment token from Zebra. The token is used to enroll Zebra devices in the FOTA Service via app config.
-     */
-    private String enrollmentToken;
-    /**
-     * Flag indicating if required Firmware Over-the-Air (FOTA) Apps have been approved.
-     */
-    private Boolean fotaAppsApproved;
-    /**
-     * Date and time when the account was last synched with Zebra
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * Represents various states for Zebra FOTA connector.
-     */
-    private ZebraFotaConnectorState state;
-    /**
-     * Instantiates a new zebraFotaConnector and sets the default values.
+     * Instantiates a new ZebraFotaConnector and sets the default values.
      */
     public ZebraFotaConnector() {
         super();
@@ -41,7 +21,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaConnector
+     * @return a ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +30,19 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentAuthorizationUrl() {
-        return this.enrollmentAuthorizationUrl;
+        return this.backingStore.get("enrollmentAuthorizationUrl");
     }
     /**
      * Gets the enrollmentToken property value. Tenant enrollment token from Zebra. The token is used to enroll Zebra devices in the FOTA Service via app config.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentToken() {
-        return this.enrollmentToken;
+        return this.backingStore.get("enrollmentToken");
     }
     /**
      * The deserialization information for the current model
@@ -80,11 +60,11 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the fotaAppsApproved property value. Flag indicating if required Firmware Over-the-Air (FOTA) Apps have been approved.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFotaAppsApproved() {
-        return this.fotaAppsApproved;
+        return this.backingStore.get("fotaAppsApproved");
     }
     /**
      * Gets the lastSyncDateTime property value. Date and time when the account was last synched with Zebra
@@ -92,15 +72,15 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the state property value. Represents various states for Zebra FOTA connector.
-     * @return a zebraFotaConnectorState
+     * @return a ZebraFotaConnectorState
      */
     @jakarta.annotation.Nullable
     public ZebraFotaConnectorState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the enrollmentAuthorizationUrl property.
      */
     public void setEnrollmentAuthorizationUrl(@jakarta.annotation.Nullable final String value) {
-        this.enrollmentAuthorizationUrl = value;
+        this.backingStore.set("enrollmentAuthorizationUrl", value);
     }
     /**
      * Sets the enrollmentToken property value. Tenant enrollment token from Zebra. The token is used to enroll Zebra devices in the FOTA Service via app config.
      * @param value Value to set for the enrollmentToken property.
      */
     public void setEnrollmentToken(@jakarta.annotation.Nullable final String value) {
-        this.enrollmentToken = value;
+        this.backingStore.set("enrollmentToken", value);
     }
     /**
      * Sets the fotaAppsApproved property value. Flag indicating if required Firmware Over-the-Air (FOTA) Apps have been approved.
      * @param value Value to set for the fotaAppsApproved property.
      */
     public void setFotaAppsApproved(@jakarta.annotation.Nullable final Boolean value) {
-        this.fotaAppsApproved = value;
+        this.backingStore.set("fotaAppsApproved", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Date and time when the account was last synched with Zebra
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the state property value. Represents various states for Zebra FOTA connector.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ZebraFotaConnectorState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

@@ -5,49 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AnswerVariant implements AdditionalDataHolder, Parsable {
+public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Answer variation description shown on search results page.
-     */
-    private String description;
-    /**
-     * Answer variation name displayed in search results.
-     */
-    private String displayName;
-    /**
-     * The languageTag property
-     */
-    private String languageTag;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The platform property
-     */
-    private DevicePlatformType platform;
-    /**
-     * Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new answerVariant and sets the default values.
+     * Instantiates a new AnswerVariant and sets the default values.
      */
     public AnswerVariant() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a answerVariant
+     * @return a AnswerVariant
      */
     @jakarta.annotation.Nonnull
     public static AnswerVariant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,28 +36,41 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
         return new AnswerVariant();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the description property value. Answer variation description shown on search results page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Answer variation name displayed in search results.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -95,35 +89,35 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the languageTag property value. The languageTag property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
-        return this.platform;
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -140,52 +134,60 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the description property value. Answer variation description shown on search results page.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Answer variation name displayed in search results.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the languageTag property value. The languageTag property
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
-        this.platform = value;
+        this.backingStore.set("platform", value);
     }
     /**
      * Sets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

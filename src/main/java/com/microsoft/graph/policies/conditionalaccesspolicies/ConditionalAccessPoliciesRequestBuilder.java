@@ -60,48 +60,48 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The custom rules that define an access scenario.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a ConditionalAccessPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * The custom rules that define an access scenario.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a ConditionalAccessPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to conditionalAccessPolicies for policies
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to conditionalAccessPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The custom rules that define an access scenario.
@@ -118,18 +118,9 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessPoliciesRequestBuilder
+     * @return a ConditionalAccessPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

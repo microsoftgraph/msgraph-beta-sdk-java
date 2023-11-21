@@ -4,109 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsable {
+public class PrinterDocumentConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The collate property
-     */
-    private Boolean collate;
-    /**
-     * The colorMode property
-     */
-    private PrintColorMode colorMode;
-    /**
-     * The copies property
-     */
-    private Integer copies;
-    /**
-     * The dpi property
-     */
-    private Integer dpi;
-    /**
-     * The duplexMode property
-     */
-    private PrintDuplexMode duplexMode;
-    /**
-     * The feedDirection property
-     */
-    private PrinterFeedDirection feedDirection;
-    /**
-     * The feedOrientation property
-     */
-    private PrinterFeedOrientation feedOrientation;
-    /**
-     * The finishings property
-     */
-    private java.util.List<PrintFinishing> finishings;
-    /**
-     * The fitPdfToPage property
-     */
-    private Boolean fitPdfToPage;
-    /**
-     * The inputBin property
-     */
-    private String inputBin;
-    /**
-     * The margin property
-     */
-    private PrintMargin margin;
-    /**
-     * The mediaSize property
-     */
-    private String mediaSize;
-    /**
-     * The mediaType property
-     */
-    private String mediaType;
-    /**
-     * The multipageLayout property
-     */
-    private PrintMultipageLayout multipageLayout;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The orientation property
-     */
-    private PrintOrientation orientation;
-    /**
-     * The outputBin property
-     */
-    private String outputBin;
-    /**
-     * The pageRanges property
-     */
-    private java.util.List<IntegerRange> pageRanges;
-    /**
-     * The pagesPerSheet property
-     */
-    private Integer pagesPerSheet;
-    /**
-     * The quality property
-     */
-    private PrintQuality quality;
-    /**
-     * The scaling property
-     */
-    private PrintScaling scaling;
-    /**
-     * Instantiates a new printerDocumentConfiguration and sets the default values.
+     * Instantiates a new PrinterDocumentConfiguration and sets the default values.
      */
     public PrinterDocumentConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerDocumentConfiguration
+     * @return a PrinterDocumentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static PrinterDocumentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,68 +35,81 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         return new PrinterDocumentConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the collate property value. The collate property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCollate() {
-        return this.collate;
+        return this.backingStore.get("collate");
     }
     /**
      * Gets the colorMode property value. The colorMode property
-     * @return a printColorMode
+     * @return a PrintColorMode
      */
     @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
-        return this.colorMode;
+        return this.backingStore.get("colorMode");
     }
     /**
      * Gets the copies property value. The copies property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCopies() {
-        return this.copies;
+        return this.backingStore.get("copies");
     }
     /**
      * Gets the dpi property value. The dpi property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDpi() {
-        return this.dpi;
+        return this.backingStore.get("dpi");
     }
     /**
      * Gets the duplexMode property value. The duplexMode property
-     * @return a printDuplexMode
+     * @return a PrintDuplexMode
      */
     @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
-        return this.duplexMode;
+        return this.backingStore.get("duplexMode");
     }
     /**
      * Gets the feedDirection property value. The feedDirection property
-     * @return a printerFeedDirection
+     * @return a PrinterFeedDirection
      */
     @jakarta.annotation.Nullable
     public PrinterFeedDirection getFeedDirection() {
-        return this.feedDirection;
+        return this.backingStore.get("feedDirection");
     }
     /**
      * Gets the feedOrientation property value. The feedOrientation property
-     * @return a printerFeedOrientation
+     * @return a PrinterFeedOrientation
      */
     @jakarta.annotation.Nullable
     public PrinterFeedOrientation getFeedOrientation() {
-        return this.feedOrientation;
+        return this.backingStore.get("feedOrientation");
     }
     /**
      * The deserialization information for the current model
@@ -209,115 +143,115 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a printFinishing
+     * @return a java.util.List<PrintFinishing>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
-        return this.finishings;
+        return this.backingStore.get("finishings");
     }
     /**
      * Gets the fitPdfToPage property value. The fitPdfToPage property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
-        return this.fitPdfToPage;
+        return this.backingStore.get("fitPdfToPage");
     }
     /**
      * Gets the inputBin property value. The inputBin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInputBin() {
-        return this.inputBin;
+        return this.backingStore.get("inputBin");
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a printMargin
+     * @return a PrintMargin
      */
     @jakarta.annotation.Nullable
     public PrintMargin getMargin() {
-        return this.margin;
+        return this.backingStore.get("margin");
     }
     /**
      * Gets the mediaSize property value. The mediaSize property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaSize() {
-        return this.mediaSize;
+        return this.backingStore.get("mediaSize");
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
-        return this.mediaType;
+        return this.backingStore.get("mediaType");
     }
     /**
      * Gets the multipageLayout property value. The multipageLayout property
-     * @return a printMultipageLayout
+     * @return a PrintMultipageLayout
      */
     @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
-        return this.multipageLayout;
+        return this.backingStore.get("multipageLayout");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a printOrientation
+     * @return a PrintOrientation
      */
     @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
-        return this.orientation;
+        return this.backingStore.get("orientation");
     }
     /**
      * Gets the outputBin property value. The outputBin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputBin() {
-        return this.outputBin;
+        return this.backingStore.get("outputBin");
     }
     /**
      * Gets the pageRanges property value. The pageRanges property
-     * @return a integerRange
+     * @return a java.util.List<IntegerRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntegerRange> getPageRanges() {
-        return this.pageRanges;
+        return this.backingStore.get("pageRanges");
     }
     /**
      * Gets the pagesPerSheet property value. The pagesPerSheet property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
-        return this.pagesPerSheet;
+        return this.backingStore.get("pagesPerSheet");
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a printQuality
+     * @return a PrintQuality
      */
     @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
-        return this.quality;
+        return this.backingStore.get("quality");
     }
     /**
      * Gets the scaling property value. The scaling property
-     * @return a printScaling
+     * @return a PrintScaling
      */
     @jakarta.annotation.Nullable
     public PrintScaling getScaling() {
-        return this.scaling;
+        return this.backingStore.get("scaling");
     }
     /**
      * Serializes information the current object
@@ -349,157 +283,165 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the collate property value. The collate property
      * @param value Value to set for the collate property.
      */
     public void setCollate(@jakarta.annotation.Nullable final Boolean value) {
-        this.collate = value;
+        this.backingStore.set("collate", value);
     }
     /**
      * Sets the colorMode property value. The colorMode property
      * @param value Value to set for the colorMode property.
      */
     public void setColorMode(@jakarta.annotation.Nullable final PrintColorMode value) {
-        this.colorMode = value;
+        this.backingStore.set("colorMode", value);
     }
     /**
      * Sets the copies property value. The copies property
      * @param value Value to set for the copies property.
      */
     public void setCopies(@jakarta.annotation.Nullable final Integer value) {
-        this.copies = value;
+        this.backingStore.set("copies", value);
     }
     /**
      * Sets the dpi property value. The dpi property
      * @param value Value to set for the dpi property.
      */
     public void setDpi(@jakarta.annotation.Nullable final Integer value) {
-        this.dpi = value;
+        this.backingStore.set("dpi", value);
     }
     /**
      * Sets the duplexMode property value. The duplexMode property
      * @param value Value to set for the duplexMode property.
      */
     public void setDuplexMode(@jakarta.annotation.Nullable final PrintDuplexMode value) {
-        this.duplexMode = value;
+        this.backingStore.set("duplexMode", value);
     }
     /**
      * Sets the feedDirection property value. The feedDirection property
      * @param value Value to set for the feedDirection property.
      */
     public void setFeedDirection(@jakarta.annotation.Nullable final PrinterFeedDirection value) {
-        this.feedDirection = value;
+        this.backingStore.set("feedDirection", value);
     }
     /**
      * Sets the feedOrientation property value. The feedOrientation property
      * @param value Value to set for the feedOrientation property.
      */
     public void setFeedOrientation(@jakarta.annotation.Nullable final PrinterFeedOrientation value) {
-        this.feedOrientation = value;
+        this.backingStore.set("feedOrientation", value);
     }
     /**
      * Sets the finishings property value. The finishings property
      * @param value Value to set for the finishings property.
      */
     public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
-        this.finishings = value;
+        this.backingStore.set("finishings", value);
     }
     /**
      * Sets the fitPdfToPage property value. The fitPdfToPage property
      * @param value Value to set for the fitPdfToPage property.
      */
     public void setFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
-        this.fitPdfToPage = value;
+        this.backingStore.set("fitPdfToPage", value);
     }
     /**
      * Sets the inputBin property value. The inputBin property
      * @param value Value to set for the inputBin property.
      */
     public void setInputBin(@jakarta.annotation.Nullable final String value) {
-        this.inputBin = value;
+        this.backingStore.set("inputBin", value);
     }
     /**
      * Sets the margin property value. The margin property
      * @param value Value to set for the margin property.
      */
     public void setMargin(@jakarta.annotation.Nullable final PrintMargin value) {
-        this.margin = value;
+        this.backingStore.set("margin", value);
     }
     /**
      * Sets the mediaSize property value. The mediaSize property
      * @param value Value to set for the mediaSize property.
      */
     public void setMediaSize(@jakarta.annotation.Nullable final String value) {
-        this.mediaSize = value;
+        this.backingStore.set("mediaSize", value);
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
-        this.mediaType = value;
+        this.backingStore.set("mediaType", value);
     }
     /**
      * Sets the multipageLayout property value. The multipageLayout property
      * @param value Value to set for the multipageLayout property.
      */
     public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
-        this.multipageLayout = value;
+        this.backingStore.set("multipageLayout", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the orientation property value. The orientation property
      * @param value Value to set for the orientation property.
      */
     public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
-        this.orientation = value;
+        this.backingStore.set("orientation", value);
     }
     /**
      * Sets the outputBin property value. The outputBin property
      * @param value Value to set for the outputBin property.
      */
     public void setOutputBin(@jakarta.annotation.Nullable final String value) {
-        this.outputBin = value;
+        this.backingStore.set("outputBin", value);
     }
     /**
      * Sets the pageRanges property value. The pageRanges property
      * @param value Value to set for the pageRanges property.
      */
     public void setPageRanges(@jakarta.annotation.Nullable final java.util.List<IntegerRange> value) {
-        this.pageRanges = value;
+        this.backingStore.set("pageRanges", value);
     }
     /**
      * Sets the pagesPerSheet property value. The pagesPerSheet property
      * @param value Value to set for the pagesPerSheet property.
      */
     public void setPagesPerSheet(@jakarta.annotation.Nullable final Integer value) {
-        this.pagesPerSheet = value;
+        this.backingStore.set("pagesPerSheet", value);
     }
     /**
      * Sets the quality property value. The quality property
      * @param value Value to set for the quality property.
      */
     public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
-        this.quality = value;
+        this.backingStore.set("quality", value);
     }
     /**
      * Sets the scaling property value. The scaling property
      * @param value Value to set for the scaling property.
      */
     public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {
-        this.scaling = value;
+        this.backingStore.set("scaling", value);
     }
 }

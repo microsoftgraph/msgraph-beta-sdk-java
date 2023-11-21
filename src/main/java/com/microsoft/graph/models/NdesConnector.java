@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NdesConnector extends Entity implements Parsable {
     /**
-     * The build version of the Ndes Connector.
-     */
-    private String connectorVersion;
-    /**
-     * The friendly name of the Ndes Connector.
-     */
-    private String displayName;
-    /**
-     * Timestamp when on-prem certificate connector was enrolled in Intune.
-     */
-    private OffsetDateTime enrolledDateTime;
-    /**
-     * Last connection time for the Ndes Connector
-     */
-    private OffsetDateTime lastConnectionDateTime;
-    /**
-     * Name of the machine running on-prem certificate connector service.
-     */
-    private String machineName;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The current status of the Ndes Connector.
-     */
-    private NdesConnectorState state;
-    /**
-     * Instantiates a new ndesConnector and sets the default values.
+     * Instantiates a new NdesConnector and sets the default values.
      */
     public NdesConnector() {
         super();
@@ -49,7 +21,7 @@ public class NdesConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ndesConnector
+     * @return a NdesConnector
      */
     @jakarta.annotation.Nonnull
     public static NdesConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,19 +30,19 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the connectorVersion property value. The build version of the Ndes Connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
-        return this.connectorVersion;
+        return this.backingStore.get("connectorVersion");
     }
     /**
      * Gets the displayName property value. The friendly name of the Ndes Connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the enrolledDateTime property value. Timestamp when on-prem certificate connector was enrolled in Intune.
@@ -78,7 +50,7 @@ public class NdesConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrolledDateTime() {
-        return this.enrolledDateTime;
+        return this.backingStore.get("enrolledDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -102,31 +74,31 @@ public class NdesConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this.lastConnectionDateTime;
+        return this.backingStore.get("lastConnectionDateTime");
     }
     /**
      * Gets the machineName property value. Name of the machine running on-prem certificate connector service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
-        return this.machineName;
+        return this.backingStore.get("machineName");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the state property value. The current status of the Ndes Connector.
-     * @return a ndesConnectorState
+     * @return a NdesConnectorState
      */
     @jakarta.annotation.Nullable
     public NdesConnectorState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the connectorVersion property.
      */
     public void setConnectorVersion(@jakarta.annotation.Nullable final String value) {
-        this.connectorVersion = value;
+        this.backingStore.set("connectorVersion", value);
     }
     /**
      * Sets the displayName property value. The friendly name of the Ndes Connector.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the enrolledDateTime property value. Timestamp when on-prem certificate connector was enrolled in Intune.
      * @param value Value to set for the enrolledDateTime property.
      */
     public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.enrolledDateTime = value;
+        this.backingStore.set("enrolledDateTime", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Last connection time for the Ndes Connector
      * @param value Value to set for the lastConnectionDateTime property.
      */
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastConnectionDateTime = value;
+        this.backingStore.set("lastConnectionDateTime", value);
     }
     /**
      * Sets the machineName property value. Name of the machine running on-prem certificate connector service.
      * @param value Value to set for the machineName property.
      */
     public void setMachineName(@jakarta.annotation.Nullable final String value) {
-        this.machineName = value;
+        this.backingStore.set("machineName", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the state property value. The current status of the Ndes Connector.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final NdesConnectorState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

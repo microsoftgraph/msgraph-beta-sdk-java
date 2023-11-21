@@ -10,6 +10,7 @@ import com.microsoft.graph.chats.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.chats.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.chats.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
+import com.microsoft.graph.chats.item.removeallaccessforuser.RemoveAllAccessForUserRequestBuilder;
 import com.microsoft.graph.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.chats.item.unhideforuser.UnhideForUserRequestBuilder;
@@ -104,6 +105,13 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the removeAllAccessForUser method.
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveAllAccessForUserRequestBuilder removeAllAccessForUser() {
+        return new RemoveAllAccessForUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the sendActivityNotification method.
      */
     @jakarta.annotation.Nonnull
@@ -141,77 +149,75 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
-     * @return a CompletableFuture of chat
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from. This API is available in the following national cloud deployments.
+     * @return a Chat
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> get() {
+    @jakarta.annotation.Nullable
+    public Chat get() {
         return get(null);
     }
     /**
-     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chat
+     * @return a Chat
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a chat object.
+     * Update the properties of a chat object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of chat
+     * @return a Chat
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> patch(@jakarta.annotation.Nonnull final Chat body) {
+    @jakarta.annotation.Nullable
+    public Chat patch(@jakarta.annotation.Nonnull final Chat body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a chat object.
+     * Update the properties of a chat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chat
+     * @return a Chat
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> patch(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Chat patch(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -219,26 +225,19 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -246,28 +245,19 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of a chat object.
+     * Update the properties of a chat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -276,7 +266,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a chat object.
+     * Update the properties of a chat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -284,18 +274,10 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
@@ -315,7 +297,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

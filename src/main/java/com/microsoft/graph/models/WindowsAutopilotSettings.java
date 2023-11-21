@@ -13,19 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotSettings extends Entity implements Parsable {
     /**
-     * Last data sync date time with DDS service.
-     */
-    private OffsetDateTime lastManualSyncTriggerDateTime;
-    /**
-     * Last data sync date time with DDS service.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The syncStatus property
-     */
-    private WindowsAutopilotSyncStatus syncStatus;
-    /**
-     * Instantiates a new windowsAutopilotSettings and sets the default values.
+     * Instantiates a new WindowsAutopilotSettings and sets the default values.
      */
     public WindowsAutopilotSettings() {
         super();
@@ -33,7 +21,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotSettings
+     * @return a WindowsAutopilotSettings
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +46,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastManualSyncTriggerDateTime() {
-        return this.lastManualSyncTriggerDateTime;
+        return this.backingStore.get("lastManualSyncTriggerDateTime");
     }
     /**
      * Gets the lastSyncDateTime property value. Last data sync date time with DDS service.
@@ -66,15 +54,15 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the syncStatus property value. The syncStatus property
-     * @return a windowsAutopilotSyncStatus
+     * @return a WindowsAutopilotSyncStatus
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotSyncStatus getSyncStatus() {
-        return this.syncStatus;
+        return this.backingStore.get("syncStatus");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * @param value Value to set for the lastManualSyncTriggerDateTime property.
      */
     public void setLastManualSyncTriggerDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastManualSyncTriggerDateTime = value;
+        this.backingStore.set("lastManualSyncTriggerDateTime", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last data sync date time with DDS service.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the syncStatus property value. The syncStatus property
      * @param value Value to set for the syncStatus property.
      */
     public void setSyncStatus(@jakarta.annotation.Nullable final WindowsAutopilotSyncStatus value) {
-        this.syncStatus = value;
+        this.backingStore.set("syncStatus", value);
     }
 }

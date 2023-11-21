@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * The threshold for the number of accounts assigned the Global Administrator role in the tenant. Triggers an alert if the number of global administrators in the tenant reaches or crosses this threshold value.
-     */
-    private Integer globalAdminCountThreshold;
-    /**
-     * Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
-     */
-    private Integer percentageOfGlobalAdminsOutOfRolesThreshold;
-    /**
-     * Instantiates a new tooManyGlobalAdminsAssignedToTenantAlertConfiguration and sets the default values.
+     * Instantiates a new TooManyGlobalAdminsAssignedToTenantAlertConfiguration and sets the default values.
      */
     public TooManyGlobalAdminsAssignedToTenantAlertConfiguration() {
         super();
@@ -26,7 +18,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tooManyGlobalAdminsAssignedToTenantAlertConfiguration
+     * @return a TooManyGlobalAdminsAssignedToTenantAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TooManyGlobalAdminsAssignedToTenantAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
     }
     /**
      * Gets the globalAdminCountThreshold property value. The threshold for the number of accounts assigned the Global Administrator role in the tenant. Triggers an alert if the number of global administrators in the tenant reaches or crosses this threshold value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGlobalAdminCountThreshold() {
-        return this.globalAdminCountThreshold;
+        return this.backingStore.get("globalAdminCountThreshold");
     }
     /**
      * Gets the percentageOfGlobalAdminsOutOfRolesThreshold property value. Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageOfGlobalAdminsOutOfRolesThreshold() {
-        return this.percentageOfGlobalAdminsOutOfRolesThreshold;
+        return this.backingStore.get("percentageOfGlobalAdminsOutOfRolesThreshold");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * @param value Value to set for the globalAdminCountThreshold property.
      */
     public void setGlobalAdminCountThreshold(@jakarta.annotation.Nullable final Integer value) {
-        this.globalAdminCountThreshold = value;
+        this.backingStore.set("globalAdminCountThreshold", value);
     }
     /**
      * Sets the percentageOfGlobalAdminsOutOfRolesThreshold property value. Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
      * @param value Value to set for the percentageOfGlobalAdminsOutOfRolesThreshold property.
      */
     public void setPercentageOfGlobalAdminsOutOfRolesThreshold(@jakarta.annotation.Nullable final Integer value) {
-        this.percentageOfGlobalAdminsOutOfRolesThreshold = value;
+        this.backingStore.set("percentageOfGlobalAdminsOutOfRolesThreshold", value);
     }
 }

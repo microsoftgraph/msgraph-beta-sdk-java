@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Domain> value;
-    /**
-     * Instantiates a new domainCollectionResponse and sets the default values.
+     * Instantiates a new DomainCollectionResponse and sets the default values.
      */
     public DomainCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DomainCollectionResponse extends BaseCollectionPaginationCountRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainCollectionResponse
+     * @return a DomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DomainCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DomainCollectionResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a domain
+     * @return a java.util.List<Domain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Domain> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DomainCollectionResponse extends BaseCollectionPaginationCountRespo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Domain> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

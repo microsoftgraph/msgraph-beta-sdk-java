@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     /**
-     * These are the only Windows Store Apps that will be available to launch from the Start menu.
-     */
-    private java.util.List<String> appUserModelIds;
-    /**
-     * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
-     */
-    private java.util.List<String> desktopAppPaths;
-    /**
-     * This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-     */
-    private String profileName;
-    /**
-     * This setting allows the admin to specify whether the Task Bar is shown or not.
-     */
-    private Boolean showTaskBar;
-    /**
-     * Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     */
-    private byte[] startMenuLayoutXml;
-    /**
-     * The user accounts that will be locked to this kiosk configuration.
-     */
-    private java.util.List<String> userAccounts;
-    /**
-     * Instantiates a new windowsAssignedAccessProfile and sets the default values.
+     * Instantiates a new WindowsAssignedAccessProfile and sets the default values.
      */
     public WindowsAssignedAccessProfile() {
         super();
@@ -44,7 +20,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAssignedAccessProfile
+     * @return a WindowsAssignedAccessProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsAssignedAccessProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,19 +29,19 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     }
     /**
      * Gets the appUserModelIds property value. These are the only Windows Store Apps that will be available to launch from the Start menu.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAppUserModelIds() {
-        return this.appUserModelIds;
+        return this.backingStore.get("appUserModelIds");
     }
     /**
      * Gets the desktopAppPaths property value. These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDesktopAppPaths() {
-        return this.desktopAppPaths;
+        return this.backingStore.get("desktopAppPaths");
     }
     /**
      * The deserialization information for the current model
@@ -84,35 +60,35 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     }
     /**
      * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
-        return this.profileName;
+        return this.backingStore.get("profileName");
     }
     /**
      * Gets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTaskBar() {
-        return this.showTaskBar;
+        return this.backingStore.get("showTaskBar");
     }
     /**
      * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getStartMenuLayoutXml() {
-        return this.startMenuLayoutXml;
+        return this.backingStore.get("startMenuLayoutXml");
     }
     /**
      * Gets the userAccounts property value. The user accounts that will be locked to this kiosk configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserAccounts() {
-        return this.userAccounts;
+        return this.backingStore.get("userAccounts");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param value Value to set for the appUserModelIds property.
      */
     public void setAppUserModelIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.appUserModelIds = value;
+        this.backingStore.set("appUserModelIds", value);
     }
     /**
      * Sets the desktopAppPaths property value. These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
      * @param value Value to set for the desktopAppPaths property.
      */
     public void setDesktopAppPaths(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.desktopAppPaths = value;
+        this.backingStore.set("desktopAppPaths", value);
     }
     /**
      * Sets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @param value Value to set for the profileName property.
      */
     public void setProfileName(@jakarta.annotation.Nullable final String value) {
-        this.profileName = value;
+        this.backingStore.set("profileName", value);
     }
     /**
      * Sets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
      * @param value Value to set for the showTaskBar property.
      */
     public void setShowTaskBar(@jakarta.annotation.Nullable final Boolean value) {
-        this.showTaskBar = value;
+        this.backingStore.set("showTaskBar", value);
     }
     /**
      * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      */
     public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.startMenuLayoutXml = value;
+        this.backingStore.set("startMenuLayoutXml", value);
     }
     /**
      * Sets the userAccounts property value. The user accounts that will be locked to this kiosk configuration.
      * @param value Value to set for the userAccounts property.
      */
     public void setUserAccounts(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userAccounts = value;
+        this.backingStore.set("userAccounts", value);
     }
 }

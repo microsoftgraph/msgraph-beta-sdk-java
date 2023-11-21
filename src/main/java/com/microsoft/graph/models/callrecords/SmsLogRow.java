@@ -4,103 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SmsLogRow implements AdditionalDataHolder, Parsable {
+public class SmsLogRow implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Amount of money or cost of the SMS that is charged.
-     */
-    private BigDecimal callCharge;
-    /**
-     * Currency used to calculate the cost of the call. For details, see ISO 4217.
-     */
-    private String currency;
-    /**
-     * Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
-     */
-    private String destinationContext;
-    /**
-     * Country or region of a phone number that received the SMS.
-     */
-    private String destinationName;
-    /**
-     * Partially obfuscated phone number that received the SMS. For details, see E.164.
-     */
-    private String destinationNumber;
-    /**
-     * Unique identifier (GUID) for the SMS.
-     */
-    private String id;
-    /**
-     * The license used for the SMS.
-     */
-    private String licenseCapability;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
-     */
-    private String otherPartyCountryCode;
-    /**
-     * The date and time when the SMS was sent.
-     */
-    private OffsetDateTime sentDateTime;
-    /**
-     * SMS identifier. Not guaranteed to be unique.
-     */
-    private String smsId;
-    /**
-     * Type of SMS such as outbound or inbound.
-     */
-    private String smsType;
-    /**
-     * Number of SMS units sent/received.
-     */
-    private Integer smsUnits;
-    /**
-     * Partially obfuscated phone number that sent the SMS. For details, see E.164.
-     */
-    private String sourceNumber;
-    /**
-     * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
-     */
-    private String tenantCountryCode;
-    /**
-     * Country code of the user. For details, see ISO 3166-1 alpha-2.
-     */
-    private String userCountryCode;
-    /**
-     * Display name of the user.
-     */
-    private String userDisplayName;
-    /**
-     * The unique identifier (GUID) of the user in Azure Active Directory.
-     */
-    private String userId;
-    /**
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new smsLogRow and sets the default values.
+     * Instantiates a new SmsLogRow and sets the default values.
      */
     public SmsLogRow() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a smsLogRow
+     * @return a SmsLogRow
      */
     @jakarta.annotation.Nonnull
     public static SmsLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -108,52 +37,65 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
         return new SmsLogRow();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the callCharge property value. Amount of money or cost of the SMS that is charged.
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCallCharge() {
-        return this.callCharge;
+        return this.backingStore.get("callCharge");
     }
     /**
      * Gets the currency property value. Currency used to calculate the cost of the call. For details, see ISO 4217.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
-        return this.currency;
+        return this.backingStore.get("currency");
     }
     /**
      * Gets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
-        return this.destinationContext;
+        return this.backingStore.get("destinationContext");
     }
     /**
      * Gets the destinationName property value. Country or region of a phone number that received the SMS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationName() {
-        return this.destinationName;
+        return this.backingStore.get("destinationName");
     }
     /**
      * Gets the destinationNumber property value. Partially obfuscated phone number that received the SMS. For details, see E.164.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationNumber() {
-        return this.destinationNumber;
+        return this.backingStore.get("destinationNumber");
     }
     /**
      * The deserialization information for the current model
@@ -185,35 +127,35 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique identifier (GUID) for the SMS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the licenseCapability property value. The license used for the SMS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLicenseCapability() {
-        return this.licenseCapability;
+        return this.backingStore.get("licenseCapability");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the otherPartyCountryCode property value. For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOtherPartyCountryCode() {
-        return this.otherPartyCountryCode;
+        return this.backingStore.get("otherPartyCountryCode");
     }
     /**
      * Gets the sentDateTime property value. The date and time when the SMS was sent.
@@ -221,79 +163,79 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
-        return this.sentDateTime;
+        return this.backingStore.get("sentDateTime");
     }
     /**
      * Gets the smsId property value. SMS identifier. Not guaranteed to be unique.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmsId() {
-        return this.smsId;
+        return this.backingStore.get("smsId");
     }
     /**
      * Gets the smsType property value. Type of SMS such as outbound or inbound.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmsType() {
-        return this.smsType;
+        return this.backingStore.get("smsType");
     }
     /**
      * Gets the smsUnits property value. Number of SMS units sent/received.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSmsUnits() {
-        return this.smsUnits;
+        return this.backingStore.get("smsUnits");
     }
     /**
      * Gets the sourceNumber property value. Partially obfuscated phone number that sent the SMS. For details, see E.164.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceNumber() {
-        return this.sourceNumber;
+        return this.backingStore.get("sourceNumber");
     }
     /**
      * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantCountryCode() {
-        return this.tenantCountryCode;
+        return this.backingStore.get("tenantCountryCode");
     }
     /**
      * Gets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserCountryCode() {
-        return this.userCountryCode;
+        return this.backingStore.get("userCountryCode");
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.backingStore.get("userDisplayName");
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory.
-     * @return a string
+     * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a string
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -323,143 +265,151 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the callCharge property value. Amount of money or cost of the SMS that is charged.
      * @param value Value to set for the callCharge property.
      */
     public void setCallCharge(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.callCharge = value;
+        this.backingStore.set("callCharge", value);
     }
     /**
      * Sets the currency property value. Currency used to calculate the cost of the call. For details, see ISO 4217.
      * @param value Value to set for the currency property.
      */
     public void setCurrency(@jakarta.annotation.Nullable final String value) {
-        this.currency = value;
+        this.backingStore.set("currency", value);
     }
     /**
      * Sets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
-        this.destinationContext = value;
+        this.backingStore.set("destinationContext", value);
     }
     /**
      * Sets the destinationName property value. Country or region of a phone number that received the SMS.
      * @param value Value to set for the destinationName property.
      */
     public void setDestinationName(@jakarta.annotation.Nullable final String value) {
-        this.destinationName = value;
+        this.backingStore.set("destinationName", value);
     }
     /**
      * Sets the destinationNumber property value. Partially obfuscated phone number that received the SMS. For details, see E.164.
      * @param value Value to set for the destinationNumber property.
      */
     public void setDestinationNumber(@jakarta.annotation.Nullable final String value) {
-        this.destinationNumber = value;
+        this.backingStore.set("destinationNumber", value);
     }
     /**
      * Sets the id property value. Unique identifier (GUID) for the SMS.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the licenseCapability property value. The license used for the SMS.
      * @param value Value to set for the licenseCapability property.
      */
     public void setLicenseCapability(@jakarta.annotation.Nullable final String value) {
-        this.licenseCapability = value;
+        this.backingStore.set("licenseCapability", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the otherPartyCountryCode property value. For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the otherPartyCountryCode property.
      */
     public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.otherPartyCountryCode = value;
+        this.backingStore.set("otherPartyCountryCode", value);
     }
     /**
      * Sets the sentDateTime property value. The date and time when the SMS was sent.
      * @param value Value to set for the sentDateTime property.
      */
     public void setSentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.sentDateTime = value;
+        this.backingStore.set("sentDateTime", value);
     }
     /**
      * Sets the smsId property value. SMS identifier. Not guaranteed to be unique.
      * @param value Value to set for the smsId property.
      */
     public void setSmsId(@jakarta.annotation.Nullable final String value) {
-        this.smsId = value;
+        this.backingStore.set("smsId", value);
     }
     /**
      * Sets the smsType property value. Type of SMS such as outbound or inbound.
      * @param value Value to set for the smsType property.
      */
     public void setSmsType(@jakarta.annotation.Nullable final String value) {
-        this.smsType = value;
+        this.backingStore.set("smsType", value);
     }
     /**
      * Sets the smsUnits property value. Number of SMS units sent/received.
      * @param value Value to set for the smsUnits property.
      */
     public void setSmsUnits(@jakarta.annotation.Nullable final Integer value) {
-        this.smsUnits = value;
+        this.backingStore.set("smsUnits", value);
     }
     /**
      * Sets the sourceNumber property value. Partially obfuscated phone number that sent the SMS. For details, see E.164.
      * @param value Value to set for the sourceNumber property.
      */
     public void setSourceNumber(@jakarta.annotation.Nullable final String value) {
-        this.sourceNumber = value;
+        this.backingStore.set("sourceNumber", value);
     }
     /**
      * Sets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the tenantCountryCode property.
      */
     public void setTenantCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.tenantCountryCode = value;
+        this.backingStore.set("tenantCountryCode", value);
     }
     /**
      * Sets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the userCountryCode property.
      */
     public void setUserCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.userCountryCode = value;
+        this.backingStore.set("userCountryCode", value);
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.backingStore.set("userDisplayName", value);
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory.
+     * Sets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

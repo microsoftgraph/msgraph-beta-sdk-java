@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddContentHeaderAction extends InformationProtectionAction implements Parsable {
     /**
-     * The alignment property
-     */
-    private ContentAlignment alignment;
-    /**
-     * Color of the font to use for the header.
-     */
-    private String fontColor;
-    /**
-     * Name of the font to use for the header.
-     */
-    private String fontName;
-    /**
-     * Font size to use for the header.
-     */
-    private Integer fontSize;
-    /**
-     * The margin of the header from the top of the document.
-     */
-    private Integer margin;
-    /**
-     * The contents of the header itself.
-     */
-    private String text;
-    /**
-     * The name of the UI element where the header should be placed.
-     */
-    private String uiElementName;
-    /**
-     * Instantiates a new addContentHeaderAction and sets the default values.
+     * Instantiates a new AddContentHeaderAction and sets the default values.
      */
     public AddContentHeaderAction() {
         super();
@@ -46,7 +18,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addContentHeaderAction
+     * @return a AddContentHeaderAction
      */
     @jakarta.annotation.Nonnull
     public static AddContentHeaderAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a contentAlignment
+     * @return a ContentAlignment
      */
     @jakarta.annotation.Nullable
     public ContentAlignment getAlignment() {
-        return this.alignment;
+        return this.backingStore.get("alignment");
     }
     /**
      * The deserialization information for the current model
@@ -79,51 +51,51 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
-        return this.fontColor;
+        return this.backingStore.get("fontColor");
     }
     /**
      * Gets the fontName property value. Name of the font to use for the header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontName() {
-        return this.fontName;
+        return this.backingStore.get("fontName");
     }
     /**
      * Gets the fontSize property value. Font size to use for the header.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFontSize() {
-        return this.fontSize;
+        return this.backingStore.get("fontSize");
     }
     /**
      * Gets the margin property value. The margin of the header from the top of the document.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {
-        return this.margin;
+        return this.backingStore.get("margin");
     }
     /**
      * Gets the text property value. The contents of the header itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.backingStore.get("text");
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the header should be placed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUiElementName() {
-        return this.uiElementName;
+        return this.backingStore.get("uiElementName");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the alignment property.
      */
     public void setAlignment(@jakarta.annotation.Nullable final ContentAlignment value) {
-        this.alignment = value;
+        this.backingStore.set("alignment", value);
     }
     /**
      * Sets the fontColor property value. Color of the font to use for the header.
      * @param value Value to set for the fontColor property.
      */
     public void setFontColor(@jakarta.annotation.Nullable final String value) {
-        this.fontColor = value;
+        this.backingStore.set("fontColor", value);
     }
     /**
      * Sets the fontName property value. Name of the font to use for the header.
      * @param value Value to set for the fontName property.
      */
     public void setFontName(@jakarta.annotation.Nullable final String value) {
-        this.fontName = value;
+        this.backingStore.set("fontName", value);
     }
     /**
      * Sets the fontSize property value. Font size to use for the header.
      * @param value Value to set for the fontSize property.
      */
     public void setFontSize(@jakarta.annotation.Nullable final Integer value) {
-        this.fontSize = value;
+        this.backingStore.set("fontSize", value);
     }
     /**
      * Sets the margin property value. The margin of the header from the top of the document.
      * @param value Value to set for the margin property.
      */
     public void setMargin(@jakarta.annotation.Nullable final Integer value) {
-        this.margin = value;
+        this.backingStore.set("margin", value);
     }
     /**
      * Sets the text property value. The contents of the header itself.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.backingStore.set("text", value);
     }
     /**
      * Sets the uiElementName property value. The name of the UI element where the header should be placed.
      * @param value Value to set for the uiElementName property.
      */
     public void setUiElementName(@jakarta.annotation.Nullable final String value) {
-        this.uiElementName = value;
+        this.backingStore.set("uiElementName", value);
     }
 }

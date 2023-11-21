@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingAppConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Acceptable app types to allow for this setting
-     */
-    private java.util.List<String> supportedTypes;
-    /**
-     * Instantiates a new deviceManagementSettingAppConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingAppConstraint and sets the default values.
      */
     public DeviceManagementSettingAppConstraint() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingAppConstraint
+     * @return a DeviceManagementSettingAppConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingAppConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     }
     /**
      * Gets the supportedTypes property value. Acceptable app types to allow for this setting
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedTypes() {
-        return this.supportedTypes;
+        return this.backingStore.get("supportedTypes");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * @param value Value to set for the supportedTypes property.
      */
     public void setSupportedTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedTypes = value;
+        this.backingStore.set("supportedTypes", value);
     }
 }

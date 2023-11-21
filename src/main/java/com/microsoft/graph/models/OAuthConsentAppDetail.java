@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
+public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The appScope property
-     */
-    private OAuthAppScope appScope;
-    /**
-     * The displayLogo property
-     */
-    private String displayLogo;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new oAuthConsentAppDetail and sets the default values.
+     * Instantiates a new OAuthConsentAppDetail and sets the default values.
      */
     public OAuthConsentAppDetail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a oAuthConsentAppDetail
+     * @return a OAuthConsentAppDetail
      */
     @jakarta.annotation.Nonnull
     public static OAuthConsentAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,36 +35,49 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return new OAuthConsentAppDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the appScope property value. The appScope property
-     * @return a oAuthAppScope
+     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * @return a OAuthAppScope
      */
     @jakarta.annotation.Nullable
     public OAuthAppScope getAppScope() {
-        return this.appScope;
+        return this.backingStore.get("appScope");
     }
     /**
-     * Gets the displayLogo property value. The displayLogo property
-     * @return a string
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the displayLogo property value. App display logo.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayLogo() {
-        return this.displayLogo;
+        return this.backingStore.get("displayLogo");
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. App name.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -92,11 +94,11 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appScope property value. The appScope property
+     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final OAuthAppScope value) {
-        this.appScope = value;
+        this.backingStore.set("appScope", value);
     }
     /**
-     * Sets the displayLogo property value. The displayLogo property
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the displayLogo property value. App display logo.
      * @param value Value to set for the displayLogo property.
      */
     public void setDisplayLogo(@jakarta.annotation.Nullable final String value) {
-        this.displayLogo = value;
+        this.backingStore.set("displayLogo", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. App name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

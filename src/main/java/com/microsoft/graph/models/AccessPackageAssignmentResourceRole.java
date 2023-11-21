@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /**
-     * The access package assignments resulting in this role assignment. Read-only. Nullable.
-     */
-    private java.util.List<AccessPackageAssignment> accessPackageAssignments;
-    /**
-     * The accessPackageResourceRole property
-     */
-    private AccessPackageResourceRole accessPackageResourceRole;
-    /**
-     * The accessPackageResourceScope property
-     */
-    private AccessPackageResourceScope accessPackageResourceScope;
-    /**
-     * Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
-     */
-    private AccessPackageSubject accessPackageSubject;
-    /**
-     * A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
-     */
-    private String originId;
-    /**
-     * The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
-     */
-    private String originSystem;
-    /**
-     * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
-     */
-    private String status;
-    /**
-     * Instantiates a new accessPackageAssignmentResourceRole and sets the default values.
+     * Instantiates a new AccessPackageAssignmentResourceRole and sets the default values.
      */
     public AccessPackageAssignmentResourceRole() {
         super();
@@ -45,7 +17,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentResourceRole
+     * @return a AccessPackageAssignmentResourceRole
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentResourceRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,35 +26,35 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the accessPackageAssignments property value. The access package assignments resulting in this role assignment. Read-only. Nullable.
-     * @return a accessPackageAssignment
+     * @return a java.util.List<AccessPackageAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAccessPackageAssignments() {
-        return this.accessPackageAssignments;
+        return this.backingStore.get("accessPackageAssignments");
     }
     /**
      * Gets the accessPackageResourceRole property value. The accessPackageResourceRole property
-     * @return a accessPackageResourceRole
+     * @return a AccessPackageResourceRole
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRole getAccessPackageResourceRole() {
-        return this.accessPackageResourceRole;
+        return this.backingStore.get("accessPackageResourceRole");
     }
     /**
      * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
-     * @return a accessPackageResourceScope
+     * @return a AccessPackageResourceScope
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceScope getAccessPackageResourceScope() {
-        return this.accessPackageResourceScope;
+        return this.backingStore.get("accessPackageResourceScope");
     }
     /**
      * Gets the accessPackageSubject property value. Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getAccessPackageSubject() {
-        return this.accessPackageSubject;
+        return this.backingStore.get("accessPackageSubject");
     }
     /**
      * The deserialization information for the current model
@@ -102,27 +74,27 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.backingStore.get("originId");
     }
     /**
      * Gets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.backingStore.get("originSystem");
     }
     /**
-     * Gets the status property value. The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
-     * @return a string
+     * Gets the status property value. The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageAssignments property.
      */
     public void setAccessPackageAssignments(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this.accessPackageAssignments = value;
+        this.backingStore.set("accessPackageAssignments", value);
     }
     /**
      * Sets the accessPackageResourceRole property value. The accessPackageResourceRole property
      * @param value Value to set for the accessPackageResourceRole property.
      */
     public void setAccessPackageResourceRole(@jakarta.annotation.Nullable final AccessPackageResourceRole value) {
-        this.accessPackageResourceRole = value;
+        this.backingStore.set("accessPackageResourceRole", value);
     }
     /**
      * Sets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @param value Value to set for the accessPackageResourceScope property.
      */
     public void setAccessPackageResourceScope(@jakarta.annotation.Nullable final AccessPackageResourceScope value) {
-        this.accessPackageResourceScope = value;
+        this.backingStore.set("accessPackageResourceScope", value);
     }
     /**
      * Sets the accessPackageSubject property value. Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
      * @param value Value to set for the accessPackageSubject property.
      */
     public void setAccessPackageSubject(@jakarta.annotation.Nullable final AccessPackageSubject value) {
-        this.accessPackageSubject = value;
+        this.backingStore.set("accessPackageSubject", value);
     }
     /**
      * Sets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.backingStore.set("originId", value);
     }
     /**
      * Sets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.backingStore.set("originSystem", value);
     }
     /**
-     * Sets the status property value. The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+     * Sets the status property value. The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

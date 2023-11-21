@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKioskModeHomeScreenItem implements Parsable {
     /**
-     * Instantiates a new androidDeviceOwnerKioskModeFolderItem and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeFolderItem and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeFolderItem() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeFolderItem
+     * @return a AndroidDeviceOwnerKioskModeFolderItem
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeFolderItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

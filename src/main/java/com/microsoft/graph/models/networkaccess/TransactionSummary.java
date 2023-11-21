@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TransactionSummary implements AdditionalDataHolder, Parsable {
+public class TransactionSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Count of transactions that were blocked.
-     */
-    private Integer blockedCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Count of transactions.
-     */
-    private Integer totalCount;
-    /**
-     * The trafficType property
-     */
-    private TrafficType trafficType;
-    /**
-     * Instantiates a new transactionSummary and sets the default values.
+     * Instantiates a new TransactionSummary and sets the default values.
      */
     public TransactionSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a transactionSummary
+     * @return a TransactionSummary
      */
     @jakarta.annotation.Nonnull
     public static TransactionSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class TransactionSummary implements AdditionalDataHolder, Parsable {
         return new TransactionSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the blockedCount property value. Count of transactions that were blocked.
-     * @return a integer
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the blockedCount property value. The number of transactions that were blocked.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBlockedCount() {
-        return this.blockedCount;
+        return this.backingStore.get("blockedCount");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +78,27 @@ public class TransactionSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the totalCount property value. Count of transactions.
-     * @return a integer
+     * Gets the totalCount property value. The total number of transactions.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCount() {
-        return this.totalCount;
+        return this.backingStore.get("totalCount");
     }
     /**
      * Gets the trafficType property value. The trafficType property
-     * @return a trafficType
+     * @return a TrafficType
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
-        return this.trafficType;
+        return this.backingStore.get("trafficType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class TransactionSummary implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the blockedCount property value. Count of transactions that were blocked.
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the blockedCount property value. The number of transactions that were blocked.
      * @param value Value to set for the blockedCount property.
      */
     public void setBlockedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.blockedCount = value;
+        this.backingStore.set("blockedCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the totalCount property value. Count of transactions.
+     * Sets the totalCount property value. The total number of transactions.
      * @param value Value to set for the totalCount property.
      */
     public void setTotalCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalCount = value;
+        this.backingStore.set("totalCount", value);
     }
     /**
      * Sets the trafficType property value. The trafficType property
      * @param value Value to set for the trafficType property.
      */
     public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
-        this.trafficType = value;
+        this.backingStore.set("trafficType", value);
     }
 }

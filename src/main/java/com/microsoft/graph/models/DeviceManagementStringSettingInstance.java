@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementStringSettingInstance extends DeviceManagementSettingInstance implements Parsable {
     /**
-     * The string value
-     */
-    private String value;
-    /**
-     * Instantiates a new deviceManagementStringSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementStringSettingInstance and sets the default values.
      */
     public DeviceManagementStringSettingInstance() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementStringSettingInstance
+     * @return a DeviceManagementStringSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementStringSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
     }
     /**
      * Gets the value property value. The string value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

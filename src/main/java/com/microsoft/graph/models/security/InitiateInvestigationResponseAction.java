@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InitiateInvestigationResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<DeviceIdEntityIdentifier> identifier;
-    /**
-     * Instantiates a new initiateInvestigationResponseAction and sets the default values.
+     * Instantiates a new InitiateInvestigationResponseAction and sets the default values.
      */
     public InitiateInvestigationResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a initiateInvestigationResponseAction
+     * @return a InitiateInvestigationResponseAction
      */
     @jakarta.annotation.Nonnull
     public static InitiateInvestigationResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a deviceIdEntityIdentifier
+     * @return a EnumSet<DeviceIdEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceIdEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.backingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<DeviceIdEntityIdentifier> value) {
-        this.identifier = value;
+        this.backingStore.set("identifier", value);
     }
 }

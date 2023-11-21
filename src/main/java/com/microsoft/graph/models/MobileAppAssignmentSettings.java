@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,25 +14,23 @@ import java.util.Objects;
  * Abstract class to contain properties used to assign a mobile app to a group.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsable {
+public class MobileAppAssignmentSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new mobileAppAssignmentSettings and sets the default values.
+     * Instantiates a new MobileAppAssignmentSettings and sets the default values.
      */
     public MobileAppAssignmentSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppAssignmentSettings
+     * @return a MobileAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static MobileAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,6 +46,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
                 case "#microsoft.graph.macOsLobAppAssignmentSettings": return new MacOsLobAppAssignmentSettings();
                 case "#microsoft.graph.macOsVppAppAssignmentSettings": return new MacOsVppAppAssignmentSettings();
                 case "#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings": return new MicrosoftStoreForBusinessAppAssignmentSettings();
+                case "#microsoft.graph.win32CatalogAppAssignmentSettings": return new Win32CatalogAppAssignmentSettings();
                 case "#microsoft.graph.win32LobAppAssignmentSettings": return new Win32LobAppAssignmentSettings();
                 case "#microsoft.graph.windowsAppXAppAssignmentSettings": return new WindowsAppXAppAssignmentSettings();
                 case "#microsoft.graph.windowsUniversalAppXAppAssignmentSettings": return new WindowsUniversalAppXAppAssignmentSettings();
@@ -54,12 +56,25 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
         return new MobileAppAssignmentSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,11 +88,11 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -89,17 +104,25 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

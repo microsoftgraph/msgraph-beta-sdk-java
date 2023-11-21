@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private AccessPackageResourceRole accessPackageResourceRole;
-    /**
-     * The accessPackageResourceScope property
-     */
-    private AccessPackageResourceScope accessPackageResourceScope;
-    /**
-     * The createdBy property
-     */
-    private String createdBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The modifiedBy property
-     */
-    private String modifiedBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Instantiates a new accessPackageResourceRoleScope and sets the default values.
+     * Instantiates a new AccessPackageResourceRoleScope and sets the default values.
      */
     public AccessPackageResourceRoleScope() {
         super();
@@ -42,7 +18,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceRoleScope
+     * @return a AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRoleScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +27,27 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRole property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageResourceRole
+     * @return a AccessPackageResourceRole
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRole getAccessPackageResourceRole() {
-        return this.accessPackageResourceRole;
+        return this.backingStore.get("accessPackageResourceRole");
     }
     /**
      * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
-     * @return a accessPackageResourceScope
+     * @return a AccessPackageResourceScope
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceScope getAccessPackageResourceScope() {
-        return this.accessPackageResourceScope;
+        return this.backingStore.get("accessPackageResourceScope");
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -79,7 +55,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -98,11 +74,11 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The modifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
-        return this.modifiedBy;
+        return this.backingStore.get("modifiedBy");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -110,7 +86,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRole property.
      */
     public void setAccessPackageResourceRole(@jakarta.annotation.Nullable final AccessPackageResourceRole value) {
-        this.accessPackageResourceRole = value;
+        this.backingStore.set("accessPackageResourceRole", value);
     }
     /**
      * Sets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @param value Value to set for the accessPackageResourceScope property.
      */
     public void setAccessPackageResourceScope(@jakarta.annotation.Nullable final AccessPackageResourceScope value) {
-        this.accessPackageResourceScope = value;
+        this.backingStore.set("accessPackageResourceScope", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the modifiedBy property value. The modifiedBy property
      * @param value Value to set for the modifiedBy property.
      */
     public void setModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.modifiedBy = value;
+        this.backingStore.set("modifiedBy", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
 }

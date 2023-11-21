@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
-     * The storage used in group mailbox.
-     */
-    private Long mailboxStorageUsedInBytes;
-    /**
-     * The snapshot date for Exchange and SharePoint used storage.
-     */
-    private LocalDate reportDate;
-    /**
-     * The number of days the report covers.
-     */
-    private String reportPeriod;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The storage used in SharePoint document library.
-     */
-    private Long siteStorageUsedInBytes;
-    /**
-     * Instantiates a new office365GroupsActivityStorage and sets the default values.
+     * Instantiates a new Office365GroupsActivityStorage and sets the default values.
      */
     public Office365GroupsActivityStorage() {
         super();
@@ -38,7 +18,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityStorage
+     * @return a Office365GroupsActivityStorage
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityStorage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,11 +41,11 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMailboxStorageUsedInBytes() {
-        return this.mailboxStorageUsedInBytes;
+        return this.backingStore.get("mailboxStorageUsedInBytes");
     }
     /**
      * Gets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
@@ -73,15 +53,15 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
-        return this.reportDate;
+        return this.backingStore.get("reportDate");
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
-        return this.reportPeriod;
+        return this.backingStore.get("reportPeriod");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -89,15 +69,15 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.backingStore.get("reportRefreshDate");
     }
     /**
      * Gets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSiteStorageUsedInBytes() {
-        return this.siteStorageUsedInBytes;
+        return this.backingStore.get("siteStorageUsedInBytes");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the mailboxStorageUsedInBytes property.
      */
     public void setMailboxStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.mailboxStorageUsedInBytes = value;
+        this.backingStore.set("mailboxStorageUsedInBytes", value);
     }
     /**
      * Sets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
      * @param value Value to set for the reportDate property.
      */
     public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportDate = value;
+        this.backingStore.set("reportDate", value);
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      */
     public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
-        this.reportPeriod = value;
+        this.backingStore.set("reportPeriod", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.backingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
      * @param value Value to set for the siteStorageUsedInBytes property.
      */
     public void setSiteStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.siteStorageUsedInBytes = value;
+        this.backingStore.set("siteStorageUsedInBytes", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,57 +16,23 @@ import java.util.UUID;
  * Collection of app diagnostics associated with a user.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable {
+public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
-     */
-    private String application;
-    /**
-     * The version of the application. Example: 5.2203.1
-     */
-    private String clientVersion;
-    /**
-     * The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
-     */
-    private OffsetDateTime createdAtDateTime;
-    /**
-     * The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
-     */
-    private String easyId;
-    /**
-     * A list of files that are associated with the diagnostic.
-     */
-    private java.util.List<String> fileNames;
-    /**
-     * The locale information of the application. Example: en-US
-     */
-    private String locale;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The device's OS the diagnostic is from. Example: iOS
-     */
-    private String platform;
-    /**
-     * The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
-     */
-    private UUID powerliftId;
-    /**
-     * Instantiates a new powerliftIncidentMetadata and sets the default values.
+     * Instantiates a new PowerliftIncidentMetadata and sets the default values.
      */
     public PowerliftIncidentMetadata() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a powerliftIncidentMetadata
+     * @return a PowerliftIncidentMetadata
      */
     @jakarta.annotation.Nonnull
     public static PowerliftIncidentMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,28 +40,41 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
         return new PowerliftIncidentMetadata();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the application property value. The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplication() {
-        return this.application;
+        return this.backingStore.get("application");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the clientVersion property value. The version of the application. Example: 5.2203.1
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientVersion() {
-        return this.clientVersion;
+        return this.backingStore.get("clientVersion");
     }
     /**
      * Gets the createdAtDateTime property value. The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
@@ -100,15 +82,15 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedAtDateTime() {
-        return this.createdAtDateTime;
+        return this.backingStore.get("createdAtDateTime");
     }
     /**
      * Gets the easyId property value. The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEasyId() {
-        return this.easyId;
+        return this.backingStore.get("easyId");
     }
     /**
      * The deserialization information for the current model
@@ -130,35 +112,35 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the fileNames property value. A list of files that are associated with the diagnostic.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFileNames() {
-        return this.fileNames;
+        return this.backingStore.get("fileNames");
     }
     /**
      * Gets the locale property value. The locale information of the application. Example: en-US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.backingStore.get("locale");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the platform property value. The device's OS the diagnostic is from. Example: iOS
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlatform() {
-        return this.platform;
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the powerliftId property value. The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
@@ -166,7 +148,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public UUID getPowerliftId() {
-        return this.powerliftId;
+        return this.backingStore.get("powerliftId");
     }
     /**
      * Serializes information the current object
@@ -186,73 +168,81 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the application property value. The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final String value) {
-        this.application = value;
+        this.backingStore.set("application", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the clientVersion property value. The version of the application. Example: 5.2203.1
      * @param value Value to set for the clientVersion property.
      */
     public void setClientVersion(@jakarta.annotation.Nullable final String value) {
-        this.clientVersion = value;
+        this.backingStore.set("clientVersion", value);
     }
     /**
      * Sets the createdAtDateTime property value. The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
      * @param value Value to set for the createdAtDateTime property.
      */
     public void setCreatedAtDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdAtDateTime = value;
+        this.backingStore.set("createdAtDateTime", value);
     }
     /**
      * Sets the easyId property value. The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
      * @param value Value to set for the easyId property.
      */
     public void setEasyId(@jakarta.annotation.Nullable final String value) {
-        this.easyId = value;
+        this.backingStore.set("easyId", value);
     }
     /**
      * Sets the fileNames property value. A list of files that are associated with the diagnostic.
      * @param value Value to set for the fileNames property.
      */
     public void setFileNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.fileNames = value;
+        this.backingStore.set("fileNames", value);
     }
     /**
      * Sets the locale property value. The locale information of the application. Example: en-US
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.backingStore.set("locale", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the platform property value. The device's OS the diagnostic is from. Example: iOS
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final String value) {
-        this.platform = value;
+        this.backingStore.set("platform", value);
     }
     /**
      * Sets the powerliftId property value. The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
      * @param value Value to set for the powerliftId property.
      */
     public void setPowerliftId(@jakarta.annotation.Nullable final UUID value) {
-        this.powerliftId = value;
+        this.backingStore.set("powerliftId", value);
     }
 }

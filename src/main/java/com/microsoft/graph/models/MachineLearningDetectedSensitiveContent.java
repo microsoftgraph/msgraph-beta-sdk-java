@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveContent implements Parsable {
     /**
-     * The matchTolerance property
-     */
-    private EnumSet<MlClassificationMatchTolerance> matchTolerance;
-    /**
-     * The modelVersion property
-     */
-    private String modelVersion;
-    /**
-     * Instantiates a new machineLearningDetectedSensitiveContent and sets the default values.
+     * Instantiates a new MachineLearningDetectedSensitiveContent and sets the default values.
      */
     public MachineLearningDetectedSensitiveContent() {
         super();
@@ -26,7 +18,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a machineLearningDetectedSensitiveContent
+     * @return a MachineLearningDetectedSensitiveContent
      */
     @jakarta.annotation.Nonnull
     public static MachineLearningDetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     }
     /**
      * Gets the matchTolerance property value. The matchTolerance property
-     * @return a mlClassificationMatchTolerance
+     * @return a EnumSet<MlClassificationMatchTolerance>
      */
     @jakarta.annotation.Nullable
     public EnumSet<MlClassificationMatchTolerance> getMatchTolerance() {
-        return this.matchTolerance;
+        return this.backingStore.get("matchTolerance");
     }
     /**
      * Gets the modelVersion property value. The modelVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModelVersion() {
-        return this.modelVersion;
+        return this.backingStore.get("modelVersion");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param value Value to set for the matchTolerance property.
      */
     public void setMatchTolerance(@jakarta.annotation.Nullable final EnumSet<MlClassificationMatchTolerance> value) {
-        this.matchTolerance = value;
+        this.backingStore.set("matchTolerance", value);
     }
     /**
      * Sets the modelVersion property value. The modelVersion property
      * @param value Value to set for the modelVersion property.
      */
     public void setModelVersion(@jakarta.annotation.Nullable final String value) {
-        this.modelVersion = value;
+        this.backingStore.set("modelVersion", value);
     }
 }

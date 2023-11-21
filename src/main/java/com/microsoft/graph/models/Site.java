@@ -10,95 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Site extends BaseItem implements Parsable {
     /**
-     * Analytics about the view activities that took place in this site.
-     */
-    private ItemAnalytics analytics;
-    /**
-     * The collection of column definitions reusable across lists under this site.
-     */
-    private java.util.List<ColumnDefinition> columns;
-    /**
-     * The collection of content types defined for this site.
-     */
-    private java.util.List<ContentType> contentTypes;
-    /**
-     * The deleted property
-     */
-    private Deleted deleted;
-    /**
-     * The full title for the site. Read-only.
-     */
-    private String displayName;
-    /**
-     * The default drive (document library) for this site.
-     */
-    private Drive drive;
-    /**
-     * The collection of drives (document libraries) under this site.
-     */
-    private java.util.List<Drive> drives;
-    /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
-     */
-    private java.util.List<ColumnDefinition> externalColumns;
-    /**
-     * The informationProtection property
-     */
-    private InformationProtection informationProtection;
-    /**
-     * The isPersonalSite property
-     */
-    private Boolean isPersonalSite;
-    /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
-     */
-    private java.util.List<BaseItem> items;
-    /**
-     * The collection of lists under this site.
-     */
-    private java.util.List<List> lists;
-    /**
-     * The onenote property
-     */
-    private Onenote onenote;
-    /**
-     * The collection of long running operations for the site.
-     */
-    private java.util.List<RichLongRunningOperation> operations;
-    /**
-     * The collection of pages in the baseSitePages list in this site.
-     */
-    private java.util.List<BaseSitePage> pages;
-    /**
-     * The permissions associated with the site. Nullable.
-     */
-    private java.util.List<Permission> permissions;
-    /**
-     * If present, indicates that this is the root site in the site collection. Read-only.
-     */
-    private Root root;
-    /**
-     * The settings on this site. Read-only.
-     */
-    private SiteSettings settings;
-    /**
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     */
-    private SharepointIds sharepointIds;
-    /**
-     * Provides details about the site's site collection. Available only on the root site. Read-only.
-     */
-    private SiteCollection siteCollection;
-    /**
-     * The collection of the sub-sites under this site.
-     */
-    private java.util.List<Site> sites;
-    /**
-     * The termStore under this site.
-     */
-    private Store termStore;
-    /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
      */
     public Site() {
         super();
@@ -107,7 +19,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a site
+     * @return a Site
      */
     @jakarta.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -116,67 +28,67 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place in this site.
-     * @return a itemAnalytics
+     * @return a ItemAnalytics
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
-        return this.analytics;
+        return this.backingStore.get("analytics");
     }
     /**
      * Gets the columns property value. The collection of column definitions reusable across lists under this site.
-     * @return a columnDefinition
+     * @return a java.util.List<ColumnDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
-        return this.columns;
+        return this.backingStore.get("columns");
     }
     /**
      * Gets the contentTypes property value. The collection of content types defined for this site.
-     * @return a contentType
+     * @return a java.util.List<ContentType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
-        return this.contentTypes;
+        return this.backingStore.get("contentTypes");
     }
     /**
      * Gets the deleted property value. The deleted property
-     * @return a deleted
+     * @return a Deleted
      */
     @jakarta.annotation.Nullable
     public Deleted getDeleted() {
-        return this.deleted;
+        return this.backingStore.get("deleted");
     }
     /**
      * Gets the displayName property value. The full title for the site. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the drive property value. The default drive (document library) for this site.
-     * @return a drive
+     * @return a Drive
      */
     @jakarta.annotation.Nullable
     public Drive getDrive() {
-        return this.drive;
+        return this.backingStore.get("drive");
     }
     /**
      * Gets the drives property value. The collection of drives (document libraries) under this site.
-     * @return a drive
+     * @return a java.util.List<Drive>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Drive> getDrives() {
-        return this.drives;
+        return this.backingStore.get("drives");
     }
     /**
      * Gets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
-     * @return a columnDefinition
+     * @return a java.util.List<ColumnDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getExternalColumns() {
-        return this.externalColumns;
+        return this.backingStore.get("externalColumns");
     }
     /**
      * The deserialization information for the current model
@@ -201,6 +113,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SiteSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -211,115 +124,123 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
-     * @return a informationProtection
+     * @return a InformationProtection
      */
     @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
-        return this.informationProtection;
+        return this.backingStore.get("informationProtection");
     }
     /**
      * Gets the isPersonalSite property value. The isPersonalSite property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPersonalSite() {
-        return this.isPersonalSite;
+        return this.backingStore.get("isPersonalSite");
     }
     /**
      * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
-     * @return a baseItem
+     * @return a java.util.List<BaseItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BaseItem> getItems() {
-        return this.items;
+        return this.backingStore.get("items");
     }
     /**
      * Gets the lists property value. The collection of lists under this site.
-     * @return a list
+     * @return a java.util.List<List>
      */
     @jakarta.annotation.Nullable
     public java.util.List<List> getLists() {
-        return this.lists;
+        return this.backingStore.get("lists");
     }
     /**
      * Gets the onenote property value. The onenote property
-     * @return a onenote
+     * @return a Onenote
      */
     @jakarta.annotation.Nullable
     public Onenote getOnenote() {
-        return this.onenote;
+        return this.backingStore.get("onenote");
     }
     /**
      * Gets the operations property value. The collection of long running operations for the site.
-     * @return a richLongRunningOperation
+     * @return a java.util.List<RichLongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
-        return this.operations;
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
-     * @return a baseSitePage
+     * @return a java.util.List<BaseSitePage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BaseSitePage> getPages() {
-        return this.pages;
+        return this.backingStore.get("pages");
     }
     /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
-     * @return a permission
+     * @return a java.util.List<Permission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
-        return this.permissions;
+        return this.backingStore.get("permissions");
+    }
+    /**
+     * Gets the recycleBin property value. A container for a collection of recycleBinItem resources in this site.
+     * @return a RecycleBin
+     */
+    @jakarta.annotation.Nullable
+    public RecycleBin getRecycleBin() {
+        return this.backingStore.get("recycleBin");
     }
     /**
      * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
-     * @return a root
+     * @return a Root
      */
     @jakarta.annotation.Nullable
     public Root getRoot() {
-        return this.root;
+        return this.backingStore.get("root");
     }
     /**
      * Gets the settings property value. The settings on this site. Read-only.
-     * @return a siteSettings
+     * @return a SiteSettings
      */
     @jakarta.annotation.Nullable
     public SiteSettings getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this.sharepointIds;
+        return this.backingStore.get("sharepointIds");
     }
     /**
      * Gets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
-     * @return a siteCollection
+     * @return a SiteCollection
      */
     @jakarta.annotation.Nullable
     public SiteCollection getSiteCollection() {
-        return this.siteCollection;
+        return this.backingStore.get("siteCollection");
     }
     /**
      * Gets the sites property value. The collection of the sub-sites under this site.
-     * @return a site
+     * @return a java.util.List<Site>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Site> getSites() {
-        return this.sites;
+        return this.backingStore.get("sites");
     }
     /**
      * Gets the termStore property value. The termStore under this site.
-     * @return a store
+     * @return a Store
      */
     @jakarta.annotation.Nullable
     public Store getTermStore() {
-        return this.termStore;
+        return this.backingStore.get("termStore");
     }
     /**
      * Serializes information the current object
@@ -344,6 +265,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("pages", this.getPages());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
+        writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("root", this.getRoot());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
@@ -356,153 +278,160 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      */
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
-        this.analytics = value;
+        this.backingStore.set("analytics", value);
     }
     /**
      * Sets the columns property value. The collection of column definitions reusable across lists under this site.
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this.columns = value;
+        this.backingStore.set("columns", value);
     }
     /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
      * @param value Value to set for the contentTypes property.
      */
     public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
-        this.contentTypes = value;
+        this.backingStore.set("contentTypes", value);
     }
     /**
      * Sets the deleted property value. The deleted property
      * @param value Value to set for the deleted property.
      */
     public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
-        this.deleted = value;
+        this.backingStore.set("deleted", value);
     }
     /**
      * Sets the displayName property value. The full title for the site. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the drive property value. The default drive (document library) for this site.
      * @param value Value to set for the drive property.
      */
     public void setDrive(@jakarta.annotation.Nullable final Drive value) {
-        this.drive = value;
+        this.backingStore.set("drive", value);
     }
     /**
      * Sets the drives property value. The collection of drives (document libraries) under this site.
      * @param value Value to set for the drives property.
      */
     public void setDrives(@jakarta.annotation.Nullable final java.util.List<Drive> value) {
-        this.drives = value;
+        this.backingStore.set("drives", value);
     }
     /**
      * Sets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
      * @param value Value to set for the externalColumns property.
      */
     public void setExternalColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this.externalColumns = value;
+        this.backingStore.set("externalColumns", value);
     }
     /**
      * Sets the informationProtection property value. The informationProtection property
      * @param value Value to set for the informationProtection property.
      */
     public void setInformationProtection(@jakarta.annotation.Nullable final InformationProtection value) {
-        this.informationProtection = value;
+        this.backingStore.set("informationProtection", value);
     }
     /**
      * Sets the isPersonalSite property value. The isPersonalSite property
      * @param value Value to set for the isPersonalSite property.
      */
     public void setIsPersonalSite(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPersonalSite = value;
+        this.backingStore.set("isPersonalSite", value);
     }
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<BaseItem> value) {
-        this.items = value;
+        this.backingStore.set("items", value);
     }
     /**
      * Sets the lists property value. The collection of lists under this site.
      * @param value Value to set for the lists property.
      */
     public void setLists(@jakarta.annotation.Nullable final java.util.List<List> value) {
-        this.lists = value;
+        this.backingStore.set("lists", value);
     }
     /**
      * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      */
     public void setOnenote(@jakarta.annotation.Nullable final Onenote value) {
-        this.onenote = value;
+        this.backingStore.set("onenote", value);
     }
     /**
      * Sets the operations property value. The collection of long running operations for the site.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
-        this.operations = value;
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {
-        this.pages = value;
+        this.backingStore.set("pages", value);
     }
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
-        this.permissions = value;
+        this.backingStore.set("permissions", value);
+    }
+    /**
+     * Sets the recycleBin property value. A container for a collection of recycleBinItem resources in this site.
+     * @param value Value to set for the recycleBin property.
+     */
+    public void setRecycleBin(@jakarta.annotation.Nullable final RecycleBin value) {
+        this.backingStore.set("recycleBin", value);
     }
     /**
      * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
      * @param value Value to set for the root property.
      */
     public void setRoot(@jakarta.annotation.Nullable final Root value) {
-        this.root = value;
+        this.backingStore.set("root", value);
     }
     /**
      * Sets the settings property value. The settings on this site. Read-only.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final SiteSettings value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
      */
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
-        this.sharepointIds = value;
+        this.backingStore.set("sharepointIds", value);
     }
     /**
      * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
      * @param value Value to set for the siteCollection property.
      */
     public void setSiteCollection(@jakarta.annotation.Nullable final SiteCollection value) {
-        this.siteCollection = value;
+        this.backingStore.set("siteCollection", value);
     }
     /**
      * Sets the sites property value. The collection of the sub-sites under this site.
      * @param value Value to set for the sites property.
      */
     public void setSites(@jakarta.annotation.Nullable final java.util.List<Site> value) {
-        this.sites = value;
+        this.backingStore.set("sites", value);
     }
     /**
      * Sets the termStore property value. The termStore under this site.
      * @param value Value to set for the termStore property.
      */
     public void setTermStore(@jakarta.annotation.Nullable final Store value) {
-        this.termStore = value;
+        this.backingStore.set("termStore", value);
     }
 }

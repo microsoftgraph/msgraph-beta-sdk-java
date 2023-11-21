@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Dependent child settings to this group of settings.
-     */
-    private java.util.List<String> childIds;
-    /**
-     * List of child settings that depend on this setting
-     */
-    private java.util.List<DeviceManagementConfigurationSettingDependedOnBy> dependedOnBy;
-    /**
-     * List of Dependencies for the setting group
-     */
-    private java.util.List<DeviceManagementConfigurationDependentOn> dependentOn;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingGroupDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingGroupDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSettingGroupDefinition() {
         super();
@@ -29,7 +17,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingGroupDefinition
+     * @return a DeviceManagementConfigurationSettingGroupDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingGroupDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,27 +33,27 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     }
     /**
      * Gets the childIds property value. Dependent child settings to this group of settings.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildIds() {
-        return this.childIds;
+        return this.backingStore.get("childIds");
     }
     /**
      * Gets the dependedOnBy property value. List of child settings that depend on this setting
-     * @return a deviceManagementConfigurationSettingDependedOnBy
+     * @return a java.util.List<DeviceManagementConfigurationSettingDependedOnBy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
-        return this.dependedOnBy;
+        return this.backingStore.get("dependedOnBy");
     }
     /**
      * Gets the dependentOn property value. List of Dependencies for the setting group
-     * @return a deviceManagementConfigurationDependentOn
+     * @return a java.util.List<DeviceManagementConfigurationDependentOn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
-        return this.dependentOn;
+        return this.backingStore.get("dependentOn");
     }
     /**
      * The deserialization information for the current model
@@ -95,20 +83,20 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      * @param value Value to set for the childIds property.
      */
     public void setChildIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.childIds = value;
+        this.backingStore.set("childIds", value);
     }
     /**
      * Sets the dependedOnBy property value. List of child settings that depend on this setting
      * @param value Value to set for the dependedOnBy property.
      */
     public void setDependedOnBy(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
-        this.dependedOnBy = value;
+        this.backingStore.set("dependedOnBy", value);
     }
     /**
      * Sets the dependentOn property value. List of Dependencies for the setting group
      * @param value Value to set for the dependentOn property.
      */
     public void setDependentOn(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
-        this.dependentOn = value;
+        this.backingStore.set("dependentOn", value);
     }
 }

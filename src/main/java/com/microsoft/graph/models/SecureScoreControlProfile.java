@@ -10,83 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
-     * Control action type (Config, Review, Behavior).
-     */
-    private String actionType;
-    /**
-     * URL to where the control can be actioned.
-     */
-    private String actionUrl;
-    /**
-     * GUID string for tenant ID.
-     */
-    private String azureTenantId;
-    /**
-     * The collection of compliance information associated with secure score control
-     */
-    private java.util.List<ComplianceInformation> complianceInformation;
-    /**
-     * Control action category (Account, Data, Device, Apps, Infrastructure).
-     */
-    private String controlCategory;
-    /**
-     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
-     */
-    private java.util.List<SecureScoreControlStateUpdate> controlStateUpdates;
-    /**
-     * Flag to indicate if a control is depreciated.
-     */
-    private Boolean deprecated;
-    /**
-     * Resource cost of implemmentating control (low, moderate, high).
-     */
-    private String implementationCost;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Current obtained max score on specified date.
-     */
-    private Double maxScore;
-    /**
-     * Microsoft's stack ranking of control.
-     */
-    private Integer rank;
-    /**
-     * Description of what the control will help remediate.
-     */
-    private String remediation;
-    /**
-     * Description of the impact on users of the remediation.
-     */
-    private String remediationImpact;
-    /**
-     * Service that owns the control (Exchange, Sharepoint, Azure AD).
-     */
-    private String service;
-    /**
-     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
-     */
-    private java.util.List<String> threats;
-    /**
-     * Control tier (Core, Defense in Depth, Advanced.)
-     */
-    private String tier;
-    /**
-     * Title of the control.
-     */
-    private String title;
-    /**
-     * User impact of implementing control (low, moderate, high).
-     */
-    private String userImpact;
-    /**
-     * The vendorInformation property
-     */
-    private SecurityVendorInformation vendorInformation;
-    /**
-     * Instantiates a new secureScoreControlProfile and sets the default values.
+     * Instantiates a new SecureScoreControlProfile and sets the default values.
      */
     public SecureScoreControlProfile() {
         super();
@@ -94,7 +18,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScoreControlProfile
+     * @return a SecureScoreControlProfile
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,59 +27,59 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the actionType property value. Control action type (Config, Review, Behavior).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionType() {
-        return this.actionType;
+        return this.backingStore.get("actionType");
     }
     /**
      * Gets the actionUrl property value. URL to where the control can be actioned.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionUrl() {
-        return this.actionUrl;
+        return this.backingStore.get("actionUrl");
     }
     /**
      * Gets the azureTenantId property value. GUID string for tenant ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.backingStore.get("azureTenantId");
     }
     /**
      * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
-     * @return a complianceInformation
+     * @return a java.util.List<ComplianceInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceInformation> getComplianceInformation() {
-        return this.complianceInformation;
+        return this.backingStore.get("complianceInformation");
     }
     /**
      * Gets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlCategory() {
-        return this.controlCategory;
+        return this.backingStore.get("controlCategory");
     }
     /**
      * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
-     * @return a secureScoreControlStateUpdate
+     * @return a java.util.List<SecureScoreControlStateUpdate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlStateUpdate> getControlStateUpdates() {
-        return this.controlStateUpdates;
+        return this.backingStore.get("controlStateUpdates");
     }
     /**
      * Gets the deprecated property value. Flag to indicate if a control is depreciated.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeprecated() {
-        return this.deprecated;
+        return this.backingStore.get("deprecated");
     }
     /**
      * The deserialization information for the current model
@@ -187,11 +111,11 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImplementationCost() {
-        return this.implementationCost;
+        return this.backingStore.get("implementationCost");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -199,87 +123,87 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the maxScore property value. Current obtained max score on specified date.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
-        return this.maxScore;
+        return this.backingStore.get("maxScore");
     }
     /**
      * Gets the rank property value. Microsoft's stack ranking of control.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
-        return this.rank;
+        return this.backingStore.get("rank");
     }
     /**
      * Gets the remediation property value. Description of what the control will help remediate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediation() {
-        return this.remediation;
+        return this.backingStore.get("remediation");
     }
     /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationImpact() {
-        return this.remediationImpact;
+        return this.backingStore.get("remediationImpact");
     }
     /**
-     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
-     * @return a string
+     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getService() {
-        return this.service;
+        return this.backingStore.get("service");
     }
     /**
      * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getThreats() {
-        return this.threats;
+        return this.backingStore.get("threats");
     }
     /**
      * Gets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTier() {
-        return this.tier;
+        return this.backingStore.get("tier");
     }
     /**
      * Gets the title property value. Title of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Gets the userImpact property value. User impact of implementing control (low, moderate, high).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserImpact() {
-        return this.userImpact;
+        return this.backingStore.get("userImpact");
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this.vendorInformation;
+        return this.backingStore.get("vendorInformation");
     }
     /**
      * Serializes information the current object
@@ -313,132 +237,132 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the actionType property.
      */
     public void setActionType(@jakarta.annotation.Nullable final String value) {
-        this.actionType = value;
+        this.backingStore.set("actionType", value);
     }
     /**
      * Sets the actionUrl property value. URL to where the control can be actioned.
      * @param value Value to set for the actionUrl property.
      */
     public void setActionUrl(@jakarta.annotation.Nullable final String value) {
-        this.actionUrl = value;
+        this.backingStore.set("actionUrl", value);
     }
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.backingStore.set("azureTenantId", value);
     }
     /**
      * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
      * @param value Value to set for the complianceInformation property.
      */
     public void setComplianceInformation(@jakarta.annotation.Nullable final java.util.List<ComplianceInformation> value) {
-        this.complianceInformation = value;
+        this.backingStore.set("complianceInformation", value);
     }
     /**
      * Sets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
      * @param value Value to set for the controlCategory property.
      */
     public void setControlCategory(@jakarta.annotation.Nullable final String value) {
-        this.controlCategory = value;
+        this.backingStore.set("controlCategory", value);
     }
     /**
      * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
      * @param value Value to set for the controlStateUpdates property.
      */
     public void setControlStateUpdates(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlStateUpdate> value) {
-        this.controlStateUpdates = value;
+        this.backingStore.set("controlStateUpdates", value);
     }
     /**
      * Sets the deprecated property value. Flag to indicate if a control is depreciated.
      * @param value Value to set for the deprecated property.
      */
     public void setDeprecated(@jakarta.annotation.Nullable final Boolean value) {
-        this.deprecated = value;
+        this.backingStore.set("deprecated", value);
     }
     /**
      * Sets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).
      * @param value Value to set for the implementationCost property.
      */
     public void setImplementationCost(@jakarta.annotation.Nullable final String value) {
-        this.implementationCost = value;
+        this.backingStore.set("implementationCost", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the maxScore property value. Current obtained max score on specified date.
      * @param value Value to set for the maxScore property.
      */
     public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
-        this.maxScore = value;
+        this.backingStore.set("maxScore", value);
     }
     /**
      * Sets the rank property value. Microsoft's stack ranking of control.
      * @param value Value to set for the rank property.
      */
     public void setRank(@jakarta.annotation.Nullable final Integer value) {
-        this.rank = value;
+        this.backingStore.set("rank", value);
     }
     /**
      * Sets the remediation property value. Description of what the control will help remediate.
      * @param value Value to set for the remediation property.
      */
     public void setRemediation(@jakarta.annotation.Nullable final String value) {
-        this.remediation = value;
+        this.backingStore.set("remediation", value);
     }
     /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation.
      * @param value Value to set for the remediationImpact property.
      */
     public void setRemediationImpact(@jakarta.annotation.Nullable final String value) {
-        this.remediationImpact = value;
+        this.backingStore.set("remediationImpact", value);
     }
     /**
-     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {
-        this.service = value;
+        this.backingStore.set("service", value);
     }
     /**
      * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
      * @param value Value to set for the threats property.
      */
     public void setThreats(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.threats = value;
+        this.backingStore.set("threats", value);
     }
     /**
      * Sets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
      * @param value Value to set for the tier property.
      */
     public void setTier(@jakarta.annotation.Nullable final String value) {
-        this.tier = value;
+        this.backingStore.set("tier", value);
     }
     /**
      * Sets the title property value. Title of the control.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
     /**
      * Sets the userImpact property value. User impact of implementing control (low, moderate, high).
      * @param value Value to set for the userImpact property.
      */
     public void setUserImpact(@jakarta.annotation.Nullable final String value) {
-        this.userImpact = value;
+        this.backingStore.set("userImpact", value);
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
-        this.vendorInformation = value;
+        this.backingStore.set("vendorInformation", value);
     }
 }

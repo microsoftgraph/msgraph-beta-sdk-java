@@ -13,47 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extends Entity implements Parsable {
     /**
-     * Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
-     */
-    private WindowsDefenderApplicationControlSupplementalPolicyStatuses deploymentStatus;
-    /**
-     * Device ID.
-     */
-    private String deviceId;
-    /**
-     * Device name.
-     */
-    private String deviceName;
-    /**
-     * Last sync date time.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * Windows OS Version Description.
-     */
-    private String osDescription;
-    /**
-     * Windows OS Version.
-     */
-    private String osVersion;
-    /**
-     * The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-     */
-    private WindowsDefenderApplicationControlSupplementalPolicy policy;
-    /**
-     * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
-     */
-    private String policyVersion;
-    /**
-     * The name of the user of this device.
-     */
-    private String userName;
-    /**
-     * User Principal Name.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus and sets the default values.
+     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus and sets the default values.
      */
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus() {
         super();
@@ -61,7 +21,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,27 +30,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     }
     /**
      * Gets the deploymentStatus property value. Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
-     * @return a windowsDefenderApplicationControlSupplementalPolicyStatuses
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyStatuses
      */
     @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyStatuses getDeploymentStatus() {
-        return this.deploymentStatus;
+        return this.backingStore.get("deploymentStatus");
     }
     /**
      * Gets the deviceId property value. Device ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -117,55 +77,55 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the osDescription property value. Windows OS Version Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
-        return this.osDescription;
+        return this.backingStore.get("osDescription");
     }
     /**
      * Gets the osVersion property value. Windows OS Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-     * @return a windowsDefenderApplicationControlSupplementalPolicy
+     * @return a WindowsDefenderApplicationControlSupplementalPolicy
      */
     @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy getPolicy() {
-        return this.policy;
+        return this.backingStore.get("policy");
     }
     /**
      * Gets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyVersion() {
-        return this.policyVersion;
+        return this.backingStore.get("policyVersion");
     }
     /**
      * Gets the userName property value. The name of the user of this device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param value Value to set for the deploymentStatus property.
      */
     public void setDeploymentStatus(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyStatuses value) {
-        this.deploymentStatus = value;
+        this.backingStore.set("deploymentStatus", value);
     }
     /**
      * Sets the deviceId property value. Device ID.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync date time.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the osDescription property value. Windows OS Version Description.
      * @param value Value to set for the osDescription property.
      */
     public void setOsDescription(@jakarta.annotation.Nullable final String value) {
-        this.osDescription = value;
+        this.backingStore.set("osDescription", value);
     }
     /**
      * Sets the osVersion property value. Windows OS Version.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicy value) {
-        this.policy = value;
+        this.backingStore.set("policy", value);
     }
     /**
      * Sets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policyVersion property.
      */
     public void setPolicyVersion(@jakarta.annotation.Nullable final String value) {
-        this.policyVersion = value;
+        this.backingStore.set("policyVersion", value);
     }
     /**
      * Sets the userName property value. The name of the user of this device.
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

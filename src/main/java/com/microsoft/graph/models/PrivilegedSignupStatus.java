@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedSignupStatus extends Entity implements Parsable {
     /**
-     * The isRegistered property
-     */
-    private Boolean isRegistered;
-    /**
-     * The status property
-     */
-    private SetupStatus status;
-    /**
-     * Instantiates a new privilegedSignupStatus and sets the default values.
+     * Instantiates a new PrivilegedSignupStatus and sets the default values.
      */
     public PrivilegedSignupStatus() {
         super();
@@ -25,7 +17,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedSignupStatus
+     * @return a PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedSignupStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     }
     /**
      * Gets the isRegistered property value. The isRegistered property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistered() {
-        return this.isRegistered;
+        return this.backingStore.get("isRegistered");
     }
     /**
      * Gets the status property value. The status property
-     * @return a setupStatus
+     * @return a SetupStatus
      */
     @jakarta.annotation.Nullable
     public SetupStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * @param value Value to set for the isRegistered property.
      */
     public void setIsRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRegistered = value;
+        this.backingStore.set("isRegistered", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SetupStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

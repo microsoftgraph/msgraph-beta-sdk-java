@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabel extends Entity implements Parsable {
     /**
-     * The color that the UI should display for the label, if configured.
-     */
-    private String color;
-    /**
-     * Returns the supported content formats for the label.
-     */
-    private java.util.List<String> contentFormats;
-    /**
-     * The admin-defined description for the label.
-     */
-    private String description;
-    /**
-     * Indicates whether the label has protection actions configured.
-     */
-    private Boolean hasProtection;
-    /**
-     * Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
-     */
-    private Boolean isActive;
-    /**
-     * Indicates whether the label can be applied to content. False if the label is a parent with child labels.
-     */
-    private Boolean isAppliable;
-    /**
-     * The plaintext name of the label.
-     */
-    private String name;
-    /**
-     * The parent label associated with a child label. Null if the label has no parent.
-     */
-    private SensitivityLabel parent;
-    /**
-     * The sensitivity value of the label, where lower is less sensitive.
-     */
-    private Integer sensitivity;
-    /**
-     * The tooltip that should be displayed for the label in a UI.
-     */
-    private String tooltip;
-    /**
-     * Instantiates a new sensitivityLabel and sets the default values.
+     * Instantiates a new SensitivityLabel and sets the default values.
      */
     public SensitivityLabel() {
         super();
@@ -58,7 +18,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityLabel
+     * @return a SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public static SensitivityLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,27 +27,27 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. The color that the UI should display for the label, if configured.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.backingStore.get("color");
     }
     /**
      * Gets the contentFormats property value. Returns the supported content formats for the label.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentFormats() {
-        return this.contentFormats;
+        return this.backingStore.get("contentFormats");
     }
     /**
      * Gets the description property value. The admin-defined description for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -110,59 +70,59 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the hasProtection property value. Indicates whether the label has protection actions configured.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasProtection() {
-        return this.hasProtection;
+        return this.backingStore.get("hasProtection");
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.backingStore.get("isActive");
     }
     /**
      * Gets the isAppliable property value. Indicates whether the label can be applied to content. False if the label is a parent with child labels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAppliable() {
-        return this.isAppliable;
+        return this.backingStore.get("isAppliable");
     }
     /**
      * Gets the name property value. The plaintext name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the parent property value. The parent label associated with a child label. Null if the label has no parent.
-     * @return a sensitivityLabel
+     * @return a SensitivityLabel
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel getParent() {
-        return this.parent;
+        return this.backingStore.get("parent");
     }
     /**
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSensitivity() {
-        return this.sensitivity;
+        return this.backingStore.get("sensitivity");
     }
     /**
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTooltip() {
-        return this.tooltip;
+        return this.backingStore.get("tooltip");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.backingStore.set("color", value);
     }
     /**
      * Sets the contentFormats property value. Returns the supported content formats for the label.
      * @param value Value to set for the contentFormats property.
      */
     public void setContentFormats(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.contentFormats = value;
+        this.backingStore.set("contentFormats", value);
     }
     /**
      * Sets the description property value. The admin-defined description for the label.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the hasProtection property value. Indicates whether the label has protection actions configured.
      * @param value Value to set for the hasProtection property.
      */
     public void setHasProtection(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasProtection = value;
+        this.backingStore.set("hasProtection", value);
     }
     /**
      * Sets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.backingStore.set("isActive", value);
     }
     /**
      * Sets the isAppliable property value. Indicates whether the label can be applied to content. False if the label is a parent with child labels.
      * @param value Value to set for the isAppliable property.
      */
     public void setIsAppliable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAppliable = value;
+        this.backingStore.set("isAppliable", value);
     }
     /**
      * Sets the name property value. The plaintext name of the label.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the parent property value. The parent label associated with a child label. Null if the label has no parent.
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final SensitivityLabel value) {
-        this.parent = value;
+        this.backingStore.set("parent", value);
     }
     /**
      * Sets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Integer value) {
-        this.sensitivity = value;
+        this.backingStore.set("sensitivity", value);
     }
     /**
      * Sets the tooltip property value. The tooltip that should be displayed for the label in a UI.
      * @param value Value to set for the tooltip property.
      */
     public void setTooltip(@jakarta.annotation.Nullable final String value) {
-        this.tooltip = value;
+        this.backingStore.set("tooltip", value);
     }
 }

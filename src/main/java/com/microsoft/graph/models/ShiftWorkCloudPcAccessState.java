@@ -10,7 +10,6 @@ public enum ShiftWorkCloudPcAccessState implements ValuedEnum {
     ActivationFailed("activationFailed"),
     Active("active"),
     Activating("activating"),
-    Waitlisted("waitlisted"),
     UnknownFutureValue("unknownFutureValue"),
     StandbyMode("standbyMode");
     public final String value;
@@ -28,7 +27,6 @@ public enum ShiftWorkCloudPcAccessState implements ValuedEnum {
             case "activationFailed": return ActivationFailed;
             case "active": return Active;
             case "activating": return Activating;
-            case "waitlisted": return Waitlisted;
             case "unknownFutureValue": return UnknownFutureValue;
             case "standbyMode": return StandbyMode;
             default: return null;

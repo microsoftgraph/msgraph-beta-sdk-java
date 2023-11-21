@@ -11,71 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAppPerformance extends Entity implements Parsable {
     /**
-     * The appFriendlyName property
-     */
-    private String appFriendlyName;
-    /**
-     * The appName property
-     */
-    private String appName;
-    /**
-     * The appPublisher property
-     */
-    private String appPublisher;
-    /**
-     * The appVersion property
-     */
-    private String appVersion;
-    /**
-     * The deviceId property
-     */
-    private String deviceId;
-    /**
-     * The deviceManufacturer property
-     */
-    private String deviceManufacturer;
-    /**
-     * The deviceModel property
-     */
-    private String deviceModel;
-    /**
-     * The deviceName property
-     */
-    private String deviceName;
-    /**
-     * The healthStatus property
-     */
-    private String healthStatus;
-    /**
-     * The isLatestUsedVersion property
-     */
-    private Integer isLatestUsedVersion;
-    /**
-     * The isMostUsedVersion property
-     */
-    private Integer isMostUsedVersion;
-    /**
-     * The lastUpdatedDateTime property
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The tenantDisplayName property
-     */
-    private String tenantDisplayName;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The totalAppCrashCount property
-     */
-    private Integer totalAppCrashCount;
-    /**
-     * The totalAppFreezeCount property
-     */
-    private Integer totalAppFreezeCount;
-    /**
-     * Instantiates a new deviceAppPerformance and sets the default values.
+     * Instantiates a new DeviceAppPerformance and sets the default values.
      */
     public DeviceAppPerformance() {
         super();
@@ -83,7 +19,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppPerformance
+     * @return a DeviceAppPerformance
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,67 +28,67 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appFriendlyName property value. The appFriendlyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppFriendlyName() {
-        return this.appFriendlyName;
+        return this.backingStore.get("appFriendlyName");
     }
     /**
      * Gets the appName property value. The appName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.backingStore.get("appName");
     }
     /**
      * Gets the appPublisher property value. The appPublisher property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.backingStore.get("appPublisher");
     }
     /**
      * Gets the appVersion property value. The appVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
-        return this.appVersion;
+        return this.backingStore.get("appVersion");
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceManufacturer property value. The deviceManufacturer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this.deviceManufacturer;
+        return this.backingStore.get("deviceManufacturer");
     }
     /**
      * Gets the deviceModel property value. The deviceModel property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -181,27 +117,27 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatus() {
-        return this.healthStatus;
+        return this.backingStore.get("healthStatus");
     }
     /**
      * Gets the isLatestUsedVersion property value. The isLatestUsedVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIsLatestUsedVersion() {
-        return this.isLatestUsedVersion;
+        return this.backingStore.get("isLatestUsedVersion");
     }
     /**
      * Gets the isMostUsedVersion property value. The isMostUsedVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIsMostUsedVersion() {
-        return this.isMostUsedVersion;
+        return this.backingStore.get("isMostUsedVersion");
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
@@ -209,39 +145,39 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.backingStore.get("tenantDisplayName");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the totalAppCrashCount property value. The totalAppCrashCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppCrashCount() {
-        return this.totalAppCrashCount;
+        return this.backingStore.get("totalAppCrashCount");
     }
     /**
      * Gets the totalAppFreezeCount property value. The totalAppFreezeCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppFreezeCount() {
-        return this.totalAppFreezeCount;
+        return this.backingStore.get("totalAppFreezeCount");
     }
     /**
      * Serializes information the current object
@@ -272,111 +208,111 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the appFriendlyName property.
      */
     public void setAppFriendlyName(@jakarta.annotation.Nullable final String value) {
-        this.appFriendlyName = value;
+        this.backingStore.set("appFriendlyName", value);
     }
     /**
      * Sets the appName property value. The appName property
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.backingStore.set("appName", value);
     }
     /**
      * Sets the appPublisher property value. The appPublisher property
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.backingStore.set("appPublisher", value);
     }
     /**
      * Sets the appVersion property value. The appVersion property
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.appVersion = value;
+        this.backingStore.set("appVersion", value);
     }
     /**
      * Sets the deviceId property value. The deviceId property
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceManufacturer property value. The deviceManufacturer property
      * @param value Value to set for the deviceManufacturer property.
      */
     public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.deviceManufacturer = value;
+        this.backingStore.set("deviceManufacturer", value);
     }
     /**
      * Sets the deviceModel property value. The deviceModel property
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the deviceName property value. The deviceName property
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final String value) {
-        this.healthStatus = value;
+        this.backingStore.set("healthStatus", value);
     }
     /**
      * Sets the isLatestUsedVersion property value. The isLatestUsedVersion property
      * @param value Value to set for the isLatestUsedVersion property.
      */
     public void setIsLatestUsedVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.isLatestUsedVersion = value;
+        this.backingStore.set("isLatestUsedVersion", value);
     }
     /**
      * Sets the isMostUsedVersion property value. The isMostUsedVersion property
      * @param value Value to set for the isMostUsedVersion property.
      */
     public void setIsMostUsedVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.isMostUsedVersion = value;
+        this.backingStore.set("isMostUsedVersion", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the tenantDisplayName property value. The tenantDisplayName property
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.backingStore.set("tenantDisplayName", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the totalAppCrashCount property value. The totalAppCrashCount property
      * @param value Value to set for the totalAppCrashCount property.
      */
     public void setTotalAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalAppCrashCount = value;
+        this.backingStore.set("totalAppCrashCount", value);
     }
     /**
      * Sets the totalAppFreezeCount property value. The totalAppFreezeCount property
      * @param value Value to set for the totalAppFreezeCount property.
      */
     public void setTotalAppFreezeCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalAppFreezeCount = value;
+        this.backingStore.set("totalAppFreezeCount", value);
     }
 }

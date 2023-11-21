@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Contains value for delivery optimization priority.
-     */
-    private Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
-    /**
-     * The install time settings to apply for this app assignment.
-     */
-    private MobileAppInstallTimeSettings installTimeSettings;
-    /**
-     * Contains value for notification status.
-     */
-    private Win32LobAppNotification notifications;
-    /**
-     * The reboot settings to apply for this app assignment.
-     */
-    private Win32LobAppRestartSettings restartSettings;
-    /**
-     * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
+     * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
      */
     public Win32LobAppAssignmentSettings() {
         super();
@@ -37,20 +21,35 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppAssignmentSettings
+     * @return a Win32LobAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.win32CatalogAppAssignmentSettings": return new Win32CatalogAppAssignmentSettings();
+            }
+        }
         return new Win32LobAppAssignmentSettings();
     }
     /**
+     * Gets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @return a Win32LobAppAutoUpdateSettings
+     */
+    @jakarta.annotation.Nullable
+    public Win32LobAppAutoUpdateSettings getAutoUpdateSettings() {
+        return this.backingStore.get("autoUpdateSettings");
+    }
+    /**
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
-     * @return a win32LobAppDeliveryOptimizationPriority
+     * @return a Win32LobAppDeliveryOptimizationPriority
      */
     @jakarta.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
-        return this.deliveryOptimizationPriority;
+        return this.backingStore.get("deliveryOptimizationPriority");
     }
     /**
      * The deserialization information for the current model
@@ -59,6 +58,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("autoUpdateSettings", (n) -> { this.setAutoUpdateSettings(n.getObjectValue(Win32LobAppAutoUpdateSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
         deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(Win32LobAppNotification.class)); });
@@ -67,27 +67,27 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
-     * @return a mobileAppInstallTimeSettings
+     * @return a MobileAppInstallTimeSettings
      */
     @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
-        return this.installTimeSettings;
+        return this.backingStore.get("installTimeSettings");
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
-     * @return a win32LobAppNotification
+     * @return a Win32LobAppNotification
      */
     @jakarta.annotation.Nullable
     public Win32LobAppNotification getNotifications() {
-        return this.notifications;
+        return this.backingStore.get("notifications");
     }
     /**
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
-     * @return a win32LobAppRestartSettings
+     * @return a Win32LobAppRestartSettings
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartSettings getRestartSettings() {
-        return this.restartSettings;
+        return this.backingStore.get("restartSettings");
     }
     /**
      * Serializes information the current object
@@ -96,37 +96,45 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("autoUpdateSettings", this.getAutoUpdateSettings());
         writer.writeEnumValue("deliveryOptimizationPriority", this.getDeliveryOptimizationPriority());
         writer.writeObjectValue("installTimeSettings", this.getInstallTimeSettings());
         writer.writeEnumValue("notifications", this.getNotifications());
         writer.writeObjectValue("restartSettings", this.getRestartSettings());
     }
     /**
+     * Sets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @param value Value to set for the autoUpdateSettings property.
+     */
+    public void setAutoUpdateSettings(@jakarta.annotation.Nullable final Win32LobAppAutoUpdateSettings value) {
+        this.backingStore.set("autoUpdateSettings", value);
+    }
+    /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      * @param value Value to set for the deliveryOptimizationPriority property.
      */
     public void setDeliveryOptimizationPriority(@jakarta.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
-        this.deliveryOptimizationPriority = value;
+        this.backingStore.set("deliveryOptimizationPriority", value);
     }
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
      * @param value Value to set for the installTimeSettings property.
      */
     public void setInstallTimeSettings(@jakarta.annotation.Nullable final MobileAppInstallTimeSettings value) {
-        this.installTimeSettings = value;
+        this.backingStore.set("installTimeSettings", value);
     }
     /**
      * Sets the notifications property value. Contains value for notification status.
      * @param value Value to set for the notifications property.
      */
     public void setNotifications(@jakarta.annotation.Nullable final Win32LobAppNotification value) {
-        this.notifications = value;
+        this.backingStore.set("notifications", value);
     }
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
      * @param value Value to set for the restartSettings property.
      */
     public void setRestartSettings(@jakarta.annotation.Nullable final Win32LobAppRestartSettings value) {
-        this.restartSettings = value;
+        this.backingStore.set("restartSettings", value);
     }
 }

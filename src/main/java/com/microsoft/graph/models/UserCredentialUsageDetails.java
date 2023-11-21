@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
-     * The authMethod property
-     */
-    private UsageAuthMethod authMethod;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * Provides the failure reason for the corresponding reset or registration workflow.
-     */
-    private String failureReason;
-    /**
-     * The feature property
-     */
-    private FeatureType feature;
-    /**
-     * Indicates success or failure of the workflow.
-     */
-    private Boolean isSuccess;
-    /**
-     * User name of the user performing the reset or registration workflow.
-     */
-    private String userDisplayName;
-    /**
-     * User principal name of the user performing the reset or registration workflow.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new userCredentialUsageDetails and sets the default values.
+     * Instantiates a new UserCredentialUsageDetails and sets the default values.
      */
     public UserCredentialUsageDetails() {
         super();
@@ -46,7 +18,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userCredentialUsageDetails
+     * @return a UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public static UserCredentialUsageDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the authMethod property value. The authMethod property
-     * @return a usageAuthMethod
+     * @return a UsageAuthMethod
      */
     @jakarta.annotation.Nullable
     public UsageAuthMethod getAuthMethod() {
-        return this.authMethod;
+        return this.backingStore.get("authMethod");
     }
     /**
      * Gets the eventDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -67,23 +39,23 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.backingStore.get("eventDateTime");
     }
     /**
      * Gets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
-        return this.failureReason;
+        return this.backingStore.get("failureReason");
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a featureType
+     * @return a FeatureType
      */
     @jakarta.annotation.Nullable
     public FeatureType getFeature() {
-        return this.feature;
+        return this.backingStore.get("feature");
     }
     /**
      * The deserialization information for the current model
@@ -103,27 +75,27 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSuccess property value. Indicates success or failure of the workflow.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSuccess() {
-        return this.isSuccess;
+        return this.backingStore.get("isSuccess");
     }
     /**
      * Gets the userDisplayName property value. User name of the user performing the reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.backingStore.get("userDisplayName");
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the authMethod property.
      */
     public void setAuthMethod(@jakarta.annotation.Nullable final UsageAuthMethod value) {
-        this.authMethod = value;
+        this.backingStore.set("authMethod", value);
     }
     /**
      * Sets the eventDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.backingStore.set("eventDateTime", value);
     }
     /**
      * Sets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
-        this.failureReason = value;
+        this.backingStore.set("failureReason", value);
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final FeatureType value) {
-        this.feature = value;
+        this.backingStore.set("feature", value);
     }
     /**
      * Sets the isSuccess property value. Indicates success or failure of the workflow.
      * @param value Value to set for the isSuccess property.
      */
     public void setIsSuccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSuccess = value;
+        this.backingStore.set("isSuccess", value);
     }
     /**
      * Sets the userDisplayName property value. User name of the user performing the reset or registration workflow.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.backingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

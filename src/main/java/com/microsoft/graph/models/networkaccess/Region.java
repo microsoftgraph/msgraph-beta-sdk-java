@@ -24,6 +24,18 @@ public enum Region implements ValuedEnum {
     SouthAfricaWest("southAfricaWest"),
     SouthAfricaNorth("southAfricaNorth"),
     UaeNorth("uaeNorth"),
+    AustraliaEast("australiaEast"),
+    WestCentralUS("westCentralUS"),
+    CentralIndia("centralIndia"),
+    SouthEastAsia("southEastAsia"),
+    SwedenCentral("swedenCentral"),
+    SouthIndia("southIndia"),
+    AustraliaSouthEast("australiaSouthEast"),
+    KoreaCentral("koreaCentral"),
+    PolandCentral("polandCentral"),
+    BrazilSouth("brazilSouth"),
+    JapanEast("japanEast"),
+    JapanWest("japanWest"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     Region(final String value) {
@@ -54,6 +66,18 @@ public enum Region implements ValuedEnum {
             case "southAfricaWest": return SouthAfricaWest;
             case "southAfricaNorth": return SouthAfricaNorth;
             case "uaeNorth": return UaeNorth;
+            case "australiaEast": return AustraliaEast;
+            case "westCentralUS": return WestCentralUS;
+            case "centralIndia": return CentralIndia;
+            case "southEastAsia": return SouthEastAsia;
+            case "swedenCentral": return SwedenCentral;
+            case "southIndia": return SouthIndia;
+            case "australiaSouthEast": return AustraliaSouthEast;
+            case "koreaCentral": return KoreaCentral;
+            case "polandCentral": return PolandCentral;
+            case "brazilSouth": return BrazilSouth;
+            case "japanEast": return JapanEast;
+            case "japanWest": return JapanWest;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

@@ -11,35 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
     /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The emailAddress property
-     */
-    private String emailAddress;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The phoneNumber property
-     */
-    private String phoneNumber;
-    /**
-     * Instantiates a new managedTenantTicketingEndpoint and sets the default values.
+     * Instantiates a new ManagedTenantTicketingEndpoint and sets the default values.
      */
     public ManagedTenantTicketingEndpoint() {
         super();
@@ -47,7 +19,7 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantTicketingEndpoint
+     * @return a ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantTicketingEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,11 +28,11 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.backingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -68,23 +40,23 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the emailAddress property value. The emailAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -104,11 +76,11 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.backingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -116,15 +88,15 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return this.backingStore.get("phoneNumber");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class ManagedTenantTicketingEndpoint extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.backingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the emailAddress property value. The emailAddress property
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.backingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.phoneNumber = value;
+        this.backingStore.set("phoneNumber", value);
     }
 }

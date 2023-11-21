@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForwardingPolicyLink extends PolicyLink implements Parsable {
     /**
-     * Instantiates a new forwardingPolicyLink and sets the default values.
+     * Instantiates a new ForwardingPolicyLink and sets the default values.
      */
     public ForwardingPolicyLink() {
         super();
@@ -18,7 +18,7 @@ public class ForwardingPolicyLink extends PolicyLink implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingPolicyLink
+     * @return a ForwardingPolicyLink
      */
     @jakarta.annotation.Nonnull
     public static ForwardingPolicyLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

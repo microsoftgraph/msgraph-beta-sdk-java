@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MediaPrompt extends Prompt implements Parsable {
     /**
-     * The loop property
-     */
-    private Integer loop;
-    /**
-     * The mediaInfo property
-     */
-    private MediaInfo mediaInfo;
-    /**
-     * Instantiates a new mediaPrompt and sets the default values.
+     * Instantiates a new MediaPrompt and sets the default values.
      */
     public MediaPrompt() {
         super();
@@ -26,7 +18,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mediaPrompt
+     * @return a MediaPrompt
      */
     @jakarta.annotation.Nonnull
     public static MediaPrompt createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class MediaPrompt extends Prompt implements Parsable {
     }
     /**
      * Gets the loop property value. The loop property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLoop() {
-        return this.loop;
+        return this.backingStore.get("loop");
     }
     /**
      * Gets the mediaInfo property value. The mediaInfo property
-     * @return a mediaInfo
+     * @return a MediaInfo
      */
     @jakarta.annotation.Nullable
     public MediaInfo getMediaInfo() {
-        return this.mediaInfo;
+        return this.backingStore.get("mediaInfo");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the loop property.
      */
     public void setLoop(@jakarta.annotation.Nullable final Integer value) {
-        this.loop = value;
+        this.backingStore.set("loop", value);
     }
     /**
      * Sets the mediaInfo property value. The mediaInfo property
      * @param value Value to set for the mediaInfo property.
      */
     public void setMediaInfo(@jakarta.annotation.Nullable final MediaInfo value) {
-        this.mediaInfo = value;
+        this.backingStore.set("mediaInfo", value);
     }
 }

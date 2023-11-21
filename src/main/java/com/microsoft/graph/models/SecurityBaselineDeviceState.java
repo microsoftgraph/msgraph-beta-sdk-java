@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
-     * Display name of the device
-     */
-    private String deviceDisplayName;
-    /**
-     * Last modified date time of the policy report
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * Intune device id
-     */
-    private String managedDeviceId;
-    /**
-     * Security Baseline Compliance State
-     */
-    private SecurityBaselineComplianceState state;
-    /**
-     * User Principal Name
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new securityBaselineDeviceState and sets the default values.
+     * Instantiates a new SecurityBaselineDeviceState and sets the default values.
      */
     public SecurityBaselineDeviceState() {
         super();
@@ -41,7 +21,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineDeviceState
+     * @return a SecurityBaselineDeviceState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +30,11 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Display name of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.backingStore.get("deviceDisplayName");
     }
     /**
      * The deserialization information for the current model
@@ -76,31 +56,31 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.backingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the managedDeviceId property value. Intune device id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.backingStore.get("managedDeviceId");
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.backingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.backingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the managedDeviceId property value. Intune device id
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.backingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final SecurityBaselineComplianceState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

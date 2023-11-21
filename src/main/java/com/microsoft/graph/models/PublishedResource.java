@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PublishedResource extends Entity implements Parsable {
     /**
-     * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
-     */
-    private java.util.List<OnPremisesAgentGroup> agentGroups;
-    /**
-     * Display Name of the publishedResource.
-     */
-    private String displayName;
-    /**
-     * The publishingType property
-     */
-    private OnPremisesPublishingType publishingType;
-    /**
-     * Name of the publishedResource.
-     */
-    private String resourceName;
-    /**
-     * Instantiates a new publishedResource and sets the default values.
+     * Instantiates a new PublishedResource and sets the default values.
      */
     public PublishedResource() {
         super();
@@ -33,7 +17,7 @@ public class PublishedResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a publishedResource
+     * @return a PublishedResource
      */
     @jakarta.annotation.Nonnull
     public static PublishedResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +26,19 @@ public class PublishedResource extends Entity implements Parsable {
     }
     /**
      * Gets the agentGroups property value. List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
-     * @return a onPremisesAgentGroup
+     * @return a java.util.List<OnPremisesAgentGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
-        return this.agentGroups;
+        return this.backingStore.get("agentGroups");
     }
     /**
      * Gets the displayName property value. Display Name of the publishedResource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +55,19 @@ public class PublishedResource extends Entity implements Parsable {
     }
     /**
      * Gets the publishingType property value. The publishingType property
-     * @return a onPremisesPublishingType
+     * @return a OnPremisesPublishingType
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {
-        return this.publishingType;
+        return this.backingStore.get("publishingType");
     }
     /**
      * Gets the resourceName property value. Name of the publishedResource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.backingStore.get("resourceName");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      */
     public void setAgentGroups(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
-        this.agentGroups = value;
+        this.backingStore.set("agentGroups", value);
     }
     /**
      * Sets the displayName property value. Display Name of the publishedResource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      */
     public void setPublishingType(@jakarta.annotation.Nullable final OnPremisesPublishingType value) {
-        this.publishingType = value;
+        this.backingStore.set("publishingType", value);
     }
     /**
      * Sets the resourceName property value. Name of the publishedResource.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.backingStore.set("resourceName", value);
     }
 }

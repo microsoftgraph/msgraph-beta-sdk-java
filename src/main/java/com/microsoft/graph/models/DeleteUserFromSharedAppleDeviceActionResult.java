@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * User principal name of the user to be deleted
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new deleteUserFromSharedAppleDeviceActionResult and sets the default values.
+     * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.
      */
     public DeleteUserFromSharedAppleDeviceActionResult() {
         super();
@@ -24,7 +20,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deleteUserFromSharedAppleDeviceActionResult
+     * @return a DeleteUserFromSharedAppleDeviceActionResult
      */
     @jakarta.annotation.Nonnull
     public static DeleteUserFromSharedAppleDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user to be deleted
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

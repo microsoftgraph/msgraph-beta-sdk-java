@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisioningResourceErrorDetail implements Parsable {
     /**
-     * The propertyName property
-     */
-    private String propertyName;
-    /**
-     * The target property
-     */
-    private String target;
-    /**
-     * Instantiates a new serviceProvisioningLinkedResourceErrorDetail and sets the default values.
+     * Instantiates a new ServiceProvisioningLinkedResourceErrorDetail and sets the default values.
      */
     public ServiceProvisioningLinkedResourceErrorDetail() {
         super();
@@ -25,7 +17,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceProvisioningLinkedResourceErrorDetail
+     * @return a ServiceProvisioningLinkedResourceErrorDetail
      */
     @jakarta.annotation.Nonnull
     public static ServiceProvisioningLinkedResourceErrorDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * Gets the propertyName property value. The propertyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPropertyName() {
-        return this.propertyName;
+        return this.backingStore.get("propertyName");
     }
     /**
      * Gets the target property value. The target property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
      * @param value Value to set for the propertyName property.
      */
     public void setPropertyName(@jakarta.annotation.Nullable final String value) {
-        this.propertyName = value;
+        this.backingStore.set("propertyName", value);
     }
     /**
      * Sets the target property value. The target property
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

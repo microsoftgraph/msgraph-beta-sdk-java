@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /**
-     * An enum type to represent approval type of a driver update profile.
-     */
-    private DriverUpdateProfileApprovalType approvalType;
-    /**
-     * The list of group assignments of the profile.
-     */
-    private java.util.List<WindowsDriverUpdateProfileAssignment> assignments;
-    /**
-     * The date time that the profile was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
-     */
-    private Integer deploymentDeferralInDays;
-    /**
-     * The description of the profile which is specified by the user.
-     */
-    private String description;
-    /**
-     * Number of devices reporting for this profile
-     */
-    private Integer deviceReporting;
-    /**
-     * The display name for the profile.
-     */
-    private String displayName;
-    /**
-     * Driver inventories for this profile.
-     */
-    private java.util.List<WindowsDriverUpdateInventory> driverInventories;
-    /**
-     * Driver inventory sync status for this profile.
-     */
-    private WindowsDriverUpdateProfileInventorySyncStatus inventorySyncStatus;
-    /**
-     * The date time that the profile was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Number of new driver updates available for this profile.
-     */
-    private Integer newUpdates;
-    /**
-     * List of Scope Tags for this Driver Update entity.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Instantiates a new windowsDriverUpdateProfile and sets the default values.
+     * Instantiates a new WindowsDriverUpdateProfile and sets the default values.
      */
     public WindowsDriverUpdateProfile() {
         super();
@@ -69,7 +21,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDriverUpdateProfile
+     * @return a WindowsDriverUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,19 +30,19 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the approvalType property value. An enum type to represent approval type of a driver update profile.
-     * @return a driverUpdateProfileApprovalType
+     * @return a DriverUpdateProfileApprovalType
      */
     @jakarta.annotation.Nullable
     public DriverUpdateProfileApprovalType getApprovalType() {
-        return this.approvalType;
+        return this.backingStore.get("approvalType");
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a windowsDriverUpdateProfileAssignment
+     * @return a java.util.List<WindowsDriverUpdateProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDriverUpdateProfileAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
@@ -98,47 +50,47 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deploymentDeferralInDays property value. Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeploymentDeferralInDays() {
-        return this.deploymentDeferralInDays;
+        return this.backingStore.get("deploymentDeferralInDays");
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the deviceReporting property value. Number of devices reporting for this profile
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceReporting() {
-        return this.deviceReporting;
+        return this.backingStore.get("deviceReporting");
     }
     /**
      * Gets the displayName property value. The display name for the profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the driverInventories property value. Driver inventories for this profile.
-     * @return a windowsDriverUpdateInventory
+     * @return a java.util.List<WindowsDriverUpdateInventory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDriverUpdateInventory> getDriverInventories() {
-        return this.driverInventories;
+        return this.backingStore.get("driverInventories");
     }
     /**
      * The deserialization information for the current model
@@ -163,11 +115,11 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the inventorySyncStatus property value. Driver inventory sync status for this profile.
-     * @return a windowsDriverUpdateProfileInventorySyncStatus
+     * @return a WindowsDriverUpdateProfileInventorySyncStatus
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfileInventorySyncStatus getInventorySyncStatus() {
-        return this.inventorySyncStatus;
+        return this.backingStore.get("inventorySyncStatus");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
@@ -175,23 +127,23 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the newUpdates property value. Number of new driver updates available for this profile.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNewUpdates() {
-        return this.newUpdates;
+        return this.backingStore.get("newUpdates");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Driver Update entity.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the approvalType property.
      */
     public void setApprovalType(@jakarta.annotation.Nullable final DriverUpdateProfileApprovalType value) {
-        this.approvalType = value;
+        this.backingStore.set("approvalType", value);
     }
     /**
      * Sets the assignments property value. The list of group assignments of the profile.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<WindowsDriverUpdateProfileAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. The date time that the profile was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deploymentDeferralInDays property value. Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
      * @param value Value to set for the deploymentDeferralInDays property.
      */
     public void setDeploymentDeferralInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.deploymentDeferralInDays = value;
+        this.backingStore.set("deploymentDeferralInDays", value);
     }
     /**
      * Sets the description property value. The description of the profile which is specified by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the deviceReporting property value. Number of devices reporting for this profile
      * @param value Value to set for the deviceReporting property.
      */
     public void setDeviceReporting(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceReporting = value;
+        this.backingStore.set("deviceReporting", value);
     }
     /**
      * Sets the displayName property value. The display name for the profile.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the driverInventories property value. Driver inventories for this profile.
      * @param value Value to set for the driverInventories property.
      */
     public void setDriverInventories(@jakarta.annotation.Nullable final java.util.List<WindowsDriverUpdateInventory> value) {
-        this.driverInventories = value;
+        this.backingStore.set("driverInventories", value);
     }
     /**
      * Sets the inventorySyncStatus property value. Driver inventory sync status for this profile.
      * @param value Value to set for the inventorySyncStatus property.
      */
     public void setInventorySyncStatus(@jakarta.annotation.Nullable final WindowsDriverUpdateProfileInventorySyncStatus value) {
-        this.inventorySyncStatus = value;
+        this.backingStore.set("inventorySyncStatus", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time that the profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the newUpdates property value. Number of new driver updates available for this profile.
      * @param value Value to set for the newUpdates property.
      */
     public void setNewUpdates(@jakarta.annotation.Nullable final Integer value) {
-        this.newUpdates = value;
+        this.backingStore.set("newUpdates", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Driver Update entity.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
 }

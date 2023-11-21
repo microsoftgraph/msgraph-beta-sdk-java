@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectionOperation extends Entity implements Parsable {
     /**
-     * The error property
-     */
-    private PublicError error;
-    /**
-     * The status property
-     */
-    private ConnectionOperationStatus status;
-    /**
-     * Instantiates a new connectionOperation and sets the default values.
+     * Instantiates a new ConnectionOperation and sets the default values.
      */
     public ConnectionOperation() {
         super();
@@ -25,7 +17,7 @@ public class ConnectionOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectionOperation
+     * @return a ConnectionOperation
      */
     @jakarta.annotation.Nonnull
     public static ConnectionOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class ConnectionOperation extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a publicError
+     * @return a PublicError
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class ConnectionOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a connectionOperationStatus
+     * @return a ConnectionOperationStatus
      */
     @jakarta.annotation.Nullable
     public ConnectionOperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ConnectionOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectionOperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

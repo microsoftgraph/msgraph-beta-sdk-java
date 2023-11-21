@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsOfUseContainer extends Entity implements Parsable {
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
-     */
-    private java.util.List<AgreementAcceptance> agreementAcceptances;
-    /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
-     */
-    private java.util.List<Agreement> agreements;
-    /**
-     * Instantiates a new termsOfUseContainer and sets the default values.
+     * Instantiates a new TermsOfUseContainer and sets the default values.
      */
     public TermsOfUseContainer() {
         super();
@@ -25,7 +17,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termsOfUseContainer
+     * @return a TermsOfUseContainer
      */
     @jakarta.annotation.Nonnull
     public static TermsOfUseContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,19 +26,19 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     }
     /**
      * Gets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
-     * @return a agreementAcceptance
+     * @return a java.util.List<AgreementAcceptance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
-        return this.agreementAcceptances;
+        return this.backingStore.get("agreementAcceptances");
     }
     /**
-     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
-     * @return a agreement
+     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID.
+     * @return a java.util.List<Agreement>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Agreement> getAgreements() {
-        return this.agreements;
+        return this.backingStore.get("agreements");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      */
     public void setAgreementAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
-        this.agreementAcceptances = value;
+        this.backingStore.set("agreementAcceptances", value);
     }
     /**
-     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID.
      * @param value Value to set for the agreements property.
      */
     public void setAgreements(@jakarta.annotation.Nullable final java.util.List<Agreement> value) {
-        this.agreements = value;
+        this.backingStore.set("agreements", value);
     }
 }

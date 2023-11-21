@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     /**
-     * Determine whether we want to run detection script only or run both detection script and remediation script
-     */
-    private Boolean runRemediationScript;
-    /**
-     * Script run schedule for the target group
-     */
-    private DeviceHealthScriptRunSchedule runSchedule;
-    /**
-     * The Azure Active Directory group we are targeting the script to
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new deviceHealthScriptAssignment and sets the default values.
+     * Instantiates a new DeviceHealthScriptAssignment and sets the default values.
      */
     public DeviceHealthScriptAssignment() {
         super();
@@ -32,7 +20,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptAssignment
+     * @return a DeviceHealthScriptAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +41,27 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the runRemediationScript property value. Determine whether we want to run detection script only or run both detection script and remediation script
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunRemediationScript() {
-        return this.runRemediationScript;
+        return this.backingStore.get("runRemediationScript");
     }
     /**
      * Gets the runSchedule property value. Script run schedule for the target group
-     * @return a deviceHealthScriptRunSchedule
+     * @return a DeviceHealthScriptRunSchedule
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptRunSchedule getRunSchedule() {
-        return this.runSchedule;
+        return this.backingStore.get("runSchedule");
     }
     /**
      * Gets the target property value. The Azure Active Directory group we are targeting the script to
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * @param value Value to set for the runRemediationScript property.
      */
     public void setRunRemediationScript(@jakarta.annotation.Nullable final Boolean value) {
-        this.runRemediationScript = value;
+        this.backingStore.set("runRemediationScript", value);
     }
     /**
      * Sets the runSchedule property value. Script run schedule for the target group
      * @param value Value to set for the runSchedule property.
      */
     public void setRunSchedule(@jakarta.annotation.Nullable final DeviceHealthScriptRunSchedule value) {
-        this.runSchedule = value;
+        this.backingStore.set("runSchedule", value);
     }
     /**
      * Sets the target property value. The Azure Active Directory group we are targeting the script to
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

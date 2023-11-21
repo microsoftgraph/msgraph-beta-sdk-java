@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,73 +14,23 @@ import java.util.Objects;
  * BitLocker Encryption Base Policies.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsable {
+public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     */
-    private BitLockerEncryptionMethod encryptionMethod;
-    /**
-     * Indicates the minimum length of startup pin. Valid values 4 to 20
-     */
-    private Integer minimumPinLength;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
-     */
-    private Boolean prebootRecoveryEnableMessageAndUrl;
-    /**
-     * Defines a custom recovery message.
-     */
-    private String prebootRecoveryMessage;
-    /**
-     * Defines a custom recovery URL.
-     */
-    private String prebootRecoveryUrl;
-    /**
-     * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-     */
-    private BitLockerRecoveryOptions recoveryOptions;
-    /**
-     * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-     */
-    private Boolean startupAuthenticationBlockWithoutTpmChip;
-    /**
-     * Require additional authentication at startup.
-     */
-    private Boolean startupAuthenticationRequired;
-    /**
-     * Possible values of the ConfigurationUsage list.
-     */
-    private ConfigurationUsage startupAuthenticationTpmKeyUsage;
-    /**
-     * Possible values of the ConfigurationUsage list.
-     */
-    private ConfigurationUsage startupAuthenticationTpmPinAndKeyUsage;
-    /**
-     * Possible values of the ConfigurationUsage list.
-     */
-    private ConfigurationUsage startupAuthenticationTpmPinUsage;
-    /**
-     * Possible values of the ConfigurationUsage list.
-     */
-    private ConfigurationUsage startupAuthenticationTpmUsage;
-    /**
-     * Instantiates a new bitLockerSystemDrivePolicy and sets the default values.
+     * Instantiates a new BitLockerSystemDrivePolicy and sets the default values.
      */
     public BitLockerSystemDrivePolicy() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bitLockerSystemDrivePolicy
+     * @return a BitLockerSystemDrivePolicy
      */
     @jakarta.annotation.Nonnull
     public static BitLockerSystemDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,20 +38,33 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         return new BitLockerSystemDrivePolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a bitLockerEncryptionMethod
+     * @return a BitLockerEncryptionMethod
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
-        return this.encryptionMethod;
+        return this.backingStore.get("encryptionMethod");
     }
     /**
      * The deserialization information for the current model
@@ -124,99 +90,99 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumPinLength() {
-        return this.minimumPinLength;
+        return this.backingStore.get("minimumPinLength");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrebootRecoveryEnableMessageAndUrl() {
-        return this.prebootRecoveryEnableMessageAndUrl;
+        return this.backingStore.get("prebootRecoveryEnableMessageAndUrl");
     }
     /**
      * Gets the prebootRecoveryMessage property value. Defines a custom recovery message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrebootRecoveryMessage() {
-        return this.prebootRecoveryMessage;
+        return this.backingStore.get("prebootRecoveryMessage");
     }
     /**
      * Gets the prebootRecoveryUrl property value. Defines a custom recovery URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrebootRecoveryUrl() {
-        return this.prebootRecoveryUrl;
+        return this.backingStore.get("prebootRecoveryUrl");
     }
     /**
      * Gets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-     * @return a bitLockerRecoveryOptions
+     * @return a BitLockerRecoveryOptions
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
-        return this.recoveryOptions;
+        return this.backingStore.get("recoveryOptions");
     }
     /**
      * Gets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationBlockWithoutTpmChip() {
-        return this.startupAuthenticationBlockWithoutTpmChip;
+        return this.backingStore.get("startupAuthenticationBlockWithoutTpmChip");
     }
     /**
      * Gets the startupAuthenticationRequired property value. Require additional authentication at startup.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationRequired() {
-        return this.startupAuthenticationRequired;
+        return this.backingStore.get("startupAuthenticationRequired");
     }
     /**
      * Gets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmKeyUsage() {
-        return this.startupAuthenticationTpmKeyUsage;
+        return this.backingStore.get("startupAuthenticationTpmKeyUsage");
     }
     /**
      * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinAndKeyUsage() {
-        return this.startupAuthenticationTpmPinAndKeyUsage;
+        return this.backingStore.get("startupAuthenticationTpmPinAndKeyUsage");
     }
     /**
      * Gets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinUsage() {
-        return this.startupAuthenticationTpmPinUsage;
+        return this.backingStore.get("startupAuthenticationTpmPinUsage");
     }
     /**
      * Gets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmUsage() {
-        return this.startupAuthenticationTpmUsage;
+        return this.backingStore.get("startupAuthenticationTpmUsage");
     }
     /**
      * Serializes information the current object
@@ -240,101 +206,109 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
-        this.encryptionMethod = value;
+        this.backingStore.set("encryptionMethod", value);
     }
     /**
      * Sets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
      * @param value Value to set for the minimumPinLength property.
      */
     public void setMinimumPinLength(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumPinLength = value;
+        this.backingStore.set("minimumPinLength", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
      * @param value Value to set for the prebootRecoveryEnableMessageAndUrl property.
      */
     public void setPrebootRecoveryEnableMessageAndUrl(@jakarta.annotation.Nullable final Boolean value) {
-        this.prebootRecoveryEnableMessageAndUrl = value;
+        this.backingStore.set("prebootRecoveryEnableMessageAndUrl", value);
     }
     /**
      * Sets the prebootRecoveryMessage property value. Defines a custom recovery message.
      * @param value Value to set for the prebootRecoveryMessage property.
      */
     public void setPrebootRecoveryMessage(@jakarta.annotation.Nullable final String value) {
-        this.prebootRecoveryMessage = value;
+        this.backingStore.set("prebootRecoveryMessage", value);
     }
     /**
      * Sets the prebootRecoveryUrl property value. Defines a custom recovery URL.
      * @param value Value to set for the prebootRecoveryUrl property.
      */
     public void setPrebootRecoveryUrl(@jakarta.annotation.Nullable final String value) {
-        this.prebootRecoveryUrl = value;
+        this.backingStore.set("prebootRecoveryUrl", value);
     }
     /**
      * Sets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
      * @param value Value to set for the recoveryOptions property.
      */
     public void setRecoveryOptions(@jakarta.annotation.Nullable final BitLockerRecoveryOptions value) {
-        this.recoveryOptions = value;
+        this.backingStore.set("recoveryOptions", value);
     }
     /**
      * Sets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
      * @param value Value to set for the startupAuthenticationBlockWithoutTpmChip property.
      */
     public void setStartupAuthenticationBlockWithoutTpmChip(@jakarta.annotation.Nullable final Boolean value) {
-        this.startupAuthenticationBlockWithoutTpmChip = value;
+        this.backingStore.set("startupAuthenticationBlockWithoutTpmChip", value);
     }
     /**
      * Sets the startupAuthenticationRequired property value. Require additional authentication at startup.
      * @param value Value to set for the startupAuthenticationRequired property.
      */
     public void setStartupAuthenticationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.startupAuthenticationRequired = value;
+        this.backingStore.set("startupAuthenticationRequired", value);
     }
     /**
      * Sets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmKeyUsage property.
      */
     public void setStartupAuthenticationTpmKeyUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
-        this.startupAuthenticationTpmKeyUsage = value;
+        this.backingStore.set("startupAuthenticationTpmKeyUsage", value);
     }
     /**
      * Sets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinAndKeyUsage property.
      */
     public void setStartupAuthenticationTpmPinAndKeyUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
-        this.startupAuthenticationTpmPinAndKeyUsage = value;
+        this.backingStore.set("startupAuthenticationTpmPinAndKeyUsage", value);
     }
     /**
      * Sets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinUsage property.
      */
     public void setStartupAuthenticationTpmPinUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
-        this.startupAuthenticationTpmPinUsage = value;
+        this.backingStore.set("startupAuthenticationTpmPinUsage", value);
     }
     /**
      * Sets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmUsage property.
      */
     public void setStartupAuthenticationTpmUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
-        this.startupAuthenticationTpmUsage = value;
+        this.backingStore.set("startupAuthenticationTpmUsage", value);
     }
 }

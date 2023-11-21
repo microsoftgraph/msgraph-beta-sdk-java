@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptRunSummary extends Entity implements Parsable {
     /**
-     * Error device count.
-     */
-    private Integer errorDeviceCount;
-    /**
-     * Error user count.
-     */
-    private Integer errorUserCount;
-    /**
-     * Success device count.
-     */
-    private Integer successDeviceCount;
-    /**
-     * Success user count.
-     */
-    private Integer successUserCount;
-    /**
-     * Instantiates a new deviceManagementScriptRunSummary and sets the default values.
+     * Instantiates a new DeviceManagementScriptRunSummary and sets the default values.
      */
     public DeviceManagementScriptRunSummary() {
         super();
@@ -36,7 +20,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptRunSummary
+     * @return a DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +29,19 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the errorDeviceCount property value. Error device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this.errorDeviceCount;
+        return this.backingStore.get("errorDeviceCount");
     }
     /**
      * Gets the errorUserCount property value. Error user count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
-        return this.errorUserCount;
+        return this.backingStore.get("errorUserCount");
     }
     /**
      * The deserialization information for the current model
@@ -74,19 +58,19 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the successDeviceCount property value. Success device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessDeviceCount() {
-        return this.successDeviceCount;
+        return this.backingStore.get("successDeviceCount");
     }
     /**
      * Gets the successUserCount property value. Success user count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessUserCount() {
-        return this.successUserCount;
+        return this.backingStore.get("successUserCount");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the errorDeviceCount property.
      */
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorDeviceCount = value;
+        this.backingStore.set("errorDeviceCount", value);
     }
     /**
      * Sets the errorUserCount property value. Error user count.
      * @param value Value to set for the errorUserCount property.
      */
     public void setErrorUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorUserCount = value;
+        this.backingStore.set("errorUserCount", value);
     }
     /**
      * Sets the successDeviceCount property value. Success device count.
      * @param value Value to set for the successDeviceCount property.
      */
     public void setSuccessDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successDeviceCount = value;
+        this.backingStore.set("successDeviceCount", value);
     }
     /**
      * Sets the successUserCount property value. Success user count.
      * @param value Value to set for the successUserCount property.
      */
     public void setSuccessUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successUserCount = value;
+        this.backingStore.set("successUserCount", value);
     }
 }

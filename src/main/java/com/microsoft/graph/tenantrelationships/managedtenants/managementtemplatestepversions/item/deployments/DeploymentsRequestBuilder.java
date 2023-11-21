@@ -60,48 +60,48 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get deployments from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepDeploymentCollectionResponse
+     * @return a ManagementTemplateStepDeploymentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeploymentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagementTemplateStepDeploymentCollectionResponse get() {
         return get(null);
     }
     /**
      * Get deployments from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepDeploymentCollectionResponse
+     * @return a ManagementTemplateStepDeploymentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeploymentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagementTemplateStepDeploymentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagementTemplateStepDeploymentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagementTemplateStepDeploymentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deployments for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a ManagementTemplateStepDeployment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> post(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body) {
+    @jakarta.annotation.Nullable
+    public ManagementTemplateStepDeployment post(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deployments for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a ManagementTemplateStepDeployment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> post(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagementTemplateStepDeployment post(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagementTemplateStepDeployment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagementTemplateStepDeployment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get deployments from tenantRelationships
@@ -118,18 +118,9 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deploymentsRequestBuilder
+     * @return a DeploymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

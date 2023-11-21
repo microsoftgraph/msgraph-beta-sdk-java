@@ -10,35 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookTaskFolder extends Entity implements Parsable {
     /**
-     * The version of the task folder.
-     */
-    private String changeKey;
-    /**
-     * True if the folder is the default task folder.
-     */
-    private Boolean isDefaultFolder;
-    /**
-     * The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * The name of the task folder.
-     */
-    private String name;
-    /**
-     * The unique GUID identifier for the task folder's parent group.
-     */
-    private UUID parentGroupKey;
-    /**
-     * The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
-     * The tasks in this task folder. Read-only. Nullable.
-     */
-    private java.util.List<OutlookTask> tasks;
-    /**
-     * Instantiates a new outlookTaskFolder and sets the default values.
+     * Instantiates a new OutlookTaskFolder and sets the default values.
      */
     public OutlookTaskFolder() {
         super();
@@ -46,7 +18,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookTaskFolder
+     * @return a OutlookTaskFolder
      */
     @jakarta.annotation.Nonnull
     public static OutlookTaskFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the changeKey property value. The version of the task folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
-        return this.changeKey;
+        return this.backingStore.get("changeKey");
     }
     /**
      * The deserialization information for the current model
@@ -79,27 +51,27 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultFolder property value. True if the folder is the default task folder.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultFolder() {
-        return this.isDefaultFolder;
+        return this.backingStore.get("isDefaultFolder");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
-     * @return a multiValueLegacyExtendedProperty
+     * @return a java.util.List<MultiValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the name property value. The name of the task folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the parentGroupKey property value. The unique GUID identifier for the task folder's parent group.
@@ -107,23 +79,23 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getParentGroupKey() {
-        return this.parentGroupKey;
+        return this.backingStore.get("parentGroupKey");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
-     * @return a singleValueLegacyExtendedProperty
+     * @return a java.util.List<SingleValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the tasks property value. The tasks in this task folder. Read-only. Nullable.
-     * @return a outlookTask
+     * @return a java.util.List<OutlookTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTask> getTasks() {
-        return this.tasks;
+        return this.backingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      */
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
-        this.changeKey = value;
+        this.backingStore.set("changeKey", value);
     }
     /**
      * Sets the isDefaultFolder property value. True if the folder is the default task folder.
      * @param value Value to set for the isDefaultFolder property.
      */
     public void setIsDefaultFolder(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefaultFolder = value;
+        this.backingStore.set("isDefaultFolder", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the name property value. The name of the task folder.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the parentGroupKey property value. The unique GUID identifier for the task folder's parent group.
      * @param value Value to set for the parentGroupKey property.
      */
     public void setParentGroupKey(@jakarta.annotation.Nullable final UUID value) {
-        this.parentGroupKey = value;
+        this.backingStore.set("parentGroupKey", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the tasks property value. The tasks in this task folder. Read-only. Nullable.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<OutlookTask> value) {
-        this.tasks = value;
+        this.backingStore.set("tasks", value);
     }
 }

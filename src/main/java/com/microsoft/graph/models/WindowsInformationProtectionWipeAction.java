@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /**
-     * Last checkin time of the device that was targeted by this wipe action.
-     */
-    private OffsetDateTime lastCheckInDateTime;
-    /**
-     * The status property
-     */
-    private ActionState status;
-    /**
-     * Targeted device Mac address.
-     */
-    private String targetedDeviceMacAddress;
-    /**
-     * Targeted device name.
-     */
-    private String targetedDeviceName;
-    /**
-     * The DeviceRegistrationId being targeted by this wipe action.
-     */
-    private String targetedDeviceRegistrationId;
-    /**
-     * The UserId being targeted by this wipe action.
-     */
-    private String targetedUserId;
-    /**
-     * Instantiates a new windowsInformationProtectionWipeAction and sets the default values.
+     * Instantiates a new WindowsInformationProtectionWipeAction and sets the default values.
      */
     public WindowsInformationProtectionWipeAction() {
         super();
@@ -45,7 +21,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionWipeAction
+     * @return a WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,47 +49,47 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
-        return this.lastCheckInDateTime;
+        return this.backingStore.get("lastCheckInDateTime");
     }
     /**
      * Gets the status property value. The status property
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the targetedDeviceMacAddress property value. Targeted device Mac address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceMacAddress() {
-        return this.targetedDeviceMacAddress;
+        return this.backingStore.get("targetedDeviceMacAddress");
     }
     /**
      * Gets the targetedDeviceName property value. Targeted device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceName() {
-        return this.targetedDeviceName;
+        return this.backingStore.get("targetedDeviceName");
     }
     /**
      * Gets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceRegistrationId() {
-        return this.targetedDeviceRegistrationId;
+        return this.backingStore.get("targetedDeviceRegistrationId");
     }
     /**
      * Gets the targetedUserId property value. The UserId being targeted by this wipe action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedUserId() {
-        return this.targetedUserId;
+        return this.backingStore.get("targetedUserId");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the lastCheckInDateTime property.
      */
     public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastCheckInDateTime = value;
+        this.backingStore.set("lastCheckInDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ActionState value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the targetedDeviceMacAddress property value. Targeted device Mac address.
      * @param value Value to set for the targetedDeviceMacAddress property.
      */
     public void setTargetedDeviceMacAddress(@jakarta.annotation.Nullable final String value) {
-        this.targetedDeviceMacAddress = value;
+        this.backingStore.set("targetedDeviceMacAddress", value);
     }
     /**
      * Sets the targetedDeviceName property value. Targeted device name.
      * @param value Value to set for the targetedDeviceName property.
      */
     public void setTargetedDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.targetedDeviceName = value;
+        this.backingStore.set("targetedDeviceName", value);
     }
     /**
      * Sets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
      * @param value Value to set for the targetedDeviceRegistrationId property.
      */
     public void setTargetedDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
-        this.targetedDeviceRegistrationId = value;
+        this.backingStore.set("targetedDeviceRegistrationId", value);
     }
     /**
      * Sets the targetedUserId property value. The UserId being targeted by this wipe action.
      * @param value Value to set for the targetedUserId property.
      */
     public void setTargetedUserId(@jakarta.annotation.Nullable final String value) {
-        this.targetedUserId = value;
+        this.backingStore.set("targetedUserId", value);
     }
 }

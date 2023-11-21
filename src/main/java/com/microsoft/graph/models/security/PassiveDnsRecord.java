@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PassiveDnsRecord extends Artifact implements Parsable {
     /**
-     * The artifact property
-     */
-    private Artifact artifact;
-    /**
-     * The date and time that this passiveDnsRecord entry was collected by Microsoft. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime collectedDateTime;
-    /**
-     * The date and time when this passiveDnsRecord entry was first seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The date and time when this passiveDnsRecord entry was most recently seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The parentHost property
-     */
-    private Host parentHost;
-    /**
-     * The DNS record type for this passiveDnsRecord entry.
-     */
-    private String recordType;
-    /**
-     * Instantiates a new passiveDnsRecord and sets the default values.
+     * Instantiates a new PassiveDnsRecord and sets the default values.
      */
     public PassiveDnsRecord() {
         super();
@@ -43,7 +19,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passiveDnsRecord
+     * @return a PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public static PassiveDnsRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,11 +28,11 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     }
     /**
      * Gets the artifact property value. The artifact property
-     * @return a artifact
+     * @return a Artifact
      */
     @jakarta.annotation.Nullable
     public Artifact getArtifact() {
-        return this.artifact;
+        return this.backingStore.get("artifact");
     }
     /**
      * Gets the collectedDateTime property value. The date and time that this passiveDnsRecord entry was collected by Microsoft. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -64,7 +40,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCollectedDateTime() {
-        return this.collectedDateTime;
+        return this.backingStore.get("collectedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +63,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.backingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the lastSeenDateTime property value. The date and time when this passiveDnsRecord entry was most recently seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -95,23 +71,23 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.backingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getParentHost() {
-        return this.parentHost;
+        return this.backingStore.get("parentHost");
     }
     /**
      * Gets the recordType property value. The DNS record type for this passiveDnsRecord entry.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecordType() {
-        return this.recordType;
+        return this.backingStore.get("recordType");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
      * @param value Value to set for the artifact property.
      */
     public void setArtifact(@jakarta.annotation.Nullable final Artifact value) {
-        this.artifact = value;
+        this.backingStore.set("artifact", value);
     }
     /**
      * Sets the collectedDateTime property value. The date and time that this passiveDnsRecord entry was collected by Microsoft. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the collectedDateTime property.
      */
     public void setCollectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.collectedDateTime = value;
+        this.backingStore.set("collectedDateTime", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The date and time when this passiveDnsRecord entry was first seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.backingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The date and time when this passiveDnsRecord entry was most recently seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.backingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the parentHost property value. The parentHost property
      * @param value Value to set for the parentHost property.
      */
     public void setParentHost(@jakarta.annotation.Nullable final Host value) {
-        this.parentHost = value;
+        this.backingStore.set("parentHost", value);
     }
     /**
      * Sets the recordType property value. The DNS record type for this passiveDnsRecord entry.
      * @param value Value to set for the recordType property.
      */
     public void setRecordType(@jakarta.annotation.Nullable final String value) {
-        this.recordType = value;
+        this.backingStore.set("recordType", value);
     }
 }

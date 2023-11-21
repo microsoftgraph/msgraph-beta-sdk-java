@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase implements Parsable {
     /**
-     * Hash Algorithm Options.
-     */
-    private EnumSet<HashAlgorithms> hashAlgorithm;
-    /**
-     * Key Size Options.
-     */
-    private KeySize keySize;
-    /**
-     * Key Usage Options.
-     */
-    private EnumSet<KeyUsages> keyUsage;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * SCEP Server Url(s)
-     */
-    private java.util.List<String> scepServerUrls;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new androidScepCertificateProfile and sets the default values.
+     * Instantiates a new AndroidScepCertificateProfile and sets the default values.
      */
     public AndroidScepCertificateProfile() {
         super();
@@ -50,7 +22,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidScepCertificateProfile
+     * @return a AndroidScepCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,59 +47,59 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
-        return this.hashAlgorithm;
+        return this.backingStore.get("hashAlgorithm");
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
-        return this.keySize;
+        return this.backingStore.get("keySize");
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
-        return this.keyUsage;
+        return this.backingStore.get("keyUsage");
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.backingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s)
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this.scepServerUrls;
+        return this.backingStore.get("scepServerUrls");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.backingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.backingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -149,48 +121,48 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the hashAlgorithm property.
      */
     public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {
-        this.hashAlgorithm = value;
+        this.backingStore.set("hashAlgorithm", value);
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      */
     public void setKeySize(@jakarta.annotation.Nullable final KeySize value) {
-        this.keySize = value;
+        this.backingStore.set("keySize", value);
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
     public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
-        this.keyUsage = value;
+        this.backingStore.set("keyUsage", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.backingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s)
      * @param value Value to set for the scepServerUrls property.
      */
     public void setScepServerUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.scepServerUrls = value;
+        this.backingStore.set("scepServerUrls", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.backingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.backingStore.set("subjectNameFormatString", value);
     }
 }

@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult implements Parsable {
     /**
-     * Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     */
-    private VppTokenActionFailureReason actionFailureReason;
-    /**
-     * A count of the number of licenses that failed to revoke.
-     */
-    private Integer failedLicensesCount;
-    /**
-     * A count of the number of licenses that were attempted to revoke.
-     */
-    private Integer totalLicensesCount;
-    /**
-     * Instantiates a new vppTokenRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new VppTokenRevokeLicensesActionResult and sets the default values.
      */
     public VppTokenRevokeLicensesActionResult() {
         super();
@@ -32,7 +20,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vppTokenRevokeLicensesActionResult
+     * @return a VppTokenRevokeLicensesActionResult
      */
     @jakarta.annotation.Nonnull
     public static VppTokenRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a vppTokenActionFailureReason
+     * @return a VppTokenActionFailureReason
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
-        return this.actionFailureReason;
+        return this.backingStore.get("actionFailureReason");
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
-        return this.failedLicensesCount;
+        return this.backingStore.get("failedLicensesCount");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {
-        return this.totalLicensesCount;
+        return this.backingStore.get("totalLicensesCount");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param value Value to set for the actionFailureReason property.
      */
     public void setActionFailureReason(@jakarta.annotation.Nullable final VppTokenActionFailureReason value) {
-        this.actionFailureReason = value;
+        this.backingStore.set("actionFailureReason", value);
     }
     /**
      * Sets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
      * @param value Value to set for the failedLicensesCount property.
      */
     public void setFailedLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedLicensesCount = value;
+        this.backingStore.set("failedLicensesCount", value);
     }
     /**
      * Sets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
      * @param value Value to set for the totalLicensesCount property.
      */
     public void setTotalLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicensesCount = value;
+        this.backingStore.set("totalLicensesCount", value);
     }
 }

@@ -68,48 +68,48 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get entities from privilegedRoleAssignments
-     * @return a CompletableFuture of privilegedRoleAssignmentCollectionResponse
+     * @return a PrivilegedRoleAssignmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from privilegedRoleAssignments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignmentCollectionResponse
+     * @return a PrivilegedRoleAssignmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedRoleAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedRoleAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to privilegedRoleAssignments
      * @param body The request body
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a PrivilegedRoleAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body) {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignment post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body) {
         return post(body, null);
     }
     /**
      * Add new entity to privilegedRoleAssignments
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a PrivilegedRoleAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignment post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from privilegedRoleAssignments
@@ -126,18 +126,9 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -158,24 +149,16 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedRoleAssignmentsRequestBuilder
+     * @return a PrivilegedRoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

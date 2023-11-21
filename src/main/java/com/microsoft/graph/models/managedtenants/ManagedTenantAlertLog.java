@@ -11,31 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlertLog extends Entity implements Parsable {
     /**
-     * The alert property
-     */
-    private ManagedTenantAlert alert;
-    /**
-     * The content property
-     */
-    private AlertLogContent content;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * Instantiates a new managedTenantAlertLog and sets the default values.
+     * Instantiates a new ManagedTenantAlertLog and sets the default values.
      */
     public ManagedTenantAlertLog() {
         super();
@@ -43,7 +19,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertLog
+     * @return a ManagedTenantAlertLog
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertLog createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,27 +28,27 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the alert property value. The alert property
-     * @return a managedTenantAlert
+     * @return a ManagedTenantAlert
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
-        return this.alert;
+        return this.backingStore.get("alert");
     }
     /**
      * Gets the content property value. The content property
-     * @return a alertLogContent
+     * @return a AlertLogContent
      */
     @jakarta.annotation.Nullable
     public AlertLogContent getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.backingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -80,7 +56,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -99,11 +75,11 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.backingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -111,7 +87,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
      * @param value Value to set for the alert property.
      */
     public void setAlert(@jakarta.annotation.Nullable final ManagedTenantAlert value) {
-        this.alert = value;
+        this.backingStore.set("alert", value);
     }
     /**
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final AlertLogContent value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.backingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.backingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
 }

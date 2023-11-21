@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase implements Parsable {
     /**
-     * Additional URLs allowed for access
-     */
-    private java.util.List<String> allowedUrls;
-    /**
-     * Additional URLs blocked for access
-     */
-    private java.util.List<String> blockedUrls;
-    /**
-     * Instantiates a new iosWebContentFilterAutoFilter and sets the default values.
+     * Instantiates a new IosWebContentFilterAutoFilter and sets the default values.
      */
     public IosWebContentFilterAutoFilter() {
         super();
@@ -29,7 +21,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosWebContentFilterAutoFilter
+     * @return a IosWebContentFilterAutoFilter
      */
     @jakarta.annotation.Nonnull
     public static IosWebContentFilterAutoFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +30,19 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
     }
     /**
      * Gets the allowedUrls property value. Additional URLs allowed for access
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedUrls() {
-        return this.allowedUrls;
+        return this.backingStore.get("allowedUrls");
     }
     /**
      * Gets the blockedUrls property value. Additional URLs blocked for access
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBlockedUrls() {
-        return this.blockedUrls;
+        return this.backingStore.get("blockedUrls");
     }
     /**
      * The deserialization information for the current model
@@ -78,13 +70,13 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * @param value Value to set for the allowedUrls property.
      */
     public void setAllowedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedUrls = value;
+        this.backingStore.set("allowedUrls", value);
     }
     /**
      * Sets the blockedUrls property value. Additional URLs blocked for access
      * @param value Value to set for the blockedUrls property.
      */
     public void setBlockedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.blockedUrls = value;
+        this.backingStore.set("blockedUrls", value);
     }
 }

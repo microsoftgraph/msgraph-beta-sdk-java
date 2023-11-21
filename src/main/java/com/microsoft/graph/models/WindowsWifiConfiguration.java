@@ -12,59 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsWifiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Specify whether the wifi connection should connect automatically when in range.
-     */
-    private Boolean connectAutomatically;
-    /**
-     * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
-     */
-    private Boolean connectToPreferredNetwork;
-    /**
-     * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
-     */
-    private Boolean connectWhenNetworkNameIsHidden;
-    /**
-     * Specify whether to force FIPS compliance.
-     */
-    private Boolean forceFIPSCompliance;
-    /**
-     * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
-     */
-    private MeteredConnectionLimitType meteredConnectionLimit;
-    /**
-     * Specify the network configuration name.
-     */
-    private String networkName;
-    /**
-     * This is the pre-shared key for WPA Personal Wi-Fi network.
-     */
-    private String preSharedKey;
-    /**
-     * Specify the URL for the proxy server configuration script.
-     */
-    private String proxyAutomaticConfigurationUrl;
-    /**
-     * Specify the IP address for the proxy server.
-     */
-    private String proxyManualAddress;
-    /**
-     * Specify the port for the proxy server.
-     */
-    private Integer proxyManualPort;
-    /**
-     * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
-     */
-    private WiFiProxySetting proxySetting;
-    /**
-     * Specify the SSID of the wifi connection.
-     */
-    private String ssid;
-    /**
-     * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
-     */
-    private WiFiSecurityType wifiSecurityType;
-    /**
-     * Instantiates a new windowsWifiConfiguration and sets the default values.
+     * Instantiates a new WindowsWifiConfiguration and sets the default values.
      */
     public WindowsWifiConfiguration() {
         super();
@@ -73,7 +21,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsWifiConfiguration
+     * @return a WindowsWifiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsWifiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,27 +37,27 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the connectAutomatically property value. Specify whether the wifi connection should connect automatically when in range.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
-        return this.connectAutomatically;
+        return this.backingStore.get("connectAutomatically");
     }
     /**
      * Gets the connectToPreferredNetwork property value. Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectToPreferredNetwork() {
-        return this.connectToPreferredNetwork;
+        return this.backingStore.get("connectToPreferredNetwork");
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
-        return this.connectWhenNetworkNameIsHidden;
+        return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
      * The deserialization information for the current model
@@ -135,83 +83,83 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the forceFIPSCompliance property value. Specify whether to force FIPS compliance.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceFIPSCompliance() {
-        return this.forceFIPSCompliance;
+        return this.backingStore.get("forceFIPSCompliance");
     }
     /**
      * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
-     * @return a meteredConnectionLimitType
+     * @return a MeteredConnectionLimitType
      */
     @jakarta.annotation.Nullable
     public MeteredConnectionLimitType getMeteredConnectionLimit() {
-        return this.meteredConnectionLimit;
+        return this.backingStore.get("meteredConnectionLimit");
     }
     /**
      * Gets the networkName property value. Specify the network configuration name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
-        return this.networkName;
+        return this.backingStore.get("networkName");
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
-        return this.preSharedKey;
+        return this.backingStore.get("preSharedKey");
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the URL for the proxy server configuration script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
-        return this.proxyAutomaticConfigurationUrl;
+        return this.backingStore.get("proxyAutomaticConfigurationUrl");
     }
     /**
      * Gets the proxyManualAddress property value. Specify the IP address for the proxy server.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
-        return this.proxyManualAddress;
+        return this.backingStore.get("proxyManualAddress");
     }
     /**
      * Gets the proxyManualPort property value. Specify the port for the proxy server.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
-        return this.proxyManualPort;
+        return this.backingStore.get("proxyManualPort");
     }
     /**
      * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
-     * @return a wiFiProxySetting
+     * @return a WiFiProxySetting
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySetting() {
-        return this.proxySetting;
+        return this.backingStore.get("proxySetting");
     }
     /**
      * Gets the ssid property value. Specify the SSID of the wifi connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
-        return this.ssid;
+        return this.backingStore.get("ssid");
     }
     /**
      * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
-     * @return a wiFiSecurityType
+     * @return a WiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public WiFiSecurityType getWifiSecurityType() {
-        return this.wifiSecurityType;
+        return this.backingStore.get("wifiSecurityType");
     }
     /**
      * Serializes information the current object
@@ -239,90 +187,90 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectAutomatically property.
      */
     public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectAutomatically = value;
+        this.backingStore.set("connectAutomatically", value);
     }
     /**
      * Sets the connectToPreferredNetwork property value. Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
      * @param value Value to set for the connectToPreferredNetwork property.
      */
     public void setConnectToPreferredNetwork(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectToPreferredNetwork = value;
+        this.backingStore.set("connectToPreferredNetwork", value);
     }
     /**
      * Sets the connectWhenNetworkNameIsHidden property value. Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectWhenNetworkNameIsHidden = value;
+        this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
      * Sets the forceFIPSCompliance property value. Specify whether to force FIPS compliance.
      * @param value Value to set for the forceFIPSCompliance property.
      */
     public void setForceFIPSCompliance(@jakarta.annotation.Nullable final Boolean value) {
-        this.forceFIPSCompliance = value;
+        this.backingStore.set("forceFIPSCompliance", value);
     }
     /**
      * Sets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
      * @param value Value to set for the meteredConnectionLimit property.
      */
     public void setMeteredConnectionLimit(@jakarta.annotation.Nullable final MeteredConnectionLimitType value) {
-        this.meteredConnectionLimit = value;
+        this.backingStore.set("meteredConnectionLimit", value);
     }
     /**
      * Sets the networkName property value. Specify the network configuration name.
      * @param value Value to set for the networkName property.
      */
     public void setNetworkName(@jakarta.annotation.Nullable final String value) {
-        this.networkName = value;
+        this.backingStore.set("networkName", value);
     }
     /**
      * Sets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
      * @param value Value to set for the preSharedKey property.
      */
     public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
-        this.preSharedKey = value;
+        this.backingStore.set("preSharedKey", value);
     }
     /**
      * Sets the proxyAutomaticConfigurationUrl property value. Specify the URL for the proxy server configuration script.
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      */
     public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
-        this.proxyAutomaticConfigurationUrl = value;
+        this.backingStore.set("proxyAutomaticConfigurationUrl", value);
     }
     /**
      * Sets the proxyManualAddress property value. Specify the IP address for the proxy server.
      * @param value Value to set for the proxyManualAddress property.
      */
     public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
-        this.proxyManualAddress = value;
+        this.backingStore.set("proxyManualAddress", value);
     }
     /**
      * Sets the proxyManualPort property value. Specify the port for the proxy server.
      * @param value Value to set for the proxyManualPort property.
      */
     public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {
-        this.proxyManualPort = value;
+        this.backingStore.set("proxyManualPort", value);
     }
     /**
      * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
      * @param value Value to set for the proxySetting property.
      */
     public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {
-        this.proxySetting = value;
+        this.backingStore.set("proxySetting", value);
     }
     /**
      * Sets the ssid property value. Specify the SSID of the wifi connection.
      * @param value Value to set for the ssid property.
      */
     public void setSsid(@jakarta.annotation.Nullable final String value) {
-        this.ssid = value;
+        this.backingStore.set("ssid", value);
     }
     /**
      * Sets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      * @param value Value to set for the wifiSecurityType property.
      */
     public void setWifiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {
-        this.wifiSecurityType = value;
+        this.backingStore.set("wifiSecurityType", value);
     }
 }

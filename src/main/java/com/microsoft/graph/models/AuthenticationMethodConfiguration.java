@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
     /**
-     * Groups of users that are excluded from a policy.
-     */
-    private java.util.List<ExcludeTarget> excludeTargets;
-    /**
-     * The state of the policy. Possible values are: enabled, disabled.
-     */
-    private AuthenticationMethodState state;
-    /**
-     * Instantiates a new authenticationMethodConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
      */
     public AuthenticationMethodConfiguration() {
         super();
@@ -25,7 +17,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodConfiguration
+     * @return a AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,11 +41,11 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the excludeTargets property value. Groups of users that are excluded from a policy.
-     * @return a excludeTarget
+     * @return a java.util.List<ExcludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
-        return this.excludeTargets;
+        return this.backingStore.get("excludeTargets");
     }
     /**
      * The deserialization information for the current model
@@ -68,11 +60,11 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @return a authenticationMethodState
+     * @return a AuthenticationMethodState
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -89,13 +81,13 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * @param value Value to set for the excludeTargets property.
      */
     public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
-        this.excludeTargets = value;
+        this.backingStore.set("excludeTargets", value);
     }
     /**
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AuthenticationMethodState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StopAndQuarantineFileResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<StopAndQuarantineFileEntityIdentifier> identifier;
-    /**
-     * Instantiates a new stopAndQuarantineFileResponseAction and sets the default values.
+     * Instantiates a new StopAndQuarantineFileResponseAction and sets the default values.
      */
     public StopAndQuarantineFileResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a stopAndQuarantineFileResponseAction
+     * @return a StopAndQuarantineFileResponseAction
      */
     @jakarta.annotation.Nonnull
     public static StopAndQuarantineFileResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a stopAndQuarantineFileEntityIdentifier
+     * @return a EnumSet<StopAndQuarantineFileEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<StopAndQuarantineFileEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.backingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<StopAndQuarantineFileEntityIdentifier> value) {
-        this.identifier = value;
+        this.backingStore.set("identifier", value);
     }
 }

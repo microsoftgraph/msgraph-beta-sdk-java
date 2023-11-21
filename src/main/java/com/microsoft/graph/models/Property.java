@@ -4,61 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Property implements AdditionalDataHolder, Parsable {
+public class Property implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The aliases property
-     */
-    private java.util.List<String> aliases;
-    /**
-     * The isQueryable property
-     */
-    private Boolean isQueryable;
-    /**
-     * The isRefinable property
-     */
-    private Boolean isRefinable;
-    /**
-     * The isRetrievable property
-     */
-    private Boolean isRetrievable;
-    /**
-     * The isSearchable property
-     */
-    private Boolean isSearchable;
-    /**
-     * The labels property
-     */
-    private java.util.List<Label> labels;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The type property
-     */
-    private PropertyType type;
-    /**
-     * Instantiates a new property and sets the default values.
+     * Instantiates a new Property and sets the default values.
      */
     public Property() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a property
+     * @return a Property
      */
     @jakarta.annotation.Nonnull
     public static Property createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,20 +35,33 @@ public class Property implements AdditionalDataHolder, Parsable {
         return new Property();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the aliases property value. The aliases property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAliases() {
-        return this.aliases;
+        return this.backingStore.get("aliases");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -101,67 +83,67 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isQueryable property value. The isQueryable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsQueryable() {
-        return this.isQueryable;
+        return this.backingStore.get("isQueryable");
     }
     /**
      * Gets the isRefinable property value. The isRefinable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRefinable() {
-        return this.isRefinable;
+        return this.backingStore.get("isRefinable");
     }
     /**
      * Gets the isRetrievable property value. The isRetrievable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRetrievable() {
-        return this.isRetrievable;
+        return this.backingStore.get("isRetrievable");
     }
     /**
      * Gets the isSearchable property value. The isSearchable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
-        return this.isSearchable;
+        return this.backingStore.get("isSearchable");
     }
     /**
      * Gets the labels property value. The labels property
-     * @return a label
+     * @return a java.util.List<Label>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Label> getLabels() {
-        return this.labels;
+        return this.backingStore.get("labels");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the type property value. The type property
-     * @return a propertyType
+     * @return a PropertyType
      */
     @jakarta.annotation.Nullable
     public PropertyType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -181,73 +163,81 @@ public class Property implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the aliases property value. The aliases property
      * @param value Value to set for the aliases property.
      */
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.aliases = value;
+        this.backingStore.set("aliases", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isQueryable property value. The isQueryable property
      * @param value Value to set for the isQueryable property.
      */
     public void setIsQueryable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isQueryable = value;
+        this.backingStore.set("isQueryable", value);
     }
     /**
      * Sets the isRefinable property value. The isRefinable property
      * @param value Value to set for the isRefinable property.
      */
     public void setIsRefinable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRefinable = value;
+        this.backingStore.set("isRefinable", value);
     }
     /**
      * Sets the isRetrievable property value. The isRetrievable property
      * @param value Value to set for the isRetrievable property.
      */
     public void setIsRetrievable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRetrievable = value;
+        this.backingStore.set("isRetrievable", value);
     }
     /**
      * Sets the isSearchable property value. The isSearchable property
      * @param value Value to set for the isSearchable property.
      */
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSearchable = value;
+        this.backingStore.set("isSearchable", value);
     }
     /**
      * Sets the labels property value. The labels property
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final java.util.List<Label> value) {
-        this.labels = value;
+        this.backingStore.set("labels", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PropertyType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

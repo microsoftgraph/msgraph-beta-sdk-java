@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApprovalStep extends Entity implements Parsable {
     /**
-     * Indicates whether the step is assigned to the calling user to review. Read-only.
-     */
-    private Boolean assignedToMe;
-    /**
-     * The label provided by the policy creator to identify an approval step. Read-only.
-     */
-    private String displayName;
-    /**
-     * The justification associated with the approval step decision.
-     */
-    private String justification;
-    /**
-     * The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-     */
-    private Identity reviewedBy;
-    /**
-     * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime reviewedDateTime;
-    /**
-     * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-     */
-    private String reviewResult;
-    /**
-     * The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-     */
-    private String status;
-    /**
-     * Instantiates a new approvalStep and sets the default values.
+     * Instantiates a new ApprovalStep and sets the default values.
      */
     public ApprovalStep() {
         super();
@@ -46,7 +18,7 @@ public class ApprovalStep extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalStep
+     * @return a ApprovalStep
      */
     @jakarta.annotation.Nonnull
     public static ApprovalStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,19 +27,19 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the assignedToMe property value. Indicates whether the step is assigned to the calling user to review. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAssignedToMe() {
-        return this.assignedToMe;
+        return this.backingStore.get("assignedToMe");
     }
     /**
      * Gets the displayName property value. The label provided by the policy creator to identify an approval step. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -87,19 +59,19 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The justification associated with the approval step decision.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.backingStore.get("justification");
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getReviewedBy() {
-        return this.reviewedBy;
+        return this.backingStore.get("reviewedBy");
     }
     /**
      * Gets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -107,23 +79,23 @@ public class ApprovalStep extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
-        return this.reviewedDateTime;
+        return this.backingStore.get("reviewedDateTime");
     }
     /**
      * Gets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewResult() {
-        return this.reviewResult;
+        return this.backingStore.get("reviewResult");
     }
     /**
      * Gets the status property value. The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class ApprovalStep extends Entity implements Parsable {
      * @param value Value to set for the assignedToMe property.
      */
     public void setAssignedToMe(@jakarta.annotation.Nullable final Boolean value) {
-        this.assignedToMe = value;
+        this.backingStore.set("assignedToMe", value);
     }
     /**
      * Sets the displayName property value. The label provided by the policy creator to identify an approval step. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the justification property value. The justification associated with the approval step decision.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.backingStore.set("justification", value);
     }
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @param value Value to set for the reviewedBy property.
      */
     public void setReviewedBy(@jakarta.annotation.Nullable final Identity value) {
-        this.reviewedBy = value;
+        this.backingStore.set("reviewedBy", value);
     }
     /**
      * Sets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the reviewedDateTime property.
      */
     public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.reviewedDateTime = value;
+        this.backingStore.set("reviewedDateTime", value);
     }
     /**
      * Sets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
      * @param value Value to set for the reviewResult property.
      */
     public void setReviewResult(@jakarta.annotation.Nullable final String value) {
-        this.reviewResult = value;
+        this.backingStore.set("reviewResult", value);
     }
     /**
      * Sets the status property value. The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }
