@@ -30,6 +30,9 @@ jobs:
       actions: read
       contents: read
       security-events: write
+    env:
+      CODEQL_RAM: 40960
+      CODEQL_EXTRACTOR_JAVA_RAM: 40960
 
     strategy:
       fail-fast: false
@@ -82,11 +85,13 @@ jobs:
           cache-disabled: true
       #- name: Grant execute permission for gradlew   
       #  run: chmod +x gradlew
-      - name: Build with Gradle
-        env:
-          CODEQL_RAM: 40960
-          CODEQL_EXTRACTOR_JAVA_RAM: 40960
-        run: ./gradlew build -DXmx4096m
+      - name: autoBuild
+        uses: github/codeql-action/autobuild@v2
+      #- name: Build with Gradle
+       # env:
+        #  CODEQL_RAM: 40960
+         # CODEQL_EXTRACTOR_JAVA_RAM: 40960
+        #run: ./gradlew build -DXmx4096m
         
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
