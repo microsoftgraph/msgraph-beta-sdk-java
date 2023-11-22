@@ -13,23 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyOperation extends Entity implements Parsable {
     /**
-     * The date and time the entity was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Type of Group Policy operation status.
-     */
-    private GroupPolicyOperationStatus operationStatus;
-    /**
-     * Type of Group Policy operation.
-     */
-    private GroupPolicyOperationType operationType;
-    /**
-     * The group policy operation status detail.
-     */
-    private String statusDetails;
-    /**
-     * Instantiates a new groupPolicyOperation and sets the default values.
+     * Instantiates a new GroupPolicyOperation and sets the default values.
      */
     public GroupPolicyOperation() {
         super();
@@ -37,7 +21,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyOperation
+     * @return a GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,8 +36,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(GroupPolicyOperationStatus.class)); });
-        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(GroupPolicyOperationType.class)); });
+        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(GroupPolicyOperationStatus::forValue)); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(GroupPolicyOperationType::forValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getStringValue()); });
         return deserializerMap;
     }
@@ -63,31 +47,31 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the operationStatus property value. Type of Group Policy operation status.
-     * @return a groupPolicyOperationStatus
+     * @return a GroupPolicyOperationStatus
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationStatus getOperationStatus() {
-        return this.operationStatus;
+        return this.backingStore.get("operationStatus");
     }
     /**
      * Gets the operationType property value. Type of Group Policy operation.
-     * @return a groupPolicyOperationType
+     * @return a GroupPolicyOperationType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationType getOperationType() {
-        return this.operationType;
+        return this.backingStore.get("operationType");
     }
     /**
      * Gets the statusDetails property value. The group policy operation status detail.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {
-        return this.statusDetails;
+        return this.backingStore.get("statusDetails");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the operationStatus property value. Type of Group Policy operation status.
      * @param value Value to set for the operationStatus property.
      */
     public void setOperationStatus(@jakarta.annotation.Nullable final GroupPolicyOperationStatus value) {
-        this.operationStatus = value;
+        this.backingStore.set("operationStatus", value);
     }
     /**
      * Sets the operationType property value. Type of Group Policy operation.
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final GroupPolicyOperationType value) {
-        this.operationType = value;
+        this.backingStore.set("operationType", value);
     }
     /**
      * Sets the statusDetails property value. The group policy operation status detail.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final String value) {
-        this.statusDetails = value;
+        this.backingStore.set("statusDetails", value);
     }
 }

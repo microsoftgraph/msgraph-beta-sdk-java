@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorityTemplate extends FilePlanDescriptorTemplate implements Parsable {
     /**
-     * Instantiates a new authorityTemplate and sets the default values.
+     * Instantiates a new AuthorityTemplate and sets the default values.
      */
     public AuthorityTemplate() {
         super();
@@ -17,7 +17,7 @@ public class AuthorityTemplate extends FilePlanDescriptorTemplate implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorityTemplate
+     * @return a AuthorityTemplate
      */
     @jakarta.annotation.Nonnull
     public static AuthorityTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

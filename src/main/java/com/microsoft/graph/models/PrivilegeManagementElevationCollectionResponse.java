@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegeManagementElevationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrivilegeManagementElevation> value;
-    /**
-     * Instantiates a new privilegeManagementElevationCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegeManagementElevationCollectionResponse and sets the default values.
      */
     public PrivilegeManagementElevationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrivilegeManagementElevationCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegeManagementElevationCollectionResponse
+     * @return a PrivilegeManagementElevationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegeManagementElevationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrivilegeManagementElevationCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegeManagementElevation
+     * @return a java.util.List<PrivilegeManagementElevation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegeManagementElevation> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegeManagementElevationCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrivilegeManagementElevation> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

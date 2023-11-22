@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemPhone extends ItemFacet implements Parsable {
     /**
-     * Friendly name the user has assigned this phone number.
-     */
-    private String displayName;
-    /**
-     * Phone number provided by the user.
-     */
-    private String number;
-    /**
-     * The type property
-     */
-    private PhoneType type;
-    /**
-     * Instantiates a new itemPhone and sets the default values.
+     * Instantiates a new ItemPhone and sets the default values.
      */
     public ItemPhone() {
         super();
@@ -30,7 +18,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPhone
+     * @return a ItemPhone
      */
     @jakarta.annotation.Nonnull
     public static ItemPhone createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class ItemPhone extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Friendly name the user has assigned this phone number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -54,24 +42,24 @@ public class ItemPhone extends ItemFacet implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. Phone number provided by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.backingStore.get("number");
     }
     /**
      * Gets the type property value. The type property
-     * @return a phoneType
+     * @return a PhoneType
      */
     @jakarta.annotation.Nullable
     public PhoneType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the number property value. Phone number provided by the user.
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.backingStore.set("number", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PhoneType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

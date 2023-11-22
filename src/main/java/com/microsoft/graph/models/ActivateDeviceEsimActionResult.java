@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActivateDeviceEsimActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Carrier Url to activate the device eSIM
-     */
-    private String carrierUrl;
-    /**
-     * Instantiates a new activateDeviceEsimActionResult and sets the default values.
+     * Instantiates a new ActivateDeviceEsimActionResult and sets the default values.
      */
     public ActivateDeviceEsimActionResult() {
         super();
@@ -24,7 +20,7 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a activateDeviceEsimActionResult
+     * @return a ActivateDeviceEsimActionResult
      */
     @jakarta.annotation.Nonnull
     public static ActivateDeviceEsimActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,11 +29,11 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
     }
     /**
      * Gets the carrierUrl property value. Carrier Url to activate the device eSIM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCarrierUrl() {
-        return this.carrierUrl;
+        return this.backingStore.get("carrierUrl");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
      * @param value Value to set for the carrierUrl property.
      */
     public void setCarrierUrl(@jakarta.annotation.Nullable final String value) {
-        this.carrierUrl = value;
+        this.backingStore.set("carrierUrl", value);
     }
 }

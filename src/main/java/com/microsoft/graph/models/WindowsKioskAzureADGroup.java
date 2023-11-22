@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsable {
     /**
-     * The display name of the AzureAD group that will be locked to this kiosk configuration
-     */
-    private String displayName;
-    /**
-     * The ID of the AzureAD group that will be locked to this kiosk configuration
-     */
-    private String groupId;
-    /**
-     * Instantiates a new windowsKioskAzureADGroup and sets the default values.
+     * Instantiates a new WindowsKioskAzureADGroup and sets the default values.
      */
     public WindowsKioskAzureADGroup() {
         super();
@@ -29,7 +21,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskAzureADGroup
+     * @return a WindowsKioskAzureADGroup
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskAzureADGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +30,11 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     }
     /**
      * Gets the displayName property value. The display name of the AzureAD group that will be locked to this kiosk configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -57,11 +49,11 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     }
     /**
      * Gets the groupId property value. The ID of the AzureAD group that will be locked to this kiosk configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.backingStore.get("groupId");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groupId property value. The ID of the AzureAD group that will be locked to this kiosk configuration
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.backingStore.set("groupId", value);
     }
 }

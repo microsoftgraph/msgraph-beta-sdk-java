@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptDeviceState extends Entity implements Parsable {
     /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RunState detectionState;
-    /**
-     * The next timestamp of when the device compliance script is expected to execute
-     */
-    private OffsetDateTime expectedStateUpdateDateTime;
-    /**
-     * The last timestamp of when the device compliance script executed
-     */
-    private OffsetDateTime lastStateUpdateDateTime;
-    /**
-     * The last time that Intune Managment Extension synced with Intune
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The managed device on which the device compliance script executed
-     */
-    private ManagedDevice managedDevice;
-    /**
-     * Error from the detection script
-     */
-    private String scriptError;
-    /**
-     * Output of the detection script
-     */
-    private String scriptOutput;
-    /**
-     * Instantiates a new deviceComplianceScriptDeviceState and sets the default values.
+     * Instantiates a new DeviceComplianceScriptDeviceState and sets the default values.
      */
     public DeviceComplianceScriptDeviceState() {
         super();
@@ -49,7 +21,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptDeviceState
+     * @return a DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,11 +30,11 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
-        return this.detectionState;
+        return this.backingStore.get("detectionState");
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device compliance script is expected to execute
@@ -70,7 +42,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
-        return this.expectedStateUpdateDateTime;
+        return this.backingStore.get("expectedStateUpdateDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -79,7 +51,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("detectionState", (n) -> { this.setDetectionState(n.getEnumValue(RunState.class)); });
+        deserializerMap.put("detectionState", (n) -> { this.setDetectionState(n.getEnumValue(RunState::forValue)); });
         deserializerMap.put("expectedStateUpdateDateTime", (n) -> { this.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastStateUpdateDateTime", (n) -> { this.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
@@ -94,7 +66,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
-        return this.lastStateUpdateDateTime;
+        return this.backingStore.get("lastStateUpdateDateTime");
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
@@ -102,31 +74,31 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device compliance script executed
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
-        return this.managedDevice;
+        return this.backingStore.get("managedDevice");
     }
     /**
      * Gets the scriptError property value. Error from the detection script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptError() {
-        return this.scriptError;
+        return this.backingStore.get("scriptError");
     }
     /**
      * Gets the scriptOutput property value. Output of the detection script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptOutput() {
-        return this.scriptOutput;
+        return this.backingStore.get("scriptOutput");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the detectionState property.
      */
     public void setDetectionState(@jakarta.annotation.Nullable final RunState value) {
-        this.detectionState = value;
+        this.backingStore.set("detectionState", value);
     }
     /**
      * Sets the expectedStateUpdateDateTime property value. The next timestamp of when the device compliance script is expected to execute
      * @param value Value to set for the expectedStateUpdateDateTime property.
      */
     public void setExpectedStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expectedStateUpdateDateTime = value;
+        this.backingStore.set("expectedStateUpdateDateTime", value);
     }
     /**
      * Sets the lastStateUpdateDateTime property value. The last timestamp of when the device compliance script executed
      * @param value Value to set for the lastStateUpdateDateTime property.
      */
     public void setLastStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastStateUpdateDateTime = value;
+        this.backingStore.set("lastStateUpdateDateTime", value);
     }
     /**
      * Sets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the managedDevice property value. The managed device on which the device compliance script executed
      * @param value Value to set for the managedDevice property.
      */
     public void setManagedDevice(@jakarta.annotation.Nullable final ManagedDevice value) {
-        this.managedDevice = value;
+        this.backingStore.set("managedDevice", value);
     }
     /**
      * Sets the scriptError property value. Error from the detection script
      * @param value Value to set for the scriptError property.
      */
     public void setScriptError(@jakarta.annotation.Nullable final String value) {
-        this.scriptError = value;
+        this.backingStore.set("scriptError", value);
     }
     /**
      * Sets the scriptOutput property value. Output of the detection script
      * @param value Value to set for the scriptOutput property.
      */
     public void setScriptOutput(@jakarta.annotation.Nullable final String value) {
-        this.scriptOutput = value;
+        this.backingStore.set("scriptOutput", value);
     }
 }

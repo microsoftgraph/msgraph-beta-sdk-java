@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
-     * The emailContent property
-     */
-    private String emailContent;
-    /**
-     * The isDefaultLangauge property
-     */
-    private Boolean isDefaultLangauge;
-    /**
-     * The language property
-     */
-    private String language;
-    /**
-     * The locale property
-     */
-    private String locale;
-    /**
-     * The sentFrom property
-     */
-    private EmailIdentity sentFrom;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
-     * Instantiates a new endUserNotificationDetail and sets the default values.
+     * Instantiates a new EndUserNotificationDetail and sets the default values.
      */
     public EndUserNotificationDetail() {
         super();
@@ -41,7 +17,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endUserNotificationDetail
+     * @return a EndUserNotificationDetail
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotificationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,12 +25,12 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
         return new EndUserNotificationDetail();
     }
     /**
-     * Gets the emailContent property value. The emailContent property
-     * @return a string
+     * Gets the emailContent property value. Email HTML content.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailContent() {
-        return this.emailContent;
+        return this.backingStore.get("emailContent");
     }
     /**
      * The deserialization information for the current model
@@ -72,44 +48,44 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
-     * @return a boolean
+     * Gets the isDefaultLangauge property value. Indicates whether this language is default.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
-        return this.isDefaultLangauge;
+        return this.backingStore.get("isDefaultLangauge");
     }
     /**
-     * Gets the language property value. The language property
-     * @return a string
+     * Gets the language property value. Notification language.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.backingStore.get("language");
     }
     /**
-     * Gets the locale property value. The locale property
-     * @return a string
+     * Gets the locale property value. Notification locale.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.backingStore.get("locale");
     }
     /**
-     * Gets the sentFrom property value. The sentFrom property
-     * @return a emailIdentity
+     * Gets the sentFrom property value. Email details of the sender.
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getSentFrom() {
-        return this.sentFrom;
+        return this.backingStore.get("sentFrom");
     }
     /**
-     * Gets the subject property value. The subject property
-     * @return a string
+     * Gets the subject property value. Mail subject.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -126,45 +102,45 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
         writer.writeStringValue("subject", this.getSubject());
     }
     /**
-     * Sets the emailContent property value. The emailContent property
+     * Sets the emailContent property value. Email HTML content.
      * @param value Value to set for the emailContent property.
      */
     public void setEmailContent(@jakarta.annotation.Nullable final String value) {
-        this.emailContent = value;
+        this.backingStore.set("emailContent", value);
     }
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether this language is default.
      * @param value Value to set for the isDefaultLangauge property.
      */
     public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefaultLangauge = value;
+        this.backingStore.set("isDefaultLangauge", value);
     }
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. Notification language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.backingStore.set("language", value);
     }
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Notification locale.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.backingStore.set("locale", value);
     }
     /**
-     * Sets the sentFrom property value. The sentFrom property
+     * Sets the sentFrom property value. Email details of the sender.
      * @param value Value to set for the sentFrom property.
      */
     public void setSentFrom(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.sentFrom = value;
+        this.backingStore.set("sentFrom", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. Mail subject.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

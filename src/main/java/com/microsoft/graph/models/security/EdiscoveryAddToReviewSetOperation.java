@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
-     * eDiscovery review set to which items matching source collection query gets added.
-     */
-    private EdiscoveryReviewSet reviewSet;
-    /**
-     * eDiscovery search that gets added to review set.
-     */
-    private EdiscoverySearch search;
-    /**
-     * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
+     * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
      */
     public EdiscoveryAddToReviewSetOperation() {
         super();
@@ -25,7 +17,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryAddToReviewSetOperation
+     * @return a EdiscoveryAddToReviewSetOperation
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
-     * @return a ediscoveryReviewSet
+     * @return a EdiscoveryReviewSet
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
-        return this.reviewSet;
+        return this.backingStore.get("reviewSet");
     }
     /**
      * Gets the search property value. eDiscovery search that gets added to review set.
-     * @return a ediscoverySearch
+     * @return a EdiscoverySearch
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {
-        return this.search;
+        return this.backingStore.get("search");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the reviewSet property.
      */
     public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
-        this.reviewSet = value;
+        this.backingStore.set("reviewSet", value);
     }
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
      * @param value Value to set for the search property.
      */
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
-        this.search = value;
+        this.backingStore.set("search", value);
     }
 }

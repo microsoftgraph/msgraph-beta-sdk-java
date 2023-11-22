@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlertCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedTenantAlert> value;
-    /**
-     * Instantiates a new managedTenantAlertCollectionResponse and sets the default values.
+     * Instantiates a new ManagedTenantAlertCollectionResponse and sets the default values.
      */
     public ManagedTenantAlertCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class ManagedTenantAlertCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertCollectionResponse
+     * @return a ManagedTenantAlertCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ManagedTenantAlertCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedTenantAlert
+     * @return a java.util.List<ManagedTenantAlert>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlert> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ManagedTenantAlertCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlert> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

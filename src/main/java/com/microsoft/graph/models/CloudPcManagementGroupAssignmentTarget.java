@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignmentTarget implements Parsable {
     /**
-     * The ID of the target group for the assignment.
-     */
-    private String groupId;
-    /**
-     * The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
-     */
-    private String servicePlanId;
-    /**
-     * Instantiates a new cloudPcManagementGroupAssignmentTarget and sets the default values.
+     * Instantiates a new CloudPcManagementGroupAssignmentTarget and sets the default values.
      */
     public CloudPcManagementGroupAssignmentTarget() {
         super();
@@ -26,7 +18,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcManagementGroupAssignmentTarget
+     * @return a CloudPcManagementGroupAssignmentTarget
      */
     @jakarta.annotation.Nonnull
     public static CloudPcManagementGroupAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
     }
     /**
      * Gets the groupId property value. The ID of the target group for the assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.backingStore.get("groupId");
     }
     /**
      * Gets the servicePlanId property value. The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanId() {
-        return this.servicePlanId;
+        return this.backingStore.get("servicePlanId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.backingStore.set("groupId", value);
     }
     /**
      * Sets the servicePlanId property value. The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
      * @param value Value to set for the servicePlanId property.
      */
     public void setServicePlanId(@jakarta.annotation.Nullable final String value) {
-        this.servicePlanId = value;
+        this.backingStore.set("servicePlanId", value);
     }
 }

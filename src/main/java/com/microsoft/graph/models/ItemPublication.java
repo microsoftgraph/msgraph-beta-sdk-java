@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemPublication extends ItemFacet implements Parsable {
     /**
-     * Description of the publication.
-     */
-    private String description;
-    /**
-     * Title of the publication.
-     */
-    private String displayName;
-    /**
-     * The date that the publication was published.
-     */
-    private LocalDate publishedDate;
-    /**
-     * Publication or publisher for the publication.
-     */
-    private String publisher;
-    /**
-     * URL referencing a thumbnail of the publication.
-     */
-    private String thumbnailUrl;
-    /**
-     * URL referencing the publication.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new itemPublication and sets the default values.
+     * Instantiates a new ItemPublication and sets the default values.
      */
     public ItemPublication() {
         super();
@@ -43,7 +19,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPublication
+     * @return a ItemPublication
      */
     @jakarta.annotation.Nonnull
     public static ItemPublication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,19 +28,19 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Description of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Title of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -87,31 +63,31 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getPublishedDate() {
-        return this.publishedDate;
+        return this.backingStore.get("publishedDate");
     }
     /**
      * Gets the publisher property value. Publication or publisher for the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Gets the thumbnailUrl property value. URL referencing a thumbnail of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
-        return this.thumbnailUrl;
+        return this.backingStore.get("thumbnailUrl");
     }
     /**
      * Gets the webUrl property value. URL referencing the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class ItemPublication extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Title of the publication.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the publishedDate property value. The date that the publication was published.
      * @param value Value to set for the publishedDate property.
      */
     public void setPublishedDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.publishedDate = value;
+        this.backingStore.set("publishedDate", value);
     }
     /**
      * Sets the publisher property value. Publication or publisher for the publication.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
     /**
      * Sets the thumbnailUrl property value. URL referencing a thumbnail of the publication.
      * @param value Value to set for the thumbnailUrl property.
      */
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailUrl = value;
+        this.backingStore.set("thumbnailUrl", value);
     }
     /**
      * Sets the webUrl property value. URL referencing the publication.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

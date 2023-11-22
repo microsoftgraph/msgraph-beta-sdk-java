@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkActionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CloudPcBulkAction> value;
-    /**
-     * Instantiates a new cloudPcBulkActionCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcBulkActionCollectionResponse and sets the default values.
      */
     public CloudPcBulkActionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CloudPcBulkActionCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkActionCollectionResponse
+     * @return a CloudPcBulkActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkActionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CloudPcBulkActionCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcBulkAction
+     * @return a java.util.List<CloudPcBulkAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcBulkAction> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CloudPcBulkActionCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

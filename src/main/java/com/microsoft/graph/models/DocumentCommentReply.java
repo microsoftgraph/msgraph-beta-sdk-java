@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DocumentCommentReply extends Entity implements Parsable {
     /**
-     * The content property
-     */
-    private String content;
-    /**
-     * The location property
-     */
-    private String location;
-    /**
-     * Instantiates a new documentCommentReply and sets the default values.
+     * Instantiates a new DocumentCommentReply and sets the default values.
      */
     public DocumentCommentReply() {
         super();
@@ -25,7 +17,7 @@ public class DocumentCommentReply extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentCommentReply
+     * @return a DocumentCommentReply
      */
     @jakarta.annotation.Nonnull
     public static DocumentCommentReply createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class DocumentCommentReply extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class DocumentCommentReply extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The location property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
-        return this.location;
+        return this.backingStore.get("location");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class DocumentCommentReply extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {
-        this.location = value;
+        this.backingStore.set("location", value);
     }
 }

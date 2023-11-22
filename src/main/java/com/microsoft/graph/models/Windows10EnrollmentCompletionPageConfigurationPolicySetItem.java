@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
-     */
-    private Integer priority;
-    /**
-     * Instantiates a new windows10EnrollmentCompletionPageConfigurationPolicySetItem and sets the default values.
+     * Instantiates a new Windows10EnrollmentCompletionPageConfigurationPolicySetItem and sets the default values.
      */
     public Windows10EnrollmentCompletionPageConfigurationPolicySetItem() {
         super();
@@ -25,7 +21,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10EnrollmentCompletionPageConfigurationPolicySetItem
+     * @return a Windows10EnrollmentCompletionPageConfigurationPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static Windows10EnrollmentCompletionPageConfigurationPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
     }
     /**
      * Gets the priority property value. Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
 }

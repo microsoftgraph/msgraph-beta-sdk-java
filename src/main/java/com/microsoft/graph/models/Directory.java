@@ -9,63 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Directory extends Entity implements Parsable {
     /**
-     * Conceptual container for user and group directory objects.
-     */
-    private java.util.List<AdministrativeUnit> administrativeUnits;
-    /**
-     * Group of related custom security attribute definitions.
-     */
-    private java.util.List<AttributeSet> attributeSets;
-    /**
-     * The certificateAuthorities property
-     */
-    private CertificateAuthorityPath certificateAuthorities;
-    /**
-     * Schema of a custom security attributes (key-value pairs).
-     */
-    private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
-    /**
-     * The deletedItems property
-     */
-    private java.util.List<DirectoryObject> deletedItems;
-    /**
-     * The featureRolloutPolicies property
-     */
-    private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
-    /**
-     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     */
-    private java.util.List<IdentityProviderBase> federationConfigurations;
-    /**
-     * The impactedResources property
-     */
-    private java.util.List<ImpactedResource> impactedResources;
-    /**
-     * A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
-     */
-    private java.util.List<InboundSharedUserProfile> inboundSharedUserProfiles;
-    /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
-     */
-    private java.util.List<OnPremisesDirectorySynchronization> onPremisesSynchronization;
-    /**
-     * The outboundSharedUserProfiles property
-     */
-    private java.util.List<OutboundSharedUserProfile> outboundSharedUserProfiles;
-    /**
-     * List of recommended improvements to improve tenant posture.
-     */
-    private java.util.List<Recommendation> recommendations;
-    /**
-     * The sharedEmailDomains property
-     */
-    private java.util.List<SharedEmailDomain> sharedEmailDomains;
-    /**
-     * List of commercial subscriptions that an organization has acquired.
-     */
-    private java.util.List<CompanySubscription> subscriptions;
-    /**
-     * Instantiates a new directory and sets the default values.
+     * Instantiates a new Directory and sets the default values.
      */
     public Directory() {
         super();
@@ -73,7 +17,7 @@ public class Directory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directory
+     * @return a Directory
      */
     @jakarta.annotation.Nonnull
     public static Directory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,59 +26,67 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the administrativeUnits property value. Conceptual container for user and group directory objects.
-     * @return a administrativeUnit
+     * @return a java.util.List<AdministrativeUnit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
-        return this.administrativeUnits;
+        return this.backingStore.get("administrativeUnits");
     }
     /**
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
-     * @return a attributeSet
+     * @return a java.util.List<AttributeSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
-        return this.attributeSets;
+        return this.backingStore.get("attributeSets");
     }
     /**
      * Gets the certificateAuthorities property value. The certificateAuthorities property
-     * @return a certificateAuthorityPath
+     * @return a CertificateAuthorityPath
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityPath getCertificateAuthorities() {
-        return this.certificateAuthorities;
+        return this.backingStore.get("certificateAuthorities");
     }
     /**
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
-     * @return a customSecurityAttributeDefinition
+     * @return a java.util.List<CustomSecurityAttributeDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
-        return this.customSecurityAttributeDefinitions;
+        return this.backingStore.get("customSecurityAttributeDefinitions");
     }
     /**
      * Gets the deletedItems property value. The deletedItems property
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
-        return this.deletedItems;
+        return this.backingStore.get("deletedItems");
+    }
+    /**
+     * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @return a java.util.List<DeviceLocalCredentialInfo>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceLocalCredentialInfo> getDeviceLocalCredentials() {
+        return this.backingStore.get("deviceLocalCredentials");
     }
     /**
      * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
-     * @return a featureRolloutPolicy
+     * @return a java.util.List<FeatureRolloutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
-        return this.featureRolloutPolicies;
+        return this.backingStore.get("featureRolloutPolicies");
     }
     /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
-        return this.federationConfigurations;
+        return this.backingStore.get("federationConfigurations");
     }
     /**
      * The deserialization information for the current model
@@ -148,6 +100,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("certificateAuthorities", (n) -> { this.setCertificateAuthorities(n.getObjectValue(CertificateAuthorityPath::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
@@ -161,59 +114,59 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the impactedResources property value. The impactedResources property
-     * @return a impactedResource
+     * @return a java.util.List<ImpactedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
-        return this.impactedResources;
+        return this.backingStore.get("impactedResources");
     }
     /**
      * Gets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
-     * @return a inboundSharedUserProfile
+     * @return a java.util.List<InboundSharedUserProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundSharedUserProfile> getInboundSharedUserProfiles() {
-        return this.inboundSharedUserProfiles;
+        return this.backingStore.get("inboundSharedUserProfiles");
     }
     /**
      * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
-     * @return a onPremisesDirectorySynchronization
+     * @return a java.util.List<OnPremisesDirectorySynchronization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
-        return this.onPremisesSynchronization;
+        return this.backingStore.get("onPremisesSynchronization");
     }
     /**
      * Gets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
-     * @return a outboundSharedUserProfile
+     * @return a java.util.List<OutboundSharedUserProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutboundSharedUserProfile> getOutboundSharedUserProfiles() {
-        return this.outboundSharedUserProfiles;
+        return this.backingStore.get("outboundSharedUserProfiles");
     }
     /**
      * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
-     * @return a recommendation
+     * @return a java.util.List<Recommendation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recommendation> getRecommendations() {
-        return this.recommendations;
+        return this.backingStore.get("recommendations");
     }
     /**
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
-     * @return a sharedEmailDomain
+     * @return a java.util.List<SharedEmailDomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedEmailDomain> getSharedEmailDomains() {
-        return this.sharedEmailDomains;
+        return this.backingStore.get("sharedEmailDomains");
     }
     /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
-     * @return a companySubscription
+     * @return a java.util.List<CompanySubscription>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanySubscription> getSubscriptions() {
-        return this.subscriptions;
+        return this.backingStore.get("subscriptions");
     }
     /**
      * Serializes information the current object
@@ -227,6 +180,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeObjectValue("certificateAuthorities", this.getCertificateAuthorities());
         writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
+        writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
@@ -242,97 +196,104 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      */
     public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
-        this.administrativeUnits = value;
+        this.backingStore.set("administrativeUnits", value);
     }
     /**
      * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param value Value to set for the attributeSets property.
      */
     public void setAttributeSets(@jakarta.annotation.Nullable final java.util.List<AttributeSet> value) {
-        this.attributeSets = value;
+        this.backingStore.set("attributeSets", value);
     }
     /**
      * Sets the certificateAuthorities property value. The certificateAuthorities property
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final CertificateAuthorityPath value) {
-        this.certificateAuthorities = value;
+        this.backingStore.set("certificateAuthorities", value);
     }
     /**
      * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      */
     public void setCustomSecurityAttributeDefinitions(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
-        this.customSecurityAttributeDefinitions = value;
+        this.backingStore.set("customSecurityAttributeDefinitions", value);
     }
     /**
      * Sets the deletedItems property value. The deletedItems property
      * @param value Value to set for the deletedItems property.
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.deletedItems = value;
+        this.backingStore.set("deletedItems", value);
+    }
+    /**
+     * Sets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @param value Value to set for the deviceLocalCredentials property.
+     */
+    public void setDeviceLocalCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredentialInfo> value) {
+        this.backingStore.set("deviceLocalCredentials", value);
     }
     /**
      * Sets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @param value Value to set for the featureRolloutPolicies property.
      */
     public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
-        this.featureRolloutPolicies = value;
+        this.backingStore.set("featureRolloutPolicies", value);
     }
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param value Value to set for the federationConfigurations property.
      */
     public void setFederationConfigurations(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.federationConfigurations = value;
+        this.backingStore.set("federationConfigurations", value);
     }
     /**
      * Sets the impactedResources property value. The impactedResources property
      * @param value Value to set for the impactedResources property.
      */
     public void setImpactedResources(@jakarta.annotation.Nullable final java.util.List<ImpactedResource> value) {
-        this.impactedResources = value;
+        this.backingStore.set("impactedResources", value);
     }
     /**
      * Sets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      * @param value Value to set for the inboundSharedUserProfiles property.
      */
     public void setInboundSharedUserProfiles(@jakarta.annotation.Nullable final java.util.List<InboundSharedUserProfile> value) {
-        this.inboundSharedUserProfiles = value;
+        this.backingStore.set("inboundSharedUserProfiles", value);
     }
     /**
      * Sets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
      * @param value Value to set for the onPremisesSynchronization property.
      */
     public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
-        this.onPremisesSynchronization = value;
+        this.backingStore.set("onPremisesSynchronization", value);
     }
     /**
      * Sets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
      * @param value Value to set for the outboundSharedUserProfiles property.
      */
     public void setOutboundSharedUserProfiles(@jakarta.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
-        this.outboundSharedUserProfiles = value;
+        this.backingStore.set("outboundSharedUserProfiles", value);
     }
     /**
      * Sets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @param value Value to set for the recommendations property.
      */
     public void setRecommendations(@jakarta.annotation.Nullable final java.util.List<Recommendation> value) {
-        this.recommendations = value;
+        this.backingStore.set("recommendations", value);
     }
     /**
      * Sets the sharedEmailDomains property value. The sharedEmailDomains property
      * @param value Value to set for the sharedEmailDomains property.
      */
     public void setSharedEmailDomains(@jakarta.annotation.Nullable final java.util.List<SharedEmailDomain> value) {
-        this.sharedEmailDomains = value;
+        this.backingStore.set("sharedEmailDomains", value);
     }
     /**
      * Sets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
      * @param value Value to set for the subscriptions property.
      */
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {
-        this.subscriptions = value;
+        this.backingStore.set("subscriptions", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
-     * Availability of the user to be scheduled for work and its recurrence pattern.
-     */
-    private java.util.List<ShiftAvailability> availability;
-    /**
-     * Instantiates a new shiftPreferences and sets the default values.
+     * Instantiates a new ShiftPreferences and sets the default values.
      */
     public ShiftPreferences() {
         super();
@@ -22,7 +18,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shiftPreferences
+     * @return a ShiftPreferences
      */
     @jakarta.annotation.Nonnull
     public static ShiftPreferences createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the availability property value. Availability of the user to be scheduled for work and its recurrence pattern.
-     * @return a shiftAvailability
+     * @return a java.util.List<ShiftAvailability>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShiftAvailability> getAvailability() {
-        return this.availability;
+        return this.backingStore.get("availability");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final java.util.List<ShiftAvailability> value) {
-        this.availability = value;
+        this.backingStore.set("availability", value);
     }
 }

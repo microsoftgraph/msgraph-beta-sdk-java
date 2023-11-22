@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookUser extends Entity implements Parsable {
     /**
-     * A list of categories defined for the user.
-     */
-    private java.util.List<OutlookCategory> masterCategories;
-    /**
-     * The taskFolders property
-     */
-    private java.util.List<OutlookTaskFolder> taskFolders;
-    /**
-     * The taskGroups property
-     */
-    private java.util.List<OutlookTaskGroup> taskGroups;
-    /**
-     * The tasks property
-     */
-    private java.util.List<OutlookTask> tasks;
-    /**
-     * Instantiates a new outlookUser and sets the default values.
+     * Instantiates a new OutlookUser and sets the default values.
      */
     public OutlookUser() {
         super();
@@ -33,7 +17,7 @@ public class OutlookUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookUser
+     * @return a OutlookUser
      */
     @jakarta.annotation.Nonnull
     public static OutlookUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,35 +39,35 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * Gets the masterCategories property value. A list of categories defined for the user.
-     * @return a outlookCategory
+     * @return a java.util.List<OutlookCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookCategory> getMasterCategories() {
-        return this.masterCategories;
+        return this.backingStore.get("masterCategories");
     }
     /**
      * Gets the taskFolders property value. The taskFolders property
-     * @return a outlookTaskFolder
+     * @return a java.util.List<OutlookTaskFolder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskFolder> getTaskFolders() {
-        return this.taskFolders;
+        return this.backingStore.get("taskFolders");
     }
     /**
      * Gets the taskGroups property value. The taskGroups property
-     * @return a outlookTaskGroup
+     * @return a java.util.List<OutlookTaskGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskGroup> getTaskGroups() {
-        return this.taskGroups;
+        return this.backingStore.get("taskGroups");
     }
     /**
      * Gets the tasks property value. The tasks property
-     * @return a outlookTask
+     * @return a java.util.List<OutlookTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTask> getTasks() {
-        return this.tasks;
+        return this.backingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the masterCategories property.
      */
     public void setMasterCategories(@jakarta.annotation.Nullable final java.util.List<OutlookCategory> value) {
-        this.masterCategories = value;
+        this.backingStore.set("masterCategories", value);
     }
     /**
      * Sets the taskFolders property value. The taskFolders property
      * @param value Value to set for the taskFolders property.
      */
     public void setTaskFolders(@jakarta.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
-        this.taskFolders = value;
+        this.backingStore.set("taskFolders", value);
     }
     /**
      * Sets the taskGroups property value. The taskGroups property
      * @param value Value to set for the taskGroups property.
      */
     public void setTaskGroups(@jakarta.annotation.Nullable final java.util.List<OutlookTaskGroup> value) {
-        this.taskGroups = value;
+        this.backingStore.set("taskGroups", value);
     }
     /**
      * Sets the tasks property value. The tasks property
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<OutlookTask> value) {
-        this.tasks = value;
+        this.backingStore.set("tasks", value);
     }
 }

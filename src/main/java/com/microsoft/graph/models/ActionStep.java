@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ActionStep implements AdditionalDataHolder, Parsable {
+public class ActionStep implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * A link to the documentation or Azure portal page that is associated with the action step.
+     * Stores model information.
      */
-    private ActionUrl actionUrl;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the position for this action in the order of the collection of actions to be taken.
-     */
-    private Long stepNumber;
-    /**
-     * Friendly description of the action to take.
-     */
-    private String text;
-    /**
-     * Instantiates a new actionStep and sets the default values.
+     * Instantiates a new ActionStep and sets the default values.
      */
     public ActionStep() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a actionStep
+     * @return a ActionStep
      */
     @jakarta.annotation.Nonnull
     public static ActionStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
         return new ActionStep();
     }
     /**
-     * Gets the actionUrl property value. A link to the documentation or Azure portal page that is associated with the action step.
-     * @return a actionUrl
+     * Gets the actionUrl property value. A link to the documentation or Microsoft Entra admin center page that is associated with the action step.
+     * @return a ActionUrl
      */
     @jakarta.annotation.Nullable
     public ActionUrl getActionUrl() {
-        return this.actionUrl;
+        return this.backingStore.get("actionUrl");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +78,27 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the stepNumber property value. Indicates the position for this action in the order of the collection of actions to be taken.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getStepNumber() {
-        return this.stepNumber;
+        return this.backingStore.get("stepNumber");
     }
     /**
      * Gets the text property value. Friendly description of the action to take.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.backingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionUrl property value. A link to the documentation or Azure portal page that is associated with the action step.
+     * Sets the actionUrl property value. A link to the documentation or Microsoft Entra admin center page that is associated with the action step.
      * @param value Value to set for the actionUrl property.
      */
     public void setActionUrl(@jakarta.annotation.Nullable final ActionUrl value) {
-        this.actionUrl = value;
+        this.backingStore.set("actionUrl", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the stepNumber property value. Indicates the position for this action in the order of the collection of actions to be taken.
      * @param value Value to set for the stepNumber property.
      */
     public void setStepNumber(@jakarta.annotation.Nullable final Long value) {
-        this.stepNumber = value;
+        this.backingStore.set("stepNumber", value);
     }
     /**
      * Sets the text property value. Friendly description of the action to take.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.backingStore.set("text", value);
     }
 }

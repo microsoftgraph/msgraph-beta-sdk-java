@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationIdentityMatchingConfiguration extends EducationIdentitySynchronizationConfiguration implements Parsable {
     /**
-     * Mapping between the user account and the options to use to uniquely identify the user to update.
-     */
-    private java.util.List<EducationIdentityMatchingOptions> matchingOptions;
-    /**
-     * Instantiates a new educationIdentityMatchingConfiguration and sets the default values.
+     * Instantiates a new EducationIdentityMatchingConfiguration and sets the default values.
      */
     public EducationIdentityMatchingConfiguration() {
         super();
@@ -22,7 +18,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationIdentityMatchingConfiguration
+     * @return a EducationIdentityMatchingConfiguration
      */
     @jakarta.annotation.Nonnull
     public static EducationIdentityMatchingConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     }
     /**
      * Gets the matchingOptions property value. Mapping between the user account and the options to use to uniquely identify the user to update.
-     * @return a educationIdentityMatchingOptions
+     * @return a java.util.List<EducationIdentityMatchingOptions>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationIdentityMatchingOptions> getMatchingOptions() {
-        return this.matchingOptions;
+        return this.backingStore.get("matchingOptions");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * @param value Value to set for the matchingOptions property.
      */
     public void setMatchingOptions(@jakarta.annotation.Nullable final java.util.List<EducationIdentityMatchingOptions> value) {
-        this.matchingOptions = value;
+        this.backingStore.set("matchingOptions", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRoleBase implements Parsable {
     /**
-     * The role property
-     */
-    private PlannerRelationshipUserRoles role;
-    /**
-     * Instantiates a new plannerRelationshipBasedUserType and sets the default values.
+     * Instantiates a new PlannerRelationshipBasedUserType and sets the default values.
      */
     public PlannerRelationshipBasedUserType() {
         super();
@@ -22,7 +18,7 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerRelationshipBasedUserType
+     * @return a PlannerRelationshipBasedUserType
      */
     @jakarta.annotation.Nonnull
     public static PlannerRelationshipBasedUserType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,16 +32,16 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(PlannerRelationshipUserRoles.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(PlannerRelationshipUserRoles::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the role property value. The role property
-     * @return a plannerRelationshipUserRoles
+     * @return a PlannerRelationshipUserRoles
      */
     @jakarta.annotation.Nullable
     public PlannerRelationshipUserRoles getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final PlannerRelationshipUserRoles value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
 }

@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertificateProfileBase implements Parsable {
     /**
-     * PFX Import Options.
-     */
-    private IntendedPurpose intendedPurpose;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Instantiates a new androidForWorkImportedPFXCertificateProfile and sets the default values.
+     * Instantiates a new AndroidForWorkImportedPFXCertificateProfile and sets the default values.
      */
     public AndroidForWorkImportedPFXCertificateProfile() {
         super();
@@ -29,7 +21,7 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkImportedPFXCertificateProfile
+     * @return a AndroidForWorkImportedPFXCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkImportedPFXCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,25 +35,25 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("intendedPurpose", (n) -> { this.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
+        deserializerMap.put("intendedPurpose", (n) -> { this.setIntendedPurpose(n.getEnumValue(IntendedPurpose::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the intendedPurpose property value. PFX Import Options.
-     * @return a intendedPurpose
+     * @return a IntendedPurpose
      */
     @jakarta.annotation.Nullable
     public IntendedPurpose getIntendedPurpose() {
-        return this.intendedPurpose;
+        return this.backingStore.get("intendedPurpose");
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.backingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
      * @param value Value to set for the intendedPurpose property.
      */
     public void setIntendedPurpose(@jakarta.annotation.Nullable final IntendedPurpose value) {
-        this.intendedPurpose = value;
+        this.backingStore.set("intendedPurpose", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.backingStore.set("managedDeviceCertificateStates", value);
     }
 }

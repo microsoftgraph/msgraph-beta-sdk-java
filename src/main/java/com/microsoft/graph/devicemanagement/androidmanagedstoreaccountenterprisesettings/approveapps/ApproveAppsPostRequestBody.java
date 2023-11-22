@@ -4,33 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ApproveAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The approveAllPermissions property
-     */
-    private Boolean approveAllPermissions;
-    /**
-     * The packageIds property
-     */
-    private java.util.List<String> packageIds;
-    /**
-     * Instantiates a new approveAppsPostRequestBody and sets the default values.
+     * Instantiates a new ApproveAppsPostRequestBody and sets the default values.
      */
     public ApproveAppsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approveAppsPostRequestBody
+     * @return a ApproveAppsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ApproveAppsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,20 +35,33 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
         return new ApproveAppsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the approveAllPermissions property value. The approveAllPermissions property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApproveAllPermissions() {
-        return this.approveAllPermissions;
+        return this.backingStore.get("approveAllPermissions");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +76,11 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the packageIds property value. The packageIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPackageIds() {
-        return this.packageIds;
+        return this.backingStore.get("packageIds");
     }
     /**
      * Serializes information the current object
@@ -83,24 +93,32 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the approveAllPermissions property value. The approveAllPermissions property
      * @param value Value to set for the approveAllPermissions property.
      */
     public void setApproveAllPermissions(@jakarta.annotation.Nullable final Boolean value) {
-        this.approveAllPermissions = value;
+        this.backingStore.set("approveAllPermissions", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the packageIds property value. The packageIds property
      * @param value Value to set for the packageIds property.
      */
     public void setPackageIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.packageIds = value;
+        this.backingStore.set("packageIds", value);
     }
 }

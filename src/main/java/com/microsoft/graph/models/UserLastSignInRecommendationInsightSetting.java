@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserLastSignInRecommendationInsightSetting extends AccessReviewRecommendationInsightSetting implements Parsable {
     /**
-     * Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
-     */
-    private PeriodAndDuration recommendationLookBackDuration;
-    /**
-     * Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     */
-    private UserSignInRecommendationScope signInScope;
-    /**
-     * Instantiates a new userLastSignInRecommendationInsightSetting and sets the default values.
+     * Instantiates a new UserLastSignInRecommendationInsightSetting and sets the default values.
      */
     public UserLastSignInRecommendationInsightSetting() {
         super();
@@ -27,7 +19,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userLastSignInRecommendationInsightSetting
+     * @return a UserLastSignInRecommendationInsightSetting
      */
     @jakarta.annotation.Nonnull
     public static UserLastSignInRecommendationInsightSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,24 +34,24 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
+        deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
+     * Gets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Microsoft Entra roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRecommendationLookBackDuration() {
-        return this.recommendationLookBackDuration;
+        return this.backingStore.get("recommendationLookBackDuration");
     }
     /**
      * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @return a userSignInRecommendationScope
+     * @return a UserSignInRecommendationScope
      */
     @jakarta.annotation.Nullable
     public UserSignInRecommendationScope getSignInScope() {
-        return this.signInScope;
+        return this.backingStore.get("signInScope");
     }
     /**
      * Serializes information the current object
@@ -72,17 +64,17 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
         writer.writeEnumValue("signInScope", this.getSignInScope());
     }
     /**
-     * Sets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
+     * Sets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Microsoft Entra roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
      * @param value Value to set for the recommendationLookBackDuration property.
      */
     public void setRecommendationLookBackDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.recommendationLookBackDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("recommendationLookBackDuration", value);
     }
     /**
      * Sets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
      * @param value Value to set for the signInScope property.
      */
     public void setSignInScope(@jakarta.annotation.Nullable final UserSignInRecommendationScope value) {
-        this.signInScope = value;
+        this.backingStore.set("signInScope", value);
     }
 }

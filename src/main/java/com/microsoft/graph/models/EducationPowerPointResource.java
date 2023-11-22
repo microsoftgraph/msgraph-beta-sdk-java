@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPowerPointResource extends EducationResource implements Parsable {
     /**
-     * Location of the file on disk.
-     */
-    private String fileUrl;
-    /**
-     * Instantiates a new educationPowerPointResource and sets the default values.
+     * Instantiates a new EducationPowerPointResource and sets the default values.
      */
     public EducationPowerPointResource() {
         super();
@@ -22,7 +18,7 @@ public class EducationPowerPointResource extends EducationResource implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationPowerPointResource
+     * @return a EducationPowerPointResource
      */
     @jakarta.annotation.Nonnull
     public static EducationPowerPointResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class EducationPowerPointResource extends EducationResource implements Pa
     }
     /**
      * Gets the fileUrl property value. Location of the file on disk.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileUrl() {
-        return this.fileUrl;
+        return this.backingStore.get("fileUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * @param value Value to set for the fileUrl property.
      */
     public void setFileUrl(@jakarta.annotation.Nullable final String value) {
-        this.fileUrl = value;
+        this.backingStore.set("fileUrl", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedAllDeviceCertificateState> value;
-    /**
-     * Instantiates a new managedAllDeviceCertificateStateCollectionResponse and sets the default values.
+     * Instantiates a new ManagedAllDeviceCertificateStateCollectionResponse and sets the default values.
      */
     public ManagedAllDeviceCertificateStateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAllDeviceCertificateStateCollectionResponse
+     * @return a ManagedAllDeviceCertificateStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedAllDeviceCertificateStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedAllDeviceCertificateState
+     * @return a java.util.List<ManagedAllDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAllDeviceCertificateState> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedAllDeviceCertificateState> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

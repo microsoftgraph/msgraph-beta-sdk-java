@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81WifiImportConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-     */
-    private byte[] payload;
-    /**
-     * Payload file name (.xml).
-     */
-    private String payloadFileName;
-    /**
-     * Profile name displayed in the UI.
-     */
-    private String profileName;
-    /**
-     * Instantiates a new windows81WifiImportConfiguration and sets the default values.
+     * Instantiates a new Windows81WifiImportConfiguration and sets the default values.
      */
     public Windows81WifiImportConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81WifiImportConfiguration
+     * @return a Windows81WifiImportConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows81WifiImportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +42,27 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
-        return this.payload;
+        return this.backingStore.get("payload");
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
-        return this.payloadFileName;
+        return this.backingStore.get("payloadFileName");
     }
     /**
      * Gets the profileName property value. Profile name displayed in the UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
-        return this.profileName;
+        return this.backingStore.get("profileName");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
-        this.payload = value;
+        this.backingStore.set("payload", value);
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.xml).
      * @param value Value to set for the payloadFileName property.
      */
     public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
-        this.payloadFileName = value;
+        this.backingStore.set("payloadFileName", value);
     }
     /**
      * Sets the profileName property value. Profile name displayed in the UI.
      * @param value Value to set for the profileName property.
      */
     public void setProfileName(@jakarta.annotation.Nullable final String value) {
-        this.profileName = value;
+        this.backingStore.set("profileName", value);
     }
 }

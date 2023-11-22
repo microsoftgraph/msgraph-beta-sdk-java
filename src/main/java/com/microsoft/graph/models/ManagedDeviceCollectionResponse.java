@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedDevice> value;
-    /**
-     * Instantiates a new managedDeviceCollectionResponse and sets the default values.
+     * Instantiates a new ManagedDeviceCollectionResponse and sets the default values.
      */
     public ManagedDeviceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ManagedDeviceCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceCollectionResponse
+     * @return a ManagedDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ManagedDeviceCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedDevice
+     * @return a java.util.List<ManagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ManagedDeviceCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedDevice> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

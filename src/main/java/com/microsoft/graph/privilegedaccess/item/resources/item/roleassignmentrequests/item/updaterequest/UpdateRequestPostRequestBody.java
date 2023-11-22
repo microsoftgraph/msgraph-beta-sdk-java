@@ -5,41 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateRequestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The assignmentState property
-     */
-    private String assignmentState;
-    /**
-     * The decision property
-     */
-    private String decision;
-    /**
-     * The reason property
-     */
-    private String reason;
-    /**
-     * The schedule property
-     */
-    private GovernanceSchedule schedule;
-    /**
-     * Instantiates a new updateRequestPostRequestBody and sets the default values.
+     * Instantiates a new UpdateRequestPostRequestBody and sets the default values.
      */
     public UpdateRequestPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateRequestPostRequestBody
+     * @return a UpdateRequestPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateRequestPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,28 +36,41 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
         return new UpdateRequestPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentState property value. The assignmentState property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
-        return this.assignmentState;
+        return this.backingStore.get("assignmentState");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the decision property value. The decision property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDecision() {
-        return this.decision;
+        return this.backingStore.get("decision");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +87,19 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.backingStore.get("reason");
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a governanceSchedule
+     * @return a GovernanceSchedule
      */
     @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
-        return this.schedule;
+        return this.backingStore.get("schedule");
     }
     /**
      * Serializes information the current object
@@ -112,38 +114,46 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentState property value. The assignmentState property
      * @param value Value to set for the assignmentState property.
      */
     public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
-        this.assignmentState = value;
+        this.backingStore.set("assignmentState", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
      */
     public void setDecision(@jakarta.annotation.Nullable final String value) {
-        this.decision = value;
+        this.backingStore.set("decision", value);
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.backingStore.set("reason", value);
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final GovernanceSchedule value) {
-        this.schedule = value;
+        this.backingStore.set("schedule", value);
     }
 }

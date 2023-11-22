@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicyPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Instantiates a new deviceCompliancePolicyPolicySetItem and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyPolicySetItem and sets the default values.
      */
     public DeviceCompliancePolicyPolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class DeviceCompliancePolicyPolicySetItem extends PolicySetItem implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyPolicySetItem
+     * @return a DeviceCompliancePolicyPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

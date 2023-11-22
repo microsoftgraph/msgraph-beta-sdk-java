@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingFileConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Acceptable file extensions to upload for this setting
-     */
-    private java.util.List<String> supportedExtensions;
-    /**
-     * Instantiates a new deviceManagementSettingFileConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingFileConstraint and sets the default values.
      */
     public DeviceManagementSettingFileConstraint() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingFileConstraint
+     * @return a DeviceManagementSettingFileConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingFileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     }
     /**
      * Gets the supportedExtensions property value. Acceptable file extensions to upload for this setting
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedExtensions() {
-        return this.supportedExtensions;
+        return this.backingStore.get("supportedExtensions");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param value Value to set for the supportedExtensions property.
      */
     public void setSupportedExtensions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedExtensions = value;
+        this.backingStore.set("supportedExtensions", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /**
-     * The name of the Azure Active Directory tenant. Read only.
-     */
-    private String displayName;
-    /**
-     * The ID of the Azure Active Directory tenant. Read only.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new azureActiveDirectoryTenant and sets the default values.
+     * Instantiates a new AzureActiveDirectoryTenant and sets the default values.
      */
     public AzureActiveDirectoryTenant() {
         super();
@@ -26,7 +18,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureActiveDirectoryTenant
+     * @return a AzureActiveDirectoryTenant
      */
     @jakarta.annotation.Nonnull
     public static AzureActiveDirectoryTenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,12 +26,12 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         return new AzureActiveDirectoryTenant();
     }
     /**
-     * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
-     * @return a string
+     * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -53,12 +45,12 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
-     * @return a string
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * Sets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
 }

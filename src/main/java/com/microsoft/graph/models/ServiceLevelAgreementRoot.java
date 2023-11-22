@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceLevelAgreementRoot extends Entity implements Parsable {
     /**
-     * Collects the Azure AD SLA attainment for each month for an Azure AD tenant.
-     */
-    private AzureADAuthentication azureADAuthentication;
-    /**
-     * Instantiates a new serviceLevelAgreementRoot and sets the default values.
+     * Instantiates a new ServiceLevelAgreementRoot and sets the default values.
      */
     public ServiceLevelAgreementRoot() {
         super();
@@ -21,7 +17,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceLevelAgreementRoot
+     * @return a ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public static ServiceLevelAgreementRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,12 +25,12 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
         return new ServiceLevelAgreementRoot();
     }
     /**
-     * Gets the azureADAuthentication property value. Collects the Azure AD SLA attainment for each month for an Azure AD tenant.
-     * @return a azureADAuthentication
+     * Gets the azureADAuthentication property value. Collects the Microsoft Entra SLA attainment for each month for a Microsoft Entra tenant.
+     * @return a AzureADAuthentication
      */
     @jakarta.annotation.Nullable
     public AzureADAuthentication getAzureADAuthentication() {
-        return this.azureADAuthentication;
+        return this.backingStore.get("azureADAuthentication");
     }
     /**
      * The deserialization information for the current model
@@ -56,10 +52,10 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
         writer.writeObjectValue("azureADAuthentication", this.getAzureADAuthentication());
     }
     /**
-     * Sets the azureADAuthentication property value. Collects the Azure AD SLA attainment for each month for an Azure AD tenant.
+     * Sets the azureADAuthentication property value. Collects the Microsoft Entra SLA attainment for each month for a Microsoft Entra tenant.
      * @param value Value to set for the azureADAuthentication property.
      */
     public void setAzureADAuthentication(@jakarta.annotation.Nullable final AzureADAuthentication value) {
-        this.azureADAuthentication = value;
+        this.backingStore.set("azureADAuthentication", value);
     }
 }

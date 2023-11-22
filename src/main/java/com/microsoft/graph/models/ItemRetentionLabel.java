@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemRetentionLabel extends Entity implements Parsable {
     /**
-     * Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
-     */
-    private Boolean isLabelAppliedExplicitly;
-    /**
-     * Identity of the user who applied the label. Read-only.
-     */
-    private IdentitySet labelAppliedBy;
-    /**
-     * The date and time when the label was applied on the item. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime labelAppliedDateTime;
-    /**
-     * The retention label on the document. Read-write.
-     */
-    private String name;
-    /**
-     * The retention settings enforced on the item. Read-write.
-     */
-    private RetentionLabelSettings retentionSettings;
-    /**
-     * Instantiates a new itemRetentionLabel and sets the default values.
+     * Instantiates a new ItemRetentionLabel and sets the default values.
      */
     public ItemRetentionLabel() {
         super();
@@ -38,7 +18,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemRetentionLabel
+     * @return a ItemRetentionLabel
      */
     @jakarta.annotation.Nonnull
     public static ItemRetentionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,43 +41,43 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isLabelAppliedExplicitly property value. Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLabelAppliedExplicitly() {
-        return this.isLabelAppliedExplicitly;
+        return this.backingStore.get("isLabelAppliedExplicitly");
     }
     /**
      * Gets the labelAppliedBy property value. Identity of the user who applied the label. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLabelAppliedBy() {
-        return this.labelAppliedBy;
+        return this.backingStore.get("labelAppliedBy");
     }
     /**
-     * Gets the labelAppliedDateTime property value. The date and time when the label was applied on the item. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the labelAppliedDateTime property value. The date and time when the label was applied on the item. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLabelAppliedDateTime() {
-        return this.labelAppliedDateTime;
+        return this.backingStore.get("labelAppliedDateTime");
     }
     /**
      * Gets the name property value. The retention label on the document. Read-write.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the retentionSettings property value. The retention settings enforced on the item. Read-write.
-     * @return a retentionLabelSettings
+     * @return a RetentionLabelSettings
      */
     @jakarta.annotation.Nullable
     public RetentionLabelSettings getRetentionSettings() {
-        return this.retentionSettings;
+        return this.backingStore.get("retentionSettings");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the isLabelAppliedExplicitly property.
      */
     public void setIsLabelAppliedExplicitly(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLabelAppliedExplicitly = value;
+        this.backingStore.set("isLabelAppliedExplicitly", value);
     }
     /**
      * Sets the labelAppliedBy property value. Identity of the user who applied the label. Read-only.
      * @param value Value to set for the labelAppliedBy property.
      */
     public void setLabelAppliedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.labelAppliedBy = value;
+        this.backingStore.set("labelAppliedBy", value);
     }
     /**
-     * Sets the labelAppliedDateTime property value. The date and time when the label was applied on the item. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the labelAppliedDateTime property value. The date and time when the label was applied on the item. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the labelAppliedDateTime property.
      */
     public void setLabelAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.labelAppliedDateTime = value;
+        this.backingStore.set("labelAppliedDateTime", value);
     }
     /**
      * Sets the name property value. The retention label on the document. Read-write.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the retentionSettings property value. The retention settings enforced on the item. Read-write.
      * @param value Value to set for the retentionSettings property.
      */
     public void setRetentionSettings(@jakarta.annotation.Nullable final RetentionLabelSettings value) {
-        this.retentionSettings = value;
+        this.backingStore.set("retentionSettings", value);
     }
 }

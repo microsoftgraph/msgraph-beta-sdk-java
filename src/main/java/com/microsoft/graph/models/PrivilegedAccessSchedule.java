@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessSchedule extends Entity implements Parsable {
     /**
-     * When the schedule was created. Optional.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The identifier of the access assignment or eligibility request that created this schedule. Optional.
-     */
-    private String createdUsing;
-    /**
-     * When the schedule was last modified. Optional.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
-     * The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
-     */
-    private String status;
-    /**
-     * Instantiates a new privilegedAccessSchedule and sets the default values.
+     * Instantiates a new PrivilegedAccessSchedule and sets the default values.
      */
     public PrivilegedAccessSchedule() {
         super();
@@ -38,7 +18,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessSchedule
+     * @return a PrivilegedAccessSchedule
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,15 +39,15 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the createdUsing property value. The identifier of the access assignment or eligibility request that created this schedule. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedUsing() {
-        return this.createdUsing;
+        return this.backingStore.get("createdUsing");
     }
     /**
      * The deserialization information for the current model
@@ -89,23 +69,23 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the scheduleInfo property value. Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.backingStore.get("scheduleInfo");
     }
     /**
      * Gets the status property value. The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -125,34 +105,34 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the createdUsing property value. The identifier of the access assignment or eligibility request that created this schedule. Optional.
      * @param value Value to set for the createdUsing property.
      */
     public void setCreatedUsing(@jakarta.annotation.Nullable final String value) {
-        this.createdUsing = value;
+        this.backingStore.set("createdUsing", value);
     }
     /**
      * Sets the modifiedDateTime property value. When the schedule was last modified. Optional.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the scheduleInfo property value. Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.backingStore.set("scheduleInfo", value);
     }
     /**
      * Sets the status property value. The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

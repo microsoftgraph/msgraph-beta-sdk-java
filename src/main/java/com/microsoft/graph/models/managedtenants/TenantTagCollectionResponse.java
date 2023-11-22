@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantTagCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TenantTag> value;
-    /**
-     * Instantiates a new tenantTagCollectionResponse and sets the default values.
+     * Instantiates a new TenantTagCollectionResponse and sets the default values.
      */
     public TenantTagCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantTagCollectionResponse
+     * @return a TenantTagCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TenantTagCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a tenantTag
+     * @return a java.util.List<TenantTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantTag> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TenantTag> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }
