@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TemplateParameter implements AdditionalDataHolder, Parsable {
+public class TemplateParameter implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The description for the template parameter. Optional. Read-only.
-     */
-    private String description;
-    /**
-     * The display name for the template parameter. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
-     */
-    private String jsonAllowedValues;
-    /**
-     * The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
-     */
-    private String jsonDefaultValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The valueType property
-     */
-    private ManagementParameterValueType valueType;
-    /**
-     * Instantiates a new templateParameter and sets the default values.
+     * Instantiates a new TemplateParameter and sets the default values.
      */
     public TemplateParameter() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a templateParameter
+     * @return a TemplateParameter
      */
     @jakarta.annotation.Nonnull
     public static TemplateParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +35,41 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         return new TemplateParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the description property value. The description for the template parameter. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the template parameter. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -89,40 +83,40 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         deserializerMap.put("jsonAllowedValues", (n) -> { this.setJsonAllowedValues(n.getStringValue()); });
         deserializerMap.put("jsonDefaultValue", (n) -> { this.setJsonDefaultValue(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ManagementParameterValueType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJsonAllowedValues() {
-        return this.jsonAllowedValues;
+        return this.backingStore.get("jsonAllowedValues");
     }
     /**
      * Gets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJsonDefaultValue() {
-        return this.jsonDefaultValue;
+        return this.backingStore.get("jsonDefaultValue");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a managementParameterValueType
+     * @return a ManagementParameterValueType
      */
     @jakarta.annotation.Nullable
     public ManagementParameterValueType getValueType() {
-        return this.valueType;
+        return this.backingStore.get("valueType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +133,60 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the description property value. The description for the template parameter. Optional. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the template parameter. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
      * @param value Value to set for the jsonAllowedValues property.
      */
     public void setJsonAllowedValues(@jakarta.annotation.Nullable final String value) {
-        this.jsonAllowedValues = value;
+        this.backingStore.set("jsonAllowedValues", value);
     }
     /**
      * Sets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
      * @param value Value to set for the jsonDefaultValue property.
      */
     public void setJsonDefaultValue(@jakarta.annotation.Nullable final String value) {
-        this.jsonDefaultValue = value;
+        this.backingStore.set("jsonDefaultValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final ManagementParameterValueType value) {
-        this.valueType = value;
+        this.backingStore.set("valueType", value);
     }
 }

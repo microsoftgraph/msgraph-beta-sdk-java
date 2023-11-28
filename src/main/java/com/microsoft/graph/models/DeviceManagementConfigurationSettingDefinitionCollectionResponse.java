@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceManagementConfigurationSettingDefinition> value;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingDefinitionCollectionResponse and sets the default values.
      */
     public DeviceManagementConfigurationSettingDefinitionCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a DeviceManagementConfigurationSettingDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

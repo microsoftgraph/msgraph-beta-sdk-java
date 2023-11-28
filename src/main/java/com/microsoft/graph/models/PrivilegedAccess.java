@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccess extends Entity implements Parsable {
     /**
-     * The display name of the provider managed by PIM.
-     */
-    private String displayName;
-    /**
-     * A collection of resources for the provider.
-     */
-    private java.util.List<GovernanceResource> resources;
-    /**
-     * A collection of role assignment requests for the provider.
-     */
-    private java.util.List<GovernanceRoleAssignmentRequest> roleAssignmentRequests;
-    /**
-     * A collection of role assignments for the provider.
-     */
-    private java.util.List<GovernanceRoleAssignment> roleAssignments;
-    /**
-     * A collection of role defintions for the provider.
-     */
-    private java.util.List<GovernanceRoleDefinition> roleDefinitions;
-    /**
-     * A collection of role settings for the provider.
-     */
-    private java.util.List<GovernanceRoleSetting> roleSettings;
-    /**
-     * Instantiates a new privilegedAccess and sets the default values.
+     * Instantiates a new PrivilegedAccess and sets the default values.
      */
     public PrivilegedAccess() {
         super();
@@ -41,7 +17,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccess
+     * @return a PrivilegedAccess
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +26,11 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the provider managed by PIM.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -73,43 +49,43 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. A collection of resources for the provider.
-     * @return a governanceResource
+     * @return a java.util.List<GovernanceResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceResource> getResources() {
-        return this.resources;
+        return this.backingStore.get("resources");
     }
     /**
      * Gets the roleAssignmentRequests property value. A collection of role assignment requests for the provider.
-     * @return a governanceRoleAssignmentRequest
+     * @return a java.util.List<GovernanceRoleAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
-        return this.roleAssignmentRequests;
+        return this.backingStore.get("roleAssignmentRequests");
     }
     /**
      * Gets the roleAssignments property value. A collection of role assignments for the provider.
-     * @return a governanceRoleAssignment
+     * @return a java.util.List<GovernanceRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
-        return this.roleAssignments;
+        return this.backingStore.get("roleAssignments");
     }
     /**
-     * Gets the roleDefinitions property value. A collection of role defintions for the provider.
-     * @return a governanceRoleDefinition
+     * Gets the roleDefinitions property value. A collection of role definitions for the provider.
+     * @return a java.util.List<GovernanceRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
-        return this.roleDefinitions;
+        return this.backingStore.get("roleDefinitions");
     }
     /**
      * Gets the roleSettings property value. A collection of role settings for the provider.
-     * @return a governanceRoleSetting
+     * @return a java.util.List<GovernanceRoleSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {
-        return this.roleSettings;
+        return this.backingStore.get("roleSettings");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the resources property value. A collection of resources for the provider.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<GovernanceResource> value) {
-        this.resources = value;
+        this.backingStore.set("resources", value);
     }
     /**
      * Sets the roleAssignmentRequests property value. A collection of role assignment requests for the provider.
      * @param value Value to set for the roleAssignmentRequests property.
      */
     public void setRoleAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
-        this.roleAssignmentRequests = value;
+        this.backingStore.set("roleAssignmentRequests", value);
     }
     /**
      * Sets the roleAssignments property value. A collection of role assignments for the provider.
      * @param value Value to set for the roleAssignments property.
      */
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
-        this.roleAssignments = value;
+        this.backingStore.set("roleAssignments", value);
     }
     /**
-     * Sets the roleDefinitions property value. A collection of role defintions for the provider.
+     * Sets the roleDefinitions property value. A collection of role definitions for the provider.
      * @param value Value to set for the roleDefinitions property.
      */
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
-        this.roleDefinitions = value;
+        this.backingStore.set("roleDefinitions", value);
     }
     /**
      * Sets the roleSettings property value. A collection of role settings for the provider.
      * @param value Value to set for the roleSettings property.
      */
     public void setRoleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
-        this.roleSettings = value;
+        this.backingStore.set("roleSettings", value);
     }
 }

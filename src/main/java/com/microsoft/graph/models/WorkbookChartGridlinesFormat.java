@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     /**
-     * Represents chart line formatting. Read-only.
-     */
-    private WorkbookChartLineFormat line;
-    /**
-     * Instantiates a new workbookChartGridlinesFormat and sets the default values.
+     * Instantiates a new WorkbookChartGridlinesFormat and sets the default values.
      */
     public WorkbookChartGridlinesFormat() {
         super();
@@ -21,7 +17,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartGridlinesFormat
+     * @return a WorkbookChartGridlinesFormat
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartGridlinesFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
-     * @return a workbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this.line;
+        return this.backingStore.get("line");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * @param value Value to set for the line property.
      */
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
-        this.line = value;
+        this.backingStore.set("line", value);
     }
 }

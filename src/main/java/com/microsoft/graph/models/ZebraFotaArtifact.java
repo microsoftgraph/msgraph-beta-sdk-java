@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
-     * The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
-     */
-    private String boardSupportPackageVersion;
-    /**
-     * Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
-     */
-    private String description;
-    /**
-     * Applicable device model (e.g.: TC8300)
-     */
-    private String deviceModel;
-    /**
-     * Artifact OS version (e.g.: 8.1.0)
-     */
-    private String osVersion;
-    /**
-     * Artifact patch version (e.g.: U00)
-     */
-    private String patchVersion;
-    /**
-     * Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
-     */
-    private String releaseNotesUrl;
-    /**
-     * Instantiates a new zebraFotaArtifact and sets the default values.
+     * Instantiates a new ZebraFotaArtifact and sets the default values.
      */
     public ZebraFotaArtifact() {
         super();
@@ -44,7 +20,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaArtifact
+     * @return a ZebraFotaArtifact
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaArtifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,27 +29,27 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the boardSupportPackageVersion property value. The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBoardSupportPackageVersion() {
-        return this.boardSupportPackageVersion;
+        return this.backingStore.get("boardSupportPackageVersion");
     }
     /**
      * Gets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the deviceModel property value. Applicable device model (e.g.: TC8300)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * The deserialization information for the current model
@@ -92,27 +68,27 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the patchVersion property value. Artifact patch version (e.g.: U00)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPatchVersion() {
-        return this.patchVersion;
+        return this.backingStore.get("patchVersion");
     }
     /**
      * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReleaseNotesUrl() {
-        return this.releaseNotesUrl;
+        return this.backingStore.get("releaseNotesUrl");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the boardSupportPackageVersion property.
      */
     public void setBoardSupportPackageVersion(@jakarta.annotation.Nullable final String value) {
-        this.boardSupportPackageVersion = value;
+        this.backingStore.set("boardSupportPackageVersion", value);
     }
     /**
      * Sets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the deviceModel property value. Applicable device model (e.g.: TC8300)
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the patchVersion property value. Artifact patch version (e.g.: U00)
      * @param value Value to set for the patchVersion property.
      */
     public void setPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.patchVersion = value;
+        this.backingStore.set("patchVersion", value);
     }
     /**
      * Sets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
      * @param value Value to set for the releaseNotesUrl property.
      */
     public void setReleaseNotesUrl(@jakarta.annotation.Nullable final String value) {
-        this.releaseNotesUrl = value;
+        this.backingStore.set("releaseNotesUrl", value);
     }
 }

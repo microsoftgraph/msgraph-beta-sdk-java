@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsTab extends Entity implements Parsable {
     /**
-     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-     */
-    private TeamsTabConfiguration configuration;
-    /**
-     * Name of the tab.
-     */
-    private String displayName;
-    /**
-     * The messageId property
-     */
-    private String messageId;
-    /**
-     * Index of the order used for sorting tabs.
-     */
-    private String sortOrderIndex;
-    /**
-     * The application that is linked to the tab.
-     */
-    private TeamsApp teamsApp;
-    /**
-     * The teamsAppId property
-     */
-    private String teamsAppId;
-    /**
-     * Deep link URL of the tab instance. Read only.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new teamsTab and sets the default values.
+     * Instantiates a new TeamsTab and sets the default values.
      */
     public TeamsTab() {
         super();
@@ -45,7 +17,7 @@ public class TeamsTab extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsTab
+     * @return a TeamsTab
      */
     @jakarta.annotation.Nonnull
     public static TeamsTab createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +26,19 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-     * @return a teamsTabConfiguration
+     * @return a TeamsTabConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamsTabConfiguration getConfiguration() {
-        return this.configuration;
+        return this.backingStore.get("configuration");
     }
     /**
      * Gets the displayName property value. Name of the tab.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +58,43 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the messageId property value. The messageId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
-        return this.messageId;
+        return this.backingStore.get("messageId");
     }
     /**
      * Gets the sortOrderIndex property value. Index of the order used for sorting tabs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOrderIndex() {
-        return this.sortOrderIndex;
+        return this.backingStore.get("sortOrderIndex");
     }
     /**
      * Gets the teamsApp property value. The application that is linked to the tab.
-     * @return a teamsApp
+     * @return a TeamsApp
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
-        return this.teamsApp;
+        return this.backingStore.get("teamsApp");
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
-        return this.teamsAppId;
+        return this.backingStore.get("teamsAppId");
     }
     /**
      * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final TeamsTabConfiguration value) {
-        this.configuration = value;
+        this.backingStore.set("configuration", value);
     }
     /**
      * Sets the displayName property value. Name of the tab.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the messageId property value. The messageId property
      * @param value Value to set for the messageId property.
      */
     public void setMessageId(@jakarta.annotation.Nullable final String value) {
-        this.messageId = value;
+        this.backingStore.set("messageId", value);
     }
     /**
      * Sets the sortOrderIndex property value. Index of the order used for sorting tabs.
      * @param value Value to set for the sortOrderIndex property.
      */
     public void setSortOrderIndex(@jakarta.annotation.Nullable final String value) {
-        this.sortOrderIndex = value;
+        this.backingStore.set("sortOrderIndex", value);
     }
     /**
      * Sets the teamsApp property value. The application that is linked to the tab.
      * @param value Value to set for the teamsApp property.
      */
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {
-        this.teamsApp = value;
+        this.backingStore.set("teamsApp", value);
     }
     /**
      * Sets the teamsAppId property value. The teamsAppId property
      * @param value Value to set for the teamsAppId property.
      */
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
-        this.teamsAppId = value;
+        this.backingStore.set("teamsAppId", value);
     }
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

@@ -11,55 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcDevice extends Entity implements Parsable {
     /**
-     * The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
-     */
-    private String cloudPcStatus;
-    /**
-     * The specification of the cloud PC device. Required. Read-only.
-     */
-    private String deviceSpecification;
-    /**
-     * The display name  of the cloud PC device. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * The managed device identifier of the cloud PC device. Optional. Read-only.
-     */
-    private String managedDeviceId;
-    /**
-     * The managed device display name of the cloud PC device. Optional. Read-only.
-     */
-    private String managedDeviceName;
-    /**
-     * The provisioning policy identifier for the cloud PC device. Required. Read-only.
-     */
-    private String provisioningPolicyId;
-    /**
-     * The service plan name of the cloud PC device. Required. Read-only.
-     */
-    private String servicePlanName;
-    /**
-     * The service plan type of the cloud PC device. Required. Read-only.
-     */
-    private String servicePlanType;
-    /**
-     * The display name for the managed tenant. Required. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     */
-    private String tenantId;
-    /**
-     * The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new cloudPcDevice and sets the default values.
+     * Instantiates a new CloudPcDevice and sets the default values.
      */
     public CloudPcDevice() {
         super();
@@ -67,7 +19,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDevice
+     * @return a CloudPcDevice
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,27 +28,27 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPcStatus property value. The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcStatus() {
-        return this.cloudPcStatus;
+        return this.backingStore.get("cloudPcStatus");
     }
     /**
      * Gets the deviceSpecification property value. The specification of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceSpecification() {
-        return this.deviceSpecification;
+        return this.backingStore.get("deviceSpecification");
     }
     /**
      * Gets the displayName property value. The display name  of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -125,71 +77,71 @@ public class CloudPcDevice extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.backingStore.get("lastRefreshedDateTime");
     }
     /**
      * Gets the managedDeviceId property value. The managed device identifier of the cloud PC device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.backingStore.get("managedDeviceId");
     }
     /**
      * Gets the managedDeviceName property value. The managed device display name of the cloud PC device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
-        return this.managedDeviceName;
+        return this.backingStore.get("managedDeviceName");
     }
     /**
      * Gets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvisioningPolicyId() {
-        return this.provisioningPolicyId;
+        return this.backingStore.get("provisioningPolicyId");
     }
     /**
      * Gets the servicePlanName property value. The service plan name of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanName() {
-        return this.servicePlanName;
+        return this.backingStore.get("servicePlanName");
     }
     /**
      * Gets the servicePlanType property value. The service plan type of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanType() {
-        return this.servicePlanType;
+        return this.backingStore.get("servicePlanType");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.backingStore.get("tenantDisplayName");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -216,83 +168,83 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param value Value to set for the cloudPcStatus property.
      */
     public void setCloudPcStatus(@jakarta.annotation.Nullable final String value) {
-        this.cloudPcStatus = value;
+        this.backingStore.set("cloudPcStatus", value);
     }
     /**
      * Sets the deviceSpecification property value. The specification of the cloud PC device. Required. Read-only.
      * @param value Value to set for the deviceSpecification property.
      */
     public void setDeviceSpecification(@jakarta.annotation.Nullable final String value) {
-        this.deviceSpecification = value;
+        this.backingStore.set("deviceSpecification", value);
     }
     /**
      * Sets the displayName property value. The display name  of the cloud PC device. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.backingStore.set("lastRefreshedDateTime", value);
     }
     /**
      * Sets the managedDeviceId property value. The managed device identifier of the cloud PC device. Optional. Read-only.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.backingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the managedDeviceName property value. The managed device display name of the cloud PC device. Optional. Read-only.
      * @param value Value to set for the managedDeviceName property.
      */
     public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceName = value;
+        this.backingStore.set("managedDeviceName", value);
     }
     /**
      * Sets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC device. Required. Read-only.
      * @param value Value to set for the provisioningPolicyId property.
      */
     public void setProvisioningPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.provisioningPolicyId = value;
+        this.backingStore.set("provisioningPolicyId", value);
     }
     /**
      * Sets the servicePlanName property value. The service plan name of the cloud PC device. Required. Read-only.
      * @param value Value to set for the servicePlanName property.
      */
     public void setServicePlanName(@jakarta.annotation.Nullable final String value) {
-        this.servicePlanName = value;
+        this.backingStore.set("servicePlanName", value);
     }
     /**
      * Sets the servicePlanType property value. The service plan type of the cloud PC device. Required. Read-only.
      * @param value Value to set for the servicePlanType property.
      */
     public void setServicePlanType(@jakarta.annotation.Nullable final String value) {
-        this.servicePlanType = value;
+        this.backingStore.set("servicePlanType", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.backingStore.set("tenantDisplayName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

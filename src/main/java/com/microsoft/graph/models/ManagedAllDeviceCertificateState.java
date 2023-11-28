@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAllDeviceCertificateState extends Entity implements Parsable {
     /**
-     * Certificate expiry date
-     */
-    private OffsetDateTime certificateExpirationDateTime;
-    /**
-     * Enhanced Key Usage
-     */
-    private String certificateExtendedKeyUsages;
-    /**
-     * Issuance date
-     */
-    private OffsetDateTime certificateIssuanceDateTime;
-    /**
-     * Issuer
-     */
-    private String certificateIssuerName;
-    /**
-     * Key Usage
-     */
-    private Integer certificateKeyUsages;
-    /**
-     * Certificate Revocation Status.
-     */
-    private CertificateRevocationStatus certificateRevokeStatus;
-    /**
-     * The time the revoke status was last changed
-     */
-    private OffsetDateTime certificateRevokeStatusLastChangeDateTime;
-    /**
-     * Serial number
-     */
-    private String certificateSerialNumber;
-    /**
-     * Certificate subject name
-     */
-    private String certificateSubjectName;
-    /**
-     * Thumbprint
-     */
-    private String certificateThumbprint;
-    /**
-     * Device display name
-     */
-    private String managedDeviceDisplayName;
-    /**
-     * User principal name
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new managedAllDeviceCertificateState and sets the default values.
+     * Instantiates a new ManagedAllDeviceCertificateState and sets the default values.
      */
     public ManagedAllDeviceCertificateState() {
         super();
@@ -66,7 +18,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAllDeviceCertificateState
+     * @return a ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,15 +31,15 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateExpirationDateTime() {
-        return this.certificateExpirationDateTime;
+        return this.backingStore.get("certificateExpirationDateTime");
     }
     /**
      * Gets the certificateExtendedKeyUsages property value. Enhanced Key Usage
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateExtendedKeyUsages() {
-        return this.certificateExtendedKeyUsages;
+        return this.backingStore.get("certificateExtendedKeyUsages");
     }
     /**
      * Gets the certificateIssuanceDateTime property value. Issuance date
@@ -95,31 +47,31 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateIssuanceDateTime() {
-        return this.certificateIssuanceDateTime;
+        return this.backingStore.get("certificateIssuanceDateTime");
     }
     /**
      * Gets the certificateIssuerName property value. Issuer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateIssuerName() {
-        return this.certificateIssuerName;
+        return this.backingStore.get("certificateIssuerName");
     }
     /**
      * Gets the certificateKeyUsages property value. Key Usage
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateKeyUsages() {
-        return this.certificateKeyUsages;
+        return this.backingStore.get("certificateKeyUsages");
     }
     /**
      * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
-     * @return a certificateRevocationStatus
+     * @return a CertificateRevocationStatus
      */
     @jakarta.annotation.Nullable
     public CertificateRevocationStatus getCertificateRevokeStatus() {
-        return this.certificateRevokeStatus;
+        return this.backingStore.get("certificateRevokeStatus");
     }
     /**
      * Gets the certificateRevokeStatusLastChangeDateTime property value. The time the revoke status was last changed
@@ -127,31 +79,31 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateRevokeStatusLastChangeDateTime() {
-        return this.certificateRevokeStatusLastChangeDateTime;
+        return this.backingStore.get("certificateRevokeStatusLastChangeDateTime");
     }
     /**
      * Gets the certificateSerialNumber property value. Serial number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateSerialNumber() {
-        return this.certificateSerialNumber;
+        return this.backingStore.get("certificateSerialNumber");
     }
     /**
      * Gets the certificateSubjectName property value. Certificate subject name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateSubjectName() {
-        return this.certificateSubjectName;
+        return this.backingStore.get("certificateSubjectName");
     }
     /**
      * Gets the certificateThumbprint property value. Thumbprint
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
-        return this.certificateThumbprint;
+        return this.backingStore.get("certificateThumbprint");
     }
     /**
      * The deserialization information for the current model
@@ -165,7 +117,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
         deserializerMap.put("certificateIssuanceDateTime", (n) -> { this.setCertificateIssuanceDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("certificateIssuerName", (n) -> { this.setCertificateIssuerName(n.getStringValue()); });
         deserializerMap.put("certificateKeyUsages", (n) -> { this.setCertificateKeyUsages(n.getIntegerValue()); });
-        deserializerMap.put("certificateRevokeStatus", (n) -> { this.setCertificateRevokeStatus(n.getEnumValue(CertificateRevocationStatus.class)); });
+        deserializerMap.put("certificateRevokeStatus", (n) -> { this.setCertificateRevokeStatus(n.getEnumValue(CertificateRevocationStatus::forValue)); });
         deserializerMap.put("certificateRevokeStatusLastChangeDateTime", (n) -> { this.setCertificateRevokeStatusLastChangeDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("certificateSerialNumber", (n) -> { this.setCertificateSerialNumber(n.getStringValue()); });
         deserializerMap.put("certificateSubjectName", (n) -> { this.setCertificateSubjectName(n.getStringValue()); });
@@ -176,19 +128,19 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the managedDeviceDisplayName property value. Device display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceDisplayName() {
-        return this.managedDeviceDisplayName;
+        return this.backingStore.get("managedDeviceDisplayName");
     }
     /**
      * Gets the userPrincipalName property value. User principal name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateExpirationDateTime property.
      */
     public void setCertificateExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.certificateExpirationDateTime = value;
+        this.backingStore.set("certificateExpirationDateTime", value);
     }
     /**
      * Sets the certificateExtendedKeyUsages property value. Enhanced Key Usage
      * @param value Value to set for the certificateExtendedKeyUsages property.
      */
     public void setCertificateExtendedKeyUsages(@jakarta.annotation.Nullable final String value) {
-        this.certificateExtendedKeyUsages = value;
+        this.backingStore.set("certificateExtendedKeyUsages", value);
     }
     /**
      * Sets the certificateIssuanceDateTime property value. Issuance date
      * @param value Value to set for the certificateIssuanceDateTime property.
      */
     public void setCertificateIssuanceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.certificateIssuanceDateTime = value;
+        this.backingStore.set("certificateIssuanceDateTime", value);
     }
     /**
      * Sets the certificateIssuerName property value. Issuer
      * @param value Value to set for the certificateIssuerName property.
      */
     public void setCertificateIssuerName(@jakarta.annotation.Nullable final String value) {
-        this.certificateIssuerName = value;
+        this.backingStore.set("certificateIssuerName", value);
     }
     /**
      * Sets the certificateKeyUsages property value. Key Usage
      * @param value Value to set for the certificateKeyUsages property.
      */
     public void setCertificateKeyUsages(@jakarta.annotation.Nullable final Integer value) {
-        this.certificateKeyUsages = value;
+        this.backingStore.set("certificateKeyUsages", value);
     }
     /**
      * Sets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @param value Value to set for the certificateRevokeStatus property.
      */
     public void setCertificateRevokeStatus(@jakarta.annotation.Nullable final CertificateRevocationStatus value) {
-        this.certificateRevokeStatus = value;
+        this.backingStore.set("certificateRevokeStatus", value);
     }
     /**
      * Sets the certificateRevokeStatusLastChangeDateTime property value. The time the revoke status was last changed
      * @param value Value to set for the certificateRevokeStatusLastChangeDateTime property.
      */
     public void setCertificateRevokeStatusLastChangeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.certificateRevokeStatusLastChangeDateTime = value;
+        this.backingStore.set("certificateRevokeStatusLastChangeDateTime", value);
     }
     /**
      * Sets the certificateSerialNumber property value. Serial number
      * @param value Value to set for the certificateSerialNumber property.
      */
     public void setCertificateSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.certificateSerialNumber = value;
+        this.backingStore.set("certificateSerialNumber", value);
     }
     /**
      * Sets the certificateSubjectName property value. Certificate subject name
      * @param value Value to set for the certificateSubjectName property.
      */
     public void setCertificateSubjectName(@jakarta.annotation.Nullable final String value) {
-        this.certificateSubjectName = value;
+        this.backingStore.set("certificateSubjectName", value);
     }
     /**
      * Sets the certificateThumbprint property value. Thumbprint
      * @param value Value to set for the certificateThumbprint property.
      */
     public void setCertificateThumbprint(@jakarta.annotation.Nullable final String value) {
-        this.certificateThumbprint = value;
+        this.backingStore.set("certificateThumbprint", value);
     }
     /**
      * Sets the managedDeviceDisplayName property value. Device display name
      * @param value Value to set for the managedDeviceDisplayName property.
      */
     public void setManagedDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceDisplayName = value;
+        this.backingStore.set("managedDeviceDisplayName", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

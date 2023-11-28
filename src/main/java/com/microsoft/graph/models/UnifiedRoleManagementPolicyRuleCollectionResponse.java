@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyRuleCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UnifiedRoleManagementPolicyRule> value;
-    /**
-     * Instantiates a new unifiedRoleManagementPolicyRuleCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyRuleCollectionResponse and sets the default values.
      */
     public UnifiedRoleManagementPolicyRuleCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UnifiedRoleManagementPolicyRuleCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a UnifiedRoleManagementPolicyRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyRuleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UnifiedRoleManagementPolicyRuleCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleManagementPolicyRule
+     * @return a java.util.List<UnifiedRoleManagementPolicyRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UnifiedRoleManagementPolicyRuleCollectionResponse extends BaseColle
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

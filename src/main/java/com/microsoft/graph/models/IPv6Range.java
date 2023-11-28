@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv6Range extends IpRange implements Parsable {
     /**
-     * Lower address.
-     */
-    private String lowerAddress;
-    /**
-     * Upper address.
-     */
-    private String upperAddress;
-    /**
-     * Instantiates a new iPv6Range and sets the default values.
+     * Instantiates a new IPv6Range and sets the default values.
      */
     public IPv6Range() {
         super();
@@ -29,7 +21,7 @@ public class IPv6Range extends IpRange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iPv6Range
+     * @return a IPv6Range
      */
     @jakarta.annotation.Nonnull
     public static IPv6Range createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class IPv6Range extends IpRange implements Parsable {
     }
     /**
      * Gets the lowerAddress property value. Lower address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLowerAddress() {
-        return this.lowerAddress;
+        return this.backingStore.get("lowerAddress");
     }
     /**
      * Gets the upperAddress property value. Upper address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpperAddress() {
-        return this.upperAddress;
+        return this.backingStore.get("upperAddress");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class IPv6Range extends IpRange implements Parsable {
      * @param value Value to set for the lowerAddress property.
      */
     public void setLowerAddress(@jakarta.annotation.Nullable final String value) {
-        this.lowerAddress = value;
+        this.backingStore.set("lowerAddress", value);
     }
     /**
      * Sets the upperAddress property value. Upper address.
      * @param value Value to set for the upperAddress property.
      */
     public void setUpperAddress(@jakarta.annotation.Nullable final String value) {
-        this.upperAddress = value;
+        this.backingStore.set("upperAddress", value);
     }
 }

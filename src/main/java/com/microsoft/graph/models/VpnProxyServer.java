@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * VPN Proxy Server.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VpnProxyServer implements AdditionalDataHolder, Parsable {
+public class VpnProxyServer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Address.
-     */
-    private String address;
-    /**
-     * Proxy's automatic configuration script url.
-     */
-    private String automaticConfigurationScriptUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Port. Valid values 0 to 65535
-     */
-    private Integer port;
-    /**
-     * Instantiates a new vpnProxyServer and sets the default values.
+     * Instantiates a new VpnProxyServer and sets the default values.
      */
     public VpnProxyServer() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnProxyServer
+     * @return a VpnProxyServer
      */
     @jakarta.annotation.Nonnull
     public static VpnProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,28 +46,41 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
         return new VpnProxyServer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. Address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.backingStore.get("address");
     }
     /**
      * Gets the automaticConfigurationScriptUrl property value. Proxy's automatic configuration script url.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAutomaticConfigurationScriptUrl() {
-        return this.automaticConfigurationScriptUrl;
+        return this.backingStore.get("automaticConfigurationScriptUrl");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -95,19 +97,19 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the port property value. Port. Valid values 0 to 65535
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
-        return this.port;
+        return this.backingStore.get("port");
     }
     /**
      * Serializes information the current object
@@ -122,38 +124,46 @@ public class VpnProxyServer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the address property value. Address.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.backingStore.set("address", value);
     }
     /**
      * Sets the automaticConfigurationScriptUrl property value. Proxy's automatic configuration script url.
      * @param value Value to set for the automaticConfigurationScriptUrl property.
      */
     public void setAutomaticConfigurationScriptUrl(@jakarta.annotation.Nullable final String value) {
-        this.automaticConfigurationScriptUrl = value;
+        this.backingStore.set("automaticConfigurationScriptUrl", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the port property value. Port. Valid values 0 to 65535
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
-        this.port = value;
+        this.backingStore.set("port", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
-     * Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
-     */
-    private String itemId;
-    /**
-     * Configurations to match and resolve URL.
-     */
-    private UrlMatchInfo urlMatchInfo;
-    /**
-     * Instantiates a new itemIdResolver and sets the default values.
+     * Instantiates a new ItemIdResolver and sets the default values.
      */
     public ItemIdResolver() {
         super();
@@ -26,7 +18,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemIdResolver
+     * @return a ItemIdResolver
      */
     @jakarta.annotation.Nonnull
     public static ItemIdResolver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * Gets the itemId property value. Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
-        return this.itemId;
+        return this.backingStore.get("itemId");
     }
     /**
      * Gets the urlMatchInfo property value. Configurations to match and resolve URL.
-     * @return a urlMatchInfo
+     * @return a UrlMatchInfo
      */
     @jakarta.annotation.Nullable
     public UrlMatchInfo getUrlMatchInfo() {
-        return this.urlMatchInfo;
+        return this.backingStore.get("urlMatchInfo");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
-        this.itemId = value;
+        this.backingStore.set("itemId", value);
     }
     /**
      * Sets the urlMatchInfo property value. Configurations to match and resolve URL.
      * @param value Value to set for the urlMatchInfo property.
      */
     public void setUrlMatchInfo(@jakarta.annotation.Nullable final UrlMatchInfo value) {
-        this.urlMatchInfo = value;
+        this.backingStore.set("urlMatchInfo", value);
     }
 }

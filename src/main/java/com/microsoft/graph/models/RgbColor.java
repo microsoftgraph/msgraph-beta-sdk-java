@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * Color in RGB.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RgbColor implements AdditionalDataHolder, Parsable {
+public class RgbColor implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Blue value
-     */
-    private Byte b;
-    /**
-     * Green value
-     */
-    private Byte g;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Red value
-     */
-    private Byte r;
-    /**
-     * Instantiates a new rgbColor and sets the default values.
+     * Instantiates a new RgbColor and sets the default values.
      */
     public RgbColor() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rgbColor
+     * @return a RgbColor
      */
     @jakarta.annotation.Nonnull
     public static RgbColor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,20 +38,33 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         return new RgbColor();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the b property value. Blue value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getB() {
-        return this.b;
+        return this.backingStore.get("b");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -79,27 +81,27 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the g property value. Green value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getG() {
-        return this.g;
+        return this.backingStore.get("g");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the r property value. Red value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getR() {
-        return this.r;
+        return this.backingStore.get("r");
     }
     /**
      * Serializes information the current object
@@ -114,38 +116,46 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the b property value. Blue value
      * @param value Value to set for the b property.
      */
     public void setB(@jakarta.annotation.Nullable final Byte value) {
-        this.b = value;
+        this.backingStore.set("b", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the g property value. Green value
      * @param value Value to set for the g property.
      */
     public void setG(@jakarta.annotation.Nullable final Byte value) {
-        this.g = value;
+        this.backingStore.set("g", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the r property value. Red value
      * @param value Value to set for the r property.
      */
     public void setR(@jakarta.annotation.Nullable final Byte value) {
-        this.r = value;
+        this.backingStore.set("r", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUserCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<RiskyUser> value;
-    /**
-     * Instantiates a new riskyUserCollectionResponse and sets the default values.
+     * Instantiates a new RiskyUserCollectionResponse and sets the default values.
      */
     public RiskyUserCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class RiskyUserCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyUserCollectionResponse
+     * @return a RiskyUserCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RiskyUserCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class RiskyUserCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a riskyUser
+     * @return a java.util.List<RiskyUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUser> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class RiskyUserCollectionResponse extends BaseCollectionPaginationCountRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RiskyUser> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

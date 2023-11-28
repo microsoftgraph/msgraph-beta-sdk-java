@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * The maximum number of devices that a user can enroll
-     */
-    private Integer limit;
-    /**
-     * Instantiates a new deviceEnrollmentLimitConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentLimitConfiguration and sets the default values.
      */
     public DeviceEnrollmentLimitConfiguration() {
         super();
@@ -25,7 +21,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentLimitConfiguration
+     * @return a DeviceEnrollmentLimitConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentLimitConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     }
     /**
      * Gets the limit property value. The maximum number of devices that a user can enroll
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLimit() {
-        return this.limit;
+        return this.backingStore.get("limit");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      * @param value Value to set for the limit property.
      */
     public void setLimit(@jakarta.annotation.Nullable final Integer value) {
-        this.limit = value;
+        this.backingStore.set("limit", value);
     }
 }

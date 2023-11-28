@@ -37,28 +37,28 @@ public class MostRecentSslCertificateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/mostRecentSslCertificate{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get mostRecentSslCertificate from security
-     * @return a CompletableFuture of sslCertificate
+     * The most recent sslCertificate used to communicate on the port.
+     * @return a SslCertificate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SslCertificate> get() {
+    @jakarta.annotation.Nullable
+    public SslCertificate get() {
         return get(null);
     }
     /**
-     * Get mostRecentSslCertificate from security
+     * The most recent sslCertificate used to communicate on the port.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sslCertificate
+     * @return a SslCertificate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SslCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SslCertificate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SslCertificate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SslCertificate::createFromDiscriminatorValue);
     }
     /**
-     * Get mostRecentSslCertificate from security
+     * The most recent sslCertificate used to communicate on the port.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,30 +66,21 @@ public class MostRecentSslCertificateRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get mostRecentSslCertificate from security
+     * The most recent sslCertificate used to communicate on the port.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mostRecentSslCertificateRequestBuilder
+     * @return a MostRecentSslCertificateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MostRecentSslCertificateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +88,7 @@ public class MostRecentSslCertificateRequestBuilder extends BaseRequestBuilder {
         return new MostRecentSslCertificateRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mostRecentSslCertificate from security
+     * The most recent sslCertificate used to communicate on the port.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationGroupAssignment extends Entity implements Parsable {
     /**
-     * The navigation link to the Device Configuration being targeted.
-     */
-    private DeviceConfiguration deviceConfiguration;
-    /**
-     * Indicates if this group is should be excluded. Defaults that the group should be included
-     */
-    private Boolean excludeGroup;
-    /**
-     * The Id of the AAD group we are targeting the device configuration to.
-     */
-    private String targetGroupId;
-    /**
-     * Instantiates a new deviceConfigurationGroupAssignment and sets the default values.
+     * Instantiates a new DeviceConfigurationGroupAssignment and sets the default values.
      */
     public DeviceConfigurationGroupAssignment() {
         super();
@@ -32,7 +20,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationGroupAssignment
+     * @return a DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the deviceConfiguration property value. The navigation link to the Device Configuration being targeted.
-     * @return a deviceConfiguration
+     * @return a DeviceConfiguration
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration getDeviceConfiguration() {
-        return this.deviceConfiguration;
+        return this.backingStore.get("deviceConfiguration");
     }
     /**
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
-        return this.excludeGroup;
+        return this.backingStore.get("excludeGroup");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {
-        return this.targetGroupId;
+        return this.backingStore.get("targetGroupId");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the deviceConfiguration property.
      */
     public void setDeviceConfiguration(@jakarta.annotation.Nullable final DeviceConfiguration value) {
-        this.deviceConfiguration = value;
+        this.backingStore.set("deviceConfiguration", value);
     }
     /**
      * Sets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
      * @param value Value to set for the excludeGroup property.
      */
     public void setExcludeGroup(@jakarta.annotation.Nullable final Boolean value) {
-        this.excludeGroup = value;
+        this.backingStore.set("excludeGroup", value);
     }
     /**
      * Sets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
      * @param value Value to set for the targetGroupId property.
      */
     public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {
-        this.targetGroupId = value;
+        this.backingStore.set("targetGroupId", value);
     }
 }

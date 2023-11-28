@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessScheduleInstance extends Entity implements Parsable {
     /**
-     * When the schedule instance ends, and is required.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * When this instance starts, and is required.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Instantiates a new privilegedAccessScheduleInstance and sets the default values.
+     * Instantiates a new PrivilegedAccessScheduleInstance and sets the default values.
      */
     public PrivilegedAccessScheduleInstance() {
         super();
@@ -26,7 +18,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessScheduleInstance
+     * @return a PrivilegedAccessScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +39,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -66,7 +58,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -83,13 +75,13 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the startDateTime property value. When this instance starts, and is required.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
 }

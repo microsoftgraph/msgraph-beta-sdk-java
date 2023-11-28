@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationTeamsAppResource extends EducationResource implements Parsable {
     /**
-     * URL that points to the icon of the app.
-     */
-    private String appIconWebUrl;
-    /**
-     * Teams app ID of the application.
-     */
-    private String appId;
-    /**
-     * URL for the app resource that will be opened by Teams.
-     */
-    private String teamsEmbeddedContentUrl;
-    /**
-     * URL for the app resource that can be opened in the browser.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new educationTeamsAppResource and sets the default values.
+     * Instantiates a new EducationTeamsAppResource and sets the default values.
      */
     public EducationTeamsAppResource() {
         super();
@@ -34,7 +18,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationTeamsAppResource
+     * @return a EducationTeamsAppResource
      */
     @jakarta.annotation.Nonnull
     public static EducationTeamsAppResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the appIconWebUrl property value. URL that points to the icon of the app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppIconWebUrl() {
-        return this.appIconWebUrl;
+        return this.backingStore.get("appIconWebUrl");
     }
     /**
      * Gets the appId property value. Teams app ID of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * The deserialization information for the current model
@@ -72,19 +56,19 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     }
     /**
      * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsEmbeddedContentUrl() {
-        return this.teamsEmbeddedContentUrl;
+        return this.backingStore.get("teamsEmbeddedContentUrl");
     }
     /**
      * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param value Value to set for the appIconWebUrl property.
      */
     public void setAppIconWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.appIconWebUrl = value;
+        this.backingStore.set("appIconWebUrl", value);
     }
     /**
      * Sets the appId property value. Teams app ID of the application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      * @param value Value to set for the teamsEmbeddedContentUrl property.
      */
     public void setTeamsEmbeddedContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.teamsEmbeddedContentUrl = value;
+        this.backingStore.set("teamsEmbeddedContentUrl", value);
     }
     /**
      * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

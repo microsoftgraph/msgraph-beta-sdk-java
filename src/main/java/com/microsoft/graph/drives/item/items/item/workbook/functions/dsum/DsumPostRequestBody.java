@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
+public class DsumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The criteria property
-     */
-    private Json criteria;
-    /**
-     * The database property
-     */
-    private Json database;
-    /**
-     * The field property
-     */
-    private Json field;
-    /**
-     * Instantiates a new dsumPostRequestBody and sets the default values.
+     * Instantiates a new DsumPostRequestBody and sets the default values.
      */
     public DsumPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dsumPostRequestBody
+     * @return a DsumPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static DsumPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +36,25 @@ public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
         return new DsumPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the criteria property value. The criteria property
@@ -56,7 +62,7 @@ public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCriteria() {
-        return this.criteria;
+        return this.backingStore.get("criteria");
     }
     /**
      * Gets the database property value. The database property
@@ -64,7 +70,7 @@ public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDatabase() {
-        return this.database;
+        return this.backingStore.get("database");
     }
     /**
      * Gets the field property value. The field property
@@ -72,7 +78,7 @@ public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getField() {
-        return this.field;
+        return this.backingStore.get("field");
     }
     /**
      * The deserialization information for the current model
@@ -98,31 +104,39 @@ public class DsumPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      */
     public void setCriteria(@jakarta.annotation.Nullable final Json value) {
-        this.criteria = value;
+        this.backingStore.set("criteria", value);
     }
     /**
      * Sets the database property value. The database property
      * @param value Value to set for the database property.
      */
     public void setDatabase(@jakarta.annotation.Nullable final Json value) {
-        this.database = value;
+        this.backingStore.set("database", value);
     }
     /**
      * Sets the field property value. The field property
      * @param value Value to set for the field property.
      */
     public void setField(@jakarta.annotation.Nullable final Json value) {
-        this.field = value;
+        this.backingStore.set("field", value);
     }
 }

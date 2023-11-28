@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalMeetingRegistration extends MeetingRegistrationBase implements Parsable {
     /**
-     * Instantiates a new externalMeetingRegistration and sets the default values.
+     * Instantiates a new ExternalMeetingRegistration and sets the default values.
      */
     public ExternalMeetingRegistration() {
         super();
@@ -18,7 +18,7 @@ public class ExternalMeetingRegistration extends MeetingRegistrationBase impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalMeetingRegistration
+     * @return a ExternalMeetingRegistration
      */
     @jakarta.annotation.Nonnull
     public static ExternalMeetingRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

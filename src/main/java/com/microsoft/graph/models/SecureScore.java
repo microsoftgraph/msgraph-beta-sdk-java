@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScore extends Entity implements Parsable {
     /**
-     * Active user count of the given tenant.
-     */
-    private Integer activeUserCount;
-    /**
-     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
-     */
-    private java.util.List<AverageComparativeScore> averageComparativeScores;
-    /**
-     * GUID string for tenant ID.
-     */
-    private String azureTenantId;
-    /**
-     * Contains tenant scores for a set of controls.
-     */
-    private java.util.List<ControlScore> controlScores;
-    /**
-     * The date when the entity is created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Tenant current attained score on specified date.
-     */
-    private Double currentScore;
-    /**
-     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
-     */
-    private java.util.List<String> enabledServices;
-    /**
-     * Licensed user count of the given tenant.
-     */
-    private Integer licensedUserCount;
-    /**
-     * Tenant maximum possible score on specified date.
-     */
-    private Double maxScore;
-    /**
-     * The vendorInformation property
-     */
-    private SecurityVendorInformation vendorInformation;
-    /**
-     * Instantiates a new secureScore and sets the default values.
+     * Instantiates a new SecureScore and sets the default values.
      */
     public SecureScore() {
         super();
@@ -58,7 +18,7 @@ public class SecureScore extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScore
+     * @return a SecureScore
      */
     @jakarta.annotation.Nonnull
     public static SecureScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,35 +27,35 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the activeUserCount property value. Active user count of the given tenant.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveUserCount() {
-        return this.activeUserCount;
+        return this.backingStore.get("activeUserCount");
     }
     /**
      * Gets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
-     * @return a averageComparativeScore
+     * @return a java.util.List<AverageComparativeScore>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AverageComparativeScore> getAverageComparativeScores() {
-        return this.averageComparativeScores;
+        return this.backingStore.get("averageComparativeScores");
     }
     /**
      * Gets the azureTenantId property value. GUID string for tenant ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.backingStore.get("azureTenantId");
     }
     /**
      * Gets the controlScores property value. Contains tenant scores for a set of controls.
-     * @return a controlScore
+     * @return a java.util.List<ControlScore>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ControlScore> getControlScores() {
-        return this.controlScores;
+        return this.backingStore.get("controlScores");
     }
     /**
      * Gets the createdDateTime property value. The date when the entity is created.
@@ -103,23 +63,23 @@ public class SecureScore extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the currentScore property value. Tenant current attained score on specified date.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCurrentScore() {
-        return this.currentScore;
+        return this.backingStore.get("currentScore");
     }
     /**
      * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledServices() {
-        return this.enabledServices;
+        return this.backingStore.get("enabledServices");
     }
     /**
      * The deserialization information for the current model
@@ -142,27 +102,27 @@ public class SecureScore extends Entity implements Parsable {
     }
     /**
      * Gets the licensedUserCount property value. Licensed user count of the given tenant.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLicensedUserCount() {
-        return this.licensedUserCount;
+        return this.backingStore.get("licensedUserCount");
     }
     /**
      * Gets the maxScore property value. Tenant maximum possible score on specified date.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
-        return this.maxScore;
+        return this.backingStore.get("maxScore");
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this.vendorInformation;
+        return this.backingStore.get("vendorInformation");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the activeUserCount property.
      */
     public void setActiveUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.activeUserCount = value;
+        this.backingStore.set("activeUserCount", value);
     }
     /**
      * Sets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      * @param value Value to set for the averageComparativeScores property.
      */
     public void setAverageComparativeScores(@jakarta.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
-        this.averageComparativeScores = value;
+        this.backingStore.set("averageComparativeScores", value);
     }
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.backingStore.set("azureTenantId", value);
     }
     /**
      * Sets the controlScores property value. Contains tenant scores for a set of controls.
      * @param value Value to set for the controlScores property.
      */
     public void setControlScores(@jakarta.annotation.Nullable final java.util.List<ControlScore> value) {
-        this.controlScores = value;
+        this.backingStore.set("controlScores", value);
     }
     /**
      * Sets the createdDateTime property value. The date when the entity is created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
      * @param value Value to set for the currentScore property.
      */
     public void setCurrentScore(@jakarta.annotation.Nullable final Double value) {
-        this.currentScore = value;
+        this.backingStore.set("currentScore", value);
     }
     /**
      * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      * @param value Value to set for the enabledServices property.
      */
     public void setEnabledServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enabledServices = value;
+        this.backingStore.set("enabledServices", value);
     }
     /**
      * Sets the licensedUserCount property value. Licensed user count of the given tenant.
      * @param value Value to set for the licensedUserCount property.
      */
     public void setLicensedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.licensedUserCount = value;
+        this.backingStore.set("licensedUserCount", value);
     }
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
      * @param value Value to set for the maxScore property.
      */
     public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
-        this.maxScore = value;
+        this.backingStore.set("maxScore", value);
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
-        this.vendorInformation = value;
+        this.backingStore.set("vendorInformation", value);
     }
 }

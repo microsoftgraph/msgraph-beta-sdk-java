@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
-     * Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     */
-    private UserFlowApiConnectorConfiguration apiConnectorConfiguration;
-    /**
-     * Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
-     */
-    private String defaultLanguageTag;
-    /**
-     * The identityProviders property
-     */
-    private java.util.List<IdentityProvider> identityProviders;
-    /**
-     * The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
-     */
-    private Boolean isLanguageCustomizationEnabled;
-    /**
-     * The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
-     */
-    private java.util.List<UserFlowLanguageConfiguration> languages;
-    /**
-     * The user attribute assignments included in the user flow.
-     */
-    private java.util.List<IdentityUserFlowAttributeAssignment> userAttributeAssignments;
-    /**
-     * The userFlowIdentityProviders property
-     */
-    private java.util.List<IdentityProviderBase> userFlowIdentityProviders;
-    /**
-     * Instantiates a new b2cIdentityUserFlow and sets the default values.
+     * Instantiates a new B2cIdentityUserFlow and sets the default values.
      */
     public B2cIdentityUserFlow() {
         super();
@@ -45,7 +17,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a b2cIdentityUserFlow
+     * @return a B2cIdentityUserFlow
      */
     @jakarta.annotation.Nonnull
     public static B2cIdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +26,19 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     * @return a userFlowApiConnectorConfiguration
+     * @return a UserFlowApiConnectorConfiguration
      */
     @jakarta.annotation.Nullable
     public UserFlowApiConnectorConfiguration getApiConnectorConfiguration() {
-        return this.apiConnectorConfiguration;
+        return this.backingStore.get("apiConnectorConfiguration");
     }
     /**
      * Gets the defaultLanguageTag property value. Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguageTag() {
-        return this.defaultLanguageTag;
+        return this.backingStore.get("defaultLanguageTag");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +58,43 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
     }
     /**
      * Gets the identityProviders property value. The identityProviders property
-     * @return a identityProvider
+     * @return a java.util.List<IdentityProvider>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getIdentityProviders() {
-        return this.identityProviders;
+        return this.backingStore.get("identityProviders");
     }
     /**
      * Gets the isLanguageCustomizationEnabled property value. The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLanguageCustomizationEnabled() {
-        return this.isLanguageCustomizationEnabled;
+        return this.backingStore.get("isLanguageCustomizationEnabled");
     }
     /**
      * Gets the languages property value. The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
-     * @return a userFlowLanguageConfiguration
+     * @return a java.util.List<UserFlowLanguageConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguageConfiguration> getLanguages() {
-        return this.languages;
+        return this.backingStore.get("languages");
     }
     /**
      * Gets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
-     * @return a identityUserFlowAttributeAssignment
+     * @return a java.util.List<IdentityUserFlowAttributeAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttributeAssignment> getUserAttributeAssignments() {
-        return this.userAttributeAssignments;
+        return this.backingStore.get("userAttributeAssignments");
     }
     /**
      * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getUserFlowIdentityProviders() {
-        return this.userFlowIdentityProviders;
+        return this.backingStore.get("userFlowIdentityProviders");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the apiConnectorConfiguration property.
      */
     public void setApiConnectorConfiguration(@jakarta.annotation.Nullable final UserFlowApiConnectorConfiguration value) {
-        this.apiConnectorConfiguration = value;
+        this.backingStore.set("apiConnectorConfiguration", value);
     }
     /**
      * Sets the defaultLanguageTag property value. Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
      * @param value Value to set for the defaultLanguageTag property.
      */
     public void setDefaultLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.defaultLanguageTag = value;
+        this.backingStore.set("defaultLanguageTag", value);
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {
-        this.identityProviders = value;
+        this.backingStore.set("identityProviders", value);
     }
     /**
      * Sets the isLanguageCustomizationEnabled property value. The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
      * @param value Value to set for the isLanguageCustomizationEnabled property.
      */
     public void setIsLanguageCustomizationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLanguageCustomizationEnabled = value;
+        this.backingStore.set("isLanguageCustomizationEnabled", value);
     }
     /**
      * Sets the languages property value. The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
      * @param value Value to set for the languages property.
      */
     public void setLanguages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {
-        this.languages = value;
+        this.backingStore.set("languages", value);
     }
     /**
      * Sets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
      * @param value Value to set for the userAttributeAssignments property.
      */
     public void setUserAttributeAssignments(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttributeAssignment> value) {
-        this.userAttributeAssignments = value;
+        this.backingStore.set("userAttributeAssignments", value);
     }
     /**
      * Sets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
      * @param value Value to set for the userFlowIdentityProviders property.
      */
     public void setUserFlowIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.userFlowIdentityProviders = value;
+        this.backingStore.set("userFlowIdentityProviders", value);
     }
 }

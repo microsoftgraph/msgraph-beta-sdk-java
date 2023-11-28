@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelAddedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Display name of the channel.
-     */
-    private String channelDisplayName;
-    /**
-     * Unique identifier of the channel.
-     */
-    private String channelId;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Instantiates a new channelAddedEventMessageDetail and sets the default values.
+     * Instantiates a new ChannelAddedEventMessageDetail and sets the default values.
      */
     public ChannelAddedEventMessageDetail() {
         super();
@@ -30,7 +18,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a channelAddedEventMessageDetail
+     * @return a ChannelAddedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static ChannelAddedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the channelDisplayName property value. Display name of the channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChannelDisplayName() {
-        return this.channelDisplayName;
+        return this.backingStore.get("channelDisplayName");
     }
     /**
      * Gets the channelId property value. Unique identifier of the channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
-        return this.channelId;
+        return this.backingStore.get("channelId");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the channelDisplayName property.
      */
     public void setChannelDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.channelDisplayName = value;
+        this.backingStore.set("channelDisplayName", value);
     }
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      * @param value Value to set for the channelId property.
      */
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
-        this.channelId = value;
+        this.backingStore.set("channelId", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
 }

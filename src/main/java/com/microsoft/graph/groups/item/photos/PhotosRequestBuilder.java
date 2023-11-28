@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.photos;
 
-import com.microsoft.graph.groups.item.photos.count.CountRequestBuilder;
 import com.microsoft.graph.groups.item.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProfilePhotoCollectionResponse;
@@ -23,13 +22,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to count the resources in the collection.
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the photos property of the microsoft.graph.group entity.
      * @param profilePhotoId The unique identifier of profilePhoto
      * @return a ProfilePhotoItemRequestBuilder
@@ -47,7 +39,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PhotosRequestBuilder and sets the default values.
@@ -55,30 +47,30 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", rawUrl);
     }
     /**
      * Retrieve a list of profilePhoto objects.
-     * @return a CompletableFuture of profilePhotoCollectionResponse
+     * @return a ProfilePhotoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ProfilePhotoCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of profilePhoto objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhotoCollectionResponse
+     * @return a ProfilePhotoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfilePhotoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfilePhotoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhotoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of profilePhoto objects.
@@ -95,24 +87,15 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a photosRequestBuilder
+     * @return a PhotosRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PhotosRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -124,12 +107,6 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
-        /**
-         * Include count of items
-         */
-        @QueryParameter(name = "%24count")
-        @jakarta.annotation.Nullable
-        public Boolean count;
         /**
          * Filter items by property values
          */

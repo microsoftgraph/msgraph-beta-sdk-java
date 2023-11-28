@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterShare extends PrinterBase implements Parsable {
     /**
-     * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
-     */
-    private Boolean allowAllUsers;
-    /**
-     * The groups whose users have access to print using the printer.
-     */
-    private java.util.List<Group> allowedGroups;
-    /**
-     * The users who have access to print using the printer.
-     */
-    private java.util.List<User> allowedUsers;
-    /**
-     * The DateTimeOffset when the printer share was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The printer that this printer share is related to.
-     */
-    private Printer printer;
-    /**
-     * Additional data for a printer share as viewed by the signed-in user.
-     */
-    private PrinterShareViewpoint viewPoint;
-    /**
-     * Instantiates a new printerShare and sets the default values.
+     * Instantiates a new PrinterShare and sets the default values.
      */
     public PrinterShare() {
         super();
@@ -43,7 +19,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerShare
+     * @return a PrinterShare
      */
     @jakarta.annotation.Nonnull
     public static PrinterShare createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,27 +28,27 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAllUsers() {
-        return this.allowAllUsers;
+        return this.backingStore.get("allowAllUsers");
     }
     /**
      * Gets the allowedGroups property value. The groups whose users have access to print using the printer.
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getAllowedGroups() {
-        return this.allowedGroups;
+        return this.backingStore.get("allowedGroups");
     }
     /**
      * Gets the allowedUsers property value. The users who have access to print using the printer.
-     * @return a user
+     * @return a java.util.List<User>
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getAllowedUsers() {
-        return this.allowedUsers;
+        return this.backingStore.get("allowedUsers");
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
@@ -80,7 +56,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -99,19 +75,19 @@ public class PrinterShare extends PrinterBase implements Parsable {
     }
     /**
      * Gets the printer property value. The printer that this printer share is related to.
-     * @return a printer
+     * @return a Printer
      */
     @jakarta.annotation.Nullable
     public Printer getPrinter() {
-        return this.printer;
+        return this.backingStore.get("printer");
     }
     /**
      * Gets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
-     * @return a printerShareViewpoint
+     * @return a PrinterShareViewpoint
      */
     @jakarta.annotation.Nullable
     public PrinterShareViewpoint getViewPoint() {
-        return this.viewPoint;
+        return this.backingStore.get("viewPoint");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the allowAllUsers property.
      */
     public void setAllowAllUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAllUsers = value;
+        this.backingStore.set("allowAllUsers", value);
     }
     /**
      * Sets the allowedGroups property value. The groups whose users have access to print using the printer.
      * @param value Value to set for the allowedGroups property.
      */
     public void setAllowedGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
-        this.allowedGroups = value;
+        this.backingStore.set("allowedGroups", value);
     }
     /**
      * Sets the allowedUsers property value. The users who have access to print using the printer.
      * @param value Value to set for the allowedUsers property.
      */
     public void setAllowedUsers(@jakarta.annotation.Nullable final java.util.List<User> value) {
-        this.allowedUsers = value;
+        this.backingStore.set("allowedUsers", value);
     }
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the printer property value. The printer that this printer share is related to.
      * @param value Value to set for the printer property.
      */
     public void setPrinter(@jakarta.annotation.Nullable final Printer value) {
-        this.printer = value;
+        this.backingStore.set("printer", value);
     }
     /**
      * Sets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
      * @param value Value to set for the viewPoint property.
      */
     public void setViewPoint(@jakarta.annotation.Nullable final PrinterShareViewpoint value) {
-        this.viewPoint = value;
+        this.backingStore.set("viewPoint", value);
     }
 }

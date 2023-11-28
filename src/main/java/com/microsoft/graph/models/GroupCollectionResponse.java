@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Group> value;
-    /**
-     * Instantiates a new groupCollectionResponse and sets the default values.
+     * Instantiates a new GroupCollectionResponse and sets the default values.
      */
     public GroupCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class GroupCollectionResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupCollectionResponse
+     * @return a GroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GroupCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class GroupCollectionResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class GroupCollectionResponse extends BaseCollectionPaginationCountRespon
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Group> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

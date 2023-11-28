@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<YearTimePeriodDefinition> value;
-    /**
-     * Instantiates a new yearTimePeriodDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new YearTimePeriodDefinitionCollectionResponse and sets the default values.
      */
     public YearTimePeriodDefinitionCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a yearTimePeriodDefinitionCollectionResponse
+     * @return a YearTimePeriodDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static YearTimePeriodDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a yearTimePeriodDefinition
+     * @return a java.util.List<YearTimePeriodDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<YearTimePeriodDefinition> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<YearTimePeriodDefinition> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

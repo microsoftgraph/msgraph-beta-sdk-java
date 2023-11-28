@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitlockerRecoveryKeyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BitlockerRecoveryKey> value;
-    /**
-     * Instantiates a new bitlockerRecoveryKeyCollectionResponse and sets the default values.
+     * Instantiates a new BitlockerRecoveryKeyCollectionResponse and sets the default values.
      */
     public BitlockerRecoveryKeyCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class BitlockerRecoveryKeyCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bitlockerRecoveryKeyCollectionResponse
+     * @return a BitlockerRecoveryKeyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BitlockerRecoveryKeyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class BitlockerRecoveryKeyCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a bitlockerRecoveryKey
+     * @return a java.util.List<BitlockerRecoveryKey>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BitlockerRecoveryKey> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BitlockerRecoveryKeyCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BitlockerRecoveryKey> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable {
     /**
-     * The friendly name
-     */
-    private String displayName;
-    /**
-     * File as a byte array
-     */
-    private byte[] file;
-    /**
-     * SHA256 hash of the file
-     */
-    private String fileHash;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
-     * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
+     * Instantiates a new WindowsInformationProtectionAppLockerFile and sets the default values.
      */
     public WindowsInformationProtectionAppLockerFile() {
         super();
@@ -36,7 +20,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionAppLockerFile
+     * @return a WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionAppLockerFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,11 +29,11 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     }
     /**
      * Gets the displayName property value. The friendly name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -66,27 +50,27 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     }
     /**
      * Gets the file property value. File as a byte array
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getFile() {
-        return this.file;
+        return this.backingStore.get("file");
     }
     /**
      * Gets the fileHash property value. SHA256 hash of the file
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileHash() {
-        return this.fileHash;
+        return this.backingStore.get("fileHash");
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the file property value. File as a byte array
      * @param value Value to set for the file property.
      */
     public void setFile(@jakarta.annotation.Nullable final byte[] value) {
-        this.file = value;
+        this.backingStore.set("file", value);
     }
     /**
      * Sets the fileHash property value. SHA256 hash of the file
      * @param value Value to set for the fileHash property.
      */
     public void setFileHash(@jakarta.annotation.Nullable final String value) {
-        this.fileHash = value;
+        this.backingStore.set("fileHash", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

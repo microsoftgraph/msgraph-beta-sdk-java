@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppProvisioningConfigGroupAssignment extends Entity implements Parsable {
     /**
-     * The ID of the AAD group in which the app provisioning configuration is being targeted.
-     */
-    private String targetGroupId;
-    /**
-     * Instantiates a new mobileAppProvisioningConfigGroupAssignment and sets the default values.
+     * Instantiates a new MobileAppProvisioningConfigGroupAssignment and sets the default values.
      */
     public MobileAppProvisioningConfigGroupAssignment() {
         super();
@@ -24,7 +20,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppProvisioningConfigGroupAssignment
+     * @return a MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static MobileAppProvisioningConfigGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     }
     /**
      * Gets the targetGroupId property value. The ID of the AAD group in which the app provisioning configuration is being targeted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {
-        return this.targetGroupId;
+        return this.backingStore.get("targetGroupId");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param value Value to set for the targetGroupId property.
      */
     public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {
-        this.targetGroupId = value;
+        this.backingStore.set("targetGroupId", value);
     }
 }

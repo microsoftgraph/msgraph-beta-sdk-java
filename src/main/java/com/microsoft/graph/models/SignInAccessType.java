@@ -10,7 +10,8 @@ public enum SignInAccessType implements ValuedEnum {
     B2bDirectConnect("b2bDirectConnect"),
     MicrosoftSupport("microsoftSupport"),
     ServiceProvider("serviceProvider"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Passthrough("passthrough");
     public final String value;
     SignInAccessType(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum SignInAccessType implements ValuedEnum {
             case "microsoftSupport": return MicrosoftSupport;
             case "serviceProvider": return ServiceProvider;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "passthrough": return Passthrough;
             default: return null;
         }
     }

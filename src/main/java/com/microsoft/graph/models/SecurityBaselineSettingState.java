@@ -12,39 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineSettingState extends Entity implements Parsable {
     /**
-     * The policies that contribute to this setting instance
-     */
-    private java.util.List<SecurityBaselineContributingPolicy> contributingPolicies;
-    /**
-     * The error code if the setting is in error state
-     */
-    private String errorCode;
-    /**
-     * The setting category id which this setting belongs to
-     */
-    private String settingCategoryId;
-    /**
-     * The setting category name which this setting belongs to
-     */
-    private String settingCategoryName;
-    /**
-     * The setting id guid
-     */
-    private String settingId;
-    /**
-     * The setting name that is being reported
-     */
-    private String settingName;
-    /**
-     * The policies that contribute to this setting instance
-     */
-    private java.util.List<SettingSource> sourcePolicies;
-    /**
-     * Security Baseline Compliance State
-     */
-    private SecurityBaselineComplianceState state;
-    /**
-     * Instantiates a new securityBaselineSettingState and sets the default values.
+     * Instantiates a new SecurityBaselineSettingState and sets the default values.
      */
     public SecurityBaselineSettingState() {
         super();
@@ -52,7 +20,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineSettingState
+     * @return a SecurityBaselineSettingState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,19 +29,19 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the contributingPolicies property value. The policies that contribute to this setting instance
-     * @return a securityBaselineContributingPolicy
+     * @return a java.util.List<SecurityBaselineContributingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineContributingPolicy> getContributingPolicies() {
-        return this.contributingPolicies;
+        return this.backingStore.get("contributingPolicies");
     }
     /**
      * Gets the errorCode property value. The error code if the setting is in error state
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -89,56 +57,56 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
         deserializerMap.put("settingId", (n) -> { this.setSettingId(n.getStringValue()); });
         deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
         deserializerMap.put("sourcePolicies", (n) -> { this.setSourcePolicies(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SecurityBaselineComplianceState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the settingCategoryId property value. The setting category id which this setting belongs to
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingCategoryId() {
-        return this.settingCategoryId;
+        return this.backingStore.get("settingCategoryId");
     }
     /**
      * Gets the settingCategoryName property value. The setting category name which this setting belongs to
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingCategoryName() {
-        return this.settingCategoryName;
+        return this.backingStore.get("settingCategoryName");
     }
     /**
      * Gets the settingId property value. The setting id guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingId() {
-        return this.settingId;
+        return this.backingStore.get("settingId");
     }
     /**
      * Gets the settingName property value. The setting name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.backingStore.get("settingName");
     }
     /**
      * Gets the sourcePolicies property value. The policies that contribute to this setting instance
-     * @return a settingSource
+     * @return a java.util.List<SettingSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSourcePolicies() {
-        return this.sourcePolicies;
+        return this.backingStore.get("sourcePolicies");
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -161,55 +129,55 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the contributingPolicies property.
      */
     public void setContributingPolicies(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineContributingPolicy> value) {
-        this.contributingPolicies = value;
+        this.backingStore.set("contributingPolicies", value);
     }
     /**
      * Sets the errorCode property value. The error code if the setting is in error state
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the settingCategoryId property value. The setting category id which this setting belongs to
      * @param value Value to set for the settingCategoryId property.
      */
     public void setSettingCategoryId(@jakarta.annotation.Nullable final String value) {
-        this.settingCategoryId = value;
+        this.backingStore.set("settingCategoryId", value);
     }
     /**
      * Sets the settingCategoryName property value. The setting category name which this setting belongs to
      * @param value Value to set for the settingCategoryName property.
      */
     public void setSettingCategoryName(@jakarta.annotation.Nullable final String value) {
-        this.settingCategoryName = value;
+        this.backingStore.set("settingCategoryName", value);
     }
     /**
      * Sets the settingId property value. The setting id guid
      * @param value Value to set for the settingId property.
      */
     public void setSettingId(@jakarta.annotation.Nullable final String value) {
-        this.settingId = value;
+        this.backingStore.set("settingId", value);
     }
     /**
      * Sets the settingName property value. The setting name that is being reported
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.backingStore.set("settingName", value);
     }
     /**
      * Sets the sourcePolicies property value. The policies that contribute to this setting instance
      * @param value Value to set for the sourcePolicies property.
      */
     public void setSourcePolicies(@jakarta.annotation.Nullable final java.util.List<SettingSource> value) {
-        this.sourcePolicies = value;
+        this.backingStore.set("sourcePolicies", value);
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final SecurityBaselineComplianceState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

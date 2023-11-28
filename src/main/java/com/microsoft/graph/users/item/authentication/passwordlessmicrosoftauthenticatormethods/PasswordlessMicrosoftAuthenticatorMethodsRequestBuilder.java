@@ -59,26 +59,26 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
     }
     /**
      * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
-     * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse
+     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse
+     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
@@ -95,24 +95,15 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a passwordlessMicrosoftAuthenticatorMethodsRequestBuilder
+     * @return a PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

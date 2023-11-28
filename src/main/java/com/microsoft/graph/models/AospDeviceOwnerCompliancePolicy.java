@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Minimum Android security patch level.
-     */
-    private String minAndroidSecurityPatchLevel;
-    /**
-     * Maximum Android version.
-     */
-    private String osMaximumVersion;
-    /**
-     * Minimum Android version.
-     */
-    private String osMinimumVersion;
-    /**
-     * Minimum password length. Valid values 4 to 16
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before a password is required. Valid values 1 to 8640
-     */
-    private Integer passwordMinutesOfInactivityBeforeLock;
-    /**
-     * Require a password to unlock device.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     */
-    private AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
-    /**
-     * Devices must not be jailbroken or rooted.
-     */
-    private Boolean securityBlockJailbrokenDevices;
-    /**
-     * Require encryption on Android devices.
-     */
-    private Boolean storageRequireEncryption;
-    /**
-     * Instantiates a new aospDeviceOwnerCompliancePolicy and sets the default values.
+     * Instantiates a new AospDeviceOwnerCompliancePolicy and sets the default values.
      */
     public AospDeviceOwnerCompliancePolicy() {
         super();
@@ -57,7 +21,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aospDeviceOwnerCompliancePolicy
+     * @return a AospDeviceOwnerCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,82 +41,82 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
         deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
         deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
         deserializerMap.put("securityBlockJailbrokenDevices", (n) -> { this.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
         deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
-        return this.minAndroidSecurityPatchLevel;
+        return this.backingStore.get("minAndroidSecurityPatchLevel");
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.backingStore.get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.backingStore.get("osMinimumVersion");
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.backingStore.get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required. Valid values 1 to 8640
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this.passwordMinutesOfInactivityBeforeLock;
+        return this.backingStore.get("passwordMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.backingStore.get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a androidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.backingStore.get("passwordRequiredType");
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
-        return this.securityBlockJailbrokenDevices;
+        return this.backingStore.get("securityBlockJailbrokenDevices");
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.backingStore.get("storageRequireEncryption");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      */
     public void setMinAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
-        this.minAndroidSecurityPatchLevel = value;
+        this.backingStore.set("minAndroidSecurityPatchLevel", value);
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Android version.
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.backingStore.set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Android version.
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.backingStore.set("osMinimumVersion", value);
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.backingStore.set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required. Valid values 1 to 8640
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      */
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeLock = value;
+        this.backingStore.set("passwordMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock device.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.backingStore.set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.backingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      */
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
-        this.securityBlockJailbrokenDevices = value;
+        this.backingStore.set("securityBlockJailbrokenDevices", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Android devices.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.backingStore.set("storageRequireEncryption", value);
     }
 }

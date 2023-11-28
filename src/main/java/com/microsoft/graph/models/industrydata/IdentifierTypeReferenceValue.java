@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentifierTypeReferenceValue extends ReferenceValue implements Parsable {
     /**
-     * Instantiates a new identifierTypeReferenceValue and sets the default values.
+     * Instantiates a new IdentifierTypeReferenceValue and sets the default values.
      */
     public IdentifierTypeReferenceValue() {
         super();
@@ -18,7 +18,7 @@ public class IdentifierTypeReferenceValue extends ReferenceValue implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identifierTypeReferenceValue
+     * @return a IdentifierTypeReferenceValue
      */
     @jakarta.annotation.Nonnull
     public static IdentifierTypeReferenceValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

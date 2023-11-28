@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMobileMSICollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsMobileMSI> value;
-    /**
-     * Instantiates a new windowsMobileMSICollectionResponse and sets the default values.
+     * Instantiates a new WindowsMobileMSICollectionResponse and sets the default values.
      */
     public WindowsMobileMSICollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsMobileMSICollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsMobileMSICollectionResponse
+     * @return a WindowsMobileMSICollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsMobileMSICollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsMobileMSICollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsMobileMSI
+     * @return a java.util.List<WindowsMobileMSI>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsMobileMSI> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsMobileMSICollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsMobileMSI> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

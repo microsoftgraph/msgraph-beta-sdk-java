@@ -13,47 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosScepCertificateProfile extends IosCertificateProfileBase implements Parsable {
     /**
-     * Target store certificate. Possible values are: user, machine.
-     */
-    private CertificateStore certificateStore;
-    /**
-     * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-    /**
-     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
-    /**
-     * Key Size Options.
-     */
-    private KeySize keySize;
-    /**
-     * Key Usage Options.
-     */
-    private EnumSet<KeyUsages> keyUsage;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * Trusted Root Certificate.
-     */
-    private IosTrustedRootCertificate rootCertificate;
-    /**
-     * SCEP Server Url(s).
-     */
-    private java.util.List<String> scepServerUrls;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new iosScepCertificateProfile and sets the default values.
+     * Instantiates a new IosScepCertificateProfile and sets the default values.
      */
     public IosScepCertificateProfile() {
         super();
@@ -62,7 +22,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosScepCertificateProfile
+     * @return a IosScepCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static IosScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,27 +31,27 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this.certificateStore;
+        return this.backingStore.get("certificateStore");
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this.customSubjectAlternativeNames;
+        return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this.extendedKeyUsages;
+        return this.backingStore.get("extendedKeyUsages");
     }
     /**
      * The deserialization information for the current model
@@ -100,11 +60,11 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
+        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -114,59 +74,59 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
-        return this.keySize;
+        return this.backingStore.get("keySize");
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
-        return this.keyUsage;
+        return this.backingStore.get("keyUsage");
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.backingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
-     * @return a iosTrustedRootCertificate
+     * @return a IosTrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public IosTrustedRootCertificate getRootCertificate() {
-        return this.rootCertificate;
+        return this.backingStore.get("rootCertificate");
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this.scepServerUrls;
+        return this.backingStore.get("scepServerUrls");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.backingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.backingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -191,69 +151,69 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
-        this.certificateStore = value;
+        this.backingStore.set("certificateStore", value);
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this.customSubjectAlternativeNames = value;
+        this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
      */
     public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this.extendedKeyUsages = value;
+        this.backingStore.set("extendedKeyUsages", value);
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      */
     public void setKeySize(@jakarta.annotation.Nullable final KeySize value) {
-        this.keySize = value;
+        this.backingStore.set("keySize", value);
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
     public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
-        this.keyUsage = value;
+        this.backingStore.set("keyUsage", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.backingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the rootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the rootCertificate property.
      */
     public void setRootCertificate(@jakarta.annotation.Nullable final IosTrustedRootCertificate value) {
-        this.rootCertificate = value;
+        this.backingStore.set("rootCertificate", value);
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s).
      * @param value Value to set for the scepServerUrls property.
      */
     public void setScepServerUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.scepServerUrls = value;
+        this.backingStore.set("scepServerUrls", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.backingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.backingStore.set("subjectNameFormatString", value);
     }
 }

@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Command extends Entity implements Parsable {
     /**
-     * The appServiceName property
-     */
-    private String appServiceName;
-    /**
-     * The error property
-     */
-    private String error;
-    /**
-     * The packageFamilyName property
-     */
-    private String packageFamilyName;
-    /**
-     * The payload property
-     */
-    private PayloadRequest payload;
-    /**
-     * The permissionTicket property
-     */
-    private String permissionTicket;
-    /**
-     * The postBackUri property
-     */
-    private String postBackUri;
-    /**
-     * The responsepayload property
-     */
-    private PayloadResponse responsepayload;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The type property
-     */
-    private String type;
-    /**
-     * Instantiates a new command and sets the default values.
+     * Instantiates a new Command and sets the default values.
      */
     public Command() {
         super();
@@ -53,7 +17,7 @@ public class Command extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a command
+     * @return a Command
      */
     @jakarta.annotation.Nonnull
     public static Command createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,19 +26,19 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the appServiceName property value. The appServiceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppServiceName() {
-        return this.appServiceName;
+        return this.backingStore.get("appServiceName");
     }
     /**
      * Gets the error property value. The error property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -96,59 +60,59 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the packageFamilyName property value. The packageFamilyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageFamilyName() {
-        return this.packageFamilyName;
+        return this.backingStore.get("packageFamilyName");
     }
     /**
      * Gets the payload property value. The payload property
-     * @return a payloadRequest
+     * @return a PayloadRequest
      */
     @jakarta.annotation.Nullable
     public PayloadRequest getPayload() {
-        return this.payload;
+        return this.backingStore.get("payload");
     }
     /**
      * Gets the permissionTicket property value. The permissionTicket property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPermissionTicket() {
-        return this.permissionTicket;
+        return this.backingStore.get("permissionTicket");
     }
     /**
      * Gets the postBackUri property value. The postBackUri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostBackUri() {
-        return this.postBackUri;
+        return this.backingStore.get("postBackUri");
     }
     /**
      * Gets the responsepayload property value. The responsepayload property
-     * @return a payloadResponse
+     * @return a PayloadResponse
      */
     @jakarta.annotation.Nullable
     public PayloadResponse getResponsepayload() {
-        return this.responsepayload;
+        return this.backingStore.get("responsepayload");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the appServiceName property.
      */
     public void setAppServiceName(@jakarta.annotation.Nullable final String value) {
-        this.appServiceName = value;
+        this.backingStore.set("appServiceName", value);
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the packageFamilyName property value. The packageFamilyName property
      * @param value Value to set for the packageFamilyName property.
      */
     public void setPackageFamilyName(@jakarta.annotation.Nullable final String value) {
-        this.packageFamilyName = value;
+        this.backingStore.set("packageFamilyName", value);
     }
     /**
      * Sets the payload property value. The payload property
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final PayloadRequest value) {
-        this.payload = value;
+        this.backingStore.set("payload", value);
     }
     /**
      * Sets the permissionTicket property value. The permissionTicket property
      * @param value Value to set for the permissionTicket property.
      */
     public void setPermissionTicket(@jakarta.annotation.Nullable final String value) {
-        this.permissionTicket = value;
+        this.backingStore.set("permissionTicket", value);
     }
     /**
      * Sets the postBackUri property value. The postBackUri property
      * @param value Value to set for the postBackUri property.
      */
     public void setPostBackUri(@jakarta.annotation.Nullable final String value) {
-        this.postBackUri = value;
+        this.backingStore.set("postBackUri", value);
     }
     /**
      * Sets the responsepayload property value. The responsepayload property
      * @param value Value to set for the responsepayload property.
      */
     public void setResponsepayload(@jakarta.annotation.Nullable final PayloadResponse value) {
-        this.responsepayload = value;
+        this.backingStore.set("responsepayload", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

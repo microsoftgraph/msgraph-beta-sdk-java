@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskDefinition extends Entity implements Parsable {
     /**
-     * The createdBy property
-     */
-    private AppIdentity createdBy;
-    /**
-     * The name of the printTaskDefinition.
-     */
-    private String displayName;
-    /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
-     */
-    private java.util.List<PrintTask> tasks;
-    /**
-     * Instantiates a new printTaskDefinition and sets the default values.
+     * Instantiates a new PrintTaskDefinition and sets the default values.
      */
     public PrintTaskDefinition() {
         super();
@@ -29,7 +17,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printTaskDefinition
+     * @return a PrintTaskDefinition
      */
     @jakarta.annotation.Nonnull
     public static PrintTaskDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a appIdentity
+     * @return a AppIdentity
      */
     @jakarta.annotation.Nullable
     public AppIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the displayName property value. The name of the printTaskDefinition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
-     * @return a printTask
+     * @return a java.util.List<PrintTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
-        return this.tasks;
+        return this.backingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final AppIdentity value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PrintTask> value) {
-        this.tasks = value;
+        this.backingStore.set("tasks", value);
     }
 }
