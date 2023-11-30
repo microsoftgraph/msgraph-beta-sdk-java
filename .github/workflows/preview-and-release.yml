@@ -25,7 +25,7 @@ jobs:
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
