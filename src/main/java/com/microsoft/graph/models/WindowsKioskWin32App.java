@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsable {
     /**
-     * This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
-     */
-    private String classicAppPath;
-    /**
-     * Edge kiosk (url) for Edge kiosk mode
-     */
-    private String edgeKiosk;
-    /**
-     * Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
-     */
-    private Integer edgeKioskIdleTimeoutMinutes;
-    /**
-     * Edge kiosk type
-     */
-    private WindowsEdgeKioskType edgeKioskType;
-    /**
-     * Edge first run flag for Edge kiosk mode
-     */
-    private Boolean edgeNoFirstRun;
-    /**
-     * Instantiates a new windowsKioskWin32App and sets the default values.
+     * Instantiates a new WindowsKioskWin32App and sets the default values.
      */
     public WindowsKioskWin32App() {
         super();
@@ -41,7 +21,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskWin32App
+     * @return a WindowsKioskWin32App
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskWin32App createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,43 +30,43 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the classicAppPath property value. This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClassicAppPath() {
-        return this.classicAppPath;
+        return this.backingStore.get("classicAppPath");
     }
     /**
      * Gets the edgeKiosk property value. Edge kiosk (url) for Edge kiosk mode
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEdgeKiosk() {
-        return this.edgeKiosk;
+        return this.backingStore.get("edgeKiosk");
     }
     /**
      * Gets the edgeKioskIdleTimeoutMinutes property value. Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEdgeKioskIdleTimeoutMinutes() {
-        return this.edgeKioskIdleTimeoutMinutes;
+        return this.backingStore.get("edgeKioskIdleTimeoutMinutes");
     }
     /**
      * Gets the edgeKioskType property value. Edge kiosk type
-     * @return a windowsEdgeKioskType
+     * @return a WindowsEdgeKioskType
      */
     @jakarta.annotation.Nullable
     public WindowsEdgeKioskType getEdgeKioskType() {
-        return this.edgeKioskType;
+        return this.backingStore.get("edgeKioskType");
     }
     /**
      * Gets the edgeNoFirstRun property value. Edge first run flag for Edge kiosk mode
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeNoFirstRun() {
-        return this.edgeNoFirstRun;
+        return this.backingStore.get("edgeNoFirstRun");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +78,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
         deserializerMap.put("classicAppPath", (n) -> { this.setClassicAppPath(n.getStringValue()); });
         deserializerMap.put("edgeKiosk", (n) -> { this.setEdgeKiosk(n.getStringValue()); });
         deserializerMap.put("edgeKioskIdleTimeoutMinutes", (n) -> { this.setEdgeKioskIdleTimeoutMinutes(n.getIntegerValue()); });
-        deserializerMap.put("edgeKioskType", (n) -> { this.setEdgeKioskType(n.getEnumValue(WindowsEdgeKioskType.class)); });
+        deserializerMap.put("edgeKioskType", (n) -> { this.setEdgeKioskType(n.getEnumValue(WindowsEdgeKioskType::forValue)); });
         deserializerMap.put("edgeNoFirstRun", (n) -> { this.setEdgeNoFirstRun(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -120,34 +100,34 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the classicAppPath property.
      */
     public void setClassicAppPath(@jakarta.annotation.Nullable final String value) {
-        this.classicAppPath = value;
+        this.backingStore.set("classicAppPath", value);
     }
     /**
      * Sets the edgeKiosk property value. Edge kiosk (url) for Edge kiosk mode
      * @param value Value to set for the edgeKiosk property.
      */
     public void setEdgeKiosk(@jakarta.annotation.Nullable final String value) {
-        this.edgeKiosk = value;
+        this.backingStore.set("edgeKiosk", value);
     }
     /**
      * Sets the edgeKioskIdleTimeoutMinutes property value. Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
      * @param value Value to set for the edgeKioskIdleTimeoutMinutes property.
      */
     public void setEdgeKioskIdleTimeoutMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.edgeKioskIdleTimeoutMinutes = value;
+        this.backingStore.set("edgeKioskIdleTimeoutMinutes", value);
     }
     /**
      * Sets the edgeKioskType property value. Edge kiosk type
      * @param value Value to set for the edgeKioskType property.
      */
     public void setEdgeKioskType(@jakarta.annotation.Nullable final WindowsEdgeKioskType value) {
-        this.edgeKioskType = value;
+        this.backingStore.set("edgeKioskType", value);
     }
     /**
      * Sets the edgeNoFirstRun property value. Edge first run flag for Edge kiosk mode
      * @param value Value to set for the edgeNoFirstRun property.
      */
     public void setEdgeNoFirstRun(@jakarta.annotation.Nullable final Boolean value) {
-        this.edgeNoFirstRun = value;
+        this.backingStore.set("edgeNoFirstRun", value);
     }
 }

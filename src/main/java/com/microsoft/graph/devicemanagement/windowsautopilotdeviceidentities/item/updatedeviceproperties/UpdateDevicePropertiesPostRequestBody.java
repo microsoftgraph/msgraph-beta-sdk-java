@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The addressableUserName property
-     */
-    private String addressableUserName;
-    /**
-     * The deviceAccountPassword property
-     */
-    private String deviceAccountPassword;
-    /**
-     * The deviceAccountUpn property
-     */
-    private String deviceAccountUpn;
-    /**
-     * The deviceFriendlyName property
-     */
-    private String deviceFriendlyName;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The groupTag property
-     */
-    private String groupTag;
-    /**
-     * The userPrincipalName property
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.
+     * Instantiates a new UpdateDevicePropertiesPostRequestBody and sets the default values.
      */
     public UpdateDevicePropertiesPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateDevicePropertiesPostRequestBody
+     * @return a UpdateDevicePropertiesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateDevicePropertiesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,52 +35,65 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
         return new UpdateDevicePropertiesPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the addressableUserName property value. The addressableUserName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddressableUserName() {
-        return this.addressableUserName;
+        return this.backingStore.get("addressableUserName");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the deviceAccountPassword property value. The deviceAccountPassword property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountPassword() {
-        return this.deviceAccountPassword;
+        return this.backingStore.get("deviceAccountPassword");
     }
     /**
      * Gets the deviceAccountUpn property value. The deviceAccountUpn property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountUpn() {
-        return this.deviceAccountUpn;
+        return this.backingStore.get("deviceAccountUpn");
     }
     /**
      * Gets the deviceFriendlyName property value. The deviceFriendlyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceFriendlyName() {
-        return this.deviceFriendlyName;
+        return this.backingStore.get("deviceFriendlyName");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -123,19 +113,19 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the groupTag property value. The groupTag property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
-        return this.groupTag;
+        return this.backingStore.get("groupTag");
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -153,59 +143,67 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the addressableUserName property value. The addressableUserName property
      * @param value Value to set for the addressableUserName property.
      */
     public void setAddressableUserName(@jakarta.annotation.Nullable final String value) {
-        this.addressableUserName = value;
+        this.backingStore.set("addressableUserName", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the deviceAccountPassword property value. The deviceAccountPassword property
      * @param value Value to set for the deviceAccountPassword property.
      */
     public void setDeviceAccountPassword(@jakarta.annotation.Nullable final String value) {
-        this.deviceAccountPassword = value;
+        this.backingStore.set("deviceAccountPassword", value);
     }
     /**
      * Sets the deviceAccountUpn property value. The deviceAccountUpn property
      * @param value Value to set for the deviceAccountUpn property.
      */
     public void setDeviceAccountUpn(@jakarta.annotation.Nullable final String value) {
-        this.deviceAccountUpn = value;
+        this.backingStore.set("deviceAccountUpn", value);
     }
     /**
      * Sets the deviceFriendlyName property value. The deviceFriendlyName property
      * @param value Value to set for the deviceFriendlyName property.
      */
     public void setDeviceFriendlyName(@jakarta.annotation.Nullable final String value) {
-        this.deviceFriendlyName = value;
+        this.backingStore.set("deviceFriendlyName", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groupTag property value. The groupTag property
      * @param value Value to set for the groupTag property.
      */
     public void setGroupTag(@jakarta.annotation.Nullable final String value) {
-        this.groupTag = value;
+        this.backingStore.set("groupTag", value);
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

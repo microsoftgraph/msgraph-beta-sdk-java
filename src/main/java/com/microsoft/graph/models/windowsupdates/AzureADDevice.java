@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureADDevice extends UpdatableAsset implements Parsable {
     /**
-     * Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
-     */
-    private java.util.List<UpdatableAssetEnrollment> enrollments;
-    /**
-     * Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
-     */
-    private java.util.List<UpdatableAssetError> errors;
-    /**
-     * Instantiates a new azureADDevice and sets the default values.
+     * Instantiates a new AzureADDevice and sets the default values.
      */
     public AzureADDevice() {
         super();
@@ -26,7 +18,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureADDevice
+     * @return a AzureADDevice
      */
     @jakarta.annotation.Nonnull
     public static AzureADDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,19 +27,19 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
     }
     /**
      * Gets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
-     * @return a updatableAssetEnrollment
+     * @return a java.util.List<UpdatableAssetEnrollment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAssetEnrollment> getEnrollments() {
-        return this.enrollments;
+        return this.backingStore.get("enrollments");
     }
     /**
      * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
-     * @return a updatableAssetError
+     * @return a java.util.List<UpdatableAssetError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAssetError> getErrors() {
-        return this.errors;
+        return this.backingStore.get("errors");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param value Value to set for the enrollments property.
      */
     public void setEnrollments(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
-        this.enrollments = value;
+        this.backingStore.set("enrollments", value);
     }
     /**
      * Sets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetError> value) {
-        this.errors = value;
+        this.backingStore.set("errors", value);
     }
 }

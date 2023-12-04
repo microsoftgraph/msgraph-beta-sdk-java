@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanDetails extends PlannerDelta implements Parsable {
     /**
-     * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
-     */
-    private PlannerCategoryDescriptions categoryDescriptions;
-    /**
-     * A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
-     */
-    private PlannerPlanContextDetailsCollection contextDetails;
-    /**
-     * The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group.
-     */
-    private PlannerUserIds sharedWith;
-    /**
-     * Instantiates a new plannerPlanDetails and sets the default values.
+     * Instantiates a new PlannerPlanDetails and sets the default values.
      */
     public PlannerPlanDetails() {
         super();
@@ -29,7 +17,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanDetails
+     * @return a PlannerPlanDetails
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
-     * @return a plannerCategoryDescriptions
+     * @return a PlannerCategoryDescriptions
      */
     @jakarta.annotation.Nullable
     public PlannerCategoryDescriptions getCategoryDescriptions() {
-        return this.categoryDescriptions;
+        return this.backingStore.get("categoryDescriptions");
     }
     /**
      * Gets the contextDetails property value. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
-     * @return a plannerPlanContextDetailsCollection
+     * @return a PlannerPlanContextDetailsCollection
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContextDetailsCollection getContextDetails() {
-        return this.contextDetails;
+        return this.backingStore.get("contextDetails");
     }
     /**
      * The deserialization information for the current model
@@ -65,12 +53,12 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sharedWith property value. The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group.
-     * @return a plannerUserIds
+     * Gets the sharedWith property value. The set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required in order for them to access the plan owned by the group.
+     * @return a PlannerUserIds
      */
     @jakarta.annotation.Nullable
     public PlannerUserIds getSharedWith() {
-        return this.sharedWith;
+        return this.backingStore.get("sharedWith");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the categoryDescriptions property.
      */
     public void setCategoryDescriptions(@jakarta.annotation.Nullable final PlannerCategoryDescriptions value) {
-        this.categoryDescriptions = value;
+        this.backingStore.set("categoryDescriptions", value);
     }
     /**
      * Sets the contextDetails property value. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
      * @param value Value to set for the contextDetails property.
      */
     public void setContextDetails(@jakarta.annotation.Nullable final PlannerPlanContextDetailsCollection value) {
-        this.contextDetails = value;
+        this.backingStore.set("contextDetails", value);
     }
     /**
-     * Sets the sharedWith property value. The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group.
+     * Sets the sharedWith property value. The set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required in order for them to access the plan owned by the group.
      * @param value Value to set for the sharedWith property.
      */
     public void setSharedWith(@jakarta.annotation.Nullable final PlannerUserIds value) {
-        this.sharedWith = value;
+        this.backingStore.set("sharedWith", value);
     }
 }

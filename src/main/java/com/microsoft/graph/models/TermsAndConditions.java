@@ -13,59 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditions extends Entity implements Parsable {
     /**
-     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
-     */
-    private String acceptanceStatement;
-    /**
-     * The list of acceptance statuses for this T&C policy.
-     */
-    private java.util.List<TermsAndConditionsAcceptanceStatus> acceptanceStatuses;
-    /**
-     * The list of assignments for this T&C policy.
-     */
-    private java.util.List<TermsAndConditionsAssignment> assignments;
-    /**
-     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
-     */
-    private String bodyText;
-    /**
-     * DateTime the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Administrator-supplied description of the T&C policy.
-     */
-    private String description;
-    /**
-     * Administrator-supplied name for the T&C policy.
-     */
-    private String displayName;
-    /**
-     * The list of group assignments for this T&C policy.
-     */
-    private java.util.List<TermsAndConditionsGroupAssignment> groupAssignments;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
-     */
-    private String title;
-    /**
-     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
-     */
-    private Integer version;
-    /**
-     * Instantiates a new termsAndConditions and sets the default values.
+     * Instantiates a new TermsAndConditions and sets the default values.
      */
     public TermsAndConditions() {
         super();
@@ -73,7 +21,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termsAndConditions
+     * @return a TermsAndConditions
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,35 +30,35 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAcceptanceStatement() {
-        return this.acceptanceStatement;
+        return this.backingStore.get("acceptanceStatement");
     }
     /**
      * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
-     * @return a termsAndConditionsAcceptanceStatus
+     * @return a java.util.List<TermsAndConditionsAcceptanceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getAcceptanceStatuses() {
-        return this.acceptanceStatuses;
+        return this.backingStore.get("acceptanceStatuses");
     }
     /**
      * Gets the assignments property value. The list of assignments for this T&C policy.
-     * @return a termsAndConditionsAssignment
+     * @return a java.util.List<TermsAndConditionsAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBodyText() {
-        return this.bodyText;
+        return this.backingStore.get("bodyText");
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -118,23 +66,23 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Administrator-supplied description of the T&C policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Administrator-supplied name for the T&C policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -160,11 +108,11 @@ public class TermsAndConditions extends Entity implements Parsable {
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for this T&C policy.
-     * @return a termsAndConditionsGroupAssignment
+     * @return a java.util.List<TermsAndConditionsGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsGroupAssignment> getGroupAssignments() {
-        return this.groupAssignments;
+        return this.backingStore.get("groupAssignments");
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -172,7 +120,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the modifiedDateTime property value. DateTime the object was last modified.
@@ -180,31 +128,31 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -232,90 +180,90 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the acceptanceStatement property.
      */
     public void setAcceptanceStatement(@jakarta.annotation.Nullable final String value) {
-        this.acceptanceStatement = value;
+        this.backingStore.set("acceptanceStatement", value);
     }
     /**
      * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
      * @param value Value to set for the acceptanceStatuses property.
      */
     public void setAcceptanceStatuses(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
-        this.acceptanceStatuses = value;
+        this.backingStore.set("acceptanceStatuses", value);
     }
     /**
      * Sets the assignments property value. The list of assignments for this T&C policy.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the bodyText property.
      */
     public void setBodyText(@jakarta.annotation.Nullable final String value) {
-        this.bodyText = value;
+        this.backingStore.set("bodyText", value);
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Administrator-supplied description of the T&C policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Administrator-supplied name for the T&C policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groupAssignments property value. The list of group assignments for this T&C policy.
      * @param value Value to set for the groupAssignments property.
      */
     public void setGroupAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsGroupAssignment> value) {
-        this.groupAssignments = value;
+        this.backingStore.set("groupAssignments", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the modifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
     /**
      * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

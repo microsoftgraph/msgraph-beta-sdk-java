@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebApplicationSegment extends ApplicationSegment implements Parsable {
     /**
-     * If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
-     */
-    private String alternateUrl;
-    /**
-     * A collection of CORS Rule definitions for a particular application segment.
-     */
-    private java.util.List<CorsConfigurationV2> corsConfigurations;
-    /**
-     * The published external URL for the application segment; for example, https://intranet.contoso.com/.
-     */
-    private String externalUrl;
-    /**
-     * The internal URL of the application segment; for example, https://intranet/.
-     */
-    private String internalUrl;
-    /**
-     * Instantiates a new webApplicationSegment and sets the default values.
+     * Instantiates a new WebApplicationSegment and sets the default values.
      */
     public WebApplicationSegment() {
         super();
@@ -34,7 +18,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webApplicationSegment
+     * @return a WebApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static WebApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,27 +27,27 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
-        return this.alternateUrl;
+        return this.backingStore.get("alternateUrl");
     }
     /**
      * Gets the corsConfigurations property value. A collection of CORS Rule definitions for a particular application segment.
-     * @return a CorsConfigurationV2
+     * @return a java.util.List<CorsConfigurationV2>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CorsConfigurationV2> getCorsConfigurations() {
-        return this.corsConfigurations;
+        return this.backingStore.get("corsConfigurations");
     }
     /**
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
-        return this.externalUrl;
+        return this.backingStore.get("externalUrl");
     }
     /**
      * The deserialization information for the current model
@@ -80,11 +64,11 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {
-        return this.internalUrl;
+        return this.backingStore.get("internalUrl");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
-        this.alternateUrl = value;
+        this.backingStore.set("alternateUrl", value);
     }
     /**
      * Sets the corsConfigurations property value. A collection of CORS Rule definitions for a particular application segment.
      * @param value Value to set for the corsConfigurations property.
      */
     public void setCorsConfigurations(@jakarta.annotation.Nullable final java.util.List<CorsConfigurationV2> value) {
-        this.corsConfigurations = value;
+        this.backingStore.set("corsConfigurations", value);
     }
     /**
      * Sets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com/.
      * @param value Value to set for the externalUrl property.
      */
     public void setExternalUrl(@jakarta.annotation.Nullable final String value) {
-        this.externalUrl = value;
+        this.backingStore.set("externalUrl", value);
     }
     /**
      * Sets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
      * @param value Value to set for the internalUrl property.
      */
     public void setInternalUrl(@jakarta.annotation.Nullable final String value) {
-        this.internalUrl = value;
+        this.backingStore.set("internalUrl", value);
     }
 }

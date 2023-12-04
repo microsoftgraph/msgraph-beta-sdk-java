@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAssignment extends Entity implements Parsable {
     /**
-     * Assignment target that the T&C policy is assigned to.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new termsAndConditionsAssignment and sets the default values.
+     * Instantiates a new TermsAndConditionsAssignment and sets the default values.
      */
     public TermsAndConditionsAssignment() {
         super();
@@ -24,7 +20,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termsAndConditionsAssignment
+     * @return a TermsAndConditionsAssignment
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditionsAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. Assignment target that the T&C policy is assigned to.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

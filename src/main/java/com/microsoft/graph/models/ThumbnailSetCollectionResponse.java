@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ThumbnailSet> value;
-    /**
-     * Instantiates a new thumbnailSetCollectionResponse and sets the default values.
+     * Instantiates a new ThumbnailSetCollectionResponse and sets the default values.
      */
     public ThumbnailSetCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a thumbnailSetCollectionResponse
+     * @return a ThumbnailSetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ThumbnailSetCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a thumbnailSet
+     * @return a java.util.List<ThumbnailSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThumbnailSet> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ThumbnailSet> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

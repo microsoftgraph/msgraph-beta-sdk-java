@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteActionAuditCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<RemoteActionAudit> value;
-    /**
-     * Instantiates a new remoteActionAuditCollectionResponse and sets the default values.
+     * Instantiates a new RemoteActionAuditCollectionResponse and sets the default values.
      */
     public RemoteActionAuditCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class RemoteActionAuditCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteActionAuditCollectionResponse
+     * @return a RemoteActionAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RemoteActionAuditCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class RemoteActionAuditCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a remoteActionAudit
+     * @return a java.util.List<RemoteActionAudit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteActionAudit> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class RemoteActionAuditCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RemoteActionAudit> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

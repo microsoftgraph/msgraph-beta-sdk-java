@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension implements Parsable {
     /**
-     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<KeyTypedValuePair> configurations;
-    /**
-     * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     */
-    private String extensionIdentifier;
-    /**
-     * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     */
-    private String teamIdentifier;
-    /**
-     * One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
-     */
-    private java.util.List<String> urlPrefixes;
-    /**
-     * Instantiates a new iosRedirectSingleSignOnExtension and sets the default values.
+     * Instantiates a new IosRedirectSingleSignOnExtension and sets the default values.
      */
     public IosRedirectSingleSignOnExtension() {
         super();
@@ -37,7 +21,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosRedirectSingleSignOnExtension
+     * @return a IosRedirectSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static IosRedirectSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +30,19 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a keyTypedValuePair
+     * @return a java.util.List<KeyTypedValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
-        return this.configurations;
+        return this.backingStore.get("configurations");
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
-        return this.extensionIdentifier;
+        return this.backingStore.get("extensionIdentifier");
     }
     /**
      * The deserialization information for the current model
@@ -75,19 +59,19 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamIdentifier() {
-        return this.teamIdentifier;
+        return this.backingStore.get("teamIdentifier");
     }
     /**
      * Gets the urlPrefixes property value. One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUrlPrefixes() {
-        return this.urlPrefixes;
+        return this.backingStore.get("urlPrefixes");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the configurations property.
      */
     public void setConfigurations(@jakarta.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
-        this.configurations = value;
+        this.backingStore.set("configurations", value);
     }
     /**
      * Sets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the extensionIdentifier property.
      */
     public void setExtensionIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.extensionIdentifier = value;
+        this.backingStore.set("extensionIdentifier", value);
     }
     /**
      * Sets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the teamIdentifier property.
      */
     public void setTeamIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.teamIdentifier = value;
+        this.backingStore.set("teamIdentifier", value);
     }
     /**
      * Sets the urlPrefixes property value. One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
      * @param value Value to set for the urlPrefixes property.
      */
     public void setUrlPrefixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.urlPrefixes = value;
+        this.backingStore.set("urlPrefixes", value);
     }
 }

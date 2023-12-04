@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataClassificationService extends Entity implements Parsable {
     /**
-     * The classifyFileJobs property
-     */
-    private java.util.List<JobResponseBase> classifyFileJobs;
-    /**
-     * The classifyTextJobs property
-     */
-    private java.util.List<JobResponseBase> classifyTextJobs;
-    /**
-     * The evaluateDlpPoliciesJobs property
-     */
-    private java.util.List<JobResponseBase> evaluateDlpPoliciesJobs;
-    /**
-     * The evaluateLabelJobs property
-     */
-    private java.util.List<JobResponseBase> evaluateLabelJobs;
-    /**
-     * The exactMatchDataStores property
-     */
-    private java.util.List<ExactMatchDataStore> exactMatchDataStores;
-    /**
-     * The exactMatchUploadAgents property
-     */
-    private java.util.List<ExactMatchUploadAgent> exactMatchUploadAgents;
-    /**
-     * The jobs property
-     */
-    private java.util.List<JobResponseBase> jobs;
-    /**
-     * The sensitiveTypes property
-     */
-    private java.util.List<SensitiveType> sensitiveTypes;
-    /**
-     * The sensitivityLabels property
-     */
-    private java.util.List<SensitivityLabel> sensitivityLabels;
-    /**
-     * Instantiates a new dataClassificationService and sets the default values.
+     * Instantiates a new DataClassificationService and sets the default values.
      */
     public DataClassificationService() {
         super();
@@ -53,7 +17,7 @@ public class DataClassificationService extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataClassificationService
+     * @return a DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public static DataClassificationService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,51 +26,51 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the classifyFileJobs property value. The classifyFileJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getClassifyFileJobs() {
-        return this.classifyFileJobs;
+        return this.backingStore.get("classifyFileJobs");
     }
     /**
      * Gets the classifyTextJobs property value. The classifyTextJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getClassifyTextJobs() {
-        return this.classifyTextJobs;
+        return this.backingStore.get("classifyTextJobs");
     }
     /**
      * Gets the evaluateDlpPoliciesJobs property value. The evaluateDlpPoliciesJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getEvaluateDlpPoliciesJobs() {
-        return this.evaluateDlpPoliciesJobs;
+        return this.backingStore.get("evaluateDlpPoliciesJobs");
     }
     /**
      * Gets the evaluateLabelJobs property value. The evaluateLabelJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getEvaluateLabelJobs() {
-        return this.evaluateLabelJobs;
+        return this.backingStore.get("evaluateLabelJobs");
     }
     /**
      * Gets the exactMatchDataStores property value. The exactMatchDataStores property
-     * @return a exactMatchDataStore
+     * @return a java.util.List<ExactMatchDataStore>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactMatchDataStore> getExactMatchDataStores() {
-        return this.exactMatchDataStores;
+        return this.backingStore.get("exactMatchDataStores");
     }
     /**
      * Gets the exactMatchUploadAgents property value. The exactMatchUploadAgents property
-     * @return a exactMatchUploadAgent
+     * @return a java.util.List<ExactMatchUploadAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactMatchUploadAgent> getExactMatchUploadAgents() {
-        return this.exactMatchUploadAgents;
+        return this.backingStore.get("exactMatchUploadAgents");
     }
     /**
      * The deserialization information for the current model
@@ -128,27 +92,27 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the jobs property value. The jobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getJobs() {
-        return this.jobs;
+        return this.backingStore.get("jobs");
     }
     /**
      * Gets the sensitiveTypes property value. The sensitiveTypes property
-     * @return a sensitiveType
+     * @return a java.util.List<SensitiveType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveType> getSensitiveTypes() {
-        return this.sensitiveTypes;
+        return this.backingStore.get("sensitiveTypes");
     }
     /**
      * Gets the sensitivityLabels property value. The sensitivityLabels property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
-        return this.sensitivityLabels;
+        return this.backingStore.get("sensitivityLabels");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the classifyFileJobs property.
      */
     public void setClassifyFileJobs(@jakarta.annotation.Nullable final java.util.List<JobResponseBase> value) {
-        this.classifyFileJobs = value;
+        this.backingStore.set("classifyFileJobs", value);
     }
     /**
      * Sets the classifyTextJobs property value. The classifyTextJobs property
      * @param value Value to set for the classifyTextJobs property.
      */
     public void setClassifyTextJobs(@jakarta.annotation.Nullable final java.util.List<JobResponseBase> value) {
-        this.classifyTextJobs = value;
+        this.backingStore.set("classifyTextJobs", value);
     }
     /**
      * Sets the evaluateDlpPoliciesJobs property value. The evaluateDlpPoliciesJobs property
      * @param value Value to set for the evaluateDlpPoliciesJobs property.
      */
     public void setEvaluateDlpPoliciesJobs(@jakarta.annotation.Nullable final java.util.List<JobResponseBase> value) {
-        this.evaluateDlpPoliciesJobs = value;
+        this.backingStore.set("evaluateDlpPoliciesJobs", value);
     }
     /**
      * Sets the evaluateLabelJobs property value. The evaluateLabelJobs property
      * @param value Value to set for the evaluateLabelJobs property.
      */
     public void setEvaluateLabelJobs(@jakarta.annotation.Nullable final java.util.List<JobResponseBase> value) {
-        this.evaluateLabelJobs = value;
+        this.backingStore.set("evaluateLabelJobs", value);
     }
     /**
      * Sets the exactMatchDataStores property value. The exactMatchDataStores property
      * @param value Value to set for the exactMatchDataStores property.
      */
     public void setExactMatchDataStores(@jakarta.annotation.Nullable final java.util.List<ExactMatchDataStore> value) {
-        this.exactMatchDataStores = value;
+        this.backingStore.set("exactMatchDataStores", value);
     }
     /**
      * Sets the exactMatchUploadAgents property value. The exactMatchUploadAgents property
      * @param value Value to set for the exactMatchUploadAgents property.
      */
     public void setExactMatchUploadAgents(@jakarta.annotation.Nullable final java.util.List<ExactMatchUploadAgent> value) {
-        this.exactMatchUploadAgents = value;
+        this.backingStore.set("exactMatchUploadAgents", value);
     }
     /**
      * Sets the jobs property value. The jobs property
      * @param value Value to set for the jobs property.
      */
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<JobResponseBase> value) {
-        this.jobs = value;
+        this.backingStore.set("jobs", value);
     }
     /**
      * Sets the sensitiveTypes property value. The sensitiveTypes property
      * @param value Value to set for the sensitiveTypes property.
      */
     public void setSensitiveTypes(@jakarta.annotation.Nullable final java.util.List<SensitiveType> value) {
-        this.sensitiveTypes = value;
+        this.backingStore.set("sensitiveTypes", value);
     }
     /**
      * Sets the sensitivityLabels property value. The sensitivityLabels property
      * @param value Value to set for the sensitivityLabels property.
      */
     public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<SensitivityLabel> value) {
-        this.sensitivityLabels = value;
+        this.backingStore.set("sensitivityLabels", value);
     }
 }

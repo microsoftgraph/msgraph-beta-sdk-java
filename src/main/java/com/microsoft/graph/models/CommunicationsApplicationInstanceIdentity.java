@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable {
     /**
-     * True if the participant would not like to be shown in other participants' rosters.
-     */
-    private Boolean hidden;
-    /**
-     * The application's tenant ID.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new communicationsApplicationInstanceIdentity and sets the default values.
+     * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
      */
     public CommunicationsApplicationInstanceIdentity() {
         super();
@@ -26,7 +18,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a communicationsApplicationInstanceIdentity
+     * @return a CommunicationsApplicationInstanceIdentity
      */
     @jakarta.annotation.Nonnull
     public static CommunicationsApplicationInstanceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,20 +37,20 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
-     * @return a boolean
+     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.backingStore.get("hidden");
     }
     /**
-     * Gets the tenantId property value. The application's tenant ID.
-     * @return a string
+     * Gets the tenantId property value. The tenant ID of the application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
+     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.backingStore.set("hidden", value);
     }
     /**
-     * Sets the tenantId property value. The application's tenant ID.
+     * Sets the tenantId property value. The tenant ID of the application.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
 }

@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementAction extends Entity implements Parsable {
     /**
-     * The category property
-     */
-    private ManagementCategory category;
-    /**
-     * The description for the management action. Optional. Read-only.
-     */
-    private String description;
-    /**
-     * The display name for the management action. Optional. Read-only.
-     */
-    private String displayName;
-    /**
-     * The reference for the management template used to generate the management action. Required. Read-only.
-     */
-    private String referenceTemplateId;
-    /**
-     * The referenceTemplateVersion property
-     */
-    private Integer referenceTemplateVersion;
-    /**
-     * The collection of workload actions associated with the management action. Required. Read-only.
-     */
-    private java.util.List<WorkloadAction> workloadActions;
-    /**
-     * Instantiates a new managementAction and sets the default values.
+     * Instantiates a new ManagementAction and sets the default values.
      */
     public ManagementAction() {
         super();
@@ -42,7 +18,7 @@ public class ManagementAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementAction
+     * @return a ManagementAction
      */
     @jakarta.annotation.Nonnull
     public static ManagementAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +27,27 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
-        return this.category;
+        return this.backingStore.get("category");
     }
     /**
      * Gets the description property value. The description for the management action. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the management action. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +56,7 @@ public class ManagementAction extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("referenceTemplateId", (n) -> { this.setReferenceTemplateId(n.getStringValue()); });
@@ -90,27 +66,27 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceTemplateId() {
-        return this.referenceTemplateId;
+        return this.backingStore.get("referenceTemplateId");
     }
     /**
      * Gets the referenceTemplateVersion property value. The referenceTemplateVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReferenceTemplateVersion() {
-        return this.referenceTemplateVersion;
+        return this.backingStore.get("referenceTemplateVersion");
     }
     /**
      * Gets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
-     * @return a workloadAction
+     * @return a java.util.List<WorkloadAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {
-        return this.workloadActions;
+        return this.backingStore.get("workloadActions");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
-        this.category = value;
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the description property value. The description for the management action. Optional. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the management action. Optional. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
      * @param value Value to set for the referenceTemplateId property.
      */
     public void setReferenceTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.referenceTemplateId = value;
+        this.backingStore.set("referenceTemplateId", value);
     }
     /**
      * Sets the referenceTemplateVersion property value. The referenceTemplateVersion property
      * @param value Value to set for the referenceTemplateVersion property.
      */
     public void setReferenceTemplateVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.referenceTemplateVersion = value;
+        this.backingStore.set("referenceTemplateVersion", value);
     }
     /**
      * Sets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
      * @param value Value to set for the workloadActions property.
      */
     public void setWorkloadActions(@jakarta.annotation.Nullable final java.util.List<WorkloadAction> value) {
-        this.workloadActions = value;
+        this.backingStore.set("workloadActions", value);
     }
 }

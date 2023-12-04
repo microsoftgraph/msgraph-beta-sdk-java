@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseHoldOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new caseHoldOperation and sets the default values.
+     * Instantiates a new CaseHoldOperation and sets the default values.
      */
     public CaseHoldOperation() {
         super();
@@ -17,7 +17,7 @@ public class CaseHoldOperation extends CaseOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a caseHoldOperation
+     * @return a CaseHoldOperation
      */
     @jakarta.annotation.Nonnull
     public static CaseHoldOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

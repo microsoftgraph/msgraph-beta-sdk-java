@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceEnvironment extends Entity implements Parsable {
     /**
-     * Read-only. Required.
-     */
-    private java.util.List<AccessPackageResource> accessPackageResources;
-    /**
-     * Connection information of an environment used to connect to a resource.
-     */
-    private ConnectionInfo connectionInfo;
-    /**
-     * The display name of the user that created this object.
-     */
-    private String createdBy;
-    /**
-     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of this object.
-     */
-    private String description;
-    /**
-     * The display name of this object.
-     */
-    private String displayName;
-    /**
-     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
-     */
-    private Boolean isDefaultEnvironment;
-    /**
-     * The display name of the entity that last modified this object.
-     */
-    private String modifiedBy;
-    /**
-     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The unique identifier of this environment in the origin system.
-     */
-    private String originId;
-    /**
-     * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
-     */
-    private String originSystem;
-    /**
-     * Instantiates a new accessPackageResourceEnvironment and sets the default values.
+     * Instantiates a new AccessPackageResourceEnvironment and sets the default values.
      */
     public AccessPackageResourceEnvironment() {
         super();
@@ -62,7 +18,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceEnvironment
+     * @return a AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceEnvironment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,27 +27,27 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the accessPackageResources property value. Read-only. Required.
-     * @return a accessPackageResource
+     * @return a java.util.List<AccessPackageResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
-        return this.accessPackageResources;
+        return this.backingStore.get("accessPackageResources");
     }
     /**
      * Gets the connectionInfo property value. Connection information of an environment used to connect to a resource.
-     * @return a connectionInfo
+     * @return a ConnectionInfo
      */
     @jakarta.annotation.Nullable
     public ConnectionInfo getConnectionInfo() {
-        return this.connectionInfo;
+        return this.backingStore.get("connectionInfo");
     }
     /**
      * Gets the createdBy property value. The display name of the user that created this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -99,23 +55,23 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -138,20 +94,20 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
-     * @return a boolean
+     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultEnvironment() {
-        return this.isDefaultEnvironment;
+        return this.backingStore.get("isDefaultEnvironment");
     }
     /**
      * Gets the modifiedBy property value. The display name of the entity that last modified this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
-        return this.modifiedBy;
+        return this.backingStore.get("modifiedBy");
     }
     /**
      * Gets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -159,23 +115,23 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the originId property value. The unique identifier of this environment in the origin system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.backingStore.get("originId");
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.backingStore.get("originSystem");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the accessPackageResources property.
      */
     public void setAccessPackageResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
-        this.accessPackageResources = value;
+        this.backingStore.set("accessPackageResources", value);
     }
     /**
      * Sets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @param value Value to set for the connectionInfo property.
      */
     public void setConnectionInfo(@jakarta.annotation.Nullable final ConnectionInfo value) {
-        this.connectionInfo = value;
+        this.backingStore.set("connectionInfo", value);
     }
     /**
      * Sets the createdBy property value. The display name of the user that created this object.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of this object.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of this object.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
+     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
      * @param value Value to set for the isDefaultEnvironment property.
      */
     public void setIsDefaultEnvironment(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefaultEnvironment = value;
+        this.backingStore.set("isDefaultEnvironment", value);
     }
     /**
      * Sets the modifiedBy property value. The display name of the entity that last modified this object.
      * @param value Value to set for the modifiedBy property.
      */
     public void setModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.modifiedBy = value;
+        this.backingStore.set("modifiedBy", value);
     }
     /**
      * Sets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the originId property value. The unique identifier of this environment in the origin system.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.backingStore.set("originId", value);
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.backingStore.set("originSystem", value);
     }
 }

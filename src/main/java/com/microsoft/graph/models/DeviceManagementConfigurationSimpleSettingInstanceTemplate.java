@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends DeviceManagementConfigurationSettingInstanceTemplate implements Parsable {
     /**
-     * Simple Setting Value Template
-     */
-    private DeviceManagementConfigurationSimpleSettingValueTemplate simpleSettingValueTemplate;
-    /**
-     * Instantiates a new deviceManagementConfigurationSimpleSettingInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSimpleSettingInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationSimpleSettingInstanceTemplate() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSimpleSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationSimpleSettingInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSimpleSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends 
     }
     /**
      * Gets the simpleSettingValueTemplate property value. Simple Setting Value Template
-     * @return a deviceManagementConfigurationSimpleSettingValueTemplate
+     * @return a DeviceManagementConfigurationSimpleSettingValueTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingValueTemplate getSimpleSettingValueTemplate() {
-        return this.simpleSettingValueTemplate;
+        return this.backingStore.get("simpleSettingValueTemplate");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends 
      * @param value Value to set for the simpleSettingValueTemplate property.
      */
     public void setSimpleSettingValueTemplate(@jakarta.annotation.Nullable final DeviceManagementConfigurationSimpleSettingValueTemplate value) {
-        this.simpleSettingValueTemplate = value;
+        this.backingStore.set("simpleSettingValueTemplate", value);
     }
 }

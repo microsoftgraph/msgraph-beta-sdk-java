@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CalendarGroup> value;
-    /**
-     * Instantiates a new calendarGroupCollectionResponse and sets the default values.
+     * Instantiates a new CalendarGroupCollectionResponse and sets the default values.
      */
     public CalendarGroupCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calendarGroupCollectionResponse
+     * @return a CalendarGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CalendarGroupCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a calendarGroup
+     * @return a java.util.List<CalendarGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarGroup> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CalendarGroupCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CalendarGroup> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

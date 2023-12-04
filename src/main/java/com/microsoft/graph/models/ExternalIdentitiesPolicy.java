@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     /**
-     * Reserved for future use.
-     */
-    private Boolean allowDeletedIdentitiesDataRemoval;
-    /**
-     * Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days.
-     */
-    private Boolean allowExternalIdentitiesToLeave;
-    /**
-     * Instantiates a new externalIdentitiesPolicy and sets the default values.
+     * Instantiates a new ExternalIdentitiesPolicy and sets the default values.
      */
     public ExternalIdentitiesPolicy() {
         super();
@@ -26,7 +18,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalIdentitiesPolicy
+     * @return a ExternalIdentitiesPolicy
      */
     @jakarta.annotation.Nonnull
     public static ExternalIdentitiesPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,19 +27,19 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowDeletedIdentitiesDataRemoval property value. Reserved for future use.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeletedIdentitiesDataRemoval() {
-        return this.allowDeletedIdentitiesDataRemoval;
+        return this.backingStore.get("allowDeletedIdentitiesDataRemoval");
     }
     /**
      * Gets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowExternalIdentitiesToLeave() {
-        return this.allowExternalIdentitiesToLeave;
+        return this.backingStore.get("allowExternalIdentitiesToLeave");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowDeletedIdentitiesDataRemoval property.
      */
     public void setAllowDeletedIdentitiesDataRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDeletedIdentitiesDataRemoval = value;
+        this.backingStore.set("allowDeletedIdentitiesDataRemoval", value);
     }
     /**
      * Sets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days.
      * @param value Value to set for the allowExternalIdentitiesToLeave property.
      */
     public void setAllowExternalIdentitiesToLeave(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowExternalIdentitiesToLeave = value;
+        this.backingStore.set("allowExternalIdentitiesToLeave", value);
     }
 }

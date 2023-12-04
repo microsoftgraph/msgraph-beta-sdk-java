@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminDynamics extends Entity implements Parsable {
     /**
-     * The customerVoice property
-     */
-    private CustomerVoiceSettings customerVoice;
-    /**
-     * Instantiates a new adminDynamics and sets the default values.
+     * Instantiates a new AdminDynamics and sets the default values.
      */
     public AdminDynamics() {
         super();
@@ -21,7 +17,7 @@ public class AdminDynamics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminDynamics
+     * @return a AdminDynamics
      */
     @jakarta.annotation.Nonnull
     public static AdminDynamics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class AdminDynamics extends Entity implements Parsable {
     }
     /**
      * Gets the customerVoice property value. The customerVoice property
-     * @return a customerVoiceSettings
+     * @return a CustomerVoiceSettings
      */
     @jakarta.annotation.Nullable
     public CustomerVoiceSettings getCustomerVoice() {
-        return this.customerVoice;
+        return this.backingStore.get("customerVoice");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class AdminDynamics extends Entity implements Parsable {
      * @param value Value to set for the customerVoice property.
      */
     public void setCustomerVoice(@jakarta.annotation.Nullable final CustomerVoiceSettings value) {
-        this.customerVoice = value;
+        this.backingStore.set("customerVoice", value);
     }
 }

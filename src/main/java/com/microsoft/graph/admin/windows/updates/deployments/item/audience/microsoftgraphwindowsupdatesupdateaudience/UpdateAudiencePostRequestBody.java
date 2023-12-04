@@ -5,41 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The addExclusions property
+     * Stores model information.
      */
-    private java.util.List<UpdatableAsset> addExclusions;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The addMembers property
-     */
-    private java.util.List<UpdatableAsset> addMembers;
-    /**
-     * The removeExclusions property
-     */
-    private java.util.List<UpdatableAsset> removeExclusions;
-    /**
-     * The removeMembers property
-     */
-    private java.util.List<UpdatableAsset> removeMembers;
-    /**
-     * Instantiates a new updateAudiencePostRequestBody and sets the default values.
+     * Instantiates a new UpdateAudiencePostRequestBody and sets the default values.
      */
     public UpdateAudiencePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateAudiencePostRequestBody
+     * @return a UpdateAudiencePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateAudiencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,27 +37,40 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the addExclusions property value. The addExclusions property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAddExclusions() {
-        return this.addExclusions;
+        return this.backingStore.get("addExclusions");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the addMembers property value. The addMembers property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAddMembers() {
-        return this.addMembers;
+        return this.backingStore.get("addMembers");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +87,19 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the removeExclusions property value. The removeExclusions property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getRemoveExclusions() {
-        return this.removeExclusions;
+        return this.backingStore.get("removeExclusions");
     }
     /**
      * Gets the removeMembers property value. The removeMembers property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getRemoveMembers() {
-        return this.removeMembers;
+        return this.backingStore.get("removeMembers");
     }
     /**
      * Serializes information the current object
@@ -116,34 +118,42 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the addExclusions property.
      */
     public void setAddExclusions(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.addExclusions = value;
+        this.backingStore.set("addExclusions", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the addMembers property value. The addMembers property
      * @param value Value to set for the addMembers property.
      */
     public void setAddMembers(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.addMembers = value;
+        this.backingStore.set("addMembers", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the removeExclusions property value. The removeExclusions property
      * @param value Value to set for the removeExclusions property.
      */
     public void setRemoveExclusions(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.removeExclusions = value;
+        this.backingStore.set("removeExclusions", value);
     }
     /**
      * Sets the removeMembers property value. The removeMembers property
      * @param value Value to set for the removeMembers property.
      */
     public void setRemoveMembers(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.removeMembers = value;
+        this.backingStore.set("removeMembers", value);
     }
 }

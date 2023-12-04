@@ -12,35 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentDeviceSettingStateSummary extends Entity implements Parsable {
     /**
-     * Number of compliant devices
-     */
-    private Integer compliantCount;
-    /**
-     * Number of devices in conflict
-     */
-    private Integer conflictCount;
-    /**
-     * Number of error devices
-     */
-    private Integer errorCount;
-    /**
-     * Number of non compliant devices
-     */
-    private Integer nonCompliantCount;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableCount;
-    /**
-     * Number of remediated devices
-     */
-    private Integer remediatedCount;
-    /**
-     * Name of a setting
-     */
-    private String settingName;
-    /**
-     * Instantiates a new deviceManagementIntentDeviceSettingStateSummary and sets the default values.
+     * Instantiates a new DeviceManagementIntentDeviceSettingStateSummary and sets the default values.
      */
     public DeviceManagementIntentDeviceSettingStateSummary() {
         super();
@@ -48,7 +20,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentDeviceSettingStateSummary
+     * @return a DeviceManagementIntentDeviceSettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceSettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,27 +29,27 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the compliantCount property value. Number of compliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantCount() {
-        return this.compliantCount;
+        return this.backingStore.get("compliantCount");
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
-        return this.conflictCount;
+        return this.backingStore.get("conflictCount");
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
-        return this.errorCount;
+        return this.backingStore.get("errorCount");
     }
     /**
      * The deserialization information for the current model
@@ -97,35 +69,35 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the nonCompliantCount property value. Number of non compliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantCount() {
-        return this.nonCompliantCount;
+        return this.backingStore.get("nonCompliantCount");
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this.notApplicableCount;
+        return this.backingStore.get("notApplicableCount");
     }
     /**
      * Gets the remediatedCount property value. Number of remediated devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedCount() {
-        return this.remediatedCount;
+        return this.backingStore.get("remediatedCount");
     }
     /**
      * Gets the settingName property value. Name of a setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.backingStore.get("settingName");
     }
     /**
      * Serializes information the current object
@@ -147,48 +119,48 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * @param value Value to set for the compliantCount property.
      */
     public void setCompliantCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantCount = value;
+        this.backingStore.set("compliantCount", value);
     }
     /**
      * Sets the conflictCount property value. Number of devices in conflict
      * @param value Value to set for the conflictCount property.
      */
     public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictCount = value;
+        this.backingStore.set("conflictCount", value);
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCount = value;
+        this.backingStore.set("errorCount", value);
     }
     /**
      * Sets the nonCompliantCount property value. Number of non compliant devices
      * @param value Value to set for the nonCompliantCount property.
      */
     public void setNonCompliantCount(@jakarta.annotation.Nullable final Integer value) {
-        this.nonCompliantCount = value;
+        this.backingStore.set("nonCompliantCount", value);
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
      */
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableCount = value;
+        this.backingStore.set("notApplicableCount", value);
     }
     /**
      * Sets the remediatedCount property value. Number of remediated devices
      * @param value Value to set for the remediatedCount property.
      */
     public void setRemediatedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediatedCount = value;
+        this.backingStore.set("remediatedCount", value);
     }
     /**
      * Sets the settingName property value. Name of a setting
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.backingStore.set("settingName", value);
     }
 }

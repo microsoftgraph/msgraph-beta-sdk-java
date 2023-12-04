@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
-     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-     */
-    private Boolean isDefault;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The Locale for which this message is destined.
-     */
-    private String locale;
-    /**
-     * The Message Template content.
-     */
-    private String messageTemplate;
-    /**
-     * The Message Template Subject.
-     */
-    private String subject;
-    /**
-     * Instantiates a new localizedNotificationMessage and sets the default values.
+     * Instantiates a new LocalizedNotificationMessage and sets the default values.
      */
     public LocalizedNotificationMessage() {
         super();
@@ -41,7 +21,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localizedNotificationMessage
+     * @return a LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public static LocalizedNotificationMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,11 +44,11 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.backingStore.get("isDefault");
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -76,31 +56,31 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the locale property value. The Locale for which this message is destined.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.backingStore.get("locale");
     }
     /**
      * Gets the messageTemplate property value. The Message Template content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageTemplate() {
-        return this.messageTemplate;
+        return this.backingStore.get("messageTemplate");
     }
     /**
      * Gets the subject property value. The Message Template Subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.backingStore.set("isDefault", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the locale property value. The Locale for which this message is destined.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.backingStore.set("locale", value);
     }
     /**
      * Sets the messageTemplate property value. The Message Template content.
      * @param value Value to set for the messageTemplate property.
      */
     public void setMessageTemplate(@jakarta.annotation.Nullable final String value) {
-        this.messageTemplate = value;
+        this.backingStore.set("messageTemplate", value);
     }
     /**
      * Sets the subject property value. The Message Template Subject.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

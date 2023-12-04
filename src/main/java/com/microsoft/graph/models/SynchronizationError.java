@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SynchronizationError implements AdditionalDataHolder, Parsable {
+public class SynchronizationError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
-     */
-    private String code;
-    /**
-     * The error message. For example, Policy permitting auto-redemption of invitations not configured.
-     */
-    private String message;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The action to take to resolve the error. For example, false.
-     */
-    private Boolean tenantActionable;
-    /**
-     * Instantiates a new synchronizationError and sets the default values.
+     * Instantiates a new SynchronizationError and sets the default values.
      */
     public SynchronizationError() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationError
+     * @return a SynchronizationError
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         return new SynchronizationError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
-        return this.code;
+        return this.backingStore.get("code");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +78,27 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tenantActionable property value. The action to take to resolve the error. For example, false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTenantActionable() {
-        return this.tenantActionable;
+        return this.backingStore.get("tenantActionable");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
-        this.code = value;
+        this.backingStore.set("code", value);
     }
     /**
      * Sets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tenantActionable property value. The action to take to resolve the error. For example, false.
      * @param value Value to set for the tenantActionable property.
      */
     public void setTenantActionable(@jakarta.annotation.Nullable final Boolean value) {
-        this.tenantActionable = value;
+        this.backingStore.set("tenantActionable", value);
     }
 }

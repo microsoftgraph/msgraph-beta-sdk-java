@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * The updated name of the chat.
-     */
-    private String chatDisplayName;
-    /**
-     * Unique identifier of the chat.
-     */
-    private String chatId;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
+     * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
      */
     public ChatRenamedEventMessageDetail() {
         super();
@@ -30,7 +18,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatRenamedEventMessageDetail
+     * @return a ChatRenamedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static ChatRenamedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the chatDisplayName property value. The updated name of the chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatDisplayName() {
-        return this.chatDisplayName;
+        return this.backingStore.get("chatDisplayName");
     }
     /**
      * Gets the chatId property value. Unique identifier of the chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
-        return this.chatId;
+        return this.backingStore.get("chatId");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatDisplayName property.
      */
     public void setChatDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.chatDisplayName = value;
+        this.backingStore.set("chatDisplayName", value);
     }
     /**
      * Sets the chatId property value. Unique identifier of the chat.
      * @param value Value to set for the chatId property.
      */
     public void setChatId(@jakarta.annotation.Nullable final String value) {
-        this.chatId = value;
+        this.backingStore.set("chatId", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
 }

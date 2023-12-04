@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> value;
-    /**
-     * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse and sets the default values.
      */
     public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
+     * @return a AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a advancedThreatProtectionOnboardingDeviceSettingState
+     * @return a java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRespo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

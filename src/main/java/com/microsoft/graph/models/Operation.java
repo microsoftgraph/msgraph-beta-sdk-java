@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Operation extends Entity implements Parsable {
     /**
-     * The start time of the operation.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The time of the last action of the operation.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * Possible values are: notStarted, running, completed, failed. Read-only.
-     */
-    private OperationStatus status;
-    /**
-     * Instantiates a new operation and sets the default values.
+     * Instantiates a new Operation and sets the default values.
      */
     public Operation() {
         super();
@@ -30,7 +18,7 @@ public class Operation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a operation
+     * @return a Operation
      */
     @jakarta.annotation.Nonnull
     public static Operation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +38,7 @@ public class Operation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -61,7 +49,7 @@ public class Operation extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -70,15 +58,15 @@ public class Operation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class Operation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastActionDateTime property value. The time of the last action of the operation.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

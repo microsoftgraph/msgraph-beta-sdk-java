@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsable {
+public class OnPremisesApplicationSegment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
-     */
-    private String alternateUrl;
-    /**
-     * CORS Rule definition for a particular application segment.
-     */
-    private java.util.List<CorsConfiguration> corsConfigurations;
-    /**
-     * The published external URL for the application segment; for example, https://intranet.contoso.com./
-     */
-    private String externalUrl;
-    /**
-     * The internal URL of the application segment; for example, https://intranet/.
-     */
-    private String internalUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new onPremisesApplicationSegment and sets the default values.
+     * Instantiates a new OnPremisesApplicationSegment and sets the default values.
      */
     public OnPremisesApplicationSegment() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesApplicationSegment
+     * @return a OnPremisesApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,36 +35,49 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         return new OnPremisesApplicationSegment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
-        return this.alternateUrl;
+        return this.backingStore.get("alternateUrl");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the corsConfigurations property value. CORS Rule definition for a particular application segment.
-     * @return a corsConfiguration
+     * @return a java.util.List<CorsConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CorsConfiguration> getCorsConfigurations() {
-        return this.corsConfigurations;
+        return this.backingStore.get("corsConfigurations");
     }
     /**
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
-        return this.externalUrl;
+        return this.backingStore.get("externalUrl");
     }
     /**
      * The deserialization information for the current model
@@ -97,19 +95,19 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {
-        return this.internalUrl;
+        return this.backingStore.get("internalUrl");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -125,45 +123,53 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
-        this.alternateUrl = value;
+        this.backingStore.set("alternateUrl", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the corsConfigurations property value. CORS Rule definition for a particular application segment.
      * @param value Value to set for the corsConfigurations property.
      */
     public void setCorsConfigurations(@jakarta.annotation.Nullable final java.util.List<CorsConfiguration> value) {
-        this.corsConfigurations = value;
+        this.backingStore.set("corsConfigurations", value);
     }
     /**
      * Sets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
      * @param value Value to set for the externalUrl property.
      */
     public void setExternalUrl(@jakarta.annotation.Nullable final String value) {
-        this.externalUrl = value;
+        this.backingStore.set("externalUrl", value);
     }
     /**
      * Sets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
      * @param value Value to set for the internalUrl property.
      */
     public void setInternalUrl(@jakarta.annotation.Nullable final String value) {
-        this.internalUrl = value;
+        this.backingStore.set("internalUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

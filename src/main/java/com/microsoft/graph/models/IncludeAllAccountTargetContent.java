@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IncludeAllAccountTargetContent extends AccountTargetContent implements Parsable {
     /**
-     * Instantiates a new includeAllAccountTargetContent and sets the default values.
+     * Instantiates a new IncludeAllAccountTargetContent and sets the default values.
      */
     public IncludeAllAccountTargetContent() {
         super();
@@ -18,7 +18,7 @@ public class IncludeAllAccountTargetContent extends AccountTargetContent impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a includeAllAccountTargetContent
+     * @return a IncludeAllAccountTargetContent
      */
     @jakarta.annotation.Nonnull
     public static IncludeAllAccountTargetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

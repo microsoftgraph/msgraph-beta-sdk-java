@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicySetItem extends Entity implements Parsable {
     /**
-     * Creation time of the PolicySetItem.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * DisplayName of the PolicySetItem.
-     */
-    private String displayName;
-    /**
-     * The errorCode property
-     */
-    private ErrorCode errorCode;
-    /**
-     * Tags of the guided deployment
-     */
-    private java.util.List<String> guidedDeploymentTags;
-    /**
-     * policySetType of the PolicySetItem.
-     */
-    private String itemType;
-    /**
-     * Last modified time of the PolicySetItem.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * PayloadId of the PolicySetItem.
-     */
-    private String payloadId;
-    /**
-     * The enum to specify the status of PolicySet.
-     */
-    private PolicySetStatus status;
-    /**
-     * Instantiates a new policySetItem and sets the default values.
+     * Instantiates a new PolicySetItem and sets the default values.
      */
     public PolicySetItem() {
         super();
@@ -53,7 +21,7 @@ public class PolicySetItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySetItem
+     * @return a PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static PolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,23 +53,23 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. DisplayName of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a errorCode
+     * @return a ErrorCode
      */
     @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -112,29 +80,29 @@ public class PolicySetItem extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(ErrorCode.class)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(ErrorCode::forValue)); });
         deserializerMap.put("guidedDeploymentTags", (n) -> { this.setGuidedDeploymentTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("itemType", (n) -> { this.setItemType(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PolicySetStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PolicySetStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
-        return this.guidedDeploymentTags;
+        return this.backingStore.get("guidedDeploymentTags");
     }
     /**
      * Gets the itemType property value. policySetType of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemType() {
-        return this.itemType;
+        return this.backingStore.get("itemType");
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
@@ -142,23 +110,23 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the payloadId property value. PayloadId of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
-        return this.payloadId;
+        return this.backingStore.get("payloadId");
     }
     /**
      * Gets the status property value. The enum to specify the status of PolicySet.
-     * @return a policySetStatus
+     * @return a PolicySetStatus
      */
     @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -181,55 +149,55 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. DisplayName of the PolicySetItem.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final ErrorCode value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the guidedDeploymentTags property value. Tags of the guided deployment
      * @param value Value to set for the guidedDeploymentTags property.
      */
     public void setGuidedDeploymentTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.guidedDeploymentTags = value;
+        this.backingStore.set("guidedDeploymentTags", value);
     }
     /**
      * Sets the itemType property value. policySetType of the PolicySetItem.
      * @param value Value to set for the itemType property.
      */
     public void setItemType(@jakarta.annotation.Nullable final String value) {
-        this.itemType = value;
+        this.backingStore.set("itemType", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the payloadId property value. PayloadId of the PolicySetItem.
      * @param value Value to set for the payloadId property.
      */
     public void setPayloadId(@jakarta.annotation.Nullable final String value) {
-        this.payloadId = value;
+        this.backingStore.set("payloadId", value);
     }
     /**
      * Sets the status property value. The enum to specify the status of PolicySet.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PolicySetStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

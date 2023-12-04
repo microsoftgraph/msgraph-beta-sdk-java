@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /**
-     * The Intune DeviceId of the device the connection is associated with.
-     */
-    private String deviceId;
-    /**
-     * The error code of the connectivity issue.
-     */
-    private String errorCode;
-    /**
-     * The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
-     */
-    private OffsetDateTime errorDateTime;
-    /**
-     * The detailed description of what went wrong.
-     */
-    private String errorDescription;
-    /**
-     * The recommended action to fix the corresponding error.
-     */
-    private String recommendedAction;
-    /**
-     * The unique id of user who initialize the connection.
-     */
-    private String userId;
-    /**
-     * Instantiates a new cloudPCConnectivityIssue and sets the default values.
+     * Instantiates a new CloudPCConnectivityIssue and sets the default values.
      */
     public CloudPCConnectivityIssue() {
         super();
@@ -45,7 +21,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPCConnectivityIssue
+     * @return a CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public static CloudPCConnectivityIssue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,19 +30,19 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The Intune DeviceId of the device the connection is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the errorCode property value. The error code of the connectivity issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * Gets the errorDateTime property value. The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
@@ -74,15 +50,15 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getErrorDateTime() {
-        return this.errorDateTime;
+        return this.backingStore.get("errorDateTime");
     }
     /**
      * Gets the errorDescription property value. The detailed description of what went wrong.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
-        return this.errorDescription;
+        return this.backingStore.get("errorDescription");
     }
     /**
      * The deserialization information for the current model
@@ -101,19 +77,19 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
-        return this.recommendedAction;
+        return this.backingStore.get("recommendedAction");
     }
     /**
      * Gets the userId property value. The unique id of user who initialize the connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the errorCode property value. The error code of the connectivity issue.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the errorDateTime property value. The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
      * @param value Value to set for the errorDateTime property.
      */
     public void setErrorDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.errorDateTime = value;
+        this.backingStore.set("errorDateTime", value);
     }
     /**
      * Sets the errorDescription property value. The detailed description of what went wrong.
      * @param value Value to set for the errorDescription property.
      */
     public void setErrorDescription(@jakarta.annotation.Nullable final String value) {
-        this.errorDescription = value;
+        this.backingStore.set("errorDescription", value);
     }
     /**
      * Sets the recommendedAction property value. The recommended action to fix the corresponding error.
      * @param value Value to set for the recommendedAction property.
      */
     public void setRecommendedAction(@jakarta.annotation.Nullable final String value) {
-        this.recommendedAction = value;
+        this.backingStore.set("recommendedAction", value);
     }
     /**
      * Sets the userId property value. The unique id of user who initialize the connection.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

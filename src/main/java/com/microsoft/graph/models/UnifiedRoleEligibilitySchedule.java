@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
-     * Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
-     */
-    private String memberType;
-    /**
-     * The schedule object of the eligible role assignment request.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
-     * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
+     * Instantiates a new UnifiedRoleEligibilitySchedule and sets the default values.
      */
     public UnifiedRoleEligibilitySchedule() {
         super();
@@ -25,7 +17,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleEligibilitySchedule
+     * @return a UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleEligibilitySchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     }
     /**
      * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
-        return this.memberType;
+        return this.backingStore.get("memberType");
     }
     /**
      * Gets the scheduleInfo property value. The schedule object of the eligible role assignment request.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.backingStore.get("scheduleInfo");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.memberType = value;
+        this.backingStore.set("memberType", value);
     }
     /**
      * Sets the scheduleInfo property value. The schedule object of the eligible role assignment request.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.backingStore.set("scheduleInfo", value);
     }
 }

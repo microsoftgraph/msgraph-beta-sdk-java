@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationCount extends Entity implements Parsable {
     /**
-     * Provides the count of users with accountEnabled set to true in the tenant.
-     */
-    private Long totalUserCount;
-    /**
-     * A collection of registration count and status information for users in your tenant.
-     */
-    private java.util.List<UserRegistrationCount> userRegistrationCounts;
-    /**
-     * Instantiates a new credentialUserRegistrationCount and sets the default values.
+     * Instantiates a new CredentialUserRegistrationCount and sets the default values.
      */
     public CredentialUserRegistrationCount() {
         super();
@@ -25,7 +17,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationCount
+     * @return a CredentialUserRegistrationCount
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationCount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
     }
     /**
      * Gets the totalUserCount property value. Provides the count of users with accountEnabled set to true in the tenant.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalUserCount() {
-        return this.totalUserCount;
+        return this.backingStore.get("totalUserCount");
     }
     /**
      * Gets the userRegistrationCounts property value. A collection of registration count and status information for users in your tenant.
-     * @return a userRegistrationCount
+     * @return a java.util.List<UserRegistrationCount>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRegistrationCount> getUserRegistrationCounts() {
-        return this.userRegistrationCounts;
+        return this.backingStore.get("userRegistrationCounts");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      * @param value Value to set for the totalUserCount property.
      */
     public void setTotalUserCount(@jakarta.annotation.Nullable final Long value) {
-        this.totalUserCount = value;
+        this.backingStore.set("totalUserCount", value);
     }
     /**
      * Sets the userRegistrationCounts property value. A collection of registration count and status information for users in your tenant.
      * @param value Value to set for the userRegistrationCounts property.
      */
     public void setUserRegistrationCounts(@jakarta.annotation.Nullable final java.util.List<UserRegistrationCount> value) {
-        this.userRegistrationCounts = value;
+        this.backingStore.set("userRegistrationCounts", value);
     }
 }

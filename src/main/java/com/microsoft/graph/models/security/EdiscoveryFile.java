@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryFile extends File implements Parsable {
     /**
-     * Custodians associated with the file.
-     */
-    private EdiscoveryCustodian custodian;
-    /**
-     * Tags associated with the file.
-     */
-    private java.util.List<EdiscoveryReviewTag> tags;
-    /**
-     * Instantiates a new ediscoveryFile and sets the default values.
+     * Instantiates a new EdiscoveryFile and sets the default values.
      */
     public EdiscoveryFile() {
         super();
@@ -25,7 +17,7 @@ public class EdiscoveryFile extends File implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryFile
+     * @return a EdiscoveryFile
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class EdiscoveryFile extends File implements Parsable {
     }
     /**
      * Gets the custodian property value. Custodians associated with the file.
-     * @return a ediscoveryCustodian
+     * @return a EdiscoveryCustodian
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian getCustodian() {
-        return this.custodian;
+        return this.backingStore.get("custodian");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class EdiscoveryFile extends File implements Parsable {
     }
     /**
      * Gets the tags property value. Tags associated with the file.
-     * @return a ediscoveryReviewTag
+     * @return a java.util.List<EdiscoveryReviewTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTags() {
-        return this.tags;
+        return this.backingStore.get("tags");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class EdiscoveryFile extends File implements Parsable {
      * @param value Value to set for the custodian property.
      */
     public void setCustodian(@jakarta.annotation.Nullable final EdiscoveryCustodian value) {
-        this.custodian = value;
+        this.backingStore.set("custodian", value);
     }
     /**
      * Sets the tags property value. Tags associated with the file.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this.tags = value;
+        this.backingStore.set("tags", value);
     }
 }

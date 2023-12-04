@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RateDrivenRolloutSettings extends GradualRolloutSettings implements Parsable {
     /**
-     * Specifies the number of devices that are offered at the same time. When not set, all devices in the deployment are offered content at the same time.
-     */
-    private Integer devicesPerOffer;
-    /**
-     * Instantiates a new rateDrivenRolloutSettings and sets the default values.
+     * Instantiates a new RateDrivenRolloutSettings and sets the default values.
      */
     public RateDrivenRolloutSettings() {
         super();
@@ -22,7 +18,7 @@ public class RateDrivenRolloutSettings extends GradualRolloutSettings implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rateDrivenRolloutSettings
+     * @return a RateDrivenRolloutSettings
      */
     @jakarta.annotation.Nonnull
     public static RateDrivenRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class RateDrivenRolloutSettings extends GradualRolloutSettings implements
     }
     /**
      * Gets the devicesPerOffer property value. Specifies the number of devices that are offered at the same time. When not set, all devices in the deployment are offered content at the same time.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesPerOffer() {
-        return this.devicesPerOffer;
+        return this.backingStore.get("devicesPerOffer");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class RateDrivenRolloutSettings extends GradualRolloutSettings implements
      * @param value Value to set for the devicesPerOffer property.
      */
     public void setDevicesPerOffer(@jakarta.annotation.Nullable final Integer value) {
-        this.devicesPerOffer = value;
+        this.backingStore.set("devicesPerOffer", value);
     }
 }

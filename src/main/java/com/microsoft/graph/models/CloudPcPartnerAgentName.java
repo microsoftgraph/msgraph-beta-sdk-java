@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPcPartnerAgentName implements ValuedEnum {
     Citrix("citrix"),
     UnknownFutureValue("unknownFutureValue"),
-    VMware("vMware");
+    VMware("vMware"),
+    Hp("hp");
     public final String value;
     CloudPcPartnerAgentName(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPcPartnerAgentName implements ValuedEnum {
             case "citrix": return Citrix;
             case "unknownFutureValue": return UnknownFutureValue;
             case "vMware": return VMware;
+            case "hp": return Hp;
             default: return null;
         }
     }

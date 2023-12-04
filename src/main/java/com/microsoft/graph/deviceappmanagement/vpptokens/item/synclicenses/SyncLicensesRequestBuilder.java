@@ -37,24 +37,24 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
-     * @return a CompletableFuture of vppToken
+     * @return a VppToken
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> post() {
+    @jakarta.annotation.Nullable
+    public VppToken post() {
         return post(null);
     }
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vppToken
+     * @return a VppToken
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VppToken post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VppToken::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, VppToken::createFromDiscriminatorValue);
     }
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
@@ -71,23 +71,15 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a syncLicensesRequestBuilder
+     * @return a SyncLicensesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SyncLicensesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class JobResponseBase extends Entity implements Parsable {
     /**
-     * The creationDateTime property
-     */
-    private OffsetDateTime creationDateTime;
-    /**
-     * The endDateTime property
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The error property
-     */
-    private ClassificationError error;
-    /**
-     * The startDateTime property
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The type property
-     */
-    private String type;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new jobResponseBase and sets the default values.
+     * Instantiates a new JobResponseBase and sets the default values.
      */
     public JobResponseBase() {
         super();
@@ -50,7 +18,7 @@ public class JobResponseBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a jobResponseBase
+     * @return a JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public static JobResponseBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +40,7 @@ public class JobResponseBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this.creationDateTime;
+        return this.backingStore.get("creationDateTime");
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -80,15 +48,15 @@ public class JobResponseBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.backingStore.get("endDateTime");
     }
     /**
      * Gets the error property value. The error property
-     * @return a classificationError
+     * @return a ClassificationError
      */
     @jakarta.annotation.Nullable
     public ClassificationError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -113,39 +81,39 @@ public class JobResponseBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -168,55 +136,55 @@ public class JobResponseBase extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      */
     public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.creationDateTime = value;
+        this.backingStore.set("creationDateTime", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final ClassificationError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }
