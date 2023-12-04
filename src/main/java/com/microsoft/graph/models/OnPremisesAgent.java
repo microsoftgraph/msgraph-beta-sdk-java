@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesAgent extends Entity implements Parsable {
     /**
-     * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
-     */
-    private java.util.List<OnPremisesAgentGroup> agentGroups;
-    /**
-     * The external IP address as detected by the service for the agent machine. Read-only
-     */
-    private String externalIp;
-    /**
-     * The name of the machine that the aggent is running on. Read-only
-     */
-    private String machineName;
-    /**
-     * The status property
-     */
-    private AgentStatus status;
-    /**
-     * The supportedPublishingTypes property
-     */
-    private java.util.List<OnPremisesPublishingType> supportedPublishingTypes;
-    /**
-     * Instantiates a new onPremisesAgent and sets the default values.
+     * Instantiates a new OnPremisesAgent and sets the default values.
      */
     public OnPremisesAgent() {
         super();
@@ -37,7 +17,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesAgent
+     * @return a OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +26,19 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the agentGroups property value. List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
-     * @return a onPremisesAgentGroup
+     * @return a java.util.List<OnPremisesAgentGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
-        return this.agentGroups;
+        return this.backingStore.get("agentGroups");
     }
     /**
      * Gets the externalIp property value. The external IP address as detected by the service for the agent machine. Read-only
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalIp() {
-        return this.externalIp;
+        return this.backingStore.get("externalIp");
     }
     /**
      * The deserialization information for the current model
@@ -70,33 +50,33 @@ public class OnPremisesAgent extends Entity implements Parsable {
         deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("externalIp", (n) -> { this.setExternalIp(n.getStringValue()); });
         deserializerMap.put("machineName", (n) -> { this.setMachineName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AgentStatus.class)); });
-        deserializerMap.put("supportedPublishingTypes", (n) -> { this.setSupportedPublishingTypes(n.getCollectionOfEnumValues(OnPremisesPublishingType.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AgentStatus::forValue)); });
+        deserializerMap.put("supportedPublishingTypes", (n) -> { this.setSupportedPublishingTypes(n.getCollectionOfEnumValues(OnPremisesPublishingType::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the machineName property value. The name of the machine that the aggent is running on. Read-only
-     * @return a string
+     * Gets the machineName property value. The name of the machine that the agent is running on. Read-only
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
-        return this.machineName;
+        return this.backingStore.get("machineName");
     }
     /**
      * Gets the status property value. The status property
-     * @return a agentStatus
+     * @return a AgentStatus
      */
     @jakarta.annotation.Nullable
     public AgentStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
-     * @return a onPremisesPublishingType
+     * @return a java.util.List<OnPremisesPublishingType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesPublishingType> getSupportedPublishingTypes() {
-        return this.supportedPublishingTypes;
+        return this.backingStore.get("supportedPublishingTypes");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      */
     public void setAgentGroups(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
-        this.agentGroups = value;
+        this.backingStore.set("agentGroups", value);
     }
     /**
      * Sets the externalIp property value. The external IP address as detected by the service for the agent machine. Read-only
      * @param value Value to set for the externalIp property.
      */
     public void setExternalIp(@jakarta.annotation.Nullable final String value) {
-        this.externalIp = value;
+        this.backingStore.set("externalIp", value);
     }
     /**
-     * Sets the machineName property value. The name of the machine that the aggent is running on. Read-only
+     * Sets the machineName property value. The name of the machine that the agent is running on. Read-only
      * @param value Value to set for the machineName property.
      */
     public void setMachineName(@jakarta.annotation.Nullable final String value) {
-        this.machineName = value;
+        this.backingStore.set("machineName", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AgentStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the supportedPublishingTypes property value. The supportedPublishingTypes property
      * @param value Value to set for the supportedPublishingTypes property.
      */
     public void setSupportedPublishingTypes(@jakarta.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {
-        this.supportedPublishingTypes = value;
+        this.backingStore.set("supportedPublishingTypes", value);
     }
 }

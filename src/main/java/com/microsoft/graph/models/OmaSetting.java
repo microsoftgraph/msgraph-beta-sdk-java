@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,45 +14,23 @@ import java.util.Objects;
  * OMA Settings definition.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OmaSetting implements AdditionalDataHolder, Parsable {
+public class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Description.
-     */
-    private String description;
-    /**
-     * Display Name.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the value field is encrypted. This property is read-only.
-     */
-    private Boolean isEncrypted;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * OMA.
-     */
-    private String omaUri;
-    /**
-     * ReferenceId for looking up secret for decryption. This property is read-only.
-     */
-    private String secretReferenceValueId;
-    /**
-     * Instantiates a new omaSetting and sets the default values.
+     * Instantiates a new OmaSetting and sets the default values.
      */
     public OmaSetting() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSetting
+     * @return a OmaSetting
      */
     @jakarta.annotation.Nonnull
     public static OmaSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,28 +51,41 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         return new OmaSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the description property value. Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -110,35 +104,35 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEncrypted property value. Indicates whether the value field is encrypted. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
-        return this.isEncrypted;
+        return this.backingStore.get("isEncrypted");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the omaUri property value. OMA.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOmaUri() {
-        return this.omaUri;
+        return this.backingStore.get("omaUri");
     }
     /**
      * Gets the secretReferenceValueId property value. ReferenceId for looking up secret for decryption. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecretReferenceValueId() {
-        return this.secretReferenceValueId;
+        return this.backingStore.get("secretReferenceValueId");
     }
     /**
      * Serializes information the current object
@@ -153,52 +147,60 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the description property value. Description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display Name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isEncrypted property value. Indicates whether the value field is encrypted. This property is read-only.
      * @param value Value to set for the isEncrypted property.
      */
     public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEncrypted = value;
+        this.backingStore.set("isEncrypted", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the omaUri property value. OMA.
      * @param value Value to set for the omaUri property.
      */
     public void setOmaUri(@jakarta.annotation.Nullable final String value) {
-        this.omaUri = value;
+        this.backingStore.set("omaUri", value);
     }
     /**
      * Sets the secretReferenceValueId property value. ReferenceId for looking up secret for decryption. This property is read-only.
      * @param value Value to set for the secretReferenceValueId property.
      */
     public void setSecretReferenceValueId(@jakarta.annotation.Nullable final String value) {
-        this.secretReferenceValueId = value;
+        this.backingStore.set("secretReferenceValueId", value);
     }
 }

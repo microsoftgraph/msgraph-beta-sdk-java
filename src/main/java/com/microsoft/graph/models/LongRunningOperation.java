@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LongRunningOperation extends Entity implements Parsable {
     /**
-     * The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * URI of the resource that the operation is performed on.
-     */
-    private String resourceLocation;
-    /**
-     * The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-     */
-    private LongRunningOperationStatus status;
-    /**
-     * Details about the status of the operation.
-     */
-    private String statusDetail;
-    /**
-     * Instantiates a new longRunningOperation and sets the default values.
+     * Instantiates a new LongRunningOperation and sets the default values.
      */
     public LongRunningOperation() {
         super();
@@ -40,7 +20,7 @@ public class LongRunningOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a longRunningOperation
+     * @return a LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public static LongRunningOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,6 +30,7 @@ public class LongRunningOperation extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.attackSimulationOperation": return new AttackSimulationOperation();
+                case "#microsoft.graph.goalsExportJob": return new GoalsExportJob();
                 case "#microsoft.graph.industryData.fileValidateOperation": return new FileValidateOperation();
                 case "#microsoft.graph.industryData.validateOperation": return new ValidateOperation();
                 case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
@@ -63,7 +44,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +56,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus::forValue)); });
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getStringValue()); });
         return deserializerMap;
     }
@@ -85,31 +66,31 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the resourceLocation property value. URI of the resource that the operation is performed on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {
-        return this.resourceLocation;
+        return this.backingStore.get("resourceLocation");
     }
     /**
      * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-     * @return a longRunningOperationStatus
+     * @return a LongRunningOperationStatus
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the statusDetail property value. Details about the status of the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusDetail() {
-        return this.statusDetail;
+        return this.backingStore.get("statusDetail");
     }
     /**
      * Serializes information the current object
@@ -129,34 +110,34 @@ public class LongRunningOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
-        this.resourceLocation = value;
+        this.backingStore.set("resourceLocation", value);
     }
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the statusDetail property value. Details about the status of the operation.
      * @param value Value to set for the statusDetail property.
      */
     public void setStatusDetail(@jakarta.annotation.Nullable final String value) {
-        this.statusDetail = value;
+        this.backingStore.set("statusDetail", value);
     }
 }

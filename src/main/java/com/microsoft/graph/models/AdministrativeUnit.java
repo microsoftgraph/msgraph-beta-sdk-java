@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
-     * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
-     */
-    private String description;
-    /**
-     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     */
-    private String displayName;
-    /**
-     * The collection of open extensions defined for this administrative unit. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so cannot be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Azure Active Directory.
-     */
-    private Boolean isMemberManagementRestricted;
-    /**
-     * Users and groups that are members of this administrative unit. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> members;
-    /**
-     * Scoped-role members of this administrative unit.
-     */
-    private java.util.List<ScopedRoleMembership> scopedRoleMembers;
-    /**
-     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
-     */
-    private String visibility;
-    /**
-     * Instantiates a new administrativeUnit and sets the default values.
+     * Instantiates a new AdministrativeUnit and sets the default values.
      */
     public AdministrativeUnit() {
         super();
@@ -46,7 +18,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a administrativeUnit
+     * @return a AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public static AdministrativeUnit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,27 +27,27 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.backingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -94,36 +66,36 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so cannot be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Azure Active Directory.
-     * @return a boolean
+     * Gets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so can't be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMemberManagementRestricted() {
-        return this.isMemberManagementRestricted;
+        return this.backingStore.get("isMemberManagementRestricted");
     }
     /**
      * Gets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
-        return this.members;
+        return this.backingStore.get("members");
     }
     /**
      * Gets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
-     * @return a scopedRoleMembership
+     * @return a java.util.List<ScopedRoleMembership>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMembers() {
-        return this.scopedRoleMembers;
+        return this.backingStore.get("scopedRoleMembers");
     }
     /**
      * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVisibility() {
-        return this.visibility;
+        return this.backingStore.get("visibility");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so cannot be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Azure Active Directory.
+     * Sets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so can't be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
      * @param value Value to set for the isMemberManagementRestricted property.
      */
     public void setIsMemberManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMemberManagementRestricted = value;
+        this.backingStore.set("isMemberManagementRestricted", value);
     }
     /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.members = value;
+        this.backingStore.set("members", value);
     }
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
      * @param value Value to set for the scopedRoleMembers property.
      */
     public void setScopedRoleMembers(@jakarta.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
-        this.scopedRoleMembers = value;
+        this.backingStore.set("scopedRoleMembers", value);
     }
     /**
      * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
-        this.visibility = value;
+        this.backingStore.set("visibility", value);
     }
 }

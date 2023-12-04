@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessClientApplications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Service principal IDs excluded from the policy scope.
-     */
-    private java.util.List<String> excludeServicePrincipals;
-    /**
-     * Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-     */
-    private java.util.List<String> includeServicePrincipals;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
-     */
-    private ConditionalAccessFilter servicePrincipalFilter;
-    /**
-     * Instantiates a new conditionalAccessClientApplications and sets the default values.
+     * Instantiates a new ConditionalAccessClientApplications and sets the default values.
      */
     public ConditionalAccessClientApplications() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessClientApplications
+     * @return a ConditionalAccessClientApplications
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessClientApplications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         return new ConditionalAccessClientApplications();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeServicePrincipals() {
-        return this.excludeServicePrincipals;
+        return this.backingStore.get("excludeServicePrincipals");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +78,27 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     }
     /**
      * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeServicePrincipals() {
-        return this.includeServicePrincipals;
+        return this.backingStore.get("includeServicePrincipals");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
-     * @return a conditionalAccessFilter
+     * @return a ConditionalAccessFilter
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessFilter getServicePrincipalFilter() {
-        return this.servicePrincipalFilter;
+        return this.backingStore.get("servicePrincipalFilter");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
      * @param value Value to set for the excludeServicePrincipals property.
      */
     public void setExcludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeServicePrincipals = value;
+        this.backingStore.set("excludeServicePrincipals", value);
     }
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
      * @param value Value to set for the includeServicePrincipals property.
      */
     public void setIncludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeServicePrincipals = value;
+        this.backingStore.set("includeServicePrincipals", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      * @param value Value to set for the servicePrincipalFilter property.
      */
     public void setServicePrincipalFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
-        this.servicePrincipalFilter = value;
+        this.backingStore.set("servicePrincipalFilter", value);
     }
 }

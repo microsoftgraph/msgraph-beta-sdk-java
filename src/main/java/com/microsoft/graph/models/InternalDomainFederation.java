@@ -9,35 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
     /**
-     * URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     */
-    private String activeSignInUri;
-    /**
-     * Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     */
-    private FederatedIdpMfaBehavior federatedIdpMfaBehavior;
-    /**
-     * If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
-     */
-    private Boolean isSignedAuthenticationRequestRequired;
-    /**
-     * Fallback token signing certificate that is used to sign tokens when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate is not present in the federation properties after the federation service certificate has been updated.
-     */
-    private String nextSigningCertificate;
-    /**
-     * Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     */
-    private PromptLoginBehavior promptLoginBehavior;
-    /**
-     * Provides status and timestamp of the last update of the signing certificate.
-     */
-    private SigningCertificateUpdateStatus signingCertificateUpdateStatus;
-    /**
-     * URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     */
-    private String signOutUri;
-    /**
-     * Instantiates a new internalDomainFederation and sets the default values.
+     * Instantiates a new InternalDomainFederation and sets the default values.
      */
     public InternalDomainFederation() {
         super();
@@ -46,7 +18,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a internalDomainFederation
+     * @return a InternalDomainFederation
      */
     @jakarta.annotation.Nonnull
     public static InternalDomainFederation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +26,20 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return new InternalDomainFederation();
     }
     /**
-     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     * @return a string
+     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActiveSignInUri() {
-        return this.activeSignInUri;
+        return this.backingStore.get("activeSignInUri");
     }
     /**
-     * Gets the federatedIdpMfaBehavior property value. Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     * @return a federatedIdpMfaBehavior
+     * Gets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
+     * @return a FederatedIdpMfaBehavior
      */
     @jakarta.annotation.Nullable
     public FederatedIdpMfaBehavior getFederatedIdpMfaBehavior() {
-        return this.federatedIdpMfaBehavior;
+        return this.backingStore.get("federatedIdpMfaBehavior");
     }
     /**
      * The deserialization information for the current model
@@ -77,53 +49,53 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeSignInUri", (n) -> { this.setActiveSignInUri(n.getStringValue()); });
-        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
+        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior::forValue)); });
         deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
-        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior.class)); });
+        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
-     * @return a boolean
+     * Gets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Microsoft Entra ID will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP aren't signed.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSignedAuthenticationRequestRequired() {
-        return this.isSignedAuthenticationRequestRequired;
+        return this.backingStore.get("isSignedAuthenticationRequestRequired");
     }
     /**
-     * Gets the nextSigningCertificate property value. Fallback token signing certificate that is used to sign tokens when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate is not present in the federation properties after the federation service certificate has been updated.
-     * @return a string
+     * Gets the nextSigningCertificate property value. Fallback token signing certificate that can also be used to sign tokens, for example when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNextSigningCertificate() {
-        return this.nextSigningCertificate;
+        return this.backingStore.get("nextSigningCertificate");
     }
     /**
      * Gets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     * @return a promptLoginBehavior
+     * @return a PromptLoginBehavior
      */
     @jakarta.annotation.Nullable
     public PromptLoginBehavior getPromptLoginBehavior() {
-        return this.promptLoginBehavior;
+        return this.backingStore.get("promptLoginBehavior");
     }
     /**
      * Gets the signingCertificateUpdateStatus property value. Provides status and timestamp of the last update of the signing certificate.
-     * @return a signingCertificateUpdateStatus
+     * @return a SigningCertificateUpdateStatus
      */
     @jakarta.annotation.Nullable
     public SigningCertificateUpdateStatus getSigningCertificateUpdateStatus() {
-        return this.signingCertificateUpdateStatus;
+        return this.backingStore.get("signingCertificateUpdateStatus");
     }
     /**
-     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     * @return a string
+     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignOutUri() {
-        return this.signOutUri;
+        return this.backingStore.get("signOutUri");
     }
     /**
      * Serializes information the current object
@@ -141,52 +113,52 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         writer.writeStringValue("signOutUri", this.getSignOutUri());
     }
     /**
-     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @param value Value to set for the activeSignInUri property.
      */
     public void setActiveSignInUri(@jakarta.annotation.Nullable final String value) {
-        this.activeSignInUri = value;
+        this.backingStore.set("activeSignInUri", value);
     }
     /**
-     * Sets the federatedIdpMfaBehavior property value. Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
+     * Sets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
      * @param value Value to set for the federatedIdpMfaBehavior property.
      */
     public void setFederatedIdpMfaBehavior(@jakarta.annotation.Nullable final FederatedIdpMfaBehavior value) {
-        this.federatedIdpMfaBehavior = value;
+        this.backingStore.set("federatedIdpMfaBehavior", value);
     }
     /**
-     * Sets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
+     * Sets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Microsoft Entra ID will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP aren't signed.
      * @param value Value to set for the isSignedAuthenticationRequestRequired property.
      */
     public void setIsSignedAuthenticationRequestRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSignedAuthenticationRequestRequired = value;
+        this.backingStore.set("isSignedAuthenticationRequestRequired", value);
     }
     /**
-     * Sets the nextSigningCertificate property value. Fallback token signing certificate that is used to sign tokens when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate is not present in the federation properties after the federation service certificate has been updated.
+     * Sets the nextSigningCertificate property value. Fallback token signing certificate that can also be used to sign tokens, for example when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.
      * @param value Value to set for the nextSigningCertificate property.
      */
     public void setNextSigningCertificate(@jakarta.annotation.Nullable final String value) {
-        this.nextSigningCertificate = value;
+        this.backingStore.set("nextSigningCertificate", value);
     }
     /**
      * Sets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
      * @param value Value to set for the promptLoginBehavior property.
      */
     public void setPromptLoginBehavior(@jakarta.annotation.Nullable final PromptLoginBehavior value) {
-        this.promptLoginBehavior = value;
+        this.backingStore.set("promptLoginBehavior", value);
     }
     /**
      * Sets the signingCertificateUpdateStatus property value. Provides status and timestamp of the last update of the signing certificate.
      * @param value Value to set for the signingCertificateUpdateStatus property.
      */
     public void setSigningCertificateUpdateStatus(@jakarta.annotation.Nullable final SigningCertificateUpdateStatus value) {
-        this.signingCertificateUpdateStatus = value;
+        this.backingStore.set("signingCertificateUpdateStatus", value);
     }
     /**
-     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      * @param value Value to set for the signOutUri property.
      */
     public void setSignOutUri(@jakarta.annotation.Nullable final String value) {
-        this.signOutUri = value;
+        this.backingStore.set("signOutUri", value);
     }
 }

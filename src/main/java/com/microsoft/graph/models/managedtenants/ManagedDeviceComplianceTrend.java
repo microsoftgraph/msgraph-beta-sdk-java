@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     /**
-     * The number of devices with a compliant status. Required. Read-only.
-     */
-    private Integer compliantDeviceCount;
-    /**
-     * The number of devices manged by Configuration Manager. Required. Read-only.
-     */
-    private Integer configManagerDeviceCount;
-    /**
-     * The date and time compliance snapshot was performed. Required. Read-only.
-     */
-    private String countDateTime;
-    /**
-     * The number of devices with an error status. Required. Read-only.
-     */
-    private Integer errorDeviceCount;
-    /**
-     * The number of devices that are in a grace period status. Required. Read-only.
-     */
-    private Integer inGracePeriodDeviceCount;
-    /**
-     * The number of devices that are in a non-compliant status. Required. Read-only.
-     */
-    private Integer noncompliantDeviceCount;
-    /**
-     * The display name for the managed tenant. Optional. Read-only.
-     */
-    private String tenantDisplayName;
-    /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     */
-    private String tenantId;
-    /**
-     * The number of devices in an unknown status. Required. Read-only.
-     */
-    private Integer unknownDeviceCount;
-    /**
-     * Instantiates a new managedDeviceComplianceTrend and sets the default values.
+     * Instantiates a new ManagedDeviceComplianceTrend and sets the default values.
      */
     public ManagedDeviceComplianceTrend() {
         super();
@@ -54,7 +18,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceComplianceTrend
+     * @return a ManagedDeviceComplianceTrend
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceComplianceTrend createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,35 +27,35 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices with a compliant status. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this.compliantDeviceCount;
+        return this.backingStore.get("compliantDeviceCount");
     }
     /**
      * Gets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigManagerDeviceCount() {
-        return this.configManagerDeviceCount;
+        return this.backingStore.get("configManagerDeviceCount");
     }
     /**
      * Gets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountDateTime() {
-        return this.countDateTime;
+        return this.backingStore.get("countDateTime");
     }
     /**
      * Gets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this.errorDeviceCount;
+        return this.backingStore.get("errorDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -113,43 +77,43 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInGracePeriodDeviceCount() {
-        return this.inGracePeriodDeviceCount;
+        return this.backingStore.get("inGracePeriodDeviceCount");
     }
     /**
      * Gets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNoncompliantDeviceCount() {
-        return this.noncompliantDeviceCount;
+        return this.backingStore.get("noncompliantDeviceCount");
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
-        return this.tenantDisplayName;
+        return this.backingStore.get("tenantDisplayName");
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this.unknownDeviceCount;
+        return this.backingStore.get("unknownDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      */
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantDeviceCount = value;
+        this.backingStore.set("compliantDeviceCount", value);
     }
     /**
      * Sets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
      * @param value Value to set for the configManagerDeviceCount property.
      */
     public void setConfigManagerDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.configManagerDeviceCount = value;
+        this.backingStore.set("configManagerDeviceCount", value);
     }
     /**
      * Sets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
      * @param value Value to set for the countDateTime property.
      */
     public void setCountDateTime(@jakarta.annotation.Nullable final String value) {
-        this.countDateTime = value;
+        this.backingStore.set("countDateTime", value);
     }
     /**
      * Sets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
      * @param value Value to set for the errorDeviceCount property.
      */
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorDeviceCount = value;
+        this.backingStore.set("errorDeviceCount", value);
     }
     /**
      * Sets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
      * @param value Value to set for the inGracePeriodDeviceCount property.
      */
     public void setInGracePeriodDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.inGracePeriodDeviceCount = value;
+        this.backingStore.set("inGracePeriodDeviceCount", value);
     }
     /**
      * Sets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
      * @param value Value to set for the noncompliantDeviceCount property.
      */
     public void setNoncompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.noncompliantDeviceCount = value;
+        this.backingStore.set("noncompliantDeviceCount", value);
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      */
     public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.tenantDisplayName = value;
+        this.backingStore.set("tenantDisplayName", value);
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
      * @param value Value to set for the unknownDeviceCount property.
      */
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownDeviceCount = value;
+        this.backingStore.set("unknownDeviceCount", value);
     }
 }

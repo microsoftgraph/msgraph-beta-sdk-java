@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForwardingProfile extends Profile implements Parsable {
     /**
-     * Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
-     */
-    private java.util.List<Association> associations;
-    /**
-     * Profile priority.
-     */
-    private Integer priority;
-    /**
-     * The trafficForwardingType property
-     */
-    private TrafficForwardingType trafficForwardingType;
-    /**
-     * Instantiates a new forwardingProfile and sets the default values.
+     * Instantiates a new ForwardingProfile and sets the default values.
      */
     public ForwardingProfile() {
         super();
@@ -30,7 +18,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingProfile
+     * @return a ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public static ForwardingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * Gets the associations property value. Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
-     * @return a association
+     * @return a java.util.List<Association>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Association> getAssociations() {
-        return this.associations;
+        return this.backingStore.get("associations");
     }
     /**
      * The deserialization information for the current model
@@ -54,24 +42,24 @@ public class ForwardingProfile extends Profile implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associations", (n) -> { this.setAssociations(n.getCollectionOfObjectValues(Association::createFromDiscriminatorValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
-        deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType.class)); });
+        deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the priority property value. Profile priority.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
-     * @return a trafficForwardingType
+     * @return a TrafficForwardingType
      */
     @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {
-        return this.trafficForwardingType;
+        return this.backingStore.get("trafficForwardingType");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ForwardingProfile extends Profile implements Parsable {
      * @param value Value to set for the associations property.
      */
     public void setAssociations(@jakarta.annotation.Nullable final java.util.List<Association> value) {
-        this.associations = value;
+        this.backingStore.set("associations", value);
     }
     /**
      * Sets the priority property value. Profile priority.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
     /**
      * Sets the trafficForwardingType property value. The trafficForwardingType property
      * @param value Value to set for the trafficForwardingType property.
      */
     public void setTrafficForwardingType(@jakarta.annotation.Nullable final TrafficForwardingType value) {
-        this.trafficForwardingType = value;
+        this.backingStore.set("trafficForwardingType", value);
     }
 }

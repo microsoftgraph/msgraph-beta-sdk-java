@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Store extends Entity implements Parsable {
     /**
-     * Default language of the term store.
-     */
-    private String defaultLanguageTag;
-    /**
-     * Collection of all groups available in the term store.
-     */
-    private java.util.List<Group> groups;
-    /**
-     * List of languages for the term store.
-     */
-    private java.util.List<String> languageTags;
-    /**
-     * Collection of all sets available in the term store.
-     */
-    private java.util.List<Set> sets;
-    /**
-     * Instantiates a new store and sets the default values.
+     * Instantiates a new Store and sets the default values.
      */
     public Store() {
         super();
@@ -34,7 +18,7 @@ public class Store extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a store
+     * @return a Store
      */
     @jakarta.annotation.Nonnull
     public static Store createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the defaultLanguageTag property value. Default language of the term store.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguageTag() {
-        return this.defaultLanguageTag;
+        return this.backingStore.get("defaultLanguageTag");
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +48,27 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the groups property value. Collection of all groups available in the term store.
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getGroups() {
-        return this.groups;
+        return this.backingStore.get("groups");
     }
     /**
      * Gets the languageTags property value. List of languages for the term store.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
-        return this.languageTags;
+        return this.backingStore.get("languageTags");
     }
     /**
      * Gets the sets property value. Collection of all sets available in the term store.
-     * @return a set
+     * @return a java.util.List<Set>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Set> getSets() {
-        return this.sets;
+        return this.backingStore.get("sets");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the defaultLanguageTag property.
      */
     public void setDefaultLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.defaultLanguageTag = value;
+        this.backingStore.set("defaultLanguageTag", value);
     }
     /**
      * Sets the groups property value. Collection of all groups available in the term store.
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
-        this.groups = value;
+        this.backingStore.set("groups", value);
     }
     /**
      * Sets the languageTags property value. List of languages for the term store.
      * @param value Value to set for the languageTags property.
      */
     public void setLanguageTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.languageTags = value;
+        this.backingStore.set("languageTags", value);
     }
     /**
      * Sets the sets property value. Collection of all sets available in the term store.
      * @param value Value to set for the sets property.
      */
     public void setSets(@jakarta.annotation.Nullable final java.util.List<Set> value) {
-        this.sets = value;
+        this.backingStore.set("sets", value);
     }
 }

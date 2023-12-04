@@ -60,48 +60,48 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get managedTenantAlertLogs from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlertLogCollectionResponse
+     * @return a ManagedTenantAlertLogCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenantAlertLogCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedTenantAlertLogCollectionResponse get() {
         return get(null);
     }
     /**
      * Get managedTenantAlertLogs from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertLogCollectionResponse
+     * @return a ManagedTenantAlertLogCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenantAlertLogCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedTenantAlertLogCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedTenantAlertLogCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantAlertLogCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantAlertLog
+     * @return a ManagedTenantAlertLog
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenantAlertLog> post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body) {
+    @jakarta.annotation.Nullable
+    public ManagedTenantAlertLog post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertLog
+     * @return a ManagedTenantAlertLog
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenantAlertLog> post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedTenantAlertLog post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedTenantAlertLog::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantAlertLog::createFromDiscriminatorValue);
     }
     /**
      * Get managedTenantAlertLogs from tenantRelationships
@@ -118,18 +118,9 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedTenantAlertLogsRequestBuilder
+     * @return a ManagedTenantAlertLogsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

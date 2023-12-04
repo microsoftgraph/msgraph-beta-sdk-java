@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialSingleSignOnExtension extends SingleSignOnExtension implements Parsable {
     /**
-     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<KeyTypedValuePair> configurations;
-    /**
-     * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     */
-    private java.util.List<String> domains;
-    /**
-     * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     */
-    private String extensionIdentifier;
-    /**
-     * Gets or sets the case-sensitive realm name for this profile.
-     */
-    private String realm;
-    /**
-     * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     */
-    private String teamIdentifier;
-    /**
-     * Instantiates a new credentialSingleSignOnExtension and sets the default values.
+     * Instantiates a new CredentialSingleSignOnExtension and sets the default values.
      */
     public CredentialSingleSignOnExtension() {
         super();
@@ -41,7 +21,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialSingleSignOnExtension
+     * @return a CredentialSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static CredentialSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +30,27 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a keyTypedValuePair
+     * @return a java.util.List<KeyTypedValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
-        return this.configurations;
+        return this.backingStore.get("configurations");
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
-        return this.domains;
+        return this.backingStore.get("domains");
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
-        return this.extensionIdentifier;
+        return this.backingStore.get("extensionIdentifier");
     }
     /**
      * The deserialization information for the current model
@@ -88,19 +68,19 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
-        return this.realm;
+        return this.backingStore.get("realm");
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamIdentifier() {
-        return this.teamIdentifier;
+        return this.backingStore.get("teamIdentifier");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the configurations property.
      */
     public void setConfigurations(@jakarta.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
-        this.configurations = value;
+        this.backingStore.set("configurations", value);
     }
     /**
      * Sets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
      * @param value Value to set for the domains property.
      */
     public void setDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.domains = value;
+        this.backingStore.set("domains", value);
     }
     /**
      * Sets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the extensionIdentifier property.
      */
     public void setExtensionIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.extensionIdentifier = value;
+        this.backingStore.set("extensionIdentifier", value);
     }
     /**
      * Sets the realm property value. Gets or sets the case-sensitive realm name for this profile.
      * @param value Value to set for the realm property.
      */
     public void setRealm(@jakarta.annotation.Nullable final String value) {
-        this.realm = value;
+        this.backingStore.set("realm", value);
     }
     /**
      * Sets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the teamIdentifier property.
      */
     public void setTeamIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.teamIdentifier = value;
+        this.backingStore.set("teamIdentifier", value);
     }
 }

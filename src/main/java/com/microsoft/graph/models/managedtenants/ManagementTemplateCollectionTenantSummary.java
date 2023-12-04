@@ -11,83 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateCollectionTenantSummary extends Entity implements Parsable {
     /**
-     * The completeStepsCount property
-     */
-    private Integer completeStepsCount;
-    /**
-     * The completeUsersCount property
-     */
-    private Integer completeUsersCount;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The dismissedStepsCount property
-     */
-    private Integer dismissedStepsCount;
-    /**
-     * The excludedUsersCount property
-     */
-    private Integer excludedUsersCount;
-    /**
-     * The excludedUsersDistinctCount property
-     */
-    private Integer excludedUsersDistinctCount;
-    /**
-     * The incompleteStepsCount property
-     */
-    private Integer incompleteStepsCount;
-    /**
-     * The incompleteUsersCount property
-     */
-    private Integer incompleteUsersCount;
-    /**
-     * The ineligibleStepsCount property
-     */
-    private Integer ineligibleStepsCount;
-    /**
-     * The isComplete property
-     */
-    private Boolean isComplete;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The managementTemplateCollectionDisplayName property
-     */
-    private String managementTemplateCollectionDisplayName;
-    /**
-     * The managementTemplateCollectionId property
-     */
-    private String managementTemplateCollectionId;
-    /**
-     * The regressedStepsCount property
-     */
-    private Integer regressedStepsCount;
-    /**
-     * The regressedUsersCount property
-     */
-    private Integer regressedUsersCount;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The unlicensedUsersCount property
-     */
-    private Integer unlicensedUsersCount;
-    /**
-     * Instantiates a new managementTemplateCollectionTenantSummary and sets the default values.
+     * Instantiates a new ManagementTemplateCollectionTenantSummary and sets the default values.
      */
     public ManagementTemplateCollectionTenantSummary() {
         super();
@@ -95,7 +19,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateCollectionTenantSummary
+     * @return a ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateCollectionTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -104,27 +28,27 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the completeStepsCount property value. The completeStepsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompleteStepsCount() {
-        return this.completeStepsCount;
+        return this.backingStore.get("completeStepsCount");
     }
     /**
      * Gets the completeUsersCount property value. The completeUsersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompleteUsersCount() {
-        return this.completeUsersCount;
+        return this.backingStore.get("completeUsersCount");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.backingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -132,31 +56,31 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the dismissedStepsCount property value. The dismissedStepsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDismissedStepsCount() {
-        return this.dismissedStepsCount;
+        return this.backingStore.get("dismissedStepsCount");
     }
     /**
      * Gets the excludedUsersCount property value. The excludedUsersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getExcludedUsersCount() {
-        return this.excludedUsersCount;
+        return this.backingStore.get("excludedUsersCount");
     }
     /**
      * Gets the excludedUsersDistinctCount property value. The excludedUsersDistinctCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getExcludedUsersDistinctCount() {
-        return this.excludedUsersDistinctCount;
+        return this.backingStore.get("excludedUsersDistinctCount");
     }
     /**
      * The deserialization information for the current model
@@ -188,43 +112,43 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the incompleteStepsCount property value. The incompleteStepsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIncompleteStepsCount() {
-        return this.incompleteStepsCount;
+        return this.backingStore.get("incompleteStepsCount");
     }
     /**
      * Gets the incompleteUsersCount property value. The incompleteUsersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIncompleteUsersCount() {
-        return this.incompleteUsersCount;
+        return this.backingStore.get("incompleteUsersCount");
     }
     /**
      * Gets the ineligibleStepsCount property value. The ineligibleStepsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleStepsCount() {
-        return this.ineligibleStepsCount;
+        return this.backingStore.get("ineligibleStepsCount");
     }
     /**
      * Gets the isComplete property value. The isComplete property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsComplete() {
-        return this.isComplete;
+        return this.backingStore.get("isComplete");
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.backingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -232,55 +156,55 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
-        return this.managementTemplateCollectionDisplayName;
+        return this.backingStore.get("managementTemplateCollectionDisplayName");
     }
     /**
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
-        return this.managementTemplateCollectionId;
+        return this.backingStore.get("managementTemplateCollectionId");
     }
     /**
      * Gets the regressedStepsCount property value. The regressedStepsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRegressedStepsCount() {
-        return this.regressedStepsCount;
+        return this.backingStore.get("regressedStepsCount");
     }
     /**
      * Gets the regressedUsersCount property value. The regressedUsersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRegressedUsersCount() {
-        return this.regressedUsersCount;
+        return this.backingStore.get("regressedUsersCount");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the unlicensedUsersCount property value. The unlicensedUsersCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnlicensedUsersCount() {
-        return this.unlicensedUsersCount;
+        return this.backingStore.get("unlicensedUsersCount");
     }
     /**
      * Serializes information the current object
@@ -314,132 +238,132 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * @param value Value to set for the completeStepsCount property.
      */
     public void setCompleteStepsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.completeStepsCount = value;
+        this.backingStore.set("completeStepsCount", value);
     }
     /**
      * Sets the completeUsersCount property value. The completeUsersCount property
      * @param value Value to set for the completeUsersCount property.
      */
     public void setCompleteUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.completeUsersCount = value;
+        this.backingStore.set("completeUsersCount", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.backingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the dismissedStepsCount property value. The dismissedStepsCount property
      * @param value Value to set for the dismissedStepsCount property.
      */
     public void setDismissedStepsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.dismissedStepsCount = value;
+        this.backingStore.set("dismissedStepsCount", value);
     }
     /**
      * Sets the excludedUsersCount property value. The excludedUsersCount property
      * @param value Value to set for the excludedUsersCount property.
      */
     public void setExcludedUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.excludedUsersCount = value;
+        this.backingStore.set("excludedUsersCount", value);
     }
     /**
      * Sets the excludedUsersDistinctCount property value. The excludedUsersDistinctCount property
      * @param value Value to set for the excludedUsersDistinctCount property.
      */
     public void setExcludedUsersDistinctCount(@jakarta.annotation.Nullable final Integer value) {
-        this.excludedUsersDistinctCount = value;
+        this.backingStore.set("excludedUsersDistinctCount", value);
     }
     /**
      * Sets the incompleteStepsCount property value. The incompleteStepsCount property
      * @param value Value to set for the incompleteStepsCount property.
      */
     public void setIncompleteStepsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.incompleteStepsCount = value;
+        this.backingStore.set("incompleteStepsCount", value);
     }
     /**
      * Sets the incompleteUsersCount property value. The incompleteUsersCount property
      * @param value Value to set for the incompleteUsersCount property.
      */
     public void setIncompleteUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.incompleteUsersCount = value;
+        this.backingStore.set("incompleteUsersCount", value);
     }
     /**
      * Sets the ineligibleStepsCount property value. The ineligibleStepsCount property
      * @param value Value to set for the ineligibleStepsCount property.
      */
     public void setIneligibleStepsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ineligibleStepsCount = value;
+        this.backingStore.set("ineligibleStepsCount", value);
     }
     /**
      * Sets the isComplete property value. The isComplete property
      * @param value Value to set for the isComplete property.
      */
     public void setIsComplete(@jakarta.annotation.Nullable final Boolean value) {
-        this.isComplete = value;
+        this.backingStore.set("isComplete", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.backingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
      * @param value Value to set for the managementTemplateCollectionDisplayName property.
      */
     public void setManagementTemplateCollectionDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateCollectionDisplayName = value;
+        this.backingStore.set("managementTemplateCollectionDisplayName", value);
     }
     /**
      * Sets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
      * @param value Value to set for the managementTemplateCollectionId property.
      */
     public void setManagementTemplateCollectionId(@jakarta.annotation.Nullable final String value) {
-        this.managementTemplateCollectionId = value;
+        this.backingStore.set("managementTemplateCollectionId", value);
     }
     /**
      * Sets the regressedStepsCount property value. The regressedStepsCount property
      * @param value Value to set for the regressedStepsCount property.
      */
     public void setRegressedStepsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.regressedStepsCount = value;
+        this.backingStore.set("regressedStepsCount", value);
     }
     /**
      * Sets the regressedUsersCount property value. The regressedUsersCount property
      * @param value Value to set for the regressedUsersCount property.
      */
     public void setRegressedUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.regressedUsersCount = value;
+        this.backingStore.set("regressedUsersCount", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the unlicensedUsersCount property value. The unlicensedUsersCount property
      * @param value Value to set for the unlicensedUsersCount property.
      */
     public void setUnlicensedUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unlicensedUsersCount = value;
+        this.backingStore.set("unlicensedUsersCount", value);
     }
 }

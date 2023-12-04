@@ -4,33 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PlannerTaskConfigurationRoleBase implements AdditionalDataHolder, Parsable {
+public class PlannerTaskConfigurationRoleBase implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The roleKind property
-     */
-    private PlannerUserRoleKind roleKind;
-    /**
-     * Instantiates a new plannerTaskConfigurationRoleBase and sets the default values.
+     * Instantiates a new PlannerTaskConfigurationRoleBase and sets the default values.
      */
     public PlannerTaskConfigurationRoleBase() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskConfigurationRoleBase
+     * @return a PlannerTaskConfigurationRoleBase
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskConfigurationRoleBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,12 +42,25 @@ public class PlannerTaskConfigurationRoleBase implements AdditionalDataHolder, P
         return new PlannerTaskConfigurationRoleBase();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -60,24 +70,24 @@ public class PlannerTaskConfigurationRoleBase implements AdditionalDataHolder, P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("roleKind", (n) -> { this.setRoleKind(n.getEnumValue(PlannerUserRoleKind.class)); });
+        deserializerMap.put("roleKind", (n) -> { this.setRoleKind(n.getEnumValue(PlannerUserRoleKind::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the roleKind property value. The roleKind property
-     * @return a plannerUserRoleKind
+     * @return a PlannerUserRoleKind
      */
     @jakarta.annotation.Nullable
     public PlannerUserRoleKind getRoleKind() {
-        return this.roleKind;
+        return this.backingStore.get("roleKind");
     }
     /**
      * Serializes information the current object
@@ -90,24 +100,32 @@ public class PlannerTaskConfigurationRoleBase implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the roleKind property value. The roleKind property
      * @param value Value to set for the roleKind property.
      */
     public void setRoleKind(@jakarta.annotation.Nullable final PlannerUserRoleKind value) {
-        this.roleKind = value;
+        this.backingStore.set("roleKind", value);
     }
 }

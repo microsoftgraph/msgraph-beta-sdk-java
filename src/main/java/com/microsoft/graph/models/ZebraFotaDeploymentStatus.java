@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,85 +15,23 @@ import java.util.Objects;
  * Describes the status for a single FOTA deployment.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable {
+public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * A boolean that indicates if a cancellation was requested on the deployment. NOTE: A cancellation request does not guarantee that the deployment was canceled.
-     */
-    private Boolean cancelRequested;
-    /**
-     * The date and time when this deployment was completed or canceled. The actual date time is determined by the value of state. If the state is canceled, this property holds the cancellation date/time. If the the state is completed, this property holds the completion date/time. If the deployment is not completed before the deployment end date, then completed date/time and end date/time are the same. This is always in the deployment timezone. Note: An installation that is in progress can continue past the deployment end date.
-     */
-    private OffsetDateTime completeOrCanceledDateTime;
-    /**
-     * An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum.
-     */
-    private ZebraFotaErrorCode errorCode;
-    /**
-     * Date and time when the deployment status was updated from Zebra
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents the state of Zebra FOTA deployment.
-     */
-    private ZebraFotaDeploymentState state;
-    /**
-     * An integer that indicates the total number of devices where installation was successful.
-     */
-    private Integer totalAwaitingInstall;
-    /**
-     * An integer that indicates the total number of devices where installation was canceled.
-     */
-    private Integer totalCanceled;
-    /**
-     * An integer that indicates the total number of devices that have a job in the CREATED state. Typically indicates jobs that did not reach the devices.
-     */
-    private Integer totalCreated;
-    /**
-     * An integer that indicates the total number of devices in the deployment.
-     */
-    private Integer totalDevices;
-    /**
-     * An integer that indicates the total number of devices where installation was successful.
-     */
-    private Integer totalDownloading;
-    /**
-     * An integer that indicates the total number of devices that have failed to download the new OS file.
-     */
-    private Integer totalFailedDownload;
-    /**
-     * An integer that indicates the total number of devices that have failed to install the new OS file.
-     */
-    private Integer totalFailedInstall;
-    /**
-     * An integer that indicates the total number of devices that received the json and are scheduled.
-     */
-    private Integer totalScheduled;
-    /**
-     * An integer that indicates the total number of devices where installation was successful.
-     */
-    private Integer totalSucceededInstall;
-    /**
-     * An integer that indicates the total number of devices where no deployment status or end state has not received, even after the scheduled end date was reached.
-     */
-    private Integer totalUnknown;
-    /**
-     * Instantiates a new zebraFotaDeploymentStatus and sets the default values.
+     * Instantiates a new ZebraFotaDeploymentStatus and sets the default values.
      */
     public ZebraFotaDeploymentStatus() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaDeploymentStatus
+     * @return a ZebraFotaDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,20 +39,33 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         return new ZebraFotaDeploymentStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cancelRequested property value. A boolean that indicates if a cancellation was requested on the deployment. NOTE: A cancellation request does not guarantee that the deployment was canceled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCancelRequested() {
-        return this.cancelRequested;
+        return this.backingStore.get("cancelRequested");
     }
     /**
      * Gets the completeOrCanceledDateTime property value. The date and time when this deployment was completed or canceled. The actual date time is determined by the value of state. If the state is canceled, this property holds the cancellation date/time. If the the state is completed, this property holds the completion date/time. If the deployment is not completed before the deployment end date, then completed date/time and end date/time are the same. This is always in the deployment timezone. Note: An installation that is in progress can continue past the deployment end date.
@@ -119,15 +73,15 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompleteOrCanceledDateTime() {
-        return this.completeOrCanceledDateTime;
+        return this.backingStore.get("completeOrCanceledDateTime");
     }
     /**
      * Gets the errorCode property value. An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum.
-     * @return a zebraFotaErrorCode
+     * @return a ZebraFotaErrorCode
      */
     @jakarta.annotation.Nullable
     public ZebraFotaErrorCode getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -138,10 +92,10 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("cancelRequested", (n) -> { this.setCancelRequested(n.getBooleanValue()); });
         deserializerMap.put("completeOrCanceledDateTime", (n) -> { this.setCompleteOrCanceledDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(ZebraFotaErrorCode.class)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(ZebraFotaErrorCode::forValue)); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ZebraFotaDeploymentState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ZebraFotaDeploymentState::forValue)); });
         deserializerMap.put("totalAwaitingInstall", (n) -> { this.setTotalAwaitingInstall(n.getIntegerValue()); });
         deserializerMap.put("totalCanceled", (n) -> { this.setTotalCanceled(n.getIntegerValue()); });
         deserializerMap.put("totalCreated", (n) -> { this.setTotalCreated(n.getIntegerValue()); });
@@ -160,103 +114,103 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the state property value. Represents the state of Zebra FOTA deployment.
-     * @return a zebraFotaDeploymentState
+     * @return a ZebraFotaDeploymentState
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeploymentState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the totalAwaitingInstall property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAwaitingInstall() {
-        return this.totalAwaitingInstall;
+        return this.backingStore.get("totalAwaitingInstall");
     }
     /**
      * Gets the totalCanceled property value. An integer that indicates the total number of devices where installation was canceled.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCanceled() {
-        return this.totalCanceled;
+        return this.backingStore.get("totalCanceled");
     }
     /**
      * Gets the totalCreated property value. An integer that indicates the total number of devices that have a job in the CREATED state. Typically indicates jobs that did not reach the devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCreated() {
-        return this.totalCreated;
+        return this.backingStore.get("totalCreated");
     }
     /**
      * Gets the totalDevices property value. An integer that indicates the total number of devices in the deployment.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDevices() {
-        return this.totalDevices;
+        return this.backingStore.get("totalDevices");
     }
     /**
      * Gets the totalDownloading property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDownloading() {
-        return this.totalDownloading;
+        return this.backingStore.get("totalDownloading");
     }
     /**
      * Gets the totalFailedDownload property value. An integer that indicates the total number of devices that have failed to download the new OS file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalFailedDownload() {
-        return this.totalFailedDownload;
+        return this.backingStore.get("totalFailedDownload");
     }
     /**
      * Gets the totalFailedInstall property value. An integer that indicates the total number of devices that have failed to install the new OS file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalFailedInstall() {
-        return this.totalFailedInstall;
+        return this.backingStore.get("totalFailedInstall");
     }
     /**
      * Gets the totalScheduled property value. An integer that indicates the total number of devices that received the json and are scheduled.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalScheduled() {
-        return this.totalScheduled;
+        return this.backingStore.get("totalScheduled");
     }
     /**
      * Gets the totalSucceededInstall property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalSucceededInstall() {
-        return this.totalSucceededInstall;
+        return this.backingStore.get("totalSucceededInstall");
     }
     /**
      * Gets the totalUnknown property value. An integer that indicates the total number of devices where no deployment status or end state has not received, even after the scheduled end date was reached.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnknown() {
-        return this.totalUnknown;
+        return this.backingStore.get("totalUnknown");
     }
     /**
      * Serializes information the current object
@@ -283,122 +237,130 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cancelRequested property value. A boolean that indicates if a cancellation was requested on the deployment. NOTE: A cancellation request does not guarantee that the deployment was canceled.
      * @param value Value to set for the cancelRequested property.
      */
     public void setCancelRequested(@jakarta.annotation.Nullable final Boolean value) {
-        this.cancelRequested = value;
+        this.backingStore.set("cancelRequested", value);
     }
     /**
      * Sets the completeOrCanceledDateTime property value. The date and time when this deployment was completed or canceled. The actual date time is determined by the value of state. If the state is canceled, this property holds the cancellation date/time. If the the state is completed, this property holds the completion date/time. If the deployment is not completed before the deployment end date, then completed date/time and end date/time are the same. This is always in the deployment timezone. Note: An installation that is in progress can continue past the deployment end date.
      * @param value Value to set for the completeOrCanceledDateTime property.
      */
     public void setCompleteOrCanceledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completeOrCanceledDateTime = value;
+        this.backingStore.set("completeOrCanceledDateTime", value);
     }
     /**
      * Sets the errorCode property value. An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final ZebraFotaErrorCode value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time when the deployment status was updated from Zebra
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. Represents the state of Zebra FOTA deployment.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ZebraFotaDeploymentState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the totalAwaitingInstall property value. An integer that indicates the total number of devices where installation was successful.
      * @param value Value to set for the totalAwaitingInstall property.
      */
     public void setTotalAwaitingInstall(@jakarta.annotation.Nullable final Integer value) {
-        this.totalAwaitingInstall = value;
+        this.backingStore.set("totalAwaitingInstall", value);
     }
     /**
      * Sets the totalCanceled property value. An integer that indicates the total number of devices where installation was canceled.
      * @param value Value to set for the totalCanceled property.
      */
     public void setTotalCanceled(@jakarta.annotation.Nullable final Integer value) {
-        this.totalCanceled = value;
+        this.backingStore.set("totalCanceled", value);
     }
     /**
      * Sets the totalCreated property value. An integer that indicates the total number of devices that have a job in the CREATED state. Typically indicates jobs that did not reach the devices.
      * @param value Value to set for the totalCreated property.
      */
     public void setTotalCreated(@jakarta.annotation.Nullable final Integer value) {
-        this.totalCreated = value;
+        this.backingStore.set("totalCreated", value);
     }
     /**
      * Sets the totalDevices property value. An integer that indicates the total number of devices in the deployment.
      * @param value Value to set for the totalDevices property.
      */
     public void setTotalDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.totalDevices = value;
+        this.backingStore.set("totalDevices", value);
     }
     /**
      * Sets the totalDownloading property value. An integer that indicates the total number of devices where installation was successful.
      * @param value Value to set for the totalDownloading property.
      */
     public void setTotalDownloading(@jakarta.annotation.Nullable final Integer value) {
-        this.totalDownloading = value;
+        this.backingStore.set("totalDownloading", value);
     }
     /**
      * Sets the totalFailedDownload property value. An integer that indicates the total number of devices that have failed to download the new OS file.
      * @param value Value to set for the totalFailedDownload property.
      */
     public void setTotalFailedDownload(@jakarta.annotation.Nullable final Integer value) {
-        this.totalFailedDownload = value;
+        this.backingStore.set("totalFailedDownload", value);
     }
     /**
      * Sets the totalFailedInstall property value. An integer that indicates the total number of devices that have failed to install the new OS file.
      * @param value Value to set for the totalFailedInstall property.
      */
     public void setTotalFailedInstall(@jakarta.annotation.Nullable final Integer value) {
-        this.totalFailedInstall = value;
+        this.backingStore.set("totalFailedInstall", value);
     }
     /**
      * Sets the totalScheduled property value. An integer that indicates the total number of devices that received the json and are scheduled.
      * @param value Value to set for the totalScheduled property.
      */
     public void setTotalScheduled(@jakarta.annotation.Nullable final Integer value) {
-        this.totalScheduled = value;
+        this.backingStore.set("totalScheduled", value);
     }
     /**
      * Sets the totalSucceededInstall property value. An integer that indicates the total number of devices where installation was successful.
      * @param value Value to set for the totalSucceededInstall property.
      */
     public void setTotalSucceededInstall(@jakarta.annotation.Nullable final Integer value) {
-        this.totalSucceededInstall = value;
+        this.backingStore.set("totalSucceededInstall", value);
     }
     /**
      * Sets the totalUnknown property value. An integer that indicates the total number of devices where no deployment status or end state has not received, even after the scheduled end date was reached.
      * @param value Value to set for the totalUnknown property.
      */
     public void setTotalUnknown(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUnknown = value;
+        this.backingStore.set("totalUnknown", value);
     }
 }

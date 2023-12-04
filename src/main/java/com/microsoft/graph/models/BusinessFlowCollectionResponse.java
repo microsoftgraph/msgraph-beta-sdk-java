@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BusinessFlow> value;
-    /**
-     * Instantiates a new businessFlowCollectionResponse and sets the default values.
+     * Instantiates a new BusinessFlowCollectionResponse and sets the default values.
      */
     public BusinessFlowCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class BusinessFlowCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessFlowCollectionResponse
+     * @return a BusinessFlowCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BusinessFlowCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class BusinessFlowCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a businessFlow
+     * @return a java.util.List<BusinessFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BusinessFlow> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BusinessFlowCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BusinessFlow> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

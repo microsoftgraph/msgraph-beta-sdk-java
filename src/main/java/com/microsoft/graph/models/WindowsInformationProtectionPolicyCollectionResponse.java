@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsInformationProtectionPolicy> value;
-    /**
-     * Instantiates a new windowsInformationProtectionPolicyCollectionResponse and sets the default values.
+     * Instantiates a new WindowsInformationProtectionPolicyCollectionResponse and sets the default values.
      */
     public WindowsInformationProtectionPolicyCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionPolicyCollectionResponse
+     * @return a WindowsInformationProtectionPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsInformationProtectionPolicy
+     * @return a java.util.List<WindowsInformationProtectionPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

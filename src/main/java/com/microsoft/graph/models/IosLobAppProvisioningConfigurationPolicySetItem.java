@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfigurationPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Instantiates a new iosLobAppProvisioningConfigurationPolicySetItem and sets the default values.
+     * Instantiates a new IosLobAppProvisioningConfigurationPolicySetItem and sets the default values.
      */
     public IosLobAppProvisioningConfigurationPolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItem extends PolicySetIt
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosLobAppProvisioningConfigurationPolicySetItem
+     * @return a IosLobAppProvisioningConfigurationPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static IosLobAppProvisioningConfigurationPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

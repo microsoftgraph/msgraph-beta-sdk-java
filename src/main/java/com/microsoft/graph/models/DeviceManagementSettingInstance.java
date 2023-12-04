@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingInstance extends Entity implements Parsable {
     /**
-     * The ID of the setting definition for this instance
-     */
-    private String definitionId;
-    /**
-     * JSON representation of the value
-     */
-    private String valueJson;
-    /**
-     * Instantiates a new deviceManagementSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementSettingInstance and sets the default values.
      */
     public DeviceManagementSettingInstance() {
         super();
@@ -28,7 +20,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingInstance
+     * @return a DeviceManagementSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,11 +41,11 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     }
     /**
      * Gets the definitionId property value. The ID of the setting definition for this instance
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefinitionId() {
-        return this.definitionId;
+        return this.backingStore.get("definitionId");
     }
     /**
      * The deserialization information for the current model
@@ -68,11 +60,11 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     }
     /**
      * Gets the valueJson property value. JSON representation of the value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueJson() {
-        return this.valueJson;
+        return this.backingStore.get("valueJson");
     }
     /**
      * Serializes information the current object
@@ -89,13 +81,13 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * @param value Value to set for the definitionId property.
      */
     public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.definitionId = value;
+        this.backingStore.set("definitionId", value);
     }
     /**
      * Sets the valueJson property value. JSON representation of the value
      * @param value Value to set for the valueJson property.
      */
     public void setValueJson(@jakarta.annotation.Nullable final String value) {
-        this.valueJson = value;
+        this.backingStore.set("valueJson", value);
     }
 }

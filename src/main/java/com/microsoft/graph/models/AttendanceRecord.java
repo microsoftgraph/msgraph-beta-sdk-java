@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendanceRecord extends Entity implements Parsable {
     /**
-     * List of time periods between joining and leaving a meeting.
-     */
-    private java.util.List<AttendanceInterval> attendanceIntervals;
-    /**
-     * Email address of the user associated with this attendance record.
-     */
-    private String emailAddress;
-    /**
-     * Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
-     */
-    private Identity identity;
-    /**
-     * Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
-     */
-    private String registrantId;
-    /**
-     * Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
-     */
-    private String role;
-    /**
-     * Total duration of the attendances in seconds.
-     */
-    private Integer totalAttendanceInSeconds;
-    /**
-     * Instantiates a new attendanceRecord and sets the default values.
+     * Instantiates a new AttendanceRecord and sets the default values.
      */
     public AttendanceRecord() {
         super();
@@ -41,7 +17,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendanceRecord
+     * @return a AttendanceRecord
      */
     @jakarta.annotation.Nonnull
     public static AttendanceRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +26,19 @@ public class AttendanceRecord extends Entity implements Parsable {
     }
     /**
      * Gets the attendanceIntervals property value. List of time periods between joining and leaving a meeting.
-     * @return a attendanceInterval
+     * @return a java.util.List<AttendanceInterval>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendanceInterval> getAttendanceIntervals() {
-        return this.attendanceIntervals;
+        return this.backingStore.get("attendanceIntervals");
     }
     /**
      * Gets the emailAddress property value. Email address of the user associated with this attendance record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +57,35 @@ public class AttendanceRecord extends Entity implements Parsable {
     }
     /**
      * Gets the identity property value. Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistrantId() {
-        return this.registrantId;
+        return this.backingStore.get("registrantId");
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
-        return this.role;
+        return this.backingStore.get("role");
     }
     /**
      * Gets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAttendanceInSeconds() {
-        return this.totalAttendanceInSeconds;
+        return this.backingStore.get("totalAttendanceInSeconds");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class AttendanceRecord extends Entity implements Parsable {
      * @param value Value to set for the attendanceIntervals property.
      */
     public void setAttendanceIntervals(@jakarta.annotation.Nullable final java.util.List<AttendanceInterval> value) {
-        this.attendanceIntervals = value;
+        this.backingStore.set("attendanceIntervals", value);
     }
     /**
      * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the identity property value. Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
      * @param value Value to set for the registrantId property.
      */
     public void setRegistrantId(@jakarta.annotation.Nullable final String value) {
-        this.registrantId = value;
+        this.backingStore.set("registrantId", value);
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
-        this.role = value;
+        this.backingStore.set("role", value);
     }
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
      * @param value Value to set for the totalAttendanceInSeconds property.
      */
     public void setTotalAttendanceInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.totalAttendanceInSeconds = value;
+        this.backingStore.set("totalAttendanceInSeconds", value);
     }
 }

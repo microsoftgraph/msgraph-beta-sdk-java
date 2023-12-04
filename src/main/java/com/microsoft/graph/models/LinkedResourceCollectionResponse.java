@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LinkedResourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<LinkedResource> value;
-    /**
-     * Instantiates a new linkedResourceCollectionResponse and sets the default values.
+     * Instantiates a new LinkedResourceCollectionResponse and sets the default values.
      */
     public LinkedResourceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class LinkedResourceCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a linkedResourceCollectionResponse
+     * @return a LinkedResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static LinkedResourceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class LinkedResourceCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a linkedResource
+     * @return a java.util.List<LinkedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LinkedResource> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class LinkedResourceCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<LinkedResource> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

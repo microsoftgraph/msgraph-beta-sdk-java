@@ -35,37 +35,35 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/resizeCloudPc", rawUrl);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size. This API is available in the following national cloud deployments.
      * @param body The request body
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc on 2023-07-24 and will be removed 2023-10-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body) {
-        return post(body, null);
+    public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body) {
+        post(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc on 2023-07-24 and will be removed 2023-10-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -77,7 +75,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -88,23 +86,16 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resizeCloudPcRequestBuilder
+     * @return a ResizeCloudPcRequestBuilder
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc on 2023-07-24 and will be removed 2023-10-30
      */

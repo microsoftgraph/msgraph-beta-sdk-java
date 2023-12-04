@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * The track IDs to enable for this app assignment.
-     */
-    private java.util.List<String> androidManagedStoreAppTrackIds;
-    /**
-     * Prioritization for automatic updates of Android Managed Store apps set on assignment.
-     */
-    private AndroidManagedStoreAutoUpdateMode autoUpdateMode;
-    /**
-     * Instantiates a new androidManagedStoreAppAssignmentSettings and sets the default values.
+     * Instantiates a new AndroidManagedStoreAppAssignmentSettings and sets the default values.
      */
     public AndroidManagedStoreAppAssignmentSettings() {
         super();
@@ -29,7 +21,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAppAssignmentSettings
+     * @return a AndroidManagedStoreAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +30,19 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     }
     /**
      * Gets the androidManagedStoreAppTrackIds property value. The track IDs to enable for this app assignment.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAndroidManagedStoreAppTrackIds() {
-        return this.androidManagedStoreAppTrackIds;
+        return this.backingStore.get("androidManagedStoreAppTrackIds");
     }
     /**
      * Gets the autoUpdateMode property value. Prioritization for automatic updates of Android Managed Store apps set on assignment.
-     * @return a androidManagedStoreAutoUpdateMode
+     * @return a AndroidManagedStoreAutoUpdateMode
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAutoUpdateMode getAutoUpdateMode() {
-        return this.autoUpdateMode;
+        return this.backingStore.get("autoUpdateMode");
     }
     /**
      * The deserialization information for the current model
@@ -60,7 +52,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("androidManagedStoreAppTrackIds", (n) -> { this.setAndroidManagedStoreAppTrackIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("autoUpdateMode", (n) -> { this.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode.class)); });
+        deserializerMap.put("autoUpdateMode", (n) -> { this.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode::forValue)); });
         return deserializerMap;
     }
     /**
@@ -78,13 +70,13 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * @param value Value to set for the androidManagedStoreAppTrackIds property.
      */
     public void setAndroidManagedStoreAppTrackIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.androidManagedStoreAppTrackIds = value;
+        this.backingStore.set("androidManagedStoreAppTrackIds", value);
     }
     /**
      * Sets the autoUpdateMode property value. Prioritization for automatic updates of Android Managed Store apps set on assignment.
      * @param value Value to set for the autoUpdateMode property.
      */
     public void setAutoUpdateMode(@jakarta.annotation.Nullable final AndroidManagedStoreAutoUpdateMode value) {
-        this.autoUpdateMode = value;
+        this.backingStore.set("autoUpdateMode", value);
     }
 }

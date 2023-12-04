@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IntegerRange implements AdditionalDataHolder, Parsable {
+public class IntegerRange implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The inclusive upper bound of the integer range.
-     */
-    private Long end;
-    /**
-     * The maximum property
-     */
-    private Long maximum;
-    /**
-     * The minimum property
-     */
-    private Long minimum;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The inclusive lower bound of the integer range.
-     */
-    private Long start;
-    /**
-     * Instantiates a new integerRange and sets the default values.
+     * Instantiates a new IntegerRange and sets the default values.
      */
     public IntegerRange() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a integerRange
+     * @return a IntegerRange
      */
     @jakarta.annotation.Nonnull
     public static IntegerRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +35,33 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
         return new IntegerRange();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the end property value. The inclusive upper bound of the integer range.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getEnd() {
-        return this.end;
+        return this.backingStore.get("end");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +79,35 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maximum property value. The maximum property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaximum() {
-        return this.maximum;
+        return this.backingStore.get("maximum");
     }
     /**
      * Gets the minimum property value. The minimum property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMinimum() {
-        return this.minimum;
+        return this.backingStore.get("minimum");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the start property value. The inclusive lower bound of the integer range.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getStart() {
-        return this.start;
+        return this.backingStore.get("start");
     }
     /**
      * Serializes information the current object
@@ -125,45 +123,53 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the end property value. The inclusive upper bound of the integer range.
      * @param value Value to set for the end property.
      */
     public void setEnd(@jakarta.annotation.Nullable final Long value) {
-        this.end = value;
+        this.backingStore.set("end", value);
     }
     /**
      * Sets the maximum property value. The maximum property
      * @param value Value to set for the maximum property.
      */
     public void setMaximum(@jakarta.annotation.Nullable final Long value) {
-        this.maximum = value;
+        this.backingStore.set("maximum", value);
     }
     /**
      * Sets the minimum property value. The minimum property
      * @param value Value to set for the minimum property.
      */
     public void setMinimum(@jakarta.annotation.Nullable final Long value) {
-        this.minimum = value;
+        this.backingStore.set("minimum", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the start property value. The inclusive lower bound of the integer range.
      * @param value Value to set for the start property.
      */
     public void setStart(@jakarta.annotation.Nullable final Long value) {
-        this.start = value;
+        this.backingStore.set("start", value);
     }
 }

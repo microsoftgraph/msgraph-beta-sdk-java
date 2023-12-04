@@ -11,15 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LifecycleManagementSettings extends Entity implements Parsable {
     /**
-     * The emailSettings property
-     */
-    private EmailSettings emailSettings;
-    /**
-     * The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
-     */
-    private Integer workflowScheduleIntervalInHours;
-    /**
-     * Instantiates a new lifecycleManagementSettings and sets the default values.
+     * Instantiates a new LifecycleManagementSettings and sets the default values.
      */
     public LifecycleManagementSettings() {
         super();
@@ -27,7 +19,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a lifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      */
     @jakarta.annotation.Nonnull
     public static LifecycleManagementSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,11 +28,11 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     }
     /**
      * Gets the emailSettings property value. The emailSettings property
-     * @return a emailSettings
+     * @return a EmailSettings
      */
     @jakarta.annotation.Nullable
     public EmailSettings getEmailSettings() {
-        return this.emailSettings;
+        return this.backingStore.get("emailSettings");
     }
     /**
      * The deserialization information for the current model
@@ -55,11 +47,11 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     }
     /**
      * Gets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkflowScheduleIntervalInHours() {
-        return this.workflowScheduleIntervalInHours;
+        return this.backingStore.get("workflowScheduleIntervalInHours");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the emailSettings property.
      */
     public void setEmailSettings(@jakarta.annotation.Nullable final EmailSettings value) {
-        this.emailSettings = value;
+        this.backingStore.set("emailSettings", value);
     }
     /**
      * Sets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
      * @param value Value to set for the workflowScheduleIntervalInHours property.
      */
     public void setWorkflowScheduleIntervalInHours(@jakarta.annotation.Nullable final Integer value) {
-        this.workflowScheduleIntervalInHours = value;
+        this.backingStore.set("workflowScheduleIntervalInHours", value);
     }
 }

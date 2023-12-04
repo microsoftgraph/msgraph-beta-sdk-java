@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsable {
+public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Specifies whether compliant devices from external Azure AD organizations are trusted.
-     */
-    private Boolean isCompliantDeviceAccepted;
-    /**
-     * Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
-     */
-    private Boolean isHybridAzureADJoinedDeviceAccepted;
-    /**
-     * Specifies whether MFA from external Azure AD organizations is trusted.
-     */
-    private Boolean isMfaAccepted;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyInboundTrust and sets the default values.
      */
     public CrossTenantAccessPolicyInboundTrust() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessPolicyInboundTrust
+     * @return a CrossTenantAccessPolicyInboundTrust
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyInboundTrust createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,25 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
         return new CrossTenantAccessPolicyInboundTrust();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,36 +69,36 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.
-     * @return a boolean
+     * Gets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Microsoft Entra organizations are trusted.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliantDeviceAccepted() {
-        return this.isCompliantDeviceAccepted;
+        return this.backingStore.get("isCompliantDeviceAccepted");
     }
     /**
-     * Gets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
-     * @return a boolean
+     * Gets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether Microsoft Entra hybrid joined devices from external Microsoft Entra organizations are trusted.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureADJoinedDeviceAccepted() {
-        return this.isHybridAzureADJoinedDeviceAccepted;
+        return this.backingStore.get("isHybridAzureADJoinedDeviceAccepted");
     }
     /**
-     * Gets the isMfaAccepted property value. Specifies whether MFA from external Azure AD organizations is trusted.
-     * @return a boolean
+     * Gets the isMfaAccepted property value. Specifies whether MFA from external Microsoft Entra organizations is trusted.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaAccepted() {
-        return this.isMfaAccepted;
+        return this.backingStore.get("isMfaAccepted");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Microsoft Entra organizations are trusted.
      * @param value Value to set for the isCompliantDeviceAccepted property.
      */
     public void setIsCompliantDeviceAccepted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCompliantDeviceAccepted = value;
+        this.backingStore.set("isCompliantDeviceAccepted", value);
     }
     /**
-     * Sets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
+     * Sets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether Microsoft Entra hybrid joined devices from external Microsoft Entra organizations are trusted.
      * @param value Value to set for the isHybridAzureADJoinedDeviceAccepted property.
      */
     public void setIsHybridAzureADJoinedDeviceAccepted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isHybridAzureADJoinedDeviceAccepted = value;
+        this.backingStore.set("isHybridAzureADJoinedDeviceAccepted", value);
     }
     /**
-     * Sets the isMfaAccepted property value. Specifies whether MFA from external Azure AD organizations is trusted.
+     * Sets the isMfaAccepted property value. Specifies whether MFA from external Microsoft Entra organizations is trusted.
      * @param value Value to set for the isMfaAccepted property.
      */
     public void setIsMfaAccepted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMfaAccepted = value;
+        this.backingStore.set("isMfaAccepted", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

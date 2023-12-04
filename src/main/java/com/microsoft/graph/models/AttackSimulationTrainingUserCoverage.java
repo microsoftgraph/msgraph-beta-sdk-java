@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Parsable {
+public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * User in an attack simulation and training campaign.
-     */
-    private AttackSimulationUser attackSimulationUser;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * List of assigned trainings and their statuses for the user.
-     */
-    private java.util.List<UserTrainingStatusInfo> userTrainings;
-    /**
-     * Instantiates a new attackSimulationTrainingUserCoverage and sets the default values.
+     * Instantiates a new AttackSimulationTrainingUserCoverage and sets the default values.
      */
     public AttackSimulationTrainingUserCoverage() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationTrainingUserCoverage
+     * @return a AttackSimulationTrainingUserCoverage
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationTrainingUserCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +35,33 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
         return new AttackSimulationTrainingUserCoverage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
-        return this.attackSimulationUser;
+        return this.backingStore.get("attackSimulationUser");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +77,19 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the userTrainings property value. List of assigned trainings and their statuses for the user.
-     * @return a userTrainingStatusInfo
+     * @return a java.util.List<UserTrainingStatusInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserTrainingStatusInfo> getUserTrainings() {
-        return this.userTrainings;
+        return this.backingStore.get("userTrainings");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      * @param value Value to set for the attackSimulationUser property.
      */
     public void setAttackSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
-        this.attackSimulationUser = value;
+        this.backingStore.set("attackSimulationUser", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the userTrainings property value. List of assigned trainings and their statuses for the user.
      * @param value Value to set for the userTrainings property.
      */
     public void setUserTrainings(@jakarta.annotation.Nullable final java.util.List<UserTrainingStatusInfo> value) {
-        this.userTrainings = value;
+        this.backingStore.set("userTrainings", value);
     }
 }

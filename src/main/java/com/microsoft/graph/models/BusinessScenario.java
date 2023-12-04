@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessScenario extends Entity implements Parsable {
     /**
-     * The identity of the user who created the scenario.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The date and time when the scenario was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Display name of the scenario.
-     */
-    private String displayName;
-    /**
-     * The identity of the user who last modified the scenario.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time when the scenario was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Identifiers of applications that are authorized to work with this scenario.
-     */
-    private java.util.List<String> ownerAppIds;
-    /**
-     * Planner content related to the scenario.
-     */
-    private BusinessScenarioPlanner planner;
-    /**
-     * Unique name of the scenario. To avoid conflicts, the recommended value for the unique name is a reverse domain name format, owned by the author of the scenario. For example, a scenario authored by Contoso.com would have a unique name that starts with com.contoso.
-     */
-    private String uniqueName;
-    /**
-     * Instantiates a new businessScenario and sets the default values.
+     * Instantiates a new BusinessScenario and sets the default values.
      */
     public BusinessScenario() {
         super();
@@ -50,7 +18,7 @@ public class BusinessScenario extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessScenario
+     * @return a BusinessScenario
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenario createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +27,11 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The identity of the user who created the scenario.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the scenario was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -71,15 +39,15 @@ public class BusinessScenario extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Display name of the scenario.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -100,11 +68,11 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the user who last modified the scenario.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the scenario was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -112,31 +80,31 @@ public class BusinessScenario extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the ownerAppIds property value. Identifiers of applications that are authorized to work with this scenario.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOwnerAppIds() {
-        return this.ownerAppIds;
+        return this.backingStore.get("ownerAppIds");
     }
     /**
      * Gets the planner property value. Planner content related to the scenario.
-     * @return a businessScenarioPlanner
+     * @return a BusinessScenarioPlanner
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioPlanner getPlanner() {
-        return this.planner;
+        return this.backingStore.get("planner");
     }
     /**
      * Gets the uniqueName property value. Unique name of the scenario. To avoid conflicts, the recommended value for the unique name is a reverse domain name format, owned by the author of the scenario. For example, a scenario authored by Contoso.com would have a unique name that starts with com.contoso.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueName() {
-        return this.uniqueName;
+        return this.backingStore.get("uniqueName");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class BusinessScenario extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the scenario was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Display name of the scenario.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. The identity of the user who last modified the scenario.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the scenario was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the ownerAppIds property value. Identifiers of applications that are authorized to work with this scenario.
      * @param value Value to set for the ownerAppIds property.
      */
     public void setOwnerAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.ownerAppIds = value;
+        this.backingStore.set("ownerAppIds", value);
     }
     /**
      * Sets the planner property value. Planner content related to the scenario.
      * @param value Value to set for the planner property.
      */
     public void setPlanner(@jakarta.annotation.Nullable final BusinessScenarioPlanner value) {
-        this.planner = value;
+        this.backingStore.set("planner", value);
     }
     /**
      * Sets the uniqueName property value. Unique name of the scenario. To avoid conflicts, the recommended value for the unique name is a reverse domain name format, owned by the author of the scenario. For example, a scenario authored by Contoso.com would have a unique name that starts with com.contoso.
      * @param value Value to set for the uniqueName property.
      */
     public void setUniqueName(@jakarta.annotation.Nullable final String value) {
-        this.uniqueName = value;
+        this.backingStore.set("uniqueName", value);
     }
 }

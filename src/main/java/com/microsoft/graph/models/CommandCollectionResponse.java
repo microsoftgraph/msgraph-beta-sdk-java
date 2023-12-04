@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommandCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Command> value;
-    /**
-     * Instantiates a new commandCollectionResponse and sets the default values.
+     * Instantiates a new CommandCollectionResponse and sets the default values.
      */
     public CommandCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CommandCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a commandCollectionResponse
+     * @return a CommandCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CommandCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CommandCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a command
+     * @return a java.util.List<Command>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Command> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CommandCollectionResponse extends BaseCollectionPaginationCountResp
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Command> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

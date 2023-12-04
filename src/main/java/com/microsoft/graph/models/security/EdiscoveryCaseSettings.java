@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
-     * The OCR (Optical Character Recognition) settings for the case.
-     */
-    private OcrSettings ocr;
-    /**
-     * The redundancy (near duplicate and email threading) detection settings for the case.
-     */
-    private RedundancyDetectionSettings redundancyDetection;
-    /**
-     * The Topic Modeling (Themes) settings for the case.
-     */
-    private TopicModelingSettings topicModeling;
-    /**
-     * Instantiates a new ediscoveryCaseSettings and sets the default values.
+     * Instantiates a new EdiscoveryCaseSettings and sets the default values.
      */
     public EdiscoveryCaseSettings() {
         super();
@@ -30,7 +18,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryCaseSettings
+     * @return a EdiscoveryCaseSettings
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryCaseSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
-     * @return a ocrSettings
+     * @return a OcrSettings
      */
     @jakarta.annotation.Nullable
     public OcrSettings getOcr() {
-        return this.ocr;
+        return this.backingStore.get("ocr");
     }
     /**
      * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
-     * @return a redundancyDetectionSettings
+     * @return a RedundancyDetectionSettings
      */
     @jakarta.annotation.Nullable
     public RedundancyDetectionSettings getRedundancyDetection() {
-        return this.redundancyDetection;
+        return this.backingStore.get("redundancyDetection");
     }
     /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
-     * @return a topicModelingSettings
+     * @return a TopicModelingSettings
      */
     @jakarta.annotation.Nullable
     public TopicModelingSettings getTopicModeling() {
-        return this.topicModeling;
+        return this.backingStore.get("topicModeling");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      * @param value Value to set for the ocr property.
      */
     public void setOcr(@jakarta.annotation.Nullable final OcrSettings value) {
-        this.ocr = value;
+        this.backingStore.set("ocr", value);
     }
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      * @param value Value to set for the redundancyDetection property.
      */
     public void setRedundancyDetection(@jakarta.annotation.Nullable final RedundancyDetectionSettings value) {
-        this.redundancyDetection = value;
+        this.backingStore.set("redundancyDetection", value);
     }
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @param value Value to set for the topicModeling property.
      */
     public void setTopicModeling(@jakarta.annotation.Nullable final TopicModelingSettings value) {
-        this.topicModeling = value;
+        this.backingStore.set("topicModeling", value);
     }
 }

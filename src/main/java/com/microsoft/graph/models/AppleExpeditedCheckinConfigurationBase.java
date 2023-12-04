@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Gets or sets whether to enable expedited device check-ins.
-     */
-    private Boolean enableExpeditedCheckin;
-    /**
-     * Instantiates a new appleExpeditedCheckinConfigurationBase and sets the default values.
+     * Instantiates a new AppleExpeditedCheckinConfigurationBase and sets the default values.
      */
     public AppleExpeditedCheckinConfigurationBase() {
         super();
@@ -25,7 +21,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleExpeditedCheckinConfigurationBase
+     * @return a AppleExpeditedCheckinConfigurationBase
      */
     @jakarta.annotation.Nonnull
     public static AppleExpeditedCheckinConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     }
     /**
      * Gets the enableExpeditedCheckin property value. Gets or sets whether to enable expedited device check-ins.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableExpeditedCheckin() {
-        return this.enableExpeditedCheckin;
+        return this.backingStore.get("enableExpeditedCheckin");
     }
     /**
      * The deserialization information for the current model
@@ -71,6 +67,6 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * @param value Value to set for the enableExpeditedCheckin property.
      */
     public void setEnableExpeditedCheckin(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableExpeditedCheckin = value;
+        this.backingStore.set("enableExpeditedCheckin", value);
     }
 }

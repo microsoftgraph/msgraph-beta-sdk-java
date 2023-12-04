@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Headers implements AdditionalDataHolder, Parsable {
+public class Headers implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents the origin or source from which the request is being made.
-     */
-    private String origin;
-    /**
-     * Represents the referring URL or the URL of the web page that the current request originates from.
-     */
-    private String referrer;
-    /**
-     * Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
-     */
-    private String xForwardedFor;
-    /**
-     * Instantiates a new headers and sets the default values.
+     * Instantiates a new Headers and sets the default values.
      */
     public Headers() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a headers
+     * @return a Headers
      */
     @jakarta.annotation.Nonnull
     public static Headers createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,25 @@ public class Headers implements AdditionalDataHolder, Parsable {
         return new Headers();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +70,35 @@ public class Headers implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the origin property value. Represents the origin or source from which the request is being made.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrigin() {
-        return this.origin;
+        return this.backingStore.get("origin");
     }
     /**
      * Gets the referrer property value. Represents the referring URL or the URL of the web page that the current request originates from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferrer() {
-        return this.referrer;
+        return this.backingStore.get("referrer");
     }
     /**
      * Gets the xForwardedFor property value. Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getXForwardedFor() {
-        return this.xForwardedFor;
+        return this.backingStore.get("xForwardedFor");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class Headers implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the origin property value. Represents the origin or source from which the request is being made.
      * @param value Value to set for the origin property.
      */
     public void setOrigin(@jakarta.annotation.Nullable final String value) {
-        this.origin = value;
+        this.backingStore.set("origin", value);
     }
     /**
      * Sets the referrer property value. Represents the referring URL or the URL of the web page that the current request originates from.
      * @param value Value to set for the referrer property.
      */
     public void setReferrer(@jakarta.annotation.Nullable final String value) {
-        this.referrer = value;
+        this.backingStore.set("referrer", value);
     }
     /**
      * Sets the xForwardedFor property value. Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
      * @param value Value to set for the xForwardedFor property.
      */
     public void setXForwardedFor(@jakarta.annotation.Nullable final String value) {
-        this.xForwardedFor = value;
+        this.backingStore.set("xForwardedFor", value);
     }
 }

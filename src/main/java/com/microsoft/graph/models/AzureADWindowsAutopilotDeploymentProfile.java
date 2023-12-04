@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureADWindowsAutopilotDeploymentProfile extends WindowsAutopilotDeploymentProfile implements Parsable {
     /**
-     * Instantiates a new azureADWindowsAutopilotDeploymentProfile and sets the default values.
+     * Instantiates a new AzureADWindowsAutopilotDeploymentProfile and sets the default values.
      */
     public AzureADWindowsAutopilotDeploymentProfile() {
         super();
@@ -21,7 +21,7 @@ public class AzureADWindowsAutopilotDeploymentProfile extends WindowsAutopilotDe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureADWindowsAutopilotDeploymentProfile
+     * @return a AzureADWindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public static AzureADWindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

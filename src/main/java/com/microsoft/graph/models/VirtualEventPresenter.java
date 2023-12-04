@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventPresenter extends Entity implements Parsable {
     /**
-     * Email address of the presenter.
-     */
-    private String email;
-    /**
-     * Identity information of the presenter.
-     */
-    private CommunicationsUserIdentity identity;
-    /**
-     * Other detail information of the presenter.
-     */
-    private VirtualEventPresenterDetails presenterDetails;
-    /**
-     * Instantiates a new virtualEventPresenter and sets the default values.
+     * Instantiates a new VirtualEventPresenter and sets the default values.
      */
     public VirtualEventPresenter() {
         super();
@@ -29,7 +17,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventPresenter
+     * @return a VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventPresenter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. Email address of the presenter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -54,23 +42,41 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("presenterDetails", (n) -> { this.setPresenterDetails(n.getObjectValue(VirtualEventPresenterDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("profilePhoto", (n) -> { this.setProfilePhoto(n.getByteArrayValue()); });
+        deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the identity property value. Identity information of the presenter.
-     * @return a communicationsUserIdentity
+     * @return a CommunicationsUserIdentity
      */
     @jakarta.annotation.Nullable
     public CommunicationsUserIdentity getIdentity() {
-        return this.identity;
+        return this.backingStore.get("identity");
     }
     /**
      * Gets the presenterDetails property value. Other detail information of the presenter.
-     * @return a virtualEventPresenterDetails
+     * @return a VirtualEventPresenterDetails
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenterDetails getPresenterDetails() {
-        return this.presenterDetails;
+        return this.backingStore.get("presenterDetails");
+    }
+    /**
+     * Gets the profilePhoto property value. The profilePhoto property
+     * @return a byte[]
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getProfilePhoto() {
+        return this.backingStore.get("profilePhoto");
+    }
+    /**
+     * Gets the sessions property value. The sessions property
+     * @return a java.util.List<VirtualEventSession>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<VirtualEventSession> getSessions() {
+        return this.backingStore.get("sessions");
     }
     /**
      * Serializes information the current object
@@ -82,26 +88,42 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeObjectValue("presenterDetails", this.getPresenterDetails());
+        writer.writeByteArrayValue("profilePhoto", this.getProfilePhoto());
+        writer.writeCollectionOfObjectValues("sessions", this.getSessions());
     }
     /**
      * Sets the email property value. Email address of the presenter.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the identity property value. Identity information of the presenter.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final CommunicationsUserIdentity value) {
-        this.identity = value;
+        this.backingStore.set("identity", value);
     }
     /**
      * Sets the presenterDetails property value. Other detail information of the presenter.
      * @param value Value to set for the presenterDetails property.
      */
     public void setPresenterDetails(@jakarta.annotation.Nullable final VirtualEventPresenterDetails value) {
-        this.presenterDetails = value;
+        this.backingStore.set("presenterDetails", value);
+    }
+    /**
+     * Sets the profilePhoto property value. The profilePhoto property
+     * @param value Value to set for the profilePhoto property.
+     */
+    public void setProfilePhoto(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("profilePhoto", value);
+    }
+    /**
+     * Sets the sessions property value. The sessions property
+     * @param value Value to set for the sessions property.
+     */
+    public void setSessions(@jakarta.annotation.Nullable final java.util.List<VirtualEventSession> value) {
+        this.backingStore.set("sessions", value);
     }
 }
