@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
-     * File name associated with the Value property (.xml).
-     */
-    private String fileName;
-    /**
-     * Value. (UTF8 encoded byte array)
-     */
-    private byte[] value;
-    /**
-     * Instantiates a new omaSettingStringXml and sets the default values.
+     * Instantiates a new OmaSettingStringXml and sets the default values.
      */
     public OmaSettingStringXml() {
         super();
@@ -29,7 +21,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSettingStringXml
+     * @return a OmaSettingStringXml
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingStringXml createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     }
     /**
      * Gets the fileName property value. File name associated with the Value property (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.backingStore.get("fileName");
     }
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.backingStore.set("fileName", value);
     }
     /**
      * Sets the value property value. Value. (UTF8 encoded byte array)
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final byte[] value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

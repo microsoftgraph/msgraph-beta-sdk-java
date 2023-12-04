@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AlterationResponse implements AdditionalDataHolder, Parsable {
+public class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Defines the original user query string.
-     */
-    private String originalQueryString;
-    /**
-     * Defines the details of alteration information for the spelling correction.
-     */
-    private SearchAlteration queryAlteration;
-    /**
-     * Defines the type of the spelling correction. Possible values are suggestion, modification.
-     */
-    private SearchAlterationType queryAlterationType;
-    /**
-     * Instantiates a new alterationResponse and sets the default values.
+     * Instantiates a new AlterationResponse and sets the default values.
      */
     public AlterationResponse() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alterationResponse
+     * @return a AlterationResponse
      */
     @jakarta.annotation.Nonnull
     public static AlterationResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,25 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         return new AlterationResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,40 +65,40 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("originalQueryString", (n) -> { this.setOriginalQueryString(n.getStringValue()); });
         deserializerMap.put("queryAlteration", (n) -> { this.setQueryAlteration(n.getObjectValue(SearchAlteration::createFromDiscriminatorValue)); });
-        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType.class)); });
+        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the originalQueryString property value. Defines the original user query string.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginalQueryString() {
-        return this.originalQueryString;
+        return this.backingStore.get("originalQueryString");
     }
     /**
      * Gets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
-     * @return a searchAlteration
+     * @return a SearchAlteration
      */
     @jakarta.annotation.Nullable
     public SearchAlteration getQueryAlteration() {
-        return this.queryAlteration;
+        return this.backingStore.get("queryAlteration");
     }
     /**
      * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
-     * @return a searchAlterationType
+     * @return a SearchAlterationType
      */
     @jakarta.annotation.Nullable
     public SearchAlterationType getQueryAlterationType() {
-        return this.queryAlterationType;
+        return this.backingStore.get("queryAlterationType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the originalQueryString property value. Defines the original user query string.
      * @param value Value to set for the originalQueryString property.
      */
     public void setOriginalQueryString(@jakarta.annotation.Nullable final String value) {
-        this.originalQueryString = value;
+        this.backingStore.set("originalQueryString", value);
     }
     /**
      * Sets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
      * @param value Value to set for the queryAlteration property.
      */
     public void setQueryAlteration(@jakarta.annotation.Nullable final SearchAlteration value) {
-        this.queryAlteration = value;
+        this.backingStore.set("queryAlteration", value);
     }
     /**
      * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
      * @param value Value to set for the queryAlterationType property.
      */
     public void setQueryAlterationType(@jakarta.annotation.Nullable final SearchAlterationType value) {
-        this.queryAlterationType = value;
+        this.backingStore.set("queryAlterationType", value);
     }
 }

@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PlannerFieldRules implements AdditionalDataHolder, Parsable {
+public class PlannerFieldRules implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The default rules that apply if no override matches to the current data.
-     */
-    private java.util.List<String> defaultRules;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Overrides that specify different rules for specific data associated with the field.
-     */
-    private java.util.List<PlannerRuleOverride> overrides;
-    /**
-     * Instantiates a new plannerFieldRules and sets the default values.
+     * Instantiates a new PlannerFieldRules and sets the default values.
      */
     public PlannerFieldRules() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerFieldRules
+     * @return a PlannerFieldRules
      */
     @jakarta.annotation.Nonnull
     public static PlannerFieldRules createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +35,33 @@ public class PlannerFieldRules implements AdditionalDataHolder, Parsable {
         return new PlannerFieldRules();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the defaultRules property value. The default rules that apply if no override matches to the current data.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefaultRules() {
-        return this.defaultRules;
+        return this.backingStore.get("defaultRules");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +77,19 @@ public class PlannerFieldRules implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the overrides property value. Overrides that specify different rules for specific data associated with the field.
-     * @return a plannerRuleOverride
+     * @return a java.util.List<PlannerRuleOverride>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerRuleOverride> getOverrides() {
-        return this.overrides;
+        return this.backingStore.get("overrides");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class PlannerFieldRules implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the defaultRules property value. The default rules that apply if no override matches to the current data.
      * @param value Value to set for the defaultRules property.
      */
     public void setDefaultRules(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.defaultRules = value;
+        this.backingStore.set("defaultRules", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the overrides property value. Overrides that specify different rules for specific data associated with the field.
      * @param value Value to set for the overrides property.
      */
     public void setOverrides(@jakarta.annotation.Nullable final java.util.List<PlannerRuleOverride> value) {
-        this.overrides = value;
+        this.backingStore.set("overrides", value);
     }
 }

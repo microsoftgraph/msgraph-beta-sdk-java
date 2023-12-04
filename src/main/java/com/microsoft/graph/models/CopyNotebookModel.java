@@ -4,84 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
+public class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The createdBy property
-     */
-    private String createdBy;
-    /**
-     * The createdByIdentity property
-     */
-    private IdentitySet createdByIdentity;
-    /**
-     * The createdTime property
-     */
-    private OffsetDateTime createdTime;
-    /**
-     * The id property
-     */
-    private String id;
-    /**
-     * The isDefault property
-     */
-    private Boolean isDefault;
-    /**
-     * The isShared property
-     */
-    private Boolean isShared;
-    /**
-     * The lastModifiedBy property
-     */
-    private String lastModifiedBy;
-    /**
-     * The lastModifiedByIdentity property
-     */
-    private IdentitySet lastModifiedByIdentity;
-    /**
-     * The lastModifiedTime property
-     */
-    private OffsetDateTime lastModifiedTime;
-    /**
-     * The links property
-     */
-    private NotebookLinks links;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The sectionGroupsUrl property
-     */
-    private String sectionGroupsUrl;
-    /**
-     * The sectionsUrl property
-     */
-    private String sectionsUrl;
-    /**
-     * The self property
-     */
-    private String self;
-    /**
-     * The userRole property
-     */
-    private OnenoteUserRole userRole;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.
      */
     public CopyNotebookModel() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -95,28 +36,41 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         return new CopyNotebookModel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdByIdentity property value. The createdByIdentity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedByIdentity() {
-        return this.createdByIdentity;
+        return this.backingStore.get("createdByIdentity");
     }
     /**
      * Gets the createdTime property value. The createdTime property
@@ -124,7 +78,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedTime() {
-        return this.createdTime;
+        return this.backingStore.get("createdTime");
     }
     /**
      * The deserialization information for the current model
@@ -148,48 +102,48 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
         deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
         deserializerMap.put("self", (n) -> { this.setSelf(n.getStringValue()); });
-        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
+        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the isDefault property value. The isDefault property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.backingStore.get("isDefault");
     }
     /**
      * Gets the isShared property value. The isShared property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
-        return this.isShared;
+        return this.backingStore.get("isShared");
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedByIdentity() {
-        return this.lastModifiedByIdentity;
+        return this.backingStore.get("lastModifiedByIdentity");
     }
     /**
      * Gets the lastModifiedTime property value. The lastModifiedTime property
@@ -197,63 +151,63 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedTime() {
-        return this.lastModifiedTime;
+        return this.backingStore.get("lastModifiedTime");
     }
     /**
      * Gets the links property value. The links property
-     * @return a notebookLinks
+     * @return a NotebookLinks
      */
     @jakarta.annotation.Nullable
     public NotebookLinks getLinks() {
-        return this.links;
+        return this.backingStore.get("links");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
-        return this.sectionGroupsUrl;
+        return this.backingStore.get("sectionGroupsUrl");
     }
     /**
      * Gets the sectionsUrl property value. The sectionsUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionsUrl() {
-        return this.sectionsUrl;
+        return this.backingStore.get("sectionsUrl");
     }
     /**
      * Gets the self property value. The self property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSelf() {
-        return this.self;
+        return this.backingStore.get("self");
     }
     /**
      * Gets the userRole property value. The userRole property
-     * @return a onenoteUserRole
+     * @return a OnenoteUserRole
      */
     @jakarta.annotation.Nullable
     public OnenoteUserRole getUserRole() {
-        return this.userRole;
+        return this.backingStore.get("userRole");
     }
     /**
      * Serializes information the current object
@@ -280,122 +234,130 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdByIdentity property value. The createdByIdentity property
      * @param value Value to set for the createdByIdentity property.
      */
     public void setCreatedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdByIdentity = value;
+        this.backingStore.set("createdByIdentity", value);
     }
     /**
      * Sets the createdTime property value. The createdTime property
      * @param value Value to set for the createdTime property.
      */
     public void setCreatedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdTime = value;
+        this.backingStore.set("createdTime", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the isDefault property value. The isDefault property
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.backingStore.set("isDefault", value);
     }
     /**
      * Sets the isShared property value. The isShared property
      * @param value Value to set for the isShared property.
      */
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
-        this.isShared = value;
+        this.backingStore.set("isShared", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @param value Value to set for the lastModifiedByIdentity property.
      */
     public void setLastModifiedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedByIdentity = value;
+        this.backingStore.set("lastModifiedByIdentity", value);
     }
     /**
      * Sets the lastModifiedTime property value. The lastModifiedTime property
      * @param value Value to set for the lastModifiedTime property.
      */
     public void setLastModifiedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedTime = value;
+        this.backingStore.set("lastModifiedTime", value);
     }
     /**
      * Sets the links property value. The links property
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {
-        this.links = value;
+        this.backingStore.set("links", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @param value Value to set for the sectionGroupsUrl property.
      */
     public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionGroupsUrl = value;
+        this.backingStore.set("sectionGroupsUrl", value);
     }
     /**
      * Sets the sectionsUrl property value. The sectionsUrl property
      * @param value Value to set for the sectionsUrl property.
      */
     public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionsUrl = value;
+        this.backingStore.set("sectionsUrl", value);
     }
     /**
      * Sets the self property value. The self property
      * @param value Value to set for the self property.
      */
     public void setSelf(@jakarta.annotation.Nullable final String value) {
-        this.self = value;
+        this.backingStore.set("self", value);
     }
     /**
      * Sets the userRole property value. The userRole property
      * @param value Value to set for the userRole property.
      */
     public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
-        this.userRole = value;
+        this.backingStore.set("userRole", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest> value;
-    /**
-     * Instantiates a new privilegedAccessGroupAssignmentScheduleRequestCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse and sets the default values.
      */
     public PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessGroupAssignmentScheduleRequestCollectionResponse
+     * @return a PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedAccessGroupAssignmentScheduleRequest
+     * @return a java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse ex
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

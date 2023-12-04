@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DispositionReviewStage extends Entity implements Parsable {
     /**
-     * Name representing each stage within a collection.
-     */
-    private String name;
-    /**
-     * A collection of reviewers at each stage.
-     */
-    private java.util.List<String> reviewersEmailAddresses;
-    /**
-     * The sequence number for each stage of the disposition review.
-     */
-    private Integer stageNumber;
-    /**
-     * Instantiates a new dispositionReviewStage and sets the default values.
+     * Instantiates a new DispositionReviewStage and sets the default values.
      */
     public DispositionReviewStage() {
         super();
@@ -30,7 +18,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dispositionReviewStage
+     * @return a DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public static DispositionReviewStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name representing each stage within a collection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the reviewersEmailAddresses property value. A collection of reviewers at each stage.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReviewersEmailAddresses() {
-        return this.reviewersEmailAddresses;
+        return this.backingStore.get("reviewersEmailAddresses");
     }
     /**
      * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getStageNumber() {
-        return this.stageNumber;
+        return this.backingStore.get("stageNumber");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the reviewersEmailAddresses property value. A collection of reviewers at each stage.
      * @param value Value to set for the reviewersEmailAddresses property.
      */
     public void setReviewersEmailAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.reviewersEmailAddresses = value;
+        this.backingStore.set("reviewersEmailAddresses", value);
     }
     /**
      * Sets the stageNumber property value. The sequence number for each stage of the disposition review.
      * @param value Value to set for the stageNumber property.
      */
     public void setStageNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.stageNumber = value;
+        this.backingStore.set("stageNumber", value);
     }
 }

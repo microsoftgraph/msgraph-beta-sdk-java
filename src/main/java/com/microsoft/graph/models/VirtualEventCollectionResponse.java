@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<VirtualEvent> value;
-    /**
-     * Instantiates a new virtualEventCollectionResponse and sets the default values.
+     * Instantiates a new VirtualEventCollectionResponse and sets the default values.
      */
     public VirtualEventCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class VirtualEventCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventCollectionResponse
+     * @return a VirtualEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class VirtualEventCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a virtualEvent
+     * @return a java.util.List<VirtualEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEvent> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class VirtualEventCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<VirtualEvent> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

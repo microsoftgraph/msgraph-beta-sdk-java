@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ImageInfo implements AdditionalDataHolder, Parsable {
+public class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
+     * Stores model information.
      */
-    private Boolean addImageQuery;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Optional; alt-text accessible content for the image
-     */
-    private String alternateText;
-    /**
-     * The alternativeText property
-     */
-    private String alternativeText;
-    /**
-     * Optional; URI that points to an icon which represents the application used to generate the activity
-     */
-    private String iconUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new imageInfo and sets the default values.
+     * Instantiates a new ImageInfo and sets the default values.
      */
     public ImageInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a imageInfo
+     * @return a ImageInfo
      */
     @jakarta.annotation.Nonnull
     public static ImageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,35 +36,48 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAddImageQuery() {
-        return this.addImageQuery;
+        return this.backingStore.get("addImageQuery");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alternateText property value. Optional; alt-text accessible content for the image
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateText() {
-        return this.alternateText;
+        return this.backingStore.get("alternateText");
     }
     /**
      * Gets the alternativeText property value. The alternativeText property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternativeText() {
-        return this.alternativeText;
+        return this.backingStore.get("alternativeText");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -97,19 +95,19 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIconUrl() {
-        return this.iconUrl;
+        return this.backingStore.get("iconUrl");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -129,41 +127,49 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the addImageQuery property.
      */
     public void setAddImageQuery(@jakarta.annotation.Nullable final Boolean value) {
-        this.addImageQuery = value;
+        this.backingStore.set("addImageQuery", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alternateText property value. Optional; alt-text accessible content for the image
      * @param value Value to set for the alternateText property.
      */
     public void setAlternateText(@jakarta.annotation.Nullable final String value) {
-        this.alternateText = value;
+        this.backingStore.set("alternateText", value);
     }
     /**
      * Sets the alternativeText property value. The alternativeText property
      * @param value Value to set for the alternativeText property.
      */
     public void setAlternativeText(@jakarta.annotation.Nullable final String value) {
-        this.alternativeText = value;
+        this.backingStore.set("alternativeText", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
      * @param value Value to set for the iconUrl property.
      */
     public void setIconUrl(@jakarta.annotation.Nullable final String value) {
-        this.iconUrl = value;
+        this.backingStore.set("iconUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

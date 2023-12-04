@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceOperation extends Entity implements Parsable {
     /**
-     * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
-     */
-    private String actionName;
-    /**
-     * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
-     */
-    private String description;
-    /**
-     * Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
-     */
-    private Boolean enabledForScopeValidation;
-    /**
-     * Resource category to which this Operation belongs. This property is read-only.
-     */
-    private String resource;
-    /**
-     * Name of the Resource this operation is performed on.
-     */
-    private String resourceName;
-    /**
-     * Instantiates a new resourceOperation and sets the default values.
+     * Instantiates a new ResourceOperation and sets the default values.
      */
     public ResourceOperation() {
         super();
@@ -40,7 +20,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceOperation
+     * @return a ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public static ResourceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,27 +29,27 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the actionName property value. Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
-        return this.actionName;
+        return this.backingStore.get("actionName");
     }
     /**
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the enabledForScopeValidation property value. Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabledForScopeValidation() {
-        return this.enabledForScopeValidation;
+        return this.backingStore.get("enabledForScopeValidation");
     }
     /**
      * The deserialization information for the current model
@@ -87,19 +67,19 @@ public class ResourceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource category to which this Operation belongs. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Gets the resourceName property value. Name of the Resource this operation is performed on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.backingStore.get("resourceName");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final String value) {
-        this.actionName = value;
+        this.backingStore.set("actionName", value);
     }
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the enabledForScopeValidation property value. Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
      * @param value Value to set for the enabledForScopeValidation property.
      */
     public void setEnabledForScopeValidation(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabledForScopeValidation = value;
+        this.backingStore.set("enabledForScopeValidation", value);
     }
     /**
      * Sets the resource property value. Resource category to which this Operation belongs. This property is read-only.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.backingStore.set("resourceName", value);
     }
 }

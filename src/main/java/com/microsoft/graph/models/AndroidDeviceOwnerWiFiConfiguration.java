@@ -12,55 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     */
-    private Boolean connectAutomatically;
-    /**
-     * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     */
-    private Boolean connectWhenNetworkNameIsHidden;
-    /**
-     * Network Name
-     */
-    private String networkName;
-    /**
-     * This is the pre-shared key for WPA Personal Wi-Fi network.
-     */
-    private String preSharedKey;
-    /**
-     * This is the pre-shared key for WPA Personal Wi-Fi network.
-     */
-    private Boolean preSharedKeyIsSet;
-    /**
-     * Specify the proxy server configuration script URL.
-     */
-    private String proxyAutomaticConfigurationUrl;
-    /**
-     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     */
-    private String proxyExclusionList;
-    /**
-     * Specify the proxy server IP address. Android documentation does not specify IPv4 or IPv6. For example: 192.168.1.1.
-     */
-    private String proxyManualAddress;
-    /**
-     * Specify the proxy server port.
-     */
-    private Integer proxyManualPort;
-    /**
-     * Wi-Fi Proxy Settings.
-     */
-    private WiFiProxySetting proxySettings;
-    /**
-     * This is the name of the Wi-Fi network that is broadcast to all devices.
-     */
-    private String ssid;
-    /**
-     * Wi-Fi Security Types for Android Device Owner.
-     */
-    private AndroidDeviceOwnerWiFiSecurityType wiFiSecurityType;
-    /**
-     * Instantiates a new androidDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerWiFiConfiguration and sets the default values.
      */
     public AndroidDeviceOwnerWiFiConfiguration() {
         super();
@@ -69,7 +21,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerWiFiConfiguration
+     * @return a AndroidDeviceOwnerWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,19 +37,19 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
-        return this.connectAutomatically;
+        return this.backingStore.get("connectAutomatically");
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
-        return this.connectWhenNetworkNameIsHidden;
+        return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
      * The deserialization information for the current model
@@ -115,90 +67,90 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         deserializerMap.put("proxyExclusionList", (n) -> { this.setProxyExclusionList(n.getStringValue()); });
         deserializerMap.put("proxyManualAddress", (n) -> { this.setProxyManualAddress(n.getStringValue()); });
         deserializerMap.put("proxyManualPort", (n) -> { this.setProxyManualPort(n.getIntegerValue()); });
-        deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting.class)); });
+        deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting::forValue)); });
         deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
-        deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AndroidDeviceOwnerWiFiSecurityType.class)); });
+        deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AndroidDeviceOwnerWiFiSecurityType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
-        return this.networkName;
+        return this.backingStore.get("networkName");
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
-        return this.preSharedKey;
+        return this.backingStore.get("preSharedKey");
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
-        return this.preSharedKeyIsSet;
+        return this.backingStore.get("preSharedKeyIsSet");
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
-        return this.proxyAutomaticConfigurationUrl;
+        return this.backingStore.get("proxyAutomaticConfigurationUrl");
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyExclusionList() {
-        return this.proxyExclusionList;
+        return this.backingStore.get("proxyExclusionList");
     }
     /**
      * Gets the proxyManualAddress property value. Specify the proxy server IP address. Android documentation does not specify IPv4 or IPv6. For example: 192.168.1.1.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
-        return this.proxyManualAddress;
+        return this.backingStore.get("proxyManualAddress");
     }
     /**
      * Gets the proxyManualPort property value. Specify the proxy server port.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
-        return this.proxyManualPort;
+        return this.backingStore.get("proxyManualPort");
     }
     /**
      * Gets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @return a wiFiProxySetting
+     * @return a WiFiProxySetting
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySettings() {
-        return this.proxySettings;
+        return this.backingStore.get("proxySettings");
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
-        return this.ssid;
+        return this.backingStore.get("ssid");
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
-     * @return a androidDeviceOwnerWiFiSecurityType
+     * @return a AndroidDeviceOwnerWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerWiFiSecurityType getWiFiSecurityType() {
-        return this.wiFiSecurityType;
+        return this.backingStore.get("wiFiSecurityType");
     }
     /**
      * Serializes information the current object
@@ -225,83 +177,83 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the connectAutomatically property.
      */
     public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectAutomatically = value;
+        this.backingStore.set("connectAutomatically", value);
     }
     /**
      * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectWhenNetworkNameIsHidden = value;
+        this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
      * Sets the networkName property value. Network Name
      * @param value Value to set for the networkName property.
      */
     public void setNetworkName(@jakarta.annotation.Nullable final String value) {
-        this.networkName = value;
+        this.backingStore.set("networkName", value);
     }
     /**
      * Sets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
      * @param value Value to set for the preSharedKey property.
      */
     public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
-        this.preSharedKey = value;
+        this.backingStore.set("preSharedKey", value);
     }
     /**
      * Sets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
      * @param value Value to set for the preSharedKeyIsSet property.
      */
     public void setPreSharedKeyIsSet(@jakarta.annotation.Nullable final Boolean value) {
-        this.preSharedKeyIsSet = value;
+        this.backingStore.set("preSharedKeyIsSet", value);
     }
     /**
      * Sets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      */
     public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
-        this.proxyAutomaticConfigurationUrl = value;
+        this.backingStore.set("proxyAutomaticConfigurationUrl", value);
     }
     /**
      * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @param value Value to set for the proxyExclusionList property.
      */
     public void setProxyExclusionList(@jakarta.annotation.Nullable final String value) {
-        this.proxyExclusionList = value;
+        this.backingStore.set("proxyExclusionList", value);
     }
     /**
      * Sets the proxyManualAddress property value. Specify the proxy server IP address. Android documentation does not specify IPv4 or IPv6. For example: 192.168.1.1.
      * @param value Value to set for the proxyManualAddress property.
      */
     public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
-        this.proxyManualAddress = value;
+        this.backingStore.set("proxyManualAddress", value);
     }
     /**
      * Sets the proxyManualPort property value. Specify the proxy server port.
      * @param value Value to set for the proxyManualPort property.
      */
     public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {
-        this.proxyManualPort = value;
+        this.backingStore.set("proxyManualPort", value);
     }
     /**
      * Sets the proxySettings property value. Wi-Fi Proxy Settings.
      * @param value Value to set for the proxySettings property.
      */
     public void setProxySettings(@jakarta.annotation.Nullable final WiFiProxySetting value) {
-        this.proxySettings = value;
+        this.backingStore.set("proxySettings", value);
     }
     /**
      * Sets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
      * @param value Value to set for the ssid property.
      */
     public void setSsid(@jakarta.annotation.Nullable final String value) {
-        this.ssid = value;
+        this.backingStore.set("ssid", value);
     }
     /**
      * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
      * @param value Value to set for the wiFiSecurityType property.
      */
     public void setWiFiSecurityType(@jakarta.annotation.Nullable final AndroidDeviceOwnerWiFiSecurityType value) {
-        this.wiFiSecurityType = value;
+        this.backingStore.set("wiFiSecurityType", value);
     }
 }

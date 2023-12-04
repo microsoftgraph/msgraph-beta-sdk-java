@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceScopeCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessPackageResourceScope> value;
-    /**
-     * Instantiates a new accessPackageResourceScopeCollectionResponse and sets the default values.
+     * Instantiates a new AccessPackageResourceScopeCollectionResponse and sets the default values.
      */
     public AccessPackageResourceScopeCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AccessPackageResourceScopeCollectionResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceScopeCollectionResponse
+     * @return a AccessPackageResourceScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceScopeCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AccessPackageResourceScopeCollectionResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageResourceScope
+     * @return a java.util.List<AccessPackageResourceScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AccessPackageResourceScopeCollectionResponse extends BaseCollection
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

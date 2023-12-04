@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Schema extends Entity implements Parsable {
     /**
-     * Must be set to microsoft.graph.externalItem. Required.
-     */
-    private String baseType;
-    /**
-     * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
-     */
-    private java.util.List<Property> properties;
-    /**
-     * Instantiates a new schema and sets the default values.
+     * Instantiates a new Schema and sets the default values.
      */
     public Schema() {
         super();
@@ -26,7 +18,7 @@ public class Schema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a schema
+     * @return a Schema
      */
     @jakarta.annotation.Nonnull
     public static Schema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class Schema extends Entity implements Parsable {
     }
     /**
      * Gets the baseType property value. Must be set to microsoft.graph.externalItem. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBaseType() {
-        return this.baseType;
+        return this.backingStore.get("baseType");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class Schema extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
-     * @return a property
+     * @return a java.util.List<Property>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Property> getProperties() {
-        return this.properties;
+        return this.backingStore.get("properties");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the baseType property.
      */
     public void setBaseType(@jakarta.annotation.Nullable final String value) {
-        this.baseType = value;
+        this.backingStore.set("baseType", value);
     }
     /**
      * Sets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<Property> value) {
-        this.properties = value;
+        this.backingStore.set("properties", value);
     }
 }

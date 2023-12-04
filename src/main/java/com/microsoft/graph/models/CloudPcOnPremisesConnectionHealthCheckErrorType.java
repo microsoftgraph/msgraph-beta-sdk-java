@@ -17,6 +17,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     AdJoinCheckCredentialsExpired("adJoinCheckCredentialsExpired"),
     AdJoinCheckAccountLockedOrDisabled("adJoinCheckAccountLockedOrDisabled"),
     AdJoinCheckAccountQuotaExceeded("adJoinCheckAccountQuotaExceeded"),
+    AdJoinCheckServerNotOperational("adJoinCheckServerNotOperational"),
     AdJoinCheckUnknownError("adJoinCheckUnknownError"),
     EndpointConnectivityCheckCloudPcUrlNotAllowListed("endpointConnectivityCheckCloudPcUrlNotAllowListed"),
     EndpointConnectivityCheckWVDUrlNotAllowListed("endpointConnectivityCheckWVDUrlNotAllowListed"),
@@ -50,6 +51,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     ResourceAvailabilityCheckNoIntuneReaderRoleError("resourceAvailabilityCheckNoIntuneReaderRoleError"),
     ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation("resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation"),
     ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation("resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation"),
+    ResourceAvailabilityCheckDeploymentQuotaLimitReached("resourceAvailabilityCheckDeploymentQuotaLimitReached"),
     ResourceAvailabilityCheckTransientServiceError("resourceAvailabilityCheckTransientServiceError"),
     ResourceAvailabilityCheckUnknownError("resourceAvailabilityCheckUnknownError"),
     PermissionCheckNoSubscriptionReaderRole("permissionCheckNoSubscriptionReaderRole"),
@@ -93,6 +95,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "adJoinCheckCredentialsExpired": return AdJoinCheckCredentialsExpired;
             case "adJoinCheckAccountLockedOrDisabled": return AdJoinCheckAccountLockedOrDisabled;
             case "adJoinCheckAccountQuotaExceeded": return AdJoinCheckAccountQuotaExceeded;
+            case "adJoinCheckServerNotOperational": return AdJoinCheckServerNotOperational;
             case "adJoinCheckUnknownError": return AdJoinCheckUnknownError;
             case "endpointConnectivityCheckCloudPcUrlNotAllowListed": return EndpointConnectivityCheckCloudPcUrlNotAllowListed;
             case "endpointConnectivityCheckWVDUrlNotAllowListed": return EndpointConnectivityCheckWVDUrlNotAllowListed;
@@ -126,6 +129,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "resourceAvailabilityCheckNoIntuneReaderRoleError": return ResourceAvailabilityCheckNoIntuneReaderRoleError;
             case "resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation;
             case "resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation;
+            case "resourceAvailabilityCheckDeploymentQuotaLimitReached": return ResourceAvailabilityCheckDeploymentQuotaLimitReached;
             case "resourceAvailabilityCheckTransientServiceError": return ResourceAvailabilityCheckTransientServiceError;
             case "resourceAvailabilityCheckUnknownError": return ResourceAvailabilityCheckUnknownError;
             case "permissionCheckNoSubscriptionReaderRole": return PermissionCheckNoSubscriptionReaderRole;

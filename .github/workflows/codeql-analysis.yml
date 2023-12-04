@@ -24,7 +24,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
+    runs-on: macos-latest #[self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
     #timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       actions: read
@@ -48,7 +48,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 20
-          distribution: 'temurin'
+          distribution: 'oracle'
           cache: gradle
 
       # Initializes the CodeQL tools for scanning.
@@ -57,7 +57,9 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           threads: 4
-          #ram: 8384
+          #init-heap: 1024M  # Initial heap size
+          #max-heap: 4096M  # Maximum heap size
+          ram: 4096
         
           # If you wish to specify custom queries, you can do so here or in a config file.
           # By default, queries listed here will override any specified in a config file.
@@ -80,9 +82,9 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
-
+      - name: Build #with Gradle
+        run: gradle clean build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
+            
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:

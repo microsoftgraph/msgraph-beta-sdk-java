@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkPeripheral extends Entity implements Parsable {
     /**
-     * Display name for the peripheral.
-     */
-    private String displayName;
-    /**
-     * The product ID of the device. Each product from a vendor has its own ID.
-     */
-    private String productId;
-    /**
-     * The unique identifier for the vendor of the device. Each vendor has a unique ID.
-     */
-    private String vendorId;
-    /**
-     * Instantiates a new teamworkPeripheral and sets the default values.
+     * Instantiates a new TeamworkPeripheral and sets the default values.
      */
     public TeamworkPeripheral() {
         super();
@@ -29,7 +17,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nonnull
     public static TeamworkPeripheral createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the peripheral.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     }
     /**
      * Gets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductId() {
-        return this.productId;
+        return this.backingStore.get("productId");
     }
     /**
      * Gets the vendorId property value. The unique identifier for the vendor of the device. Each vendor has a unique ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorId() {
-        return this.vendorId;
+        return this.backingStore.get("vendorId");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
      * @param value Value to set for the productId property.
      */
     public void setProductId(@jakarta.annotation.Nullable final String value) {
-        this.productId = value;
+        this.backingStore.set("productId", value);
     }
     /**
      * Sets the vendorId property value. The unique identifier for the vendor of the device. Each vendor has a unique ID.
      * @param value Value to set for the vendorId property.
      */
     public void setVendorId(@jakarta.annotation.Nullable final String value) {
-        this.vendorId = value;
+        this.backingStore.set("vendorId", value);
     }
 }

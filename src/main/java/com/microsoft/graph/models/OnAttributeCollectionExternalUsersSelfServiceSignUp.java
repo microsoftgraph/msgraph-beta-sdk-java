@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttributeCollectionHandler implements Parsable {
     /**
-     * Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
-     */
-    private AuthenticationAttributeCollectionPage attributeCollectionPage;
-    /**
-     * The attributes property
-     */
-    private java.util.List<IdentityUserFlowAttribute> attributes;
-    /**
-     * Instantiates a new onAttributeCollectionExternalUsersSelfServiceSignUp and sets the default values.
+     * Instantiates a new OnAttributeCollectionExternalUsersSelfServiceSignUp and sets the default values.
      */
     public OnAttributeCollectionExternalUsersSelfServiceSignUp() {
         super();
@@ -26,7 +18,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAttributeCollectionExternalUsersSelfServiceSignUp
+     * @return a OnAttributeCollectionExternalUsersSelfServiceSignUp
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionExternalUsersSelfServiceSignUp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,19 +27,19 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
     }
     /**
      * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
-     * @return a authenticationAttributeCollectionPage
+     * @return a AuthenticationAttributeCollectionPage
      */
     @jakarta.annotation.Nullable
     public AuthenticationAttributeCollectionPage getAttributeCollectionPage() {
-        return this.attributeCollectionPage;
+        return this.backingStore.get("attributeCollectionPage");
     }
     /**
      * Gets the attributes property value. The attributes property
-     * @return a identityUserFlowAttribute
+     * @return a java.util.List<IdentityUserFlowAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getAttributes() {
-        return this.attributes;
+        return this.backingStore.get("attributes");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
      * @param value Value to set for the attributeCollectionPage property.
      */
     public void setAttributeCollectionPage(@jakarta.annotation.Nullable final AuthenticationAttributeCollectionPage value) {
-        this.attributeCollectionPage = value;
+        this.backingStore.set("attributeCollectionPage", value);
     }
     /**
      * Sets the attributes property value. The attributes property
      * @param value Value to set for the attributes property.
      */
     public void setAttributes(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
-        this.attributes = value;
+        this.backingStore.set("attributes", value);
     }
 }

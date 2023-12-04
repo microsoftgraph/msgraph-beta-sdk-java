@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PeopleAdminSettings extends Entity implements Parsable {
     /**
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
-     */
-    private java.util.List<ProfileCardProperty> profileCardProperties;
-    /**
-     * Represents administrator settings that manage the support of pronouns in an organization.
-     */
-    private PronounsSettings pronouns;
-    /**
-     * Instantiates a new peopleAdminSettings and sets the default values.
+     * Instantiates a new PeopleAdminSettings and sets the default values.
      */
     public PeopleAdminSettings() {
         super();
@@ -25,7 +17,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a peopleAdminSettings
+     * @return a PeopleAdminSettings
      */
     @jakarta.annotation.Nonnull
     public static PeopleAdminSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     }
     /**
      * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
-     * @return a profileCardProperty
+     * @return a java.util.List<ProfileCardProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardProperty> getProfileCardProperties() {
-        return this.profileCardProperties;
+        return this.backingStore.get("profileCardProperties");
     }
     /**
      * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
-     * @return a pronounsSettings
+     * @return a PronounsSettings
      */
     @jakarta.annotation.Nullable
     public PronounsSettings getPronouns() {
-        return this.pronouns;
+        return this.backingStore.get("pronouns");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PeopleAdminSettings extends Entity implements Parsable {
      * @param value Value to set for the profileCardProperties property.
      */
     public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
-        this.profileCardProperties = value;
+        this.backingStore.set("profileCardProperties", value);
     }
     /**
      * Sets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
      * @param value Value to set for the pronouns property.
      */
     public void setPronouns(@jakarta.annotation.Nullable final PronounsSettings value) {
-        this.pronouns = value;
+        this.backingStore.set("pronouns", value);
     }
 }

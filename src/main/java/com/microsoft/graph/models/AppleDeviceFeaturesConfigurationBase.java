@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<AirPrintDestination> airPrintDestinations;
-    /**
-     * Instantiates a new appleDeviceFeaturesConfigurationBase and sets the default values.
+     * Instantiates a new AppleDeviceFeaturesConfigurationBase and sets the default values.
      */
     public AppleDeviceFeaturesConfigurationBase() {
         super();
@@ -25,7 +21,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleDeviceFeaturesConfigurationBase
+     * @return a AppleDeviceFeaturesConfigurationBase
      */
     @jakarta.annotation.Nonnull
     public static AppleDeviceFeaturesConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +38,11 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     }
     /**
      * Gets the airPrintDestinations property value. An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
-     * @return a airPrintDestination
+     * @return a java.util.List<AirPrintDestination>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AirPrintDestination> getAirPrintDestinations() {
-        return this.airPrintDestinations;
+        return this.backingStore.get("airPrintDestinations");
     }
     /**
      * The deserialization information for the current model
@@ -72,6 +68,6 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * @param value Value to set for the airPrintDestinations property.
      */
     public void setAirPrintDestinations(@jakarta.annotation.Nullable final java.util.List<AirPrintDestination> value) {
-        this.airPrintDestinations = value;
+        this.backingStore.set("airPrintDestinations", value);
     }
 }

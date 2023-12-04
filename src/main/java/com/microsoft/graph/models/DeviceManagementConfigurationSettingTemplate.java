@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingTemplate extends Entity implements Parsable {
     /**
-     * List of related Setting Definitions
-     */
-    private java.util.List<DeviceManagementConfigurationSettingDefinition> settingDefinitions;
-    /**
-     * Setting Instance Template
-     */
-    private DeviceManagementConfigurationSettingInstanceTemplate settingInstanceTemplate;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingTemplate and sets the default values.
      */
     public DeviceManagementConfigurationSettingTemplate() {
         super();
@@ -28,7 +20,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingTemplate
+     * @return a DeviceManagementConfigurationSettingTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,19 +40,19 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     }
     /**
      * Gets the settingDefinitions property value. List of related Setting Definitions
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getSettingDefinitions() {
-        return this.settingDefinitions;
+        return this.backingStore.get("settingDefinitions");
     }
     /**
      * Gets the settingInstanceTemplate property value. Setting Instance Template
-     * @return a deviceManagementConfigurationSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationSettingInstanceTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstanceTemplate getSettingInstanceTemplate() {
-        return this.settingInstanceTemplate;
+        return this.backingStore.get("settingInstanceTemplate");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * @param value Value to set for the settingDefinitions property.
      */
     public void setSettingDefinitions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
-        this.settingDefinitions = value;
+        this.backingStore.set("settingDefinitions", value);
     }
     /**
      * Sets the settingInstanceTemplate property value. Setting Instance Template
      * @param value Value to set for the settingInstanceTemplate property.
      */
     public void setSettingInstanceTemplate(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingInstanceTemplate value) {
-        this.settingInstanceTemplate = value;
+        this.backingStore.set("settingInstanceTemplate", value);
     }
 }

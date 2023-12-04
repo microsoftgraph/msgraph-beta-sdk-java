@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends OnInteractiveAuthFlowStartHandler implements Parsable {
     /**
-     * Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
-     */
-    private Boolean isSignUpAllowed;
-    /**
-     * Instantiates a new onInteractiveAuthFlowStartExternalUsersSelfServiceSignUp and sets the default values.
+     * Instantiates a new OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp and sets the default values.
      */
     public OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp() {
         super();
@@ -22,7 +18,7 @@ public class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends On
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onInteractiveAuthFlowStartExternalUsersSelfServiceSignUp
+     * @return a OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp
      */
     @jakarta.annotation.Nonnull
     public static OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,12 +36,12 @@ public class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends On
         return deserializerMap;
     }
     /**
-     * Gets the isSignUpAllowed property value. Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
-     * @return a boolean
+     * Gets the isSignUpAllowed property value. Optional. Specifies whether the authentication flow includes an option to sign up (create account) and sign in. Default value is false meaning only sign in is enabled.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSignUpAllowed() {
-        return this.isSignUpAllowed;
+        return this.backingStore.get("isSignUpAllowed");
     }
     /**
      * Serializes information the current object
@@ -57,10 +53,10 @@ public class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends On
         writer.writeBooleanValue("isSignUpAllowed", this.getIsSignUpAllowed());
     }
     /**
-     * Sets the isSignUpAllowed property value. Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
+     * Sets the isSignUpAllowed property value. Optional. Specifies whether the authentication flow includes an option to sign up (create account) and sign in. Default value is false meaning only sign in is enabled.
      * @param value Value to set for the isSignUpAllowed property.
      */
     public void setIsSignUpAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSignUpAllowed = value;
+        this.backingStore.set("isSignUpAllowed", value);
     }
 }

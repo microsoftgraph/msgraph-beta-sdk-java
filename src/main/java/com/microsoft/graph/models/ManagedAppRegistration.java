@@ -13,83 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppRegistration extends Entity implements Parsable {
     /**
-     * The app package Identifier
-     */
-    private MobileAppIdentifier appIdentifier;
-    /**
-     * App version
-     */
-    private String applicationVersion;
-    /**
-     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     */
-    private java.util.List<ManagedAppPolicy> appliedPolicies;
-    /**
-     * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
-     */
-    private String azureADDeviceId;
-    /**
-     * Date and time of creation
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The device manufacturer for the current app registration
-     */
-    private String deviceManufacturer;
-    /**
-     * The device model for the current app registration
-     */
-    private String deviceModel;
-    /**
-     * Host device name
-     */
-    private String deviceName;
-    /**
-     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-     */
-    private String deviceTag;
-    /**
-     * Host device type
-     */
-    private String deviceType;
-    /**
-     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     */
-    private java.util.List<ManagedAppFlaggedReason> flaggedReasons;
-    /**
-     * Zero or more policies admin intended for the app as of now.
-     */
-    private java.util.List<ManagedAppPolicy> intendedPolicies;
-    /**
-     * Date and time of last the app synced with management service.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
-     */
-    private String managedDeviceId;
-    /**
-     * App management SDK version
-     */
-    private String managementSdkVersion;
-    /**
-     * Zero or more long running operations triggered on the app registration.
-     */
-    private java.util.List<ManagedAppOperation> operations;
-    /**
-     * Operating System version
-     */
-    private String platformVersion;
-    /**
-     * The user Id to who this app registration belongs.
-     */
-    private String userId;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
-     * Instantiates a new managedAppRegistration and sets the default values.
+     * Instantiates a new ManagedAppRegistration and sets the default values.
      */
     public ManagedAppRegistration() {
         super();
@@ -97,7 +21,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppRegistration
+     * @return a ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -115,35 +39,35 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the appIdentifier property value. The app package Identifier
-     * @return a mobileAppIdentifier
+     * @return a MobileAppIdentifier
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getAppIdentifier() {
-        return this.appIdentifier;
+        return this.backingStore.get("appIdentifier");
     }
     /**
      * Gets the applicationVersion property value. App version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationVersion() {
-        return this.applicationVersion;
+        return this.backingStore.get("applicationVersion");
     }
     /**
      * Gets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     * @return a managedAppPolicy
+     * @return a java.util.List<ManagedAppPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getAppliedPolicies() {
-        return this.appliedPolicies;
+        return this.backingStore.get("appliedPolicies");
     }
     /**
      * Gets the azureADDeviceId property value. The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureADDeviceId() {
-        return this.azureADDeviceId;
+        return this.backingStore.get("azureADDeviceId");
     }
     /**
      * Gets the createdDateTime property value. Date and time of creation
@@ -151,47 +75,47 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deviceManufacturer property value. The device manufacturer for the current app registration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this.deviceManufacturer;
+        return this.backingStore.get("deviceManufacturer");
     }
     /**
      * Gets the deviceModel property value. The device model for the current app registration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.backingStore.get("deviceModel");
     }
     /**
      * Gets the deviceName property value. Host device name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
-        return this.deviceTag;
+        return this.backingStore.get("deviceTag");
     }
     /**
      * Gets the deviceType property value. Host device type
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
-        return this.deviceType;
+        return this.backingStore.get("deviceType");
     }
     /**
      * The deserialization information for the current model
@@ -210,7 +134,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("deviceTag", (n) -> { this.setDeviceTag(n.getStringValue()); });
         deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getStringValue()); });
-        deserializerMap.put("flaggedReasons", (n) -> { this.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason.class)); });
+        deserializerMap.put("flaggedReasons", (n) -> { this.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason::forValue)); });
         deserializerMap.put("intendedPolicies", (n) -> { this.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
@@ -223,19 +147,19 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     * @return a managedAppFlaggedReason
+     * @return a java.util.List<ManagedAppFlaggedReason>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {
-        return this.flaggedReasons;
+        return this.backingStore.get("flaggedReasons");
     }
     /**
      * Gets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
-     * @return a managedAppPolicy
+     * @return a java.util.List<ManagedAppPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getIntendedPolicies() {
-        return this.intendedPolicies;
+        return this.backingStore.get("intendedPolicies");
     }
     /**
      * Gets the lastSyncDateTime property value. Date and time of last the app synced with management service.
@@ -243,55 +167,55 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.backingStore.get("managedDeviceId");
     }
     /**
      * Gets the managementSdkVersion property value. App management SDK version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementSdkVersion() {
-        return this.managementSdkVersion;
+        return this.backingStore.get("managementSdkVersion");
     }
     /**
      * Gets the operations property value. Zero or more long running operations triggered on the app registration.
-     * @return a managedAppOperation
+     * @return a java.util.List<ManagedAppOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppOperation> getOperations() {
-        return this.operations;
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the platformVersion property value. Operating System version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlatformVersion() {
-        return this.platformVersion;
+        return this.backingStore.get("platformVersion");
     }
     /**
      * Gets the userId property value. The user Id to who this app registration belongs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -325,132 +249,132 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the appIdentifier property.
      */
     public void setAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
-        this.appIdentifier = value;
+        this.backingStore.set("appIdentifier", value);
     }
     /**
      * Sets the applicationVersion property value. App version
      * @param value Value to set for the applicationVersion property.
      */
     public void setApplicationVersion(@jakarta.annotation.Nullable final String value) {
-        this.applicationVersion = value;
+        this.backingStore.set("applicationVersion", value);
     }
     /**
      * Sets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @param value Value to set for the appliedPolicies property.
      */
     public void setAppliedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this.appliedPolicies = value;
+        this.backingStore.set("appliedPolicies", value);
     }
     /**
      * Sets the azureADDeviceId property value. The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
      * @param value Value to set for the azureADDeviceId property.
      */
     public void setAzureADDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.azureADDeviceId = value;
+        this.backingStore.set("azureADDeviceId", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time of creation
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deviceManufacturer property value. The device manufacturer for the current app registration
      * @param value Value to set for the deviceManufacturer property.
      */
     public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.deviceManufacturer = value;
+        this.backingStore.set("deviceManufacturer", value);
     }
     /**
      * Sets the deviceModel property value. The device model for the current app registration
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.backingStore.set("deviceModel", value);
     }
     /**
      * Sets the deviceName property value. Host device name
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      * @param value Value to set for the deviceTag property.
      */
     public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
-        this.deviceTag = value;
+        this.backingStore.set("deviceTag", value);
     }
     /**
      * Sets the deviceType property value. Host device type
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {
-        this.deviceType = value;
+        this.backingStore.set("deviceType", value);
     }
     /**
      * Sets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      * @param value Value to set for the flaggedReasons property.
      */
     public void setFlaggedReasons(@jakarta.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
-        this.flaggedReasons = value;
+        this.backingStore.set("flaggedReasons", value);
     }
     /**
      * Sets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
      * @param value Value to set for the intendedPolicies property.
      */
     public void setIntendedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this.intendedPolicies = value;
+        this.backingStore.set("intendedPolicies", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Date and time of last the app synced with management service.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.backingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the managementSdkVersion property value. App management SDK version
      * @param value Value to set for the managementSdkVersion property.
      */
     public void setManagementSdkVersion(@jakarta.annotation.Nullable final String value) {
-        this.managementSdkVersion = value;
+        this.backingStore.set("managementSdkVersion", value);
     }
     /**
      * Sets the operations property value. Zero or more long running operations triggered on the app registration.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<ManagedAppOperation> value) {
-        this.operations = value;
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the platformVersion property value. Operating System version
      * @param value Value to set for the platformVersion property.
      */
     public void setPlatformVersion(@jakarta.annotation.Nullable final String value) {
-        this.platformVersion = value;
+        this.backingStore.set("platformVersion", value);
     }
     /**
      * Sets the userId property value. The user Id to who this app registration belongs.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

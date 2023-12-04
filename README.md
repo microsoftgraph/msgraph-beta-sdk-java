@@ -1,4 +1,5 @@
 # Microsoft Graph SDK for Java
+## Version 6.0.0 now in Release Candidate stage!
 
 [![Download](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.microsoft.graph/microsoft-graph-beta.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/microsoft/graph/microsoft-graph-beta/)
 
@@ -21,11 +22,11 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph-beta:6.0.0-SNAPSHOT'
+    implementation 'com.microsoft.graph:microsoft-graph-beta:6.0.0-RC'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
-    implementation 'com.azure:azure-identity:1.4.0'
+    implementation 'com.azure:azure-identity:1.11.0'
 }
 ```
 
@@ -38,13 +39,13 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph-beta</artifactId>
-  <version>6.0.0-SNAPSHOT</version>
+  <version>6.0.0-RC</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
-  <version>1.4.0</version>
+  <version>1.11.0</version>
 </dependency>
 ```
 
@@ -98,12 +99,8 @@ After you have a GraphServiceClient that is authenticated, you can begin making 
 To retrieve the user's information:
 
 ```java
-graphClient.me().get().thenAccept(me -> {
-    System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
-}).exceptionally(err -> {
-    System.out.printf("Error, %s%n", err.getMessage());
-    return null;
-}).join();
+User me = graphClient.me().get();
+System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
 ```
 ## 4. Documentation
 

@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintDocument extends Entity implements Parsable {
     /**
-     * The configuration property
-     */
-    private PrinterDocumentConfiguration configuration;
-    /**
-     * The document's content (MIME) type. Read-only.
-     */
-    private String contentType;
-    /**
-     * The document's name. Read-only.
-     */
-    private String displayName;
-    /**
-     * The downloadedDateTime property
-     */
-    private OffsetDateTime downloadedDateTime;
-    /**
-     * The document's size in bytes. Read-only.
-     */
-    private Long size;
-    /**
-     * The uploadedDateTime property
-     */
-    private OffsetDateTime uploadedDateTime;
-    /**
-     * Instantiates a new printDocument and sets the default values.
+     * Instantiates a new PrintDocument and sets the default values.
      */
     public PrintDocument() {
         super();
@@ -42,7 +18,7 @@ public class PrintDocument extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printDocument
+     * @return a PrintDocument
      */
     @jakarta.annotation.Nonnull
     public static PrintDocument createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +27,27 @@ public class PrintDocument extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a printerDocumentConfiguration
+     * @return a PrinterDocumentConfiguration
      */
     @jakarta.annotation.Nullable
     public PrinterDocumentConfiguration getConfiguration() {
-        return this.configuration;
+        return this.backingStore.get("configuration");
     }
     /**
      * Gets the contentType property value. The document's content (MIME) type. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * Gets the displayName property value. The document's name. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the downloadedDateTime property value. The downloadedDateTime property
@@ -79,7 +55,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDownloadedDateTime() {
-        return this.downloadedDateTime;
+        return this.backingStore.get("downloadedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -98,11 +74,11 @@ public class PrintDocument extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The document's size in bytes. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the uploadedDateTime property value. The uploadedDateTime property
@@ -110,7 +86,7 @@ public class PrintDocument extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadedDateTime() {
-        return this.uploadedDateTime;
+        return this.backingStore.get("uploadedDateTime");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final PrinterDocumentConfiguration value) {
-        this.configuration = value;
+        this.backingStore.set("configuration", value);
     }
     /**
      * Sets the contentType property value. The document's content (MIME) type. Read-only.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the displayName property value. The document's name. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the downloadedDateTime property value. The downloadedDateTime property
      * @param value Value to set for the downloadedDateTime property.
      */
     public void setDownloadedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.downloadedDateTime = value;
+        this.backingStore.set("downloadedDateTime", value);
     }
     /**
      * Sets the size property value. The document's size in bytes. Read-only.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the uploadedDateTime property value. The uploadedDateTime property
      * @param value Value to set for the uploadedDateTime property.
      */
     public void setUploadedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.uploadedDateTime = value;
+        this.backingStore.set("uploadedDateTime", value);
     }
 }

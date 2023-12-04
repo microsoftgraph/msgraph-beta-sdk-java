@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, Parsable {
+public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
-     */
-    private CloudPcPartnerAgentInstallStatus installStatus;
-    /**
-     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
-     */
-    private Boolean isThirdPartyPartner;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
-     */
-    private CloudPcPartnerAgentName partnerAgentName;
-    /**
-     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
-     */
-    private Boolean retriable;
-    /**
-     * Instantiates a new cloudPcPartnerAgentInstallResult and sets the default values.
+     * Instantiates a new CloudPcPartnerAgentInstallResult and sets the default values.
      */
     public CloudPcPartnerAgentInstallResult() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcPartnerAgentInstallResult
+     * @return a CloudPcPartnerAgentInstallResult
      */
     @jakarta.annotation.Nonnull
     public static CloudPcPartnerAgentInstallResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +35,33 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         return new CloudPcPartnerAgentInstallResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the errorMessage property value. The errorMessage property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getErrorMessage() {
+        return this.backingStore.get("errorMessage");
     }
     /**
      * The deserialization information for the current model
@@ -63,53 +69,54 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(CloudPcPartnerAgentInstallStatus.class)); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(CloudPcPartnerAgentInstallStatus::forValue)); });
         deserializerMap.put("isThirdPartyPartner", (n) -> { this.setIsThirdPartyPartner(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("partnerAgentName", (n) -> { this.setPartnerAgentName(n.getEnumValue(CloudPcPartnerAgentName.class)); });
+        deserializerMap.put("partnerAgentName", (n) -> { this.setPartnerAgentName(n.getEnumValue(CloudPcPartnerAgentName::forValue)); });
         deserializerMap.put("retriable", (n) -> { this.setRetriable(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
-     * @return a cloudPcPartnerAgentInstallStatus
+     * @return a CloudPcPartnerAgentInstallStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcPartnerAgentInstallStatus getInstallStatus() {
-        return this.installStatus;
+        return this.backingStore.get("installStatus");
     }
     /**
      * Gets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsThirdPartyPartner() {
-        return this.isThirdPartyPartner;
+        return this.backingStore.get("isThirdPartyPartner");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
-     * @return a cloudPcPartnerAgentName
+     * @return a CloudPcPartnerAgentName
      */
     @jakarta.annotation.Nullable
     public CloudPcPartnerAgentName getPartnerAgentName() {
-        return this.partnerAgentName;
+        return this.backingStore.get("partnerAgentName");
     }
     /**
      * Gets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRetriable() {
-        return this.retriable;
+        return this.backingStore.get("retriable");
     }
     /**
      * Serializes information the current object
@@ -117,6 +124,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("errorMessage", this.getErrorMessage());
         writer.writeEnumValue("installStatus", this.getInstallStatus());
         writer.writeBooleanValue("isThirdPartyPartner", this.getIsThirdPartyPartner());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -125,45 +133,60 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the errorMessage property value. The errorMessage property
+     * @param value Value to set for the errorMessage property.
+     */
+    public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("errorMessage", value);
     }
     /**
      * Sets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
      * @param value Value to set for the installStatus property.
      */
     public void setInstallStatus(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallStatus value) {
-        this.installStatus = value;
+        this.backingStore.set("installStatus", value);
     }
     /**
      * Sets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
      * @param value Value to set for the isThirdPartyPartner property.
      */
     public void setIsThirdPartyPartner(@jakarta.annotation.Nullable final Boolean value) {
-        this.isThirdPartyPartner = value;
+        this.backingStore.set("isThirdPartyPartner", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      * @param value Value to set for the partnerAgentName property.
      */
     public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentName value) {
-        this.partnerAgentName = value;
+        this.backingStore.set("partnerAgentName", value);
     }
     /**
      * Sets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
      * @param value Value to set for the retriable property.
      */
     public void setRetriable(@jakarta.annotation.Nullable final Boolean value) {
-        this.retriable = value;
+        this.backingStore.set("retriable", value);
     }
 }

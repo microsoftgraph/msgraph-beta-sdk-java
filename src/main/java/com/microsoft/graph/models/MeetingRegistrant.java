@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable {
     /**
-     * The registrant's answer to custom questions.
-     */
-    private java.util.List<CustomQuestionAnswer> customQuestionAnswers;
-    /**
-     * The email address of the registrant.
-     */
-    private String email;
-    /**
-     * The first name of the registrant.
-     */
-    private String firstName;
-    /**
-     * The last name of the registrant.
-     */
-    private String lastName;
-    /**
-     * Time in UTC when the registrant registers for the meeting. Read-only.
-     */
-    private OffsetDateTime registrationDateTime;
-    /**
-     * The registration status of the registrant. Read-only.
-     */
-    private MeetingRegistrantStatus status;
-    /**
-     * Instantiates a new meetingRegistrant and sets the default values.
+     * Instantiates a new MeetingRegistrant and sets the default values.
      */
     public MeetingRegistrant() {
         super();
@@ -43,7 +19,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingRegistrant
+     * @return a MeetingRegistrant
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,19 +28,19 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
     }
     /**
      * Gets the customQuestionAnswers property value. The registrant's answer to custom questions.
-     * @return a customQuestionAnswer
+     * @return a java.util.List<CustomQuestionAnswer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomQuestionAnswer> getCustomQuestionAnswers() {
-        return this.customQuestionAnswers;
+        return this.backingStore.get("customQuestionAnswers");
     }
     /**
      * Gets the email property value. The email address of the registrant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -78,24 +54,24 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
         deserializerMap.put("firstName", (n) -> { this.setFirstName(n.getStringValue()); });
         deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
         deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MeetingRegistrantStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MeetingRegistrantStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the firstName property value. The first name of the registrant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirstName() {
-        return this.firstName;
+        return this.backingStore.get("firstName");
     }
     /**
      * Gets the lastName property value. The last name of the registrant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastName() {
-        return this.lastName;
+        return this.backingStore.get("lastName");
     }
     /**
      * Gets the registrationDateTime property value. Time in UTC when the registrant registers for the meeting. Read-only.
@@ -103,15 +79,15 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegistrationDateTime() {
-        return this.registrationDateTime;
+        return this.backingStore.get("registrationDateTime");
     }
     /**
      * Gets the status property value. The registration status of the registrant. Read-only.
-     * @return a meetingRegistrantStatus
+     * @return a MeetingRegistrantStatus
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrantStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the customQuestionAnswers property.
      */
     public void setCustomQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<CustomQuestionAnswer> value) {
-        this.customQuestionAnswers = value;
+        this.backingStore.set("customQuestionAnswers", value);
     }
     /**
      * Sets the email property value. The email address of the registrant.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the firstName property value. The first name of the registrant.
      * @param value Value to set for the firstName property.
      */
     public void setFirstName(@jakarta.annotation.Nullable final String value) {
-        this.firstName = value;
+        this.backingStore.set("firstName", value);
     }
     /**
      * Sets the lastName property value. The last name of the registrant.
      * @param value Value to set for the lastName property.
      */
     public void setLastName(@jakarta.annotation.Nullable final String value) {
-        this.lastName = value;
+        this.backingStore.set("lastName", value);
     }
     /**
      * Sets the registrationDateTime property value. Time in UTC when the registrant registers for the meeting. Read-only.
      * @param value Value to set for the registrationDateTime property.
      */
     public void setRegistrationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.registrationDateTime = value;
+        this.backingStore.set("registrationDateTime", value);
     }
     /**
      * Sets the status property value. The registration status of the registrant. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final MeetingRegistrantStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

@@ -6,33 +6,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The deviceManagementScriptAssignments property
-     */
-    private java.util.List<DeviceManagementScriptAssignment> deviceManagementScriptAssignments;
-    /**
-     * The deviceManagementScriptGroupAssignments property
-     */
-    private java.util.List<DeviceManagementScriptGroupAssignment> deviceManagementScriptGroupAssignments;
-    /**
-     * Instantiates a new assignPostRequestBody and sets the default values.
+     * Instantiates a new AssignPostRequestBody and sets the default values.
      */
     public AssignPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignPostRequestBody
+     * @return a AssignPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AssignPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,28 +37,41 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
         return new AssignPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the deviceManagementScriptAssignments property value. The deviceManagementScriptAssignments property
-     * @return a deviceManagementScriptAssignment
+     * @return a java.util.List<DeviceManagementScriptAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptAssignment> getDeviceManagementScriptAssignments() {
-        return this.deviceManagementScriptAssignments;
+        return this.backingStore.get("deviceManagementScriptAssignments");
     }
     /**
      * Gets the deviceManagementScriptGroupAssignments property value. The deviceManagementScriptGroupAssignments property
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a java.util.List<DeviceManagementScriptGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getDeviceManagementScriptGroupAssignments() {
-        return this.deviceManagementScriptGroupAssignments;
+        return this.backingStore.get("deviceManagementScriptGroupAssignments");
     }
     /**
      * The deserialization information for the current model
@@ -85,24 +95,32 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the deviceManagementScriptAssignments property value. The deviceManagementScriptAssignments property
      * @param value Value to set for the deviceManagementScriptAssignments property.
      */
     public void setDeviceManagementScriptAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptAssignment> value) {
-        this.deviceManagementScriptAssignments = value;
+        this.backingStore.set("deviceManagementScriptAssignments", value);
     }
     /**
      * Sets the deviceManagementScriptGroupAssignments property value. The deviceManagementScriptGroupAssignments property
      * @param value Value to set for the deviceManagementScriptGroupAssignments property.
      */
     public void setDeviceManagementScriptGroupAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptGroupAssignment> value) {
-        this.deviceManagementScriptGroupAssignments = value;
+        this.backingStore.set("deviceManagementScriptGroupAssignments", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Describes deployment security group to assign a deployment to. The backend will expand the security Group ID to extract device serial numbers prior sending a create deployment request to Zebra.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Parsable {
+public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
-     */
-    private DeviceAndAppManagementAssignmentTarget assignmentTarget;
-    /**
-     * The display name of the Azure AD security group used for the assignment.
-     */
-    private String displayName;
-    /**
-     * A unique identifier assigned to each Android FOTA Assignment entity
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The AAD Group we are deploying firmware updates to
-     */
-    private AndroidFotaDeploymentAssignmentTarget target;
-    /**
-     * Instantiates a new androidFotaDeploymentAssignment and sets the default values.
+     * Instantiates a new AndroidFotaDeploymentAssignment and sets the default values.
      */
     public AndroidFotaDeploymentAssignment() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidFotaDeploymentAssignment
+     * @return a AndroidFotaDeploymentAssignment
      */
     @jakarta.annotation.Nonnull
     public static AndroidFotaDeploymentAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,28 +38,41 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         return new AndroidFotaDeploymentAssignment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getAssignmentTarget() {
-        return this.assignmentTarget;
+        return this.backingStore.get("assignmentTarget");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the displayName property value. The display name of the Azure AD security group used for the assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -92,27 +90,27 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the target property value. The AAD Group we are deploying firmware updates to
-     * @return a androidFotaDeploymentAssignmentTarget
+     * @return a AndroidFotaDeploymentAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -128,45 +126,53 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
      * @param value Value to set for the assignmentTarget property.
      */
     public void setAssignmentTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.assignmentTarget = value;
+        this.backingStore.set("assignmentTarget", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. The display name of the Azure AD security group used for the assignment.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the target property value. The AAD Group we are deploying firmware updates to
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final AndroidFotaDeploymentAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

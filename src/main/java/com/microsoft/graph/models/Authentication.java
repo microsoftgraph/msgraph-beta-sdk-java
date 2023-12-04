@@ -9,55 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Authentication extends Entity implements Parsable {
     /**
-     * Represents the email addresses registered to a user for authentication.
-     */
-    private java.util.List<EmailAuthenticationMethod> emailMethods;
-    /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
-     */
-    private java.util.List<Fido2AuthenticationMethod> fido2Methods;
-    /**
-     * Represents all authentication methods registered to a user.
-     */
-    private java.util.List<AuthenticationMethod> methods;
-    /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
-     */
-    private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> microsoftAuthenticatorMethods;
-    /**
-     * The operations property
-     */
-    private java.util.List<LongRunningOperation> operations;
-    /**
-     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
-     */
-    private java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> passwordlessMicrosoftAuthenticatorMethods;
-    /**
-     * Represents the details of the password authentication method registered to a user for authentication.
-     */
-    private java.util.List<PasswordAuthenticationMethod> passwordMethods;
-    /**
-     * Represents the phone registered to a user for authentication.
-     */
-    private java.util.List<PhoneAuthenticationMethod> phoneMethods;
-    /**
-     * The settings and preferences for to the sign-in experience of a user.
-     */
-    private SignInPreferences signInPreferences;
-    /**
-     * The softwareOathMethods property
-     */
-    private java.util.List<SoftwareOathAuthenticationMethod> softwareOathMethods;
-    /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
-     */
-    private java.util.List<TemporaryAccessPassAuthenticationMethod> temporaryAccessPassMethods;
-    /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
-     */
-    private java.util.List<WindowsHelloForBusinessAuthenticationMethod> windowsHelloForBusinessMethods;
-    /**
-     * Instantiates a new authentication and sets the default values.
+     * Instantiates a new Authentication and sets the default values.
      */
     public Authentication() {
         super();
@@ -65,7 +17,7 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authentication
+     * @return a Authentication
      */
     @jakarta.annotation.Nonnull
     public static Authentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,19 +26,19 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the emailMethods property value. Represents the email addresses registered to a user for authentication.
-     * @return a emailAuthenticationMethod
+     * @return a java.util.List<EmailAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAuthenticationMethod> getEmailMethods() {
-        return this.emailMethods;
+        return this.backingStore.get("emailMethods");
     }
     /**
      * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
-     * @return a fido2AuthenticationMethod
+     * @return a java.util.List<Fido2AuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Fido2AuthenticationMethod> getFido2Methods() {
-        return this.fido2Methods;
+        return this.backingStore.get("fido2Methods");
     }
     /**
      * The deserialization information for the current model
@@ -103,6 +55,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("passwordlessMicrosoftAuthenticatorMethods", (n) -> { this.setPasswordlessMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(PasswordlessMicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("passwordMethods", (n) -> { this.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("phoneMethods", (n) -> { this.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("signInPreferences", (n) -> { this.setSignInPreferences(n.getObjectValue(SignInPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -111,83 +64,91 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the methods property value. Represents all authentication methods registered to a user.
-     * @return a authenticationMethod
+     * @return a java.util.List<AuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethod> getMethods() {
-        return this.methods;
+        return this.backingStore.get("methods");
     }
     /**
      * Gets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
-     * @return a microsoftAuthenticatorAuthenticationMethod
+     * @return a java.util.List<MicrosoftAuthenticatorAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethod> getMicrosoftAuthenticatorMethods() {
-        return this.microsoftAuthenticatorMethods;
+        return this.backingStore.get("microsoftAuthenticatorMethods");
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a longRunningOperation
+     * @return a java.util.List<LongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
-        return this.operations;
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the passwordlessMicrosoftAuthenticatorMethods property value. Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
-     * @return a passwordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @return a java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> getPasswordlessMicrosoftAuthenticatorMethods() {
-        return this.passwordlessMicrosoftAuthenticatorMethods;
+        return this.backingStore.get("passwordlessMicrosoftAuthenticatorMethods");
     }
     /**
      * Gets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
-     * @return a passwordAuthenticationMethod
+     * @return a java.util.List<PasswordAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordAuthenticationMethod> getPasswordMethods() {
-        return this.passwordMethods;
+        return this.backingStore.get("passwordMethods");
     }
     /**
      * Gets the phoneMethods property value. Represents the phone registered to a user for authentication.
-     * @return a phoneAuthenticationMethod
+     * @return a java.util.List<PhoneAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhoneAuthenticationMethod> getPhoneMethods() {
-        return this.phoneMethods;
+        return this.backingStore.get("phoneMethods");
+    }
+    /**
+     * Gets the platformCredentialMethods property value. The platformCredentialMethods property
+     * @return a java.util.List<PlatformCredentialAuthenticationMethod>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlatformCredentialAuthenticationMethod> getPlatformCredentialMethods() {
+        return this.backingStore.get("platformCredentialMethods");
     }
     /**
      * Gets the signInPreferences property value. The settings and preferences for to the sign-in experience of a user.
-     * @return a signInPreferences
+     * @return a SignInPreferences
      */
     @jakarta.annotation.Nullable
     public SignInPreferences getSignInPreferences() {
-        return this.signInPreferences;
+        return this.backingStore.get("signInPreferences");
     }
     /**
      * Gets the softwareOathMethods property value. The softwareOathMethods property
-     * @return a softwareOathAuthenticationMethod
+     * @return a java.util.List<SoftwareOathAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SoftwareOathAuthenticationMethod> getSoftwareOathMethods() {
-        return this.softwareOathMethods;
+        return this.backingStore.get("softwareOathMethods");
     }
     /**
      * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
-     * @return a temporaryAccessPassAuthenticationMethod
+     * @return a java.util.List<TemporaryAccessPassAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemporaryAccessPassAuthenticationMethod> getTemporaryAccessPassMethods() {
-        return this.temporaryAccessPassMethods;
+        return this.backingStore.get("temporaryAccessPassMethods");
     }
     /**
      * Gets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
-     * @return a windowsHelloForBusinessAuthenticationMethod
+     * @return a java.util.List<WindowsHelloForBusinessAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsHelloForBusinessAuthenticationMethod> getWindowsHelloForBusinessMethods() {
-        return this.windowsHelloForBusinessMethods;
+        return this.backingStore.get("windowsHelloForBusinessMethods");
     }
     /**
      * Serializes information the current object
@@ -204,6 +165,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("passwordlessMicrosoftAuthenticatorMethods", this.getPasswordlessMicrosoftAuthenticatorMethods());
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
+        writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
         writer.writeObjectValue("signInPreferences", this.getSignInPreferences());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
@@ -214,83 +176,90 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the emailMethods property.
      */
     public void setEmailMethods(@jakarta.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
-        this.emailMethods = value;
+        this.backingStore.set("emailMethods", value);
     }
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      * @param value Value to set for the fido2Methods property.
      */
     public void setFido2Methods(@jakarta.annotation.Nullable final java.util.List<Fido2AuthenticationMethod> value) {
-        this.fido2Methods = value;
+        this.backingStore.set("fido2Methods", value);
     }
     /**
      * Sets the methods property value. Represents all authentication methods registered to a user.
      * @param value Value to set for the methods property.
      */
     public void setMethods(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethod> value) {
-        this.methods = value;
+        this.backingStore.set("methods", value);
     }
     /**
      * Sets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param value Value to set for the microsoftAuthenticatorMethods property.
      */
     public void setMicrosoftAuthenticatorMethods(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
-        this.microsoftAuthenticatorMethods = value;
+        this.backingStore.set("microsoftAuthenticatorMethods", value);
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
-        this.operations = value;
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the passwordlessMicrosoftAuthenticatorMethods property value. Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param value Value to set for the passwordlessMicrosoftAuthenticatorMethods property.
      */
     public void setPasswordlessMicrosoftAuthenticatorMethods(@jakarta.annotation.Nullable final java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> value) {
-        this.passwordlessMicrosoftAuthenticatorMethods = value;
+        this.backingStore.set("passwordlessMicrosoftAuthenticatorMethods", value);
     }
     /**
      * Sets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
      * @param value Value to set for the passwordMethods property.
      */
     public void setPasswordMethods(@jakarta.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
-        this.passwordMethods = value;
+        this.backingStore.set("passwordMethods", value);
     }
     /**
      * Sets the phoneMethods property value. Represents the phone registered to a user for authentication.
      * @param value Value to set for the phoneMethods property.
      */
     public void setPhoneMethods(@jakarta.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
-        this.phoneMethods = value;
+        this.backingStore.set("phoneMethods", value);
+    }
+    /**
+     * Sets the platformCredentialMethods property value. The platformCredentialMethods property
+     * @param value Value to set for the platformCredentialMethods property.
+     */
+    public void setPlatformCredentialMethods(@jakarta.annotation.Nullable final java.util.List<PlatformCredentialAuthenticationMethod> value) {
+        this.backingStore.set("platformCredentialMethods", value);
     }
     /**
      * Sets the signInPreferences property value. The settings and preferences for to the sign-in experience of a user.
      * @param value Value to set for the signInPreferences property.
      */
     public void setSignInPreferences(@jakarta.annotation.Nullable final SignInPreferences value) {
-        this.signInPreferences = value;
+        this.backingStore.set("signInPreferences", value);
     }
     /**
      * Sets the softwareOathMethods property value. The softwareOathMethods property
      * @param value Value to set for the softwareOathMethods property.
      */
     public void setSoftwareOathMethods(@jakarta.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
-        this.softwareOathMethods = value;
+        this.backingStore.set("softwareOathMethods", value);
     }
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param value Value to set for the temporaryAccessPassMethods property.
      */
     public void setTemporaryAccessPassMethods(@jakarta.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
-        this.temporaryAccessPassMethods = value;
+        this.backingStore.set("temporaryAccessPassMethods", value);
     }
     /**
      * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @param value Value to set for the windowsHelloForBusinessMethods property.
      */
     public void setWindowsHelloForBusinessMethods(@jakarta.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
-        this.windowsHelloForBusinessMethods = value;
+        this.backingStore.set("windowsHelloForBusinessMethods", value);
     }
 }

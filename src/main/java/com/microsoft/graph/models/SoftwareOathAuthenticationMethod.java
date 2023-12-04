@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The secret key of the method. Always returns null.
-     */
-    private String secretKey;
-    /**
-     * Instantiates a new softwareOathAuthenticationMethod and sets the default values.
+     * Instantiates a new SoftwareOathAuthenticationMethod and sets the default values.
      */
     public SoftwareOathAuthenticationMethod() {
         super();
@@ -22,7 +18,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a softwareOathAuthenticationMethod
+     * @return a SoftwareOathAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static SoftwareOathAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     }
     /**
      * Gets the secretKey property value. The secret key of the method. Always returns null.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecretKey() {
-        return this.secretKey;
+        return this.backingStore.get("secretKey");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param value Value to set for the secretKey property.
      */
     public void setSecretKey(@jakarta.annotation.Nullable final String value) {
-        this.secretKey = value;
+        this.backingStore.set("secretKey", value);
     }
 }
