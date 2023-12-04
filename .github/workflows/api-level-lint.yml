@@ -15,7 +15,7 @@ jobs:
   lint-api-level:
     runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
           distribution: 'adopt'

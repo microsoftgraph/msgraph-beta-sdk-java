@@ -21,7 +21,7 @@ jobs:
       name: maven_central_snapshot
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
       - name: Set up JDK
@@ -68,7 +68,7 @@ jobs:
     env:
       RELEASE_TAG: ""
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Get Version
         id: GetVersion
         run: .\Scripts\getLatestVersion.ps1
