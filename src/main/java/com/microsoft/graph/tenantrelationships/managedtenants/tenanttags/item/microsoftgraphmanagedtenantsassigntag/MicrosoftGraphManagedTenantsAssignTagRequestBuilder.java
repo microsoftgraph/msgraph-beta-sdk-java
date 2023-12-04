@@ -36,33 +36,33 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.assignTag", rawUrl);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tenantTag
+     * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantTag> post(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public TenantTag post(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantTag
+     * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantTag> post(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TenantTag post(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TenantTag::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,24 +79,16 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsAssignTagRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsAssignTagRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsAssignTagRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

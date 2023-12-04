@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * A mapping of application identifiers to associated domains.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsable {
+public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The application identifier of the app to associate domains with.
-     */
-    private String applicationIdentifier;
-    /**
-     * Determines whether data should be downloaded directly or via a CDN.
-     */
-    private Boolean directDownloadsEnabled;
-    /**
-     * The list of domains to associate.
-     */
-    private java.util.List<String> domains;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new macOSAssociatedDomainsItem and sets the default values.
+     * Instantiates a new MacOSAssociatedDomainsItem and sets the default values.
      */
     public MacOSAssociatedDomainsItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSAssociatedDomainsItem
+     * @return a MacOSAssociatedDomainsItem
      */
     @jakarta.annotation.Nonnull
     public static MacOSAssociatedDomainsItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,36 +38,49 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
         return new MacOSAssociatedDomainsItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationIdentifier property value. The application identifier of the app to associate domains with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
-        return this.applicationIdentifier;
+        return this.backingStore.get("applicationIdentifier");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the directDownloadsEnabled property value. Determines whether data should be downloaded directly or via a CDN.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDirectDownloadsEnabled() {
-        return this.directDownloadsEnabled;
+        return this.backingStore.get("directDownloadsEnabled");
     }
     /**
      * Gets the domains property value. The list of domains to associate.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
-        return this.domains;
+        return this.backingStore.get("domains");
     }
     /**
      * The deserialization information for the current model
@@ -95,11 +97,11 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -114,38 +116,46 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the applicationIdentifier property value. The application identifier of the app to associate domains with.
      * @param value Value to set for the applicationIdentifier property.
      */
     public void setApplicationIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.applicationIdentifier = value;
+        this.backingStore.set("applicationIdentifier", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the directDownloadsEnabled property value. Determines whether data should be downloaded directly or via a CDN.
      * @param value Value to set for the directDownloadsEnabled property.
      */
     public void setDirectDownloadsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.directDownloadsEnabled = value;
+        this.backingStore.set("directDownloadsEnabled", value);
     }
     /**
      * Sets the domains property value. The list of domains to associate.
      * @param value Value to set for the domains property.
      */
     public void setDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.domains = value;
+        this.backingStore.set("domains", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

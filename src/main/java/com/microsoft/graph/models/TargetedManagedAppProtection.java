@@ -13,23 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /**
-     * Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
-     */
-    private TargetedManagedAppGroupType appGroupType;
-    /**
-     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     */
-    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /**
-     * Indicates if the policy is deployed to any inclusion groups or not.
-     */
-    private Boolean isAssigned;
-    /**
-     * Management levels for apps
-     */
-    private EnumSet<AppManagementLevel> targetedAppManagementLevels;
-    /**
-     * Instantiates a new targetedManagedAppProtection and sets the default values.
+     * Instantiates a new TargetedManagedAppProtection and sets the default values.
      */
     public TargetedManagedAppProtection() {
         super();
@@ -38,7 +22,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppProtection
+     * @return a TargetedManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,19 +39,19 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
-     * @return a targetedManagedAppGroupType
+     * @return a TargetedManagedAppGroupType
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppGroupType getAppGroupType() {
-        return this.appGroupType;
+        return this.backingStore.get("appGroupType");
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +60,27 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
+        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType::forValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
-        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumSetValue(AppManagementLevel.class)); });
+        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumSetValue(AppManagementLevel::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.backingStore.get("isAssigned");
     }
     /**
      * Gets the targetedAppManagementLevels property value. Management levels for apps
-     * @return a appManagementLevel
+     * @return a EnumSet<AppManagementLevel>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AppManagementLevel> getTargetedAppManagementLevels() {
-        return this.targetedAppManagementLevels;
+        return this.backingStore.get("targetedAppManagementLevels");
     }
     /**
      * Serializes information the current object
@@ -115,27 +99,27 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the appGroupType property.
      */
     public void setAppGroupType(@jakarta.annotation.Nullable final TargetedManagedAppGroupType value) {
-        this.appGroupType = value;
+        this.backingStore.set("appGroupType", value);
     }
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.backingStore.set("isAssigned", value);
     }
     /**
      * Sets the targetedAppManagementLevels property value. Management levels for apps
      * @param value Value to set for the targetedAppManagementLevels property.
      */
     public void setTargetedAppManagementLevels(@jakarta.annotation.Nullable final EnumSet<AppManagementLevel> value) {
-        this.targetedAppManagementLevels = value;
+        this.backingStore.set("targetedAppManagementLevels", value);
     }
 }

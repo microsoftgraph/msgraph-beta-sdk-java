@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigManagerCollection extends Entity implements Parsable {
     /**
-     * The collection identifier in SCCM.
-     */
-    private String collectionIdentifier;
-    /**
-     * The created date.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The DisplayName.
-     */
-    private String displayName;
-    /**
-     * The Hierarchy Identifier.
-     */
-    private String hierarchyIdentifier;
-    /**
-     * The HierarchyName.
-     */
-    private String hierarchyName;
-    /**
-     * The last modified date.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Instantiates a new configManagerCollection and sets the default values.
+     * Instantiates a new ConfigManagerCollection and sets the default values.
      */
     public ConfigManagerCollection() {
         super();
@@ -45,7 +21,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configManagerCollection
+     * @return a ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public static ConfigManagerCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,11 +30,11 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the collectionIdentifier property value. The collection identifier in SCCM.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCollectionIdentifier() {
-        return this.collectionIdentifier;
+        return this.backingStore.get("collectionIdentifier");
     }
     /**
      * Gets the createdDateTime property value. The created date.
@@ -66,15 +42,15 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The DisplayName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -93,19 +69,19 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the hierarchyIdentifier property value. The Hierarchy Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHierarchyIdentifier() {
-        return this.hierarchyIdentifier;
+        return this.backingStore.get("hierarchyIdentifier");
     }
     /**
      * Gets the hierarchyName property value. The HierarchyName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHierarchyName() {
-        return this.hierarchyName;
+        return this.backingStore.get("hierarchyName");
     }
     /**
      * Gets the lastModifiedDateTime property value. The last modified date.
@@ -113,7 +89,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the collectionIdentifier property.
      */
     public void setCollectionIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.collectionIdentifier = value;
+        this.backingStore.set("collectionIdentifier", value);
     }
     /**
      * Sets the createdDateTime property value. The created date.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The DisplayName.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the hierarchyIdentifier property value. The Hierarchy Identifier.
      * @param value Value to set for the hierarchyIdentifier property.
      */
     public void setHierarchyIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.hierarchyIdentifier = value;
+        this.backingStore.set("hierarchyIdentifier", value);
     }
     /**
      * Sets the hierarchyName property value. The HierarchyName.
      * @param value Value to set for the hierarchyName property.
      */
     public void setHierarchyName(@jakarta.annotation.Nullable final String value) {
-        this.hierarchyName = value;
+        this.backingStore.set("hierarchyName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The last modified date.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
 }

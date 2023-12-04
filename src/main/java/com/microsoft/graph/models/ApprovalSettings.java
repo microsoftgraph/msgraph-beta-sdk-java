@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ApprovalSettings implements AdditionalDataHolder, Parsable {
+public class ApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
-     */
-    private String approvalMode;
-    /**
-     * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
-     */
-    private java.util.List<ApprovalStage> approvalStages;
-    /**
-     * Indicates whether approval is required for requests in this policy.
-     */
-    private Boolean isApprovalRequired;
-    /**
-     * Indicates whether approval is required for a user to extend their assignment.
-     */
-    private Boolean isApprovalRequiredForExtension;
-    /**
-     * Indicates whether the requestor is required to supply a justification in their request.
-     */
-    private Boolean isRequestorJustificationRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new approvalSettings and sets the default values.
+     * Instantiates a new ApprovalSettings and sets the default values.
      */
     public ApprovalSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalSettings
+     * @return a ApprovalSettings
      */
     @jakarta.annotation.Nonnull
     public static ApprovalSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +35,41 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         return new ApprovalSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApprovalMode() {
-        return this.approvalMode;
+        return this.backingStore.get("approvalMode");
     }
     /**
      * Gets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
-     * @return a approvalStage
+     * @return a java.util.List<ApprovalStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApprovalStage> getApprovalStages() {
-        return this.approvalStages;
+        return this.backingStore.get("approvalStages");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +88,35 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequired() {
-        return this.isApprovalRequired;
+        return this.backingStore.get("isApprovalRequired");
     }
     /**
      * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForExtension() {
-        return this.isApprovalRequiredForExtension;
+        return this.backingStore.get("isApprovalRequiredForExtension");
     }
     /**
      * Gets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
-        return this.isRequestorJustificationRequired;
+        return this.backingStore.get("isRequestorJustificationRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +133,60 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
      * @param value Value to set for the approvalMode property.
      */
     public void setApprovalMode(@jakarta.annotation.Nullable final String value) {
-        this.approvalMode = value;
+        this.backingStore.set("approvalMode", value);
     }
     /**
      * Sets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
      * @param value Value to set for the approvalStages property.
      */
     public void setApprovalStages(@jakarta.annotation.Nullable final java.util.List<ApprovalStage> value) {
-        this.approvalStages = value;
+        this.backingStore.set("approvalStages", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
      * @param value Value to set for the isApprovalRequired property.
      */
     public void setIsApprovalRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequired = value;
+        this.backingStore.set("isApprovalRequired", value);
     }
     /**
      * Sets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
      * @param value Value to set for the isApprovalRequiredForExtension property.
      */
     public void setIsApprovalRequiredForExtension(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApprovalRequiredForExtension = value;
+        this.backingStore.set("isApprovalRequiredForExtension", value);
     }
     /**
      * Sets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
      * @param value Value to set for the isRequestorJustificationRequired property.
      */
     public void setIsRequestorJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequestorJustificationRequired = value;
+        this.backingStore.set("isRequestorJustificationRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalConnection extends Entity implements Parsable {
     /**
-     * The configuration property
-     */
-    private Configuration configuration;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The groups property
-     */
-    private java.util.List<ExternalGroup> groups;
-    /**
-     * The items property
-     */
-    private java.util.List<ExternalItem> items;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The operations property
-     */
-    private java.util.List<ConnectionOperation> operations;
-    /**
-     * The schema property
-     */
-    private Schema schema;
-    /**
-     * The state property
-     */
-    private ConnectionState state;
-    /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      */
     public ExternalConnection() {
         super();
@@ -49,7 +17,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @jakarta.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,19 +26,19 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a configuration
+     * @return a Configuration
      */
     @jakarta.annotation.Nullable
     public Configuration getConfiguration() {
-        return this.configuration;
+        return this.backingStore.get("configuration");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -86,56 +54,56 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(Schema::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the groups property value. The groups property
-     * @return a externalGroup
+     * @return a java.util.List<ExternalGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
-        return this.groups;
+        return this.backingStore.get("groups");
     }
     /**
      * Gets the items property value. The items property
-     * @return a externalItem
+     * @return a java.util.List<ExternalItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
-        return this.items;
+        return this.backingStore.get("items");
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a connectionOperation
+     * @return a java.util.List<ConnectionOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
-        return this.operations;
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the schema property value. The schema property
-     * @return a schema
+     * @return a Schema
      */
     @jakarta.annotation.Nullable
     public Schema getSchema() {
-        return this.schema;
+        return this.backingStore.get("schema");
     }
     /**
      * Gets the state property value. The state property
-     * @return a connectionState
+     * @return a ConnectionState
      */
     @jakarta.annotation.Nullable
     public ConnectionState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -157,55 +125,55 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final Configuration value) {
-        this.configuration = value;
+        this.backingStore.set("configuration", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the groups property value. The groups property
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<ExternalGroup> value) {
-        this.groups = value;
+        this.backingStore.set("groups", value);
     }
     /**
      * Sets the items property value. The items property
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<ExternalItem> value) {
-        this.items = value;
+        this.backingStore.set("items", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<ConnectionOperation> value) {
-        this.operations = value;
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the schema property value. The schema property
      * @param value Value to set for the schema property.
      */
     public void setSchema(@jakarta.annotation.Nullable final Schema value) {
-        this.schema = value;
+        this.backingStore.set("schema", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConnectionState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

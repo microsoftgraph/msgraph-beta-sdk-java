@@ -4,57 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
+public class RegionalFormatOverrides implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The calendar to use, e.g., Gregorian Calendar.Returned by default.
-     */
-    private String calendar;
-    /**
-     * The first day of the week to use, e.g., Sunday.Returned by default.
-     */
-    private String firstDayOfWeek;
-    /**
-     * The long date time format to be used for displaying dates.Returned by default.
-     */
-    private String longDateFormat;
-    /**
-     * The long time format to be used for displaying time.Returned by default.
-     */
-    private String longTimeFormat;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The short date time format to be used for displaying dates.Returned by default.
-     */
-    private String shortDateFormat;
-    /**
-     * The short time format to be used for displaying time.Returned by default.
-     */
-    private String shortTimeFormat;
-    /**
-     * The timezone to be used for displaying time.Returned by default.
-     */
-    private String timeZone;
-    /**
-     * Instantiates a new regionalFormatOverrides and sets the default values.
+     * Instantiates a new RegionalFormatOverrides and sets the default values.
      */
     public RegionalFormatOverrides() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a regionalFormatOverrides
+     * @return a RegionalFormatOverrides
      */
     @jakarta.annotation.Nonnull
     public static RegionalFormatOverrides createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,20 +35,33 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
         return new RegionalFormatOverrides();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalendar() {
-        return this.calendar;
+        return this.backingStore.get("calendar");
     }
     /**
      * The deserialization information for the current model
@@ -96,59 +82,59 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirstDayOfWeek() {
-        return this.firstDayOfWeek;
+        return this.backingStore.get("firstDayOfWeek");
     }
     /**
      * Gets the longDateFormat property value. The long date time format to be used for displaying dates.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLongDateFormat() {
-        return this.longDateFormat;
+        return this.backingStore.get("longDateFormat");
     }
     /**
      * Gets the longTimeFormat property value. The long time format to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLongTimeFormat() {
-        return this.longTimeFormat;
+        return this.backingStore.get("longTimeFormat");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortDateFormat() {
-        return this.shortDateFormat;
+        return this.backingStore.get("shortDateFormat");
     }
     /**
      * Gets the shortTimeFormat property value. The short time format to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortTimeFormat() {
-        return this.shortTimeFormat;
+        return this.backingStore.get("shortTimeFormat");
     }
     /**
      * Gets the timeZone property value. The timezone to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
-        return this.timeZone;
+        return this.backingStore.get("timeZone");
     }
     /**
      * Serializes information the current object
@@ -167,66 +153,74 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
      * @param value Value to set for the calendar property.
      */
     public void setCalendar(@jakarta.annotation.Nullable final String value) {
-        this.calendar = value;
+        this.backingStore.set("calendar", value);
     }
     /**
      * Sets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
      * @param value Value to set for the firstDayOfWeek property.
      */
     public void setFirstDayOfWeek(@jakarta.annotation.Nullable final String value) {
-        this.firstDayOfWeek = value;
+        this.backingStore.set("firstDayOfWeek", value);
     }
     /**
      * Sets the longDateFormat property value. The long date time format to be used for displaying dates.Returned by default.
      * @param value Value to set for the longDateFormat property.
      */
     public void setLongDateFormat(@jakarta.annotation.Nullable final String value) {
-        this.longDateFormat = value;
+        this.backingStore.set("longDateFormat", value);
     }
     /**
      * Sets the longTimeFormat property value. The long time format to be used for displaying time.Returned by default.
      * @param value Value to set for the longTimeFormat property.
      */
     public void setLongTimeFormat(@jakarta.annotation.Nullable final String value) {
-        this.longTimeFormat = value;
+        this.backingStore.set("longTimeFormat", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.
      * @param value Value to set for the shortDateFormat property.
      */
     public void setShortDateFormat(@jakarta.annotation.Nullable final String value) {
-        this.shortDateFormat = value;
+        this.backingStore.set("shortDateFormat", value);
     }
     /**
      * Sets the shortTimeFormat property value. The short time format to be used for displaying time.Returned by default.
      * @param value Value to set for the shortTimeFormat property.
      */
     public void setShortTimeFormat(@jakarta.annotation.Nullable final String value) {
-        this.shortTimeFormat = value;
+        this.backingStore.set("shortTimeFormat", value);
     }
     /**
      * Sets the timeZone property value. The timezone to be used for displaying time.Returned by default.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.timeZone = value;
+        this.backingStore.set("timeZone", value);
     }
 }

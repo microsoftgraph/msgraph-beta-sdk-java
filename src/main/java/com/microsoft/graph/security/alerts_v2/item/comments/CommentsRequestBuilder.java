@@ -46,26 +46,26 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
-     * @return a CompletableFuture of alertComment
+     * @return a java.util.List<AlertComment>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<AlertComment>> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
+    @jakarta.annotation.Nullable
+    public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
         return post(body, null);
     }
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertComment
+     * @return a java.util.List<AlertComment>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<AlertComment>> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendCollectionAsync(requestInfo, AlertComment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendCollection(requestInfo, errorMapping, AlertComment::createFromDiscriminatorValue);
     }
     /**
      * Sets a new value for the collection of alertComment.
@@ -85,24 +85,16 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body.toArray(new AlertComment[0]));
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a commentsRequestBuilder
+     * @return a CommentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CommentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

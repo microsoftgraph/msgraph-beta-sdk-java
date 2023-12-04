@@ -11,67 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsable {
     /**
-     * The authenticationType property
-     */
-    private String authenticationType;
-    /**
-     * The authenticatorFlavor property
-     */
-    private String authenticatorFlavor;
-    /**
-     * The deviceId property
-     */
-    private UUID deviceId;
-    /**
-     * The deviceName property
-     */
-    private String deviceName;
-    /**
-     * The deviceTag property
-     */
-    private String deviceTag;
-    /**
-     * The deviceToken property
-     */
-    private String deviceToken;
-    /**
-     * The hashFunction property
-     */
-    private String hashFunction;
-    /**
-     * The lastAuthenticatedDateTime property
-     */
-    private OffsetDateTime lastAuthenticatedDateTime;
-    /**
-     * The notificationType property
-     */
-    private String notificationType;
-    /**
-     * The oathSecretKey property
-     */
-    private String oathSecretKey;
-    /**
-     * The oathTokenMetadata property
-     */
-    private OathTokenMetadata oathTokenMetadata;
-    /**
-     * The oathTokenTimeDriftInSeconds property
-     */
-    private Integer oathTokenTimeDriftInSeconds;
-    /**
-     * The phoneAppVersion property
-     */
-    private String phoneAppVersion;
-    /**
-     * The tenantDeviceId property
-     */
-    private String tenantDeviceId;
-    /**
-     * The tokenGenerationIntervalInSeconds property
-     */
-    private Integer tokenGenerationIntervalInSeconds;
-    /**
-     * Instantiates a new strongAuthenticationPhoneAppDetail and sets the default values.
+     * Instantiates a new StrongAuthenticationPhoneAppDetail and sets the default values.
      */
     public StrongAuthenticationPhoneAppDetail() {
         super();
@@ -79,7 +19,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a strongAuthenticationPhoneAppDetail
+     * @return a StrongAuthenticationPhoneAppDetail
      */
     @jakarta.annotation.Nonnull
     public static StrongAuthenticationPhoneAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,19 +28,19 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the authenticationType property value. The authenticationType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationType() {
-        return this.authenticationType;
+        return this.backingStore.get("authenticationType");
     }
     /**
      * Gets the authenticatorFlavor property value. The authenticatorFlavor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticatorFlavor() {
-        return this.authenticatorFlavor;
+        return this.backingStore.get("authenticatorFlavor");
     }
     /**
      * Gets the deviceId property value. The deviceId property
@@ -108,31 +48,31 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public UUID getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the deviceTag property value. The deviceTag property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
-        return this.deviceTag;
+        return this.backingStore.get("deviceTag");
     }
     /**
      * Gets the deviceToken property value. The deviceToken property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceToken() {
-        return this.deviceToken;
+        return this.backingStore.get("deviceToken");
     }
     /**
      * The deserialization information for the current model
@@ -160,11 +100,11 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the hashFunction property value. The hashFunction property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHashFunction() {
-        return this.hashFunction;
+        return this.backingStore.get("hashFunction");
     }
     /**
      * Gets the lastAuthenticatedDateTime property value. The lastAuthenticatedDateTime property
@@ -172,63 +112,63 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAuthenticatedDateTime() {
-        return this.lastAuthenticatedDateTime;
+        return this.backingStore.get("lastAuthenticatedDateTime");
     }
     /**
      * Gets the notificationType property value. The notificationType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationType() {
-        return this.notificationType;
+        return this.backingStore.get("notificationType");
     }
     /**
      * Gets the oathSecretKey property value. The oathSecretKey property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOathSecretKey() {
-        return this.oathSecretKey;
+        return this.backingStore.get("oathSecretKey");
     }
     /**
      * Gets the oathTokenMetadata property value. The oathTokenMetadata property
-     * @return a oathTokenMetadata
+     * @return a OathTokenMetadata
      */
     @jakarta.annotation.Nullable
     public OathTokenMetadata getOathTokenMetadata() {
-        return this.oathTokenMetadata;
+        return this.backingStore.get("oathTokenMetadata");
     }
     /**
      * Gets the oathTokenTimeDriftInSeconds property value. The oathTokenTimeDriftInSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOathTokenTimeDriftInSeconds() {
-        return this.oathTokenTimeDriftInSeconds;
+        return this.backingStore.get("oathTokenTimeDriftInSeconds");
     }
     /**
      * Gets the phoneAppVersion property value. The phoneAppVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {
-        return this.phoneAppVersion;
+        return this.backingStore.get("phoneAppVersion");
     }
     /**
      * Gets the tenantDeviceId property value. The tenantDeviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDeviceId() {
-        return this.tenantDeviceId;
+        return this.backingStore.get("tenantDeviceId");
     }
     /**
      * Gets the tokenGenerationIntervalInSeconds property value. The tokenGenerationIntervalInSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTokenGenerationIntervalInSeconds() {
-        return this.tokenGenerationIntervalInSeconds;
+        return this.backingStore.get("tokenGenerationIntervalInSeconds");
     }
     /**
      * Serializes information the current object
@@ -258,104 +198,104 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
-        this.authenticationType = value;
+        this.backingStore.set("authenticationType", value);
     }
     /**
      * Sets the authenticatorFlavor property value. The authenticatorFlavor property
      * @param value Value to set for the authenticatorFlavor property.
      */
     public void setAuthenticatorFlavor(@jakarta.annotation.Nullable final String value) {
-        this.authenticatorFlavor = value;
+        this.backingStore.set("authenticatorFlavor", value);
     }
     /**
      * Sets the deviceId property value. The deviceId property
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final UUID value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. The deviceName property
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the deviceTag property value. The deviceTag property
      * @param value Value to set for the deviceTag property.
      */
     public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
-        this.deviceTag = value;
+        this.backingStore.set("deviceTag", value);
     }
     /**
      * Sets the deviceToken property value. The deviceToken property
      * @param value Value to set for the deviceToken property.
      */
     public void setDeviceToken(@jakarta.annotation.Nullable final String value) {
-        this.deviceToken = value;
+        this.backingStore.set("deviceToken", value);
     }
     /**
      * Sets the hashFunction property value. The hashFunction property
      * @param value Value to set for the hashFunction property.
      */
     public void setHashFunction(@jakarta.annotation.Nullable final String value) {
-        this.hashFunction = value;
+        this.backingStore.set("hashFunction", value);
     }
     /**
      * Sets the lastAuthenticatedDateTime property value. The lastAuthenticatedDateTime property
      * @param value Value to set for the lastAuthenticatedDateTime property.
      */
     public void setLastAuthenticatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastAuthenticatedDateTime = value;
+        this.backingStore.set("lastAuthenticatedDateTime", value);
     }
     /**
      * Sets the notificationType property value. The notificationType property
      * @param value Value to set for the notificationType property.
      */
     public void setNotificationType(@jakarta.annotation.Nullable final String value) {
-        this.notificationType = value;
+        this.backingStore.set("notificationType", value);
     }
     /**
      * Sets the oathSecretKey property value. The oathSecretKey property
      * @param value Value to set for the oathSecretKey property.
      */
     public void setOathSecretKey(@jakarta.annotation.Nullable final String value) {
-        this.oathSecretKey = value;
+        this.backingStore.set("oathSecretKey", value);
     }
     /**
      * Sets the oathTokenMetadata property value. The oathTokenMetadata property
      * @param value Value to set for the oathTokenMetadata property.
      */
     public void setOathTokenMetadata(@jakarta.annotation.Nullable final OathTokenMetadata value) {
-        this.oathTokenMetadata = value;
+        this.backingStore.set("oathTokenMetadata", value);
     }
     /**
      * Sets the oathTokenTimeDriftInSeconds property value. The oathTokenTimeDriftInSeconds property
      * @param value Value to set for the oathTokenTimeDriftInSeconds property.
      */
     public void setOathTokenTimeDriftInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.oathTokenTimeDriftInSeconds = value;
+        this.backingStore.set("oathTokenTimeDriftInSeconds", value);
     }
     /**
      * Sets the phoneAppVersion property value. The phoneAppVersion property
      * @param value Value to set for the phoneAppVersion property.
      */
     public void setPhoneAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.phoneAppVersion = value;
+        this.backingStore.set("phoneAppVersion", value);
     }
     /**
      * Sets the tenantDeviceId property value. The tenantDeviceId property
      * @param value Value to set for the tenantDeviceId property.
      */
     public void setTenantDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.tenantDeviceId = value;
+        this.backingStore.set("tenantDeviceId", value);
     }
     /**
      * Sets the tokenGenerationIntervalInSeconds property value. The tokenGenerationIntervalInSeconds property
      * @param value Value to set for the tokenGenerationIntervalInSeconds property.
      */
     public void setTokenGenerationIntervalInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.tokenGenerationIntervalInSeconds = value;
+        this.backingStore.set("tokenGenerationIntervalInSeconds", value);
     }
 }

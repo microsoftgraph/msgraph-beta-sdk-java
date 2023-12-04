@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesAgentGroup extends Entity implements Parsable {
     /**
-     * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     */
-    private java.util.List<OnPremisesAgent> agents;
-    /**
-     * Display name of the onPremisesAgentGroup.
-     */
-    private String displayName;
-    /**
-     * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
-     */
-    private Boolean isDefault;
-    /**
-     * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     */
-    private java.util.List<PublishedResource> publishedResources;
-    /**
-     * The publishingType property
-     */
-    private OnPremisesPublishingType publishingType;
-    /**
-     * Instantiates a new onPremisesAgentGroup and sets the default values.
+     * Instantiates a new OnPremisesAgentGroup and sets the default values.
      */
     public OnPremisesAgentGroup() {
         super();
@@ -37,7 +17,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesAgentGroup
+     * @return a OnPremisesAgentGroup
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesAgentGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +26,19 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the agents property value. List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a onPremisesAgent
+     * @return a java.util.List<OnPremisesAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
-        return this.agents;
+        return this.backingStore.get("agents");
     }
     /**
      * Gets the displayName property value. Display name of the onPremisesAgentGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,32 +51,32 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
         deserializerMap.put("publishedResources", (n) -> { this.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("publishingType", (n) -> { this.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
+        deserializerMap.put("publishingType", (n) -> { this.setPublishingType(n.getEnumValue(OnPremisesPublishingType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.backingStore.get("isDefault");
     }
     /**
      * Gets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a publishedResource
+     * @return a java.util.List<PublishedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
-        return this.publishedResources;
+        return this.backingStore.get("publishedResources");
     }
     /**
      * Gets the publishingType property value. The publishingType property
-     * @return a onPremisesPublishingType
+     * @return a OnPremisesPublishingType
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {
-        return this.publishingType;
+        return this.backingStore.get("publishingType");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the agents property.
      */
     public void setAgents(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
-        this.agents = value;
+        this.backingStore.set("agents", value);
     }
     /**
      * Sets the displayName property value. Display name of the onPremisesAgentGroup.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.backingStore.set("isDefault", value);
     }
     /**
      * Sets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @param value Value to set for the publishedResources property.
      */
     public void setPublishedResources(@jakarta.annotation.Nullable final java.util.List<PublishedResource> value) {
-        this.publishedResources = value;
+        this.backingStore.set("publishedResources", value);
     }
     /**
      * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      */
     public void setPublishingType(@jakarta.annotation.Nullable final OnPremisesPublishingType value) {
-        this.publishingType = value;
+        this.backingStore.set("publishingType", value);
     }
 }

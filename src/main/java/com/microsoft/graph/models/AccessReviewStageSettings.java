@@ -5,65 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable {
+public class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Indicate which decisions will go to the next stage. Can be a subset of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
-     */
-    private java.util.List<String> decisionsThatWillMoveToNextStage;
-    /**
-     * Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
-     */
-    private java.util.List<String> dependsOn;
-    /**
-     * The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
-     */
-    private Integer durationInDays;
-    /**
-     * If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     */
-    private java.util.List<AccessReviewReviewerScope> fallbackReviewers;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The recommendationInsightSettings property
-     */
-    private java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
-    /**
-     * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) from which that recommendations will be configured. The recommendation is to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     */
-    private PeriodAndDuration recommendationLookBackDuration;
-    /**
-     * Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     */
-    private Boolean recommendationsEnabled;
-    /**
-     * Defines who the reviewers are. If none is specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition.
-     */
-    private java.util.List<AccessReviewReviewerScope> reviewers;
-    /**
-     * Unique identifier of the accessReviewStageSettings. The stageId is used in dependsOn property to indicate the stage relationship. Required.
-     */
-    private String stageId;
-    /**
-     * Instantiates a new accessReviewStageSettings and sets the default values.
+     * Instantiates a new AccessReviewStageSettings and sets the default values.
      */
     public AccessReviewStageSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewStageSettings
+     * @return a AccessReviewStageSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewStageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,44 +36,57 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         return new AccessReviewStageSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a subset of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDecisionsThatWillMoveToNextStage() {
-        return this.decisionsThatWillMoveToNextStage;
+        return this.backingStore.get("decisionsThatWillMoveToNextStage");
     }
     /**
      * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDependsOn() {
-        return this.dependsOn;
+        return this.backingStore.get("dependsOn");
     }
     /**
      * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
-        return this.durationInDays;
+        return this.backingStore.get("durationInDays");
     }
     /**
-     * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     * @return a accessReviewReviewerScope
+     * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * @return a java.util.List<AccessReviewReviewerScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
-        return this.fallbackReviewers;
+        return this.backingStore.get("fallbackReviewers");
     }
     /**
      * The deserialization information for the current model
@@ -131,51 +109,51 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
-     * @return a accessReviewRecommendationInsightSetting
+     * @return a java.util.List<AccessReviewRecommendationInsightSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
-        return this.recommendationInsightSettings;
+        return this.backingStore.get("recommendationInsightSettings");
     }
     /**
-     * Gets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) from which that recommendations will be configured. The recommendation is to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * Gets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) from which that recommendations will be configured. The recommendation is to deny if the user is inactive during the look back duration. For reviews of groups and Microsoft Entra roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRecommendationLookBackDuration() {
-        return this.recommendationLookBackDuration;
+        return this.backingStore.get("recommendationLookBackDuration");
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRecommendationsEnabled() {
-        return this.recommendationsEnabled;
+        return this.backingStore.get("recommendationsEnabled");
     }
     /**
      * Gets the reviewers property value. Defines who the reviewers are. If none is specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition.
-     * @return a accessReviewReviewerScope
+     * @return a java.util.List<AccessReviewReviewerScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
-        return this.reviewers;
+        return this.backingStore.get("reviewers");
     }
     /**
      * Gets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId is used in dependsOn property to indicate the stage relationship. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStageId() {
-        return this.stageId;
+        return this.backingStore.get("stageId");
     }
     /**
      * Serializes information the current object
@@ -196,80 +174,88 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a subset of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
      * @param value Value to set for the decisionsThatWillMoveToNextStage property.
      */
     public void setDecisionsThatWillMoveToNextStage(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.decisionsThatWillMoveToNextStage = value;
+        this.backingStore.set("decisionsThatWillMoveToNextStage", value);
     }
     /**
      * Sets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
      * @param value Value to set for the dependsOn property.
      */
     public void setDependsOn(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.dependsOn = value;
+        this.backingStore.set("dependsOn", value);
     }
     /**
      * Sets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.durationInDays = value;
+        this.backingStore.set("durationInDays", value);
     }
     /**
-     * Sets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * Sets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this.fallbackReviewers = value;
+        this.backingStore.set("fallbackReviewers", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
      * @param value Value to set for the recommendationInsightSettings property.
      */
     public void setRecommendationInsightSettings(@jakarta.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
-        this.recommendationInsightSettings = value;
+        this.backingStore.set("recommendationInsightSettings", value);
     }
     /**
-     * Sets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) from which that recommendations will be configured. The recommendation is to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * Sets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) from which that recommendations will be configured. The recommendation is to deny if the user is inactive during the look back duration. For reviews of groups and Microsoft Entra roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the recommendationLookBackDuration property.
      */
     public void setRecommendationLookBackDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.recommendationLookBackDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("recommendationLookBackDuration", value);
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the recommendationsEnabled property.
      */
     public void setRecommendationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.recommendationsEnabled = value;
+        this.backingStore.set("recommendationsEnabled", value);
     }
     /**
      * Sets the reviewers property value. Defines who the reviewers are. If none is specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition.
      * @param value Value to set for the reviewers property.
      */
     public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this.reviewers = value;
+        this.backingStore.set("reviewers", value);
     }
     /**
      * Sets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId is used in dependsOn property to indicate the stage relationship. Required.
      * @param value Value to set for the stageId property.
      */
     public void setStageId(@jakarta.annotation.Nullable final String value) {
-        this.stageId = value;
+        this.backingStore.set("stageId", value);
     }
 }

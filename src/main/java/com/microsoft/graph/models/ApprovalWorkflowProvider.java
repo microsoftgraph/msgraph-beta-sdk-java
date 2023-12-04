@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /**
-     * The businessFlows property
-     */
-    private java.util.List<BusinessFlow> businessFlows;
-    /**
-     * The businessFlowsWithRequestsAwaitingMyDecision property
-     */
-    private java.util.List<BusinessFlow> businessFlowsWithRequestsAwaitingMyDecision;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The policyTemplates property
-     */
-    private java.util.List<GovernancePolicyTemplate> policyTemplates;
-    /**
-     * Instantiates a new approvalWorkflowProvider and sets the default values.
+     * Instantiates a new ApprovalWorkflowProvider and sets the default values.
      */
     public ApprovalWorkflowProvider() {
         super();
@@ -33,7 +17,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalWorkflowProvider
+     * @return a ApprovalWorkflowProvider
      */
     @jakarta.annotation.Nonnull
     public static ApprovalWorkflowProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,27 +26,27 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     }
     /**
      * Gets the businessFlows property value. The businessFlows property
-     * @return a businessFlow
+     * @return a java.util.List<BusinessFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BusinessFlow> getBusinessFlows() {
-        return this.businessFlows;
+        return this.backingStore.get("businessFlows");
     }
     /**
      * Gets the businessFlowsWithRequestsAwaitingMyDecision property value. The businessFlowsWithRequestsAwaitingMyDecision property
-     * @return a businessFlow
+     * @return a java.util.List<BusinessFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BusinessFlow> getBusinessFlowsWithRequestsAwaitingMyDecision() {
-        return this.businessFlowsWithRequestsAwaitingMyDecision;
+        return this.backingStore.get("businessFlowsWithRequestsAwaitingMyDecision");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +63,11 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     }
     /**
      * Gets the policyTemplates property value. The policyTemplates property
-     * @return a governancePolicyTemplate
+     * @return a java.util.List<GovernancePolicyTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernancePolicyTemplate> getPolicyTemplates() {
-        return this.policyTemplates;
+        return this.backingStore.get("policyTemplates");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param value Value to set for the businessFlows property.
      */
     public void setBusinessFlows(@jakarta.annotation.Nullable final java.util.List<BusinessFlow> value) {
-        this.businessFlows = value;
+        this.backingStore.set("businessFlows", value);
     }
     /**
      * Sets the businessFlowsWithRequestsAwaitingMyDecision property value. The businessFlowsWithRequestsAwaitingMyDecision property
      * @param value Value to set for the businessFlowsWithRequestsAwaitingMyDecision property.
      */
     public void setBusinessFlowsWithRequestsAwaitingMyDecision(@jakarta.annotation.Nullable final java.util.List<BusinessFlow> value) {
-        this.businessFlowsWithRequestsAwaitingMyDecision = value;
+        this.backingStore.set("businessFlowsWithRequestsAwaitingMyDecision", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the policyTemplates property value. The policyTemplates property
      * @param value Value to set for the policyTemplates property.
      */
     public void setPolicyTemplates(@jakarta.annotation.Nullable final java.util.List<GovernancePolicyTemplate> value) {
-        this.policyTemplates = value;
+        this.backingStore.set("policyTemplates", value);
     }
 }

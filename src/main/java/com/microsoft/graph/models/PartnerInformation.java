@@ -4,61 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PartnerInformation implements AdditionalDataHolder, Parsable {
+public class PartnerInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The commerceUrl property
-     */
-    private String commerceUrl;
-    /**
-     * The companyName property
-     */
-    private String companyName;
-    /**
-     * The companyType property
-     */
-    private PartnerTenantType companyType;
-    /**
-     * The helpUrl property
-     */
-    private String helpUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The partnerTenantId property
-     */
-    private String partnerTenantId;
-    /**
-     * The supportEmails property
-     */
-    private java.util.List<String> supportEmails;
-    /**
-     * The supportTelephones property
-     */
-    private java.util.List<String> supportTelephones;
-    /**
-     * The supportUrl property
-     */
-    private String supportUrl;
-    /**
-     * Instantiates a new partnerInformation and sets the default values.
+     * Instantiates a new PartnerInformation and sets the default values.
      */
     public PartnerInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a partnerInformation
+     * @return a PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public static PartnerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,36 +35,49 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
         return new PartnerInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the commerceUrl property value. The commerceUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommerceUrl() {
-        return this.commerceUrl;
+        return this.backingStore.get("commerceUrl");
     }
     /**
      * Gets the companyName property value. The companyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
-        return this.companyName;
+        return this.backingStore.get("companyName");
     }
     /**
      * Gets the companyType property value. The companyType property
-     * @return a partnerTenantType
+     * @return a PartnerTenantType
      */
     @jakarta.annotation.Nullable
     public PartnerTenantType getCompanyType() {
-        return this.companyType;
+        return this.backingStore.get("companyType");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +88,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("commerceUrl", (n) -> { this.setCommerceUrl(n.getStringValue()); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
-        deserializerMap.put("companyType", (n) -> { this.setCompanyType(n.getEnumValue(PartnerTenantType.class)); });
+        deserializerMap.put("companyType", (n) -> { this.setCompanyType(n.getEnumValue(PartnerTenantType::forValue)); });
         deserializerMap.put("helpUrl", (n) -> { this.setHelpUrl(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("partnerTenantId", (n) -> { this.setPartnerTenantId(n.getStringValue()); });
@@ -117,51 +99,51 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the helpUrl property value. The helpUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpUrl() {
-        return this.helpUrl;
+        return this.backingStore.get("helpUrl");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the partnerTenantId property value. The partnerTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerTenantId() {
-        return this.partnerTenantId;
+        return this.backingStore.get("partnerTenantId");
     }
     /**
      * Gets the supportEmails property value. The supportEmails property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportEmails() {
-        return this.supportEmails;
+        return this.backingStore.get("supportEmails");
     }
     /**
      * Gets the supportTelephones property value. The supportTelephones property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportTelephones() {
-        return this.supportTelephones;
+        return this.backingStore.get("supportTelephones");
     }
     /**
      * Gets the supportUrl property value. The supportUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportUrl() {
-        return this.supportUrl;
+        return this.backingStore.get("supportUrl");
     }
     /**
      * Serializes information the current object
@@ -181,73 +163,81 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the commerceUrl property value. The commerceUrl property
      * @param value Value to set for the commerceUrl property.
      */
     public void setCommerceUrl(@jakarta.annotation.Nullable final String value) {
-        this.commerceUrl = value;
+        this.backingStore.set("commerceUrl", value);
     }
     /**
      * Sets the companyName property value. The companyName property
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
-        this.companyName = value;
+        this.backingStore.set("companyName", value);
     }
     /**
      * Sets the companyType property value. The companyType property
      * @param value Value to set for the companyType property.
      */
     public void setCompanyType(@jakarta.annotation.Nullable final PartnerTenantType value) {
-        this.companyType = value;
+        this.backingStore.set("companyType", value);
     }
     /**
      * Sets the helpUrl property value. The helpUrl property
      * @param value Value to set for the helpUrl property.
      */
     public void setHelpUrl(@jakarta.annotation.Nullable final String value) {
-        this.helpUrl = value;
+        this.backingStore.set("helpUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the partnerTenantId property value. The partnerTenantId property
      * @param value Value to set for the partnerTenantId property.
      */
     public void setPartnerTenantId(@jakarta.annotation.Nullable final String value) {
-        this.partnerTenantId = value;
+        this.backingStore.set("partnerTenantId", value);
     }
     /**
      * Sets the supportEmails property value. The supportEmails property
      * @param value Value to set for the supportEmails property.
      */
     public void setSupportEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportEmails = value;
+        this.backingStore.set("supportEmails", value);
     }
     /**
      * Sets the supportTelephones property value. The supportTelephones property
      * @param value Value to set for the supportTelephones property.
      */
     public void setSupportTelephones(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportTelephones = value;
+        this.backingStore.set("supportTelephones", value);
     }
     /**
      * Sets the supportUrl property value. The supportUrl property
      * @param value Value to set for the supportUrl property.
      */
     public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
-        this.supportUrl = value;
+        this.backingStore.set("supportUrl", value);
     }
 }

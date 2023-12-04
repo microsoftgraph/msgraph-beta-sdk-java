@@ -11,23 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class YearTimePeriodDefinition extends Entity implements Parsable {
     /**
-     * The name of the year. Maximum supported length is 100 characters.
-     */
-    private String displayName;
-    /**
-     * The last day of the year using ISO 8601 format for date.
-     */
-    private LocalDate endDate;
-    /**
-     * The first day of the year using ISO 8601 format for date.
-     */
-    private LocalDate startDate;
-    /**
-     * The year property
-     */
-    private YearReferenceValue year;
-    /**
-     * Instantiates a new yearTimePeriodDefinition and sets the default values.
+     * Instantiates a new YearTimePeriodDefinition and sets the default values.
      */
     public YearTimePeriodDefinition() {
         super();
@@ -35,7 +19,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a yearTimePeriodDefinition
+     * @return a YearTimePeriodDefinition
      */
     @jakarta.annotation.Nonnull
     public static YearTimePeriodDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +28,11 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the year. Maximum supported length is 100 characters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the endDate property value. The last day of the year using ISO 8601 format for date.
@@ -56,7 +40,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
-        return this.endDate;
+        return this.backingStore.get("endDate");
     }
     /**
      * The deserialization information for the current model
@@ -77,15 +61,15 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
-        return this.startDate;
+        return this.backingStore.get("startDate");
     }
     /**
      * Gets the year property value. The year property
-     * @return a yearReferenceValue
+     * @return a YearReferenceValue
      */
     @jakarta.annotation.Nullable
     public YearReferenceValue getYear() {
-        return this.year;
+        return this.backingStore.get("year");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the endDate property value. The last day of the year using ISO 8601 format for date.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.endDate = value;
+        this.backingStore.set("endDate", value);
     }
     /**
      * Sets the startDate property value. The first day of the year using ISO 8601 format for date.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.startDate = value;
+        this.backingStore.set("startDate", value);
     }
     /**
      * Sets the year property value. The year property
      * @param value Value to set for the year property.
      */
     public void setYear(@jakarta.annotation.Nullable final YearReferenceValue value) {
-        this.year = value;
+        this.backingStore.set("year", value);
     }
 }

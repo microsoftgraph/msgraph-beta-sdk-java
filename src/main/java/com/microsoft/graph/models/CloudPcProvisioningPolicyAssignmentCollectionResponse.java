@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcProvisioningPolicyAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CloudPcProvisioningPolicyAssignment> value;
-    /**
-     * Instantiates a new cloudPcProvisioningPolicyAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcProvisioningPolicyAssignmentCollectionResponse and sets the default values.
      */
     public CloudPcProvisioningPolicyAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CloudPcProvisioningPolicyAssignmentCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcProvisioningPolicyAssignmentCollectionResponse
+     * @return a CloudPcProvisioningPolicyAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcProvisioningPolicyAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CloudPcProvisioningPolicyAssignmentCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcProvisioningPolicyAssignment
+     * @return a java.util.List<CloudPcProvisioningPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicyAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CloudPcProvisioningPolicyAssignmentCollectionResponse extends BaseC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

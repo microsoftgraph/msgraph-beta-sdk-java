@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
-     * The draft version of this shift that is viewable by managers. Required.
-     */
-    private ShiftItem draftShift;
-    /**
-     * The isStagedForDeletion property
-     */
-    private Boolean isStagedForDeletion;
-    /**
-     * The schedulingGroupId property
-     */
-    private String schedulingGroupId;
-    /**
-     * The sharedShift property
-     */
-    private ShiftItem sharedShift;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new shift and sets the default values.
+     * Instantiates a new Shift and sets the default values.
      */
     public Shift() {
         super();
@@ -38,7 +18,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shift
+     * @return a Shift
      */
     @jakarta.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,11 +27,11 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
-     * @return a shiftItem
+     * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
     public ShiftItem getDraftShift() {
-        return this.draftShift;
+        return this.backingStore.get("draftShift");
     }
     /**
      * The deserialization information for the current model
@@ -69,35 +49,35 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
-        return this.isStagedForDeletion;
+        return this.backingStore.get("isStagedForDeletion");
     }
     /**
-     * Gets the schedulingGroupId property value. The schedulingGroupId property
-     * @return a string
+     * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
-        return this.schedulingGroupId;
+        return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the sharedShift property value. The sharedShift property
-     * @return a shiftItem
+     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
     public ShiftItem getSharedShift() {
-        return this.sharedShift;
+        return this.backingStore.get("sharedShift");
     }
     /**
-     * Gets the userId property value. The userId property
-     * @return a string
+     * Gets the userId property value. ID of the user assigned to the shift. Required.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
-        this.draftShift = value;
+        this.backingStore.set("draftShift", value);
     }
     /**
      * Sets the isStagedForDeletion property value. The isStagedForDeletion property
      * @param value Value to set for the isStagedForDeletion property.
      */
     public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isStagedForDeletion = value;
+        this.backingStore.set("isStagedForDeletion", value);
     }
     /**
-     * Sets the schedulingGroupId property value. The schedulingGroupId property
+     * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
      * @param value Value to set for the schedulingGroupId property.
      */
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
-        this.schedulingGroupId = value;
+        this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the sharedShift property value. The sharedShift property
+     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
      * @param value Value to set for the sharedShift property.
      */
     public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {
-        this.sharedShift = value;
+        this.backingStore.set("sharedShift", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. ID of the user assigned to the shift. Required.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

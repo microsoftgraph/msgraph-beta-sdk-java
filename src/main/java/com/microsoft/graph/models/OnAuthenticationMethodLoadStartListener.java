@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAuthenticationMethodLoadStartListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     */
-    private OnAuthenticationMethodLoadStartHandler handler;
-    /**
-     * Instantiates a new onAuthenticationMethodLoadStartListener and sets the default values.
+     * Instantiates a new OnAuthenticationMethodLoadStartListener and sets the default values.
      */
     public OnAuthenticationMethodLoadStartListener() {
         super();
@@ -22,7 +18,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAuthenticationMethodLoadStartListener
+     * @return a OnAuthenticationMethodLoadStartListener
      */
     @jakarta.annotation.Nonnull
     public static OnAuthenticationMethodLoadStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a onAuthenticationMethodLoadStartHandler
+     * @return a OnAuthenticationMethodLoadStartHandler
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getHandler() {
-        return this.handler;
+        return this.backingStore.get("handler");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
-        this.handler = value;
+        this.backingStore.set("handler", value);
     }
 }

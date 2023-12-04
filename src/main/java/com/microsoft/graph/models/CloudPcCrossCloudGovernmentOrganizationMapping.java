@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity implements Parsable {
     /**
-     * The tenant ID in the Azure Government cloud corresponding to the GCC tenant in the public cloud. Currently, 1:1 mappings are supported, so this collection can only contain one tenant ID.
-     */
-    private java.util.List<String> organizationIdsInUSGovCloud;
-    /**
-     * Instantiates a new cloudPcCrossCloudGovernmentOrganizationMapping and sets the default values.
+     * Instantiates a new CloudPcCrossCloudGovernmentOrganizationMapping and sets the default values.
      */
     public CloudPcCrossCloudGovernmentOrganizationMapping() {
         super();
@@ -21,7 +17,7 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcCrossCloudGovernmentOrganizationMapping
+     * @return a CloudPcCrossCloudGovernmentOrganizationMapping
      */
     @jakarta.annotation.Nonnull
     public static CloudPcCrossCloudGovernmentOrganizationMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
     }
     /**
      * Gets the organizationIdsInUSGovCloud property value. The tenant ID in the Azure Government cloud corresponding to the GCC tenant in the public cloud. Currently, 1:1 mappings are supported, so this collection can only contain one tenant ID.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrganizationIdsInUSGovCloud() {
-        return this.organizationIdsInUSGovCloud;
+        return this.backingStore.get("organizationIdsInUSGovCloud");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
      * @param value Value to set for the organizationIdsInUSGovCloud property.
      */
     public void setOrganizationIdsInUSGovCloud(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.organizationIdsInUSGovCloud = value;
+        this.backingStore.set("organizationIdsInUSGovCloud", value);
     }
 }

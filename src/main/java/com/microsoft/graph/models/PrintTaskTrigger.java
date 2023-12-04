@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskTrigger extends Entity implements Parsable {
     /**
-     * The definition property
-     */
-    private PrintTaskDefinition definition;
-    /**
-     * The event property
-     */
-    private PrintEvent event;
-    /**
-     * Instantiates a new printTaskTrigger and sets the default values.
+     * Instantiates a new PrintTaskTrigger and sets the default values.
      */
     public PrintTaskTrigger() {
         super();
@@ -25,7 +17,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printTaskTrigger
+     * @return a PrintTaskTrigger
      */
     @jakarta.annotation.Nonnull
     public static PrintTaskTrigger createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,19 +26,19 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The definition property
-     * @return a printTaskDefinition
+     * @return a PrintTaskDefinition
      */
     @jakarta.annotation.Nullable
     public PrintTaskDefinition getDefinition() {
-        return this.definition;
+        return this.backingStore.get("definition");
     }
     /**
      * Gets the event property value. The event property
-     * @return a printEvent
+     * @return a PrintEvent
      */
     @jakarta.annotation.Nullable
     public PrintEvent getEvent() {
-        return this.event;
+        return this.backingStore.get("event");
     }
     /**
      * The deserialization information for the current model
@@ -56,7 +48,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
-        deserializerMap.put("event", (n) -> { this.setEvent(n.getEnumValue(PrintEvent.class)); });
+        deserializerMap.put("event", (n) -> { this.setEvent(n.getEnumValue(PrintEvent::forValue)); });
         return deserializerMap;
     }
     /**
@@ -74,13 +66,13 @@ public class PrintTaskTrigger extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final PrintTaskDefinition value) {
-        this.definition = value;
+        this.backingStore.set("definition", value);
     }
     /**
      * Sets the event property value. The event property
      * @param value Value to set for the event property.
      */
     public void setEvent(@jakarta.annotation.Nullable final PrintEvent value) {
-        this.event = value;
+        this.backingStore.set("event", value);
     }
 }

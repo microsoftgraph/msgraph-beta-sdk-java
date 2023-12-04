@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
     /**
-     * The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     */
-    private java.util.List<String> members;
-    /**
-     * The set of Role Scope Tags defined on the Role Assignment.
-     */
-    private java.util.List<RoleScopeTag> roleScopeTags;
-    /**
-     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
      */
     public DeviceAndAppManagementRoleAssignment() {
         super();
@@ -28,7 +20,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementRoleAssignment
+     * @return a DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,19 +40,19 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     }
     /**
      * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMembers() {
-        return this.members;
+        return this.backingStore.get("members");
     }
     /**
      * Gets the roleScopeTags property value. The set of Role Scope Tags defined on the Role Assignment.
-     * @return a roleScopeTag
+     * @return a java.util.List<RoleScopeTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTag> getRoleScopeTags() {
-        return this.roleScopeTags;
+        return this.backingStore.get("roleScopeTags");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.members = value;
+        this.backingStore.set("members", value);
     }
     /**
      * Sets the roleScopeTags property value. The set of Role Scope Tags defined on the Role Assignment.
      * @param value Value to set for the roleScopeTags property.
      */
     public void setRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<RoleScopeTag> value) {
-        this.roleScopeTags = value;
+        this.backingStore.set("roleScopeTags", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput implements Parsable {
     /**
-     * The contentProperties property
-     */
-    private ContentProperties contentProperties;
-    /**
-     * The sharedBy property
-     */
-    private String sharedBy;
-    /**
-     * Instantiates a new dlpEvaluationWindowsDevicesInput and sets the default values.
+     * Instantiates a new DlpEvaluationWindowsDevicesInput and sets the default values.
      */
     public DlpEvaluationWindowsDevicesInput() {
         super();
@@ -26,7 +18,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dlpEvaluationWindowsDevicesInput
+     * @return a DlpEvaluationWindowsDevicesInput
      */
     @jakarta.annotation.Nonnull
     public static DlpEvaluationWindowsDevicesInput createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +27,11 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     }
     /**
      * Gets the contentProperties property value. The contentProperties property
-     * @return a contentProperties
+     * @return a ContentProperties
      */
     @jakarta.annotation.Nullable
     public ContentProperties getContentProperties() {
-        return this.contentProperties;
+        return this.backingStore.get("contentProperties");
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +46,11 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     }
     /**
      * Gets the sharedBy property value. The sharedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSharedBy() {
-        return this.sharedBy;
+        return this.backingStore.get("sharedBy");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param value Value to set for the contentProperties property.
      */
     public void setContentProperties(@jakarta.annotation.Nullable final ContentProperties value) {
-        this.contentProperties = value;
+        this.backingStore.set("contentProperties", value);
     }
     /**
      * Sets the sharedBy property value. The sharedBy property
      * @param value Value to set for the sharedBy property.
      */
     public void setSharedBy(@jakarta.annotation.Nullable final String value) {
-        this.sharedBy = value;
+        this.backingStore.set("sharedBy", value);
     }
 }

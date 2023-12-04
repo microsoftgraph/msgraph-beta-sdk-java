@@ -4,50 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataHolder, Parsable {
+public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The expiry date of the custom domain certificate. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime expiryDate;
-    /**
-     * The issue date of the custom domain. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime issueDate;
-    /**
-     * The issuer name of the custom domain certificate.
-     */
-    private String issuerName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The subject name of the custom domain certificate.
-     */
-    private String subjectName;
-    /**
-     * The thumbprint associated with the custom domain certificate.
-     */
-    private String thumbprint;
-    /**
-     * Instantiates a new verifiedCustomDomainCertificatesMetadata and sets the default values.
+     * Instantiates a new VerifiedCustomDomainCertificatesMetadata and sets the default values.
      */
     public VerifiedCustomDomainCertificatesMetadata() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verifiedCustomDomainCertificatesMetadata
+     * @return a VerifiedCustomDomainCertificatesMetadata
      */
     @jakarta.annotation.Nonnull
     public static VerifiedCustomDomainCertificatesMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,12 +36,25 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
         return new VerifiedCustomDomainCertificatesMetadata();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the expiryDate property value. The expiry date of the custom domain certificate. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -68,7 +62,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryDate() {
-        return this.expiryDate;
+        return this.backingStore.get("expiryDate");
     }
     /**
      * The deserialization information for the current model
@@ -91,39 +85,39 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIssueDate() {
-        return this.issueDate;
+        return this.backingStore.get("issueDate");
     }
     /**
      * Gets the issuerName property value. The issuer name of the custom domain certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerName() {
-        return this.issuerName;
+        return this.backingStore.get("issuerName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the subjectName property value. The subject name of the custom domain certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
-        return this.subjectName;
+        return this.backingStore.get("subjectName");
     }
     /**
      * Gets the thumbprint property value. The thumbprint associated with the custom domain certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
-        return this.thumbprint;
+        return this.backingStore.get("thumbprint");
     }
     /**
      * Serializes information the current object
@@ -140,52 +134,60 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the expiryDate property value. The expiry date of the custom domain certificate. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expiryDate property.
      */
     public void setExpiryDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiryDate = value;
+        this.backingStore.set("expiryDate", value);
     }
     /**
      * Sets the issueDate property value. The issue date of the custom domain. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the issueDate property.
      */
     public void setIssueDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.issueDate = value;
+        this.backingStore.set("issueDate", value);
     }
     /**
      * Sets the issuerName property value. The issuer name of the custom domain certificate.
      * @param value Value to set for the issuerName property.
      */
     public void setIssuerName(@jakarta.annotation.Nullable final String value) {
-        this.issuerName = value;
+        this.backingStore.set("issuerName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the subjectName property value. The subject name of the custom domain certificate.
      * @param value Value to set for the subjectName property.
      */
     public void setSubjectName(@jakarta.annotation.Nullable final String value) {
-        this.subjectName = value;
+        this.backingStore.set("subjectName", value);
     }
     /**
      * Sets the thumbprint property value. The thumbprint associated with the custom domain certificate.
      * @param value Value to set for the thumbprint property.
      */
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
-        this.thumbprint = value;
+        this.backingStore.set("thumbprint", value);
     }
 }

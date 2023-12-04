@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<GroupPolicyConfiguration> value;
-    /**
-     * Instantiates a new groupPolicyConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new GroupPolicyConfigurationCollectionResponse and sets the default values.
      */
     public GroupPolicyConfigurationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class GroupPolicyConfigurationCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfigurationCollectionResponse
+     * @return a GroupPolicyConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class GroupPolicyConfigurationCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a groupPolicyConfiguration
+     * @return a java.util.List<GroupPolicyConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfiguration> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class GroupPolicyConfigurationCollectionResponse extends BaseCollectionPa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<GroupPolicyConfiguration> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

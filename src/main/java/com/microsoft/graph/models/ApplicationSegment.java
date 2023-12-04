@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationSegment extends Entity implements Parsable {
     /**
-     * Instantiates a new applicationSegment and sets the default values.
+     * Instantiates a new ApplicationSegment and sets the default values.
      */
     public ApplicationSegment() {
         super();
@@ -17,7 +17,7 @@ public class ApplicationSegment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationSegment
+     * @return a ApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static ApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

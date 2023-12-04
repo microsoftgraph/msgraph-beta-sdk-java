@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationIntegerSettingValue extends DeviceManagementConfigurationSimpleSettingValue implements Parsable {
     /**
-     * Value of the integer setting.
-     */
-    private Integer value;
-    /**
-     * Instantiates a new deviceManagementConfigurationIntegerSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationIntegerSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValue() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationIntegerSettingValue
+     * @return a DeviceManagementConfigurationIntegerSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
     }
     /**
      * Gets the value property value. Value of the integer setting.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Integer value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

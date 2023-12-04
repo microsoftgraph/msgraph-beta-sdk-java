@@ -13,67 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntent extends Entity implements Parsable {
     /**
-     * Collection of assignments
-     */
-    private java.util.List<DeviceManagementIntentAssignment> assignments;
-    /**
-     * Collection of setting categories within the intent
-     */
-    private java.util.List<DeviceManagementIntentSettingCategory> categories;
-    /**
-     * The user given description
-     */
-    private String description;
-    /**
-     * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
-     */
-    private java.util.List<DeviceManagementIntentDeviceSettingStateSummary> deviceSettingStateSummaries;
-    /**
-     * Collection of states of all devices that the intent is applied to
-     */
-    private java.util.List<DeviceManagementIntentDeviceState> deviceStates;
-    /**
-     * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
-     */
-    private DeviceManagementIntentDeviceStateSummary deviceStateSummary;
-    /**
-     * The user given display name
-     */
-    private String displayName;
-    /**
-     * Signifies whether or not the intent is assigned to users
-     */
-    private Boolean isAssigned;
-    /**
-     * Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
-     */
-    private Boolean isMigratingToConfigurationPolicy;
-    /**
-     * When the intent was last modified
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Collection of all settings to be applied
-     */
-    private java.util.List<DeviceManagementSettingInstance> settings;
-    /**
-     * The ID of the template this intent was created from (if any)
-     */
-    private String templateId;
-    /**
-     * Collection of states of all users that the intent is applied to
-     */
-    private java.util.List<DeviceManagementIntentUserState> userStates;
-    /**
-     * A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
-     */
-    private DeviceManagementIntentUserStateSummary userStateSummary;
-    /**
-     * Instantiates a new deviceManagementIntent and sets the default values.
+     * Instantiates a new DeviceManagementIntent and sets the default values.
      */
     public DeviceManagementIntent() {
         super();
@@ -81,7 +21,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntent
+     * @return a DeviceManagementIntent
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,59 +30,59 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. Collection of assignments
-     * @return a deviceManagementIntentAssignment
+     * @return a java.util.List<DeviceManagementIntentAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the categories property value. Collection of setting categories within the intent
-     * @return a deviceManagementIntentSettingCategory
+     * @return a java.util.List<DeviceManagementIntentSettingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentSettingCategory> getCategories() {
-        return this.categories;
+        return this.backingStore.get("categories");
     }
     /**
      * Gets the description property value. The user given description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
-     * @return a deviceManagementIntentDeviceSettingStateSummary
+     * @return a java.util.List<DeviceManagementIntentDeviceSettingStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentDeviceSettingStateSummary> getDeviceSettingStateSummaries() {
-        return this.deviceSettingStateSummaries;
+        return this.backingStore.get("deviceSettingStateSummaries");
     }
     /**
      * Gets the deviceStates property value. Collection of states of all devices that the intent is applied to
-     * @return a deviceManagementIntentDeviceState
+     * @return a java.util.List<DeviceManagementIntentDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentDeviceState> getDeviceStates() {
-        return this.deviceStates;
+        return this.backingStore.get("deviceStates");
     }
     /**
      * Gets the deviceStateSummary property value. A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
-     * @return a deviceManagementIntentDeviceStateSummary
+     * @return a DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntentDeviceStateSummary getDeviceStateSummary() {
-        return this.deviceStateSummary;
+        return this.backingStore.get("deviceStateSummary");
     }
     /**
      * Gets the displayName property value. The user given display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -170,19 +110,19 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the isAssigned property value. Signifies whether or not the intent is assigned to users
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this.isAssigned;
+        return this.backingStore.get("isAssigned");
     }
     /**
      * Gets the isMigratingToConfigurationPolicy property value. Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMigratingToConfigurationPolicy() {
-        return this.isMigratingToConfigurationPolicy;
+        return this.backingStore.get("isMigratingToConfigurationPolicy");
     }
     /**
      * Gets the lastModifiedDateTime property value. When the intent was last modified
@@ -190,47 +130,47 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the settings property value. Collection of all settings to be applied
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the templateId property value. The ID of the template this intent was created from (if any)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Gets the userStates property value. Collection of states of all users that the intent is applied to
-     * @return a deviceManagementIntentUserState
+     * @return a java.util.List<DeviceManagementIntentUserState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentUserState> getUserStates() {
-        return this.userStates;
+        return this.backingStore.get("userStates");
     }
     /**
      * Gets the userStateSummary property value. A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
-     * @return a deviceManagementIntentUserStateSummary
+     * @return a DeviceManagementIntentUserStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntentUserStateSummary getUserStateSummary() {
-        return this.userStateSummary;
+        return this.backingStore.get("userStateSummary");
     }
     /**
      * Serializes information the current object
@@ -260,104 +200,104 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementIntentAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the categories property value. Collection of setting categories within the intent
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<DeviceManagementIntentSettingCategory> value) {
-        this.categories = value;
+        this.backingStore.set("categories", value);
     }
     /**
      * Sets the description property value. The user given description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      * @param value Value to set for the deviceSettingStateSummaries property.
      */
     public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<DeviceManagementIntentDeviceSettingStateSummary> value) {
-        this.deviceSettingStateSummaries = value;
+        this.backingStore.set("deviceSettingStateSummaries", value);
     }
     /**
      * Sets the deviceStates property value. Collection of states of all devices that the intent is applied to
      * @param value Value to set for the deviceStates property.
      */
     public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<DeviceManagementIntentDeviceState> value) {
-        this.deviceStates = value;
+        this.backingStore.set("deviceStates", value);
     }
     /**
      * Sets the deviceStateSummary property value. A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
      * @param value Value to set for the deviceStateSummary property.
      */
     public void setDeviceStateSummary(@jakarta.annotation.Nullable final DeviceManagementIntentDeviceStateSummary value) {
-        this.deviceStateSummary = value;
+        this.backingStore.set("deviceStateSummary", value);
     }
     /**
      * Sets the displayName property value. The user given display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isAssigned property value. Signifies whether or not the intent is assigned to users
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAssigned = value;
+        this.backingStore.set("isAssigned", value);
     }
     /**
      * Sets the isMigratingToConfigurationPolicy property value. Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
      * @param value Value to set for the isMigratingToConfigurationPolicy property.
      */
     public void setIsMigratingToConfigurationPolicy(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMigratingToConfigurationPolicy = value;
+        this.backingStore.set("isMigratingToConfigurationPolicy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. When the intent was last modified
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the settings property value. Collection of all settings to be applied
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the templateId property value. The ID of the template this intent was created from (if any)
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
     /**
      * Sets the userStates property value. Collection of states of all users that the intent is applied to
      * @param value Value to set for the userStates property.
      */
     public void setUserStates(@jakarta.annotation.Nullable final java.util.List<DeviceManagementIntentUserState> value) {
-        this.userStates = value;
+        this.backingStore.set("userStates", value);
     }
     /**
      * Sets the userStateSummary property value. A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
      * @param value Value to set for the userStateSummary property.
      */
     public void setUserStateSummary(@jakarta.annotation.Nullable final DeviceManagementIntentUserStateSummary value) {
-        this.userStateSummary = value;
+        this.backingStore.set("userStateSummary", value);
     }
 }

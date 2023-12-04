@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
     /**
-     * The activity related to service principal risk level change.
-     */
-    private RiskServicePrincipalActivity activity;
-    /**
-     * The identifier of the actor of the operation.
-     */
-    private String initiatedBy;
-    /**
-     * The identifier of the service principal.
-     */
-    private String servicePrincipalId;
-    /**
-     * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
+     * Instantiates a new RiskyServicePrincipalHistoryItem and sets the default values.
      */
     public RiskyServicePrincipalHistoryItem() {
         super();
@@ -29,7 +17,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public static RiskyServicePrincipalHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     }
     /**
      * Gets the activity property value. The activity related to service principal risk level change.
-     * @return a riskServicePrincipalActivity
+     * @return a RiskServicePrincipalActivity
      */
     @jakarta.annotation.Nullable
     public RiskServicePrincipalActivity getActivity() {
-        return this.activity;
+        return this.backingStore.get("activity");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     }
     /**
      * Gets the initiatedBy property value. The identifier of the actor of the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedBy() {
-        return this.initiatedBy;
+        return this.backingStore.get("initiatedBy");
     }
     /**
      * Gets the servicePrincipalId property value. The identifier of the service principal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
-        return this.servicePrincipalId;
+        return this.backingStore.get("servicePrincipalId");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final RiskServicePrincipalActivity value) {
-        this.activity = value;
+        this.backingStore.set("activity", value);
     }
     /**
      * Sets the initiatedBy property value. The identifier of the actor of the operation.
      * @param value Value to set for the initiatedBy property.
      */
     public void setInitiatedBy(@jakarta.annotation.Nullable final String value) {
-        this.initiatedBy = value;
+        this.backingStore.set("initiatedBy", value);
     }
     /**
      * Sets the servicePrincipalId property value. The identifier of the service principal.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalId = value;
+        this.backingStore.set("servicePrincipalId", value);
     }
 }

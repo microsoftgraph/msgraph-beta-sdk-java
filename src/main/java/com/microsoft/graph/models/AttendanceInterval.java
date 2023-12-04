@@ -4,42 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttendanceInterval implements AdditionalDataHolder, Parsable {
+public class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-     */
-    private Integer durationInSeconds;
-    /**
-     * The time the attendee joined in UTC.
-     */
-    private OffsetDateTime joinDateTime;
-    /**
-     * The time the attendee left in UTC.
-     */
-    private OffsetDateTime leaveDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new attendanceInterval and sets the default values.
+     * Instantiates a new AttendanceInterval and sets the default values.
      */
     public AttendanceInterval() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendanceInterval
+     * @return a AttendanceInterval
      */
     @jakarta.annotation.Nonnull
     public static AttendanceInterval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,20 +36,33 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         return new AttendanceInterval();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInSeconds() {
-        return this.durationInSeconds;
+        return this.backingStore.get("durationInSeconds");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +83,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getJoinDateTime() {
-        return this.joinDateTime;
+        return this.backingStore.get("joinDateTime");
     }
     /**
      * Gets the leaveDateTime property value. The time the attendee left in UTC.
@@ -89,15 +91,15 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLeaveDateTime() {
-        return this.leaveDateTime;
+        return this.backingStore.get("leaveDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -112,38 +114,46 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
      * @param value Value to set for the durationInSeconds property.
      */
     public void setDurationInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.durationInSeconds = value;
+        this.backingStore.set("durationInSeconds", value);
     }
     /**
      * Sets the joinDateTime property value. The time the attendee joined in UTC.
      * @param value Value to set for the joinDateTime property.
      */
     public void setJoinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.joinDateTime = value;
+        this.backingStore.set("joinDateTime", value);
     }
     /**
      * Sets the leaveDateTime property value. The time the attendee left in UTC.
      * @param value Value to set for the leaveDateTime property.
      */
     public void setLeaveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.leaveDateTime = value;
+        this.backingStore.set("leaveDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

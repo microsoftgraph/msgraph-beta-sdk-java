@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineStateSummary extends Entity implements Parsable {
     /**
-     * Number of conflict devices
-     */
-    private Integer conflictCount;
-    /**
-     * Number of error devices
-     */
-    private Integer errorCount;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableCount;
-    /**
-     * Number of not secure devices
-     */
-    private Integer notSecureCount;
-    /**
-     * Number of secure devices
-     */
-    private Integer secureCount;
-    /**
-     * Number of unknown devices
-     */
-    private Integer unknownCount;
-    /**
-     * Instantiates a new securityBaselineStateSummary and sets the default values.
+     * Instantiates a new SecurityBaselineStateSummary and sets the default values.
      */
     public SecurityBaselineStateSummary() {
         super();
@@ -44,7 +20,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineStateSummary
+     * @return a SecurityBaselineStateSummary
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,19 +36,19 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the conflictCount property value. Number of conflict devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
-        return this.conflictCount;
+        return this.backingStore.get("conflictCount");
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
-        return this.errorCount;
+        return this.backingStore.get("errorCount");
     }
     /**
      * The deserialization information for the current model
@@ -91,35 +67,35 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this.notApplicableCount;
+        return this.backingStore.get("notApplicableCount");
     }
     /**
      * Gets the notSecureCount property value. Number of not secure devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotSecureCount() {
-        return this.notSecureCount;
+        return this.backingStore.get("notSecureCount");
     }
     /**
      * Gets the secureCount property value. Number of secure devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSecureCount() {
-        return this.secureCount;
+        return this.backingStore.get("secureCount");
     }
     /**
      * Gets the unknownCount property value. Number of unknown devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownCount() {
-        return this.unknownCount;
+        return this.backingStore.get("unknownCount");
     }
     /**
      * Serializes information the current object
@@ -140,41 +116,41 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the conflictCount property.
      */
     public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictCount = value;
+        this.backingStore.set("conflictCount", value);
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCount = value;
+        this.backingStore.set("errorCount", value);
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
      */
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableCount = value;
+        this.backingStore.set("notApplicableCount", value);
     }
     /**
      * Sets the notSecureCount property value. Number of not secure devices
      * @param value Value to set for the notSecureCount property.
      */
     public void setNotSecureCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notSecureCount = value;
+        this.backingStore.set("notSecureCount", value);
     }
     /**
      * Sets the secureCount property value. Number of secure devices
      * @param value Value to set for the secureCount property.
      */
     public void setSecureCount(@jakarta.annotation.Nullable final Integer value) {
-        this.secureCount = value;
+        this.backingStore.set("secureCount", value);
     }
     /**
      * Sets the unknownCount property value. Number of unknown devices
      * @param value Value to set for the unknownCount property.
      */
     public void setUnknownCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownCount = value;
+        this.backingStore.set("unknownCount", value);
     }
 }

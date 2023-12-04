@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectDoNotForwardAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new protectDoNotForwardAction and sets the default values.
+     * Instantiates a new ProtectDoNotForwardAction and sets the default values.
      */
     public ProtectDoNotForwardAction() {
         super();
@@ -18,7 +18,7 @@ public class ProtectDoNotForwardAction extends InformationProtectionAction imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectDoNotForwardAction
+     * @return a ProtectDoNotForwardAction
      */
     @jakarta.annotation.Nonnull
     public static ProtectDoNotForwardAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

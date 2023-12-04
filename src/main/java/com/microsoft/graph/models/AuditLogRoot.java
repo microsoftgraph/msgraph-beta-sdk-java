@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuditLogRoot implements AdditionalDataHolder, Parsable {
+public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The customSecurityAttributeAudits property
-     */
-    private java.util.List<CustomSecurityAttributeAudit> customSecurityAttributeAudits;
-    /**
-     * The directoryAudits property
-     */
-    private java.util.List<DirectoryAudit> directoryAudits;
-    /**
-     * The directoryProvisioning property
-     */
-    private java.util.List<ProvisioningObjectSummary> directoryProvisioning;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The provisioning property
-     */
-    private java.util.List<ProvisioningObjectSummary> provisioning;
-    /**
-     * The signIns property
-     */
-    private java.util.List<SignIn> signIns;
-    /**
-     * Instantiates a new auditLogRoot and sets the default values.
+     * Instantiates a new AuditLogRoot and sets the default values.
      */
     public AuditLogRoot() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditLogRoot
+     * @return a AuditLogRoot
      */
     @jakarta.annotation.Nonnull
     public static AuditLogRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,36 +35,49 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
         return new AuditLogRoot();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the customSecurityAttributeAudits property value. The customSecurityAttributeAudits property
-     * @return a customSecurityAttributeAudit
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the customSecurityAttributeAudits property value. Represents a custom security attribute audit log.
+     * @return a java.util.List<CustomSecurityAttributeAudit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeAudit> getCustomSecurityAttributeAudits() {
-        return this.customSecurityAttributeAudits;
+        return this.backingStore.get("customSecurityAttributeAudits");
     }
     /**
      * Gets the directoryAudits property value. The directoryAudits property
-     * @return a directoryAudit
+     * @return a java.util.List<DirectoryAudit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryAudit> getDirectoryAudits() {
-        return this.directoryAudits;
+        return this.backingStore.get("directoryAudits");
     }
     /**
      * Gets the directoryProvisioning property value. The directoryProvisioning property
-     * @return a provisioningObjectSummary
+     * @return a java.util.List<ProvisioningObjectSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getDirectoryProvisioning() {
-        return this.directoryProvisioning;
+        return this.backingStore.get("directoryProvisioning");
     }
     /**
      * The deserialization information for the current model
@@ -102,27 +96,27 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the provisioning property value. The provisioning property
-     * @return a provisioningObjectSummary
+     * Gets the provisioning property value. Represents an action performed by the Microsoft Entra provisioning service and its associated properties.
+     * @return a java.util.List<ProvisioningObjectSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
-        return this.provisioning;
+        return this.backingStore.get("provisioning");
     }
     /**
      * Gets the signIns property value. The signIns property
-     * @return a signIn
+     * @return a java.util.List<SignIn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SignIn> getSignIns() {
-        return this.signIns;
+        return this.backingStore.get("signIns");
     }
     /**
      * Serializes information the current object
@@ -139,52 +133,60 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the customSecurityAttributeAudits property value. The customSecurityAttributeAudits property
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the customSecurityAttributeAudits property value. Represents a custom security attribute audit log.
      * @param value Value to set for the customSecurityAttributeAudits property.
      */
     public void setCustomSecurityAttributeAudits(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeAudit> value) {
-        this.customSecurityAttributeAudits = value;
+        this.backingStore.set("customSecurityAttributeAudits", value);
     }
     /**
      * Sets the directoryAudits property value. The directoryAudits property
      * @param value Value to set for the directoryAudits property.
      */
     public void setDirectoryAudits(@jakarta.annotation.Nullable final java.util.List<DirectoryAudit> value) {
-        this.directoryAudits = value;
+        this.backingStore.set("directoryAudits", value);
     }
     /**
      * Sets the directoryProvisioning property value. The directoryProvisioning property
      * @param value Value to set for the directoryProvisioning property.
      */
     public void setDirectoryProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
-        this.directoryProvisioning = value;
+        this.backingStore.set("directoryProvisioning", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the provisioning property value. The provisioning property
+     * Sets the provisioning property value. Represents an action performed by the Microsoft Entra provisioning service and its associated properties.
      * @param value Value to set for the provisioning property.
      */
     public void setProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
-        this.provisioning = value;
+        this.backingStore.set("provisioning", value);
     }
     /**
      * Sets the signIns property value. The signIns property
      * @param value Value to set for the signIns property.
      */
     public void setSignIns(@jakarta.annotation.Nullable final java.util.List<SignIn> value) {
-        this.signIns = value;
+        this.backingStore.set("signIns", value);
     }
 }

@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessSettings extends Entity implements Parsable {
     /**
-     * The networkPacketTaggingStatus property
-     */
-    private Status networkPacketTaggingStatus;
-    /**
-     * Instantiates a new crossTenantAccessSettings and sets the default values.
+     * Instantiates a new CrossTenantAccessSettings and sets the default values.
      */
     public CrossTenantAccessSettings() {
         super();
@@ -22,7 +18,7 @@ public class CrossTenantAccessSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessSettings
+     * @return a CrossTenantAccessSettings
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,16 +32,16 @@ public class CrossTenantAccessSettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("networkPacketTaggingStatus", (n) -> { this.setNetworkPacketTaggingStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("networkPacketTaggingStatus", (n) -> { this.setNetworkPacketTaggingStatus(n.getEnumValue(Status::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the networkPacketTaggingStatus property value. The networkPacketTaggingStatus property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getNetworkPacketTaggingStatus() {
-        return this.networkPacketTaggingStatus;
+        return this.backingStore.get("networkPacketTaggingStatus");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CrossTenantAccessSettings extends Entity implements Parsable {
      * @param value Value to set for the networkPacketTaggingStatus property.
      */
     public void setNetworkPacketTaggingStatus(@jakarta.annotation.Nullable final Status value) {
-        this.networkPacketTaggingStatus = value;
+        this.backingStore.set("networkPacketTaggingStatus", value);
     }
 }

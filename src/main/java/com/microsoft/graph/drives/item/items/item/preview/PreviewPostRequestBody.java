@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
+public class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The allowEdit property
-     */
-    private Boolean allowEdit;
-    /**
-     * The chromeless property
-     */
-    private Boolean chromeless;
-    /**
-     * The page property
-     */
-    private String page;
-    /**
-     * The viewer property
-     */
-    private String viewer;
-    /**
-     * The zoom property
-     */
-    private Double zoom;
-    /**
-     * Instantiates a new previewPostRequestBody and sets the default values.
+     * Instantiates a new PreviewPostRequestBody and sets the default values.
      */
     public PreviewPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a previewPostRequestBody
+     * @return a PreviewPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static PreviewPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +35,41 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
         return new PreviewPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowEdit property value. The allowEdit property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEdit() {
-        return this.allowEdit;
+        return this.backingStore.get("allowEdit");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the chromeless property value. The chromeless property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getChromeless() {
-        return this.chromeless;
+        return this.backingStore.get("chromeless");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +87,27 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the page property value. The page property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPage() {
-        return this.page;
+        return this.backingStore.get("page");
     }
     /**
      * Gets the viewer property value. The viewer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getViewer() {
-        return this.viewer;
+        return this.backingStore.get("viewer");
     }
     /**
      * Gets the zoom property value. The zoom property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getZoom() {
-        return this.zoom;
+        return this.backingStore.get("zoom");
     }
     /**
      * Serializes information the current object
@@ -125,45 +123,53 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allowEdit property value. The allowEdit property
      * @param value Value to set for the allowEdit property.
      */
     public void setAllowEdit(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowEdit = value;
+        this.backingStore.set("allowEdit", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the chromeless property value. The chromeless property
      * @param value Value to set for the chromeless property.
      */
     public void setChromeless(@jakarta.annotation.Nullable final Boolean value) {
-        this.chromeless = value;
+        this.backingStore.set("chromeless", value);
     }
     /**
      * Sets the page property value. The page property
      * @param value Value to set for the page property.
      */
     public void setPage(@jakarta.annotation.Nullable final String value) {
-        this.page = value;
+        this.backingStore.set("page", value);
     }
     /**
      * Sets the viewer property value. The viewer property
      * @param value Value to set for the viewer property.
      */
     public void setViewer(@jakarta.annotation.Nullable final String value) {
-        this.viewer = value;
+        this.backingStore.set("viewer", value);
     }
     /**
      * Sets the zoom property value. The zoom property
      * @param value Value to set for the zoom property.
      */
     public void setZoom(@jakarta.annotation.Nullable final Double value) {
-        this.zoom = value;
+        this.backingStore.set("zoom", value);
     }
 }

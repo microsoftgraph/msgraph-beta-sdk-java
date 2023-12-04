@@ -11,23 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable {
     /**
-     * The subject property
-     */
-    private User subject;
-    /**
-     * The task property
-     */
-    private Task task;
-    /**
-     * The taskProcessingresult property
-     */
-    private TaskProcessingResult taskProcessingresult;
-    /**
-     * The workflow property
-     */
-    private Workflow workflow;
-    /**
-     * Instantiates a new customTaskExtensionCalloutData and sets the default values.
+     * Instantiates a new CustomTaskExtensionCalloutData and sets the default values.
      */
     public CustomTaskExtensionCalloutData() {
         super();
@@ -36,7 +20,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTaskExtensionCalloutData
+     * @return a CustomTaskExtensionCalloutData
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtensionCalloutData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,35 +42,35 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Gets the task property value. The task property
-     * @return a task
+     * @return a Task
      */
     @jakarta.annotation.Nullable
     public Task getTask() {
-        return this.task;
+        return this.backingStore.get("task");
     }
     /**
      * Gets the taskProcessingresult property value. The taskProcessingresult property
-     * @return a taskProcessingResult
+     * @return a TaskProcessingResult
      */
     @jakarta.annotation.Nullable
     public TaskProcessingResult getTaskProcessingresult() {
-        return this.taskProcessingresult;
+        return this.backingStore.get("taskProcessingresult");
     }
     /**
      * Gets the workflow property value. The workflow property
-     * @return a workflow
+     * @return a Workflow
      */
     @jakarta.annotation.Nullable
     public Workflow getWorkflow() {
-        return this.workflow;
+        return this.backingStore.get("workflow");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final User value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
      */
     public void setTask(@jakarta.annotation.Nullable final Task value) {
-        this.task = value;
+        this.backingStore.set("task", value);
     }
     /**
      * Sets the taskProcessingresult property value. The taskProcessingresult property
      * @param value Value to set for the taskProcessingresult property.
      */
     public void setTaskProcessingresult(@jakarta.annotation.Nullable final TaskProcessingResult value) {
-        this.taskProcessingresult = value;
+        this.backingStore.set("taskProcessingresult", value);
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
      */
     public void setWorkflow(@jakarta.annotation.Nullable final Workflow value) {
-        this.workflow = value;
+        this.backingStore.set("workflow", value);
     }
 }

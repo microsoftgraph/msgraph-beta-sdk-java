@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,49 +14,23 @@ import java.util.Objects;
  * Represents the information about the property which is supported in crafting the rule of AssignmentFilter.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, Parsable {
+public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The data type of the property.
-     */
-    private String dataType;
-    /**
-     * Indicates whether the property is a collection type or not.
-     */
-    private Boolean isCollection;
-    /**
-     * Name of the property.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Regex string to do validation on the property value.
-     */
-    private String propertyRegexConstraint;
-    /**
-     * List of all supported operators on this property.
-     */
-    private java.util.List<AssignmentFilterOperator> supportedOperators;
-    /**
-     * List of all supported values for this property, empty if everything is supported.
-     */
-    private java.util.List<String> supportedValues;
-    /**
-     * Instantiates a new assignmentFilterSupportedProperty and sets the default values.
+     * Instantiates a new AssignmentFilterSupportedProperty and sets the default values.
      */
     public AssignmentFilterSupportedProperty() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignmentFilterSupportedProperty
+     * @return a AssignmentFilterSupportedProperty
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterSupportedProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,20 +38,33 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         return new AssignmentFilterSupportedProperty();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the dataType property value. The data type of the property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataType() {
-        return this.dataType;
+        return this.backingStore.get("dataType");
     }
     /**
      * The deserialization information for the current model
@@ -88,57 +78,57 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("propertyRegexConstraint", (n) -> { this.setPropertyRegexConstraint(n.getStringValue()); });
-        deserializerMap.put("supportedOperators", (n) -> { this.setSupportedOperators(n.getCollectionOfEnumValues(AssignmentFilterOperator.class)); });
+        deserializerMap.put("supportedOperators", (n) -> { this.setSupportedOperators(n.getCollectionOfEnumValues(AssignmentFilterOperator::forValue)); });
         deserializerMap.put("supportedValues", (n) -> { this.setSupportedValues(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
      * Gets the isCollection property value. Indicates whether the property is a collection type or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCollection() {
-        return this.isCollection;
+        return this.backingStore.get("isCollection");
     }
     /**
      * Gets the name property value. Name of the property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the propertyRegexConstraint property value. Regex string to do validation on the property value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPropertyRegexConstraint() {
-        return this.propertyRegexConstraint;
+        return this.backingStore.get("propertyRegexConstraint");
     }
     /**
      * Gets the supportedOperators property value. List of all supported operators on this property.
-     * @return a assignmentFilterOperator
+     * @return a java.util.List<AssignmentFilterOperator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterOperator> getSupportedOperators() {
-        return this.supportedOperators;
+        return this.backingStore.get("supportedOperators");
     }
     /**
      * Gets the supportedValues property value. List of all supported values for this property, empty if everything is supported.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedValues() {
-        return this.supportedValues;
+        return this.backingStore.get("supportedValues");
     }
     /**
      * Serializes information the current object
@@ -156,59 +146,67 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the dataType property value. The data type of the property.
      * @param value Value to set for the dataType property.
      */
     public void setDataType(@jakarta.annotation.Nullable final String value) {
-        this.dataType = value;
+        this.backingStore.set("dataType", value);
     }
     /**
      * Sets the isCollection property value. Indicates whether the property is a collection type or not.
      * @param value Value to set for the isCollection property.
      */
     public void setIsCollection(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCollection = value;
+        this.backingStore.set("isCollection", value);
     }
     /**
      * Sets the name property value. Name of the property.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the propertyRegexConstraint property value. Regex string to do validation on the property value.
      * @param value Value to set for the propertyRegexConstraint property.
      */
     public void setPropertyRegexConstraint(@jakarta.annotation.Nullable final String value) {
-        this.propertyRegexConstraint = value;
+        this.backingStore.set("propertyRegexConstraint", value);
     }
     /**
      * Sets the supportedOperators property value. List of all supported operators on this property.
      * @param value Value to set for the supportedOperators property.
      */
     public void setSupportedOperators(@jakarta.annotation.Nullable final java.util.List<AssignmentFilterOperator> value) {
-        this.supportedOperators = value;
+        this.backingStore.set("supportedOperators", value);
     }
     /**
      * Sets the supportedValues property value. List of all supported values for this property, empty if everything is supported.
      * @param value Value to set for the supportedValues property.
      */
     public void setSupportedValues(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedValues = value;
+        this.backingStore.set("supportedValues", value);
     }
 }

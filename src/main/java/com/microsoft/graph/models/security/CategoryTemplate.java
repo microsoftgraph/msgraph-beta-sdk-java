@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CategoryTemplate extends FilePlanDescriptorTemplate implements Parsable {
     /**
-     * Represents all subcategories under a particular category.
-     */
-    private java.util.List<SubCategoryTemplate> subCategories;
-    /**
-     * Instantiates a new categoryTemplate and sets the default values.
+     * Instantiates a new CategoryTemplate and sets the default values.
      */
     public CategoryTemplate() {
         super();
@@ -21,7 +17,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a categoryTemplate
+     * @return a CategoryTemplate
      */
     @jakarta.annotation.Nonnull
     public static CategoryTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * Gets the subCategories property value. Represents all subcategories under a particular category.
-     * @return a subCategoryTemplate
+     * @return a java.util.List<SubCategoryTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubCategoryTemplate> getSubCategories() {
-        return this.subCategories;
+        return this.backingStore.get("subCategories");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * @param value Value to set for the subCategories property.
      */
     public void setSubCategories(@jakarta.annotation.Nullable final java.util.List<SubCategoryTemplate> value) {
-        this.subCategories = value;
+        this.backingStore.set("subCategories", value);
     }
 }
