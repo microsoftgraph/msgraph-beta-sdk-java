@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementDerivedCredentialSettings extends Entity implements Parsable {
     /**
-     * The display name for the profile.
-     */
-    private String displayName;
-    /**
-     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
-     */
-    private String helpUrl;
-    /**
-     * Supported values for the derived credential issuer.
-     */
-    private DeviceManagementDerivedCredentialIssuer issuer;
-    /**
-     * Supported values for the notification type to use.
-     */
-    private EnumSet<DeviceManagementDerivedCredentialNotificationType> notificationType;
-    /**
-     * The nominal percentage of time before certificate renewal is initiated by the client.
-     */
-    private Integer renewalThresholdPercentage;
-    /**
-     * Instantiates a new deviceManagementDerivedCredentialSettings and sets the default values.
+     * Instantiates a new DeviceManagementDerivedCredentialSettings and sets the default values.
      */
     public DeviceManagementDerivedCredentialSettings() {
         super();
@@ -41,7 +21,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementDerivedCredentialSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +30,11 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     }
     /**
      * Gets the displayName property value. The display name for the profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -65,42 +45,42 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("helpUrl", (n) -> { this.setHelpUrl(n.getStringValue()); });
-        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
-        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumSetValue(DeviceManagementDerivedCredentialNotificationType.class)); });
+        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer::forValue)); });
+        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumSetValue(DeviceManagementDerivedCredentialNotificationType::forValue)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
      * Gets the helpUrl property value. The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpUrl() {
-        return this.helpUrl;
+        return this.backingStore.get("helpUrl");
     }
     /**
      * Gets the issuer property value. Supported values for the derived credential issuer.
-     * @return a deviceManagementDerivedCredentialIssuer
+     * @return a DeviceManagementDerivedCredentialIssuer
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialIssuer getIssuer() {
-        return this.issuer;
+        return this.backingStore.get("issuer");
     }
     /**
      * Gets the notificationType property value. Supported values for the notification type to use.
-     * @return a deviceManagementDerivedCredentialNotificationType
+     * @return a EnumSet<DeviceManagementDerivedCredentialNotificationType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementDerivedCredentialNotificationType> getNotificationType() {
-        return this.notificationType;
+        return this.backingStore.get("notificationType");
     }
     /**
      * Gets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
-        return this.renewalThresholdPercentage;
+        return this.backingStore.get("renewalThresholdPercentage");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the helpUrl property value. The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
      * @param value Value to set for the helpUrl property.
      */
     public void setHelpUrl(@jakarta.annotation.Nullable final String value) {
-        this.helpUrl = value;
+        this.backingStore.set("helpUrl", value);
     }
     /**
      * Sets the issuer property value. Supported values for the derived credential issuer.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialIssuer value) {
-        this.issuer = value;
+        this.backingStore.set("issuer", value);
     }
     /**
      * Sets the notificationType property value. Supported values for the notification type to use.
      * @param value Value to set for the notificationType property.
      */
     public void setNotificationType(@jakarta.annotation.Nullable final EnumSet<DeviceManagementDerivedCredentialNotificationType> value) {
-        this.notificationType = value;
+        this.backingStore.set("notificationType", value);
     }
     /**
      * Sets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
      * @param value Value to set for the renewalThresholdPercentage property.
      */
     public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.renewalThresholdPercentage = value;
+        this.backingStore.set("renewalThresholdPercentage", value);
     }
 }

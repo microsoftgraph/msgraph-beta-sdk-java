@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue implements Parsable {
     /**
-     * A list of pairs for the associated presentation.
-     */
-    private java.util.List<KeyValuePair> values;
-    /**
-     * Instantiates a new groupPolicyPresentationValueList and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueList and sets the default values.
      */
     public GroupPolicyPresentationValueList() {
         super();
@@ -24,7 +20,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueList
+     * @return a GroupPolicyPresentationValueList
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     }
     /**
      * Gets the values property value. A list of pairs for the associated presentation.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getValues() {
-        return this.values;
+        return this.backingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.values = value;
+        this.backingStore.set("values", value);
     }
 }

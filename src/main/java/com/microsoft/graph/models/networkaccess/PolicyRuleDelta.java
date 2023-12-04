@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
+public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The action property
+     * Stores model information.
      */
-    private ForwardingRuleAction action;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The identifier of the policy rule to update.
-     */
-    private String ruleId;
-    /**
-     * Instantiates a new policyRuleDelta and sets the default values.
+     * Instantiates a new PolicyRuleDelta and sets the default values.
      */
     public PolicyRuleDelta() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyRuleDelta
+     * @return a PolicyRuleDelta
      */
     @jakarta.annotation.Nonnull
     public static PolicyRuleDelta createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +36,32 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a forwardingRuleAction
+     * @return a ForwardingRuleAction
      */
     @jakarta.annotation.Nullable
     public ForwardingRuleAction getAction() {
-        return this.action;
+        return this.backingStore.get("action");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -64,26 +70,26 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ForwardingRuleAction.class)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ForwardingRuleAction::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the ruleId property value. The identifier of the policy rule to update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {
-        return this.ruleId;
+        return this.backingStore.get("ruleId");
     }
     /**
      * Serializes information the current object
@@ -101,27 +107,35 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final ForwardingRuleAction value) {
-        this.action = value;
+        this.backingStore.set("action", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the ruleId property value. The identifier of the policy rule to update.
      * @param value Value to set for the ruleId property.
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {
-        this.ruleId = value;
+        this.backingStore.set("ruleId", value);
     }
 }

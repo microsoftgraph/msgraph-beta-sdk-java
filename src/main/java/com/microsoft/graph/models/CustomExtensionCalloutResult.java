@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResult implements Parsable {
     /**
-     * When the API transaction was initiated, the date and time information uses ISO 8601 format and is always in UTC time. Example: midnight on Jan 1, 2014, is reported as 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime calloutDateTime;
-    /**
-     * Identifier of the custom extension that was called.
-     */
-    private String customExtensionId;
-    /**
-     * Error code that was returned when the last API attempt failed.
-     */
-    private Integer errorCode;
-    /**
-     * The HTTP status code that was returned by the target API endpoint after the last API attempt.
-     */
-    private Integer httpStatus;
-    /**
-     * The number of API calls to the customer's API.
-     */
-    private Integer numberOfAttempts;
-    /**
-     * Instantiates a new customExtensionCalloutResult and sets the default values.
+     * Instantiates a new CustomExtensionCalloutResult and sets the default values.
      */
     public CustomExtensionCalloutResult() {
         super();
@@ -39,7 +19,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionCalloutResult
+     * @return a CustomExtensionCalloutResult
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionCalloutResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,23 +32,23 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCalloutDateTime() {
-        return this.calloutDateTime;
+        return this.backingStore.get("calloutDateTime");
     }
     /**
      * Gets the customExtensionId property value. Identifier of the custom extension that was called.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionId() {
-        return this.customExtensionId;
+        return this.backingStore.get("customExtensionId");
     }
     /**
      * Gets the errorCode property value. Error code that was returned when the last API attempt failed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -86,19 +66,19 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the httpStatus property value. The HTTP status code that was returned by the target API endpoint after the last API attempt.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHttpStatus() {
-        return this.httpStatus;
+        return this.backingStore.get("httpStatus");
     }
     /**
      * Gets the numberOfAttempts property value. The number of API calls to the customer's API.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfAttempts() {
-        return this.numberOfAttempts;
+        return this.backingStore.get("numberOfAttempts");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
      * @param value Value to set for the calloutDateTime property.
      */
     public void setCalloutDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.calloutDateTime = value;
+        this.backingStore.set("calloutDateTime", value);
     }
     /**
      * Sets the customExtensionId property value. Identifier of the custom extension that was called.
      * @param value Value to set for the customExtensionId property.
      */
     public void setCustomExtensionId(@jakarta.annotation.Nullable final String value) {
-        this.customExtensionId = value;
+        this.backingStore.set("customExtensionId", value);
     }
     /**
      * Sets the errorCode property value. Error code that was returned when the last API attempt failed.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the httpStatus property value. The HTTP status code that was returned by the target API endpoint after the last API attempt.
      * @param value Value to set for the httpStatus property.
      */
     public void setHttpStatus(@jakarta.annotation.Nullable final Integer value) {
-        this.httpStatus = value;
+        this.backingStore.set("httpStatus", value);
     }
     /**
      * Sets the numberOfAttempts property value. The number of API calls to the customer's API.
      * @param value Value to set for the numberOfAttempts property.
      */
     public void setNumberOfAttempts(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfAttempts = value;
+        this.backingStore.set("numberOfAttempts", value);
     }
 }

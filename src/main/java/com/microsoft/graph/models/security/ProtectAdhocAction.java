@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectAdhocAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new protectAdhocAction and sets the default values.
+     * Instantiates a new ProtectAdhocAction and sets the default values.
      */
     public ProtectAdhocAction() {
         super();
@@ -18,7 +18,7 @@ public class ProtectAdhocAction extends InformationProtectionAction implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectAdhocAction
+     * @return a ProtectAdhocAction
      */
     @jakarta.annotation.Nonnull
     public static ProtectAdhocAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

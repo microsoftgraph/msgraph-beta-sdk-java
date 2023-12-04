@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertIncident extends Entity implements Parsable {
     /**
-     * Instantiates a new unifiedRoleManagementAlertIncident and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlertIncident and sets the default values.
      */
     public UnifiedRoleManagementAlertIncident() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleManagementAlertIncident extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlertIncident
+     * @return a UnifiedRoleManagementAlertIncident
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

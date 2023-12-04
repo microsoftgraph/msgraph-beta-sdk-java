@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalItem extends Entity implements Parsable {
     /**
-     * The acl property
-     */
-    private java.util.List<Acl> acl;
-    /**
-     * The content property
-     */
-    private ExternalItemContent content;
-    /**
-     * The properties property
-     */
-    private Properties properties;
-    /**
-     * Instantiates a new externalItem and sets the default values.
+     * Instantiates a new ExternalItem and sets the default values.
      */
     public ExternalItem() {
         super();
@@ -29,7 +17,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalItem
+     * @return a ExternalItem
      */
     @jakarta.annotation.Nonnull
     public static ExternalItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the acl property value. The acl property
-     * @return a acl
+     * @return a java.util.List<Acl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acl> getAcl() {
-        return this.acl;
+        return this.backingStore.get("acl");
     }
     /**
      * Gets the content property value. The content property
-     * @return a externalItemContent
+     * @return a ExternalItemContent
      */
     @jakarta.annotation.Nullable
     public ExternalItemContent getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. The properties property
-     * @return a properties
+     * @return a Properties
      */
     @jakarta.annotation.Nullable
     public Properties getProperties() {
-        return this.properties;
+        return this.backingStore.get("properties");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class ExternalItem extends Entity implements Parsable {
      * @param value Value to set for the acl property.
      */
     public void setAcl(@jakarta.annotation.Nullable final java.util.List<Acl> value) {
-        this.acl = value;
+        this.backingStore.set("acl", value);
     }
     /**
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final ExternalItemContent value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the properties property value. The properties property
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final Properties value) {
-        this.properties = value;
+        this.backingStore.set("properties", value);
     }
 }

@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity implements Parsable {
     /**
-     * Number of active devices within the tenant. Valid values 0 to 2147483647
-     */
-    private Integer activeDevices;
-    /**
-     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
-     */
-    private Integer batteryRuntimeFair;
-    /**
-     * Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
-     */
-    private Integer batteryRuntimeGood;
-    /**
-     * Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
-     */
-    private Integer batteryRuntimePoor;
-    /**
-     * Recorded date time of this runtime details instance.
-     */
-    private OffsetDateTime lastRefreshedDateTime;
-    /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthRuntimeDetails() {
         super();
@@ -41,7 +21,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthRuntimeDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,35 +30,35 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     }
     /**
      * Gets the activeDevices property value. Number of active devices within the tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
-        return this.activeDevices;
+        return this.backingStore.get("activeDevices");
     }
     /**
      * Gets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryRuntimeFair() {
-        return this.batteryRuntimeFair;
+        return this.backingStore.get("batteryRuntimeFair");
     }
     /**
      * Gets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryRuntimeGood() {
-        return this.batteryRuntimeGood;
+        return this.backingStore.get("batteryRuntimeGood");
     }
     /**
      * Gets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryRuntimePoor() {
-        return this.batteryRuntimePoor;
+        return this.backingStore.get("batteryRuntimePoor");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +80,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this.lastRefreshedDateTime;
+        return this.backingStore.get("lastRefreshedDateTime");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
      * @param value Value to set for the activeDevices property.
      */
     public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDevices = value;
+        this.backingStore.set("activeDevices", value);
     }
     /**
      * Sets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimeFair property.
      */
     public void setBatteryRuntimeFair(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryRuntimeFair = value;
+        this.backingStore.set("batteryRuntimeFair", value);
     }
     /**
      * Sets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimeGood property.
      */
     public void setBatteryRuntimeGood(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryRuntimeGood = value;
+        this.backingStore.set("batteryRuntimeGood", value);
     }
     /**
      * Sets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimePoor property.
      */
     public void setBatteryRuntimePoor(@jakarta.annotation.Nullable final Integer value) {
-        this.batteryRuntimePoor = value;
+        this.backingStore.set("batteryRuntimePoor", value);
     }
     /**
      * Sets the lastRefreshedDateTime property value. Recorded date time of this runtime details instance.
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshedDateTime = value;
+        this.backingStore.set("lastRefreshedDateTime", value);
     }
 }

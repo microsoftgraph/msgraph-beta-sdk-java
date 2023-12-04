@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfigurationAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<GroupPolicyConfigurationAssignment> value;
-    /**
-     * Instantiates a new groupPolicyConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new GroupPolicyConfigurationAssignmentCollectionResponse and sets the default values.
      */
     public GroupPolicyConfigurationAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class GroupPolicyConfigurationAssignmentCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfigurationAssignmentCollectionResponse
+     * @return a GroupPolicyConfigurationAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfigurationAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class GroupPolicyConfigurationAssignmentCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a groupPolicyConfigurationAssignment
+     * @return a java.util.List<GroupPolicyConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfigurationAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class GroupPolicyConfigurationAssignmentCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<GroupPolicyConfigurationAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

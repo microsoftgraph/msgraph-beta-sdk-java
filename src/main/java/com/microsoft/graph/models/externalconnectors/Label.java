@@ -15,9 +15,9 @@ public enum Label implements ValuedEnum {
     FileName("fileName"),
     FileExtension("fileExtension"),
     UnknownFutureValue("unknownFutureValue"),
-    IconUrl("iconUrl"),
     ContainerName("containerName"),
-    ContainerUrl("containerUrl");
+    ContainerUrl("containerUrl"),
+    IconUrl("iconUrl");
     public final String value;
     Label(final String value) {
         this.value = value;
@@ -38,9 +38,9 @@ public enum Label implements ValuedEnum {
             case "fileName": return FileName;
             case "fileExtension": return FileExtension;
             case "unknownFutureValue": return UnknownFutureValue;
-            case "iconUrl": return IconUrl;
             case "containerName": return ContainerName;
             case "containerUrl": return ContainerUrl;
+            case "iconUrl": return IconUrl;
             default: return null;
         }
     }

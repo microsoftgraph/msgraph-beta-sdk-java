@@ -77,7 +77,9 @@ public enum RemoteAction implements ValuedEnum {
     /** Revoke all Apple Vpp licenses for a device */
     RevokeAppleVppLicenses("revokeAppleVppLicenses"),
     /** Indicate IT Admin initiates an action to remove devices from Device Firmware Configuration Interface management */
-    RemoveDeviceFirmwareConfigurationInterfaceManagement("removeDeviceFirmwareConfigurationInterfaceManagement");
+    RemoveDeviceFirmwareConfigurationInterfaceManagement("removeDeviceFirmwareConfigurationInterfaceManagement"),
+    /** Indicates an action has been initiated to pause configuration refresh for the device. */
+    PauseConfigurationRefresh("pauseConfigurationRefresh");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
@@ -123,6 +125,7 @@ public enum RemoteAction implements ValuedEnum {
             case "launchRemoteHelp": return LaunchRemoteHelp;
             case "revokeAppleVppLicenses": return RevokeAppleVppLicenses;
             case "removeDeviceFirmwareConfigurationInterfaceManagement": return RemoveDeviceFirmwareConfigurationInterfaceManagement;
+            case "pauseConfigurationRefresh": return PauseConfigurationRefresh;
             default: return null;
         }
     }

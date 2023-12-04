@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceNowConnection extends Entity implements Parsable {
     /**
-     * Indicates the method used by Intune to authenticate with ServiceNow. Currently supports only web authentication with ServiceNow using the specified app id.
-     */
-    private ServiceNowAuthenticationMethod authenticationMethod;
-    /**
-     * Date Time when connection properties were created. The value cannot be modified and is automatically populated when the connection properties were entered.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Indicates the ServiceNow incident API URL that Intune will use the fetch incidents. Saved in the format of /api/now/table/incident
-     */
-    private String incidentApiUrl;
-    /**
-     * Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
-     */
-    private String instanceUrl;
-    /**
-     * Date Time when connection properties were last updated. The value cannot be modified and is automatically populated when the connection properties were updated.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Date Time when incidents from ServiceNow were last queried
-     */
-    private OffsetDateTime lastQueriedDateTime;
-    /**
-     * Status of ServiceNow Connection
-     */
-    private ServiceNowConnectionStatus serviceNowConnectionStatus;
-    /**
-     * Instantiates a new serviceNowConnection and sets the default values.
+     * Instantiates a new ServiceNowConnection and sets the default values.
      */
     public ServiceNowConnection() {
         super();
@@ -49,7 +21,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceNowConnection
+     * @return a ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,11 +30,11 @@ public class ServiceNowConnection extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. Indicates the method used by Intune to authenticate with ServiceNow. Currently supports only web authentication with ServiceNow using the specified app id.
-     * @return a serviceNowAuthenticationMethod
+     * @return a ServiceNowAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public ServiceNowAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.backingStore.get("authenticationMethod");
     }
     /**
      * Gets the createdDateTime property value. Date Time when connection properties were created. The value cannot be modified and is automatically populated when the connection properties were entered.
@@ -70,7 +42,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,24 +57,24 @@ public class ServiceNowConnection extends Entity implements Parsable {
         deserializerMap.put("instanceUrl", (n) -> { this.setInstanceUrl(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastQueriedDateTime", (n) -> { this.setLastQueriedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("serviceNowConnectionStatus", (n) -> { this.setServiceNowConnectionStatus(n.getEnumValue(ServiceNowConnectionStatus.class)); });
+        deserializerMap.put("serviceNowConnectionStatus", (n) -> { this.setServiceNowConnectionStatus(n.getEnumValue(ServiceNowConnectionStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the incidentApiUrl property value. Indicates the ServiceNow incident API URL that Intune will use the fetch incidents. Saved in the format of /api/now/table/incident
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIncidentApiUrl() {
-        return this.incidentApiUrl;
+        return this.backingStore.get("incidentApiUrl");
     }
     /**
      * Gets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstanceUrl() {
-        return this.instanceUrl;
+        return this.backingStore.get("instanceUrl");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date Time when connection properties were last updated. The value cannot be modified and is automatically populated when the connection properties were updated.
@@ -110,7 +82,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the lastQueriedDateTime property value. Date Time when incidents from ServiceNow were last queried
@@ -118,15 +90,15 @@ public class ServiceNowConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastQueriedDateTime() {
-        return this.lastQueriedDateTime;
+        return this.backingStore.get("lastQueriedDateTime");
     }
     /**
      * Gets the serviceNowConnectionStatus property value. Status of ServiceNow Connection
-     * @return a serviceNowConnectionStatus
+     * @return a ServiceNowConnectionStatus
      */
     @jakarta.annotation.Nullable
     public ServiceNowConnectionStatus getServiceNowConnectionStatus() {
-        return this.serviceNowConnectionStatus;
+        return this.backingStore.get("serviceNowConnectionStatus");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final ServiceNowAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.backingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the createdDateTime property value. Date Time when connection properties were created. The value cannot be modified and is automatically populated when the connection properties were entered.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the incidentApiUrl property value. Indicates the ServiceNow incident API URL that Intune will use the fetch incidents. Saved in the format of /api/now/table/incident
      * @param value Value to set for the incidentApiUrl property.
      */
     public void setIncidentApiUrl(@jakarta.annotation.Nullable final String value) {
-        this.incidentApiUrl = value;
+        this.backingStore.set("incidentApiUrl", value);
     }
     /**
      * Sets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
      * @param value Value to set for the instanceUrl property.
      */
     public void setInstanceUrl(@jakarta.annotation.Nullable final String value) {
-        this.instanceUrl = value;
+        this.backingStore.set("instanceUrl", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date Time when connection properties were last updated. The value cannot be modified and is automatically populated when the connection properties were updated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the lastQueriedDateTime property value. Date Time when incidents from ServiceNow were last queried
      * @param value Value to set for the lastQueriedDateTime property.
      */
     public void setLastQueriedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastQueriedDateTime = value;
+        this.backingStore.set("lastQueriedDateTime", value);
     }
     /**
      * Sets the serviceNowConnectionStatus property value. Status of ServiceNow Connection
      * @param value Value to set for the serviceNowConnectionStatus property.
      */
     public void setServiceNowConnectionStatus(@jakarta.annotation.Nullable final ServiceNowConnectionStatus value) {
-        this.serviceNowConnectionStatus = value;
+        this.backingStore.set("serviceNowConnectionStatus", value);
     }
 }

@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentProfile extends Entity implements Parsable {
     /**
-     * Configuration endpoint url to use for Enrollment
-     */
-    private String configurationEndpointUrl;
-    /**
-     * Description of the profile
-     */
-    private String description;
-    /**
-     * Name of the profile
-     */
-    private String displayName;
-    /**
-     * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
-     */
-    private Boolean enableAuthenticationViaCompanyPortal;
-    /**
-     * Indicates that Company Portal is required on setup assistant enrolled devices
-     */
-    private Boolean requireCompanyPortalOnSetupAssistantEnrolledDevices;
-    /**
-     * Indicates if the profile requires user authentication
-     */
-    private Boolean requiresUserAuthentication;
-    /**
-     * Instantiates a new enrollmentProfile and sets the default values.
+     * Instantiates a new EnrollmentProfile and sets the default values.
      */
     public EnrollmentProfile() {
         super();
@@ -44,7 +20,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enrollmentProfile
+     * @return a EnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,35 +39,35 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the configurationEndpointUrl property value. Configuration endpoint url to use for Enrollment
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigurationEndpointUrl() {
-        return this.configurationEndpointUrl;
+        return this.backingStore.get("configurationEndpointUrl");
     }
     /**
      * Gets the description property value. Description of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Name of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the enableAuthenticationViaCompanyPortal property value. Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAuthenticationViaCompanyPortal() {
-        return this.enableAuthenticationViaCompanyPortal;
+        return this.backingStore.get("enableAuthenticationViaCompanyPortal");
     }
     /**
      * The deserialization information for the current model
@@ -110,19 +86,19 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices property value. Indicates that Company Portal is required on setup assistant enrolled devices
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireCompanyPortalOnSetupAssistantEnrolledDevices() {
-        return this.requireCompanyPortalOnSetupAssistantEnrolledDevices;
+        return this.backingStore.get("requireCompanyPortalOnSetupAssistantEnrolledDevices");
     }
     /**
      * Gets the requiresUserAuthentication property value. Indicates if the profile requires user authentication
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresUserAuthentication() {
-        return this.requiresUserAuthentication;
+        return this.backingStore.get("requiresUserAuthentication");
     }
     /**
      * Serializes information the current object
@@ -143,41 +119,41 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the configurationEndpointUrl property.
      */
     public void setConfigurationEndpointUrl(@jakarta.annotation.Nullable final String value) {
-        this.configurationEndpointUrl = value;
+        this.backingStore.set("configurationEndpointUrl", value);
     }
     /**
      * Sets the description property value. Description of the profile
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the profile
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the enableAuthenticationViaCompanyPortal property value. Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
      * @param value Value to set for the enableAuthenticationViaCompanyPortal property.
      */
     public void setEnableAuthenticationViaCompanyPortal(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableAuthenticationViaCompanyPortal = value;
+        this.backingStore.set("enableAuthenticationViaCompanyPortal", value);
     }
     /**
      * Sets the requireCompanyPortalOnSetupAssistantEnrolledDevices property value. Indicates that Company Portal is required on setup assistant enrolled devices
      * @param value Value to set for the requireCompanyPortalOnSetupAssistantEnrolledDevices property.
      */
     public void setRequireCompanyPortalOnSetupAssistantEnrolledDevices(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireCompanyPortalOnSetupAssistantEnrolledDevices = value;
+        this.backingStore.set("requireCompanyPortalOnSetupAssistantEnrolledDevices", value);
     }
     /**
      * Sets the requiresUserAuthentication property value. Indicates if the profile requires user authentication
      * @param value Value to set for the requiresUserAuthentication property.
      */
     public void setRequiresUserAuthentication(@jakarta.annotation.Nullable final Boolean value) {
-        this.requiresUserAuthentication = value;
+        this.backingStore.set("requiresUserAuthentication", value);
     }
 }

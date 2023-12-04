@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate extends DeviceManagementConfigurationIntegerSettingValueDefaultTemplate implements Parsable {
     /**
-     * Default Constant Value. Valid values -2147483648 to 2147483647
-     */
-    private Integer constantValue;
-    /**
-     * Instantiates a new deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
     }
     /**
      * Gets the constantValue property value. Default Constant Value. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConstantValue() {
-        return this.constantValue;
+        return this.backingStore.get("constantValue");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      * @param value Value to set for the constantValue property.
      */
     public void setConstantValue(@jakarta.annotation.Nullable final Integer value) {
-        this.constantValue = value;
+        this.backingStore.set("constantValue", value);
     }
 }

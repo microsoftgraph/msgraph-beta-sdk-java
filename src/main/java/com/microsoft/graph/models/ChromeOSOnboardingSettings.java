@@ -13,23 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     /**
-     * The ChromebookTenant's LastDirectorySyncDateTime
-     */
-    private OffsetDateTime lastDirectorySyncDateTime;
-    /**
-     * The ChromebookTenant's LastModifiedDateTime
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The onboarding status of the tenant.
-     */
-    private OnboardingStatus onboardingStatus;
-    /**
-     * The ChromebookTenant's OwnerUserPrincipalName
-     */
-    private String ownerUserPrincipalName;
-    /**
-     * Instantiates a new chromeOSOnboardingSettings and sets the default values.
+     * Instantiates a new ChromeOSOnboardingSettings and sets the default values.
      */
     public ChromeOSOnboardingSettings() {
         super();
@@ -37,7 +21,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chromeOSOnboardingSettings
+     * @return a ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public static ChromeOSOnboardingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +37,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastDirectorySyncDateTime", (n) -> { this.setLastDirectorySyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus.class)); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus::forValue)); });
         deserializerMap.put("ownerUserPrincipalName", (n) -> { this.setOwnerUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -63,7 +47,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDirectorySyncDateTime() {
-        return this.lastDirectorySyncDateTime;
+        return this.backingStore.get("lastDirectorySyncDateTime");
     }
     /**
      * Gets the lastModifiedDateTime property value. The ChromebookTenant's LastModifiedDateTime
@@ -71,23 +55,23 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status of the tenant.
-     * @return a onboardingStatus
+     * @return a OnboardingStatus
      */
     @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {
-        return this.onboardingStatus;
+        return this.backingStore.get("onboardingStatus");
     }
     /**
      * Gets the ownerUserPrincipalName property value. The ChromebookTenant's OwnerUserPrincipalName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerUserPrincipalName() {
-        return this.ownerUserPrincipalName;
+        return this.backingStore.get("ownerUserPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
      * @param value Value to set for the lastDirectorySyncDateTime property.
      */
     public void setLastDirectorySyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastDirectorySyncDateTime = value;
+        this.backingStore.set("lastDirectorySyncDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The ChromebookTenant's LastModifiedDateTime
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the onboardingStatus property value. The onboarding status of the tenant.
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
-        this.onboardingStatus = value;
+        this.backingStore.set("onboardingStatus", value);
     }
     /**
      * Sets the ownerUserPrincipalName property value. The ChromebookTenant's OwnerUserPrincipalName
      * @param value Value to set for the ownerUserPrincipalName property.
      */
     public void setOwnerUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.ownerUserPrincipalName = value;
+        this.backingStore.set("ownerUserPrincipalName", value);
     }
 }

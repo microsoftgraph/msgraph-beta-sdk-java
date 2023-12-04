@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebAccount extends ItemFacet implements Parsable {
     /**
-     * Contains the description the user has provided for the account on the service being referenced.
-     */
-    private String description;
-    /**
-     * The service property
-     */
-    private ServiceInformation service;
-    /**
-     * Contains a status message from the cloud service if provided or synchronized.
-     */
-    private String statusMessage;
-    /**
-     * The thumbnailUrl property
-     */
-    private String thumbnailUrl;
-    /**
-     * The user name  displayed for the webaccount.
-     */
-    private String userId;
-    /**
-     * Contains a link to the user's profile on the cloud service if one exists.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new webAccount and sets the default values.
+     * Instantiates a new WebAccount and sets the default values.
      */
     public WebAccount() {
         super();
@@ -42,7 +18,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webAccount
+     * @return a WebAccount
      */
     @jakarta.annotation.Nonnull
     public static WebAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,11 +27,11 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Contains the description the user has provided for the account on the service being referenced.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -74,43 +50,43 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the service property value. The service property
-     * @return a serviceInformation
+     * @return a ServiceInformation
      */
     @jakarta.annotation.Nullable
     public ServiceInformation getService() {
-        return this.service;
+        return this.backingStore.get("service");
     }
     /**
      * Gets the statusMessage property value. Contains a status message from the cloud service if provided or synchronized.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusMessage() {
-        return this.statusMessage;
+        return this.backingStore.get("statusMessage");
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
-        return this.thumbnailUrl;
+        return this.backingStore.get("thumbnailUrl");
     }
     /**
      * Gets the userId property value. The user name  displayed for the webaccount.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the service property value. The service property
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final ServiceInformation value) {
-        this.service = value;
+        this.backingStore.set("service", value);
     }
     /**
      * Sets the statusMessage property value. Contains a status message from the cloud service if provided or synchronized.
      * @param value Value to set for the statusMessage property.
      */
     public void setStatusMessage(@jakarta.annotation.Nullable final String value) {
-        this.statusMessage = value;
+        this.backingStore.set("statusMessage", value);
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      */
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailUrl = value;
+        this.backingStore.set("thumbnailUrl", value);
     }
     /**
      * Sets the userId property value. The user name  displayed for the webaccount.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

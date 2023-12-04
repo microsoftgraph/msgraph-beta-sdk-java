@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /**
-     * The number of emails received by Group mailboxes.
-     */
-    private Long exchangeEmailsReceived;
-    /**
-     * The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
-     */
-    private LocalDate reportDate;
-    /**
-     * The number of days the report covers.
-     */
-    private String reportPeriod;
-    /**
-     * The latest date of the content.
-     */
-    private LocalDate reportRefreshDate;
-    /**
-     * The number of channel messages in Teams team.
-     */
-    private Long teamsChannelMessages;
-    /**
-     * The number of meetings organized in Teams team.
-     */
-    private Long teamsMeetingsOrganized;
-    /**
-     * The number of messages liked in Yammer groups.
-     */
-    private Long yammerMessagesLiked;
-    /**
-     * The number of messages posted to Yammer groups.
-     */
-    private Long yammerMessagesPosted;
-    /**
-     * The number of messages read in Yammer groups.
-     */
-    private Long yammerMessagesRead;
-    /**
-     * Instantiates a new office365GroupsActivityCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityCounts and sets the default values.
      */
     public Office365GroupsActivityCounts() {
         super();
@@ -54,7 +18,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityCounts
+     * @return a Office365GroupsActivityCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,11 +27,11 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeEmailsReceived property value. The number of emails received by Group mailboxes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeEmailsReceived() {
-        return this.exchangeEmailsReceived;
+        return this.backingStore.get("exchangeEmailsReceived");
     }
     /**
      * The deserialization information for the current model
@@ -93,15 +57,15 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
-        return this.reportDate;
+        return this.backingStore.get("reportDate");
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
-        return this.reportPeriod;
+        return this.backingStore.get("reportPeriod");
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -109,47 +73,47 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this.reportRefreshDate;
+        return this.backingStore.get("reportRefreshDate");
     }
     /**
      * Gets the teamsChannelMessages property value. The number of channel messages in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsChannelMessages() {
-        return this.teamsChannelMessages;
+        return this.backingStore.get("teamsChannelMessages");
     }
     /**
      * Gets the teamsMeetingsOrganized property value. The number of meetings organized in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsMeetingsOrganized() {
-        return this.teamsMeetingsOrganized;
+        return this.backingStore.get("teamsMeetingsOrganized");
     }
     /**
      * Gets the yammerMessagesLiked property value. The number of messages liked in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesLiked() {
-        return this.yammerMessagesLiked;
+        return this.backingStore.get("yammerMessagesLiked");
     }
     /**
      * Gets the yammerMessagesPosted property value. The number of messages posted to Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesPosted() {
-        return this.yammerMessagesPosted;
+        return this.backingStore.get("yammerMessagesPosted");
     }
     /**
      * Gets the yammerMessagesRead property value. The number of messages read in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesRead() {
-        return this.yammerMessagesRead;
+        return this.backingStore.get("yammerMessagesRead");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the exchangeEmailsReceived property.
      */
     public void setExchangeEmailsReceived(@jakarta.annotation.Nullable final Long value) {
-        this.exchangeEmailsReceived = value;
+        this.backingStore.set("exchangeEmailsReceived", value);
     }
     /**
      * Sets the reportDate property value. The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
      * @param value Value to set for the reportDate property.
      */
     public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportDate = value;
+        this.backingStore.set("reportDate", value);
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      */
     public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
-        this.reportPeriod = value;
+        this.backingStore.set("reportPeriod", value);
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      */
     public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.reportRefreshDate = value;
+        this.backingStore.set("reportRefreshDate", value);
     }
     /**
      * Sets the teamsChannelMessages property value. The number of channel messages in Teams team.
      * @param value Value to set for the teamsChannelMessages property.
      */
     public void setTeamsChannelMessages(@jakarta.annotation.Nullable final Long value) {
-        this.teamsChannelMessages = value;
+        this.backingStore.set("teamsChannelMessages", value);
     }
     /**
      * Sets the teamsMeetingsOrganized property value. The number of meetings organized in Teams team.
      * @param value Value to set for the teamsMeetingsOrganized property.
      */
     public void setTeamsMeetingsOrganized(@jakarta.annotation.Nullable final Long value) {
-        this.teamsMeetingsOrganized = value;
+        this.backingStore.set("teamsMeetingsOrganized", value);
     }
     /**
      * Sets the yammerMessagesLiked property value. The number of messages liked in Yammer groups.
      * @param value Value to set for the yammerMessagesLiked property.
      */
     public void setYammerMessagesLiked(@jakarta.annotation.Nullable final Long value) {
-        this.yammerMessagesLiked = value;
+        this.backingStore.set("yammerMessagesLiked", value);
     }
     /**
      * Sets the yammerMessagesPosted property value. The number of messages posted to Yammer groups.
      * @param value Value to set for the yammerMessagesPosted property.
      */
     public void setYammerMessagesPosted(@jakarta.annotation.Nullable final Long value) {
-        this.yammerMessagesPosted = value;
+        this.backingStore.set("yammerMessagesPosted", value);
     }
     /**
      * Sets the yammerMessagesRead property value. The number of messages read in Yammer groups.
      * @param value Value to set for the yammerMessagesRead property.
      */
     public void setYammerMessagesRead(@jakarta.annotation.Nullable final Long value) {
-        this.yammerMessagesRead = value;
+        this.backingStore.set("yammerMessagesRead", value);
     }
 }

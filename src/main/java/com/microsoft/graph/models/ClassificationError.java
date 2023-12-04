@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClassificationError extends ClassifcationErrorBase implements Parsable {
     /**
-     * The details property
-     */
-    private java.util.List<ClassifcationErrorBase> details;
-    /**
-     * Instantiates a new classificationError and sets the default values.
+     * Instantiates a new ClassificationError and sets the default values.
      */
     public ClassificationError() {
         super();
@@ -21,7 +17,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a classificationError
+     * @return a ClassificationError
      */
     @jakarta.annotation.Nonnull
     public static ClassificationError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
     }
     /**
      * Gets the details property value. The details property
-     * @return a classifcationErrorBase
+     * @return a java.util.List<ClassifcationErrorBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClassifcationErrorBase> getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<ClassifcationErrorBase> value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
 }

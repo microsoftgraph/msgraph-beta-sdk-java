@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileEvidence extends AlertEvidence implements Parsable {
     /**
-     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     */
-    private DetectionStatus detectionStatus;
-    /**
-     * The file details.
-     */
-    private FileDetails fileDetails;
-    /**
-     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     */
-    private String mdeDeviceId;
-    /**
-     * Instantiates a new fileEvidence and sets the default values.
+     * Instantiates a new FileEvidence and sets the default values.
      */
     public FileEvidence() {
         super();
@@ -30,7 +18,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileEvidence
+     * @return a FileEvidence
      */
     @jakarta.annotation.Nonnull
     public static FileEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     * @return a detectionStatus
+     * @return a DetectionStatus
      */
     @jakarta.annotation.Nullable
     public DetectionStatus getDetectionStatus() {
-        return this.detectionStatus;
+        return this.backingStore.get("detectionStatus");
     }
     /**
      * The deserialization information for the current model
@@ -52,26 +40,26 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("detectionStatus", (n) -> { this.setDetectionStatus(n.getEnumValue(DetectionStatus.class)); });
+        deserializerMap.put("detectionStatus", (n) -> { this.setDetectionStatus(n.getEnumValue(DetectionStatus::forValue)); });
         deserializerMap.put("fileDetails", (n) -> { this.setFileDetails(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the fileDetails property value. The file details.
-     * @return a fileDetails
+     * @return a FileDetails
      */
     @jakarta.annotation.Nullable
     public FileDetails getFileDetails() {
-        return this.fileDetails;
+        return this.backingStore.get("fileDetails");
     }
     /**
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
-        return this.mdeDeviceId;
+        return this.backingStore.get("mdeDeviceId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the detectionStatus property.
      */
     public void setDetectionStatus(@jakarta.annotation.Nullable final DetectionStatus value) {
-        this.detectionStatus = value;
+        this.backingStore.set("detectionStatus", value);
     }
     /**
      * Sets the fileDetails property value. The file details.
      * @param value Value to set for the fileDetails property.
      */
     public void setFileDetails(@jakarta.annotation.Nullable final FileDetails value) {
-        this.fileDetails = value;
+        this.backingStore.set("fileDetails", value);
     }
     /**
      * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
      */
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.mdeDeviceId = value;
+        this.backingStore.set("mdeDeviceId", value);
     }
 }

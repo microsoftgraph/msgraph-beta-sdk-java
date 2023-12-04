@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Settings extends Entity implements Parsable {
     /**
-     * The conditionalAccess property
-     */
-    private ConditionalAccessSettings conditionalAccess;
-    /**
-     * The crossTenantAccess property
-     */
-    private CrossTenantAccessSettings crossTenantAccess;
-    /**
-     * The enrichedAuditLogs property
-     */
-    private EnrichedAuditLogs enrichedAuditLogs;
-    /**
-     * The forwardingOptions property
-     */
-    private ForwardingOptions forwardingOptions;
-    /**
-     * Instantiates a new settings and sets the default values.
+     * Instantiates a new Settings and sets the default values.
      */
     public Settings() {
         super();
@@ -34,7 +18,7 @@ public class Settings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a settings
+     * @return a Settings
      */
     @jakarta.annotation.Nonnull
     public static Settings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,27 +27,27 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccess property value. The conditionalAccess property
-     * @return a conditionalAccessSettings
+     * @return a ConditionalAccessSettings
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSettings getConditionalAccess() {
-        return this.conditionalAccess;
+        return this.backingStore.get("conditionalAccess");
     }
     /**
      * Gets the crossTenantAccess property value. The crossTenantAccess property
-     * @return a crossTenantAccessSettings
+     * @return a CrossTenantAccessSettings
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessSettings getCrossTenantAccess() {
-        return this.crossTenantAccess;
+        return this.backingStore.get("crossTenantAccess");
     }
     /**
      * Gets the enrichedAuditLogs property value. The enrichedAuditLogs property
-     * @return a enrichedAuditLogs
+     * @return a EnrichedAuditLogs
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogs getEnrichedAuditLogs() {
-        return this.enrichedAuditLogs;
+        return this.backingStore.get("enrichedAuditLogs");
     }
     /**
      * The deserialization information for the current model
@@ -80,11 +64,11 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingOptions property value. The forwardingOptions property
-     * @return a forwardingOptions
+     * @return a ForwardingOptions
      */
     @jakarta.annotation.Nullable
     public ForwardingOptions getForwardingOptions() {
-        return this.forwardingOptions;
+        return this.backingStore.get("forwardingOptions");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccess property.
      */
     public void setConditionalAccess(@jakarta.annotation.Nullable final ConditionalAccessSettings value) {
-        this.conditionalAccess = value;
+        this.backingStore.set("conditionalAccess", value);
     }
     /**
      * Sets the crossTenantAccess property value. The crossTenantAccess property
      * @param value Value to set for the crossTenantAccess property.
      */
     public void setCrossTenantAccess(@jakarta.annotation.Nullable final CrossTenantAccessSettings value) {
-        this.crossTenantAccess = value;
+        this.backingStore.set("crossTenantAccess", value);
     }
     /**
      * Sets the enrichedAuditLogs property value. The enrichedAuditLogs property
      * @param value Value to set for the enrichedAuditLogs property.
      */
     public void setEnrichedAuditLogs(@jakarta.annotation.Nullable final EnrichedAuditLogs value) {
-        this.enrichedAuditLogs = value;
+        this.backingStore.set("enrichedAuditLogs", value);
     }
     /**
      * Sets the forwardingOptions property value. The forwardingOptions property
      * @param value Value to set for the forwardingOptions property.
      */
     public void setForwardingOptions(@jakarta.annotation.Nullable final ForwardingOptions value) {
-        this.forwardingOptions = value;
+        this.backingStore.set("forwardingOptions", value);
     }
 }

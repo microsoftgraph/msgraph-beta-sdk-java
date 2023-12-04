@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerticalSection extends Entity implements Parsable {
     /**
-     * Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     */
-    private SectionEmphasisType emphasis;
-    /**
-     * The set of web parts in this section.
-     */
-    private java.util.List<WebPart> webparts;
-    /**
-     * Instantiates a new verticalSection and sets the default values.
+     * Instantiates a new VerticalSection and sets the default values.
      */
     public VerticalSection() {
         super();
@@ -25,7 +17,7 @@ public class VerticalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verticalSection
+     * @return a VerticalSection
      */
     @jakarta.annotation.Nonnull
     public static VerticalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a sectionEmphasisType
+     * @return a SectionEmphasisType
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
-        return this.emphasis;
+        return this.backingStore.get("emphasis");
     }
     /**
      * The deserialization information for the current model
@@ -47,17 +39,17 @@ public class VerticalSection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(SectionEmphasisType.class)); });
+        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(SectionEmphasisType::forValue)); });
         deserializerMap.put("webparts", (n) -> { this.setWebparts(n.getCollectionOfObjectValues(WebPart::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the webparts property value. The set of web parts in this section.
-     * @return a webPart
+     * @return a java.util.List<WebPart>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebparts() {
-        return this.webparts;
+        return this.backingStore.get("webparts");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class VerticalSection extends Entity implements Parsable {
      * @param value Value to set for the emphasis property.
      */
     public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
-        this.emphasis = value;
+        this.backingStore.set("emphasis", value);
     }
     /**
      * Sets the webparts property value. The set of web parts in this section.
      * @param value Value to set for the webparts property.
      */
     public void setWebparts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {
-        this.webparts = value;
+        this.backingStore.set("webparts", value);
     }
 }

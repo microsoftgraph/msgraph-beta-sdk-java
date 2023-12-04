@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
-     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     */
-    private String mdeDeviceId;
-    /**
-     * Registry hive of the key that the recorded action was applied to.
-     */
-    private String registryHive;
-    /**
-     * Registry key that the recorded action was applied to.
-     */
-    private String registryKey;
-    /**
-     * Data of the registry value that the recorded action was applied to.
-     */
-    private String registryValue;
-    /**
-     * Name of the registry value that the recorded action was applied to.
-     */
-    private String registryValueName;
-    /**
-     * Data type, such as binary or string, of the registry value that the recorded action was applied to.
-     */
-    private String registryValueType;
-    /**
-     * Instantiates a new registryValueEvidence and sets the default values.
+     * Instantiates a new RegistryValueEvidence and sets the default values.
      */
     public RegistryValueEvidence() {
         super();
@@ -42,7 +18,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a registryValueEvidence
+     * @return a RegistryValueEvidence
      */
     @jakarta.annotation.Nonnull
     public static RegistryValueEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,51 +42,51 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
-        return this.mdeDeviceId;
+        return this.backingStore.get("mdeDeviceId");
     }
     /**
      * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistryHive() {
-        return this.registryHive;
+        return this.backingStore.get("registryHive");
     }
     /**
      * Gets the registryKey property value. Registry key that the recorded action was applied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistryKey() {
-        return this.registryKey;
+        return this.backingStore.get("registryKey");
     }
     /**
      * Gets the registryValue property value. Data of the registry value that the recorded action was applied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistryValue() {
-        return this.registryValue;
+        return this.backingStore.get("registryValue");
     }
     /**
      * Gets the registryValueName property value. Name of the registry value that the recorded action was applied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueName() {
-        return this.registryValueName;
+        return this.backingStore.get("registryValueName");
     }
     /**
      * Gets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueType() {
-        return this.registryValueType;
+        return this.backingStore.get("registryValueType");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      */
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.mdeDeviceId = value;
+        this.backingStore.set("mdeDeviceId", value);
     }
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @param value Value to set for the registryHive property.
      */
     public void setRegistryHive(@jakarta.annotation.Nullable final String value) {
-        this.registryHive = value;
+        this.backingStore.set("registryHive", value);
     }
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
      */
     public void setRegistryKey(@jakarta.annotation.Nullable final String value) {
-        this.registryKey = value;
+        this.backingStore.set("registryKey", value);
     }
     /**
      * Sets the registryValue property value. Data of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValue property.
      */
     public void setRegistryValue(@jakarta.annotation.Nullable final String value) {
-        this.registryValue = value;
+        this.backingStore.set("registryValue", value);
     }
     /**
      * Sets the registryValueName property value. Name of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueName property.
      */
     public void setRegistryValueName(@jakarta.annotation.Nullable final String value) {
-        this.registryValueName = value;
+        this.backingStore.set("registryValueName", value);
     }
     /**
      * Sets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueType property.
      */
     public void setRegistryValueType(@jakarta.annotation.Nullable final String value) {
-        this.registryValueType = value;
+        this.backingStore.set("registryValueType", value);
     }
 }

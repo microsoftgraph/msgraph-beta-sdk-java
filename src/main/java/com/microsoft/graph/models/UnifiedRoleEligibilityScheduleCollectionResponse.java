@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UnifiedRoleEligibilitySchedule> value;
-    /**
-     * Instantiates a new unifiedRoleEligibilityScheduleCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleEligibilityScheduleCollectionResponse and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UnifiedRoleEligibilityScheduleCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleEligibilityScheduleCollectionResponse
+     * @return a UnifiedRoleEligibilityScheduleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleEligibilityScheduleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UnifiedRoleEligibilityScheduleCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleEligibilitySchedule
+     * @return a java.util.List<UnifiedRoleEligibilitySchedule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilitySchedule> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UnifiedRoleEligibilityScheduleCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingProfileConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * The source of the entity
-     */
-    private String source;
-    /**
-     * A collection of types this entity carries
-     */
-    private java.util.List<String> types;
-    /**
-     * Instantiates a new deviceManagementSettingProfileConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingProfileConstraint and sets the default values.
      */
     public DeviceManagementSettingProfileConstraint() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingProfileConstraint
+     * @return a DeviceManagementSettingProfileConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingProfileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * Gets the source property value. The source of the entity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
-        return this.source;
+        return this.backingStore.get("source");
     }
     /**
      * Gets the types property value. A collection of types this entity carries
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTypes() {
-        return this.types;
+        return this.backingStore.get("types");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final String value) {
-        this.source = value;
+        this.backingStore.set("source", value);
     }
     /**
      * Sets the types property value. A collection of types this entity carries
      * @param value Value to set for the types property.
      */
     public void setTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.types = value;
+        this.backingStore.set("types", value);
     }
 }

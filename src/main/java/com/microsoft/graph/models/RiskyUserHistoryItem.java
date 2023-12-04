@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
-     * The activity related to user risk level change.
-     */
-    private RiskUserActivity activity;
-    /**
-     * The ID of actor that does the operation.
-     */
-    private String initiatedBy;
-    /**
-     * The ID of the user.
-     */
-    private String userId;
-    /**
-     * Instantiates a new riskyUserHistoryItem and sets the default values.
+     * Instantiates a new RiskyUserHistoryItem and sets the default values.
      */
     public RiskyUserHistoryItem() {
         super();
@@ -29,7 +17,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyUserHistoryItem
+     * @return a RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public static RiskyUserHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the activity property value. The activity related to user risk level change.
-     * @return a riskUserActivity
+     * @return a RiskUserActivity
      */
     @jakarta.annotation.Nullable
     public RiskUserActivity getActivity() {
-        return this.activity;
+        return this.backingStore.get("activity");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The ID of actor that does the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedBy() {
-        return this.initiatedBy;
+        return this.backingStore.get("initiatedBy");
     }
     /**
      * Gets the userId property value. The ID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final RiskUserActivity value) {
-        this.activity = value;
+        this.backingStore.set("activity", value);
     }
     /**
      * Sets the initiatedBy property value. The ID of actor that does the operation.
      * @param value Value to set for the initiatedBy property.
      */
     public void setInitiatedBy(@jakarta.annotation.Nullable final String value) {
-        this.initiatedBy = value;
+        this.backingStore.set("initiatedBy", value);
     }
     /**
      * Sets the userId property value. The ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

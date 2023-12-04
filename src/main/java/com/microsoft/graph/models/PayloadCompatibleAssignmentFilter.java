@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignmentFilter implements Parsable {
     /**
-     * Represents the payload type AssignmentFilter is being assigned to.
-     */
-    private AssignmentFilterPayloadType payloadType;
-    /**
-     * Instantiates a new payloadCompatibleAssignmentFilter and sets the default values.
+     * Instantiates a new PayloadCompatibleAssignmentFilter and sets the default values.
      */
     public PayloadCompatibleAssignmentFilter() {
         super();
@@ -25,7 +21,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a payloadCompatibleAssignmentFilter
+     * @return a PayloadCompatibleAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public static PayloadCompatibleAssignmentFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,16 +35,16 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("payloadType", (n) -> { this.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType.class)); });
+        deserializerMap.put("payloadType", (n) -> { this.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the payloadType property value. Represents the payload type AssignmentFilter is being assigned to.
-     * @return a assignmentFilterPayloadType
+     * @return a AssignmentFilterPayloadType
      */
     @jakarta.annotation.Nullable
     public AssignmentFilterPayloadType getPayloadType() {
-        return this.payloadType;
+        return this.backingStore.get("payloadType");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      * @param value Value to set for the payloadType property.
      */
     public void setPayloadType(@jakarta.annotation.Nullable final AssignmentFilterPayloadType value) {
-        this.payloadType = value;
+        this.backingStore.set("payloadType", value);
     }
 }

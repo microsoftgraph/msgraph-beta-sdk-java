@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends DeviceManagementConfigurationSettingInstanceTemplate implements Parsable {
     /**
-     * Choice Setting Value Template
-     */
-    private DeviceManagementConfigurationChoiceSettingValueTemplate choiceSettingValueTemplate;
-    /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingInstanceTemplate() {
         super();
@@ -25,7 +21,7 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
     }
     /**
      * Gets the choiceSettingValueTemplate property value. Choice Setting Value Template
-     * @return a deviceManagementConfigurationChoiceSettingValueTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueTemplate getChoiceSettingValueTemplate() {
-        return this.choiceSettingValueTemplate;
+        return this.backingStore.get("choiceSettingValueTemplate");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
      * @param value Value to set for the choiceSettingValueTemplate property.
      */
     public void setChoiceSettingValueTemplate(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueTemplate value) {
-        this.choiceSettingValueTemplate = value;
+        this.backingStore.set("choiceSettingValueTemplate", value);
     }
 }

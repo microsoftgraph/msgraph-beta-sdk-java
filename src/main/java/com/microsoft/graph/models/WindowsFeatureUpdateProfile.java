@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
-     * The list of group assignments of the profile.
-     */
-    private java.util.List<WindowsFeatureUpdateProfileAssignment> assignments;
-    /**
-     * The date time that the profile was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Friendly display name of the quality update profile deployable content
-     */
-    private String deployableContentDisplayName;
-    /**
-     * The description of the profile which is specified by the user.
-     */
-    private String description;
-    /**
-     * The display name of the profile.
-     */
-    private String displayName;
-    /**
-     * The last supported date for a feature update
-     */
-    private OffsetDateTime endOfSupportDate;
-    /**
-     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
-     */
-    private String featureUpdateVersion;
-    /**
-     * If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
-     */
-    private Boolean installLatestWindows10OnWindows11IneligibleDevice;
-    /**
-     * The date time that the profile was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * List of Scope Tags for this Feature Update entity.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
-     */
-    private WindowsUpdateRolloutSettings rolloutSettings;
-    /**
-     * Instantiates a new windowsFeatureUpdateProfile and sets the default values.
+     * Instantiates a new WindowsFeatureUpdateProfile and sets the default values.
      */
     public WindowsFeatureUpdateProfile() {
         super();
@@ -65,7 +21,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFeatureUpdateProfile
+     * @return a WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,11 +30,11 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a windowsFeatureUpdateProfileAssignment
+     * @return a java.util.List<WindowsFeatureUpdateProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsFeatureUpdateProfileAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
@@ -86,31 +42,31 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeployableContentDisplayName() {
-        return this.deployableContentDisplayName;
+        return this.backingStore.get("deployableContentDisplayName");
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the endOfSupportDate property value. The last supported date for a feature update
@@ -118,15 +74,15 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
-        return this.endOfSupportDate;
+        return this.backingStore.get("endOfSupportDate");
     }
     /**
      * Gets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
-        return this.featureUpdateVersion;
+        return this.backingStore.get("featureUpdateVersion");
     }
     /**
      * The deserialization information for the current model
@@ -150,11 +106,11 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the installLatestWindows10OnWindows11IneligibleDevice property value. If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallLatestWindows10OnWindows11IneligibleDevice() {
-        return this.installLatestWindows10OnWindows11IneligibleDevice;
+        return this.backingStore.get("installLatestWindows10OnWindows11IneligibleDevice");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
@@ -162,23 +118,23 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
-     * @return a windowsUpdateRolloutSettings
+     * @return a WindowsUpdateRolloutSettings
      */
     @jakarta.annotation.Nullable
     public WindowsUpdateRolloutSettings getRolloutSettings() {
-        return this.rolloutSettings;
+        return this.backingStore.get("rolloutSettings");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfileAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. The date time that the profile was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
      * @param value Value to set for the deployableContentDisplayName property.
      */
     public void setDeployableContentDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deployableContentDisplayName = value;
+        this.backingStore.set("deployableContentDisplayName", value);
     }
     /**
      * Sets the description property value. The description of the profile which is specified by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the profile.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the endOfSupportDate property value. The last supported date for a feature update
      * @param value Value to set for the endOfSupportDate property.
      */
     public void setEndOfSupportDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endOfSupportDate = value;
+        this.backingStore.set("endOfSupportDate", value);
     }
     /**
      * Sets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      * @param value Value to set for the featureUpdateVersion property.
      */
     public void setFeatureUpdateVersion(@jakarta.annotation.Nullable final String value) {
-        this.featureUpdateVersion = value;
+        this.backingStore.set("featureUpdateVersion", value);
     }
     /**
      * Sets the installLatestWindows10OnWindows11IneligibleDevice property value. If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
      * @param value Value to set for the installLatestWindows10OnWindows11IneligibleDevice property.
      */
     public void setInstallLatestWindows10OnWindows11IneligibleDevice(@jakarta.annotation.Nullable final Boolean value) {
-        this.installLatestWindows10OnWindows11IneligibleDevice = value;
+        this.backingStore.set("installLatestWindows10OnWindows11IneligibleDevice", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time that the profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
      * @param value Value to set for the rolloutSettings property.
      */
     public void setRolloutSettings(@jakarta.annotation.Nullable final WindowsUpdateRolloutSettings value) {
-        this.rolloutSettings = value;
+        this.backingStore.set("rolloutSettings", value);
     }
 }

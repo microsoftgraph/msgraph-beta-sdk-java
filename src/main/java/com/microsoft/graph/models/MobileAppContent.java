@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppContent extends Entity implements Parsable {
     /**
-     * The collection of contained apps in a MobileLobApp acting as a package.
-     */
-    private java.util.List<MobileContainedApp> containedApps;
-    /**
-     * The list of files for this app content version.
-     */
-    private java.util.List<MobileAppContentFile> files;
-    /**
-     * Instantiates a new mobileAppContent and sets the default values.
+     * Instantiates a new MobileAppContent and sets the default values.
      */
     public MobileAppContent() {
         super();
@@ -28,7 +20,7 @@ public class MobileAppContent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppContent
+     * @return a MobileAppContent
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,11 +29,11 @@ public class MobileAppContent extends Entity implements Parsable {
     }
     /**
      * Gets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
-     * @return a mobileContainedApp
+     * @return a java.util.List<MobileContainedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getContainedApps() {
-        return this.containedApps;
+        return this.backingStore.get("containedApps");
     }
     /**
      * The deserialization information for the current model
@@ -56,11 +48,11 @@ public class MobileAppContent extends Entity implements Parsable {
     }
     /**
      * Gets the files property value. The list of files for this app content version.
-     * @return a mobileAppContentFile
+     * @return a java.util.List<MobileAppContentFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppContentFile> getFiles() {
-        return this.files;
+        return this.backingStore.get("files");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class MobileAppContent extends Entity implements Parsable {
      * @param value Value to set for the containedApps property.
      */
     public void setContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
-        this.containedApps = value;
+        this.backingStore.set("containedApps", value);
     }
     /**
      * Sets the files property value. The list of files for this app content version.
      * @param value Value to set for the files property.
      */
     public void setFiles(@jakarta.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
-        this.files = value;
+        this.backingStore.set("files", value);
     }
 }

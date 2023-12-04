@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow implements Parsable {
     /**
-     * The configuration for what to invoke when attributes are ready to be collected from the user.
-     */
-    private OnAttributeCollectionHandler onAttributeCollection;
-    /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     */
-    private OnAuthenticationMethodLoadStartHandler onAuthenticationMethodLoadStart;
-    /**
-     * Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
-     */
-    private OnInteractiveAuthFlowStartHandler onInteractiveAuthFlowStart;
-    /**
-     * The configuration for what to invoke during user creation.
-     */
-    private OnUserCreateStartHandler onUserCreateStart;
-    /**
-     * Instantiates a new externalUsersSelfServiceSignUpEventsFlow and sets the default values.
+     * Instantiates a new ExternalUsersSelfServiceSignUpEventsFlow and sets the default values.
      */
     public ExternalUsersSelfServiceSignUpEventsFlow() {
         super();
@@ -34,7 +18,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalUsersSelfServiceSignUpEventsFlow
+     * @return a ExternalUsersSelfServiceSignUpEventsFlow
      */
     @jakarta.annotation.Nonnull
     public static ExternalUsersSelfServiceSignUpEventsFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,35 +40,35 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAttributeCollection property value. The configuration for what to invoke when attributes are ready to be collected from the user.
-     * @return a onAttributeCollectionHandler
+     * @return a OnAttributeCollectionHandler
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getOnAttributeCollection() {
-        return this.onAttributeCollection;
+        return this.backingStore.get("onAttributeCollection");
     }
     /**
      * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     * @return a onAuthenticationMethodLoadStartHandler
+     * @return a OnAuthenticationMethodLoadStartHandler
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getOnAuthenticationMethodLoadStart() {
-        return this.onAuthenticationMethodLoadStart;
+        return this.backingStore.get("onAuthenticationMethodLoadStart");
     }
     /**
      * Gets the onInteractiveAuthFlowStart property value. Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
-     * @return a onInteractiveAuthFlowStartHandler
+     * @return a OnInteractiveAuthFlowStartHandler
      */
     @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getOnInteractiveAuthFlowStart() {
-        return this.onInteractiveAuthFlowStart;
+        return this.backingStore.get("onInteractiveAuthFlowStart");
     }
     /**
      * Gets the onUserCreateStart property value. The configuration for what to invoke during user creation.
-     * @return a onUserCreateStartHandler
+     * @return a OnUserCreateStartHandler
      */
     @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getOnUserCreateStart() {
-        return this.onUserCreateStart;
+        return this.backingStore.get("onUserCreateStart");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param value Value to set for the onAttributeCollection property.
      */
     public void setOnAttributeCollection(@jakarta.annotation.Nullable final OnAttributeCollectionHandler value) {
-        this.onAttributeCollection = value;
+        this.backingStore.set("onAttributeCollection", value);
     }
     /**
      * Sets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
      * @param value Value to set for the onAuthenticationMethodLoadStart property.
      */
     public void setOnAuthenticationMethodLoadStart(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
-        this.onAuthenticationMethodLoadStart = value;
+        this.backingStore.set("onAuthenticationMethodLoadStart", value);
     }
     /**
      * Sets the onInteractiveAuthFlowStart property value. Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
      * @param value Value to set for the onInteractiveAuthFlowStart property.
      */
     public void setOnInteractiveAuthFlowStart(@jakarta.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {
-        this.onInteractiveAuthFlowStart = value;
+        this.backingStore.set("onInteractiveAuthFlowStart", value);
     }
     /**
      * Sets the onUserCreateStart property value. The configuration for what to invoke during user creation.
      * @param value Value to set for the onUserCreateStart property.
      */
     public void setOnUserCreateStart(@jakarta.annotation.Nullable final OnUserCreateStartHandler value) {
-        this.onUserCreateStart = value;
+        this.backingStore.set("onUserCreateStart", value);
     }
 }

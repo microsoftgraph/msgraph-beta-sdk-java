@@ -15,31 +15,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminWindowsUpdates extends Entity implements Parsable {
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
-     */
-    private Catalog catalog;
-    /**
-     * The set of updatableAsset resources to which a deployment can apply.
-     */
-    private java.util.List<DeploymentAudience> deploymentAudiences;
-    /**
-     * Deployments created using the deployment service.
-     */
-    private java.util.List<Deployment> deployments;
-    /**
-     * Service connections to external resources such as analytics workspaces.
-     */
-    private java.util.List<ResourceConnection> resourceConnections;
-    /**
-     * Assets registered with the deployment service that can receive updates.
-     */
-    private java.util.List<UpdatableAsset> updatableAssets;
-    /**
-     * A collection of policies for approving the deployment of different content to an audience over time.
-     */
-    private java.util.List<UpdatePolicy> updatePolicies;
-    /**
-     * Instantiates a new adminWindowsUpdates and sets the default values.
+     * Instantiates a new AdminWindowsUpdates and sets the default values.
      */
     public AdminWindowsUpdates() {
         super();
@@ -47,7 +23,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminWindowsUpdates
+     * @return a AdminWindowsUpdates
      */
     @jakarta.annotation.Nonnull
     public static AdminWindowsUpdates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,27 +32,27 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     }
     /**
      * Gets the catalog property value. Catalog of content that can be approved for deployment by the deployment service. Read-only.
-     * @return a catalog
+     * @return a Catalog
      */
     @jakarta.annotation.Nullable
     public Catalog getCatalog() {
-        return this.catalog;
+        return this.backingStore.get("catalog");
     }
     /**
      * Gets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
-     * @return a deploymentAudience
+     * @return a java.util.List<DeploymentAudience>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeploymentAudience> getDeploymentAudiences() {
-        return this.deploymentAudiences;
+        return this.backingStore.get("deploymentAudiences");
     }
     /**
      * Gets the deployments property value. Deployments created using the deployment service.
-     * @return a deployment
+     * @return a java.util.List<Deployment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Deployment> getDeployments() {
-        return this.deployments;
+        return this.backingStore.get("deployments");
     }
     /**
      * The deserialization information for the current model
@@ -95,27 +71,27 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     }
     /**
      * Gets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
-     * @return a resourceConnection
+     * @return a java.util.List<ResourceConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceConnection> getResourceConnections() {
-        return this.resourceConnections;
+        return this.backingStore.get("resourceConnections");
     }
     /**
      * Gets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getUpdatableAssets() {
-        return this.updatableAssets;
+        return this.backingStore.get("updatableAssets");
     }
     /**
      * Gets the updatePolicies property value. A collection of policies for approving the deployment of different content to an audience over time.
-     * @return a updatePolicy
+     * @return a java.util.List<UpdatePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatePolicy> getUpdatePolicies() {
-        return this.updatePolicies;
+        return this.backingStore.get("updatePolicies");
     }
     /**
      * Serializes information the current object
@@ -136,41 +112,41 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * @param value Value to set for the catalog property.
      */
     public void setCatalog(@jakarta.annotation.Nullable final Catalog value) {
-        this.catalog = value;
+        this.backingStore.set("catalog", value);
     }
     /**
      * Sets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
      * @param value Value to set for the deploymentAudiences property.
      */
     public void setDeploymentAudiences(@jakarta.annotation.Nullable final java.util.List<DeploymentAudience> value) {
-        this.deploymentAudiences = value;
+        this.backingStore.set("deploymentAudiences", value);
     }
     /**
      * Sets the deployments property value. Deployments created using the deployment service.
      * @param value Value to set for the deployments property.
      */
     public void setDeployments(@jakarta.annotation.Nullable final java.util.List<Deployment> value) {
-        this.deployments = value;
+        this.backingStore.set("deployments", value);
     }
     /**
      * Sets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
      * @param value Value to set for the resourceConnections property.
      */
     public void setResourceConnections(@jakarta.annotation.Nullable final java.util.List<ResourceConnection> value) {
-        this.resourceConnections = value;
+        this.backingStore.set("resourceConnections", value);
     }
     /**
      * Sets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
      * @param value Value to set for the updatableAssets property.
      */
     public void setUpdatableAssets(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
-        this.updatableAssets = value;
+        this.backingStore.set("updatableAssets", value);
     }
     /**
      * Sets the updatePolicies property value. A collection of policies for approving the deployment of different content to an audience over time.
      * @param value Value to set for the updatePolicies property.
      */
     public void setUpdatePolicies(@jakarta.annotation.Nullable final java.util.List<UpdatePolicy> value) {
-        this.updatePolicies = value;
+        this.backingStore.set("updatePolicies", value);
     }
 }

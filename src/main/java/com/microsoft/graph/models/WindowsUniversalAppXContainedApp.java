@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppXContainedApp extends MobileContainedApp implements Parsable {
     /**
-     * The app user model ID of the contained app of a WindowsUniversalAppX app.
-     */
-    private String appUserModelId;
-    /**
-     * Instantiates a new windowsUniversalAppXContainedApp and sets the default values.
+     * Instantiates a new WindowsUniversalAppXContainedApp and sets the default values.
      */
     public WindowsUniversalAppXContainedApp() {
         super();
@@ -25,7 +21,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUniversalAppXContainedApp
+     * @return a WindowsUniversalAppXContainedApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsUniversalAppXContainedApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +30,11 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
     }
     /**
      * Gets the appUserModelId property value. The app user model ID of the contained app of a WindowsUniversalAppX app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppUserModelId() {
-        return this.appUserModelId;
+        return this.backingStore.get("appUserModelId");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
      * @param value Value to set for the appUserModelId property.
      */
     public void setAppUserModelId(@jakarta.annotation.Nullable final String value) {
-        this.appUserModelId = value;
+        this.backingStore.set("appUserModelId", value);
     }
 }

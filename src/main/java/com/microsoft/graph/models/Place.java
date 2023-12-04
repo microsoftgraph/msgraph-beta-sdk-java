@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Place extends Entity implements Parsable {
     /**
-     * The street address of the place.
-     */
-    private PhysicalAddress address;
-    /**
-     * The name associated with the place.
-     */
-    private String displayName;
-    /**
-     * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-     */
-    private OutlookGeoCoordinates geoCoordinates;
-    /**
-     * The phone number of the place.
-     */
-    private String phone;
-    /**
-     * Instantiates a new place and sets the default values.
+     * Instantiates a new Place and sets the default values.
      */
     public Place() {
         super();
@@ -33,7 +17,7 @@ public class Place extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a place
+     * @return a Place
      */
     @jakarta.annotation.Nonnull
     public static Place createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +35,19 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the address property value. The street address of the place.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this.address;
+        return this.backingStore.get("address");
     }
     /**
      * Gets the displayName property value. The name associated with the place.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -80,19 +64,19 @@ public class Place extends Entity implements Parsable {
     }
     /**
      * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-     * @return a outlookGeoCoordinates
+     * @return a OutlookGeoCoordinates
      */
     @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getGeoCoordinates() {
-        return this.geoCoordinates;
+        return this.backingStore.get("geoCoordinates");
     }
     /**
      * Gets the phone property value. The phone number of the place.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
-        return this.phone;
+        return this.backingStore.get("phone");
     }
     /**
      * Serializes information the current object
@@ -111,27 +95,27 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.address = value;
+        this.backingStore.set("address", value);
     }
     /**
      * Sets the displayName property value. The name associated with the place.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      * @param value Value to set for the geoCoordinates property.
      */
     public void setGeoCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
-        this.geoCoordinates = value;
+        this.backingStore.set("geoCoordinates", value);
     }
     /**
      * Sets the phone property value. The phone number of the place.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
-        this.phone = value;
+        this.backingStore.set("phone", value);
     }
 }

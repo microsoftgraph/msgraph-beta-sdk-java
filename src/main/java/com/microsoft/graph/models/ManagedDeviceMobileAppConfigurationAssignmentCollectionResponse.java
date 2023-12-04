@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value;
-    /**
-     * Instantiates a new managedDeviceMobileAppConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse ext
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationAssignmentCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse ext
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedDeviceMobileAppConfigurationAssignment
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse ext
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

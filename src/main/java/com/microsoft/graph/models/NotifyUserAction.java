@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NotifyUserAction extends DlpActionInfo implements Parsable {
     /**
-     * The actionLastModifiedDateTime property
-     */
-    private OffsetDateTime actionLastModifiedDateTime;
-    /**
-     * The emailText property
-     */
-    private String emailText;
-    /**
-     * The policyTip property
-     */
-    private String policyTip;
-    /**
-     * The recipients property
-     */
-    private java.util.List<String> recipients;
-    /**
-     * Instantiates a new notifyUserAction and sets the default values.
+     * Instantiates a new NotifyUserAction and sets the default values.
      */
     public NotifyUserAction() {
         super();
@@ -34,7 +18,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notifyUserAction
+     * @return a NotifyUserAction
      */
     @jakarta.annotation.Nonnull
     public static NotifyUserAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,15 +31,15 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActionLastModifiedDateTime() {
-        return this.actionLastModifiedDateTime;
+        return this.backingStore.get("actionLastModifiedDateTime");
     }
     /**
      * Gets the emailText property value. The emailText property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailText() {
-        return this.emailText;
+        return this.backingStore.get("emailText");
     }
     /**
      * The deserialization information for the current model
@@ -72,19 +56,19 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the policyTip property value. The policyTip property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyTip() {
-        return this.policyTip;
+        return this.backingStore.get("policyTip");
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipients() {
-        return this.recipients;
+        return this.backingStore.get("recipients");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the actionLastModifiedDateTime property.
      */
     public void setActionLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.actionLastModifiedDateTime = value;
+        this.backingStore.set("actionLastModifiedDateTime", value);
     }
     /**
      * Sets the emailText property value. The emailText property
      * @param value Value to set for the emailText property.
      */
     public void setEmailText(@jakarta.annotation.Nullable final String value) {
-        this.emailText = value;
+        this.backingStore.set("emailText", value);
     }
     /**
      * Sets the policyTip property value. The policyTip property
      * @param value Value to set for the policyTip property.
      */
     public void setPolicyTip(@jakarta.annotation.Nullable final String value) {
-        this.policyTip = value;
+        this.backingStore.set("policyTip", value);
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.recipients = value;
+        this.backingStore.set("recipients", value);
     }
 }

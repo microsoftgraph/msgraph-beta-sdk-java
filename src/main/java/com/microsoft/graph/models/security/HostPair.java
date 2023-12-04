@@ -11,27 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostPair extends Entity implements Parsable {
     /**
-     * The childHost property
-     */
-    private Host childHost;
-    /**
-     * The first date and time when Microsoft Defender Threat Intelligence observed the hostPair. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The last date and time when Microsoft Defender Threat Intelligence observed the hostPair. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The reason the two hosts are identified as hostPairs.
-     */
-    private String linkKind;
-    /**
-     * The parentHost property
-     */
-    private Host parentHost;
-    /**
-     * Instantiates a new hostPair and sets the default values.
+     * Instantiates a new HostPair and sets the default values.
      */
     public HostPair() {
         super();
@@ -39,7 +19,7 @@ public class HostPair extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPair
+     * @return a HostPair
      */
     @jakarta.annotation.Nonnull
     public static HostPair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,11 +28,11 @@ public class HostPair extends Entity implements Parsable {
     }
     /**
      * Gets the childHost property value. The childHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getChildHost() {
-        return this.childHost;
+        return this.backingStore.get("childHost");
     }
     /**
      * The deserialization information for the current model
@@ -74,7 +54,7 @@ public class HostPair extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.backingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPair. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
@@ -82,23 +62,23 @@ public class HostPair extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.backingStore.get("lastSeenDateTime");
     }
     /**
-     * Gets the linkKind property value. The reason the two hosts are identified as hostPairs.
-     * @return a string
+     * Gets the linkKind property value. The reason that two hosts are identified as hostPair.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLinkKind() {
-        return this.linkKind;
+        return this.backingStore.get("linkKind");
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getParentHost() {
-        return this.parentHost;
+        return this.backingStore.get("parentHost");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class HostPair extends Entity implements Parsable {
      * @param value Value to set for the childHost property.
      */
     public void setChildHost(@jakarta.annotation.Nullable final Host value) {
-        this.childHost = value;
+        this.backingStore.set("childHost", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPair. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.backingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPair. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.backingStore.set("lastSeenDateTime", value);
     }
     /**
-     * Sets the linkKind property value. The reason the two hosts are identified as hostPairs.
+     * Sets the linkKind property value. The reason that two hosts are identified as hostPair.
      * @param value Value to set for the linkKind property.
      */
     public void setLinkKind(@jakarta.annotation.Nullable final String value) {
-        this.linkKind = value;
+        this.backingStore.set("linkKind", value);
     }
     /**
      * Sets the parentHost property value. The parentHost property
      * @param value Value to set for the parentHost property.
      */
     public void setParentHost(@jakarta.annotation.Nullable final Host value) {
-        this.parentHost = value;
+        this.backingStore.set("parentHost", value);
     }
 }

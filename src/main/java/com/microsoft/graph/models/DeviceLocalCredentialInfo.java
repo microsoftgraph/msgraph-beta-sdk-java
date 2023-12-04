@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     /**
-     * The credentials of the device's local administrator account backed up to Azure Active Directory.
-     */
-    private java.util.List<DeviceLocalCredential> credentials;
-    /**
-     * Display name of the device that the local credentials are associated with.
-     */
-    private String deviceName;
-    /**
-     * When the local administrator account credential was backed up to Azure Active Directory.
-     */
-    private OffsetDateTime lastBackupDateTime;
-    /**
-     * When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
-     */
-    private OffsetDateTime refreshDateTime;
-    /**
-     * Instantiates a new deviceLocalCredentialInfo and sets the default values.
+     * Instantiates a new DeviceLocalCredentialInfo and sets the default values.
      */
     public DeviceLocalCredentialInfo() {
         super();
@@ -34,7 +18,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLocalCredentialInfo
+     * @return a DeviceLocalCredentialInfo
      */
     @jakarta.annotation.Nonnull
     public static DeviceLocalCredentialInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     }
     /**
      * Gets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
-     * @return a deviceLocalCredential
+     * @return a java.util.List<DeviceLocalCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLocalCredential> getCredentials() {
-        return this.credentials;
+        return this.backingStore.get("credentials");
     }
     /**
      * Gets the deviceName property value. Display name of the device that the local credentials are associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -71,20 +55,20 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastBackupDateTime property value. When the local administrator account credential was backed up to Azure Active Directory.
+     * Gets the lastBackupDateTime property value. When the local administrator account credential was backed up to Microsoft Entra ID.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastBackupDateTime() {
-        return this.lastBackupDateTime;
+        return this.backingStore.get("lastBackupDateTime");
     }
     /**
-     * Gets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
+     * Gets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Microsoft Entra ID.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRefreshDateTime() {
-        return this.refreshDateTime;
+        return this.backingStore.get("refreshDateTime");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * @param value Value to set for the credentials property.
      */
     public void setCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredential> value) {
-        this.credentials = value;
+        this.backingStore.set("credentials", value);
     }
     /**
      * Sets the deviceName property value. Display name of the device that the local credentials are associated with.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
-     * Sets the lastBackupDateTime property value. When the local administrator account credential was backed up to Azure Active Directory.
+     * Sets the lastBackupDateTime property value. When the local administrator account credential was backed up to Microsoft Entra ID.
      * @param value Value to set for the lastBackupDateTime property.
      */
     public void setLastBackupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastBackupDateTime = value;
+        this.backingStore.set("lastBackupDateTime", value);
     }
     /**
-     * Sets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
+     * Sets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Microsoft Entra ID.
      * @param value Value to set for the refreshDateTime property.
      */
     public void setRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.refreshDateTime = value;
+        this.backingStore.set("refreshDateTime", value);
     }
 }

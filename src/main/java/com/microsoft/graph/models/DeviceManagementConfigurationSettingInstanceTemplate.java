@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * Setting Instance Template
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationSettingInstanceTemplate implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationSettingInstanceTemplate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Indicates if a policy must specify this setting.
-     */
-    private Boolean isRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Setting Definition Id
-     */
-    private String settingDefinitionId;
-    /**
-     * Setting Instance Template Id
-     */
-    private String settingInstanceTemplateId;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationSettingInstanceTemplate() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationSettingInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,12 +50,25 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         return new DeviceManagementConfigurationSettingInstanceTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -83,35 +85,35 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the isRequired property value. Indicates if a policy must specify this setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.backingStore.get("isRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the settingDefinitionId property value. Setting Definition Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
-        return this.settingDefinitionId;
+        return this.backingStore.get("settingDefinitionId");
     }
     /**
      * Gets the settingInstanceTemplateId property value. Setting Instance Template Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingInstanceTemplateId() {
-        return this.settingInstanceTemplateId;
+        return this.backingStore.get("settingInstanceTemplateId");
     }
     /**
      * Serializes information the current object
@@ -126,38 +128,46 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isRequired property value. Indicates if a policy must specify this setting.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.backingStore.set("isRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the settingDefinitionId property value. Setting Definition Id
      * @param value Value to set for the settingDefinitionId property.
      */
     public void setSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.settingDefinitionId = value;
+        this.backingStore.set("settingDefinitionId", value);
     }
     /**
      * Sets the settingInstanceTemplateId property value. Setting Instance Template Id
      * @param value Value to set for the settingInstanceTemplateId property.
      */
     public void setSettingInstanceTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.settingInstanceTemplateId = value;
+        this.backingStore.set("settingInstanceTemplateId", value);
     }
 }

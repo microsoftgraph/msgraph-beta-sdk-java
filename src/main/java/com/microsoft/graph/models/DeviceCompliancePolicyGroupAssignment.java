@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicyGroupAssignment extends Entity implements Parsable {
     /**
-     * The navigation link to the  device compliance polic targeted.
-     */
-    private DeviceCompliancePolicy deviceCompliancePolicy;
-    /**
-     * Indicates if this group is should be excluded. Defaults that the group should be included
-     */
-    private Boolean excludeGroup;
-    /**
-     * The Id of the AAD group we are targeting the device compliance policy to.
-     */
-    private String targetGroupId;
-    /**
-     * Instantiates a new deviceCompliancePolicyGroupAssignment and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyGroupAssignment and sets the default values.
      */
     public DeviceCompliancePolicyGroupAssignment() {
         super();
@@ -32,7 +20,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyGroupAssignment
+     * @return a DeviceCompliancePolicyGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +29,19 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the deviceCompliancePolicy property value. The navigation link to the  device compliance polic targeted.
-     * @return a deviceCompliancePolicy
+     * @return a DeviceCompliancePolicy
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy getDeviceCompliancePolicy() {
-        return this.deviceCompliancePolicy;
+        return this.backingStore.get("deviceCompliancePolicy");
     }
     /**
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
-        return this.excludeGroup;
+        return this.backingStore.get("excludeGroup");
     }
     /**
      * The deserialization information for the current model
@@ -69,11 +57,11 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device compliance policy to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {
-        return this.targetGroupId;
+        return this.backingStore.get("targetGroupId");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * @param value Value to set for the deviceCompliancePolicy property.
      */
     public void setDeviceCompliancePolicy(@jakarta.annotation.Nullable final DeviceCompliancePolicy value) {
-        this.deviceCompliancePolicy = value;
+        this.backingStore.set("deviceCompliancePolicy", value);
     }
     /**
      * Sets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
      * @param value Value to set for the excludeGroup property.
      */
     public void setExcludeGroup(@jakarta.annotation.Nullable final Boolean value) {
-        this.excludeGroup = value;
+        this.backingStore.set("excludeGroup", value);
     }
     /**
      * Sets the targetGroupId property value. The Id of the AAD group we are targeting the device compliance policy to.
      * @param value Value to set for the targetGroupId property.
      */
     public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {
-        this.targetGroupId = value;
+        this.backingStore.set("targetGroupId", value);
     }
 }

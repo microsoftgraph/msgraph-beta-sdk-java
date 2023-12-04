@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InformationProtection extends Entity implements Parsable {
     /**
-     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
-     */
-    private InformationProtectionPolicySetting labelPolicySettings;
-    /**
-     * Read the Microsoft Purview Information Protection labels for the user or organization.
-     */
-    private java.util.List<SensitivityLabel> sensitivityLabels;
-    /**
-     * Instantiates a new informationProtection and sets the default values.
+     * Instantiates a new InformationProtection and sets the default values.
      */
     public InformationProtection() {
         super();
@@ -26,7 +18,7 @@ public class InformationProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtection
+     * @return a InformationProtection
      */
     @jakarta.annotation.Nonnull
     public static InformationProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the labelPolicySettings property value. Read the Microsoft Purview Information Protection policy settings for the user or organization.
-     * @return a informationProtectionPolicySetting
+     * @return a InformationProtectionPolicySetting
      */
     @jakarta.annotation.Nullable
     public InformationProtectionPolicySetting getLabelPolicySettings() {
-        return this.labelPolicySettings;
+        return this.backingStore.get("labelPolicySettings");
     }
     /**
      * Gets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
-        return this.sensitivityLabels;
+        return this.backingStore.get("sensitivityLabels");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the labelPolicySettings property.
      */
     public void setLabelPolicySettings(@jakarta.annotation.Nullable final InformationProtectionPolicySetting value) {
-        this.labelPolicySettings = value;
+        this.backingStore.set("labelPolicySettings", value);
     }
     /**
      * Sets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param value Value to set for the sensitivityLabels property.
      */
     public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<SensitivityLabel> value) {
-        this.sensitivityLabels = value;
+        this.backingStore.set("sensitivityLabels", value);
     }
 }
