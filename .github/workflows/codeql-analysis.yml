@@ -81,7 +81,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew clean build "-Dorg.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError" -Dfile.encoding=UTF-8
+        run: ./gradlew clean build "-Dorg.gradle.jvmargs=-Xmx4g -XX:MaxPermSize=4096m -XX:+HeapDumpOnOutOfMemoryError" -Dfile.encoding=UTF-8
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
