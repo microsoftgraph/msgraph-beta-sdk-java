@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
+public class CloudPcLaunchInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The unique identifier of the Cloud PC.
-     */
-    private String cloudPcId;
-    /**
-     * The connect URL of the Cloud PC.
-     */
-    private String cloudPcLaunchUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates whether the Cloud PC supports switch functionality. If the value is true, it supports switch functionality; otherwise,  false.
-     */
-    private Boolean windows365SwitchCompatible;
-    /**
-     * Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
-     */
-    private String windows365SwitchNotCompatibleReason;
-    /**
-     * Instantiates a new cloudPcLaunchInfo and sets the default values.
+     * Instantiates a new CloudPcLaunchInfo and sets the default values.
      */
     public CloudPcLaunchInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcLaunchInfo
+     * @return a CloudPcLaunchInfo
      */
     @jakarta.annotation.Nonnull
     public static CloudPcLaunchInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +35,41 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
         return new CloudPcLaunchInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cloudPcId property value. The unique identifier of the Cloud PC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcId() {
-        return this.cloudPcId;
+        return this.backingStore.get("cloudPcId");
     }
     /**
      * Gets the cloudPcLaunchUrl property value. The connect URL of the Cloud PC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcLaunchUrl() {
-        return this.cloudPcLaunchUrl;
+        return this.backingStore.get("cloudPcLaunchUrl");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +87,27 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the windows365SwitchCompatible property value. Indicates whether the Cloud PC supports switch functionality. If the value is true, it supports switch functionality; otherwise,  false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindows365SwitchCompatible() {
-        return this.windows365SwitchCompatible;
+        return this.backingStore.get("windows365SwitchCompatible");
     }
     /**
      * Gets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindows365SwitchNotCompatibleReason() {
-        return this.windows365SwitchNotCompatibleReason;
+        return this.backingStore.get("windows365SwitchNotCompatibleReason");
     }
     /**
      * Serializes information the current object
@@ -125,45 +123,53 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cloudPcId property value. The unique identifier of the Cloud PC.
      * @param value Value to set for the cloudPcId property.
      */
     public void setCloudPcId(@jakarta.annotation.Nullable final String value) {
-        this.cloudPcId = value;
+        this.backingStore.set("cloudPcId", value);
     }
     /**
      * Sets the cloudPcLaunchUrl property value. The connect URL of the Cloud PC.
      * @param value Value to set for the cloudPcLaunchUrl property.
      */
     public void setCloudPcLaunchUrl(@jakarta.annotation.Nullable final String value) {
-        this.cloudPcLaunchUrl = value;
+        this.backingStore.set("cloudPcLaunchUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the windows365SwitchCompatible property value. Indicates whether the Cloud PC supports switch functionality. If the value is true, it supports switch functionality; otherwise,  false.
      * @param value Value to set for the windows365SwitchCompatible property.
      */
     public void setWindows365SwitchCompatible(@jakarta.annotation.Nullable final Boolean value) {
-        this.windows365SwitchCompatible = value;
+        this.backingStore.set("windows365SwitchCompatible", value);
     }
     /**
      * Sets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
      * @param value Value to set for the windows365SwitchNotCompatibleReason property.
      */
     public void setWindows365SwitchNotCompatibleReason(@jakarta.annotation.Nullable final String value) {
-        this.windows365SwitchNotCompatibleReason = value;
+        this.backingStore.set("windows365SwitchNotCompatibleReason", value);
     }
 }

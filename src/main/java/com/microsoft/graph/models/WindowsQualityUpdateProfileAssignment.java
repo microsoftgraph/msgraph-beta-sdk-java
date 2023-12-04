@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsQualityUpdateProfileAssignment extends Entity implements Parsable {
     /**
-     * The assignment target that the quality update profile is assigned to.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new windowsQualityUpdateProfileAssignment and sets the default values.
+     * Instantiates a new WindowsQualityUpdateProfileAssignment and sets the default values.
      */
     public WindowsQualityUpdateProfileAssignment() {
         super();
@@ -24,7 +20,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsQualityUpdateProfileAssignment
+     * @return a WindowsQualityUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public static WindowsQualityUpdateProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
     }
     /**
      * Gets the target property value. The assignment target that the quality update profile is assigned to.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

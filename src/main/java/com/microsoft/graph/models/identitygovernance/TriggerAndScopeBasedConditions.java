@@ -10,15 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable {
     /**
-     * Defines who the workflow runs for.
-     */
-    private SubjectSet scope;
-    /**
-     * What triggers a workflow to run.
-     */
-    private WorkflowExecutionTrigger trigger;
-    /**
-     * Instantiates a new triggerAndScopeBasedConditions and sets the default values.
+     * Instantiates a new TriggerAndScopeBasedConditions and sets the default values.
      */
     public TriggerAndScopeBasedConditions() {
         super();
@@ -27,7 +19,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a triggerAndScopeBasedConditions
+     * @return a TriggerAndScopeBasedConditions
      */
     @jakarta.annotation.Nonnull
     public static TriggerAndScopeBasedConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +39,19 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     }
     /**
      * Gets the scope property value. Defines who the workflow runs for.
-     * @return a subjectSet
+     * @return a SubjectSet
      */
     @jakarta.annotation.Nullable
     public SubjectSet getScope() {
-        return this.scope;
+        return this.backingStore.get("scope");
     }
     /**
      * Gets the trigger property value. What triggers a workflow to run.
-     * @return a workflowExecutionTrigger
+     * @return a WorkflowExecutionTrigger
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionTrigger getTrigger() {
-        return this.trigger;
+        return this.backingStore.get("trigger");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final SubjectSet value) {
-        this.scope = value;
+        this.backingStore.set("scope", value);
     }
     /**
      * Sets the trigger property value. What triggers a workflow to run.
      * @param value Value to set for the trigger property.
      */
     public void setTrigger(@jakarta.annotation.Nullable final WorkflowExecutionTrigger value) {
-        this.trigger = value;
+        this.backingStore.set("trigger", value);
     }
 }

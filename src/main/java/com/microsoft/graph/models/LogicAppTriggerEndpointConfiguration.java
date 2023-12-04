@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfiguration implements Parsable {
     /**
-     * The name of the logic app.
-     */
-    private String logicAppWorkflowName;
-    /**
-     * The Azure resource group name for the logic app.
-     */
-    private String resourceGroupName;
-    /**
-     * Identifier of the Azure subscription for the logic app.
-     */
-    private String subscriptionId;
-    /**
-     * The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
-     */
-    private String url;
-    /**
-     * Instantiates a new logicAppTriggerEndpointConfiguration and sets the default values.
+     * Instantiates a new LogicAppTriggerEndpointConfiguration and sets the default values.
      */
     public LogicAppTriggerEndpointConfiguration() {
         super();
@@ -34,7 +18,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a logicAppTriggerEndpointConfiguration
+     * @return a LogicAppTriggerEndpointConfiguration
      */
     @jakarta.annotation.Nonnull
     public static LogicAppTriggerEndpointConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,35 +40,35 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * Gets the logicAppWorkflowName property value. The name of the logic app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogicAppWorkflowName() {
-        return this.logicAppWorkflowName;
+        return this.backingStore.get("logicAppWorkflowName");
     }
     /**
      * Gets the resourceGroupName property value. The Azure resource group name for the logic app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceGroupName() {
-        return this.resourceGroupName;
+        return this.backingStore.get("resourceGroupName");
     }
     /**
      * Gets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
-        return this.subscriptionId;
+        return this.backingStore.get("subscriptionId");
     }
     /**
      * Gets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.backingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param value Value to set for the logicAppWorkflowName property.
      */
     public void setLogicAppWorkflowName(@jakarta.annotation.Nullable final String value) {
-        this.logicAppWorkflowName = value;
+        this.backingStore.set("logicAppWorkflowName", value);
     }
     /**
      * Sets the resourceGroupName property value. The Azure resource group name for the logic app.
      * @param value Value to set for the resourceGroupName property.
      */
     public void setResourceGroupName(@jakarta.annotation.Nullable final String value) {
-        this.resourceGroupName = value;
+        this.backingStore.set("resourceGroupName", value);
     }
     /**
      * Sets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.subscriptionId = value;
+        this.backingStore.set("subscriptionId", value);
     }
     /**
      * Sets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.backingStore.set("url", value);
     }
 }

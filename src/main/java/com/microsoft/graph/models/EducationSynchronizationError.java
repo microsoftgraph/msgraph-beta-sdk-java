@@ -10,31 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationError extends Entity implements Parsable {
     /**
-     * Represents the sync entity (school, section, student, teacher).
-     */
-    private String entryType;
-    /**
-     * Represents the error code for this error.
-     */
-    private String errorCode;
-    /**
-     * Contains a description of the error.
-     */
-    private String errorMessage;
-    /**
-     * The unique identifier for the entry.
-     */
-    private String joiningValue;
-    /**
-     * The time of occurrence of this error.
-     */
-    private OffsetDateTime recordedDateTime;
-    /**
-     * The identifier of this error entry.
-     */
-    private String reportableIdentifier;
-    /**
-     * Instantiates a new educationSynchronizationError and sets the default values.
+     * Instantiates a new EducationSynchronizationError and sets the default values.
      */
     public EducationSynchronizationError() {
         super();
@@ -42,7 +18,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationError
+     * @return a EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +27,27 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the entryType property value. Represents the sync entity (school, section, student, teacher).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEntryType() {
-        return this.entryType;
+        return this.backingStore.get("entryType");
     }
     /**
      * Gets the errorCode property value. Represents the error code for this error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * Gets the errorMessage property value. Contains a description of the error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
-        return this.errorMessage;
+        return this.backingStore.get("errorMessage");
     }
     /**
      * The deserialization information for the current model
@@ -90,11 +66,11 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the joiningValue property value. The unique identifier for the entry.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJoiningValue() {
-        return this.joiningValue;
+        return this.backingStore.get("joiningValue");
     }
     /**
      * Gets the recordedDateTime property value. The time of occurrence of this error.
@@ -102,15 +78,15 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRecordedDateTime() {
-        return this.recordedDateTime;
+        return this.backingStore.get("recordedDateTime");
     }
     /**
      * Gets the reportableIdentifier property value. The identifier of this error entry.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportableIdentifier() {
-        return this.reportableIdentifier;
+        return this.backingStore.get("reportableIdentifier");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the entryType property.
      */
     public void setEntryType(@jakarta.annotation.Nullable final String value) {
-        this.entryType = value;
+        this.backingStore.set("entryType", value);
     }
     /**
      * Sets the errorCode property value. Represents the error code for this error.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the errorMessage property value. Contains a description of the error.
      * @param value Value to set for the errorMessage property.
      */
     public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
-        this.errorMessage = value;
+        this.backingStore.set("errorMessage", value);
     }
     /**
      * Sets the joiningValue property value. The unique identifier for the entry.
      * @param value Value to set for the joiningValue property.
      */
     public void setJoiningValue(@jakarta.annotation.Nullable final String value) {
-        this.joiningValue = value;
+        this.backingStore.set("joiningValue", value);
     }
     /**
      * Sets the recordedDateTime property value. The time of occurrence of this error.
      * @param value Value to set for the recordedDateTime property.
      */
     public void setRecordedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.recordedDateTime = value;
+        this.backingStore.set("recordedDateTime", value);
     }
     /**
      * Sets the reportableIdentifier property value. The identifier of this error entry.
      * @param value Value to set for the reportableIdentifier property.
      */
     public void setReportableIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.reportableIdentifier = value;
+        this.backingStore.set("reportableIdentifier", value);
     }
 }

@@ -4,57 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
+public class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The answer given by the user in case the answerInputType is text.
-     */
-    private String answer;
-    /**
-     * The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     */
-    private AnswerInputType answerInputType;
-    /**
-     * In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-     */
-    private java.util.List<String> answerOptions;
-    /**
-     * Indicates whether it is mandatory to answer the custom question.
-     */
-    private Boolean isRequired;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The question.
-     */
-    private String question;
-    /**
-     * The ID of the custom question.
-     */
-    private String questionId;
-    /**
-     * The answers selected by the user.
-     */
-    private java.util.List<String> selectedOptions;
-    /**
-     * Instantiates a new bookingQuestionAnswer and sets the default values.
+     * Instantiates a new BookingQuestionAnswer and sets the default values.
      */
     public BookingQuestionAnswer() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingQuestionAnswer
+     * @return a BookingQuestionAnswer
      */
     @jakarta.annotation.Nonnull
     public static BookingQuestionAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,36 +35,49 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
         return new BookingQuestionAnswer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the answer property value. The answer given by the user in case the answerInputType is text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnswer() {
-        return this.answer;
+        return this.backingStore.get("answer");
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a answerInputType
+     * @return a AnswerInputType
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
-        return this.answerInputType;
+        return this.backingStore.get("answerInputType");
     }
     /**
      * Gets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
-        return this.answerOptions;
+        return this.backingStore.get("answerOptions");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +87,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("answer", (n) -> { this.setAnswer(n.getStringValue()); });
-        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType::forValue)); });
         deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -112,43 +98,43 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.backingStore.get("isRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the question property value. The question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestion() {
-        return this.question;
+        return this.backingStore.get("question");
     }
     /**
      * Gets the questionId property value. The ID of the custom question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
-        return this.questionId;
+        return this.backingStore.get("questionId");
     }
     /**
      * Gets the selectedOptions property value. The answers selected by the user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelectedOptions() {
-        return this.selectedOptions;
+        return this.backingStore.get("selectedOptions");
     }
     /**
      * Serializes information the current object
@@ -167,66 +153,74 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the answer property value. The answer given by the user in case the answerInputType is text.
      * @param value Value to set for the answer property.
      */
     public void setAnswer(@jakarta.annotation.Nullable final String value) {
-        this.answer = value;
+        this.backingStore.set("answer", value);
     }
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
      */
     public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
-        this.answerInputType = value;
+        this.backingStore.set("answerInputType", value);
     }
     /**
      * Sets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
      * @param value Value to set for the answerOptions property.
      */
     public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.answerOptions = value;
+        this.backingStore.set("answerOptions", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.backingStore.set("isRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the question property value. The question.
      * @param value Value to set for the question property.
      */
     public void setQuestion(@jakarta.annotation.Nullable final String value) {
-        this.question = value;
+        this.backingStore.set("question", value);
     }
     /**
      * Sets the questionId property value. The ID of the custom question.
      * @param value Value to set for the questionId property.
      */
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {
-        this.questionId = value;
+        this.backingStore.set("questionId", value);
     }
     /**
      * Sets the selectedOptions property value. The answers selected by the user.
      * @param value Value to set for the selectedOptions property.
      */
     public void setSelectedOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.selectedOptions = value;
+        this.backingStore.set("selectedOptions", value);
     }
 }

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationPolicySetItem and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationPolicySetItem and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationPolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItem extends PolicySetI
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationPolicySetItem
+     * @return a ManagedDeviceMobileAppConfigurationPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

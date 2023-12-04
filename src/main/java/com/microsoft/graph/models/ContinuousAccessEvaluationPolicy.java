@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable {
     /**
-     * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
-     */
-    private String description;
-    /**
-     * The value is always Continuous Access Evaluation. Read-only.
-     */
-    private String displayName;
-    /**
-     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
-     */
-    private java.util.List<String> groups;
-    /**
-     * true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
-     */
-    private Boolean isEnabled;
-    /**
-     * true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
-     */
-    private Boolean migrate;
-    /**
-     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
-     */
-    private java.util.List<String> users;
-    /**
-     * Instantiates a new continuousAccessEvaluationPolicy and sets the default values.
+     * Instantiates a new ContinuousAccessEvaluationPolicy and sets the default values.
      */
     public ContinuousAccessEvaluationPolicy() {
         super();
@@ -41,7 +17,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      */
     @jakarta.annotation.Nonnull
     public static ContinuousAccessEvaluationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +26,19 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The value is always Continuous Access Evaluation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +57,35 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the groups property value. The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroups() {
-        return this.groups;
+        return this.backingStore.get("groups");
     }
     /**
      * Gets the isEnabled property value. true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the migrate property value. true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMigrate() {
-        return this.migrate;
+        return this.backingStore.get("migrate");
     }
     /**
      * Gets the users property value. The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUsers() {
-        return this.users;
+        return this.backingStore.get("users");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The value is always Continuous Access Evaluation. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the groups property value. The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.groups = value;
+        this.backingStore.set("groups", value);
     }
     /**
      * Sets the isEnabled property value. true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the migrate property value. true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
      * @param value Value to set for the migrate property.
      */
     public void setMigrate(@jakarta.annotation.Nullable final Boolean value) {
-        this.migrate = value;
+        this.backingStore.set("migrate", value);
     }
     /**
      * Sets the users property value. The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
      * @param value Value to set for the users property.
      */
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.users = value;
+        this.backingStore.set("users", value);
     }
 }

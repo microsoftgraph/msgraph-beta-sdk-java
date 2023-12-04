@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * The settings for approval of the role assignment.
-     */
-    private ApprovalSettings setting;
-    /**
-     * Instantiates a new unifiedRoleManagementPolicyApprovalRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyApprovalRule() {
         super();
@@ -22,7 +18,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyApprovalRule
+     * @return a UnifiedRoleManagementPolicyApprovalRule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyApprovalRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     }
     /**
      * Gets the setting property value. The settings for approval of the role assignment.
-     * @return a approvalSettings
+     * @return a ApprovalSettings
      */
     @jakarta.annotation.Nullable
     public ApprovalSettings getSetting() {
-        return this.setting;
+        return this.backingStore.get("setting");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final ApprovalSettings value) {
-        this.setting = value;
+        this.backingStore.set("setting", value);
     }
 }

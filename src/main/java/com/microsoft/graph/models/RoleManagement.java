@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RoleManagement implements AdditionalDataHolder, Parsable {
+public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The cloudPC property
-     */
-    private RbacApplicationMultiple cloudPC;
-    /**
-     * The RbacApplication for Device Management
-     */
-    private RbacApplicationMultiple deviceManagement;
-    /**
-     * The directory property
-     */
-    private RbacApplication directory;
-    /**
-     * The enterpriseApps property
-     */
-    private java.util.List<RbacApplication> enterpriseApps;
-    /**
-     * The RbacApplication for Entitlement Management
-     */
-    private RbacApplication entitlementManagement;
-    /**
-     * The exchange property
-     */
-    private UnifiedRbacApplication exchange;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new roleManagement and sets the default values.
+     * Instantiates a new RoleManagement and sets the default values.
      */
     public RoleManagement() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleManagement
+     * @return a RoleManagement
      */
     @jakarta.annotation.Nonnull
     public static RoleManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,60 +35,73 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         return new RoleManagement();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cloudPC property value. The cloudPC property
-     * @return a rbacApplicationMultiple
+     * @return a RbacApplicationMultiple
      */
     @jakarta.annotation.Nullable
     public RbacApplicationMultiple getCloudPC() {
-        return this.cloudPC;
+        return this.backingStore.get("cloudPC");
     }
     /**
      * Gets the deviceManagement property value. The RbacApplication for Device Management
-     * @return a rbacApplicationMultiple
+     * @return a RbacApplicationMultiple
      */
     @jakarta.annotation.Nullable
     public RbacApplicationMultiple getDeviceManagement() {
-        return this.deviceManagement;
+        return this.backingStore.get("deviceManagement");
     }
     /**
      * Gets the directory property value. The directory property
-     * @return a rbacApplication
+     * @return a RbacApplication
      */
     @jakarta.annotation.Nullable
     public RbacApplication getDirectory() {
-        return this.directory;
+        return this.backingStore.get("directory");
     }
     /**
      * Gets the enterpriseApps property value. The enterpriseApps property
-     * @return a rbacApplication
+     * @return a java.util.List<RbacApplication>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RbacApplication> getEnterpriseApps() {
-        return this.enterpriseApps;
+        return this.backingStore.get("enterpriseApps");
     }
     /**
      * Gets the entitlementManagement property value. The RbacApplication for Entitlement Management
-     * @return a rbacApplication
+     * @return a RbacApplication
      */
     @jakarta.annotation.Nullable
     public RbacApplication getEntitlementManagement() {
-        return this.entitlementManagement;
+        return this.backingStore.get("entitlementManagement");
     }
     /**
      * Gets the exchange property value. The exchange property
-     * @return a unifiedRbacApplication
+     * @return a UnifiedRbacApplication
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacApplication getExchange() {
-        return this.exchange;
+        return this.backingStore.get("exchange");
     }
     /**
      * The deserialization information for the current model
@@ -131,11 +121,11 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -153,59 +143,67 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cloudPC property value. The cloudPC property
      * @param value Value to set for the cloudPC property.
      */
     public void setCloudPC(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
-        this.cloudPC = value;
+        this.backingStore.set("cloudPC", value);
     }
     /**
      * Sets the deviceManagement property value. The RbacApplication for Device Management
      * @param value Value to set for the deviceManagement property.
      */
     public void setDeviceManagement(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
-        this.deviceManagement = value;
+        this.backingStore.set("deviceManagement", value);
     }
     /**
      * Sets the directory property value. The directory property
      * @param value Value to set for the directory property.
      */
     public void setDirectory(@jakarta.annotation.Nullable final RbacApplication value) {
-        this.directory = value;
+        this.backingStore.set("directory", value);
     }
     /**
      * Sets the enterpriseApps property value. The enterpriseApps property
      * @param value Value to set for the enterpriseApps property.
      */
     public void setEnterpriseApps(@jakarta.annotation.Nullable final java.util.List<RbacApplication> value) {
-        this.enterpriseApps = value;
+        this.backingStore.set("enterpriseApps", value);
     }
     /**
      * Sets the entitlementManagement property value. The RbacApplication for Entitlement Management
      * @param value Value to set for the entitlementManagement property.
      */
     public void setEntitlementManagement(@jakarta.annotation.Nullable final RbacApplication value) {
-        this.entitlementManagement = value;
+        this.backingStore.set("entitlementManagement", value);
     }
     /**
      * Sets the exchange property value. The exchange property
      * @param value Value to set for the exchange property.
      */
     public void setExchange(@jakarta.annotation.Nullable final UnifiedRbacApplication value) {
-        this.exchange = value;
+        this.backingStore.set("exchange", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

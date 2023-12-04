@@ -4,54 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
+public class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The clickAction property
-     */
-    private String clickAction;
-    /**
-     * The clickDateTime property
-     */
-    private OffsetDateTime clickDateTime;
-    /**
-     * The id property
-     */
-    private String id;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The sourceId property
-     */
-    private String sourceId;
-    /**
-     * The uriDomain property
-     */
-    private String uriDomain;
-    /**
-     * The verdict property
-     */
-    private String verdict;
-    /**
-     * Instantiates a new uriClickSecurityState and sets the default values.
+     * Instantiates a new UriClickSecurityState and sets the default values.
      */
     public UriClickSecurityState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uriClickSecurityState
+     * @return a UriClickSecurityState
      */
     @jakarta.annotation.Nonnull
     public static UriClickSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,20 +36,33 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
         return new UriClickSecurityState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the clickAction property value. The clickAction property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClickAction() {
-        return this.clickAction;
+        return this.backingStore.get("clickAction");
     }
     /**
      * Gets the clickDateTime property value. The clickDateTime property
@@ -80,7 +70,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getClickDateTime() {
-        return this.clickDateTime;
+        return this.backingStore.get("clickDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -100,43 +90,43 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the sourceId property value. The sourceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
-        return this.sourceId;
+        return this.backingStore.get("sourceId");
     }
     /**
      * Gets the uriDomain property value. The uriDomain property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUriDomain() {
-        return this.uriDomain;
+        return this.backingStore.get("uriDomain");
     }
     /**
      * Gets the verdict property value. The verdict property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVerdict() {
-        return this.verdict;
+        return this.backingStore.get("verdict");
     }
     /**
      * Serializes information the current object
@@ -154,59 +144,67 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the clickAction property value. The clickAction property
      * @param value Value to set for the clickAction property.
      */
     public void setClickAction(@jakarta.annotation.Nullable final String value) {
-        this.clickAction = value;
+        this.backingStore.set("clickAction", value);
     }
     /**
      * Sets the clickDateTime property value. The clickDateTime property
      * @param value Value to set for the clickDateTime property.
      */
     public void setClickDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.clickDateTime = value;
+        this.backingStore.set("clickDateTime", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the sourceId property value. The sourceId property
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
-        this.sourceId = value;
+        this.backingStore.set("sourceId", value);
     }
     /**
      * Sets the uriDomain property value. The uriDomain property
      * @param value Value to set for the uriDomain property.
      */
     public void setUriDomain(@jakarta.annotation.Nullable final String value) {
-        this.uriDomain = value;
+        this.backingStore.set("uriDomain", value);
     }
     /**
      * Sets the verdict property value. The verdict property
      * @param value Value to set for the verdict property.
      */
     public void setVerdict(@jakarta.annotation.Nullable final String value) {
-        this.verdict = value;
+        this.backingStore.set("verdict", value);
     }
 }

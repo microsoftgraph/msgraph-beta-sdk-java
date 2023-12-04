@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProviderTenantSetting extends Entity implements Parsable {
     /**
-     * The azureTenantId property
-     */
-    private String azureTenantId;
-    /**
-     * The enabled property
-     */
-    private Boolean enabled;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The provider property
-     */
-    private String provider;
-    /**
-     * The vendor property
-     */
-    private String vendor;
-    /**
-     * Instantiates a new providerTenantSetting and sets the default values.
+     * Instantiates a new ProviderTenantSetting and sets the default values.
      */
     public ProviderTenantSetting() {
         super();
@@ -38,7 +18,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a providerTenantSetting
+     * @return a ProviderTenantSetting
      */
     @jakarta.annotation.Nonnull
     public static ProviderTenantSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.backingStore.get("azureTenantId");
     }
     /**
      * Gets the enabled property value. The enabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.backingStore.get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -81,23 +61,23 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
-        return this.provider;
+        return this.backingStore.get("provider");
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
-        return this.vendor;
+        return this.backingStore.get("vendor");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.backingStore.set("azureTenantId", value);
     }
     /**
      * Sets the enabled property value. The enabled property
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.backingStore.set("enabled", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final String value) {
-        this.provider = value;
+        this.backingStore.set("provider", value);
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.vendor = value;
+        this.backingStore.set("vendor", value);
     }
 }

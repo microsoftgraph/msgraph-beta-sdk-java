@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingAttendanceReportCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MeetingAttendanceReport> value;
-    /**
-     * Instantiates a new meetingAttendanceReportCollectionResponse and sets the default values.
+     * Instantiates a new MeetingAttendanceReportCollectionResponse and sets the default values.
      */
     public MeetingAttendanceReportCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MeetingAttendanceReportCollectionResponse extends BaseCollectionPag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingAttendanceReportCollectionResponse
+     * @return a MeetingAttendanceReportCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MeetingAttendanceReportCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MeetingAttendanceReportCollectionResponse extends BaseCollectionPag
     }
     /**
      * Gets the value property value. The value property
-     * @return a meetingAttendanceReport
+     * @return a java.util.List<MeetingAttendanceReport>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingAttendanceReport> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MeetingAttendanceReportCollectionResponse extends BaseCollectionPag
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MeetingAttendanceReport> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

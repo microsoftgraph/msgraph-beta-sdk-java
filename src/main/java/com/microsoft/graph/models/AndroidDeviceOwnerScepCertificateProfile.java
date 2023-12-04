@@ -13,51 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
     /**
-     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     */
-    private AndroidDeviceOwnerCertificateAccessType certificateAccessType;
-    /**
-     * Target store certificate. Possible values are: user, machine.
-     */
-    private CertificateStore certificateStore;
-    /**
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-    /**
-     * Hash Algorithm Options.
-     */
-    private EnumSet<HashAlgorithms> hashAlgorithm;
-    /**
-     * Key Size Options.
-     */
-    private KeySize keySize;
-    /**
-     * Key Usage Options.
-     */
-    private EnumSet<KeyUsages> keyUsage;
-    /**
-     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     */
-    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
-    /**
-     * SCEP Server Url(s)
-     */
-    private java.util.List<String> scepServerUrls;
-    /**
-     * Certificate access information. This collection can contain a maximum of 50 elements.
-     */
-    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
-    /**
-     * Custom String that defines the AAD Attribute.
-     */
-    private String subjectAlternativeNameFormatString;
-    /**
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    private String subjectNameFormatString;
-    /**
-     * Instantiates a new androidDeviceOwnerScepCertificateProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerScepCertificateProfile and sets the default values.
      */
     public AndroidDeviceOwnerScepCertificateProfile() {
         super();
@@ -66,7 +22,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerScepCertificateProfile
+     * @return a AndroidDeviceOwnerScepCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,27 +31,27 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a androidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerCertificateAccessType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
-        return this.certificateAccessType;
+        return this.backingStore.get("certificateAccessType");
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this.certificateStore;
+        return this.backingStore.get("certificateStore");
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this.customSubjectAlternativeNames;
+        return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
      * The deserialization information for the current model
@@ -104,12 +60,12 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms.class)); });
-        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms::forValue)); });
+        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
@@ -119,67 +75,67 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
-        return this.hashAlgorithm;
+        return this.backingStore.get("hashAlgorithm");
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
-        return this.keySize;
+        return this.backingStore.get("keySize");
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
-        return this.keyUsage;
+        return this.backingStore.get("keyUsage");
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this.managedDeviceCertificateStates;
+        return this.backingStore.get("managedDeviceCertificateStates");
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s)
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this.scepServerUrls;
+        return this.backingStore.get("scepServerUrls");
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
-     * @return a androidDeviceOwnerSilentCertificateAccess
+     * @return a java.util.List<AndroidDeviceOwnerSilentCertificateAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
-        return this.silentCertificateAccessDetails;
+        return this.backingStore.get("silentCertificateAccessDetails");
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this.subjectAlternativeNameFormatString;
+        return this.backingStore.get("subjectAlternativeNameFormatString");
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this.subjectNameFormatString;
+        return this.backingStore.get("subjectNameFormatString");
     }
     /**
      * Serializes information the current object
@@ -205,76 +161,76 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificateAccessType property.
      */
     public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
-        this.certificateAccessType = value;
+        this.backingStore.set("certificateAccessType", value);
     }
     /**
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
-        this.certificateStore = value;
+        this.backingStore.set("certificateStore", value);
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this.customSubjectAlternativeNames = value;
+        this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
      * Sets the hashAlgorithm property value. Hash Algorithm Options.
      * @param value Value to set for the hashAlgorithm property.
      */
     public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {
-        this.hashAlgorithm = value;
+        this.backingStore.set("hashAlgorithm", value);
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      */
     public void setKeySize(@jakarta.annotation.Nullable final KeySize value) {
-        this.keySize = value;
+        this.backingStore.set("keySize", value);
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
     public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
-        this.keyUsage = value;
+        this.backingStore.set("keyUsage", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      */
     public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this.managedDeviceCertificateStates = value;
+        this.backingStore.set("managedDeviceCertificateStates", value);
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s)
      * @param value Value to set for the scepServerUrls property.
      */
     public void setScepServerUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.scepServerUrls = value;
+        this.backingStore.set("scepServerUrls", value);
     }
     /**
      * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
      * @param value Value to set for the silentCertificateAccessDetails property.
      */
     public void setSilentCertificateAccessDetails(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
-        this.silentCertificateAccessDetails = value;
+        this.backingStore.set("silentCertificateAccessDetails", value);
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      */
     public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectAlternativeNameFormatString = value;
+        this.backingStore.set("subjectAlternativeNameFormatString", value);
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      */
     public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
-        this.subjectNameFormatString = value;
+        this.backingStore.set("subjectNameFormatString", value);
     }
 }

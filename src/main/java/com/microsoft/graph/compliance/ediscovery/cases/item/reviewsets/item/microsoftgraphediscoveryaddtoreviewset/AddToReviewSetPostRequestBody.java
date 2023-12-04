@@ -6,34 +6,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The additionalDataOptions property
-     */
-    private EnumSet<AdditionalDataOptions> additionalDataOptions;
-    /**
-     * The sourceCollection property
-     */
-    private SourceCollection sourceCollection;
-    /**
-     * Instantiates a new addToReviewSetPostRequestBody and sets the default values.
+     * Instantiates a new AddToReviewSetPostRequestBody and sets the default values.
      */
     public AddToReviewSetPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addToReviewSetPostRequestBody
+     * @return a AddToReviewSetPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AddToReviewSetPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,20 +38,33 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
         return new AddToReviewSetPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the additionalDataOptions property value. The additionalDataOptions property
-     * @return a additionalDataOptions
+     * @return a EnumSet<AdditionalDataOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AdditionalDataOptions> getAdditionalDataOptions() {
-        return this.additionalDataOptions;
+        return this.backingStore.get("additionalDataOptions");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,17 +73,17 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumSetValue(AdditionalDataOptions.class)); });
+        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumSetValue(AdditionalDataOptions::forValue)); });
         deserializerMap.put("sourceCollection", (n) -> { this.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the sourceCollection property value. The sourceCollection property
-     * @return a sourceCollection
+     * @return a SourceCollection
      */
     @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {
-        return this.sourceCollection;
+        return this.backingStore.get("sourceCollection");
     }
     /**
      * Serializes information the current object
@@ -86,24 +96,32 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the additionalDataOptions property value. The additionalDataOptions property
      * @param value Value to set for the additionalDataOptions property.
      */
     public void setAdditionalDataOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalDataOptions> value) {
-        this.additionalDataOptions = value;
+        this.backingStore.set("additionalDataOptions", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the sourceCollection property value. The sourceCollection property
      * @param value Value to set for the sourceCollection property.
      */
     public void setSourceCollection(@jakarta.annotation.Nullable final SourceCollection value) {
-        this.sourceCollection = value;
+        this.backingStore.set("sourceCollection", value);
     }
 }

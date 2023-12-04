@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizationBandwidth implements Parsable {
     /**
-     * Specifies the maximum background download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth (0-100). Valid values 0 to 100
-     */
-    private Integer maximumBackgroundBandwidthPercentage;
-    /**
-     * Specifies the maximum foreground download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth (0-100). Valid values 0 to 100
-     */
-    private Integer maximumForegroundBandwidthPercentage;
-    /**
-     * Instantiates a new deliveryOptimizationBandwidthPercentage and sets the default values.
+     * Instantiates a new DeliveryOptimizationBandwidthPercentage and sets the default values.
      */
     public DeliveryOptimizationBandwidthPercentage() {
         super();
@@ -29,7 +21,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationBandwidthPercentage
+     * @return a DeliveryOptimizationBandwidthPercentage
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationBandwidthPercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
     }
     /**
      * Gets the maximumBackgroundBandwidthPercentage property value. Specifies the maximum background download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth (0-100). Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumBackgroundBandwidthPercentage() {
-        return this.maximumBackgroundBandwidthPercentage;
+        return this.backingStore.get("maximumBackgroundBandwidthPercentage");
     }
     /**
      * Gets the maximumForegroundBandwidthPercentage property value. Specifies the maximum foreground download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth (0-100). Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumForegroundBandwidthPercentage() {
-        return this.maximumForegroundBandwidthPercentage;
+        return this.backingStore.get("maximumForegroundBandwidthPercentage");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * @param value Value to set for the maximumBackgroundBandwidthPercentage property.
      */
     public void setMaximumBackgroundBandwidthPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumBackgroundBandwidthPercentage = value;
+        this.backingStore.set("maximumBackgroundBandwidthPercentage", value);
     }
     /**
      * Sets the maximumForegroundBandwidthPercentage property value. Specifies the maximum foreground download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth (0-100). Valid values 0 to 100
      * @param value Value to set for the maximumForegroundBandwidthPercentage property.
      */
     public void setMaximumForegroundBandwidthPercentage(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumForegroundBandwidthPercentage = value;
+        this.backingStore.set("maximumForegroundBandwidthPercentage", value);
     }
 }

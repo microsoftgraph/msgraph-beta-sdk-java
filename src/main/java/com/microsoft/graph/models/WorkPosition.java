@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkPosition extends ItemFacet implements Parsable {
     /**
-     * Categories that the user has associated with this position.
-     */
-    private java.util.List<String> categories;
-    /**
-     * Colleagues that are associated with this position.
-     */
-    private java.util.List<RelatedPerson> colleagues;
-    /**
-     * The detail property
-     */
-    private PositionDetail detail;
-    /**
-     * Denotes whether or not the position is current.
-     */
-    private Boolean isCurrent;
-    /**
-     * Contains detail of the user's manager in this position.
-     */
-    private RelatedPerson manager;
-    /**
-     * Instantiates a new workPosition and sets the default values.
+     * Instantiates a new WorkPosition and sets the default values.
      */
     public WorkPosition() {
         super();
@@ -38,7 +18,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workPosition
+     * @return a WorkPosition
      */
     @jakarta.annotation.Nonnull
     public static WorkPosition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,27 +27,27 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Categories that the user has associated with this position.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this.categories;
+        return this.backingStore.get("categories");
     }
     /**
      * Gets the colleagues property value. Colleagues that are associated with this position.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
-        return this.colleagues;
+        return this.backingStore.get("colleagues");
     }
     /**
      * Gets the detail property value. The detail property
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nullable
     public PositionDetail getDetail() {
-        return this.detail;
+        return this.backingStore.get("detail");
     }
     /**
      * The deserialization information for the current model
@@ -85,19 +65,19 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the isCurrent property value. Denotes whether or not the position is current.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCurrent() {
-        return this.isCurrent;
+        return this.backingStore.get("isCurrent");
     }
     /**
      * Gets the manager property value. Contains detail of the user's manager in this position.
-     * @return a relatedPerson
+     * @return a RelatedPerson
      */
     @jakarta.annotation.Nullable
     public RelatedPerson getManager() {
-        return this.manager;
+        return this.backingStore.get("manager");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.categories = value;
+        this.backingStore.set("categories", value);
     }
     /**
      * Sets the colleagues property value. Colleagues that are associated with this position.
      * @param value Value to set for the colleagues property.
      */
     public void setColleagues(@jakarta.annotation.Nullable final java.util.List<RelatedPerson> value) {
-        this.colleagues = value;
+        this.backingStore.set("colleagues", value);
     }
     /**
      * Sets the detail property value. The detail property
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PositionDetail value) {
-        this.detail = value;
+        this.backingStore.set("detail", value);
     }
     /**
      * Sets the isCurrent property value. Denotes whether or not the position is current.
      * @param value Value to set for the isCurrent property.
      */
     public void setIsCurrent(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCurrent = value;
+        this.backingStore.set("isCurrent", value);
     }
     /**
      * Sets the manager property value. Contains detail of the user's manager in this position.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final RelatedPerson value) {
-        this.manager = value;
+        this.backingStore.set("manager", value);
     }
 }

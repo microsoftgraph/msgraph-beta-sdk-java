@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleScopeTag extends Entity implements Parsable {
     /**
-     * The list of assignments for this Role Scope Tag.
-     */
-    private java.util.List<RoleScopeTagAutoAssignment> assignments;
-    /**
-     * Description of the Role Scope Tag.
-     */
-    private String description;
-    /**
-     * The display or friendly name of the Role Scope Tag.
-     */
-    private String displayName;
-    /**
-     * Description of the Role Scope Tag. This property is read-only.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * Instantiates a new roleScopeTag and sets the default values.
+     * Instantiates a new RoleScopeTag and sets the default values.
      */
     public RoleScopeTag() {
         super();
@@ -36,7 +20,7 @@ public class RoleScopeTag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleScopeTag
+     * @return a RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public static RoleScopeTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,27 +29,27 @@ public class RoleScopeTag extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of assignments for this Role Scope Tag.
-     * @return a roleScopeTagAutoAssignment
+     * @return a java.util.List<RoleScopeTagAutoAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTagAutoAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the description property value. Description of the Role Scope Tag.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display or friendly name of the Role Scope Tag.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -82,11 +66,11 @@ public class RoleScopeTag extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltIn property value. Description of the Role Scope Tag. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.backingStore.get("isBuiltIn");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class RoleScopeTag extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<RoleScopeTagAutoAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the description property value. Description of the Role Scope Tag.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display or friendly name of the Role Scope Tag.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isBuiltIn property value. Description of the Role Scope Tag. This property is read-only.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.backingStore.set("isBuiltIn", value);
     }
 }

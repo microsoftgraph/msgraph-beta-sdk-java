@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GenerateKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The exp property
-     */
-    private Long exp;
-    /**
-     * The kty property
-     */
-    private String kty;
-    /**
-     * The nbf property
-     */
-    private Long nbf;
-    /**
-     * The use property
-     */
-    private String use;
-    /**
-     * Instantiates a new generateKeyPostRequestBody and sets the default values.
+     * Instantiates a new GenerateKeyPostRequestBody and sets the default values.
      */
     public GenerateKeyPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a generateKeyPostRequestBody
+     * @return a GenerateKeyPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GenerateKeyPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
         return new GenerateKeyPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the exp property value. The exp property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExp() {
-        return this.exp;
+        return this.backingStore.get("exp");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +78,27 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the kty property value. The kty property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKty() {
-        return this.kty;
+        return this.backingStore.get("kty");
     }
     /**
      * Gets the nbf property value. The nbf property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNbf() {
-        return this.nbf;
+        return this.backingStore.get("nbf");
     }
     /**
      * Gets the use property value. The use property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUse() {
-        return this.use;
+        return this.backingStore.get("use");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the exp property value. The exp property
      * @param value Value to set for the exp property.
      */
     public void setExp(@jakarta.annotation.Nullable final Long value) {
-        this.exp = value;
+        this.backingStore.set("exp", value);
     }
     /**
      * Sets the kty property value. The kty property
      * @param value Value to set for the kty property.
      */
     public void setKty(@jakarta.annotation.Nullable final String value) {
-        this.kty = value;
+        this.backingStore.set("kty", value);
     }
     /**
      * Sets the nbf property value. The nbf property
      * @param value Value to set for the nbf property.
      */
     public void setNbf(@jakarta.annotation.Nullable final Long value) {
-        this.nbf = value;
+        this.backingStore.set("nbf", value);
     }
     /**
      * Sets the use property value. The use property
      * @param value Value to set for the use property.
      */
     public void setUse(@jakarta.annotation.Nullable final String value) {
-        this.use = value;
+        this.backingStore.set("use", value);
     }
 }

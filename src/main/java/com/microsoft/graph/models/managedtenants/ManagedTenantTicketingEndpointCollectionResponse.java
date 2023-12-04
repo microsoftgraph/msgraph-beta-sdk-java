@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantTicketingEndpointCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedTenantTicketingEndpoint> value;
-    /**
-     * Instantiates a new managedTenantTicketingEndpointCollectionResponse and sets the default values.
+     * Instantiates a new ManagedTenantTicketingEndpointCollectionResponse and sets the default values.
      */
     public ManagedTenantTicketingEndpointCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class ManagedTenantTicketingEndpointCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantTicketingEndpointCollectionResponse
+     * @return a ManagedTenantTicketingEndpointCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantTicketingEndpointCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class ManagedTenantTicketingEndpointCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedTenantTicketingEndpoint
+     * @return a java.util.List<ManagedTenantTicketingEndpoint>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantTicketingEndpoint> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ManagedTenantTicketingEndpointCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedTenantTicketingEndpoint> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

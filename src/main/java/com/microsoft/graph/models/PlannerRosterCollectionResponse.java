@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRosterCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PlannerRoster> value;
-    /**
-     * Instantiates a new plannerRosterCollectionResponse and sets the default values.
+     * Instantiates a new PlannerRosterCollectionResponse and sets the default values.
      */
     public PlannerRosterCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PlannerRosterCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerRosterCollectionResponse
+     * @return a PlannerRosterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PlannerRosterCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PlannerRosterCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a plannerRoster
+     * @return a java.util.List<PlannerRoster>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerRoster> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PlannerRosterCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PlannerRoster> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

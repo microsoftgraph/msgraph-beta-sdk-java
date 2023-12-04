@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81CertificateProfileBase extends WindowsCertificateProfileBase implements Parsable {
     /**
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-    /**
-     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
-    /**
-     * Instantiates a new windows81CertificateProfileBase and sets the default values.
+     * Instantiates a new Windows81CertificateProfileBase and sets the default values.
      */
     public Windows81CertificateProfileBase() {
         super();
@@ -29,7 +21,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81CertificateProfileBase
+     * @return a Windows81CertificateProfileBase
      */
     @jakarta.annotation.Nonnull
     public static Windows81CertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this.customSubjectAlternativeNames;
+        return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this.extendedKeyUsages;
+        return this.backingStore.get("extendedKeyUsages");
     }
     /**
      * The deserialization information for the current model
@@ -85,13 +77,13 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * @param value Value to set for the customSubjectAlternativeNames property.
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this.customSubjectAlternativeNames = value;
+        this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
      */
     public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this.extendedKeyUsages = value;
+        this.backingStore.set("extendedKeyUsages", value);
     }
 }

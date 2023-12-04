@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateState extends Entity implements Parsable {
     /**
-     * Device display name.
-     */
-    private String deviceDisplayName;
-    /**
-     * The id of the device.
-     */
-    private String deviceId;
-    /**
-     * The current feature update version of the device.
-     */
-    private String featureUpdateVersion;
-    /**
-     * The date time that the Windows Update Agent did a successful scan.
-     */
-    private OffsetDateTime lastScanDateTime;
-    /**
-     * Last date time that the device sync with with Microsoft Intune.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The Quality Update Version of the device.
-     */
-    private String qualityUpdateVersion;
-    /**
-     * Windows update for business configuration device states
-     */
-    private WindowsUpdateStatus status;
-    /**
-     * The id of the user.
-     */
-    private String userId;
-    /**
-     * User principal name.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new windowsUpdateState and sets the default values.
+     * Instantiates a new WindowsUpdateState and sets the default values.
      */
     public WindowsUpdateState() {
         super();
@@ -54,7 +18,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateState
+     * @return a WindowsUpdateState
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,27 +27,27 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Device display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.backingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the featureUpdateVersion property value. The current feature update version of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
-        return this.featureUpdateVersion;
+        return this.backingStore.get("featureUpdateVersion");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +62,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
         deserializerMap.put("lastScanDateTime", (n) -> { this.setLastScanDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("qualityUpdateVersion", (n) -> { this.setQualityUpdateVersion(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(WindowsUpdateStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(WindowsUpdateStatus::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -109,7 +73,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScanDateTime() {
-        return this.lastScanDateTime;
+        return this.backingStore.get("lastScanDateTime");
     }
     /**
      * Gets the lastSyncDateTime property value. Last date time that the device sync with with Microsoft Intune.
@@ -117,39 +81,39 @@ public class WindowsUpdateState extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the qualityUpdateVersion property value. The Quality Update Version of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQualityUpdateVersion() {
-        return this.qualityUpdateVersion;
+        return this.backingStore.get("qualityUpdateVersion");
     }
     /**
      * Gets the status property value. Windows update for business configuration device states
-     * @return a windowsUpdateStatus
+     * @return a WindowsUpdateStatus
      */
     @jakarta.annotation.Nullable
     public WindowsUpdateStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the userId property value. The id of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. User principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.backingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. The id of the device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the featureUpdateVersion property value. The current feature update version of the device.
      * @param value Value to set for the featureUpdateVersion property.
      */
     public void setFeatureUpdateVersion(@jakarta.annotation.Nullable final String value) {
-        this.featureUpdateVersion = value;
+        this.backingStore.set("featureUpdateVersion", value);
     }
     /**
      * Sets the lastScanDateTime property value. The date time that the Windows Update Agent did a successful scan.
      * @param value Value to set for the lastScanDateTime property.
      */
     public void setLastScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastScanDateTime = value;
+        this.backingStore.set("lastScanDateTime", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Last date time that the device sync with with Microsoft Intune.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the qualityUpdateVersion property value. The Quality Update Version of the device.
      * @param value Value to set for the qualityUpdateVersion property.
      */
     public void setQualityUpdateVersion(@jakarta.annotation.Nullable final String value) {
-        this.qualityUpdateVersion = value;
+        this.backingStore.set("qualityUpdateVersion", value);
     }
     /**
      * Sets the status property value. Windows update for business configuration device states
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final WindowsUpdateStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the userId property value. The id of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

@@ -12,119 +12,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SalesOrderLine extends Entity implements Parsable {
     /**
-     * The account property
-     */
-    private Account account;
-    /**
-     * The accountId property
-     */
-    private UUID accountId;
-    /**
-     * The amountExcludingTax property
-     */
-    private BigDecimal amountExcludingTax;
-    /**
-     * The amountIncludingTax property
-     */
-    private BigDecimal amountIncludingTax;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The discountAmount property
-     */
-    private BigDecimal discountAmount;
-    /**
-     * The discountAppliedBeforeTax property
-     */
-    private Boolean discountAppliedBeforeTax;
-    /**
-     * The discountPercent property
-     */
-    private BigDecimal discountPercent;
-    /**
-     * The documentId property
-     */
-    private UUID documentId;
-    /**
-     * The invoiceDiscountAllocation property
-     */
-    private BigDecimal invoiceDiscountAllocation;
-    /**
-     * The invoicedQuantity property
-     */
-    private BigDecimal invoicedQuantity;
-    /**
-     * The invoiceQuantity property
-     */
-    private BigDecimal invoiceQuantity;
-    /**
-     * The item property
-     */
-    private Item item;
-    /**
-     * The itemId property
-     */
-    private UUID itemId;
-    /**
-     * The lineType property
-     */
-    private String lineType;
-    /**
-     * The netAmount property
-     */
-    private BigDecimal netAmount;
-    /**
-     * The netAmountIncludingTax property
-     */
-    private BigDecimal netAmountIncludingTax;
-    /**
-     * The netTaxAmount property
-     */
-    private BigDecimal netTaxAmount;
-    /**
-     * The quantity property
-     */
-    private BigDecimal quantity;
-    /**
-     * The sequence property
-     */
-    private Integer sequence;
-    /**
-     * The shipmentDate property
-     */
-    private LocalDate shipmentDate;
-    /**
-     * The shippedQuantity property
-     */
-    private BigDecimal shippedQuantity;
-    /**
-     * The shipQuantity property
-     */
-    private BigDecimal shipQuantity;
-    /**
-     * The taxCode property
-     */
-    private String taxCode;
-    /**
-     * The taxPercent property
-     */
-    private BigDecimal taxPercent;
-    /**
-     * The totalTaxAmount property
-     */
-    private BigDecimal totalTaxAmount;
-    /**
-     * The unitOfMeasureId property
-     */
-    private UUID unitOfMeasureId;
-    /**
-     * The unitPrice property
-     */
-    private BigDecimal unitPrice;
-    /**
-     * Instantiates a new salesOrderLine and sets the default values.
+     * Instantiates a new SalesOrderLine and sets the default values.
      */
     public SalesOrderLine() {
         super();
@@ -132,7 +20,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesOrderLine
+     * @return a SalesOrderLine
      */
     @jakarta.annotation.Nonnull
     public static SalesOrderLine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -141,11 +29,11 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
-        return this.account;
+        return this.backingStore.get("account");
     }
     /**
      * Gets the accountId property value. The accountId property
@@ -153,55 +41,55 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getAccountId() {
-        return this.accountId;
+        return this.backingStore.get("accountId");
     }
     /**
      * Gets the amountExcludingTax property value. The amountExcludingTax property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmountExcludingTax() {
-        return this.amountExcludingTax;
+        return this.backingStore.get("amountExcludingTax");
     }
     /**
      * Gets the amountIncludingTax property value. The amountIncludingTax property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmountIncludingTax() {
-        return this.amountIncludingTax;
+        return this.backingStore.get("amountIncludingTax");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
-        return this.discountAmount;
+        return this.backingStore.get("discountAmount");
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
-        return this.discountAppliedBeforeTax;
+        return this.backingStore.get("discountAppliedBeforeTax");
     }
     /**
      * Gets the discountPercent property value. The discountPercent property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountPercent() {
-        return this.discountPercent;
+        return this.backingStore.get("discountPercent");
     }
     /**
      * Gets the documentId property value. The documentId property
@@ -209,7 +97,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getDocumentId() {
-        return this.documentId;
+        return this.backingStore.get("documentId");
     }
     /**
      * The deserialization information for the current model
@@ -250,35 +138,35 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the invoiceDiscountAllocation property value. The invoiceDiscountAllocation property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoiceDiscountAllocation() {
-        return this.invoiceDiscountAllocation;
+        return this.backingStore.get("invoiceDiscountAllocation");
     }
     /**
      * Gets the invoicedQuantity property value. The invoicedQuantity property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoicedQuantity() {
-        return this.invoicedQuantity;
+        return this.backingStore.get("invoicedQuantity");
     }
     /**
      * Gets the invoiceQuantity property value. The invoiceQuantity property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoiceQuantity() {
-        return this.invoiceQuantity;
+        return this.backingStore.get("invoiceQuantity");
     }
     /**
      * Gets the item property value. The item property
-     * @return a item
+     * @return a Item
      */
     @jakarta.annotation.Nullable
     public Item getItem() {
-        return this.item;
+        return this.backingStore.get("item");
     }
     /**
      * Gets the itemId property value. The itemId property
@@ -286,55 +174,55 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getItemId() {
-        return this.itemId;
+        return this.backingStore.get("itemId");
     }
     /**
      * Gets the lineType property value. The lineType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLineType() {
-        return this.lineType;
+        return this.backingStore.get("lineType");
     }
     /**
      * Gets the netAmount property value. The netAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetAmount() {
-        return this.netAmount;
+        return this.backingStore.get("netAmount");
     }
     /**
      * Gets the netAmountIncludingTax property value. The netAmountIncludingTax property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetAmountIncludingTax() {
-        return this.netAmountIncludingTax;
+        return this.backingStore.get("netAmountIncludingTax");
     }
     /**
      * Gets the netTaxAmount property value. The netTaxAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetTaxAmount() {
-        return this.netTaxAmount;
+        return this.backingStore.get("netTaxAmount");
     }
     /**
      * Gets the quantity property value. The quantity property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getQuantity() {
-        return this.quantity;
+        return this.backingStore.get("quantity");
     }
     /**
      * Gets the sequence property value. The sequence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
-        return this.sequence;
+        return this.backingStore.get("sequence");
     }
     /**
      * Gets the shipmentDate property value. The shipmentDate property
@@ -342,47 +230,47 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getShipmentDate() {
-        return this.shipmentDate;
+        return this.backingStore.get("shipmentDate");
     }
     /**
      * Gets the shippedQuantity property value. The shippedQuantity property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getShippedQuantity() {
-        return this.shippedQuantity;
+        return this.backingStore.get("shippedQuantity");
     }
     /**
      * Gets the shipQuantity property value. The shipQuantity property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getShipQuantity() {
-        return this.shipQuantity;
+        return this.backingStore.get("shipQuantity");
     }
     /**
      * Gets the taxCode property value. The taxCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxCode() {
-        return this.taxCode;
+        return this.backingStore.get("taxCode");
     }
     /**
      * Gets the taxPercent property value. The taxPercent property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTaxPercent() {
-        return this.taxPercent;
+        return this.backingStore.get("taxPercent");
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
-        return this.totalTaxAmount;
+        return this.backingStore.get("totalTaxAmount");
     }
     /**
      * Gets the unitOfMeasureId property value. The unitOfMeasureId property
@@ -390,15 +278,15 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getUnitOfMeasureId() {
-        return this.unitOfMeasureId;
+        return this.backingStore.get("unitOfMeasureId");
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {
-        return this.unitPrice;
+        return this.backingStore.get("unitPrice");
     }
     /**
      * Serializes information the current object
@@ -441,195 +329,195 @@ public class SalesOrderLine extends Entity implements Parsable {
      * @param value Value to set for the account property.
      */
     public void setAccount(@jakarta.annotation.Nullable final Account value) {
-        this.account = value;
+        this.backingStore.set("account", value);
     }
     /**
      * Sets the accountId property value. The accountId property
      * @param value Value to set for the accountId property.
      */
     public void setAccountId(@jakarta.annotation.Nullable final UUID value) {
-        this.accountId = value;
+        this.backingStore.set("accountId", value);
     }
     /**
      * Sets the amountExcludingTax property value. The amountExcludingTax property
      * @param value Value to set for the amountExcludingTax property.
      */
     public void setAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.amountExcludingTax = value;
+        this.backingStore.set("amountExcludingTax", value);
     }
     /**
      * Sets the amountIncludingTax property value. The amountIncludingTax property
      * @param value Value to set for the amountIncludingTax property.
      */
     public void setAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.amountIncludingTax = value;
+        this.backingStore.set("amountIncludingTax", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      */
     public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.discountAmount = value;
+        this.backingStore.set("discountAmount", value);
     }
     /**
      * Sets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @param value Value to set for the discountAppliedBeforeTax property.
      */
     public void setDiscountAppliedBeforeTax(@jakarta.annotation.Nullable final Boolean value) {
-        this.discountAppliedBeforeTax = value;
+        this.backingStore.set("discountAppliedBeforeTax", value);
     }
     /**
      * Sets the discountPercent property value. The discountPercent property
      * @param value Value to set for the discountPercent property.
      */
     public void setDiscountPercent(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.discountPercent = value;
+        this.backingStore.set("discountPercent", value);
     }
     /**
      * Sets the documentId property value. The documentId property
      * @param value Value to set for the documentId property.
      */
     public void setDocumentId(@jakarta.annotation.Nullable final UUID value) {
-        this.documentId = value;
+        this.backingStore.set("documentId", value);
     }
     /**
      * Sets the invoiceDiscountAllocation property value. The invoiceDiscountAllocation property
      * @param value Value to set for the invoiceDiscountAllocation property.
      */
     public void setInvoiceDiscountAllocation(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.invoiceDiscountAllocation = value;
+        this.backingStore.set("invoiceDiscountAllocation", value);
     }
     /**
      * Sets the invoicedQuantity property value. The invoicedQuantity property
      * @param value Value to set for the invoicedQuantity property.
      */
     public void setInvoicedQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.invoicedQuantity = value;
+        this.backingStore.set("invoicedQuantity", value);
     }
     /**
      * Sets the invoiceQuantity property value. The invoiceQuantity property
      * @param value Value to set for the invoiceQuantity property.
      */
     public void setInvoiceQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.invoiceQuantity = value;
+        this.backingStore.set("invoiceQuantity", value);
     }
     /**
      * Sets the item property value. The item property
      * @param value Value to set for the item property.
      */
     public void setItem(@jakarta.annotation.Nullable final Item value) {
-        this.item = value;
+        this.backingStore.set("item", value);
     }
     /**
      * Sets the itemId property value. The itemId property
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final UUID value) {
-        this.itemId = value;
+        this.backingStore.set("itemId", value);
     }
     /**
      * Sets the lineType property value. The lineType property
      * @param value Value to set for the lineType property.
      */
     public void setLineType(@jakarta.annotation.Nullable final String value) {
-        this.lineType = value;
+        this.backingStore.set("lineType", value);
     }
     /**
      * Sets the netAmount property value. The netAmount property
      * @param value Value to set for the netAmount property.
      */
     public void setNetAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.netAmount = value;
+        this.backingStore.set("netAmount", value);
     }
     /**
      * Sets the netAmountIncludingTax property value. The netAmountIncludingTax property
      * @param value Value to set for the netAmountIncludingTax property.
      */
     public void setNetAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.netAmountIncludingTax = value;
+        this.backingStore.set("netAmountIncludingTax", value);
     }
     /**
      * Sets the netTaxAmount property value. The netTaxAmount property
      * @param value Value to set for the netTaxAmount property.
      */
     public void setNetTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.netTaxAmount = value;
+        this.backingStore.set("netTaxAmount", value);
     }
     /**
      * Sets the quantity property value. The quantity property
      * @param value Value to set for the quantity property.
      */
     public void setQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.quantity = value;
+        this.backingStore.set("quantity", value);
     }
     /**
      * Sets the sequence property value. The sequence property
      * @param value Value to set for the sequence property.
      */
     public void setSequence(@jakarta.annotation.Nullable final Integer value) {
-        this.sequence = value;
+        this.backingStore.set("sequence", value);
     }
     /**
      * Sets the shipmentDate property value. The shipmentDate property
      * @param value Value to set for the shipmentDate property.
      */
     public void setShipmentDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.shipmentDate = value;
+        this.backingStore.set("shipmentDate", value);
     }
     /**
      * Sets the shippedQuantity property value. The shippedQuantity property
      * @param value Value to set for the shippedQuantity property.
      */
     public void setShippedQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.shippedQuantity = value;
+        this.backingStore.set("shippedQuantity", value);
     }
     /**
      * Sets the shipQuantity property value. The shipQuantity property
      * @param value Value to set for the shipQuantity property.
      */
     public void setShipQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.shipQuantity = value;
+        this.backingStore.set("shipQuantity", value);
     }
     /**
      * Sets the taxCode property value. The taxCode property
      * @param value Value to set for the taxCode property.
      */
     public void setTaxCode(@jakarta.annotation.Nullable final String value) {
-        this.taxCode = value;
+        this.backingStore.set("taxCode", value);
     }
     /**
      * Sets the taxPercent property value. The taxPercent property
      * @param value Value to set for the taxPercent property.
      */
     public void setTaxPercent(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.taxPercent = value;
+        this.backingStore.set("taxPercent", value);
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      */
     public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.totalTaxAmount = value;
+        this.backingStore.set("totalTaxAmount", value);
     }
     /**
      * Sets the unitOfMeasureId property value. The unitOfMeasureId property
      * @param value Value to set for the unitOfMeasureId property.
      */
     public void setUnitOfMeasureId(@jakarta.annotation.Nullable final UUID value) {
-        this.unitOfMeasureId = value;
+        this.backingStore.set("unitOfMeasureId", value);
     }
     /**
      * Sets the unitPrice property value. The unitPrice property
      * @param value Value to set for the unitPrice property.
      */
     public void setUnitPrice(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.unitPrice = value;
+        this.backingStore.set("unitPrice", value);
     }
 }

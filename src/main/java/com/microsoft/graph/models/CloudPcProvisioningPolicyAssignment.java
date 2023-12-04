@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable {
     /**
-     * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
-     */
-    private java.util.List<User> assignedUsers;
-    /**
-     * The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
-     */
-    private CloudPcManagementAssignmentTarget target;
-    /**
-     * Instantiates a new cloudPcProvisioningPolicyAssignment and sets the default values.
+     * Instantiates a new CloudPcProvisioningPolicyAssignment and sets the default values.
      */
     public CloudPcProvisioningPolicyAssignment() {
         super();
@@ -25,7 +17,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcProvisioningPolicyAssignment
+     * @return a CloudPcProvisioningPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public static CloudPcProvisioningPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
     }
     /**
      * Gets the assignedUsers property value. The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
-     * @return a user
+     * @return a java.util.List<User>
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getAssignedUsers() {
-        return this.assignedUsers;
+        return this.backingStore.get("assignedUsers");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
     }
     /**
      * Gets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
-     * @return a cloudPcManagementAssignmentTarget
+     * @return a CloudPcManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public CloudPcManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * @param value Value to set for the assignedUsers property.
      */
     public void setAssignedUsers(@jakarta.annotation.Nullable final java.util.List<User> value) {
-        this.assignedUsers = value;
+        this.backingStore.set("assignedUsers", value);
     }
     /**
      * Sets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

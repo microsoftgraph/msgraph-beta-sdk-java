@@ -13,23 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /**
-     * The date and time the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The group policy definition value associated with the presentation value.
-     */
-    private GroupPolicyDefinitionValue definitionValue;
-    /**
-     * The date and time the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The group policy presentation associated with the presentation value.
-     */
-    private GroupPolicyPresentation presentation;
-    /**
-     * Instantiates a new groupPolicyPresentationValue and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValue and sets the default values.
      */
     public GroupPolicyPresentationValue() {
         super();
@@ -37,7 +21,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValue
+     * @return a GroupPolicyPresentationValue
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,15 +46,15 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the definitionValue property value. The group policy definition value associated with the presentation value.
-     * @return a groupPolicyDefinitionValue
+     * @return a GroupPolicyDefinitionValue
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinitionValue getDefinitionValue() {
-        return this.definitionValue;
+        return this.backingStore.get("definitionValue");
     }
     /**
      * The deserialization information for the current model
@@ -91,15 +75,15 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the presentation property value. The group policy presentation associated with the presentation value.
-     * @return a groupPolicyPresentation
+     * @return a GroupPolicyPresentation
      */
     @jakarta.annotation.Nullable
     public GroupPolicyPresentation getPresentation() {
-        return this.presentation;
+        return this.backingStore.get("presentation");
     }
     /**
      * Serializes information the current object
@@ -118,27 +102,27 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the definitionValue property value. The group policy definition value associated with the presentation value.
      * @param value Value to set for the definitionValue property.
      */
     public void setDefinitionValue(@jakarta.annotation.Nullable final GroupPolicyDefinitionValue value) {
-        this.definitionValue = value;
+        this.backingStore.set("definitionValue", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the presentation property value. The group policy presentation associated with the presentation value.
      * @param value Value to set for the presentation property.
      */
     public void setPresentation(@jakarta.annotation.Nullable final GroupPolicyPresentation value) {
-        this.presentation = value;
+        this.backingStore.set("presentation", value);
     }
 }

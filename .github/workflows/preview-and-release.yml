@@ -25,7 +25,7 @@ jobs:
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 18
           distribution: 'adopt'
@@ -74,11 +74,11 @@ jobs:
         run: .\Scripts\getLatestVersion.ps1
         shell: pwsh    
       - name: Create tag
-        uses: rickstaa/action-create-tag@v1.6.2
+        uses: rickstaa/action-create-tag@v1.7.1
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         with:
           workflow: Git Release
           token: ${{ secrets.PERSONAL_TOKEN }}
