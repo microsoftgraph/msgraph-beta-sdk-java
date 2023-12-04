@@ -10,71 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileSecurityProfile extends Entity implements Parsable {
     /**
-     * The activityGroupNames property
-     */
-    private java.util.List<String> activityGroupNames;
-    /**
-     * The azureSubscriptionId property
-     */
-    private String azureSubscriptionId;
-    /**
-     * The azureTenantId property
-     */
-    private String azureTenantId;
-    /**
-     * The certificateThumbprint property
-     */
-    private String certificateThumbprint;
-    /**
-     * The extensions property
-     */
-    private java.util.List<String> extensions;
-    /**
-     * The fileType property
-     */
-    private String fileType;
-    /**
-     * The firstSeenDateTime property
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The hashes property
-     */
-    private java.util.List<FileHash> hashes;
-    /**
-     * The lastSeenDateTime property
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The malwareStates property
-     */
-    private java.util.List<MalwareState> malwareStates;
-    /**
-     * The names property
-     */
-    private java.util.List<String> names;
-    /**
-     * The riskScore property
-     */
-    private String riskScore;
-    /**
-     * The size property
-     */
-    private Long size;
-    /**
-     * The tags property
-     */
-    private java.util.List<String> tags;
-    /**
-     * The vendorInformation property
-     */
-    private SecurityVendorInformation vendorInformation;
-    /**
-     * The vulnerabilityStates property
-     */
-    private java.util.List<VulnerabilityState> vulnerabilityStates;
-    /**
-     * Instantiates a new fileSecurityProfile and sets the default values.
+     * Instantiates a new FileSecurityProfile and sets the default values.
      */
     public FileSecurityProfile() {
         super();
@@ -82,7 +18,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileSecurityProfile
+     * @return a FileSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public static FileSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -91,43 +27,43 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the activityGroupNames property value. The activityGroupNames property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
-        return this.activityGroupNames;
+        return this.backingStore.get("activityGroupNames");
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this.azureSubscriptionId;
+        return this.backingStore.get("azureSubscriptionId");
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.backingStore.get("azureTenantId");
     }
     /**
      * Gets the certificateThumbprint property value. The certificateThumbprint property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
-        return this.certificateThumbprint;
+        return this.backingStore.get("certificateThumbprint");
     }
     /**
      * Gets the extensions property value. The extensions property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExtensions() {
-        return this.extensions;
+        return this.backingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -156,11 +92,11 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the fileType property value. The fileType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileType() {
-        return this.fileType;
+        return this.backingStore.get("fileType");
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
@@ -168,15 +104,15 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.backingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the hashes property value. The hashes property
-     * @return a fileHash
+     * @return a java.util.List<FileHash>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileHash> getHashes() {
-        return this.hashes;
+        return this.backingStore.get("hashes");
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
@@ -184,63 +120,63 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.backingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the malwareStates property value. The malwareStates property
-     * @return a malwareState
+     * @return a java.util.List<MalwareState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MalwareState> getMalwareStates() {
-        return this.malwareStates;
+        return this.backingStore.get("malwareStates");
     }
     /**
      * Gets the names property value. The names property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNames() {
-        return this.names;
+        return this.backingStore.get("names");
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
-        return this.riskScore;
+        return this.backingStore.get("riskScore");
     }
     /**
      * Gets the size property value. The size property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.backingStore.get("tags");
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this.vendorInformation;
+        return this.backingStore.get("vendorInformation");
     }
     /**
      * Gets the vulnerabilityStates property value. The vulnerabilityStates property
-     * @return a vulnerabilityState
+     * @return a java.util.List<VulnerabilityState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VulnerabilityState> getVulnerabilityStates() {
-        return this.vulnerabilityStates;
+        return this.backingStore.get("vulnerabilityStates");
     }
     /**
      * Serializes information the current object
@@ -271,111 +207,111 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      */
     public void setActivityGroupNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.activityGroupNames = value;
+        this.backingStore.set("activityGroupNames", value);
     }
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
      */
     public void setAzureSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.azureSubscriptionId = value;
+        this.backingStore.set("azureSubscriptionId", value);
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.backingStore.set("azureTenantId", value);
     }
     /**
      * Sets the certificateThumbprint property value. The certificateThumbprint property
      * @param value Value to set for the certificateThumbprint property.
      */
     public void setCertificateThumbprint(@jakarta.annotation.Nullable final String value) {
-        this.certificateThumbprint = value;
+        this.backingStore.set("certificateThumbprint", value);
     }
     /**
      * Sets the extensions property value. The extensions property
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.extensions = value;
+        this.backingStore.set("extensions", value);
     }
     /**
      * Sets the fileType property value. The fileType property
      * @param value Value to set for the fileType property.
      */
     public void setFileType(@jakarta.annotation.Nullable final String value) {
-        this.fileType = value;
+        this.backingStore.set("fileType", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.backingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the hashes property value. The hashes property
      * @param value Value to set for the hashes property.
      */
     public void setHashes(@jakarta.annotation.Nullable final java.util.List<FileHash> value) {
-        this.hashes = value;
+        this.backingStore.set("hashes", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.backingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the malwareStates property value. The malwareStates property
      * @param value Value to set for the malwareStates property.
      */
     public void setMalwareStates(@jakarta.annotation.Nullable final java.util.List<MalwareState> value) {
-        this.malwareStates = value;
+        this.backingStore.set("malwareStates", value);
     }
     /**
      * Sets the names property value. The names property
      * @param value Value to set for the names property.
      */
     public void setNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.names = value;
+        this.backingStore.set("names", value);
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
      */
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
-        this.riskScore = value;
+        this.backingStore.set("riskScore", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.backingStore.set("tags", value);
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
-        this.vendorInformation = value;
+        this.backingStore.set("vendorInformation", value);
     }
     /**
      * Sets the vulnerabilityStates property value. The vulnerabilityStates property
      * @param value Value to set for the vulnerabilityStates property.
      */
     public void setVulnerabilityStates(@jakarta.annotation.Nullable final java.util.List<VulnerabilityState> value) {
-        this.vulnerabilityStates = value;
+        this.backingStore.set("vulnerabilityStates", value);
     }
 }

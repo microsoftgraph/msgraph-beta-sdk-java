@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchSession extends ExactMatchSessionBase implements Parsable {
     /**
-     * The checksum property
-     */
-    private String checksum;
-    /**
-     * The dataUploadURI property
-     */
-    private String dataUploadURI;
-    /**
-     * The fields property
-     */
-    private java.util.List<String> fields;
-    /**
-     * The fileName property
-     */
-    private String fileName;
-    /**
-     * The rowsPerBlock property
-     */
-    private Integer rowsPerBlock;
-    /**
-     * The salt property
-     */
-    private String salt;
-    /**
-     * The uploadAgent property
-     */
-    private ExactMatchUploadAgent uploadAgent;
-    /**
-     * The uploadAgentId property
-     */
-    private String uploadAgentId;
-    /**
-     * Instantiates a new exactMatchSession and sets the default values.
+     * Instantiates a new ExactMatchSession and sets the default values.
      */
     public ExactMatchSession() {
         super();
@@ -49,7 +17,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchSession
+     * @return a ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,19 +26,19 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the checksum property value. The checksum property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChecksum() {
-        return this.checksum;
+        return this.backingStore.get("checksum");
     }
     /**
      * Gets the dataUploadURI property value. The dataUploadURI property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataUploadURI() {
-        return this.dataUploadURI;
+        return this.backingStore.get("dataUploadURI");
     }
     /**
      * The deserialization information for the current model
@@ -91,51 +59,51 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the fields property value. The fields property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
-        return this.fields;
+        return this.backingStore.get("fields");
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.backingStore.get("fileName");
     }
     /**
      * Gets the rowsPerBlock property value. The rowsPerBlock property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRowsPerBlock() {
-        return this.rowsPerBlock;
+        return this.backingStore.get("rowsPerBlock");
     }
     /**
      * Gets the salt property value. The salt property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSalt() {
-        return this.salt;
+        return this.backingStore.get("salt");
     }
     /**
      * Gets the uploadAgent property value. The uploadAgent property
-     * @return a exactMatchUploadAgent
+     * @return a ExactMatchUploadAgent
      */
     @jakarta.annotation.Nullable
     public ExactMatchUploadAgent getUploadAgent() {
-        return this.uploadAgent;
+        return this.backingStore.get("uploadAgent");
     }
     /**
      * Gets the uploadAgentId property value. The uploadAgentId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUploadAgentId() {
-        return this.uploadAgentId;
+        return this.backingStore.get("uploadAgentId");
     }
     /**
      * Serializes information the current object
@@ -158,55 +126,55 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * @param value Value to set for the checksum property.
      */
     public void setChecksum(@jakarta.annotation.Nullable final String value) {
-        this.checksum = value;
+        this.backingStore.set("checksum", value);
     }
     /**
      * Sets the dataUploadURI property value. The dataUploadURI property
      * @param value Value to set for the dataUploadURI property.
      */
     public void setDataUploadURI(@jakarta.annotation.Nullable final String value) {
-        this.dataUploadURI = value;
+        this.backingStore.set("dataUploadURI", value);
     }
     /**
      * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.fields = value;
+        this.backingStore.set("fields", value);
     }
     /**
      * Sets the fileName property value. The fileName property
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.backingStore.set("fileName", value);
     }
     /**
      * Sets the rowsPerBlock property value. The rowsPerBlock property
      * @param value Value to set for the rowsPerBlock property.
      */
     public void setRowsPerBlock(@jakarta.annotation.Nullable final Integer value) {
-        this.rowsPerBlock = value;
+        this.backingStore.set("rowsPerBlock", value);
     }
     /**
      * Sets the salt property value. The salt property
      * @param value Value to set for the salt property.
      */
     public void setSalt(@jakarta.annotation.Nullable final String value) {
-        this.salt = value;
+        this.backingStore.set("salt", value);
     }
     /**
      * Sets the uploadAgent property value. The uploadAgent property
      * @param value Value to set for the uploadAgent property.
      */
     public void setUploadAgent(@jakarta.annotation.Nullable final ExactMatchUploadAgent value) {
-        this.uploadAgent = value;
+        this.backingStore.set("uploadAgent", value);
     }
     /**
      * Sets the uploadAgentId property value. The uploadAgentId property
      * @param value Value to set for the uploadAgentId property.
      */
     public void setUploadAgentId(@jakarta.annotation.Nullable final String value) {
-        this.uploadAgentId = value;
+        this.backingStore.set("uploadAgentId", value);
     }
 }

@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationIntegerSettingValueTemplate extends DeviceManagementConfigurationSimpleSettingValueTemplate implements Parsable {
     /**
-     * Integer Setting Value Default Template.
-     */
-    private DeviceManagementConfigurationIntegerSettingValueDefaultTemplate defaultValue;
-    /**
-     * Recommended value definition.
-     */
-    private DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate recommendedValueDefinition;
-    /**
-     * Required value definition.
-     */
-    private DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate requiredValueDefinition;
-    /**
-     * Instantiates a new deviceManagementConfigurationIntegerSettingValueTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationIntegerSettingValueTemplate and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValueTemplate() {
         super();
@@ -33,7 +21,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationIntegerSettingValueTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValueTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +30,11 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
     }
     /**
      * Gets the defaultValue property value. Integer Setting Value Default Template.
-     * @return a deviceManagementConfigurationIntegerSettingValueDefaultTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueDefaultTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefaultTemplate getDefaultValue() {
-        return this.defaultValue;
+        return this.backingStore.get("defaultValue");
     }
     /**
      * The deserialization information for the current model
@@ -62,19 +50,19 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended value definition.
-     * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRecommendedValueDefinition() {
-        return this.recommendedValueDefinition;
+        return this.backingStore.get("recommendedValueDefinition");
     }
     /**
      * Gets the requiredValueDefinition property value. Required value definition.
-     * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRequiredValueDefinition() {
-        return this.requiredValueDefinition;
+        return this.backingStore.get("requiredValueDefinition");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefaultTemplate value) {
-        this.defaultValue = value;
+        this.backingStore.set("defaultValue", value);
     }
     /**
      * Sets the recommendedValueDefinition property value. Recommended value definition.
      * @param value Value to set for the recommendedValueDefinition property.
      */
     public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
-        this.recommendedValueDefinition = value;
+        this.backingStore.set("recommendedValueDefinition", value);
     }
     /**
      * Sets the requiredValueDefinition property value. Required value definition.
      * @param value Value to set for the requiredValueDefinition property.
      */
     public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
-        this.requiredValueDefinition = value;
+        this.backingStore.set("requiredValueDefinition", value);
     }
 }

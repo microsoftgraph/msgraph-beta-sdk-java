@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdvancedThreatProtectionOnboardingStateSummary extends Entity implements Parsable {
     /**
-     * The advancedThreatProtectionOnboardingDeviceSettingStates property
-     */
-    private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> advancedThreatProtectionOnboardingDeviceSettingStates;
-    /**
-     * Number of compliant devices
-     */
-    private Integer compliantDeviceCount;
-    /**
-     * Number of conflict devices
-     */
-    private Integer conflictDeviceCount;
-    /**
-     * Number of error devices
-     */
-    private Integer errorDeviceCount;
-    /**
-     * Number of NonCompliant devices
-     */
-    private Integer nonCompliantDeviceCount;
-    /**
-     * Number of not applicable devices
-     */
-    private Integer notApplicableDeviceCount;
-    /**
-     * Number of not assigned devices
-     */
-    private Integer notAssignedDeviceCount;
-    /**
-     * Number of remediated devices
-     */
-    private Integer remediatedDeviceCount;
-    /**
-     * Number of unknown devices
-     */
-    private Integer unknownDeviceCount;
-    /**
-     * Instantiates a new advancedThreatProtectionOnboardingStateSummary and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingStateSummary and sets the default values.
      */
     public AdvancedThreatProtectionOnboardingStateSummary() {
         super();
@@ -56,7 +20,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingStateSummary
+     * @return a AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,35 +29,35 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     }
     /**
      * Gets the advancedThreatProtectionOnboardingDeviceSettingStates property value. The advancedThreatProtectionOnboardingDeviceSettingStates property
-     * @return a advancedThreatProtectionOnboardingDeviceSettingState
+     * @return a java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> getAdvancedThreatProtectionOnboardingDeviceSettingStates() {
-        return this.advancedThreatProtectionOnboardingDeviceSettingStates;
+        return this.backingStore.get("advancedThreatProtectionOnboardingDeviceSettingStates");
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this.compliantDeviceCount;
+        return this.backingStore.get("compliantDeviceCount");
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
-        return this.conflictDeviceCount;
+        return this.backingStore.get("conflictDeviceCount");
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this.errorDeviceCount;
+        return this.backingStore.get("errorDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -115,43 +79,43 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this.nonCompliantDeviceCount;
+        return this.backingStore.get("nonCompliantDeviceCount");
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this.notApplicableDeviceCount;
+        return this.backingStore.get("notApplicableDeviceCount");
     }
     /**
      * Gets the notAssignedDeviceCount property value. Number of not assigned devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotAssignedDeviceCount() {
-        return this.notAssignedDeviceCount;
+        return this.backingStore.get("notAssignedDeviceCount");
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this.remediatedDeviceCount;
+        return this.backingStore.get("remediatedDeviceCount");
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this.unknownDeviceCount;
+        return this.backingStore.get("unknownDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the advancedThreatProtectionOnboardingDeviceSettingStates property.
      */
     public void setAdvancedThreatProtectionOnboardingDeviceSettingStates(@jakarta.annotation.Nullable final java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> value) {
-        this.advancedThreatProtectionOnboardingDeviceSettingStates = value;
+        this.backingStore.set("advancedThreatProtectionOnboardingDeviceSettingStates", value);
     }
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices
      * @param value Value to set for the compliantDeviceCount property.
      */
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.compliantDeviceCount = value;
+        this.backingStore.set("compliantDeviceCount", value);
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      * @param value Value to set for the conflictDeviceCount property.
      */
     public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictDeviceCount = value;
+        this.backingStore.set("conflictDeviceCount", value);
     }
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      * @param value Value to set for the errorDeviceCount property.
      */
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorDeviceCount = value;
+        this.backingStore.set("errorDeviceCount", value);
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @param value Value to set for the nonCompliantDeviceCount property.
      */
     public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.nonCompliantDeviceCount = value;
+        this.backingStore.set("nonCompliantDeviceCount", value);
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableDeviceCount property.
      */
     public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableDeviceCount = value;
+        this.backingStore.set("notApplicableDeviceCount", value);
     }
     /**
      * Sets the notAssignedDeviceCount property value. Number of not assigned devices
      * @param value Value to set for the notAssignedDeviceCount property.
      */
     public void setNotAssignedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notAssignedDeviceCount = value;
+        this.backingStore.set("notAssignedDeviceCount", value);
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      * @param value Value to set for the remediatedDeviceCount property.
      */
     public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediatedDeviceCount = value;
+        this.backingStore.set("remediatedDeviceCount", value);
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      * @param value Value to set for the unknownDeviceCount property.
      */
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownDeviceCount = value;
+        this.backingStore.set("unknownDeviceCount", value);
     }
 }

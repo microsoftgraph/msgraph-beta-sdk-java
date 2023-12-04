@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PurchaseInvoiceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PurchaseInvoice> value;
-    /**
-     * Instantiates a new purchaseInvoiceCollectionResponse and sets the default values.
+     * Instantiates a new PurchaseInvoiceCollectionResponse and sets the default values.
      */
     public PurchaseInvoiceCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PurchaseInvoiceCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a purchaseInvoiceCollectionResponse
+     * @return a PurchaseInvoiceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PurchaseInvoiceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PurchaseInvoiceCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a purchaseInvoice
+     * @return a java.util.List<PurchaseInvoice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoice> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PurchaseInvoiceCollectionResponse extends BaseCollectionPaginationC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

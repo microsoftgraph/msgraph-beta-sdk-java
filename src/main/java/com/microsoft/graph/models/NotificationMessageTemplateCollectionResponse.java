@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NotificationMessageTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<NotificationMessageTemplate> value;
-    /**
-     * Instantiates a new notificationMessageTemplateCollectionResponse and sets the default values.
+     * Instantiates a new NotificationMessageTemplateCollectionResponse and sets the default values.
      */
     public NotificationMessageTemplateCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class NotificationMessageTemplateCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notificationMessageTemplateCollectionResponse
+     * @return a NotificationMessageTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static NotificationMessageTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class NotificationMessageTemplateCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a notificationMessageTemplate
+     * @return a java.util.List<NotificationMessageTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationMessageTemplate> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class NotificationMessageTemplateCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

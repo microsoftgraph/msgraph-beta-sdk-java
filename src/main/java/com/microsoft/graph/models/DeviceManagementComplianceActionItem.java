@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplianceActionItem extends Entity implements Parsable {
     /**
-     * Scheduled Action Type Enum
-     */
-    private DeviceManagementComplianceActionType actionType;
-    /**
-     * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-     */
-    private Integer gracePeriodHours;
-    /**
-     * A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
-     */
-    private java.util.List<String> notificationMessageCCList;
-    /**
-     * What notification Message template to use
-     */
-    private String notificationTemplateId;
-    /**
-     * Instantiates a new deviceManagementComplianceActionItem and sets the default values.
+     * Instantiates a new DeviceManagementComplianceActionItem and sets the default values.
      */
     public DeviceManagementComplianceActionItem() {
         super();
@@ -36,7 +20,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementComplianceActionItem
+     * @return a DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplianceActionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,11 +29,11 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the actionType property value. Scheduled Action Type Enum
-     * @return a deviceManagementComplianceActionType
+     * @return a DeviceManagementComplianceActionType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementComplianceActionType getActionType() {
-        return this.actionType;
+        return this.backingStore.get("actionType");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +42,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceManagementComplianceActionType.class)); });
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceManagementComplianceActionType::forValue)); });
         deserializerMap.put("gracePeriodHours", (n) -> { this.setGracePeriodHours(n.getIntegerValue()); });
         deserializerMap.put("notificationMessageCCList", (n) -> { this.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("notificationTemplateId", (n) -> { this.setNotificationTemplateId(n.getStringValue()); });
@@ -66,27 +50,27 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodHours() {
-        return this.gracePeriodHours;
+        return this.backingStore.get("gracePeriodHours");
     }
     /**
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
-        return this.notificationMessageCCList;
+        return this.backingStore.get("notificationMessageCCList");
     }
     /**
      * Gets the notificationTemplateId property value. What notification Message template to use
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationTemplateId() {
-        return this.notificationTemplateId;
+        return this.backingStore.get("notificationTemplateId");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the actionType property.
      */
     public void setActionType(@jakarta.annotation.Nullable final DeviceManagementComplianceActionType value) {
-        this.actionType = value;
+        this.backingStore.set("actionType", value);
     }
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      * @param value Value to set for the gracePeriodHours property.
      */
     public void setGracePeriodHours(@jakarta.annotation.Nullable final Integer value) {
-        this.gracePeriodHours = value;
+        this.backingStore.set("gracePeriodHours", value);
     }
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
      * @param value Value to set for the notificationMessageCCList property.
      */
     public void setNotificationMessageCCList(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.notificationMessageCCList = value;
+        this.backingStore.set("notificationMessageCCList", value);
     }
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
      * @param value Value to set for the notificationTemplateId property.
      */
     public void setNotificationTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.notificationTemplateId = value;
+        this.backingStore.set("notificationTemplateId", value);
     }
 }

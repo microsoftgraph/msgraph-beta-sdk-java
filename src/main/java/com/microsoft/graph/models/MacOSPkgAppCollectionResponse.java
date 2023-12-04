@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MacOSPkgApp> value;
-    /**
-     * Instantiates a new macOSPkgAppCollectionResponse and sets the default values.
+     * Instantiates a new MacOSPkgAppCollectionResponse and sets the default values.
      */
     public MacOSPkgAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSPkgAppCollectionResponse
+     * @return a MacOSPkgAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSPkgAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSPkgApp
+     * @return a java.util.List<MacOSPkgApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSPkgApp> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MacOSPkgApp> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

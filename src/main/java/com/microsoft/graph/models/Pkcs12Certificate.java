@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * Specifies the password for the pfx file. Required. If no password is used, must still provide a value of ''.
-     */
-    private String password;
-    /**
-     * Specifies the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
-     */
-    private String pkcs12Value;
-    /**
-     * Instantiates a new pkcs12Certificate and sets the default values.
+     * Instantiates a new Pkcs12Certificate and sets the default values.
      */
     public Pkcs12Certificate() {
         super();
@@ -26,7 +18,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pkcs12Certificate
+     * @return a Pkcs12Certificate
      */
     @jakarta.annotation.Nonnull
     public static Pkcs12Certificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     }
     /**
      * Gets the password property value. Specifies the password for the pfx file. Required. If no password is used, must still provide a value of ''.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.backingStore.get("password");
     }
     /**
      * Gets the pkcs12Value property value. Specifies the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPkcs12Value() {
-        return this.pkcs12Value;
+        return this.backingStore.get("pkcs12Value");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.backingStore.set("password", value);
     }
     /**
      * Sets the pkcs12Value property value. Specifies the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @param value Value to set for the pkcs12Value property.
      */
     public void setPkcs12Value(@jakarta.annotation.Nullable final String value) {
-        this.pkcs12Value = value;
+        this.backingStore.set("pkcs12Value", value);
     }
 }

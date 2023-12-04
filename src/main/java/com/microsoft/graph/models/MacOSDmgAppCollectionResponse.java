@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MacOSDmgApp> value;
-    /**
-     * Instantiates a new macOSDmgAppCollectionResponse and sets the default values.
+     * Instantiates a new MacOSDmgAppCollectionResponse and sets the default values.
      */
     public MacOSDmgAppCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSDmgAppCollectionResponse
+     * @return a MacOSDmgAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSDmgAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSDmgApp
+     * @return a java.util.List<MacOSDmgApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSDmgApp> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MacOSDmgApp> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

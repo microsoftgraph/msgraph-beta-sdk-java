@@ -13,15 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicySetAssignment extends Entity implements Parsable {
     /**
-     * Last modified time of the PolicySetAssignment.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The target group of PolicySetAssignment
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new policySetAssignment and sets the default values.
+     * Instantiates a new PolicySetAssignment and sets the default values.
      */
     public PolicySetAssignment() {
         super();
@@ -29,7 +21,7 @@ public class PolicySetAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySetAssignment
+     * @return a PolicySetAssignment
      */
     @jakarta.annotation.Nonnull
     public static PolicySetAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,15 +45,15 @@ public class PolicySetAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the target property value. The target group of PolicySetAssignment
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class PolicySetAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the target property value. The target group of PolicySetAssignment
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

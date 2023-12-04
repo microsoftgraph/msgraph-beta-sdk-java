@@ -13,7 +13,9 @@ public enum WiFiProxySetting implements ValuedEnum {
     /** Manual Proxy Settings via Address and Port. */
     Manual("manual"),
     /** Automatic Proxy Settings via URL. */
-    Automatic("automatic");
+    Automatic("automatic"),
+    /** Unknown future value for evolvable enum patterns. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WiFiProxySetting(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum WiFiProxySetting implements ValuedEnum {
             case "none": return None;
             case "manual": return Manual;
             case "automatic": return Automatic;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

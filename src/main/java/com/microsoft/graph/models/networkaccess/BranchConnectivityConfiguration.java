@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BranchConnectivityConfiguration implements AdditionalDataHolder, Parsable {
+public class BranchConnectivityConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The branchId property
-     */
-    private String branchId;
-    /**
-     * The branchName property
-     */
-    private String branchName;
-    /**
-     * The links property
-     */
-    private java.util.List<ConnectivityConfigurationLink> links;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new branchConnectivityConfiguration and sets the default values.
+     * Instantiates a new BranchConnectivityConfiguration and sets the default values.
      */
     public BranchConnectivityConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a branchConnectivityConfiguration
+     * @return a BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static BranchConnectivityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +35,41 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
         return new BranchConnectivityConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the branchId property value. The branchId property
-     * @return a string
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the branchId property value. Unique identifier or a specific reference assigned to a branchSite. Key.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBranchId() {
-        return this.branchId;
+        return this.backingStore.get("branchId");
     }
     /**
-     * Gets the branchName property value. The branchName property
-     * @return a string
+     * Gets the branchName property value. Display name assigned to a branchSite.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBranchName() {
-        return this.branchName;
+        return this.backingStore.get("branchName");
     }
     /**
      * The deserialization information for the current model
@@ -83,20 +85,20 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
         return deserializerMap;
     }
     /**
-     * Gets the links property value. The links property
-     * @return a connectivityConfigurationLink
+     * Gets the links property value. List of connectivity configurations for deviceLink objects.
+     * @return a java.util.List<ConnectivityConfigurationLink>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectivityConfigurationLink> getLinks() {
-        return this.links;
+        return this.backingStore.get("links");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the branchId property value. The branchId property
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the branchId property value. Unique identifier or a specific reference assigned to a branchSite. Key.
      * @param value Value to set for the branchId property.
      */
     public void setBranchId(@jakarta.annotation.Nullable final String value) {
-        this.branchId = value;
+        this.backingStore.set("branchId", value);
     }
     /**
-     * Sets the branchName property value. The branchName property
+     * Sets the branchName property value. Display name assigned to a branchSite.
      * @param value Value to set for the branchName property.
      */
     public void setBranchName(@jakarta.annotation.Nullable final String value) {
-        this.branchName = value;
+        this.backingStore.set("branchName", value);
     }
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. List of connectivity configurations for deviceLink objects.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<ConnectivityConfigurationLink> value) {
-        this.links = value;
+        this.backingStore.set("links", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

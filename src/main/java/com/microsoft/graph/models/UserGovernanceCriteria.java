@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserGovernanceCriteria extends GovernanceCriteria implements Parsable {
     /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new userGovernanceCriteria and sets the default values.
+     * Instantiates a new UserGovernanceCriteria and sets the default values.
      */
     public UserGovernanceCriteria() {
         super();
@@ -22,7 +18,7 @@ public class UserGovernanceCriteria extends GovernanceCriteria implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userGovernanceCriteria
+     * @return a UserGovernanceCriteria
      */
     @jakarta.annotation.Nonnull
     public static UserGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UserGovernanceCriteria extends GovernanceCriteria implements Parsab
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UserGovernanceCriteria extends GovernanceCriteria implements Parsab
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

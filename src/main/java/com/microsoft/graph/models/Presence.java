@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Presence extends Entity implements Parsable {
     /**
-     * The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
-     */
-    private String activity;
-    /**
-     * The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
-     */
-    private String availability;
-    /**
-     * The out of office settings for a user.
-     */
-    private OutOfOfficeSettings outOfOfficeSettings;
-    /**
-     * The presence status message of a user.
-     */
-    private PresenceStatusMessage statusMessage;
-    /**
-     * Instantiates a new presence and sets the default values.
+     * Instantiates a new Presence and sets the default values.
      */
     public Presence() {
         super();
@@ -33,7 +17,7 @@ public class Presence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presence
+     * @return a Presence
      */
     @jakarta.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,20 +25,20 @@ public class Presence extends Entity implements Parsable {
         return new Presence();
     }
     /**
-     * Gets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
-     * @return a string
+     * Gets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.backingStore.get("activity");
     }
     /**
-     * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
-     * @return a string
+     * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
-        return this.availability;
+        return this.backingStore.get("availability");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +55,19 @@ public class Presence extends Entity implements Parsable {
     }
     /**
      * Gets the outOfOfficeSettings property value. The out of office settings for a user.
-     * @return a outOfOfficeSettings
+     * @return a OutOfOfficeSettings
      */
     @jakarta.annotation.Nullable
     public OutOfOfficeSettings getOutOfOfficeSettings() {
-        return this.outOfOfficeSettings;
+        return this.backingStore.get("outOfOfficeSettings");
     }
     /**
      * Gets the statusMessage property value. The presence status message of a user.
-     * @return a presenceStatusMessage
+     * @return a PresenceStatusMessage
      */
     @jakarta.annotation.Nullable
     public PresenceStatusMessage getStatusMessage() {
-        return this.statusMessage;
+        return this.backingStore.get("statusMessage");
     }
     /**
      * Serializes information the current object
@@ -98,31 +82,31 @@ public class Presence extends Entity implements Parsable {
         writer.writeObjectValue("statusMessage", this.getStatusMessage());
     }
     /**
-     * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
+     * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.backingStore.set("activity", value);
     }
     /**
-     * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+     * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown.
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
-        this.availability = value;
+        this.backingStore.set("availability", value);
     }
     /**
      * Sets the outOfOfficeSettings property value. The out of office settings for a user.
      * @param value Value to set for the outOfOfficeSettings property.
      */
     public void setOutOfOfficeSettings(@jakarta.annotation.Nullable final OutOfOfficeSettings value) {
-        this.outOfOfficeSettings = value;
+        this.backingStore.set("outOfOfficeSettings", value);
     }
     /**
      * Sets the statusMessage property value. The presence status message of a user.
      * @param value Value to set for the statusMessage property.
      */
     public void setStatusMessage(@jakarta.annotation.Nullable final PresenceStatusMessage value) {
-        this.statusMessage = value;
+        this.backingStore.set("statusMessage", value);
     }
 }

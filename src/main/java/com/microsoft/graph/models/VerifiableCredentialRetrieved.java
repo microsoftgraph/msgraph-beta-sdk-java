@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerifiableCredentialRetrieved extends VerifiableCredentialRequirementStatus implements Parsable {
     /**
-     * The specific date and time that the presentation request will expire and a new one will need to be generated.
-     */
-    private OffsetDateTime expiryDateTime;
-    /**
-     * Instantiates a new verifiableCredentialRetrieved and sets the default values.
+     * Instantiates a new VerifiableCredentialRetrieved and sets the default values.
      */
     public VerifiableCredentialRetrieved() {
         super();
@@ -23,7 +19,7 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verifiableCredentialRetrieved
+     * @return a VerifiableCredentialRetrieved
      */
     @jakarta.annotation.Nonnull
     public static VerifiableCredentialRetrieved createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +32,7 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryDateTime() {
-        return this.expiryDateTime;
+        return this.backingStore.get("expiryDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -62,6 +58,6 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiryDateTime = value;
+        this.backingStore.set("expiryDateTime", value);
     }
 }

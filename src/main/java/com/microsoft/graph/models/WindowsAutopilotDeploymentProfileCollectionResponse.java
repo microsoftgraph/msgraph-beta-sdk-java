@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeploymentProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsAutopilotDeploymentProfile> value;
-    /**
-     * Instantiates a new windowsAutopilotDeploymentProfileCollectionResponse and sets the default values.
+     * Instantiates a new WindowsAutopilotDeploymentProfileCollectionResponse and sets the default values.
      */
     public WindowsAutopilotDeploymentProfileCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WindowsAutopilotDeploymentProfileCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotDeploymentProfileCollectionResponse
+     * @return a WindowsAutopilotDeploymentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WindowsAutopilotDeploymentProfileCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsAutopilotDeploymentProfile
+     * @return a java.util.List<WindowsAutopilotDeploymentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsAutopilotDeploymentProfile> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsAutopilotDeploymentProfileCollectionResponse extends BaseCol
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsAutopilotDeploymentProfile> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

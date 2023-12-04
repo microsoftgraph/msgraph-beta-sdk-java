@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppAssignment extends Entity implements Parsable {
     /**
-     * Possible values for the install intent chosen by the admin.
-     */
-    private InstallIntent intent;
-    /**
-     * The settings for target assignment defined by the admin.
-     */
-    private MobileAppAssignmentSettings settings;
-    /**
-     * Represents source of assignment.
-     */
-    private DeviceAndAppManagementAssignmentSource source;
-    /**
-     * The identifier of the source of the assignment.
-     */
-    private String sourceId;
-    /**
-     * The target group assignment defined by the admin.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
-     * Instantiates a new mobileAppAssignment and sets the default values.
+     * Instantiates a new MobileAppAssignment and sets the default values.
      */
     public MobileAppAssignment() {
         super();
@@ -40,7 +20,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppAssignment
+     * @return a MobileAppAssignment
      */
     @jakarta.annotation.Nonnull
     public static MobileAppAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,52 +34,52 @@ public class MobileAppAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(InstallIntent.class)); });
+        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(InstallIntent::forValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(MobileAppAssignmentSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource::forValue)); });
         deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the intent property value. Possible values for the install intent chosen by the admin.
-     * @return a installIntent
+     * @return a InstallIntent
      */
     @jakarta.annotation.Nullable
     public InstallIntent getIntent() {
-        return this.intent;
+        return this.backingStore.get("intent");
     }
     /**
      * Gets the settings property value. The settings for target assignment defined by the admin.
-     * @return a mobileAppAssignmentSettings
+     * @return a MobileAppAssignmentSettings
      */
     @jakarta.annotation.Nullable
     public MobileAppAssignmentSettings getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the source property value. Represents source of assignment.
-     * @return a deviceAndAppManagementAssignmentSource
+     * @return a DeviceAndAppManagementAssignmentSource
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentSource getSource() {
-        return this.source;
+        return this.backingStore.get("source");
     }
     /**
      * Gets the sourceId property value. The identifier of the source of the assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
-        return this.sourceId;
+        return this.backingStore.get("sourceId");
     }
     /**
      * Gets the target property value. The target group assignment defined by the admin.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -119,34 +99,34 @@ public class MobileAppAssignment extends Entity implements Parsable {
      * @param value Value to set for the intent property.
      */
     public void setIntent(@jakarta.annotation.Nullable final InstallIntent value) {
-        this.intent = value;
+        this.backingStore.set("intent", value);
     }
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final MobileAppAssignmentSettings value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentSource value) {
-        this.source = value;
+        this.backingStore.set("source", value);
     }
     /**
      * Sets the sourceId property value. The identifier of the source of the assignment.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
-        this.sourceId = value;
+        this.backingStore.set("sourceId", value);
     }
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

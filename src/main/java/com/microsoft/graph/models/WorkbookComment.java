@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookComment extends Entity implements Parsable {
     /**
-     * The content of the comment.
-     */
-    private String content;
-    /**
-     * Indicates the type for the comment.
-     */
-    private String contentType;
-    /**
-     * The replies property
-     */
-    private java.util.List<WorkbookCommentReply> replies;
-    /**
-     * The task associated with the comment. Read-only. Nullable.
-     */
-    private WorkbookDocumentTask task;
-    /**
-     * Instantiates a new workbookComment and sets the default values.
+     * Instantiates a new WorkbookComment and sets the default values.
      */
     public WorkbookComment() {
         super();
@@ -33,7 +17,7 @@ public class WorkbookComment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookComment
+     * @return a WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public static WorkbookComment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +26,19 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the comment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.backingStore.get("content");
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +55,19 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the replies property value. The replies property
-     * @return a workbookCommentReply
+     * @return a java.util.List<WorkbookCommentReply>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
-        return this.replies;
+        return this.backingStore.get("replies");
     }
     /**
      * Gets the task property value. The task associated with the comment. Read-only. Nullable.
-     * @return a workbookDocumentTask
+     * @return a WorkbookDocumentTask
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTask getTask() {
-        return this.task;
+        return this.backingStore.get("task");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.backingStore.set("content", value);
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the replies property value. The replies property
      * @param value Value to set for the replies property.
      */
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
-        this.replies = value;
+        this.backingStore.set("replies", value);
     }
     /**
      * Sets the task property value. The task associated with the comment. Read-only. Nullable.
      * @param value Value to set for the task property.
      */
     public void setTask(@jakarta.annotation.Nullable final WorkbookDocumentTask value) {
-        this.task = value;
+        this.backingStore.set("task", value);
     }
 }

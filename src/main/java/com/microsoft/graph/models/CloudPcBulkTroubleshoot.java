@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkTroubleshoot extends CloudPcBulkAction implements Parsable {
     /**
-     * Instantiates a new cloudPcBulkTroubleshoot and sets the default values.
+     * Instantiates a new CloudPcBulkTroubleshoot and sets the default values.
      */
     public CloudPcBulkTroubleshoot() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcBulkTroubleshoot extends CloudPcBulkAction implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkTroubleshoot
+     * @return a CloudPcBulkTroubleshoot
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkTroubleshoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

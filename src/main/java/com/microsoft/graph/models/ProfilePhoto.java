@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfilePhoto extends Entity implements Parsable {
     /**
-     * The height of the photo. Read-only.
-     */
-    private Integer height;
-    /**
-     * The width of the photo. Read-only.
-     */
-    private Integer width;
-    /**
-     * Instantiates a new profilePhoto and sets the default values.
+     * Instantiates a new ProfilePhoto and sets the default values.
      */
     public ProfilePhoto() {
         super();
@@ -25,7 +17,7 @@ public class ProfilePhoto extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a profilePhoto
+     * @return a ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public static ProfilePhoto createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class ProfilePhoto extends Entity implements Parsable {
     }
     /**
      * Gets the height property value. The height of the photo. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
-        return this.height;
+        return this.backingStore.get("height");
     }
     /**
      * Gets the width property value. The width of the photo. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
-        return this.width;
+        return this.backingStore.get("width");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param value Value to set for the height property.
      */
     public void setHeight(@jakarta.annotation.Nullable final Integer value) {
-        this.height = value;
+        this.backingStore.set("height", value);
     }
     /**
      * Sets the width property value. The width of the photo. Read-only.
      * @param value Value to set for the width property.
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
-        this.width = value;
+        this.backingStore.set("width", value);
     }
 }

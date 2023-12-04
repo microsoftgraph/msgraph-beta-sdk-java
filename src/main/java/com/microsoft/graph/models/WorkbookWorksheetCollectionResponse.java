@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WorkbookWorksheet> value;
-    /**
-     * Instantiates a new workbookWorksheetCollectionResponse and sets the default values.
+     * Instantiates a new WorkbookWorksheetCollectionResponse and sets the default values.
      */
     public WorkbookWorksheetCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class WorkbookWorksheetCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookWorksheetCollectionResponse
+     * @return a WorkbookWorksheetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheetCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class WorkbookWorksheetCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a workbookWorksheet
+     * @return a java.util.List<WorkbookWorksheet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookWorksheet> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WorkbookWorksheetCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

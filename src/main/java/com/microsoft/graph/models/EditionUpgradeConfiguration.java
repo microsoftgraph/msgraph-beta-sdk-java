@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Edition Upgrade License File Content.
-     */
-    private String license;
-    /**
-     * Edition Upgrade License type
-     */
-    private EditionUpgradeLicenseType licenseType;
-    /**
-     * Edition Upgrade Product Key.
-     */
-    private String productKey;
-    /**
-     * Windows 10 Edition type.
-     */
-    private Windows10EditionType targetEdition;
-    /**
-     * The possible options to configure S mode unlock
-     */
-    private WindowsSModeConfiguration windowsSMode;
-    /**
-     * Instantiates a new editionUpgradeConfiguration and sets the default values.
+     * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      */
     public EditionUpgradeConfiguration() {
         super();
@@ -41,7 +21,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a editionUpgradeConfiguration
+     * @return a EditionUpgradeConfiguration
      */
     @jakarta.annotation.Nonnull
     public static EditionUpgradeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,51 +36,51 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
-        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType::forValue)); });
         deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
-        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
-        deserializerMap.put("windowsSMode", (n) -> { this.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration.class)); });
+        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType::forValue)); });
+        deserializerMap.put("windowsSMode", (n) -> { this.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLicense() {
-        return this.license;
+        return this.backingStore.get("license");
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
-     * @return a editionUpgradeLicenseType
+     * @return a EditionUpgradeLicenseType
      */
     @jakarta.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
-        return this.licenseType;
+        return this.backingStore.get("licenseType");
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.backingStore.get("productKey");
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
-     * @return a windows10EditionType
+     * @return a Windows10EditionType
      */
     @jakarta.annotation.Nullable
     public Windows10EditionType getTargetEdition() {
-        return this.targetEdition;
+        return this.backingStore.get("targetEdition");
     }
     /**
      * Gets the windowsSMode property value. The possible options to configure S mode unlock
-     * @return a windowsSModeConfiguration
+     * @return a WindowsSModeConfiguration
      */
     @jakarta.annotation.Nullable
     public WindowsSModeConfiguration getWindowsSMode() {
-        return this.windowsSMode;
+        return this.backingStore.get("windowsSMode");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the license property.
      */
     public void setLicense(@jakarta.annotation.Nullable final String value) {
-        this.license = value;
+        this.backingStore.set("license", value);
     }
     /**
      * Sets the licenseType property value. Edition Upgrade License type
      * @param value Value to set for the licenseType property.
      */
     public void setLicenseType(@jakarta.annotation.Nullable final EditionUpgradeLicenseType value) {
-        this.licenseType = value;
+        this.backingStore.set("licenseType", value);
     }
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.backingStore.set("productKey", value);
     }
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
      * @param value Value to set for the targetEdition property.
      */
     public void setTargetEdition(@jakarta.annotation.Nullable final Windows10EditionType value) {
-        this.targetEdition = value;
+        this.backingStore.set("targetEdition", value);
     }
     /**
      * Sets the windowsSMode property value. The possible options to configure S mode unlock
      * @param value Value to set for the windowsSMode property.
      */
     public void setWindowsSMode(@jakarta.annotation.Nullable final WindowsSModeConfiguration value) {
-        this.windowsSMode = value;
+        this.backingStore.set("windowsSMode", value);
     }
 }

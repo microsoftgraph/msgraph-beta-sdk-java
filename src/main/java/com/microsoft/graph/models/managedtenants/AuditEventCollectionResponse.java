@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AuditEvent> value;
-    /**
-     * Instantiates a new auditEventCollectionResponse and sets the default values.
+     * Instantiates a new AuditEventCollectionResponse and sets the default values.
      */
     public AuditEventCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class AuditEventCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditEventCollectionResponse
+     * @return a AuditEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AuditEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class AuditEventCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a auditEvent
+     * @return a java.util.List<AuditEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditEvent> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AuditEventCollectionResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AuditEvent> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanConfigurationLocalization extends Entity implements Parsable {
     /**
-     * Localized names for configured buckets in the plan configuration.
-     */
-    private java.util.List<PlannerPlanConfigurationBucketLocalization> buckets;
-    /**
-     * The language code associated with the localized names in this object.
-     */
-    private String languageTag;
-    /**
-     * Localized title of the plan.
-     */
-    private String planTitle;
-    /**
-     * Instantiates a new plannerPlanConfigurationLocalization and sets the default values.
+     * Instantiates a new PlannerPlanConfigurationLocalization and sets the default values.
      */
     public PlannerPlanConfigurationLocalization() {
         super();
@@ -29,7 +17,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanConfigurationLocalization
+     * @return a PlannerPlanConfigurationLocalization
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanConfigurationLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     }
     /**
      * Gets the buckets property value. Localized names for configured buckets in the plan configuration.
-     * @return a plannerPlanConfigurationBucketLocalization
+     * @return a java.util.List<PlannerPlanConfigurationBucketLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationBucketLocalization> getBuckets() {
-        return this.buckets;
+        return this.backingStore.get("buckets");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     }
     /**
      * Gets the languageTag property value. The language code associated with the localized names in this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the planTitle property value. Localized title of the plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlanTitle() {
-        return this.planTitle;
+        return this.backingStore.get("planTitle");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * @param value Value to set for the buckets property.
      */
     public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerPlanConfigurationBucketLocalization> value) {
-        this.buckets = value;
+        this.backingStore.set("buckets", value);
     }
     /**
      * Sets the languageTag property value. The language code associated with the localized names in this object.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the planTitle property value. Localized title of the plan.
      * @param value Value to set for the planTitle property.
      */
     public void setPlanTitle(@jakarta.annotation.Nullable final String value) {
-        this.planTitle = value;
+        this.backingStore.set("planTitle", value);
     }
 }

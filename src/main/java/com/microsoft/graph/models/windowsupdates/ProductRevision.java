@@ -11,31 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProductRevision extends Entity implements Parsable {
     /**
-     * The display name of the content. Read-only.
-     */
-    private String displayName;
-    /**
-     * The knowledge base article associated with the product revision.
-     */
-    private KnowledgeBaseArticle knowledgeBaseArticle;
-    /**
-     * The osBuild property
-     */
-    private BuildVersionDetails osBuild;
-    /**
-     * The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
-     */
-    private String product;
-    /**
-     * The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime releaseDateTime;
-    /**
-     * The version of the feature update. Read-only.
-     */
-    private String version;
-    /**
-     * Instantiates a new productRevision and sets the default values.
+     * Instantiates a new ProductRevision and sets the default values.
      */
     public ProductRevision() {
         super();
@@ -43,7 +19,7 @@ public class ProductRevision extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a productRevision
+     * @return a ProductRevision
      */
     @jakarta.annotation.Nonnull
     public static ProductRevision createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,11 +28,11 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the content. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -75,27 +51,27 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
-     * @return a knowledgeBaseArticle
+     * @return a KnowledgeBaseArticle
      */
     @jakarta.annotation.Nullable
     public KnowledgeBaseArticle getKnowledgeBaseArticle() {
-        return this.knowledgeBaseArticle;
+        return this.backingStore.get("knowledgeBaseArticle");
     }
     /**
      * Gets the osBuild property value. The osBuild property
-     * @return a buildVersionDetails
+     * @return a BuildVersionDetails
      */
     @jakarta.annotation.Nullable
     public BuildVersionDetails getOsBuild() {
-        return this.osBuild;
+        return this.backingStore.get("osBuild");
     }
     /**
      * Gets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProduct() {
-        return this.product;
+        return this.backingStore.get("product");
     }
     /**
      * Gets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -103,15 +79,15 @@ public class ProductRevision extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
-        return this.releaseDateTime;
+        return this.backingStore.get("releaseDateTime");
     }
     /**
      * Gets the version property value. The version of the feature update. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class ProductRevision extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
      * @param value Value to set for the knowledgeBaseArticle property.
      */
     public void setKnowledgeBaseArticle(@jakarta.annotation.Nullable final KnowledgeBaseArticle value) {
-        this.knowledgeBaseArticle = value;
+        this.backingStore.set("knowledgeBaseArticle", value);
     }
     /**
      * Sets the osBuild property value. The osBuild property
      * @param value Value to set for the osBuild property.
      */
     public void setOsBuild(@jakarta.annotation.Nullable final BuildVersionDetails value) {
-        this.osBuild = value;
+        this.backingStore.set("osBuild", value);
     }
     /**
      * Sets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
      * @param value Value to set for the product property.
      */
     public void setProduct(@jakarta.annotation.Nullable final String value) {
-        this.product = value;
+        this.backingStore.set("product", value);
     }
     /**
      * Sets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the releaseDateTime property.
      */
     public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.releaseDateTime = value;
+        this.backingStore.set("releaseDateTime", value);
     }
     /**
      * Sets the version property value. The version of the feature update. Read-only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

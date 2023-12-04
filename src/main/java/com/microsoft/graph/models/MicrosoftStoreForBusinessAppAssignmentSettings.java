@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Whether or not to use device execution context for Microsoft Store for Business mobile app.
-     */
-    private Boolean useDeviceContext;
-    /**
-     * Instantiates a new microsoftStoreForBusinessAppAssignmentSettings and sets the default values.
+     * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.
      */
     public MicrosoftStoreForBusinessAppAssignmentSettings() {
         super();
@@ -25,7 +21,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftStoreForBusinessAppAssignmentSettings
+     * @return a MicrosoftStoreForBusinessAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftStoreForBusinessAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     }
     /**
      * Gets the useDeviceContext property value. Whether or not to use device execution context for Microsoft Store for Business mobile app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this.useDeviceContext;
+        return this.backingStore.get("useDeviceContext");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceContext = value;
+        this.backingStore.set("useDeviceContext", value);
     }
 }

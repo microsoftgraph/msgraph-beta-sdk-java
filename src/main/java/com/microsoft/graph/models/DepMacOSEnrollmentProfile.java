@@ -12,91 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implements Parsable {
     /**
-     * Indicates if Accessibility screen is disabled
-     */
-    private Boolean accessibilityScreenDisabled;
-    /**
-     * Indicates what the full name for the admin account is
-     */
-    private String adminAccountFullName;
-    /**
-     * Indicates what the password for the admin account is
-     */
-    private String adminAccountPassword;
-    /**
-     * Indicates what the user name for the admin account is
-     */
-    private String adminAccountUserName;
-    /**
-     * Indicates if Setup Assistant will automatically advance through its screen
-     */
-    private Boolean autoAdvanceSetupEnabled;
-    /**
-     * Indicates if UnlockWithWatch screen is disabled
-     */
-    private Boolean autoUnlockWithWatchDisabled;
-    /**
-     * Indicates if iCloud Documents and Desktop screen is disabled
-     */
-    private Boolean chooseYourLockScreenDisabled;
-    /**
-     * Indicates whether Setup Assistant will auto populate the primary account information
-     */
-    private Boolean dontAutoPopulatePrimaryAccountInfo;
-    /**
-     * Indicates whether the user will enable blockediting
-     */
-    private Boolean enableRestrictEditing;
-    /**
-     * Indicates if file vault is disabled
-     */
-    private Boolean fileVaultDisabled;
-    /**
-     * Indicates whether the admin account should be hidded or not
-     */
-    private Boolean hideAdminAccount;
-    /**
-     * Indicates if iCloud Analytics screen is disabled
-     */
-    private Boolean iCloudDiagnosticsDisabled;
-    /**
-     * Indicates if iCloud Documents and Desktop screen is disabled
-     */
-    private Boolean iCloudStorageDisabled;
-    /**
-     * Indicates if Passcode setup pane is disabled
-     */
-    private Boolean passCodeDisabled;
-    /**
-     * Indicates what the full name for the primary account is
-     */
-    private String primaryAccountFullName;
-    /**
-     * Indicates what the account name for the primary account is
-     */
-    private String primaryAccountUserName;
-    /**
-     * Indicates if registration is disabled
-     */
-    private Boolean registrationDisabled;
-    /**
-     * Indicates if the device is network-tethered to run the command
-     */
-    private Boolean requestRequiresNetworkTether;
-    /**
-     * Indicates whether Setup Assistant will set the account as a regular user
-     */
-    private Boolean setPrimarySetupAccountAsRegularUser;
-    /**
-     * Indicates whether Setup Assistant will skip the user interface for primary account setup
-     */
-    private Boolean skipPrimarySetupAccountCreation;
-    /**
-     * Indicates if zoom setup pane is disabled
-     */
-    private Boolean zoomDisabled;
-    /**
-     * Instantiates a new depMacOSEnrollmentProfile and sets the default values.
+     * Instantiates a new DepMacOSEnrollmentProfile and sets the default values.
      */
     public DepMacOSEnrollmentProfile() {
         super();
@@ -105,7 +21,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depMacOSEnrollmentProfile
+     * @return a DepMacOSEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static DepMacOSEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,75 +30,75 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the accessibilityScreenDisabled property value. Indicates if Accessibility screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessibilityScreenDisabled() {
-        return this.accessibilityScreenDisabled;
+        return this.backingStore.get("accessibilityScreenDisabled");
     }
     /**
      * Gets the adminAccountFullName property value. Indicates what the full name for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountFullName() {
-        return this.adminAccountFullName;
+        return this.backingStore.get("adminAccountFullName");
     }
     /**
      * Gets the adminAccountPassword property value. Indicates what the password for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountPassword() {
-        return this.adminAccountPassword;
+        return this.backingStore.get("adminAccountPassword");
     }
     /**
      * Gets the adminAccountUserName property value. Indicates what the user name for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountUserName() {
-        return this.adminAccountUserName;
+        return this.backingStore.get("adminAccountUserName");
     }
     /**
      * Gets the autoAdvanceSetupEnabled property value. Indicates if Setup Assistant will automatically advance through its screen
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoAdvanceSetupEnabled() {
-        return this.autoAdvanceSetupEnabled;
+        return this.backingStore.get("autoAdvanceSetupEnabled");
     }
     /**
      * Gets the autoUnlockWithWatchDisabled property value. Indicates if UnlockWithWatch screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoUnlockWithWatchDisabled() {
-        return this.autoUnlockWithWatchDisabled;
+        return this.backingStore.get("autoUnlockWithWatchDisabled");
     }
     /**
      * Gets the chooseYourLockScreenDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getChooseYourLockScreenDisabled() {
-        return this.chooseYourLockScreenDisabled;
+        return this.backingStore.get("chooseYourLockScreenDisabled");
     }
     /**
      * Gets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDontAutoPopulatePrimaryAccountInfo() {
-        return this.dontAutoPopulatePrimaryAccountInfo;
+        return this.backingStore.get("dontAutoPopulatePrimaryAccountInfo");
     }
     /**
      * Gets the enableRestrictEditing property value. Indicates whether the user will enable blockediting
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableRestrictEditing() {
-        return this.enableRestrictEditing;
+        return this.backingStore.get("enableRestrictEditing");
     }
     /**
      * The deserialization information for the current model
@@ -216,99 +132,99 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the fileVaultDisabled property value. Indicates if file vault is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultDisabled() {
-        return this.fileVaultDisabled;
+        return this.backingStore.get("fileVaultDisabled");
     }
     /**
      * Gets the hideAdminAccount property value. Indicates whether the admin account should be hidded or not
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHideAdminAccount() {
-        return this.hideAdminAccount;
+        return this.backingStore.get("hideAdminAccount");
     }
     /**
      * Gets the iCloudDiagnosticsDisabled property value. Indicates if iCloud Analytics screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudDiagnosticsDisabled() {
-        return this.iCloudDiagnosticsDisabled;
+        return this.backingStore.get("iCloudDiagnosticsDisabled");
     }
     /**
      * Gets the iCloudStorageDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudStorageDisabled() {
-        return this.iCloudStorageDisabled;
+        return this.backingStore.get("iCloudStorageDisabled");
     }
     /**
      * Gets the passCodeDisabled property value. Indicates if Passcode setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPassCodeDisabled() {
-        return this.passCodeDisabled;
+        return this.backingStore.get("passCodeDisabled");
     }
     /**
      * Gets the primaryAccountFullName property value. Indicates what the full name for the primary account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAccountFullName() {
-        return this.primaryAccountFullName;
+        return this.backingStore.get("primaryAccountFullName");
     }
     /**
      * Gets the primaryAccountUserName property value. Indicates what the account name for the primary account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAccountUserName() {
-        return this.primaryAccountUserName;
+        return this.backingStore.get("primaryAccountUserName");
     }
     /**
      * Gets the registrationDisabled property value. Indicates if registration is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRegistrationDisabled() {
-        return this.registrationDisabled;
+        return this.backingStore.get("registrationDisabled");
     }
     /**
      * Gets the requestRequiresNetworkTether property value. Indicates if the device is network-tethered to run the command
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequestRequiresNetworkTether() {
-        return this.requestRequiresNetworkTether;
+        return this.backingStore.get("requestRequiresNetworkTether");
     }
     /**
      * Gets the setPrimarySetupAccountAsRegularUser property value. Indicates whether Setup Assistant will set the account as a regular user
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSetPrimarySetupAccountAsRegularUser() {
-        return this.setPrimarySetupAccountAsRegularUser;
+        return this.backingStore.get("setPrimarySetupAccountAsRegularUser");
     }
     /**
      * Gets the skipPrimarySetupAccountCreation property value. Indicates whether Setup Assistant will skip the user interface for primary account setup
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSkipPrimarySetupAccountCreation() {
-        return this.skipPrimarySetupAccountCreation;
+        return this.backingStore.get("skipPrimarySetupAccountCreation");
     }
     /**
      * Gets the zoomDisabled property value. Indicates if zoom setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getZoomDisabled() {
-        return this.zoomDisabled;
+        return this.backingStore.get("zoomDisabled");
     }
     /**
      * Serializes information the current object
@@ -344,146 +260,146 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the accessibilityScreenDisabled property.
      */
     public void setAccessibilityScreenDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.accessibilityScreenDisabled = value;
+        this.backingStore.set("accessibilityScreenDisabled", value);
     }
     /**
      * Sets the adminAccountFullName property value. Indicates what the full name for the admin account is
      * @param value Value to set for the adminAccountFullName property.
      */
     public void setAdminAccountFullName(@jakarta.annotation.Nullable final String value) {
-        this.adminAccountFullName = value;
+        this.backingStore.set("adminAccountFullName", value);
     }
     /**
      * Sets the adminAccountPassword property value. Indicates what the password for the admin account is
      * @param value Value to set for the adminAccountPassword property.
      */
     public void setAdminAccountPassword(@jakarta.annotation.Nullable final String value) {
-        this.adminAccountPassword = value;
+        this.backingStore.set("adminAccountPassword", value);
     }
     /**
      * Sets the adminAccountUserName property value. Indicates what the user name for the admin account is
      * @param value Value to set for the adminAccountUserName property.
      */
     public void setAdminAccountUserName(@jakarta.annotation.Nullable final String value) {
-        this.adminAccountUserName = value;
+        this.backingStore.set("adminAccountUserName", value);
     }
     /**
      * Sets the autoAdvanceSetupEnabled property value. Indicates if Setup Assistant will automatically advance through its screen
      * @param value Value to set for the autoAdvanceSetupEnabled property.
      */
     public void setAutoAdvanceSetupEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoAdvanceSetupEnabled = value;
+        this.backingStore.set("autoAdvanceSetupEnabled", value);
     }
     /**
      * Sets the autoUnlockWithWatchDisabled property value. Indicates if UnlockWithWatch screen is disabled
      * @param value Value to set for the autoUnlockWithWatchDisabled property.
      */
     public void setAutoUnlockWithWatchDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoUnlockWithWatchDisabled = value;
+        this.backingStore.set("autoUnlockWithWatchDisabled", value);
     }
     /**
      * Sets the chooseYourLockScreenDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
      * @param value Value to set for the chooseYourLockScreenDisabled property.
      */
     public void setChooseYourLockScreenDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.chooseYourLockScreenDisabled = value;
+        this.backingStore.set("chooseYourLockScreenDisabled", value);
     }
     /**
      * Sets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information
      * @param value Value to set for the dontAutoPopulatePrimaryAccountInfo property.
      */
     public void setDontAutoPopulatePrimaryAccountInfo(@jakarta.annotation.Nullable final Boolean value) {
-        this.dontAutoPopulatePrimaryAccountInfo = value;
+        this.backingStore.set("dontAutoPopulatePrimaryAccountInfo", value);
     }
     /**
      * Sets the enableRestrictEditing property value. Indicates whether the user will enable blockediting
      * @param value Value to set for the enableRestrictEditing property.
      */
     public void setEnableRestrictEditing(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableRestrictEditing = value;
+        this.backingStore.set("enableRestrictEditing", value);
     }
     /**
      * Sets the fileVaultDisabled property value. Indicates if file vault is disabled
      * @param value Value to set for the fileVaultDisabled property.
      */
     public void setFileVaultDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.fileVaultDisabled = value;
+        this.backingStore.set("fileVaultDisabled", value);
     }
     /**
      * Sets the hideAdminAccount property value. Indicates whether the admin account should be hidded or not
      * @param value Value to set for the hideAdminAccount property.
      */
     public void setHideAdminAccount(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideAdminAccount = value;
+        this.backingStore.set("hideAdminAccount", value);
     }
     /**
      * Sets the iCloudDiagnosticsDisabled property value. Indicates if iCloud Analytics screen is disabled
      * @param value Value to set for the iCloudDiagnosticsDisabled property.
      */
     public void setICloudDiagnosticsDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudDiagnosticsDisabled = value;
+        this.backingStore.set("iCloudDiagnosticsDisabled", value);
     }
     /**
      * Sets the iCloudStorageDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
      * @param value Value to set for the iCloudStorageDisabled property.
      */
     public void setICloudStorageDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.iCloudStorageDisabled = value;
+        this.backingStore.set("iCloudStorageDisabled", value);
     }
     /**
      * Sets the passCodeDisabled property value. Indicates if Passcode setup pane is disabled
      * @param value Value to set for the passCodeDisabled property.
      */
     public void setPassCodeDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.passCodeDisabled = value;
+        this.backingStore.set("passCodeDisabled", value);
     }
     /**
      * Sets the primaryAccountFullName property value. Indicates what the full name for the primary account is
      * @param value Value to set for the primaryAccountFullName property.
      */
     public void setPrimaryAccountFullName(@jakarta.annotation.Nullable final String value) {
-        this.primaryAccountFullName = value;
+        this.backingStore.set("primaryAccountFullName", value);
     }
     /**
      * Sets the primaryAccountUserName property value. Indicates what the account name for the primary account is
      * @param value Value to set for the primaryAccountUserName property.
      */
     public void setPrimaryAccountUserName(@jakarta.annotation.Nullable final String value) {
-        this.primaryAccountUserName = value;
+        this.backingStore.set("primaryAccountUserName", value);
     }
     /**
      * Sets the registrationDisabled property value. Indicates if registration is disabled
      * @param value Value to set for the registrationDisabled property.
      */
     public void setRegistrationDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.registrationDisabled = value;
+        this.backingStore.set("registrationDisabled", value);
     }
     /**
      * Sets the requestRequiresNetworkTether property value. Indicates if the device is network-tethered to run the command
      * @param value Value to set for the requestRequiresNetworkTether property.
      */
     public void setRequestRequiresNetworkTether(@jakarta.annotation.Nullable final Boolean value) {
-        this.requestRequiresNetworkTether = value;
+        this.backingStore.set("requestRequiresNetworkTether", value);
     }
     /**
      * Sets the setPrimarySetupAccountAsRegularUser property value. Indicates whether Setup Assistant will set the account as a regular user
      * @param value Value to set for the setPrimarySetupAccountAsRegularUser property.
      */
     public void setSetPrimarySetupAccountAsRegularUser(@jakarta.annotation.Nullable final Boolean value) {
-        this.setPrimarySetupAccountAsRegularUser = value;
+        this.backingStore.set("setPrimarySetupAccountAsRegularUser", value);
     }
     /**
      * Sets the skipPrimarySetupAccountCreation property value. Indicates whether Setup Assistant will skip the user interface for primary account setup
      * @param value Value to set for the skipPrimarySetupAccountCreation property.
      */
     public void setSkipPrimarySetupAccountCreation(@jakarta.annotation.Nullable final Boolean value) {
-        this.skipPrimarySetupAccountCreation = value;
+        this.backingStore.set("skipPrimarySetupAccountCreation", value);
     }
     /**
      * Sets the zoomDisabled property value. Indicates if zoom setup pane is disabled
      * @param value Value to set for the zoomDisabled property.
      */
     public void setZoomDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.zoomDisabled = value;
+        this.backingStore.set("zoomDisabled", value);
     }
 }

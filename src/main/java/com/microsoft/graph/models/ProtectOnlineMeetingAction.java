@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsable {
     /**
-     * The allowedForwarders property
-     */
-    private OnlineMeetingForwarders allowedForwarders;
-    /**
-     * The allowedPresenters property
-     */
-    private OnlineMeetingPresenters allowedPresenters;
-    /**
-     * The isCopyToClipboardEnabled property
-     */
-    private Boolean isCopyToClipboardEnabled;
-    /**
-     * The isLobbyEnabled property
-     */
-    private Boolean isLobbyEnabled;
-    /**
-     * The lobbyBypassSettings property
-     */
-    private LobbyBypassSettings lobbyBypassSettings;
-    /**
-     * Instantiates a new protectOnlineMeetingAction and sets the default values.
+     * Instantiates a new ProtectOnlineMeetingAction and sets the default values.
      */
     public ProtectOnlineMeetingAction() {
         super();
@@ -38,7 +18,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectOnlineMeetingAction
+     * @return a ProtectOnlineMeetingAction
      */
     @jakarta.annotation.Nonnull
     public static ProtectOnlineMeetingAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,19 +27,19 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the allowedForwarders property value. The allowedForwarders property
-     * @return a onlineMeetingForwarders
+     * @return a OnlineMeetingForwarders
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingForwarders getAllowedForwarders() {
-        return this.allowedForwarders;
+        return this.backingStore.get("allowedForwarders");
     }
     /**
      * Gets the allowedPresenters property value. The allowedPresenters property
-     * @return a onlineMeetingPresenters
+     * @return a OnlineMeetingPresenters
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingPresenters getAllowedPresenters() {
-        return this.allowedPresenters;
+        return this.backingStore.get("allowedPresenters");
     }
     /**
      * The deserialization information for the current model
@@ -68,8 +48,8 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedForwarders", (n) -> { this.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders.class)); });
-        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
+        deserializerMap.put("allowedForwarders", (n) -> { this.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders::forValue)); });
+        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
         deserializerMap.put("isCopyToClipboardEnabled", (n) -> { this.setIsCopyToClipboardEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLobbyEnabled", (n) -> { this.setIsLobbyEnabled(n.getBooleanValue()); });
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
@@ -77,27 +57,27 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the isCopyToClipboardEnabled property value. The isCopyToClipboardEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCopyToClipboardEnabled() {
-        return this.isCopyToClipboardEnabled;
+        return this.backingStore.get("isCopyToClipboardEnabled");
     }
     /**
      * Gets the isLobbyEnabled property value. The isLobbyEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLobbyEnabled() {
-        return this.isLobbyEnabled;
+        return this.backingStore.get("isLobbyEnabled");
     }
     /**
      * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
-     * @return a lobbyBypassSettings
+     * @return a LobbyBypassSettings
      */
     @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {
-        return this.lobbyBypassSettings;
+        return this.backingStore.get("lobbyBypassSettings");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the allowedForwarders property.
      */
     public void setAllowedForwarders(@jakarta.annotation.Nullable final OnlineMeetingForwarders value) {
-        this.allowedForwarders = value;
+        this.backingStore.set("allowedForwarders", value);
     }
     /**
      * Sets the allowedPresenters property value. The allowedPresenters property
      * @param value Value to set for the allowedPresenters property.
      */
     public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
-        this.allowedPresenters = value;
+        this.backingStore.set("allowedPresenters", value);
     }
     /**
      * Sets the isCopyToClipboardEnabled property value. The isCopyToClipboardEnabled property
      * @param value Value to set for the isCopyToClipboardEnabled property.
      */
     public void setIsCopyToClipboardEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCopyToClipboardEnabled = value;
+        this.backingStore.set("isCopyToClipboardEnabled", value);
     }
     /**
      * Sets the isLobbyEnabled property value. The isLobbyEnabled property
      * @param value Value to set for the isLobbyEnabled property.
      */
     public void setIsLobbyEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLobbyEnabled = value;
+        this.backingStore.set("isLobbyEnabled", value);
     }
     /**
      * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
      * @param value Value to set for the lobbyBypassSettings property.
      */
     public void setLobbyBypassSettings(@jakarta.annotation.Nullable final LobbyBypassSettings value) {
-        this.lobbyBypassSettings = value;
+        this.backingStore.set("lobbyBypassSettings", value);
     }
 }

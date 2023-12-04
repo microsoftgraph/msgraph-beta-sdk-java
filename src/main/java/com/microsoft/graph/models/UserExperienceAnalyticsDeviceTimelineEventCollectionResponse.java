@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceTimelineEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsDeviceTimelineEvent> value;
-    /**
-     * Instantiates a new userExperienceAnalyticsDeviceTimelineEventCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceTimelineEventCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsDeviceTimelineEventCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class UserExperienceAnalyticsDeviceTimelineEventCollectionResponse extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceTimelineEventCollectionResponse
+     * @return a UserExperienceAnalyticsDeviceTimelineEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceTimelineEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class UserExperienceAnalyticsDeviceTimelineEventCollectionResponse extend
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsDeviceTimelineEvent
+     * @return a java.util.List<UserExperienceAnalyticsDeviceTimelineEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceTimelineEvent> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsDeviceTimelineEventCollectionResponse extend
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceTimelineEvent> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

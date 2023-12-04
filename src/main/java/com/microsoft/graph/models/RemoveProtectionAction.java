@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoveProtectionAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new removeProtectionAction and sets the default values.
+     * Instantiates a new RemoveProtectionAction and sets the default values.
      */
     public RemoveProtectionAction() {
         super();
@@ -18,7 +18,7 @@ public class RemoveProtectionAction extends InformationProtectionAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a removeProtectionAction
+     * @return a RemoveProtectionAction
      */
     @jakarta.annotation.Nonnull
     public static RemoveProtectionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

@@ -13,27 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /**
-     * A set of string key and string value pairs which provides additional information on the Troubleshooting event
-     */
-    private java.util.List<KeyValuePair> additionalInformation;
-    /**
-     * Id used for tracing the failure in the service.
-     */
-    private String correlationId;
-    /**
-     * Time when the event occurred .
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * Event Name corresponding to the Troubleshooting Event. It is an Optional field
-     */
-    private String eventName;
-    /**
-     * Object containing detailed information about the error and its remediation.
-     */
-    private DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
-    /**
-     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
      */
     public DeviceManagementTroubleshootingEvent() {
         super();
@@ -41,7 +21,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,19 +39,19 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the additionalInformation property value. A set of string key and string value pairs which provides additional information on the Troubleshooting event
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAdditionalInformation() {
-        return this.additionalInformation;
+        return this.backingStore.get("additionalInformation");
     }
     /**
      * Gets the correlationId property value. Id used for tracing the failure in the service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.backingStore.get("correlationId");
     }
     /**
      * Gets the eventDateTime property value. Time when the event occurred .
@@ -79,15 +59,15 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.backingStore.get("eventDateTime");
     }
     /**
      * Gets the eventName property value. Event Name corresponding to the Troubleshooting Event. It is an Optional field
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
-        return this.eventName;
+        return this.backingStore.get("eventName");
     }
     /**
      * The deserialization information for the current model
@@ -105,11 +85,11 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
-     * @return a deviceManagementTroubleshootingErrorDetails
+     * @return a DeviceManagementTroubleshootingErrorDetails
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTroubleshootingErrorDetails getTroubleshootingErrorDetails() {
-        return this.troubleshootingErrorDetails;
+        return this.backingStore.get("troubleshootingErrorDetails");
     }
     /**
      * Serializes information the current object
@@ -129,34 +109,34 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.additionalInformation = value;
+        this.backingStore.set("additionalInformation", value);
     }
     /**
      * Sets the correlationId property value. Id used for tracing the failure in the service.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.backingStore.set("correlationId", value);
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.backingStore.set("eventDateTime", value);
     }
     /**
      * Sets the eventName property value. Event Name corresponding to the Troubleshooting Event. It is an Optional field
      * @param value Value to set for the eventName property.
      */
     public void setEventName(@jakarta.annotation.Nullable final String value) {
-        this.eventName = value;
+        this.backingStore.set("eventName", value);
     }
     /**
      * Sets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
      * @param value Value to set for the troubleshootingErrorDetails property.
      */
     public void setTroubleshootingErrorDetails(@jakarta.annotation.Nullable final DeviceManagementTroubleshootingErrorDetails value) {
-        this.troubleshootingErrorDetails = value;
+        this.backingStore.set("troubleshootingErrorDetails", value);
     }
 }

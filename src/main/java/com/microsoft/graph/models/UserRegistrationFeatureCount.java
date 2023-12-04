@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsable {
+public class UserRegistrationFeatureCount implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The feature property
-     */
-    private AuthenticationMethodFeature feature;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of users.
-     */
-    private Long userCount;
-    /**
-     * Instantiates a new userRegistrationFeatureCount and sets the default values.
+     * Instantiates a new UserRegistrationFeatureCount and sets the default values.
      */
     public UserRegistrationFeatureCount() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userRegistrationFeatureCount
+     * @return a UserRegistrationFeatureCount
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationFeatureCount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +35,33 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         return new UserRegistrationFeatureCount();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a authenticationMethodFeature
+     * @return a AuthenticationMethodFeature
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodFeature getFeature() {
-        return this.feature;
+        return this.backingStore.get("feature");
     }
     /**
      * The deserialization information for the current model
@@ -64,26 +70,26 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(AuthenticationMethodFeature.class)); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(AuthenticationMethodFeature::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("userCount", (n) -> { this.setUserCount(n.getLongValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the userCount property value. Number of users.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUserCount() {
-        return this.userCount;
+        return this.backingStore.get("userCount");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final AuthenticationMethodFeature value) {
-        this.feature = value;
+        this.backingStore.set("feature", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the userCount property value. Number of users.
      * @param value Value to set for the userCount property.
      */
     public void setUserCount(@jakarta.annotation.Nullable final Long value) {
-        this.userCount = value;
+        this.backingStore.set("userCount", value);
     }
 }

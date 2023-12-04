@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
-     * HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
-     */
-    private String actionVerb;
-    /**
-     * The authenticationContext property
-     */
-    private AuthenticationContextClassReference authenticationContext;
-    /**
-     * The authenticationContextId property
-     */
-    private String authenticationContextId;
-    /**
-     * Description for the action. Supports $filter (eq).
-     */
-    private String description;
-    /**
-     * The isAuthenticationContextSettable property
-     */
-    private Boolean isAuthenticationContextSettable;
-    /**
-     * Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
-     */
-    private Boolean isPrivileged;
-    /**
-     * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
-     */
-    private String name;
-    /**
-     * The resourceScope property
-     */
-    private UnifiedRbacResourceScope resourceScope;
-    /**
-     * Not implemented.
-     */
-    private String resourceScopeId;
-    /**
-     * Instantiates a new unifiedRbacResourceAction and sets the default values.
+     * Instantiates a new UnifiedRbacResourceAction and sets the default values.
      */
     public UnifiedRbacResourceAction() {
         super();
@@ -53,7 +17,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRbacResourceAction
+     * @return a UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacResourceAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,35 +26,35 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionVerb property value. HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionVerb() {
-        return this.actionVerb;
+        return this.backingStore.get("actionVerb");
     }
     /**
      * Gets the authenticationContext property value. The authenticationContext property
-     * @return a authenticationContextClassReference
+     * @return a AuthenticationContextClassReference
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference getAuthenticationContext() {
-        return this.authenticationContext;
+        return this.backingStore.get("authenticationContext");
     }
     /**
      * Gets the authenticationContextId property value. The authenticationContextId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationContextId() {
-        return this.authenticationContextId;
+        return this.backingStore.get("authenticationContextId");
     }
     /**
      * Gets the description property value. Description for the action. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -112,43 +76,43 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAuthenticationContextSettable() {
-        return this.isAuthenticationContextSettable;
+        return this.backingStore.get("isAuthenticationContextSettable");
     }
     /**
      * Gets the isPrivileged property value. Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivileged() {
-        return this.isPrivileged;
+        return this.backingStore.get("isPrivileged");
     }
     /**
      * Gets the name property value. Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the resourceScope property value. The resourceScope property
-     * @return a unifiedRbacResourceScope
+     * @return a UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceScope getResourceScope() {
-        return this.resourceScope;
+        return this.backingStore.get("resourceScope");
     }
     /**
      * Gets the resourceScopeId property value. Not implemented.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceScopeId() {
-        return this.resourceScopeId;
+        return this.backingStore.get("resourceScopeId");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the actionVerb property.
      */
     public void setActionVerb(@jakarta.annotation.Nullable final String value) {
-        this.actionVerb = value;
+        this.backingStore.set("actionVerb", value);
     }
     /**
      * Sets the authenticationContext property value. The authenticationContext property
      * @param value Value to set for the authenticationContext property.
      */
     public void setAuthenticationContext(@jakarta.annotation.Nullable final AuthenticationContextClassReference value) {
-        this.authenticationContext = value;
+        this.backingStore.set("authenticationContext", value);
     }
     /**
      * Sets the authenticationContextId property value. The authenticationContextId property
      * @param value Value to set for the authenticationContextId property.
      */
     public void setAuthenticationContextId(@jakarta.annotation.Nullable final String value) {
-        this.authenticationContextId = value;
+        this.backingStore.set("authenticationContextId", value);
     }
     /**
      * Sets the description property value. Description for the action. Supports $filter (eq).
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
      * @param value Value to set for the isAuthenticationContextSettable property.
      */
     public void setIsAuthenticationContextSettable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAuthenticationContextSettable = value;
+        this.backingStore.set("isAuthenticationContextSettable", value);
     }
     /**
      * Sets the isPrivileged property value. Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      * @param value Value to set for the isPrivileged property.
      */
     public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPrivileged = value;
+        this.backingStore.set("isPrivileged", value);
     }
     /**
      * Sets the name property value. Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the resourceScope property value. The resourceScope property
      * @param value Value to set for the resourceScope property.
      */
     public void setResourceScope(@jakarta.annotation.Nullable final UnifiedRbacResourceScope value) {
-        this.resourceScope = value;
+        this.backingStore.set("resourceScope", value);
     }
     /**
      * Sets the resourceScopeId property value. Not implemented.
      * @param value Value to set for the resourceScopeId property.
      */
     public void setResourceScopeId(@jakarta.annotation.Nullable final String value) {
-        this.resourceScopeId = value;
+        this.backingStore.set("resourceScopeId", value);
     }
 }
