@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamRenamedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * The updated name of the team.
-     */
-    private String teamDisplayName;
-    /**
-     * Unique identifier of the team.
-     */
-    private String teamId;
-    /**
-     * Instantiates a new teamRenamedEventMessageDetail and sets the default values.
+     * Instantiates a new TeamRenamedEventMessageDetail and sets the default values.
      */
     public TeamRenamedEventMessageDetail() {
         super();
@@ -30,7 +18,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamRenamedEventMessageDetail
+     * @return a TeamRenamedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static TeamRenamedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,27 +39,27 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the teamDisplayName property value. The updated name of the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamDisplayName() {
-        return this.teamDisplayName;
+        return this.backingStore.get("teamDisplayName");
     }
     /**
      * Gets the teamId property value. Unique identifier of the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {
-        return this.teamId;
+        return this.backingStore.get("teamId");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the teamDisplayName property value. The updated name of the team.
      * @param value Value to set for the teamDisplayName property.
      */
     public void setTeamDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.teamDisplayName = value;
+        this.backingStore.set("teamDisplayName", value);
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.teamId = value;
+        this.backingStore.set("teamId", value);
     }
 }

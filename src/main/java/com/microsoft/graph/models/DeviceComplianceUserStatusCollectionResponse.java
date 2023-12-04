@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceUserStatusCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceComplianceUserStatus> value;
-    /**
-     * Instantiates a new deviceComplianceUserStatusCollectionResponse and sets the default values.
+     * Instantiates a new DeviceComplianceUserStatusCollectionResponse and sets the default values.
      */
     public DeviceComplianceUserStatusCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceComplianceUserStatusCollectionResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceUserStatusCollectionResponse
+     * @return a DeviceComplianceUserStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceUserStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceComplianceUserStatusCollectionResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceComplianceUserStatus
+     * @return a java.util.List<DeviceComplianceUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceComplianceUserStatusCollectionResponse extends BaseCollection
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

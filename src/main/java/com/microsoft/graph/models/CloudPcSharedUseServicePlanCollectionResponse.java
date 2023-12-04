@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CloudPcSharedUseServicePlan> value;
-    /**
-     * Instantiates a new cloudPcSharedUseServicePlanCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcSharedUseServicePlanCollectionResponse and sets the default values.
      */
     public CloudPcSharedUseServicePlanCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcSharedUseServicePlanCollectionResponse
+     * @return a CloudPcSharedUseServicePlanCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcSharedUseServicePlanCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcSharedUseServicePlan
+     * @return a java.util.List<CloudPcSharedUseServicePlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcSharedUseServicePlan> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Localized default string displayed in the combo box. The default value is empty.
-     */
-    private String defaultValue;
-    /**
-     * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
-     */
-    private Long maxLength;
-    /**
-     * Specifies whether a value must be specified for the parameter. The default value is false.
-     */
-    private Boolean required;
-    /**
-     * Localized strings listed in the drop-down list of the combo box. The default value is empty.
-     */
-    private java.util.List<String> suggestions;
-    /**
-     * Instantiates a new groupPolicyPresentationComboBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationComboBox and sets the default values.
      */
     public GroupPolicyPresentationComboBox() {
         super();
@@ -37,7 +21,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationComboBox
+     * @return a GroupPolicyPresentationComboBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationComboBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +30,11 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
     }
     /**
      * Gets the defaultValue property value. Localized default string displayed in the combo box. The default value is empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
-        return this.defaultValue;
+        return this.backingStore.get("defaultValue");
     }
     /**
      * The deserialization information for the current model
@@ -67,27 +51,27 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaxLength() {
-        return this.maxLength;
+        return this.backingStore.get("maxLength");
     }
     /**
      * Gets the required property value. Specifies whether a value must be specified for the parameter. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.backingStore.get("required");
     }
     /**
      * Gets the suggestions property value. Localized strings listed in the drop-down list of the combo box. The default value is empty.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSuggestions() {
-        return this.suggestions;
+        return this.backingStore.get("suggestions");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
-        this.defaultValue = value;
+        this.backingStore.set("defaultValue", value);
     }
     /**
      * Sets the maxLength property value. An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
      * @param value Value to set for the maxLength property.
      */
     public void setMaxLength(@jakarta.annotation.Nullable final Long value) {
-        this.maxLength = value;
+        this.backingStore.set("maxLength", value);
     }
     /**
      * Sets the required property value. Specifies whether a value must be specified for the parameter. The default value is false.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.backingStore.set("required", value);
     }
     /**
      * Sets the suggestions property value. Localized strings listed in the drop-down list of the combo box. The default value is empty.
      * @param value Value to set for the suggestions property.
      */
     public void setSuggestions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.suggestions = value;
+        this.backingStore.set("suggestions", value);
     }
 }

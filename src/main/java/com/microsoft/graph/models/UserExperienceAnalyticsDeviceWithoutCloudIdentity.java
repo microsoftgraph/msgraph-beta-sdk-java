@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity implements Parsable {
     /**
-     * Azure Active Directory Device Id
-     */
-    private String azureAdDeviceId;
-    /**
-     * The tenant attach device's name.
-     */
-    private String deviceName;
-    /**
-     * Instantiates a new userExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
      */
     public UserExperienceAnalyticsDeviceWithoutCloudIdentity() {
         super();
@@ -28,7 +20,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceWithoutCloudIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,19 +29,19 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     }
     /**
      * Gets the azureAdDeviceId property value. Azure Active Directory Device Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
-        return this.azureAdDeviceId;
+        return this.backingStore.get("azureAdDeviceId");
     }
     /**
      * Gets the deviceName property value. The tenant attach device's name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -77,13 +69,13 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param value Value to set for the azureAdDeviceId property.
      */
     public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.azureAdDeviceId = value;
+        this.backingStore.set("azureAdDeviceId", value);
     }
     /**
      * Sets the deviceName property value. The tenant attach device's name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
 }

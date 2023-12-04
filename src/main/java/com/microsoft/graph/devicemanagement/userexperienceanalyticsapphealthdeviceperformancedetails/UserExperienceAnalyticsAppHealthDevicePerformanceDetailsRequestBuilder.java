@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuil
     }
     /**
      * User experience analytics device performance details
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics device performance details
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDevicePerformanceDetails for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDevicePerformanceDetails body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetails post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDevicePerformanceDetails body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDevicePerformanceDetails for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDevicePerformanceDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetails post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDevicePerformanceDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue);
     }
     /**
      * User experience analytics device performance details
@@ -118,18 +118,9 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuil
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuil
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDevicePerformanceDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

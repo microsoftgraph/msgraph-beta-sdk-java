@@ -65,68 +65,68 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * Get a list of subjectRightsRequest objects and their properties. This API is available in the following national cloud deployments.
+     * @return a SubjectRightsRequestCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get() {
+    public SubjectRightsRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * @return a SubjectRightsRequestCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SubjectRightsRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubjectRightsRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubjectRightsRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a SubjectRightsRequest
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
+    public SubjectRightsRequest post(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
         return post(body, null);
     }
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a SubjectRightsRequest
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public SubjectRightsRequest post(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubjectRightsRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubjectRightsRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -137,7 +137,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -146,22 +146,13 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -173,7 +164,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new subjectRightsRequest object.
+     * Create a new subjectRightsRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -184,24 +175,16 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectRightsRequestsRequestBuilder
+     * @return a SubjectRightsRequestsRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -212,7 +195,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return new SubjectRightsRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of subjectRightsRequest objects and their properties.
+     * Get a list of subjectRightsRequest objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAnalytics extends Entity implements Parsable {
     /**
-     * The allTime property
-     */
-    private ItemActivityStat allTime;
-    /**
-     * The itemActivityStats property
-     */
-    private java.util.List<ItemActivityStat> itemActivityStats;
-    /**
-     * The lastSevenDays property
-     */
-    private ItemActivityStat lastSevenDays;
-    /**
-     * Instantiates a new itemAnalytics and sets the default values.
+     * Instantiates a new ItemAnalytics and sets the default values.
      */
     public ItemAnalytics() {
         super();
@@ -29,7 +17,7 @@ public class ItemAnalytics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemAnalytics
+     * @return a ItemAnalytics
      */
     @jakarta.annotation.Nonnull
     public static ItemAnalytics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,11 +26,11 @@ public class ItemAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the allTime property value. The allTime property
-     * @return a itemActivityStat
+     * @return a ItemActivityStat
      */
     @jakarta.annotation.Nullable
     public ItemActivityStat getAllTime() {
-        return this.allTime;
+        return this.backingStore.get("allTime");
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +46,19 @@ public class ItemAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the itemActivityStats property value. The itemActivityStats property
-     * @return a itemActivityStat
+     * @return a java.util.List<ItemActivityStat>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getItemActivityStats() {
-        return this.itemActivityStats;
+        return this.backingStore.get("itemActivityStats");
     }
     /**
      * Gets the lastSevenDays property value. The lastSevenDays property
-     * @return a itemActivityStat
+     * @return a ItemActivityStat
      */
     @jakarta.annotation.Nullable
     public ItemActivityStat getLastSevenDays() {
-        return this.lastSevenDays;
+        return this.backingStore.get("lastSevenDays");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the allTime property.
      */
     public void setAllTime(@jakarta.annotation.Nullable final ItemActivityStat value) {
-        this.allTime = value;
+        this.backingStore.set("allTime", value);
     }
     /**
      * Sets the itemActivityStats property value. The itemActivityStats property
      * @param value Value to set for the itemActivityStats property.
      */
     public void setItemActivityStats(@jakarta.annotation.Nullable final java.util.List<ItemActivityStat> value) {
-        this.itemActivityStats = value;
+        this.backingStore.set("itemActivityStats", value);
     }
     /**
      * Sets the lastSevenDays property value. The lastSevenDays property
      * @param value Value to set for the lastSevenDays property.
      */
     public void setLastSevenDays(@jakarta.annotation.Nullable final ItemActivityStat value) {
-        this.lastSevenDays = value;
+        this.backingStore.set("lastSevenDays", value);
     }
 }

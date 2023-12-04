@@ -13,35 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
-     * Distribution of Exchange Access State in Intune
-     */
-    private DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
-    /**
-     * Device operating system summary.
-     */
-    private DeviceOperatingSystemSummary deviceOperatingSystemSummary;
-    /**
-     * The number of devices enrolled in both MDM and EAS
-     */
-    private Integer dualEnrolledDeviceCount;
-    /**
-     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
-     */
-    private Integer enrolledDeviceCount;
-    /**
-     * Last modified date time of device overview
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Models and Manufactures meatadata for managed devices in the account
-     */
-    private ManagedDeviceModelsAndManufacturers managedDeviceModelsAndManufacturers;
-    /**
-     * The number of devices enrolled in MDM
-     */
-    private Integer mdmEnrolledCount;
-    /**
-     * Instantiates a new managedDeviceOverview and sets the default values.
+     * Instantiates a new ManagedDeviceOverview and sets the default values.
      */
     public ManagedDeviceOverview() {
         super();
@@ -49,7 +21,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceOverview
+     * @return a ManagedDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,35 +30,35 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
-     * @return a deviceExchangeAccessStateSummary
+     * @return a DeviceExchangeAccessStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
-        return this.deviceExchangeAccessStateSummary;
+        return this.backingStore.get("deviceExchangeAccessStateSummary");
     }
     /**
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
-     * @return a deviceOperatingSystemSummary
+     * @return a DeviceOperatingSystemSummary
      */
     @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
-        return this.deviceOperatingSystemSummary;
+        return this.backingStore.get("deviceOperatingSystemSummary");
     }
     /**
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
-        return this.dualEnrolledDeviceCount;
+        return this.backingStore.get("dualEnrolledDeviceCount");
     }
     /**
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
-        return this.enrolledDeviceCount;
+        return this.backingStore.get("enrolledDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -110,23 +82,23 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the managedDeviceModelsAndManufacturers property value. Models and Manufactures meatadata for managed devices in the account
-     * @return a managedDeviceModelsAndManufacturers
+     * @return a ManagedDeviceModelsAndManufacturers
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceModelsAndManufacturers getManagedDeviceModelsAndManufacturers() {
-        return this.managedDeviceModelsAndManufacturers;
+        return this.backingStore.get("managedDeviceModelsAndManufacturers");
     }
     /**
      * Gets the mdmEnrolledCount property value. The number of devices enrolled in MDM
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMdmEnrolledCount() {
-        return this.mdmEnrolledCount;
+        return this.backingStore.get("mdmEnrolledCount");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceExchangeAccessStateSummary property.
      */
     public void setDeviceExchangeAccessStateSummary(@jakarta.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
-        this.deviceExchangeAccessStateSummary = value;
+        this.backingStore.set("deviceExchangeAccessStateSummary", value);
     }
     /**
      * Sets the deviceOperatingSystemSummary property value. Device operating system summary.
      * @param value Value to set for the deviceOperatingSystemSummary property.
      */
     public void setDeviceOperatingSystemSummary(@jakarta.annotation.Nullable final DeviceOperatingSystemSummary value) {
-        this.deviceOperatingSystemSummary = value;
+        this.backingStore.set("deviceOperatingSystemSummary", value);
     }
     /**
      * Sets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
      * @param value Value to set for the dualEnrolledDeviceCount property.
      */
     public void setDualEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.dualEnrolledDeviceCount = value;
+        this.backingStore.set("dualEnrolledDeviceCount", value);
     }
     /**
      * Sets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      * @param value Value to set for the enrolledDeviceCount property.
      */
     public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.enrolledDeviceCount = value;
+        this.backingStore.set("enrolledDeviceCount", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date time of device overview
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the managedDeviceModelsAndManufacturers property value. Models and Manufactures meatadata for managed devices in the account
      * @param value Value to set for the managedDeviceModelsAndManufacturers property.
      */
     public void setManagedDeviceModelsAndManufacturers(@jakarta.annotation.Nullable final ManagedDeviceModelsAndManufacturers value) {
-        this.managedDeviceModelsAndManufacturers = value;
+        this.backingStore.set("managedDeviceModelsAndManufacturers", value);
     }
     /**
      * Sets the mdmEnrolledCount property value. The number of devices enrolled in MDM
      * @param value Value to set for the mdmEnrolledCount property.
      */
     public void setMdmEnrolledCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mdmEnrolledCount = value;
+        this.backingStore.set("mdmEnrolledCount", value);
     }
 }

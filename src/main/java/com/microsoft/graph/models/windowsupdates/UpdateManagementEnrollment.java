@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdateManagementEnrollment extends UpdatableAssetEnrollment implements Parsable {
     /**
-     * The updateCategory property
-     */
-    private UpdateCategory updateCategory;
-    /**
-     * Instantiates a new updateManagementEnrollment and sets the default values.
+     * Instantiates a new UpdateManagementEnrollment and sets the default values.
      */
     public UpdateManagementEnrollment() {
         super();
@@ -22,7 +18,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateManagementEnrollment
+     * @return a UpdateManagementEnrollment
      */
     @jakarta.annotation.Nonnull
     public static UpdateManagementEnrollment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,16 +32,16 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
+        deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(UpdateCategory::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the updateCategory property value. The updateCategory property
-     * @return a updateCategory
+     * @return a UpdateCategory
      */
     @jakarta.annotation.Nullable
     public UpdateCategory getUpdateCategory() {
-        return this.updateCategory;
+        return this.backingStore.get("updateCategory");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param value Value to set for the updateCategory property.
      */
     public void setUpdateCategory(@jakarta.annotation.Nullable final UpdateCategory value) {
-        this.updateCategory = value;
+        this.backingStore.set("updateCategory", value);
     }
 }

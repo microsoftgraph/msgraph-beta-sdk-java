@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DisableUserResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<DisableUserEntityIdentifier> identifier;
-    /**
-     * Instantiates a new disableUserResponseAction and sets the default values.
+     * Instantiates a new DisableUserResponseAction and sets the default values.
      */
     public DisableUserResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a disableUserResponseAction
+     * @return a DisableUserResponseAction
      */
     @jakarta.annotation.Nonnull
     public static DisableUserResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,16 +33,16 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DisableUserEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DisableUserEntityIdentifier::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a disableUserEntityIdentifier
+     * @return a EnumSet<DisableUserEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DisableUserEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.backingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<DisableUserEntityIdentifier> value) {
-        this.identifier = value;
+        this.backingStore.set("identifier", value);
     }
 }

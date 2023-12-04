@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomAction extends InformationProtectionAction implements Parsable {
     /**
-     * Name of the custom action.
-     */
-    private String name;
-    /**
-     * Properties, in key-value pair format, of the action.
-     */
-    private java.util.List<KeyValuePair> properties;
-    /**
-     * Instantiates a new customAction and sets the default values.
+     * Instantiates a new CustomAction and sets the default values.
      */
     public CustomAction() {
         super();
@@ -26,7 +18,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customAction
+     * @return a CustomAction
      */
     @jakarta.annotation.Nonnull
     public static CustomAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * Gets the name property value. Name of the custom action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the properties property value. Properties, in key-value pair format, of the action.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProperties() {
-        return this.properties;
+        return this.backingStore.get("properties");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the properties property value. Properties, in key-value pair format, of the action.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.properties = value;
+        this.backingStore.set("properties", value);
     }
 }

@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
-     * The category property
-     */
-    private ThreatCategory category;
-    /**
-     * The content type of threat assessment. Possible values are: mail, url, file.
-     */
-    private ThreatAssessmentContentType contentType;
-    /**
-     * The threat assessment request creator.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The expectedAssessment property
-     */
-    private ThreatExpectedAssessment expectedAssessment;
-    /**
-     * The source of the threat assessment request. Possible values are: user, administrator.
-     */
-    private ThreatAssessmentRequestSource requestSource;
-    /**
-     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     */
-    private java.util.List<ThreatAssessmentResult> results;
-    /**
-     * The assessment process status. Possible values are: pending, completed.
-     */
-    private ThreatAssessmentStatus status;
-    /**
-     * Instantiates a new threatAssessmentRequest and sets the default values.
+     * Instantiates a new ThreatAssessmentRequest and sets the default values.
      */
     public ThreatAssessmentRequest() {
         super();
@@ -50,7 +18,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatAssessmentRequest
+     * @return a ThreatAssessmentRequest
      */
     @jakarta.annotation.Nonnull
     public static ThreatAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,27 +37,27 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a threatCategory
+     * @return a ThreatCategory
      */
     @jakarta.annotation.Nullable
     public ThreatCategory getCategory() {
-        return this.category;
+        return this.backingStore.get("category");
     }
     /**
      * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
-     * @return a threatAssessmentContentType
+     * @return a ThreatAssessmentContentType
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentContentType getContentType() {
-        return this.contentType;
+        return this.backingStore.get("contentType");
     }
     /**
      * Gets the createdBy property value. The threat assessment request creator.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -97,15 +65,15 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the expectedAssessment property value. The expectedAssessment property
-     * @return a threatExpectedAssessment
+     * @return a ThreatExpectedAssessment
      */
     @jakarta.annotation.Nullable
     public ThreatExpectedAssessment getExpectedAssessment() {
-        return this.expectedAssessment;
+        return this.backingStore.get("expectedAssessment");
     }
     /**
      * The deserialization information for the current model
@@ -114,39 +82,39 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory.class)); });
-        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory::forValue)); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatAssessmentContentType::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("expectedAssessment", (n) -> { this.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment.class)); });
-        deserializerMap.put("requestSource", (n) -> { this.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource.class)); });
+        deserializerMap.put("expectedAssessment", (n) -> { this.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment::forValue)); });
+        deserializerMap.put("requestSource", (n) -> { this.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource::forValue)); });
         deserializerMap.put("results", (n) -> { this.setResults(n.getCollectionOfObjectValues(ThreatAssessmentResult::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ThreatAssessmentStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ThreatAssessmentStatus::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
-     * @return a threatAssessmentRequestSource
+     * @return a ThreatAssessmentRequestSource
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequestSource getRequestSource() {
-        return this.requestSource;
+        return this.backingStore.get("requestSource");
     }
     /**
      * Gets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a threatAssessmentResult
+     * @return a java.util.List<ThreatAssessmentResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentResult> getResults() {
-        return this.results;
+        return this.backingStore.get("results");
     }
     /**
      * Gets the status property value. The assessment process status. Possible values are: pending, completed.
-     * @return a threatAssessmentStatus
+     * @return a ThreatAssessmentStatus
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -169,55 +137,55 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ThreatCategory value) {
-        this.category = value;
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final ThreatAssessmentContentType value) {
-        this.contentType = value;
+        this.backingStore.set("contentType", value);
     }
     /**
      * Sets the createdBy property value. The threat assessment request creator.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the expectedAssessment property value. The expectedAssessment property
      * @param value Value to set for the expectedAssessment property.
      */
     public void setExpectedAssessment(@jakarta.annotation.Nullable final ThreatExpectedAssessment value) {
-        this.expectedAssessment = value;
+        this.backingStore.set("expectedAssessment", value);
     }
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
      * @param value Value to set for the requestSource property.
      */
     public void setRequestSource(@jakarta.annotation.Nullable final ThreatAssessmentRequestSource value) {
-        this.requestSource = value;
+        this.backingStore.set("requestSource", value);
     }
     /**
      * Sets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param value Value to set for the results property.
      */
     public void setResults(@jakarta.annotation.Nullable final java.util.List<ThreatAssessmentResult> value) {
-        this.results = value;
+        this.backingStore.set("results", value);
     }
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ThreatAssessmentStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

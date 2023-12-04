@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreWebApp extends AndroidManagedStoreApp implements Parsable {
     /**
-     * Instantiates a new androidManagedStoreWebApp and sets the default values.
+     * Instantiates a new AndroidManagedStoreWebApp and sets the default values.
      */
     public AndroidManagedStoreWebApp() {
         super();
@@ -21,7 +21,7 @@ public class AndroidManagedStoreWebApp extends AndroidManagedStoreApp implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreWebApp
+     * @return a AndroidManagedStoreWebApp
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreWebApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

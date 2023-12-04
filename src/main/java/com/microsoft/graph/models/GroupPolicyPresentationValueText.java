@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValueText extends GroupPolicyPresentationValue implements Parsable {
     /**
-     * A string value for the associated presentation.
-     */
-    private String value;
-    /**
-     * Instantiates a new groupPolicyPresentationValueText and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueText and sets the default values.
      */
     public GroupPolicyPresentationValueText() {
         super();
@@ -24,7 +20,7 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueText
+     * @return a GroupPolicyPresentationValueText
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueText createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
     }
     /**
      * Gets the value property value. A string value for the associated presentation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSiteLocation implements Parsable {
     /**
-     * Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
-     */
-    private java.util.List<String> urls;
-    /**
-     * Instantiates a new subjectRightsRequestEnumeratedSiteLocation and sets the default values.
+     * Instantiates a new SubjectRightsRequestEnumeratedSiteLocation and sets the default values.
      */
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
@@ -22,7 +18,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequestEnumeratedSiteLocation
+     * @return a SubjectRightsRequestEnumeratedSiteLocation
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestEnumeratedSiteLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     }
     /**
      * Gets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUrls() {
-        return this.urls;
+        return this.backingStore.get("urls");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param value Value to set for the urls property.
      */
     public void setUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.urls = value;
+        this.backingStore.set("urls", value);
     }
 }

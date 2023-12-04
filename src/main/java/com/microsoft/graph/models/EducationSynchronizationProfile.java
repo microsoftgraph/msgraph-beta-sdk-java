@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationProfile extends Entity implements Parsable {
     /**
-     * The dataProvider property
-     */
-    private EducationSynchronizationDataProvider dataProvider;
-    /**
-     * Name of the configuration profile for syncing identities.
-     */
-    private String displayName;
-    /**
-     * All errors associated with this synchronization profile.
-     */
-    private java.util.List<EducationSynchronizationError> errors;
-    /**
-     * The date the profile should be considered expired and cease syncing. Provide the date in YYYY-MM-DD format, following ISO 8601. Maximum value is 18 months from profile creation.  (optional)
-     */
-    private LocalDate expirationDate;
-    /**
-     * Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
-     */
-    private Boolean handleSpecialCharacterConstraint;
-    /**
-     * The identitySynchronizationConfiguration property
-     */
-    private EducationIdentitySynchronizationConfiguration identitySynchronizationConfiguration;
-    /**
-     * License setup configuration.
-     */
-    private java.util.List<EducationSynchronizationLicenseAssignment> licensesToAssign;
-    /**
-     * The synchronization status.
-     */
-    private EducationSynchronizationProfileStatus profileStatus;
-    /**
-     * The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
-     */
-    private EducationSynchronizationProfileState state;
-    /**
-     * Instantiates a new educationSynchronizationProfile and sets the default values.
+     * Instantiates a new EducationSynchronizationProfile and sets the default values.
      */
     public EducationSynchronizationProfile() {
         super();
@@ -54,7 +18,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationProfile
+     * @return a EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,27 +27,27 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the dataProvider property value. The dataProvider property
-     * @return a educationSynchronizationDataProvider
+     * @return a EducationSynchronizationDataProvider
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationDataProvider getDataProvider() {
-        return this.dataProvider;
+        return this.backingStore.get("dataProvider");
     }
     /**
      * Gets the displayName property value. Name of the configuration profile for syncing identities.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the errors property value. All errors associated with this synchronization profile.
-     * @return a educationSynchronizationError
+     * @return a java.util.List<EducationSynchronizationError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationError> getErrors() {
-        return this.errors;
+        return this.backingStore.get("errors");
     }
     /**
      * Gets the expirationDate property value. The date the profile should be considered expired and cease syncing. Provide the date in YYYY-MM-DD format, following ISO 8601. Maximum value is 18 months from profile creation.  (optional)
@@ -91,7 +55,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public LocalDate getExpirationDate() {
-        return this.expirationDate;
+        return this.backingStore.get("expirationDate");
     }
     /**
      * The deserialization information for the current model
@@ -108,48 +72,48 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
         deserializerMap.put("identitySynchronizationConfiguration", (n) -> { this.setIdentitySynchronizationConfiguration(n.getObjectValue(EducationIdentitySynchronizationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("licensesToAssign", (n) -> { this.setLicensesToAssign(n.getCollectionOfObjectValues(EducationSynchronizationLicenseAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("profileStatus", (n) -> { this.setProfileStatus(n.getObjectValue(EducationSynchronizationProfileStatus::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(EducationSynchronizationProfileState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(EducationSynchronizationProfileState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the handleSpecialCharacterConstraint property value. Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHandleSpecialCharacterConstraint() {
-        return this.handleSpecialCharacterConstraint;
+        return this.backingStore.get("handleSpecialCharacterConstraint");
     }
     /**
      * Gets the identitySynchronizationConfiguration property value. The identitySynchronizationConfiguration property
-     * @return a educationIdentitySynchronizationConfiguration
+     * @return a EducationIdentitySynchronizationConfiguration
      */
     @jakarta.annotation.Nullable
     public EducationIdentitySynchronizationConfiguration getIdentitySynchronizationConfiguration() {
-        return this.identitySynchronizationConfiguration;
+        return this.backingStore.get("identitySynchronizationConfiguration");
     }
     /**
      * Gets the licensesToAssign property value. License setup configuration.
-     * @return a educationSynchronizationLicenseAssignment
+     * @return a java.util.List<EducationSynchronizationLicenseAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationLicenseAssignment> getLicensesToAssign() {
-        return this.licensesToAssign;
+        return this.backingStore.get("licensesToAssign");
     }
     /**
      * Gets the profileStatus property value. The synchronization status.
-     * @return a educationSynchronizationProfileStatus
+     * @return a EducationSynchronizationProfileStatus
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus getProfileStatus() {
-        return this.profileStatus;
+        return this.backingStore.get("profileStatus");
     }
     /**
      * Gets the state property value. The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
-     * @return a educationSynchronizationProfileState
+     * @return a EducationSynchronizationProfileState
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the dataProvider property.
      */
     public void setDataProvider(@jakarta.annotation.Nullable final EducationSynchronizationDataProvider value) {
-        this.dataProvider = value;
+        this.backingStore.set("dataProvider", value);
     }
     /**
      * Sets the displayName property value. Name of the configuration profile for syncing identities.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the errors property value. All errors associated with this synchronization profile.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationError> value) {
-        this.errors = value;
+        this.backingStore.set("errors", value);
     }
     /**
      * Sets the expirationDate property value. The date the profile should be considered expired and cease syncing. Provide the date in YYYY-MM-DD format, following ISO 8601. Maximum value is 18 months from profile creation.  (optional)
      * @param value Value to set for the expirationDate property.
      */
     public void setExpirationDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.expirationDate = value;
+        this.backingStore.set("expirationDate", value);
     }
     /**
      * Sets the handleSpecialCharacterConstraint property value. Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
      * @param value Value to set for the handleSpecialCharacterConstraint property.
      */
     public void setHandleSpecialCharacterConstraint(@jakarta.annotation.Nullable final Boolean value) {
-        this.handleSpecialCharacterConstraint = value;
+        this.backingStore.set("handleSpecialCharacterConstraint", value);
     }
     /**
      * Sets the identitySynchronizationConfiguration property value. The identitySynchronizationConfiguration property
      * @param value Value to set for the identitySynchronizationConfiguration property.
      */
     public void setIdentitySynchronizationConfiguration(@jakarta.annotation.Nullable final EducationIdentitySynchronizationConfiguration value) {
-        this.identitySynchronizationConfiguration = value;
+        this.backingStore.set("identitySynchronizationConfiguration", value);
     }
     /**
      * Sets the licensesToAssign property value. License setup configuration.
      * @param value Value to set for the licensesToAssign property.
      */
     public void setLicensesToAssign(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationLicenseAssignment> value) {
-        this.licensesToAssign = value;
+        this.backingStore.set("licensesToAssign", value);
     }
     /**
      * Sets the profileStatus property value. The synchronization status.
      * @param value Value to set for the profileStatus property.
      */
     public void setProfileStatus(@jakarta.annotation.Nullable final EducationSynchronizationProfileStatus value) {
-        this.profileStatus = value;
+        this.backingStore.set("profileStatus", value);
     }
     /**
      * Sets the state property value. The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final EducationSynchronizationProfileState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

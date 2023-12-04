@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
+public class UserRegistrationCount implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Provides the registration count for your tenant.
-     */
-    private Long registrationCount;
-    /**
-     * The registrationStatus property
-     */
-    private RegistrationStatusType registrationStatus;
-    /**
-     * Instantiates a new userRegistrationCount and sets the default values.
+     * Instantiates a new UserRegistrationCount and sets the default values.
      */
     public UserRegistrationCount() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userRegistrationCount
+     * @return a UserRegistrationCount
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationCount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,25 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
         return new UserRegistrationCount();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -58,32 +64,32 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("registrationCount", (n) -> { this.setRegistrationCount(n.getLongValue()); });
-        deserializerMap.put("registrationStatus", (n) -> { this.setRegistrationStatus(n.getEnumValue(RegistrationStatusType.class)); });
+        deserializerMap.put("registrationStatus", (n) -> { this.setRegistrationStatus(n.getEnumValue(RegistrationStatusType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the registrationCount property value. Provides the registration count for your tenant.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRegistrationCount() {
-        return this.registrationCount;
+        return this.backingStore.get("registrationCount");
     }
     /**
      * Gets the registrationStatus property value. The registrationStatus property
-     * @return a registrationStatusType
+     * @return a RegistrationStatusType
      */
     @jakarta.annotation.Nullable
     public RegistrationStatusType getRegistrationStatus() {
-        return this.registrationStatus;
+        return this.backingStore.get("registrationStatus");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the registrationCount property value. Provides the registration count for your tenant.
      * @param value Value to set for the registrationCount property.
      */
     public void setRegistrationCount(@jakarta.annotation.Nullable final Long value) {
-        this.registrationCount = value;
+        this.backingStore.set("registrationCount", value);
     }
     /**
      * Sets the registrationStatus property value. The registrationStatus property
      * @param value Value to set for the registrationStatus property.
      */
     public void setRegistrationStatus(@jakarta.annotation.Nullable final RegistrationStatusType value) {
-        this.registrationStatus = value;
+        this.backingStore.set("registrationStatus", value);
     }
 }

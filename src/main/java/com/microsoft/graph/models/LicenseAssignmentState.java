@@ -4,55 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
+public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Indicates whether the license is directly-assigned or inherited from a group. If directly-assigned, this field is null; if inherited through a group membership, this field contains the ID of the group. Read-Only.
-     */
-    private String assignedByGroup;
-    /**
-     * The service plans that are disabled in this assignment. Read-Only.
-     */
-    private java.util.List<UUID> disabledPlans;
-    /**
-     * License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors, see here.
-     */
-    private String error;
-    /**
-     * The timestamp when the state of the license assignment was last updated.
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier for the SKU. Read-Only.
-     */
-    private UUID skuId;
-    /**
-     * Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
-     */
-    private String state;
-    /**
-     * Instantiates a new licenseAssignmentState and sets the default values.
+     * Instantiates a new LicenseAssignmentState and sets the default values.
      */
     public LicenseAssignmentState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a licenseAssignmentState
+     * @return a LicenseAssignmentState
      */
     @jakarta.annotation.Nonnull
     public static LicenseAssignmentState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,36 +37,49 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return new LicenseAssignmentState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedByGroup property value. Indicates whether the license is directly-assigned or inherited from a group. If directly-assigned, this field is null; if inherited through a group membership, this field contains the ID of the group. Read-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedByGroup() {
-        return this.assignedByGroup;
+        return this.backingStore.get("assignedByGroup");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
-        return this.disabledPlans;
+        return this.backingStore.get("disabledPlans");
     }
     /**
      * Gets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors, see here.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -113,15 +103,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the skuId property value. The unique identifier for the SKU. Read-Only.
@@ -129,15 +119,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
-        return this.skuId;
+        return this.backingStore.get("skuId");
     }
     /**
      * Gets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -155,59 +145,67 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignedByGroup property value. Indicates whether the license is directly-assigned or inherited from a group. If directly-assigned, this field is null; if inherited through a group membership, this field contains the ID of the group. Read-Only.
      * @param value Value to set for the assignedByGroup property.
      */
     public void setAssignedByGroup(@jakarta.annotation.Nullable final String value) {
-        this.assignedByGroup = value;
+        this.backingStore.set("assignedByGroup", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
-        this.disabledPlans = value;
+        this.backingStore.set("disabledPlans", value);
     }
     /**
      * Sets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors, see here.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the skuId property value. The unique identifier for the SKU. Read-Only.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
-        this.skuId = value;
+        this.backingStore.set("skuId", value);
     }
     /**
      * Sets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

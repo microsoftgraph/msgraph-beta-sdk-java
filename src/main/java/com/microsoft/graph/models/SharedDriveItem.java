@@ -9,39 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedDriveItem extends BaseItem implements Parsable {
     /**
-     * Used to access the underlying driveItem
-     */
-    private DriveItem driveItem;
-    /**
-     * All driveItems contained in the sharing root. This collection cannot be enumerated.
-     */
-    private java.util.List<DriveItem> items;
-    /**
-     * Used to access the underlying list
-     */
-    private List list;
-    /**
-     * Used to access the underlying listItem
-     */
-    private ListItem listItem;
-    /**
-     * Information about the owner of the shared item being referenced.
-     */
-    private IdentitySet owner;
-    /**
-     * Used to access the permission representing the underlying sharing link
-     */
-    private Permission permission;
-    /**
-     * The root property
-     */
-    private DriveItem root;
-    /**
-     * Used to access the underlying site
-     */
-    private Site site;
-    /**
-     * Instantiates a new sharedDriveItem and sets the default values.
+     * Instantiates a new SharedDriveItem and sets the default values.
      */
     public SharedDriveItem() {
         super();
@@ -50,7 +18,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedDriveItem
+     * @return a SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public static SharedDriveItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +27,11 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the driveItem property value. Used to access the underlying driveItem
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this.driveItem;
+        return this.backingStore.get("driveItem");
     }
     /**
      * The deserialization information for the current model
@@ -84,59 +52,59 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getItems() {
-        return this.items;
+        return this.backingStore.get("items");
     }
     /**
      * Gets the list property value. Used to access the underlying list
-     * @return a list
+     * @return a List
      */
     @jakarta.annotation.Nullable
     public List getList() {
-        return this.list;
+        return this.backingStore.get("list");
     }
     /**
      * Gets the listItem property value. Used to access the underlying listItem
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nullable
     public ListItem getListItem() {
-        return this.listItem;
+        return this.backingStore.get("listItem");
     }
     /**
      * Gets the owner property value. Information about the owner of the shared item being referenced.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOwner() {
-        return this.owner;
+        return this.backingStore.get("owner");
     }
     /**
      * Gets the permission property value. Used to access the permission representing the underlying sharing link
-     * @return a permission
+     * @return a Permission
      */
     @jakarta.annotation.Nullable
     public Permission getPermission() {
-        return this.permission;
+        return this.backingStore.get("permission");
     }
     /**
      * Gets the root property value. The root property
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getRoot() {
-        return this.root;
+        return this.backingStore.get("root");
     }
     /**
      * Gets the site property value. Used to access the underlying site
-     * @return a site
+     * @return a Site
      */
     @jakarta.annotation.Nullable
     public Site getSite() {
-        return this.site;
+        return this.backingStore.get("site");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
-        this.driveItem = value;
+        this.backingStore.set("driveItem", value);
     }
     /**
      * Sets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
-        this.items = value;
+        this.backingStore.set("items", value);
     }
     /**
      * Sets the list property value. Used to access the underlying list
      * @param value Value to set for the list property.
      */
     public void setList(@jakarta.annotation.Nullable final List value) {
-        this.list = value;
+        this.backingStore.set("list", value);
     }
     /**
      * Sets the listItem property value. Used to access the underlying listItem
      * @param value Value to set for the listItem property.
      */
     public void setListItem(@jakarta.annotation.Nullable final ListItem value) {
-        this.listItem = value;
+        this.backingStore.set("listItem", value);
     }
     /**
      * Sets the owner property value. Information about the owner of the shared item being referenced.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.owner = value;
+        this.backingStore.set("owner", value);
     }
     /**
      * Sets the permission property value. Used to access the permission representing the underlying sharing link
      * @param value Value to set for the permission property.
      */
     public void setPermission(@jakarta.annotation.Nullable final Permission value) {
-        this.permission = value;
+        this.backingStore.set("permission", value);
     }
     /**
      * Sets the root property value. The root property
      * @param value Value to set for the root property.
      */
     public void setRoot(@jakarta.annotation.Nullable final DriveItem value) {
-        this.root = value;
+        this.backingStore.set("root", value);
     }
     /**
      * Sets the site property value. Used to access the underlying site
      * @param value Value to set for the site property.
      */
     public void setSite(@jakarta.annotation.Nullable final Site value) {
-        this.site = value;
+        this.backingStore.set("site", value);
     }
 }

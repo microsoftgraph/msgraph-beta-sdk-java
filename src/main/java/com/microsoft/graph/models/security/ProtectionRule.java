@@ -11,31 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectionRule extends Entity implements Parsable {
     /**
-     * The createdBy property
-     */
-    private String createdBy;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The isEnabled property
-     */
-    private Boolean isEnabled;
-    /**
-     * The lastModifiedBy property
-     */
-    private String lastModifiedBy;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Instantiates a new protectionRule and sets the default values.
+     * Instantiates a new ProtectionRule and sets the default values.
      */
     public ProtectionRule() {
         super();
@@ -43,7 +19,7 @@ public class ProtectionRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectionRule
+     * @return a ProtectionRule
      */
     @jakarta.annotation.Nonnull
     public static ProtectionRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +35,11 @@ public class ProtectionRule extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -71,15 +47,15 @@ public class ProtectionRule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -98,19 +74,19 @@ public class ProtectionRule extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. The isEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -118,7 +94,7 @@ public class ProtectionRule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -139,41 +115,41 @@ public class ProtectionRule extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the isEnabled property value. The isEnabled property
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
 }

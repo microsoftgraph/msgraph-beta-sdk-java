@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTemplateInsightsDefinition extends Entity implements Parsable {
     /**
-     * Setting insights in a template
-     */
-    private java.util.List<DeviceManagementSettingInsightsDefinition> settingInsights;
-    /**
-     * Instantiates a new deviceManagementTemplateInsightsDefinition and sets the default values.
+     * Instantiates a new DeviceManagementTemplateInsightsDefinition and sets the default values.
      */
     public DeviceManagementTemplateInsightsDefinition() {
         super();
@@ -24,7 +20,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplateInsightsDefinition
+     * @return a DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplateInsightsDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +39,11 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
     }
     /**
      * Gets the settingInsights property value. Setting insights in a template
-     * @return a deviceManagementSettingInsightsDefinition
+     * @return a java.util.List<DeviceManagementSettingInsightsDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInsightsDefinition> getSettingInsights() {
-        return this.settingInsights;
+        return this.backingStore.get("settingInsights");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * @param value Value to set for the settingInsights property.
      */
     public void setSettingInsights(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInsightsDefinition> value) {
-        this.settingInsights = value;
+        this.backingStore.set("settingInsights", value);
     }
 }

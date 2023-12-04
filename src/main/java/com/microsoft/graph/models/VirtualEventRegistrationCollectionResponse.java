@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<VirtualEventRegistration> value;
-    /**
-     * Instantiates a new virtualEventRegistrationCollectionResponse and sets the default values.
+     * Instantiates a new VirtualEventRegistrationCollectionResponse and sets the default values.
      */
     public VirtualEventRegistrationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventRegistrationCollectionResponse
+     * @return a VirtualEventRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a virtualEventRegistration
+     * @return a java.util.List<VirtualEventRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistration> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class VirtualEventRegistrationCollectionResponse extends BaseCollectionPa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistration> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

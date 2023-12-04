@@ -13,55 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelSite extends Entity implements Parsable {
     /**
-     * The site's description (optional)
-     */
-    private String description;
-    /**
-     * The display name for the site. This property is required when a site is created.
-     */
-    private String displayName;
-    /**
-     * The site's Internal Network Access Probe URL
-     */
-    private String internalNetworkProbeUrl;
-    /**
-     * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
-     */
-    private MicrosoftTunnelConfiguration microsoftTunnelConfiguration;
-    /**
-     * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
-     */
-    private java.util.List<MicrosoftTunnelServer> microsoftTunnelServers;
-    /**
-     * The site's public domain name or IP address
-     */
-    private String publicAddress;
-    /**
-     * List of Scope Tags for this Entity instance
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * The site's automatic upgrade setting. True for automatic upgrades, false for manual control
-     */
-    private Boolean upgradeAutomatically;
-    /**
-     * The site provides the state of when an upgrade is available
-     */
-    private Boolean upgradeAvailable;
-    /**
-     * The site's upgrade window end time of day
-     */
-    private LocalTime upgradeWindowEndTime;
-    /**
-     * The site's upgrade window start time of day
-     */
-    private LocalTime upgradeWindowStartTime;
-    /**
-     * The site's timezone represented as a minute offset from UTC
-     */
-    private Integer upgradeWindowUtcOffsetInMinutes;
-    /**
-     * Instantiates a new microsoftTunnelSite and sets the default values.
+     * Instantiates a new MicrosoftTunnelSite and sets the default values.
      */
     public MicrosoftTunnelSite() {
         super();
@@ -69,7 +21,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelSite
+     * @return a MicrosoftTunnelSite
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,19 +30,19 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The site's description (optional)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the site. This property is required when a site is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -115,59 +67,59 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalNetworkProbeUrl() {
-        return this.internalNetworkProbeUrl;
+        return this.backingStore.get("internalNetworkProbeUrl");
     }
     /**
      * Gets the microsoftTunnelConfiguration property value. The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
-     * @return a microsoftTunnelConfiguration
+     * @return a MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelConfiguration getMicrosoftTunnelConfiguration() {
-        return this.microsoftTunnelConfiguration;
+        return this.backingStore.get("microsoftTunnelConfiguration");
     }
     /**
      * Gets the microsoftTunnelServers property value. A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
-     * @return a microsoftTunnelServer
+     * @return a java.util.List<MicrosoftTunnelServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServer> getMicrosoftTunnelServers() {
-        return this.microsoftTunnelServers;
+        return this.backingStore.get("microsoftTunnelServers");
     }
     /**
      * Gets the publicAddress property value. The site's public domain name or IP address
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicAddress() {
-        return this.publicAddress;
+        return this.backingStore.get("publicAddress");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUpgradeAutomatically() {
-        return this.upgradeAutomatically;
+        return this.backingStore.get("upgradeAutomatically");
     }
     /**
      * Gets the upgradeAvailable property value. The site provides the state of when an upgrade is available
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUpgradeAvailable() {
-        return this.upgradeAvailable;
+        return this.backingStore.get("upgradeAvailable");
     }
     /**
      * Gets the upgradeWindowEndTime property value. The site's upgrade window end time of day
@@ -175,7 +127,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getUpgradeWindowEndTime() {
-        return this.upgradeWindowEndTime;
+        return this.backingStore.get("upgradeWindowEndTime");
     }
     /**
      * Gets the upgradeWindowStartTime property value. The site's upgrade window start time of day
@@ -183,15 +135,15 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getUpgradeWindowStartTime() {
-        return this.upgradeWindowStartTime;
+        return this.backingStore.get("upgradeWindowStartTime");
     }
     /**
      * Gets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUpgradeWindowUtcOffsetInMinutes() {
-        return this.upgradeWindowUtcOffsetInMinutes;
+        return this.backingStore.get("upgradeWindowUtcOffsetInMinutes");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the site. This property is required when a site is created.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
      * @param value Value to set for the internalNetworkProbeUrl property.
      */
     public void setInternalNetworkProbeUrl(@jakarta.annotation.Nullable final String value) {
-        this.internalNetworkProbeUrl = value;
+        this.backingStore.set("internalNetworkProbeUrl", value);
     }
     /**
      * Sets the microsoftTunnelConfiguration property value. The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
      * @param value Value to set for the microsoftTunnelConfiguration property.
      */
     public void setMicrosoftTunnelConfiguration(@jakarta.annotation.Nullable final MicrosoftTunnelConfiguration value) {
-        this.microsoftTunnelConfiguration = value;
+        this.backingStore.set("microsoftTunnelConfiguration", value);
     }
     /**
      * Sets the microsoftTunnelServers property value. A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      * @param value Value to set for the microsoftTunnelServers property.
      */
     public void setMicrosoftTunnelServers(@jakarta.annotation.Nullable final java.util.List<MicrosoftTunnelServer> value) {
-        this.microsoftTunnelServers = value;
+        this.backingStore.set("microsoftTunnelServers", value);
     }
     /**
      * Sets the publicAddress property value. The site's public domain name or IP address
      * @param value Value to set for the publicAddress property.
      */
     public void setPublicAddress(@jakarta.annotation.Nullable final String value) {
-        this.publicAddress = value;
+        this.backingStore.set("publicAddress", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
      * @param value Value to set for the upgradeAutomatically property.
      */
     public void setUpgradeAutomatically(@jakarta.annotation.Nullable final Boolean value) {
-        this.upgradeAutomatically = value;
+        this.backingStore.set("upgradeAutomatically", value);
     }
     /**
      * Sets the upgradeAvailable property value. The site provides the state of when an upgrade is available
      * @param value Value to set for the upgradeAvailable property.
      */
     public void setUpgradeAvailable(@jakarta.annotation.Nullable final Boolean value) {
-        this.upgradeAvailable = value;
+        this.backingStore.set("upgradeAvailable", value);
     }
     /**
      * Sets the upgradeWindowEndTime property value. The site's upgrade window end time of day
      * @param value Value to set for the upgradeWindowEndTime property.
      */
     public void setUpgradeWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.upgradeWindowEndTime = value;
+        this.backingStore.set("upgradeWindowEndTime", value);
     }
     /**
      * Sets the upgradeWindowStartTime property value. The site's upgrade window start time of day
      * @param value Value to set for the upgradeWindowStartTime property.
      */
     public void setUpgradeWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.upgradeWindowStartTime = value;
+        this.backingStore.set("upgradeWindowStartTime", value);
     }
     /**
      * Sets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
      * @param value Value to set for the upgradeWindowUtcOffsetInMinutes property.
      */
     public void setUpgradeWindowUtcOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.upgradeWindowUtcOffsetInMinutes = value;
+        this.backingStore.set("upgradeWindowUtcOffsetInMinutes", value);
     }
 }

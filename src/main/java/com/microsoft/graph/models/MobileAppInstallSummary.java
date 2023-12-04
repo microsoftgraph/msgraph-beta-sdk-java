@@ -12,47 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppInstallSummary extends Entity implements Parsable {
     /**
-     * Number of Devices that have failed to install this app.
-     */
-    private Integer failedDeviceCount;
-    /**
-     * Number of Users that have 1 or more device that failed to install this app.
-     */
-    private Integer failedUserCount;
-    /**
-     * Number of Devices that have successfully installed this app.
-     */
-    private Integer installedDeviceCount;
-    /**
-     * Number of Users whose devices have all succeeded to install this app.
-     */
-    private Integer installedUserCount;
-    /**
-     * Number of Devices that are not applicable for this app.
-     */
-    private Integer notApplicableDeviceCount;
-    /**
-     * Number of Users whose devices were all not applicable for this app.
-     */
-    private Integer notApplicableUserCount;
-    /**
-     * Number of Devices that does not have this app installed.
-     */
-    private Integer notInstalledDeviceCount;
-    /**
-     * Number of Users that have 1 or more devices that did not install this app.
-     */
-    private Integer notInstalledUserCount;
-    /**
-     * Number of Devices that have been notified to install this app.
-     */
-    private Integer pendingInstallDeviceCount;
-    /**
-     * Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
-     */
-    private Integer pendingInstallUserCount;
-    /**
-     * Instantiates a new mobileAppInstallSummary and sets the default values.
+     * Instantiates a new MobileAppInstallSummary and sets the default values.
      */
     public MobileAppInstallSummary() {
         super();
@@ -60,7 +20,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppInstallSummary
+     * @return a MobileAppInstallSummary
      */
     @jakarta.annotation.Nonnull
     public static MobileAppInstallSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,19 +29,19 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedDeviceCount property value. Number of Devices that have failed to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this.failedDeviceCount;
+        return this.backingStore.get("failedDeviceCount");
     }
     /**
      * Gets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUserCount() {
-        return this.failedUserCount;
+        return this.backingStore.get("failedUserCount");
     }
     /**
      * The deserialization information for the current model
@@ -104,67 +64,67 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedDeviceCount property value. Number of Devices that have successfully installed this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
-        return this.installedDeviceCount;
+        return this.backingStore.get("installedDeviceCount");
     }
     /**
      * Gets the installedUserCount property value. Number of Users whose devices have all succeeded to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledUserCount() {
-        return this.installedUserCount;
+        return this.backingStore.get("installedUserCount");
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of Devices that are not applicable for this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this.notApplicableDeviceCount;
+        return this.backingStore.get("notApplicableDeviceCount");
     }
     /**
      * Gets the notApplicableUserCount property value. Number of Users whose devices were all not applicable for this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableUserCount() {
-        return this.notApplicableUserCount;
+        return this.backingStore.get("notApplicableUserCount");
     }
     /**
      * Gets the notInstalledDeviceCount property value. Number of Devices that does not have this app installed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
-        return this.notInstalledDeviceCount;
+        return this.backingStore.get("notInstalledDeviceCount");
     }
     /**
      * Gets the notInstalledUserCount property value. Number of Users that have 1 or more devices that did not install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledUserCount() {
-        return this.notInstalledUserCount;
+        return this.backingStore.get("notInstalledUserCount");
     }
     /**
      * Gets the pendingInstallDeviceCount property value. Number of Devices that have been notified to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingInstallDeviceCount() {
-        return this.pendingInstallDeviceCount;
+        return this.backingStore.get("pendingInstallDeviceCount");
     }
     /**
      * Gets the pendingInstallUserCount property value. Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingInstallUserCount() {
-        return this.pendingInstallUserCount;
+        return this.backingStore.get("pendingInstallUserCount");
     }
     /**
      * Serializes information the current object
@@ -189,69 +149,69 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the failedDeviceCount property.
      */
     public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedDeviceCount = value;
+        this.backingStore.set("failedDeviceCount", value);
     }
     /**
      * Sets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this app.
      * @param value Value to set for the failedUserCount property.
      */
     public void setFailedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedUserCount = value;
+        this.backingStore.set("failedUserCount", value);
     }
     /**
      * Sets the installedDeviceCount property value. Number of Devices that have successfully installed this app.
      * @param value Value to set for the installedDeviceCount property.
      */
     public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.installedDeviceCount = value;
+        this.backingStore.set("installedDeviceCount", value);
     }
     /**
      * Sets the installedUserCount property value. Number of Users whose devices have all succeeded to install this app.
      * @param value Value to set for the installedUserCount property.
      */
     public void setInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.installedUserCount = value;
+        this.backingStore.set("installedUserCount", value);
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of Devices that are not applicable for this app.
      * @param value Value to set for the notApplicableDeviceCount property.
      */
     public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableDeviceCount = value;
+        this.backingStore.set("notApplicableDeviceCount", value);
     }
     /**
      * Sets the notApplicableUserCount property value. Number of Users whose devices were all not applicable for this app.
      * @param value Value to set for the notApplicableUserCount property.
      */
     public void setNotApplicableUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableUserCount = value;
+        this.backingStore.set("notApplicableUserCount", value);
     }
     /**
      * Sets the notInstalledDeviceCount property value. Number of Devices that does not have this app installed.
      * @param value Value to set for the notInstalledDeviceCount property.
      */
     public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notInstalledDeviceCount = value;
+        this.backingStore.set("notInstalledDeviceCount", value);
     }
     /**
      * Sets the notInstalledUserCount property value. Number of Users that have 1 or more devices that did not install this app.
      * @param value Value to set for the notInstalledUserCount property.
      */
     public void setNotInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notInstalledUserCount = value;
+        this.backingStore.set("notInstalledUserCount", value);
     }
     /**
      * Sets the pendingInstallDeviceCount property value. Number of Devices that have been notified to install this app.
      * @param value Value to set for the pendingInstallDeviceCount property.
      */
     public void setPendingInstallDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingInstallDeviceCount = value;
+        this.backingStore.set("pendingInstallDeviceCount", value);
     }
     /**
      * Sets the pendingInstallUserCount property value. Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
      * @param value Value to set for the pendingInstallUserCount property.
      */
     public void setPendingInstallUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingInstallUserCount = value;
+        this.backingStore.set("pendingInstallUserCount", value);
     }
 }

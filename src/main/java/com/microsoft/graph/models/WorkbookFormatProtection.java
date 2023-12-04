@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
-     * The formulaHidden property
-     */
-    private Boolean formulaHidden;
-    /**
-     * The locked property
-     */
-    private Boolean locked;
-    /**
-     * Instantiates a new workbookFormatProtection and sets the default values.
+     * Instantiates a new WorkbookFormatProtection and sets the default values.
      */
     public WorkbookFormatProtection() {
         super();
@@ -25,7 +17,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookFormatProtection
+     * @return a WorkbookFormatProtection
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFormatProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * Gets the formulaHidden property value. The formulaHidden property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFormulaHidden() {
-        return this.formulaHidden;
+        return this.backingStore.get("formulaHidden");
     }
     /**
      * Gets the locked property value. The locked property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocked() {
-        return this.locked;
+        return this.backingStore.get("locked");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      * @param value Value to set for the formulaHidden property.
      */
     public void setFormulaHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.formulaHidden = value;
+        this.backingStore.set("formulaHidden", value);
     }
     /**
      * Sets the locked property value. The locked property
      * @param value Value to set for the locked property.
      */
     public void setLocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.locked = value;
+        this.backingStore.set("locked", value);
     }
 }

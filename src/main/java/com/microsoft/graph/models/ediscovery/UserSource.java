@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSource extends DataSource implements Parsable {
     /**
-     * Email address of the user's mailbox.
-     */
-    private String email;
-    /**
-     * Specifies which sources are included in this group. Possible values are: mailbox, site.
-     */
-    private EnumSet<SourceType> includedSources;
-    /**
-     * The URL of the user's OneDrive for Business site. Read-only.
-     */
-    private String siteWebUrl;
-    /**
-     * Instantiates a new userSource and sets the default values.
+     * Instantiates a new UserSource and sets the default values.
      */
     public UserSource() {
         super();
@@ -31,7 +19,7 @@ public class UserSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSource
+     * @return a UserSource
      */
     @jakarta.annotation.Nonnull
     public static UserSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +28,11 @@ public class UserSource extends DataSource implements Parsable {
     }
     /**
      * Gets the email property value. Email address of the user's mailbox.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -54,25 +42,25 @@ public class UserSource extends DataSource implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
-        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType.class)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType::forValue)); });
         deserializerMap.put("siteWebUrl", (n) -> { this.setSiteWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     * @return a sourceType
+     * @return a EnumSet<SourceType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getIncludedSources() {
-        return this.includedSources;
+        return this.backingStore.get("includedSources");
     }
     /**
      * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSiteWebUrl() {
-        return this.siteWebUrl;
+        return this.backingStore.get("siteWebUrl");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
     public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
-        this.includedSources = value;
+        this.backingStore.set("includedSources", value);
     }
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
      */
     public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.siteWebUrl = value;
+        this.backingStore.set("siteWebUrl", value);
     }
 }

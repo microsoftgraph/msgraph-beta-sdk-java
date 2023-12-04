@@ -12,19 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCustomAppConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Bundle id for targeting.
-     */
-    private String bundleId;
-    /**
-     * Configuration xml. (UTF8 encoded byte array)
-     */
-    private byte[] configurationXml;
-    /**
-     * Configuration file name (.plist
-     */
-    private String fileName;
-    /**
-     * Instantiates a new macOSCustomAppConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomAppConfiguration and sets the default values.
      */
     public MacOSCustomAppConfiguration() {
         super();
@@ -33,7 +21,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomAppConfiguration
+     * @return a MacOSCustomAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,19 +30,19 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the bundleId property value. Bundle id for targeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.backingStore.get("bundleId");
     }
     /**
      * Gets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getConfigurationXml() {
-        return this.configurationXml;
+        return this.backingStore.get("configurationXml");
     }
     /**
      * The deserialization information for the current model
@@ -70,11 +58,11 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the fileName property value. Configuration file name (.plist
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.backingStore.get("fileName");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.backingStore.set("bundleId", value);
     }
     /**
      * Sets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
      * @param value Value to set for the configurationXml property.
      */
     public void setConfigurationXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.configurationXml = value;
+        this.backingStore.set("configurationXml", value);
     }
     /**
      * Sets the fileName property value. Configuration file name (.plist
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.backingStore.set("fileName", value);
     }
 }

@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcUserSetting extends Entity implements Parsable {
     /**
-     * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
-     */
-    private java.util.List<CloudPcUserSettingAssignment> assignments;
-    /**
-     * The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The setting name displayed in the user interface.
-     */
-    private String displayName;
-    /**
-     * The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
-     */
-    private Boolean localAdminEnabled;
-    /**
-     * Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
-     */
-    private Boolean resetEnabled;
-    /**
-     * Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
-     */
-    private CloudPcRestorePointSetting restorePointSetting;
-    /**
-     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
-     */
-    private Boolean selfServiceEnabled;
-    /**
-     * Instantiates a new cloudPcUserSetting and sets the default values.
+     * Instantiates a new CloudPcUserSetting and sets the default values.
      */
     public CloudPcUserSetting() {
         super();
@@ -50,7 +18,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcUserSetting
+     * @return a CloudPcUserSetting
      */
     @jakarta.annotation.Nonnull
     public static CloudPcUserSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,12 +26,12 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return new CloudPcUserSetting();
     }
     /**
-     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
-     * @return a cloudPcUserSettingAssignment
+     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * @return a java.util.List<CloudPcUserSettingAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserSettingAssignment> getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
@@ -71,15 +39,15 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The setting name displayed in the user interface.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -104,39 +72,39 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalAdminEnabled() {
-        return this.localAdminEnabled;
+        return this.backingStore.get("localAdminEnabled");
     }
     /**
      * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getResetEnabled() {
-        return this.resetEnabled;
+        return this.backingStore.get("resetEnabled");
     }
     /**
      * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
-     * @return a cloudPcRestorePointSetting
+     * @return a CloudPcRestorePointSetting
      */
     @jakarta.annotation.Nullable
     public CloudPcRestorePointSetting getRestorePointSetting() {
-        return this.restorePointSetting;
+        return this.backingStore.get("restorePointSetting");
     }
     /**
      * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSelfServiceEnabled() {
-        return this.selfServiceEnabled;
+        return this.backingStore.get("selfServiceEnabled");
     }
     /**
      * Serializes information the current object
@@ -155,59 +123,59 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
     }
     /**
-     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcUserSettingAssignment> value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The setting name displayed in the user interface.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the localAdminEnabled property value. Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
      * @param value Value to set for the localAdminEnabled property.
      */
     public void setLocalAdminEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.localAdminEnabled = value;
+        this.backingStore.set("localAdminEnabled", value);
     }
     /**
      * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
      * @param value Value to set for the resetEnabled property.
      */
     public void setResetEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.resetEnabled = value;
+        this.backingStore.set("resetEnabled", value);
     }
     /**
      * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @param value Value to set for the restorePointSetting property.
      */
     public void setRestorePointSetting(@jakarta.annotation.Nullable final CloudPcRestorePointSetting value) {
-        this.restorePointSetting = value;
+        this.backingStore.set("restorePointSetting", value);
     }
     /**
      * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      * @param value Value to set for the selfServiceEnabled property.
      */
     public void setSelfServiceEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.selfServiceEnabled = value;
+        this.backingStore.set("selfServiceEnabled", value);
     }
 }

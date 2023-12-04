@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
     /**
-     * The display name of the identityUserFlowAttribute within a user flow.
-     */
-    private String displayName;
-    /**
-     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
-     */
-    private Boolean isOptional;
-    /**
-     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
-     */
-    private Boolean requiresVerification;
-    /**
-     * The user attribute that you want to add to your user flow.
-     */
-    private IdentityUserFlowAttribute userAttribute;
-    /**
-     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
-     */
-    private java.util.List<UserAttributeValuesItem> userAttributeValues;
-    /**
-     * The userInputType property
-     */
-    private IdentityUserFlowAttributeInputType userInputType;
-    /**
-     * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
+     * Instantiates a new IdentityUserFlowAttributeAssignment and sets the default values.
      */
     public IdentityUserFlowAttributeAssignment() {
         super();
@@ -41,7 +17,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityUserFlowAttributeAssignment
+     * @return a IdentityUserFlowAttributeAssignment
      */
     @jakarta.annotation.Nonnull
     public static IdentityUserFlowAttributeAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +26,11 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. The display name of the identityUserFlowAttribute within a user flow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -68,48 +44,48 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         deserializerMap.put("requiresVerification", (n) -> { this.setRequiresVerification(n.getBooleanValue()); });
         deserializerMap.put("userAttribute", (n) -> { this.setUserAttribute(n.getObjectValue(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("userAttributeValues", (n) -> { this.setUserAttributeValues(n.getCollectionOfObjectValues(UserAttributeValuesItem::createFromDiscriminatorValue)); });
-        deserializerMap.put("userInputType", (n) -> { this.setUserInputType(n.getEnumValue(IdentityUserFlowAttributeInputType.class)); });
+        deserializerMap.put("userInputType", (n) -> { this.setUserInputType(n.getEnumValue(IdentityUserFlowAttributeInputType::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
-     * @return a boolean
+     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOptional() {
-        return this.isOptional;
+        return this.backingStore.get("isOptional");
     }
     /**
      * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresVerification() {
-        return this.requiresVerification;
+        return this.backingStore.get("requiresVerification");
     }
     /**
      * Gets the userAttribute property value. The user attribute that you want to add to your user flow.
-     * @return a identityUserFlowAttribute
+     * @return a IdentityUserFlowAttribute
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute getUserAttribute() {
-        return this.userAttribute;
+        return this.backingStore.get("userAttribute");
     }
     /**
      * Gets the userAttributeValues property value. The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
-     * @return a userAttributeValuesItem
+     * @return a java.util.List<UserAttributeValuesItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserAttributeValuesItem> getUserAttributeValues() {
-        return this.userAttributeValues;
+        return this.backingStore.get("userAttributeValues");
     }
     /**
      * Gets the userInputType property value. The userInputType property
-     * @return a identityUserFlowAttributeInputType
+     * @return a IdentityUserFlowAttributeInputType
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeInputType getUserInputType() {
-        return this.userInputType;
+        return this.backingStore.get("userInputType");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
      * @param value Value to set for the isOptional property.
      */
     public void setIsOptional(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOptional = value;
+        this.backingStore.set("isOptional", value);
     }
     /**
      * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
      * @param value Value to set for the requiresVerification property.
      */
     public void setRequiresVerification(@jakarta.annotation.Nullable final Boolean value) {
-        this.requiresVerification = value;
+        this.backingStore.set("requiresVerification", value);
     }
     /**
      * Sets the userAttribute property value. The user attribute that you want to add to your user flow.
      * @param value Value to set for the userAttribute property.
      */
     public void setUserAttribute(@jakarta.annotation.Nullable final IdentityUserFlowAttribute value) {
-        this.userAttribute = value;
+        this.backingStore.set("userAttribute", value);
     }
     /**
      * Sets the userAttributeValues property value. The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      * @param value Value to set for the userAttributeValues property.
      */
     public void setUserAttributeValues(@jakarta.annotation.Nullable final java.util.List<UserAttributeValuesItem> value) {
-        this.userAttributeValues = value;
+        this.backingStore.set("userAttributeValues", value);
     }
     /**
      * Sets the userInputType property value. The userInputType property
      * @param value Value to set for the userInputType property.
      */
     public void setUserInputType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeInputType value) {
-        this.userInputType = value;
+        this.backingStore.set("userInputType", value);
     }
 }

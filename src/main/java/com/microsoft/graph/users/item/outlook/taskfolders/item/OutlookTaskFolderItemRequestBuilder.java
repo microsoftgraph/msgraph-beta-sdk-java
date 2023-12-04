@@ -48,95 +48,93 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskFolders/{outlookTaskFolder%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
-     * @return a CompletableFuture of outlookTaskFolder
+     * Get the properties and relationships of the specified Outlook task folder. This API is available in the following national cloud deployments.
+     * @return a OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolder> get() {
+    public OutlookTaskFolder get() {
         return get(null);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get the properties and relationships of the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskFolder
+     * @return a OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolder> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public OutlookTaskFolder get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of outlookTaskFolder
+     * @return a OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolder> patch(@jakarta.annotation.Nonnull final OutlookTaskFolder body) {
+    public OutlookTaskFolder patch(@jakarta.annotation.Nonnull final OutlookTaskFolder body) {
         return patch(body, null);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskFolder
+     * @return a OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolder> patch(@jakarta.annotation.Nonnull final OutlookTaskFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public OutlookTaskFolder patch(@jakarta.annotation.Nonnull final OutlookTaskFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
@@ -147,7 +145,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -156,20 +154,13 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get the properties and relationships of the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
@@ -180,7 +171,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get the properties and relationships of the specified Outlook task folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -189,22 +180,13 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -216,7 +198,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -227,18 +209,10 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OutlookTaskFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
@@ -261,7 +235,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get the properties and relationships of the specified Outlook task folder. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

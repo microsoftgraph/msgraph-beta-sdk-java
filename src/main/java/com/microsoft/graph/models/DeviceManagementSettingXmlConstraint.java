@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingXmlConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new deviceManagementSettingXmlConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingXmlConstraint and sets the default values.
      */
     public DeviceManagementSettingXmlConstraint() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementSettingXmlConstraint extends DeviceManagementConstr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingXmlConstraint
+     * @return a DeviceManagementSettingXmlConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingXmlConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

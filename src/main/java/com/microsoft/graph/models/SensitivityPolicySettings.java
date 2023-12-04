@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityPolicySettings extends Entity implements Parsable {
     /**
-     * The applicableTo property
-     */
-    private EnumSet<SensitivityLabelTarget> applicableTo;
-    /**
-     * The downgradeSensitivityRequiresJustification property
-     */
-    private Boolean downgradeSensitivityRequiresJustification;
-    /**
-     * The helpWebUrl property
-     */
-    private String helpWebUrl;
-    /**
-     * The isMandatory property
-     */
-    private Boolean isMandatory;
-    /**
-     * Instantiates a new sensitivityPolicySettings and sets the default values.
+     * Instantiates a new SensitivityPolicySettings and sets the default values.
      */
     public SensitivityPolicySettings() {
         super();
@@ -34,7 +18,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityPolicySettings
+     * @return a SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public static SensitivityPolicySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +27,19 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the applicableTo property value. The applicableTo property
-     * @return a sensitivityLabelTarget
+     * @return a EnumSet<SensitivityLabelTarget>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitivityLabelTarget> getApplicableTo() {
-        return this.applicableTo;
+        return this.backingStore.get("applicableTo");
     }
     /**
      * Gets the downgradeSensitivityRequiresJustification property value. The downgradeSensitivityRequiresJustification property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDowngradeSensitivityRequiresJustification() {
-        return this.downgradeSensitivityRequiresJustification;
+        return this.backingStore.get("downgradeSensitivityRequiresJustification");
     }
     /**
      * The deserialization information for the current model
@@ -64,7 +48,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget.class)); });
+        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget::forValue)); });
         deserializerMap.put("downgradeSensitivityRequiresJustification", (n) -> { this.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
         deserializerMap.put("helpWebUrl", (n) -> { this.setHelpWebUrl(n.getStringValue()); });
         deserializerMap.put("isMandatory", (n) -> { this.setIsMandatory(n.getBooleanValue()); });
@@ -72,19 +56,19 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the helpWebUrl property value. The helpWebUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpWebUrl() {
-        return this.helpWebUrl;
+        return this.backingStore.get("helpWebUrl");
     }
     /**
      * Gets the isMandatory property value. The isMandatory property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
-        return this.isMandatory;
+        return this.backingStore.get("isMandatory");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param value Value to set for the applicableTo property.
      */
     public void setApplicableTo(@jakarta.annotation.Nullable final EnumSet<SensitivityLabelTarget> value) {
-        this.applicableTo = value;
+        this.backingStore.set("applicableTo", value);
     }
     /**
      * Sets the downgradeSensitivityRequiresJustification property value. The downgradeSensitivityRequiresJustification property
      * @param value Value to set for the downgradeSensitivityRequiresJustification property.
      */
     public void setDowngradeSensitivityRequiresJustification(@jakarta.annotation.Nullable final Boolean value) {
-        this.downgradeSensitivityRequiresJustification = value;
+        this.backingStore.set("downgradeSensitivityRequiresJustification", value);
     }
     /**
      * Sets the helpWebUrl property value. The helpWebUrl property
      * @param value Value to set for the helpWebUrl property.
      */
     public void setHelpWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.helpWebUrl = value;
+        this.backingStore.set("helpWebUrl", value);
     }
     /**
      * Sets the isMandatory property value. The isMandatory property
      * @param value Value to set for the isMandatory property.
      */
     public void setIsMandatory(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMandatory = value;
+        this.backingStore.set("isMandatory", value);
     }
 }

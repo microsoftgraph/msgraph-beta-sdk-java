@@ -36,28 +36,26 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/mobileAppManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups/{group%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Delete a group from the list of groups included in a mobile app management policy.
+     * Delete a group from the list of groups included in a mobile app management policy. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete-includedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Delete a group from the list of groups included in a mobile app management policy.
+     * Delete a group from the list of groups included in a mobile app management policy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete-includedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Delete a group from the list of groups included in a mobile app management policy.
+     * Delete a group from the list of groups included in a mobile app management policy. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -65,23 +63,15 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a group from the list of groups included in a mobile app management policy.
+     * Delete a group from the list of groups included in a mobile app management policy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -95,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Delete a group from the list of groups included in a mobile app management policy.
+     * Delete a group from the list of groups included in a mobile app management policy. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

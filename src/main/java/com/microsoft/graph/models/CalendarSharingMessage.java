@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarSharingMessage extends Message implements Parsable {
     /**
-     * The canAccept property
-     */
-    private Boolean canAccept;
-    /**
-     * The sharingMessageAction property
-     */
-    private CalendarSharingMessageAction sharingMessageAction;
-    /**
-     * The sharingMessageActions property
-     */
-    private java.util.List<CalendarSharingMessageAction> sharingMessageActions;
-    /**
-     * The suggestedCalendarName property
-     */
-    private String suggestedCalendarName;
-    /**
-     * Instantiates a new calendarSharingMessage and sets the default values.
+     * Instantiates a new CalendarSharingMessage and sets the default values.
      */
     public CalendarSharingMessage() {
         super();
@@ -34,7 +18,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calendarSharingMessage
+     * @return a CalendarSharingMessage
      */
     @jakarta.annotation.Nonnull
     public static CalendarSharingMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the canAccept property value. The canAccept property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCanAccept() {
-        return this.canAccept;
+        return this.backingStore.get("canAccept");
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +48,27 @@ public class CalendarSharingMessage extends Message implements Parsable {
     }
     /**
      * Gets the sharingMessageAction property value. The sharingMessageAction property
-     * @return a calendarSharingMessageAction
+     * @return a CalendarSharingMessageAction
      */
     @jakarta.annotation.Nullable
     public CalendarSharingMessageAction getSharingMessageAction() {
-        return this.sharingMessageAction;
+        return this.backingStore.get("sharingMessageAction");
     }
     /**
      * Gets the sharingMessageActions property value. The sharingMessageActions property
-     * @return a calendarSharingMessageAction
+     * @return a java.util.List<CalendarSharingMessageAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarSharingMessageAction> getSharingMessageActions() {
-        return this.sharingMessageActions;
+        return this.backingStore.get("sharingMessageActions");
     }
     /**
      * Gets the suggestedCalendarName property value. The suggestedCalendarName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSuggestedCalendarName() {
-        return this.suggestedCalendarName;
+        return this.backingStore.get("suggestedCalendarName");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * @param value Value to set for the canAccept property.
      */
     public void setCanAccept(@jakarta.annotation.Nullable final Boolean value) {
-        this.canAccept = value;
+        this.backingStore.set("canAccept", value);
     }
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
      * @param value Value to set for the sharingMessageAction property.
      */
     public void setSharingMessageAction(@jakarta.annotation.Nullable final CalendarSharingMessageAction value) {
-        this.sharingMessageAction = value;
+        this.backingStore.set("sharingMessageAction", value);
     }
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
      * @param value Value to set for the sharingMessageActions property.
      */
     public void setSharingMessageActions(@jakarta.annotation.Nullable final java.util.List<CalendarSharingMessageAction> value) {
-        this.sharingMessageActions = value;
+        this.backingStore.set("sharingMessageActions", value);
     }
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
      * @param value Value to set for the suggestedCalendarName property.
      */
     public void setSuggestedCalendarName(@jakarta.annotation.Nullable final String value) {
-        this.suggestedCalendarName = value;
+        this.backingStore.set("suggestedCalendarName", value);
     }
 }
