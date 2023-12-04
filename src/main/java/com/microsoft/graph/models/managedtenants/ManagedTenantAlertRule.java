@@ -12,67 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlertRule extends Entity implements Parsable {
     /**
-     * The alertDisplayName property
-     */
-    private String alertDisplayName;
-    /**
-     * The alerts property
-     */
-    private java.util.List<ManagedTenantAlert> alerts;
-    /**
-     * The alertTTL property
-     */
-    private Integer alertTTL;
-    /**
-     * The createdByUserId property
-     */
-    private String createdByUserId;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The lastActionByUserId property
-     */
-    private String lastActionByUserId;
-    /**
-     * The lastActionDateTime property
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The lastRunDateTime property
-     */
-    private OffsetDateTime lastRunDateTime;
-    /**
-     * The notificationFinalDestinations property
-     */
-    private EnumSet<NotificationDestination> notificationFinalDestinations;
-    /**
-     * The ruleDefinition property
-     */
-    private ManagedTenantAlertRuleDefinition ruleDefinition;
-    /**
-     * The severity property
-     */
-    private AlertSeverity severity;
-    /**
-     * The targets property
-     */
-    private java.util.List<NotificationTarget> targets;
-    /**
-     * The tenantIds property
-     */
-    private java.util.List<TenantInfo> tenantIds;
-    /**
-     * Instantiates a new managedTenantAlertRule and sets the default values.
+     * Instantiates a new ManagedTenantAlertRule and sets the default values.
      */
     public ManagedTenantAlertRule() {
         super();
@@ -80,7 +20,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertRule
+     * @return a ManagedTenantAlertRule
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,35 +29,35 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alertDisplayName property value. The alertDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertDisplayName() {
-        return this.alertDisplayName;
+        return this.backingStore.get("alertDisplayName");
     }
     /**
      * Gets the alerts property value. The alerts property
-     * @return a managedTenantAlert
+     * @return a java.util.List<ManagedTenantAlert>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlert> getAlerts() {
-        return this.alerts;
+        return this.backingStore.get("alerts");
     }
     /**
      * Gets the alertTTL property value. The alertTTL property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAlertTTL() {
-        return this.alertTTL;
+        return this.backingStore.get("alertTTL");
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
-        return this.createdByUserId;
+        return this.backingStore.get("createdByUserId");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -125,23 +65,23 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -160,20 +100,20 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
         deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRunDateTime", (n) -> { this.setLastRunDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumSetValue(NotificationDestination.class)); });
+        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumSetValue(NotificationDestination::forValue)); });
         deserializerMap.put("ruleDefinition", (n) -> { this.setRuleDefinition(n.getObjectValue(ManagedTenantAlertRuleDefinition::createFromDiscriminatorValue)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(NotificationTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantIds", (n) -> { this.setTenantIds(n.getCollectionOfObjectValues(TenantInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
-        return this.lastActionByUserId;
+        return this.backingStore.get("lastActionByUserId");
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -181,7 +121,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the lastRunDateTime property value. The lastRunDateTime property
@@ -189,47 +129,47 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRunDateTime() {
-        return this.lastRunDateTime;
+        return this.backingStore.get("lastRunDateTime");
     }
     /**
      * Gets the notificationFinalDestinations property value. The notificationFinalDestinations property
-     * @return a notificationDestination
+     * @return a EnumSet<NotificationDestination>
      */
     @jakarta.annotation.Nullable
     public EnumSet<NotificationDestination> getNotificationFinalDestinations() {
-        return this.notificationFinalDestinations;
+        return this.backingStore.get("notificationFinalDestinations");
     }
     /**
      * Gets the ruleDefinition property value. The ruleDefinition property
-     * @return a managedTenantAlertRuleDefinition
+     * @return a ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertRuleDefinition getRuleDefinition() {
-        return this.ruleDefinition;
+        return this.backingStore.get("ruleDefinition");
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
-        return this.severity;
+        return this.backingStore.get("severity");
     }
     /**
      * Gets the targets property value. The targets property
-     * @return a notificationTarget
+     * @return a java.util.List<NotificationTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationTarget> getTargets() {
-        return this.targets;
+        return this.backingStore.get("targets");
     }
     /**
      * Gets the tenantIds property value. The tenantIds property
-     * @return a tenantInfo
+     * @return a java.util.List<TenantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantInfo> getTenantIds() {
-        return this.tenantIds;
+        return this.backingStore.get("tenantIds");
     }
     /**
      * Serializes information the current object
@@ -259,104 +199,104 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      * @param value Value to set for the alertDisplayName property.
      */
     public void setAlertDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.alertDisplayName = value;
+        this.backingStore.set("alertDisplayName", value);
     }
     /**
      * Sets the alerts property value. The alerts property
      * @param value Value to set for the alerts property.
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlert> value) {
-        this.alerts = value;
+        this.backingStore.set("alerts", value);
     }
     /**
      * Sets the alertTTL property value. The alertTTL property
      * @param value Value to set for the alertTTL property.
      */
     public void setAlertTTL(@jakarta.annotation.Nullable final Integer value) {
-        this.alertTTL = value;
+        this.backingStore.set("alertTTL", value);
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
      */
     public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.createdByUserId = value;
+        this.backingStore.set("createdByUserId", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
     public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
-        this.lastActionByUserId = value;
+        this.backingStore.set("lastActionByUserId", value);
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the lastRunDateTime property value. The lastRunDateTime property
      * @param value Value to set for the lastRunDateTime property.
      */
     public void setLastRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRunDateTime = value;
+        this.backingStore.set("lastRunDateTime", value);
     }
     /**
      * Sets the notificationFinalDestinations property value. The notificationFinalDestinations property
      * @param value Value to set for the notificationFinalDestinations property.
      */
     public void setNotificationFinalDestinations(@jakarta.annotation.Nullable final EnumSet<NotificationDestination> value) {
-        this.notificationFinalDestinations = value;
+        this.backingStore.set("notificationFinalDestinations", value);
     }
     /**
      * Sets the ruleDefinition property value. The ruleDefinition property
      * @param value Value to set for the ruleDefinition property.
      */
     public void setRuleDefinition(@jakarta.annotation.Nullable final ManagedTenantAlertRuleDefinition value) {
-        this.ruleDefinition = value;
+        this.backingStore.set("ruleDefinition", value);
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
-        this.severity = value;
+        this.backingStore.set("severity", value);
     }
     /**
      * Sets the targets property value. The targets property
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<NotificationTarget> value) {
-        this.targets = value;
+        this.backingStore.set("targets", value);
     }
     /**
      * Sets the tenantIds property value. The tenantIds property
      * @param value Value to set for the tenantIds property.
      */
     public void setTenantIds(@jakarta.annotation.Nullable final java.util.List<TenantInfo> value) {
-        this.tenantIds = value;
+        this.backingStore.set("tenantIds", value);
     }
 }

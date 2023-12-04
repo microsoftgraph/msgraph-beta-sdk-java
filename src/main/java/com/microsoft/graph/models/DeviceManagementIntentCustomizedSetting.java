@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * Default and customized value of a setting in a Security Baseline
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHolder, Parsable {
+public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * JSON representation of the customized value, if different from default
-     */
-    private String customizedJson;
-    /**
-     * JSON representation of the default value from the template
-     */
-    private String defaultJson;
-    /**
-     * The ID of the setting definition for this setting
-     */
-    private String definitionId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new deviceManagementIntentCustomizedSetting and sets the default values.
+     * Instantiates a new DeviceManagementIntentCustomizedSetting and sets the default values.
      */
     public DeviceManagementIntentCustomizedSetting() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentCustomizedSetting
+     * @return a DeviceManagementIntentCustomizedSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentCustomizedSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,36 +38,49 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
         return new DeviceManagementIntentCustomizedSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the customizedJson property value. JSON representation of the customized value, if different from default
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedJson() {
-        return this.customizedJson;
+        return this.backingStore.get("customizedJson");
     }
     /**
      * Gets the defaultJson property value. JSON representation of the default value from the template
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultJson() {
-        return this.defaultJson;
+        return this.backingStore.get("defaultJson");
     }
     /**
      * Gets the definitionId property value. The ID of the setting definition for this setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefinitionId() {
-        return this.definitionId;
+        return this.backingStore.get("definitionId");
     }
     /**
      * The deserialization information for the current model
@@ -95,11 +97,11 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -114,38 +116,46 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the customizedJson property value. JSON representation of the customized value, if different from default
      * @param value Value to set for the customizedJson property.
      */
     public void setCustomizedJson(@jakarta.annotation.Nullable final String value) {
-        this.customizedJson = value;
+        this.backingStore.set("customizedJson", value);
     }
     /**
      * Sets the defaultJson property value. JSON representation of the default value from the template
      * @param value Value to set for the defaultJson property.
      */
     public void setDefaultJson(@jakarta.annotation.Nullable final String value) {
-        this.defaultJson = value;
+        this.backingStore.set("defaultJson", value);
     }
     /**
      * Sets the definitionId property value. The ID of the setting definition for this setting
      * @param value Value to set for the definitionId property.
      */
     public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.definitionId = value;
+        this.backingStore.set("definitionId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

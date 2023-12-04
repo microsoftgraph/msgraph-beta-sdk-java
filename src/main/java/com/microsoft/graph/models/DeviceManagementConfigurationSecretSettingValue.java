@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSecretSettingValue extends DeviceManagementConfigurationSimpleSettingValue implements Parsable {
     /**
-     * Value of the secret setting.
-     */
-    private String value;
-    /**
-     * type tracking the encryption state of a secret setting value
-     */
-    private DeviceManagementConfigurationSecretSettingValueState valueState;
-    /**
-     * Instantiates a new deviceManagementConfigurationSecretSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSecretSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationSecretSettingValue() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSecretSettingValue
+     * @return a DeviceManagementConfigurationSecretSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSecretSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,24 +36,24 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
-        deserializerMap.put("valueState", (n) -> { this.setValueState(n.getEnumValue(DeviceManagementConfigurationSecretSettingValueState.class)); });
+        deserializerMap.put("valueState", (n) -> { this.setValueState(n.getEnumValue(DeviceManagementConfigurationSecretSettingValueState::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. Value of the secret setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Gets the valueState property value. type tracking the encryption state of a secret setting value
-     * @return a deviceManagementConfigurationSecretSettingValueState
+     * @return a DeviceManagementConfigurationSecretSettingValueState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSecretSettingValueState getValueState() {
-        return this.valueState;
+        return this.backingStore.get("valueState");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
     /**
      * Sets the valueState property value. type tracking the encryption state of a secret setting value
      * @param value Value to set for the valueState property.
      */
     public void setValueState(@jakarta.annotation.Nullable final DeviceManagementConfigurationSecretSettingValueState value) {
-        this.valueState = value;
+        this.backingStore.set("valueState", value);
     }
 }

@@ -2,6 +2,8 @@ package com.microsoft.graph.solutions.virtualevents.webinars.item.presenters.ite
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventPresenter;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.presenters.item.profilephoto.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.presenters.item.sessions.SessionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,6 +23,20 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the media for the solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ProfilePhotoRequestBuilder profilePhoto() {
+        return new ProfilePhotoRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.virtualEventPresenter entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsRequestBuilder sessions() {
+        return new SessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new VirtualEventPresenterItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -39,66 +55,64 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property presenters for solutions
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property presenters for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Presenters' information of the virtual event.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a VirtualEventPresenter
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventPresenter> get() {
+    @jakarta.annotation.Nullable
+    public VirtualEventPresenter get() {
         return get(null);
     }
     /**
      * Presenters' information of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a VirtualEventPresenter
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventPresenter> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VirtualEventPresenter get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VirtualEventPresenter::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventPresenter::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property presenters in solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a VirtualEventPresenter
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventPresenter> patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body) {
+    @jakarta.annotation.Nullable
+    public VirtualEventPresenter patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property presenters in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a VirtualEventPresenter
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventPresenter> patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VirtualEventPresenter patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VirtualEventPresenter::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventPresenter::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property presenters for solutions
@@ -115,16 +129,9 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -142,18 +149,9 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -174,18 +172,10 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**

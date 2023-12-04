@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity implements Parsable {
     /**
-     * The intune device's autopilotProfileAssigned.
-     */
-    private Boolean autoPilotProfileAssigned;
-    /**
-     * The intune device's autopilotRegistered.
-     */
-    private Boolean autoPilotRegistered;
-    /**
-     * The intune device's azure Ad joinType.
-     */
-    private String azureAdJoinType;
-    /**
-     * The intune device's azureAdRegistered.
-     */
-    private Boolean azureAdRegistered;
-    /**
-     * The intune device's name.
-     */
-    private String deviceName;
-    /**
-     * The intune device's managed by.
-     */
-    private String managedBy;
-    /**
-     * The intune device's manufacturer.
-     */
-    private String manufacturer;
-    /**
-     * The intune device's model.
-     */
-    private String model;
-    /**
-     * The intune device's serial number.
-     */
-    private String serialNumber;
-    /**
-     * Instantiates a new userExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
      */
     public UserExperienceAnalyticsNotAutopilotReadyDevice() {
         super();
@@ -56,7 +20,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsNotAutopilotReadyDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,43 +29,43 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the autoPilotProfileAssigned property value. The intune device's autopilotProfileAssigned.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
-        return this.autoPilotProfileAssigned;
+        return this.backingStore.get("autoPilotProfileAssigned");
     }
     /**
      * Gets the autoPilotRegistered property value. The intune device's autopilotRegistered.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
-        return this.autoPilotRegistered;
+        return this.backingStore.get("autoPilotRegistered");
     }
     /**
      * Gets the azureAdJoinType property value. The intune device's azure Ad joinType.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureAdJoinType() {
-        return this.azureAdJoinType;
+        return this.backingStore.get("azureAdJoinType");
     }
     /**
      * Gets the azureAdRegistered property value. The intune device's azureAdRegistered.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureAdRegistered() {
-        return this.azureAdRegistered;
+        return this.backingStore.get("azureAdRegistered");
     }
     /**
      * Gets the deviceName property value. The intune device's name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -123,35 +87,35 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the managedBy property value. The intune device's managed by.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedBy() {
-        return this.managedBy;
+        return this.backingStore.get("managedBy");
     }
     /**
      * Gets the manufacturer property value. The intune device's manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.backingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. The intune device's model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.backingStore.get("model");
     }
     /**
      * Gets the serialNumber property value. The intune device's serial number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.backingStore.get("serialNumber");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the autoPilotProfileAssigned property.
      */
     public void setAutoPilotProfileAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoPilotProfileAssigned = value;
+        this.backingStore.set("autoPilotProfileAssigned", value);
     }
     /**
      * Sets the autoPilotRegistered property value. The intune device's autopilotRegistered.
      * @param value Value to set for the autoPilotRegistered property.
      */
     public void setAutoPilotRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoPilotRegistered = value;
+        this.backingStore.set("autoPilotRegistered", value);
     }
     /**
      * Sets the azureAdJoinType property value. The intune device's azure Ad joinType.
      * @param value Value to set for the azureAdJoinType property.
      */
     public void setAzureAdJoinType(@jakarta.annotation.Nullable final String value) {
-        this.azureAdJoinType = value;
+        this.backingStore.set("azureAdJoinType", value);
     }
     /**
      * Sets the azureAdRegistered property value. The intune device's azureAdRegistered.
      * @param value Value to set for the azureAdRegistered property.
      */
     public void setAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.azureAdRegistered = value;
+        this.backingStore.set("azureAdRegistered", value);
     }
     /**
      * Sets the deviceName property value. The intune device's name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the managedBy property value. The intune device's managed by.
      * @param value Value to set for the managedBy property.
      */
     public void setManagedBy(@jakarta.annotation.Nullable final String value) {
-        this.managedBy = value;
+        this.backingStore.set("managedBy", value);
     }
     /**
      * Sets the manufacturer property value. The intune device's manufacturer.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.backingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. The intune device's model.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.backingStore.set("model", value);
     }
     /**
      * Sets the serialNumber property value. The intune device's serial number.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.backingStore.set("serialNumber", value);
     }
 }

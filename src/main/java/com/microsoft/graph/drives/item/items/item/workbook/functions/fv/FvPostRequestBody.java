@@ -5,45 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
+public class FvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The nper property
-     */
-    private Json nper;
-    /**
-     * The pmt property
-     */
-    private Json pmt;
-    /**
-     * The pv property
-     */
-    private Json pv;
-    /**
-     * The rate property
-     */
-    private Json rate;
-    /**
-     * The type property
-     */
-    private Json type;
-    /**
-     * Instantiates a new fvPostRequestBody and sets the default values.
+     * Instantiates a new FvPostRequestBody and sets the default values.
      */
     public FvPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fvPostRequestBody
+     * @return a FvPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static FvPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,12 +36,25 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
         return new FvPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +76,7 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNper() {
-        return this.nper;
+        return this.backingStore.get("nper");
     }
     /**
      * Gets the pmt property value. The pmt property
@@ -86,7 +84,7 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPmt() {
-        return this.pmt;
+        return this.backingStore.get("pmt");
     }
     /**
      * Gets the pv property value. The pv property
@@ -94,7 +92,7 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPv() {
-        return this.pv;
+        return this.backingStore.get("pv");
     }
     /**
      * Gets the rate property value. The rate property
@@ -102,7 +100,7 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.backingStore.get("rate");
     }
     /**
      * Gets the type property value. The type property
@@ -110,7 +108,7 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -126,45 +124,53 @@ public class FvPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
      */
     public void setNper(@jakarta.annotation.Nullable final Json value) {
-        this.nper = value;
+        this.backingStore.set("nper", value);
     }
     /**
      * Sets the pmt property value. The pmt property
      * @param value Value to set for the pmt property.
      */
     public void setPmt(@jakarta.annotation.Nullable final Json value) {
-        this.pmt = value;
+        this.backingStore.set("pmt", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
     public void setPv(@jakarta.annotation.Nullable final Json value) {
-        this.pv = value;
+        this.backingStore.set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.backingStore.set("rate", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final Json value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

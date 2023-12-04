@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationModuleResource extends Entity implements Parsable {
     /**
-     * Resource object that has been associated with this module.
-     */
-    private EducationResource resource;
-    /**
-     * Instantiates a new educationModuleResource and sets the default values.
+     * Instantiates a new EducationModuleResource and sets the default values.
      */
     public EducationModuleResource() {
         super();
@@ -21,7 +17,7 @@ public class EducationModuleResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationModuleResource
+     * @return a EducationModuleResource
      */
     @jakarta.annotation.Nonnull
     public static EducationModuleResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class EducationModuleResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this module.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EducationModuleResource extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
 }

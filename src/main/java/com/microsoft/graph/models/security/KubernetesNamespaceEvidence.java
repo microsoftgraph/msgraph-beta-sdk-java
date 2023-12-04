@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable {
     /**
-     * The namespace cluster.
-     */
-    private KubernetesClusterEvidence cluster;
-    /**
-     * The labels for the Kubernetes pod.
-     */
-    private Dictionary labels;
-    /**
-     * The namespace name.
-     */
-    private String name;
-    /**
-     * Instantiates a new kubernetesNamespaceEvidence and sets the default values.
+     * Instantiates a new KubernetesNamespaceEvidence and sets the default values.
      */
     public KubernetesNamespaceEvidence() {
         super();
@@ -30,7 +18,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesNamespaceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the cluster property value. The namespace cluster.
-     * @return a kubernetesClusterEvidence
+     * @return a KubernetesClusterEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesClusterEvidence getCluster() {
-        return this.cluster;
+        return this.backingStore.get("cluster");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the labels property value. The labels for the Kubernetes pod.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
-        return this.labels;
+        return this.backingStore.get("labels");
     }
     /**
      * Gets the name property value. The namespace name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the cluster property.
      */
     public void setCluster(@jakarta.annotation.Nullable final KubernetesClusterEvidence value) {
-        this.cluster = value;
+        this.backingStore.set("cluster", value);
     }
     /**
      * Sets the labels property value. The labels for the Kubernetes pod.
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
-        this.labels = value;
+        this.backingStore.set("labels", value);
     }
     /**
      * Sets the name property value. The namespace name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
 }

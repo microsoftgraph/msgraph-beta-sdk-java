@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration implements Parsable {
     /**
-     * This setting allows access to Downloads folder in file explorer.
-     */
-    private Boolean allowAccessToDownloadsFolder;
-    /**
-     * These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
-     */
-    private java.util.List<WindowsKioskAppBase> apps;
-    /**
-     * This setting indicates that desktop apps are allowed. Default to true.
-     */
-    private Boolean disallowDesktopApps;
-    /**
-     * This setting allows the admin to specify whether the Task Bar is shown or not.
-     */
-    private Boolean showTaskBar;
-    /**
-     * Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     */
-    private byte[] startMenuLayoutXml;
-    /**
-     * Instantiates a new windowsKioskMultipleApps and sets the default values.
+     * Instantiates a new WindowsKioskMultipleApps and sets the default values.
      */
     public WindowsKioskMultipleApps() {
         super();
@@ -41,7 +21,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskMultipleApps
+     * @return a WindowsKioskMultipleApps
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskMultipleApps createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +30,27 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the allowAccessToDownloadsFolder property value. This setting allows access to Downloads folder in file explorer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAccessToDownloadsFolder() {
-        return this.allowAccessToDownloadsFolder;
+        return this.backingStore.get("allowAccessToDownloadsFolder");
     }
     /**
      * Gets the apps property value. These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
-     * @return a windowsKioskAppBase
+     * @return a java.util.List<WindowsKioskAppBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskAppBase> getApps() {
-        return this.apps;
+        return this.backingStore.get("apps");
     }
     /**
      * Gets the disallowDesktopApps property value. This setting indicates that desktop apps are allowed. Default to true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisallowDesktopApps() {
-        return this.disallowDesktopApps;
+        return this.backingStore.get("disallowDesktopApps");
     }
     /**
      * The deserialization information for the current model
@@ -88,19 +68,19 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTaskBar() {
-        return this.showTaskBar;
+        return this.backingStore.get("showTaskBar");
     }
     /**
      * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getStartMenuLayoutXml() {
-        return this.startMenuLayoutXml;
+        return this.backingStore.get("startMenuLayoutXml");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the allowAccessToDownloadsFolder property.
      */
     public void setAllowAccessToDownloadsFolder(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAccessToDownloadsFolder = value;
+        this.backingStore.set("allowAccessToDownloadsFolder", value);
     }
     /**
      * Sets the apps property value. These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<WindowsKioskAppBase> value) {
-        this.apps = value;
+        this.backingStore.set("apps", value);
     }
     /**
      * Sets the disallowDesktopApps property value. This setting indicates that desktop apps are allowed. Default to true.
      * @param value Value to set for the disallowDesktopApps property.
      */
     public void setDisallowDesktopApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.disallowDesktopApps = value;
+        this.backingStore.set("disallowDesktopApps", value);
     }
     /**
      * Sets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
      * @param value Value to set for the showTaskBar property.
      */
     public void setShowTaskBar(@jakarta.annotation.Nullable final Boolean value) {
-        this.showTaskBar = value;
+        this.backingStore.set("showTaskBar", value);
     }
     /**
      * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      */
     public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final byte[] value) {
-        this.startMenuLayoutXml = value;
+        this.backingStore.set("startMenuLayoutXml", value);
     }
 }

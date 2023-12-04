@@ -35,33 +35,33 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/security/tiIndicators/deleteTiIndicatorsByExternalId", rawUrl);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
+     * @return a DeleteTiIndicatorsByExternalIdPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicatorsbyexternalid?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public DeleteTiIndicatorsByExternalIdPostResponse post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
+     * @return a DeleteTiIndicatorsByExternalIdPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicatorsbyexternalid?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsByExternalIdResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeleteTiIndicatorsByExternalIdPostResponse post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsByExternalIdResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeleteTiIndicatorsByExternalIdPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -78,24 +78,16 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeleteTiIndicatorsByExternalIdPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deleteTiIndicatorsByExternalIdRequestBuilder
+     * @return a DeleteTiIndicatorsByExternalIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeleteTiIndicatorsByExternalIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

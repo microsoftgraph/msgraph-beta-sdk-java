@@ -5,45 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
+public class DdbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The cost property
-     */
-    private Json cost;
-    /**
-     * The factor property
-     */
-    private Json factor;
-    /**
-     * The life property
-     */
-    private Json life;
-    /**
-     * The period property
-     */
-    private Json period;
-    /**
-     * The salvage property
-     */
-    private Json salvage;
-    /**
-     * Instantiates a new ddbPostRequestBody and sets the default values.
+     * Instantiates a new DdbPostRequestBody and sets the default values.
      */
     public DdbPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ddbPostRequestBody
+     * @return a DdbPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static DdbPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,12 +36,25 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
         return new DdbPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cost property value. The cost property
@@ -64,7 +62,7 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
-        return this.cost;
+        return this.backingStore.get("cost");
     }
     /**
      * Gets the factor property value. The factor property
@@ -72,7 +70,7 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getFactor() {
-        return this.factor;
+        return this.backingStore.get("factor");
     }
     /**
      * The deserialization information for the current model
@@ -94,7 +92,7 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLife() {
-        return this.life;
+        return this.backingStore.get("life");
     }
     /**
      * Gets the period property value. The period property
@@ -102,7 +100,7 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPeriod() {
-        return this.period;
+        return this.backingStore.get("period");
     }
     /**
      * Gets the salvage property value. The salvage property
@@ -110,7 +108,7 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {
-        return this.salvage;
+        return this.backingStore.get("salvage");
     }
     /**
      * Serializes information the current object
@@ -126,45 +124,53 @@ public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
     public void setCost(@jakarta.annotation.Nullable final Json value) {
-        this.cost = value;
+        this.backingStore.set("cost", value);
     }
     /**
      * Sets the factor property value. The factor property
      * @param value Value to set for the factor property.
      */
     public void setFactor(@jakarta.annotation.Nullable final Json value) {
-        this.factor = value;
+        this.backingStore.set("factor", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
     public void setLife(@jakarta.annotation.Nullable final Json value) {
-        this.life = value;
+        this.backingStore.set("life", value);
     }
     /**
      * Sets the period property value. The period property
      * @param value Value to set for the period property.
      */
     public void setPeriod(@jakarta.annotation.Nullable final Json value) {
-        this.period = value;
+        this.backingStore.set("period", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
-        this.salvage = value;
+        this.backingStore.set("salvage", value);
     }
 }

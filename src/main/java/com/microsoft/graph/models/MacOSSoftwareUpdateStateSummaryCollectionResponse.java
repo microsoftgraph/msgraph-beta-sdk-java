@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MacOSSoftwareUpdateStateSummary> value;
-    /**
-     * Instantiates a new macOSSoftwareUpdateStateSummaryCollectionResponse and sets the default values.
+     * Instantiates a new MacOSSoftwareUpdateStateSummaryCollectionResponse and sets the default values.
      */
     public MacOSSoftwareUpdateStateSummaryCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSSoftwareUpdateStateSummaryCollectionResponse
+     * @return a MacOSSoftwareUpdateStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateStateSummaryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSSoftwareUpdateStateSummary
+     * @return a java.util.List<MacOSSoftwareUpdateStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateStateSummary> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MacOSSoftwareUpdateStateSummary> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

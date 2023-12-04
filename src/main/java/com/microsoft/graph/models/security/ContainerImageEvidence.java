@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
-     * The digest image entity, in case this is a tag image.
-     */
-    private ContainerImageEvidence digestImage;
-    /**
-     * The unique identifier for the container image entity.
-     */
-    private String imageId;
-    /**
-     * The container registry for this image.
-     */
-    private ContainerRegistryEvidence registry;
-    /**
-     * Instantiates a new containerImageEvidence and sets the default values.
+     * Instantiates a new ContainerImageEvidence and sets the default values.
      */
     public ContainerImageEvidence() {
         super();
@@ -30,7 +18,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a containerImageEvidence
+     * @return a ContainerImageEvidence
      */
     @jakarta.annotation.Nonnull
     public static ContainerImageEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +27,11 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the digestImage property value. The digest image entity, in case this is a tag image.
-     * @return a containerImageEvidence
+     * @return a ContainerImageEvidence
      */
     @jakarta.annotation.Nullable
     public ContainerImageEvidence getDigestImage() {
-        return this.digestImage;
+        return this.backingStore.get("digestImage");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the imageId property value. The unique identifier for the container image entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageId() {
-        return this.imageId;
+        return this.backingStore.get("imageId");
     }
     /**
      * Gets the registry property value. The container registry for this image.
-     * @return a containerRegistryEvidence
+     * @return a ContainerRegistryEvidence
      */
     @jakarta.annotation.Nullable
     public ContainerRegistryEvidence getRegistry() {
-        return this.registry;
+        return this.backingStore.get("registry");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the digestImage property.
      */
     public void setDigestImage(@jakarta.annotation.Nullable final ContainerImageEvidence value) {
-        this.digestImage = value;
+        this.backingStore.set("digestImage", value);
     }
     /**
      * Sets the imageId property value. The unique identifier for the container image entity.
      * @param value Value to set for the imageId property.
      */
     public void setImageId(@jakarta.annotation.Nullable final String value) {
-        this.imageId = value;
+        this.backingStore.set("imageId", value);
     }
     /**
      * Sets the registry property value. The container registry for this image.
      * @param value Value to set for the registry property.
      */
     public void setRegistry(@jakarta.annotation.Nullable final ContainerRegistryEvidence value) {
-        this.registry = value;
+        this.backingStore.set("registry", value);
     }
 }

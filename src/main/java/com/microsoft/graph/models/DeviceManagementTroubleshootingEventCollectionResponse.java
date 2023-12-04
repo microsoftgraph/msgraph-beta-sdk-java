@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTroubleshootingEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceManagementTroubleshootingEvent> value;
-    /**
-     * Instantiates a new deviceManagementTroubleshootingEventCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingEventCollectionResponse and sets the default values.
      */
     public DeviceManagementTroubleshootingEventCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceManagementTroubleshootingEventCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingEventCollectionResponse
+     * @return a DeviceManagementTroubleshootingEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTroubleshootingEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceManagementTroubleshootingEventCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a java.util.List<DeviceManagementTroubleshootingEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingEvent> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceManagementTroubleshootingEventCollectionResponse extends Base
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

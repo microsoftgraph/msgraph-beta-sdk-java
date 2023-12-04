@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InsightValueInt extends UserExperienceAnalyticsInsightValue implements Parsable {
     /**
-     * The int value of the user experience analytics insight.
-     */
-    private Integer value;
-    /**
-     * Instantiates a new insightValueInt and sets the default values.
+     * Instantiates a new InsightValueInt and sets the default values.
      */
     public InsightValueInt() {
         super();
@@ -25,7 +21,7 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a insightValueInt
+     * @return a InsightValueInt
      */
     @jakarta.annotation.Nonnull
     public static InsightValueInt createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
     }
     /**
      * Gets the value property value. The int value of the user experience analytics insight.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Integer value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

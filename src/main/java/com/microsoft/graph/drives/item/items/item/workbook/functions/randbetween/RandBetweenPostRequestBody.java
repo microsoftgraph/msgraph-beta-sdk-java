@@ -5,33 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RandBetweenPostRequestBody implements AdditionalDataHolder, Parsable {
+public class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The bottom property
-     */
-    private Json bottom;
-    /**
-     * The top property
-     */
-    private Json top;
-    /**
-     * Instantiates a new randBetweenPostRequestBody and sets the default values.
+     * Instantiates a new RandBetweenPostRequestBody and sets the default values.
      */
     public RandBetweenPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a randBetweenPostRequestBody
+     * @return a RandBetweenPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RandBetweenPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,12 +36,25 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, Parsabl
         return new RandBetweenPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the bottom property value. The bottom property
@@ -52,7 +62,7 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getBottom() {
-        return this.bottom;
+        return this.backingStore.get("bottom");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +81,7 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getTop() {
-        return this.top;
+        return this.backingStore.get("top");
     }
     /**
      * Serializes information the current object
@@ -84,24 +94,32 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the bottom property value. The bottom property
      * @param value Value to set for the bottom property.
      */
     public void setBottom(@jakarta.annotation.Nullable final Json value) {
-        this.bottom = value;
+        this.backingStore.set("bottom", value);
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
      */
     public void setTop(@jakarta.annotation.Nullable final Json value) {
-        this.top = value;
+        this.backingStore.set("top", value);
     }
 }

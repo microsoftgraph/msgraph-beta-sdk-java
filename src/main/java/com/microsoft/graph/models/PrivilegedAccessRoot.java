@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessRoot extends Entity implements Parsable {
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
-     */
-    private PrivilegedAccessGroup group;
-    /**
-     * Instantiates a new privilegedAccessRoot and sets the default values.
+     * Instantiates a new PrivilegedAccessRoot and sets the default values.
      */
     public PrivilegedAccessRoot() {
         super();
@@ -21,7 +17,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessRoot
+     * @return a PrivilegedAccessRoot
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the group property value. A group that's governed through Privileged Identity Management (PIM).
-     * @return a privilegedAccessGroup
+     * @return a PrivilegedAccessGroup
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup getGroup() {
-        return this.group;
+        return this.backingStore.get("group");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final PrivilegedAccessGroup value) {
-        this.group = value;
+        this.backingStore.set("group", value);
     }
 }

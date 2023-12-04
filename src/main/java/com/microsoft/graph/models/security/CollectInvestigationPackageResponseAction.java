@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CollectInvestigationPackageResponseAction extends ResponseAction implements Parsable {
     /**
-     * The identifier property
-     */
-    private EnumSet<DeviceIdEntityIdentifier> identifier;
-    /**
-     * Instantiates a new collectInvestigationPackageResponseAction and sets the default values.
+     * Instantiates a new CollectInvestigationPackageResponseAction and sets the default values.
      */
     public CollectInvestigationPackageResponseAction() {
         super();
@@ -23,7 +19,7 @@ public class CollectInvestigationPackageResponseAction extends ResponseAction im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a collectInvestigationPackageResponseAction
+     * @return a CollectInvestigationPackageResponseAction
      */
     @jakarta.annotation.Nonnull
     public static CollectInvestigationPackageResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,16 +33,16 @@ public class CollectInvestigationPackageResponseAction extends ResponseAction im
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DeviceIdEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DeviceIdEntityIdentifier::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a deviceIdEntityIdentifier
+     * @return a EnumSet<DeviceIdEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceIdEntityIdentifier> getIdentifier() {
-        return this.identifier;
+        return this.backingStore.get("identifier");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class CollectInvestigationPackageResponseAction extends ResponseAction im
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<DeviceIdEntityIdentifier> value) {
-        this.identifier = value;
+        this.backingStore.set("identifier", value);
     }
 }

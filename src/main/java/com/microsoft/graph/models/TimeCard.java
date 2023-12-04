@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
-     * The list of breaks associated with the timeCard.
-     */
-    private java.util.List<TimeCardBreak> breaks;
-    /**
-     * The clock-in event of the timeCard.
-     */
-    private TimeCardEvent clockInEvent;
-    /**
-     * The clock-out event of the timeCard.
-     */
-    private TimeCardEvent clockOutEvent;
-    /**
-     * Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
-     */
-    private EnumSet<ConfirmedBy> confirmedBy;
-    /**
-     * Notes about the timeCard.
-     */
-    private ItemBody notes;
-    /**
-     * The original timeCardEntry of the timeCard, before user edits.
-     */
-    private TimeCardEntry originalEntry;
-    /**
-     * The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
-     */
-    private TimeCardState state;
-    /**
-     * User ID to which  the timeCard belongs.
-     */
-    private String userId;
-    /**
-     * Instantiates a new timeCard and sets the default values.
+     * Instantiates a new TimeCard and sets the default values.
      */
     public TimeCard() {
         super();
@@ -51,7 +19,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeCard
+     * @return a TimeCard
      */
     @jakarta.annotation.Nonnull
     public static TimeCard createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,35 +28,35 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the breaks property value. The list of breaks associated with the timeCard.
-     * @return a timeCardBreak
+     * @return a java.util.List<TimeCardBreak>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeCardBreak> getBreaks() {
-        return this.breaks;
+        return this.backingStore.get("breaks");
     }
     /**
      * Gets the clockInEvent property value. The clock-in event of the timeCard.
-     * @return a timeCardEvent
+     * @return a TimeCardEvent
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockInEvent() {
-        return this.clockInEvent;
+        return this.backingStore.get("clockInEvent");
     }
     /**
      * Gets the clockOutEvent property value. The clock-out event of the timeCard.
-     * @return a timeCardEvent
+     * @return a TimeCardEvent
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockOutEvent() {
-        return this.clockOutEvent;
+        return this.backingStore.get("clockOutEvent");
     }
     /**
      * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
-     * @return a confirmedBy
+     * @return a EnumSet<ConfirmedBy>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ConfirmedBy> getConfirmedBy() {
-        return this.confirmedBy;
+        return this.backingStore.get("confirmedBy");
     }
     /**
      * The deserialization information for the current model
@@ -100,44 +68,44 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         deserializerMap.put("breaks", (n) -> { this.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
         deserializerMap.put("clockInEvent", (n) -> { this.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("clockOutEvent", (n) -> { this.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-        deserializerMap.put("confirmedBy", (n) -> { this.setConfirmedBy(n.getEnumSetValue(ConfirmedBy.class)); });
+        deserializerMap.put("confirmedBy", (n) -> { this.setConfirmedBy(n.getEnumSetValue(ConfirmedBy::forValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("originalEntry", (n) -> { this.setOriginalEntry(n.getObjectValue(TimeCardEntry::createFromDiscriminatorValue)); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(TimeCardState.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(TimeCardState::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the notes property value. Notes about the timeCard.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
-        return this.notes;
+        return this.backingStore.get("notes");
     }
     /**
      * Gets the originalEntry property value. The original timeCardEntry of the timeCard, before user edits.
-     * @return a timeCardEntry
+     * @return a TimeCardEntry
      */
     @jakarta.annotation.Nullable
     public TimeCardEntry getOriginalEntry() {
-        return this.originalEntry;
+        return this.backingStore.get("originalEntry");
     }
     /**
      * Gets the state property value. The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
-     * @return a timeCardState
+     * @return a TimeCardState
      */
     @jakarta.annotation.Nullable
     public TimeCardState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the userId property value. User ID to which  the timeCard belongs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the breaks property.
      */
     public void setBreaks(@jakarta.annotation.Nullable final java.util.List<TimeCardBreak> value) {
-        this.breaks = value;
+        this.backingStore.set("breaks", value);
     }
     /**
      * Sets the clockInEvent property value. The clock-in event of the timeCard.
      * @param value Value to set for the clockInEvent property.
      */
     public void setClockInEvent(@jakarta.annotation.Nullable final TimeCardEvent value) {
-        this.clockInEvent = value;
+        this.backingStore.set("clockInEvent", value);
     }
     /**
      * Sets the clockOutEvent property value. The clock-out event of the timeCard.
      * @param value Value to set for the clockOutEvent property.
      */
     public void setClockOutEvent(@jakarta.annotation.Nullable final TimeCardEvent value) {
-        this.clockOutEvent = value;
+        this.backingStore.set("clockOutEvent", value);
     }
     /**
      * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
      * @param value Value to set for the confirmedBy property.
      */
     public void setConfirmedBy(@jakarta.annotation.Nullable final EnumSet<ConfirmedBy> value) {
-        this.confirmedBy = value;
+        this.backingStore.set("confirmedBy", value);
     }
     /**
      * Sets the notes property value. Notes about the timeCard.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
-        this.notes = value;
+        this.backingStore.set("notes", value);
     }
     /**
      * Sets the originalEntry property value. The original timeCardEntry of the timeCard, before user edits.
      * @param value Value to set for the originalEntry property.
      */
     public void setOriginalEntry(@jakarta.annotation.Nullable final TimeCardEntry value) {
-        this.originalEntry = value;
+        this.backingStore.set("originalEntry", value);
     }
     /**
      * Sets the state property value. The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final TimeCardState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the userId property value. User ID to which  the timeCard belongs.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

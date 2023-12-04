@@ -10,43 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActivityHistoryItem extends Entity implements Parsable {
     /**
-     * The activeDurationSeconds property
-     */
-    private Integer activeDurationSeconds;
-    /**
-     * The activity property
-     */
-    private UserActivity activity;
-    /**
-     * The createdDateTime property
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The expirationDateTime property
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The lastActiveDateTime property
-     */
-    private OffsetDateTime lastActiveDateTime;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The startedDateTime property
-     */
-    private OffsetDateTime startedDateTime;
-    /**
-     * The status property
-     */
-    private Status status;
-    /**
-     * The userTimezone property
-     */
-    private String userTimezone;
-    /**
-     * Instantiates a new activityHistoryItem and sets the default values.
+     * Instantiates a new ActivityHistoryItem and sets the default values.
      */
     public ActivityHistoryItem() {
         super();
@@ -54,7 +18,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a activityHistoryItem
+     * @return a ActivityHistoryItem
      */
     @jakarta.annotation.Nonnull
     public static ActivityHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,19 +27,19 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the activeDurationSeconds property value. The activeDurationSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDurationSeconds() {
-        return this.activeDurationSeconds;
+        return this.backingStore.get("activeDurationSeconds");
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a userActivity
+     * @return a UserActivity
      */
     @jakarta.annotation.Nullable
     public UserActivity getActivity() {
-        return this.activity;
+        return this.backingStore.get("activity");
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -83,7 +47,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -91,7 +55,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -107,7 +71,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         deserializerMap.put("lastActiveDateTime", (n) -> { this.setLastActiveDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status::forValue)); });
         deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
         return deserializerMap;
     }
@@ -117,7 +81,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActiveDateTime() {
-        return this.lastActiveDateTime;
+        return this.backingStore.get("lastActiveDateTime");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -125,7 +89,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the startedDateTime property value. The startedDateTime property
@@ -133,23 +97,23 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.backingStore.get("startedDateTime");
     }
     /**
      * Gets the status property value. The status property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the userTimezone property value. The userTimezone property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserTimezone() {
-        return this.userTimezone;
+        return this.backingStore.get("userTimezone");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the activeDurationSeconds property.
      */
     public void setActiveDurationSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDurationSeconds = value;
+        this.backingStore.set("activeDurationSeconds", value);
     }
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final UserActivity value) {
-        this.activity = value;
+        this.backingStore.set("activity", value);
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the lastActiveDateTime property value. The lastActiveDateTime property
      * @param value Value to set for the lastActiveDateTime property.
      */
     public void setLastActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActiveDateTime = value;
+        this.backingStore.set("lastActiveDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the startedDateTime property value. The startedDateTime property
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.backingStore.set("startedDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final Status value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the userTimezone property value. The userTimezone property
      * @param value Value to set for the userTimezone property.
      */
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
-        this.userTimezone = value;
+        this.backingStore.set("userTimezone", value);
     }
 }

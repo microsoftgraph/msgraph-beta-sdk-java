@@ -10,27 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InboundFlow extends IndustryDataActivity implements Parsable {
     /**
-     * The dataConnector property
-     */
-    private IndustryDataConnector dataConnector;
-    /**
-     * The dataDomain property
-     */
-    private InboundDomain dataDomain;
-    /**
-     * The start of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime effectiveDateTime;
-    /**
-     * The end of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The year property
-     */
-    private YearTimePeriodDefinition year;
-    /**
-     * Instantiates a new inboundFlow and sets the default values.
+     * Instantiates a new InboundFlow and sets the default values.
      */
     public InboundFlow() {
         super();
@@ -39,7 +19,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inboundFlow
+     * @return a InboundFlow
      */
     @jakarta.annotation.Nonnull
     public static InboundFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,19 +35,19 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the dataConnector property value. The dataConnector property
-     * @return a industryDataConnector
+     * @return a IndustryDataConnector
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector getDataConnector() {
-        return this.dataConnector;
+        return this.backingStore.get("dataConnector");
     }
     /**
      * Gets the dataDomain property value. The dataDomain property
-     * @return a inboundDomain
+     * @return a InboundDomain
      */
     @jakarta.annotation.Nullable
     public InboundDomain getDataDomain() {
-        return this.dataDomain;
+        return this.backingStore.get("dataDomain");
     }
     /**
      * Gets the effectiveDateTime property value. The start of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -75,7 +55,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEffectiveDateTime() {
-        return this.effectiveDateTime;
+        return this.backingStore.get("effectiveDateTime");
     }
     /**
      * Gets the expirationDateTime property value. The end of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -83,7 +63,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +73,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dataConnector", (n) -> { this.setDataConnector(n.getObjectValue(IndustryDataConnector::createFromDiscriminatorValue)); });
-        deserializerMap.put("dataDomain", (n) -> { this.setDataDomain(n.getEnumValue(InboundDomain.class)); });
+        deserializerMap.put("dataDomain", (n) -> { this.setDataDomain(n.getEnumValue(InboundDomain::forValue)); });
         deserializerMap.put("effectiveDateTime", (n) -> { this.setEffectiveDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("year", (n) -> { this.setYear(n.getObjectValue(YearTimePeriodDefinition::createFromDiscriminatorValue)); });
@@ -101,11 +81,11 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the year property value. The year property
-     * @return a yearTimePeriodDefinition
+     * @return a YearTimePeriodDefinition
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinition getYear() {
-        return this.year;
+        return this.backingStore.get("year");
     }
     /**
      * Serializes information the current object
@@ -125,34 +105,34 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
      * @param value Value to set for the dataConnector property.
      */
     public void setDataConnector(@jakarta.annotation.Nullable final IndustryDataConnector value) {
-        this.dataConnector = value;
+        this.backingStore.set("dataConnector", value);
     }
     /**
      * Sets the dataDomain property value. The dataDomain property
      * @param value Value to set for the dataDomain property.
      */
     public void setDataDomain(@jakarta.annotation.Nullable final InboundDomain value) {
-        this.dataDomain = value;
+        this.backingStore.set("dataDomain", value);
     }
     /**
      * Sets the effectiveDateTime property value. The start of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the effectiveDateTime property.
      */
     public void setEffectiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.effectiveDateTime = value;
+        this.backingStore.set("effectiveDateTime", value);
     }
     /**
      * Sets the expirationDateTime property value. The end of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the year property value. The year property
      * @param value Value to set for the year property.
      */
     public void setYear(@jakarta.annotation.Nullable final YearTimePeriodDefinition value) {
-        this.year = value;
+        this.backingStore.set("year", value);
     }
 }

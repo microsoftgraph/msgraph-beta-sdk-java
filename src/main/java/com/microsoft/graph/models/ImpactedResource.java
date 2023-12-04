@@ -10,63 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedResource extends Entity implements Parsable {
     /**
-     * The date and time when the impactedResource object was initially associated with the recommendation.
-     */
-    private OffsetDateTime addedDateTime;
-    /**
-     * Additional information unique to the impactedResource to help contextualize the recommendation.
-     */
-    private java.util.List<KeyValue> additionalDetails;
-    /**
-     * The URL link to the corresponding Azure AD resource.
-     */
-    private String apiUrl;
-    /**
-     * Friendly name of the Azure AD resource.
-     */
-    private String displayName;
-    /**
-     * Name of the user or service that last updated the status.
-     */
-    private String lastModifiedBy;
-    /**
-     * The date and time when the status was last updated.
-     */
-    private String lastModifiedDateTime;
-    /**
-     * The user responsible for maintaining the resource.
-     */
-    private String owner;
-    /**
-     * The URL link to the corresponding Azure AD portal page of the resource.
-     */
-    private String portalUrl;
-    /**
-     * The future date and time when the status of a postponed impactedResource will be active again.
-     */
-    private OffsetDateTime postponeUntilDateTime;
-    /**
-     * Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
-     */
-    private Integer rank;
-    /**
-     * The unique identifier of the recommendation that the resource is associated with.
-     */
-    private String recommendationId;
-    /**
-     * Indicates the type of Azure AD resource. Examples include user, application.
-     */
-    private String resourceType;
-    /**
-     * The status property
-     */
-    private RecommendationStatus status;
-    /**
-     * The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
-     */
-    private String subjectId;
-    /**
-     * Instantiates a new impactedResource and sets the default values.
+     * Instantiates a new ImpactedResource and sets the default values.
      */
     public ImpactedResource() {
         super();
@@ -74,7 +18,7 @@ public class ImpactedResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a impactedResource
+     * @return a ImpactedResource
      */
     @jakarta.annotation.Nonnull
     public static ImpactedResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,31 +31,31 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAddedDateTime() {
-        return this.addedDateTime;
+        return this.backingStore.get("addedDateTime");
     }
     /**
      * Gets the additionalDetails property value. Additional information unique to the impactedResource to help contextualize the recommendation.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
-        return this.additionalDetails;
+        return this.backingStore.get("additionalDetails");
     }
     /**
-     * Gets the apiUrl property value. The URL link to the corresponding Azure AD resource.
-     * @return a string
+     * Gets the apiUrl property value. The URL link to the corresponding Microsoft Entra resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApiUrl() {
-        return this.apiUrl;
+        return this.backingStore.get("apiUrl");
     }
     /**
-     * Gets the displayName property value. Friendly name of the Azure AD resource.
-     * @return a string
+     * Gets the displayName property value. Friendly name of the Microsoft Entra resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -132,41 +76,41 @@ public class ImpactedResource extends Entity implements Parsable {
         deserializerMap.put("rank", (n) -> { this.setRank(n.getIntegerValue()); });
         deserializerMap.put("recommendationId", (n) -> { this.setRecommendationId(n.getStringValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus::forValue)); });
         deserializerMap.put("subjectId", (n) -> { this.setSubjectId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. Name of the user or service that last updated the status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the status was last updated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the owner property value. The user responsible for maintaining the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
-        return this.owner;
+        return this.backingStore.get("owner");
     }
     /**
-     * Gets the portalUrl property value. The URL link to the corresponding Azure AD portal page of the resource.
-     * @return a string
+     * Gets the portalUrl property value. The URL link to the corresponding Microsoft Entra admin center page of the resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPortalUrl() {
-        return this.portalUrl;
+        return this.backingStore.get("portalUrl");
     }
     /**
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed impactedResource will be active again.
@@ -174,47 +118,47 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPostponeUntilDateTime() {
-        return this.postponeUntilDateTime;
+        return this.backingStore.get("postponeUntilDateTime");
     }
     /**
      * Gets the rank property value. Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
-        return this.rank;
+        return this.backingStore.get("rank");
     }
     /**
      * Gets the recommendationId property value. The unique identifier of the recommendation that the resource is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendationId() {
-        return this.recommendationId;
+        return this.backingStore.get("recommendationId");
     }
     /**
-     * Gets the resourceType property value. Indicates the type of Azure AD resource. Examples include user, application.
-     * @return a string
+     * Gets the resourceType property value. Indicates the type of Microsoft Entra resource. Examples include user, application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
-        return this.resourceType;
+        return this.backingStore.get("resourceType");
     }
     /**
      * Gets the status property value. The status property
-     * @return a recommendationStatus
+     * @return a RecommendationStatus
      */
     @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the subjectId property value. The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {
-        return this.subjectId;
+        return this.backingStore.get("subjectId");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the addedDateTime property.
      */
     public void setAddedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.addedDateTime = value;
+        this.backingStore.set("addedDateTime", value);
     }
     /**
      * Sets the additionalDetails property value. Additional information unique to the impactedResource to help contextualize the recommendation.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.additionalDetails = value;
+        this.backingStore.set("additionalDetails", value);
     }
     /**
-     * Sets the apiUrl property value. The URL link to the corresponding Azure AD resource.
+     * Sets the apiUrl property value. The URL link to the corresponding Microsoft Entra resource.
      * @param value Value to set for the apiUrl property.
      */
     public void setApiUrl(@jakarta.annotation.Nullable final String value) {
-        this.apiUrl = value;
+        this.backingStore.set("apiUrl", value);
     }
     /**
-     * Sets the displayName property value. Friendly name of the Azure AD resource.
+     * Sets the displayName property value. Friendly name of the Microsoft Entra resource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. Name of the user or service that last updated the status.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the status was last updated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the owner property value. The user responsible for maintaining the resource.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {
-        this.owner = value;
+        this.backingStore.set("owner", value);
     }
     /**
-     * Sets the portalUrl property value. The URL link to the corresponding Azure AD portal page of the resource.
+     * Sets the portalUrl property value. The URL link to the corresponding Microsoft Entra admin center page of the resource.
      * @param value Value to set for the portalUrl property.
      */
     public void setPortalUrl(@jakarta.annotation.Nullable final String value) {
-        this.portalUrl = value;
+        this.backingStore.set("portalUrl", value);
     }
     /**
      * Sets the postponeUntilDateTime property value. The future date and time when the status of a postponed impactedResource will be active again.
      * @param value Value to set for the postponeUntilDateTime property.
      */
     public void setPostponeUntilDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.postponeUntilDateTime = value;
+        this.backingStore.set("postponeUntilDateTime", value);
     }
     /**
      * Sets the rank property value. Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
      * @param value Value to set for the rank property.
      */
     public void setRank(@jakarta.annotation.Nullable final Integer value) {
-        this.rank = value;
+        this.backingStore.set("rank", value);
     }
     /**
      * Sets the recommendationId property value. The unique identifier of the recommendation that the resource is associated with.
      * @param value Value to set for the recommendationId property.
      */
     public void setRecommendationId(@jakarta.annotation.Nullable final String value) {
-        this.recommendationId = value;
+        this.backingStore.set("recommendationId", value);
     }
     /**
-     * Sets the resourceType property value. Indicates the type of Azure AD resource. Examples include user, application.
+     * Sets the resourceType property value. Indicates the type of Microsoft Entra resource. Examples include user, application.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.resourceType = value;
+        this.backingStore.set("resourceType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final RecommendationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the subjectId property value. The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
      * @param value Value to set for the subjectId property.
      */
     public void setSubjectId(@jakarta.annotation.Nullable final String value) {
-        this.subjectId = value;
+        this.backingStore.set("subjectId", value);
     }
 }

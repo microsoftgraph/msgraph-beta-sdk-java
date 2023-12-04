@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * OMA settings. This collection can contain a maximum of 500 elements.
-     */
-    private java.util.List<OmaSetting> omaSettings;
-    /**
-     * Instantiates a new androidWorkProfileCustomConfiguration and sets the default values.
+     * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
      */
     public AndroidWorkProfileCustomConfiguration() {
         super();
@@ -25,7 +21,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileCustomConfiguration
+     * @return a AndroidWorkProfileCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the omaSettings property value. OMA settings. This collection can contain a maximum of 500 elements.
-     * @return a omaSetting
+     * @return a java.util.List<OmaSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OmaSetting> getOmaSettings() {
-        return this.omaSettings;
+        return this.backingStore.get("omaSettings");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * @param value Value to set for the omaSettings property.
      */
     public void setOmaSettings(@jakarta.annotation.Nullable final java.util.List<OmaSetting> value) {
-        this.omaSettings = value;
+        this.backingStore.set("omaSettings", value);
     }
 }

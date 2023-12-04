@@ -12,31 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration implements Parsable {
     /**
-     * VPN Authentication Method.
-     */
-    private VpnAuthenticationMethod authenticationMethod;
-    /**
-     * Bypass VPN on company Wi-Fi.
-     */
-    private Boolean bypassVpnOnCompanyWifi;
-    /**
-     * Bypass VPN on home Wi-Fi.
-     */
-    private Boolean bypassVpnOnHomeWifi;
-    /**
-     * DNS suffix search list.
-     */
-    private java.util.List<String> dnsSuffixSearchList;
-    /**
-     * Identity certificate for client authentication when authentication method is certificate.
-     */
-    private WindowsPhone81CertificateProfileBase identityCertificate;
-    /**
-     * Remember user credentials.
-     */
-    private Boolean rememberUserCredentials;
-    /**
-     * Instantiates a new windowsPhone81VpnConfiguration and sets the default values.
+     * Instantiates a new WindowsPhone81VpnConfiguration and sets the default values.
      */
     public WindowsPhone81VpnConfiguration() {
         super();
@@ -45,7 +21,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81VpnConfiguration
+     * @return a WindowsPhone81VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,35 +30,35 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.backingStore.get("authenticationMethod");
     }
     /**
      * Gets the bypassVpnOnCompanyWifi property value. Bypass VPN on company Wi-Fi.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnCompanyWifi() {
-        return this.bypassVpnOnCompanyWifi;
+        return this.backingStore.get("bypassVpnOnCompanyWifi");
     }
     /**
      * Gets the bypassVpnOnHomeWifi property value. Bypass VPN on home Wi-Fi.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnHomeWifi() {
-        return this.bypassVpnOnHomeWifi;
+        return this.backingStore.get("bypassVpnOnHomeWifi");
     }
     /**
      * Gets the dnsSuffixSearchList property value. DNS suffix search list.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixSearchList() {
-        return this.dnsSuffixSearchList;
+        return this.backingStore.get("dnsSuffixSearchList");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +67,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod::forValue)); });
         deserializerMap.put("bypassVpnOnCompanyWifi", (n) -> { this.setBypassVpnOnCompanyWifi(n.getBooleanValue()); });
         deserializerMap.put("bypassVpnOnHomeWifi", (n) -> { this.setBypassVpnOnHomeWifi(n.getBooleanValue()); });
         deserializerMap.put("dnsSuffixSearchList", (n) -> { this.setDnsSuffixSearchList(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -101,19 +77,19 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a windowsPhone81CertificateProfileBase
+     * @return a WindowsPhone81CertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsPhone81CertificateProfileBase getIdentityCertificate() {
-        return this.identityCertificate;
+        return this.backingStore.get("identityCertificate");
     }
     /**
      * Gets the rememberUserCredentials property value. Remember user credentials.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {
-        return this.rememberUserCredentials;
+        return this.backingStore.get("rememberUserCredentials");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final VpnAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.backingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the bypassVpnOnCompanyWifi property value. Bypass VPN on company Wi-Fi.
      * @param value Value to set for the bypassVpnOnCompanyWifi property.
      */
     public void setBypassVpnOnCompanyWifi(@jakarta.annotation.Nullable final Boolean value) {
-        this.bypassVpnOnCompanyWifi = value;
+        this.backingStore.set("bypassVpnOnCompanyWifi", value);
     }
     /**
      * Sets the bypassVpnOnHomeWifi property value. Bypass VPN on home Wi-Fi.
      * @param value Value to set for the bypassVpnOnHomeWifi property.
      */
     public void setBypassVpnOnHomeWifi(@jakarta.annotation.Nullable final Boolean value) {
-        this.bypassVpnOnHomeWifi = value;
+        this.backingStore.set("bypassVpnOnHomeWifi", value);
     }
     /**
      * Sets the dnsSuffixSearchList property value. DNS suffix search list.
      * @param value Value to set for the dnsSuffixSearchList property.
      */
     public void setDnsSuffixSearchList(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.dnsSuffixSearchList = value;
+        this.backingStore.set("dnsSuffixSearchList", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final WindowsPhone81CertificateProfileBase value) {
-        this.identityCertificate = value;
+        this.backingStore.set("identityCertificate", value);
     }
     /**
      * Sets the rememberUserCredentials property value. Remember user credentials.
      * @param value Value to set for the rememberUserCredentials property.
      */
     public void setRememberUserCredentials(@jakarta.annotation.Nullable final Boolean value) {
-        this.rememberUserCredentials = value;
+        this.backingStore.set("rememberUserCredentials", value);
     }
 }

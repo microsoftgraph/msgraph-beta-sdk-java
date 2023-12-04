@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfigurationBase implements Parsable {
     /**
-     * Instantiates a new iosExpeditedCheckinConfiguration and sets the default values.
+     * Instantiates a new IosExpeditedCheckinConfiguration and sets the default values.
      */
     public IosExpeditedCheckinConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosExpeditedCheckinConfiguration
+     * @return a IosExpeditedCheckinConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosExpeditedCheckinConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
