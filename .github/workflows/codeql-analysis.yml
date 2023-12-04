@@ -82,9 +82,9 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build with Gradle
-        run: gradle clean build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
-
+      - name: Build #with Gradle
+        run: #gradle clean build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
+            /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/20.0.2-9/x64/bin/java -Dfile.encoding=UTF-8, -Xmx4096M, -Xms1024M, -Xss16M, -Djdk.util.zip.disableZip64ExtraFieldValidation=true, --add-opens, java.base/sun.reflect.annotation=ALL-UNNAMED, -classpath, /opt/hostedtoolcache/CodeQL/2.15.3/x64/codeql/java/tools/semmle-extractor-java.jar:/opt/hostedtoolcache/CodeQL/2.15.3/x64/codeql/java/tools/lombok-javac-extend.jar, com.semmle.extractor.java.JavaExtractor, --jdk-version, 20, --javac-args, @@@/usr/local/vss-agent/2.311.0/_work/_temp/codeql_databases/java/log/ext/javac.args
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
