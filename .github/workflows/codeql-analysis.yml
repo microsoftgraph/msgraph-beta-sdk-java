@@ -57,6 +57,8 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           threads: 4
+          init-heap: 1024M  # Initial heap size
+          max-heap: 4096M  # Maximum heap size
           #ram: 8384
         
           # If you wish to specify custom queries, you can do so here or in a config file.
@@ -81,7 +83,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: gradle clean build "-Dorg.gradle.jvmargs=-Xmx8g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
+        run: gradle clean build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
