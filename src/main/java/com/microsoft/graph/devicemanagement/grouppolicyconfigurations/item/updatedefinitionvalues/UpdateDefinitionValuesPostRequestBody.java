@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The added property
+     * Stores model information.
      */
-    private java.util.List<GroupPolicyDefinitionValue> added;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The deletedIds property
-     */
-    private java.util.List<String> deletedIds;
-    /**
-     * The updated property
-     */
-    private java.util.List<GroupPolicyDefinitionValue> updated;
-    /**
-     * Instantiates a new updateDefinitionValuesPostRequestBody and sets the default values.
+     * Instantiates a new UpdateDefinitionValuesPostRequestBody and sets the default values.
      */
     public UpdateDefinitionValuesPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateDefinitionValuesPostRequestBody
+     * @return a UpdateDefinitionValuesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateDefinitionValuesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,27 +37,40 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the added property value. The added property
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getAdded() {
-        return this.added;
+        return this.backingStore.get("added");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the deletedIds property value. The deletedIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeletedIds() {
-        return this.deletedIds;
+        return this.backingStore.get("deletedIds");
     }
     /**
      * The deserialization information for the current model
@@ -80,11 +86,11 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the updated property value. The updated property
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getUpdated() {
-        return this.updated;
+        return this.backingStore.get("updated");
     }
     /**
      * Serializes information the current object
@@ -102,27 +108,35 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the added property.
      */
     public void setAdded(@jakarta.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
-        this.added = value;
+        this.backingStore.set("added", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the deletedIds property value. The deletedIds property
      * @param value Value to set for the deletedIds property.
      */
     public void setDeletedIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.deletedIds = value;
+        this.backingStore.set("deletedIds", value);
     }
     /**
      * Sets the updated property value. The updated property
      * @param value Value to set for the updated property.
      */
     public void setUpdated(@jakarta.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
-        this.updated = value;
+        this.backingStore.set("updated", value);
     }
 }

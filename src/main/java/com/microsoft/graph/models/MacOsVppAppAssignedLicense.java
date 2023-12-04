@@ -12,23 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     /**
-     * The user email address.
-     */
-    private String userEmailAddress;
-    /**
-     * The user ID.
-     */
-    private String userId;
-    /**
-     * The user name.
-     */
-    private String userName;
-    /**
-     * The user principal name.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new macOsVppAppAssignedLicense and sets the default values.
+     * Instantiates a new MacOsVppAppAssignedLicense and sets the default values.
      */
     public MacOsVppAppAssignedLicense() {
         super();
@@ -36,7 +20,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOsVppAppAssignedLicense
+     * @return a MacOsVppAppAssignedLicense
      */
     @jakarta.annotation.Nonnull
     public static MacOsVppAppAssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,35 +42,35 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userEmailAddress property value. The user email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmailAddress() {
-        return this.userEmailAddress;
+        return this.backingStore.get("userEmailAddress");
     }
     /**
      * Gets the userId property value. The user ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userName property value. The user name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userEmailAddress property.
      */
     public void setUserEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.userEmailAddress = value;
+        this.backingStore.set("userEmailAddress", value);
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. The user name.
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

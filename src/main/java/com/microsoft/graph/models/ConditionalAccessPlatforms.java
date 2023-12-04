@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
-     */
-    private java.util.List<ConditionalAccessDevicePlatform> excludePlatforms;
-    /**
-     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux.
-     */
-    private java.util.List<ConditionalAccessDevicePlatform> includePlatforms;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new conditionalAccessPlatforms and sets the default values.
+     * Instantiates a new ConditionalAccessPlatforms and sets the default values.
      */
     public ConditionalAccessPlatforms() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessPlatforms
+     * @return a ConditionalAccessPlatforms
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPlatforms createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +35,33 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
         return new ConditionalAccessPlatforms();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
-     * @return a conditionalAccessDevicePlatform
+     * @return a java.util.List<ConditionalAccessDevicePlatform>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessDevicePlatform> getExcludePlatforms() {
-        return this.excludePlatforms;
+        return this.backingStore.get("excludePlatforms");
     }
     /**
      * The deserialization information for the current model
@@ -64,26 +70,26 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("excludePlatforms", (n) -> { this.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
-        deserializerMap.put("includePlatforms", (n) -> { this.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
+        deserializerMap.put("excludePlatforms", (n) -> { this.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform::forValue)); });
+        deserializerMap.put("includePlatforms", (n) -> { this.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux.
-     * @return a conditionalAccessDevicePlatform
+     * @return a java.util.List<ConditionalAccessDevicePlatform>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessDevicePlatform> getIncludePlatforms() {
-        return this.includePlatforms;
+        return this.backingStore.get("includePlatforms");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
      * @param value Value to set for the excludePlatforms property.
      */
     public void setExcludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
-        this.excludePlatforms = value;
+        this.backingStore.set("excludePlatforms", value);
     }
     /**
      * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux.
      * @param value Value to set for the includePlatforms property.
      */
     public void setIncludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
-        this.includePlatforms = value;
+        this.backingStore.set("includePlatforms", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

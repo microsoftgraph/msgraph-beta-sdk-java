@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CorsConfigurationV2 extends Entity implements Parsable {
     /**
-     * The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
-     */
-    private java.util.List<String> allowedHeaders;
-    /**
-     * The HTTP request methods that the origin domain may use for a CORS request.
-     */
-    private java.util.List<String> allowedMethods;
-    /**
-     * The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user agent sends to the service.
-     */
-    private java.util.List<String> allowedOrigins;
-    /**
-     * The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
-     */
-    private Integer maxAgeInSeconds;
-    /**
-     * Resource within the application segment for which CORS permissions are granted. / grants permission for the whole app segment.
-     */
-    private String resource;
-    /**
      * Instantiates a new CorsConfigurationV2 and sets the default values.
      */
     public CorsConfigurationV2() {
@@ -46,27 +26,27 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedHeaders() {
-        return this.allowedHeaders;
+        return this.backingStore.get("allowedHeaders");
     }
     /**
      * Gets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedMethods() {
-        return this.allowedMethods;
+        return this.backingStore.get("allowedMethods");
     }
     /**
      * Gets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user agent sends to the service.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedOrigins() {
-        return this.allowedOrigins;
+        return this.backingStore.get("allowedOrigins");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +64,19 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxAgeInSeconds() {
-        return this.maxAgeInSeconds;
+        return this.backingStore.get("maxAgeInSeconds");
     }
     /**
      * Gets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for the whole app segment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
      * @param value Value to set for the allowedHeaders property.
      */
     public void setAllowedHeaders(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedHeaders = value;
+        this.backingStore.set("allowedHeaders", value);
     }
     /**
      * Sets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
      * @param value Value to set for the allowedMethods property.
      */
     public void setAllowedMethods(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedMethods = value;
+        this.backingStore.set("allowedMethods", value);
     }
     /**
      * Sets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user agent sends to the service.
      * @param value Value to set for the allowedOrigins property.
      */
     public void setAllowedOrigins(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedOrigins = value;
+        this.backingStore.set("allowedOrigins", value);
     }
     /**
      * Sets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
      * @param value Value to set for the maxAgeInSeconds property.
      */
     public void setMaxAgeInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.maxAgeInSeconds = value;
+        this.backingStore.set("maxAgeInSeconds", value);
     }
     /**
      * Sets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for the whole app segment.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
 }

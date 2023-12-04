@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Endpoint extends DirectoryObject implements Parsable {
     /**
-     * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
-     */
-    private String capability;
-    /**
-     * Application id of the publishing underlying service. Not nullable. Read-only.
-     */
-    private String providerId;
-    /**
-     * Name of the publishing underlying service. Read-only.
-     */
-    private String providerName;
-    /**
-     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
-     */
-    private String providerResourceId;
-    /**
-     * URL of the published resource. Not nullable. Read-only.
-     */
-    private String uri;
-    /**
-     * Instantiates a new endpoint and sets the default values.
+     * Instantiates a new Endpoint and sets the default values.
      */
     public Endpoint() {
         super();
@@ -38,7 +18,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endpoint
+     * @return a Endpoint
      */
     @jakarta.annotation.Nonnull
     public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +26,12 @@ public class Endpoint extends DirectoryObject implements Parsable {
         return new Endpoint();
     }
     /**
-     * Gets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
-     * @return a string
+     * Gets the capability property value. Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCapability() {
-        return this.capability;
+        return this.backingStore.get("capability");
     }
     /**
      * The deserialization information for the current model
@@ -69,35 +49,35 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderId() {
-        return this.providerId;
+        return this.backingStore.get("providerId");
     }
     /**
      * Gets the providerName property value. Name of the publishing underlying service. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
-        return this.providerName;
+        return this.backingStore.get("providerName");
     }
     /**
-     * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
-     * @return a string
+     * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderResourceId() {
-        return this.providerResourceId;
+        return this.backingStore.get("providerResourceId");
     }
     /**
      * Gets the uri property value. URL of the published resource. Not nullable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUri() {
-        return this.uri;
+        return this.backingStore.get("uri");
     }
     /**
      * Serializes information the current object
@@ -113,38 +93,38 @@ public class Endpoint extends DirectoryObject implements Parsable {
         writer.writeStringValue("uri", this.getUri());
     }
     /**
-     * Sets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Sets the capability property value. Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
      * @param value Value to set for the capability property.
      */
     public void setCapability(@jakarta.annotation.Nullable final String value) {
-        this.capability = value;
+        this.backingStore.set("capability", value);
     }
     /**
      * Sets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
      * @param value Value to set for the providerId property.
      */
     public void setProviderId(@jakarta.annotation.Nullable final String value) {
-        this.providerId = value;
+        this.backingStore.set("providerId", value);
     }
     /**
      * Sets the providerName property value. Name of the publishing underlying service. Read-only.
      * @param value Value to set for the providerName property.
      */
     public void setProviderName(@jakarta.annotation.Nullable final String value) {
-        this.providerName = value;
+        this.backingStore.set("providerName", value);
     }
     /**
-     * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
      * @param value Value to set for the providerResourceId property.
      */
     public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {
-        this.providerResourceId = value;
+        this.backingStore.set("providerResourceId", value);
     }
     /**
      * Sets the uri property value. URL of the published resource. Not nullable. Read-only.
      * @param value Value to set for the uri property.
      */
     public void setUri(@jakarta.annotation.Nullable final String value) {
-        this.uri = value;
+        this.backingStore.set("uri", value);
     }
 }

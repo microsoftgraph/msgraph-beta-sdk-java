@@ -9,51 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /**
-     * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
-     */
-    private java.util.List<String> appScopeIds;
-    /**
-     * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
-     */
-    private java.util.List<AppScope> appScopes;
-    /**
-     * The condition property
-     */
-    private String condition;
-    /**
-     * Description of the role assignment.
-     */
-    private String description;
-    /**
-     * Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
-     */
-    private java.util.List<String> directoryScopeIds;
-    /**
-     * Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-     */
-    private java.util.List<DirectoryObject> directoryScopes;
-    /**
-     * Name of the role assignment. Required.
-     */
-    private String displayName;
-    /**
-     * Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
-     */
-    private java.util.List<String> principalIds;
-    /**
-     * Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-     */
-    private java.util.List<DirectoryObject> principals;
-    /**
-     * Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
-     */
-    private UnifiedRoleDefinition roleDefinition;
-    /**
-     * Identifier of the unifiedRoleDefinition the assignment is for.
-     */
-    private String roleDefinitionId;
-    /**
-     * Instantiates a new unifiedRoleAssignmentMultiple and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentMultiple and sets the default values.
      */
     public UnifiedRoleAssignmentMultiple() {
         super();
@@ -61,7 +17,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleAssignmentMultiple
+     * @return a UnifiedRoleAssignmentMultiple
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentMultiple createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,59 +26,59 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     }
     /**
      * Gets the appScopeIds property value. Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAppScopeIds() {
-        return this.appScopeIds;
+        return this.backingStore.get("appScopeIds");
     }
     /**
      * Gets the appScopes property value. Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
-     * @return a appScope
+     * @return a java.util.List<AppScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppScope> getAppScopes() {
-        return this.appScopes;
+        return this.backingStore.get("appScopes");
     }
     /**
      * Gets the condition property value. The condition property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCondition() {
-        return this.condition;
+        return this.backingStore.get("condition");
     }
     /**
      * Gets the description property value. Description of the role assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the directoryScopeIds property value. Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDirectoryScopeIds() {
-        return this.directoryScopeIds;
+        return this.backingStore.get("directoryScopeIds");
     }
     /**
      * Gets the directoryScopes property value. Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectoryScopes() {
-        return this.directoryScopes;
+        return this.backingStore.get("directoryScopes");
     }
     /**
      * Gets the displayName property value. Name of the role assignment. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -146,35 +102,35 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     }
     /**
      * Gets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPrincipalIds() {
-        return this.principalIds;
+        return this.backingStore.get("principalIds");
     }
     /**
      * Gets the principals property value. Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getPrincipals() {
-        return this.principals;
+        return this.backingStore.get("principals");
     }
     /**
      * Gets the roleDefinition property value. Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
-     * @return a unifiedRoleDefinition
+     * @return a UnifiedRoleDefinition
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
-        return this.roleDefinition;
+        return this.backingStore.get("roleDefinition");
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this.roleDefinitionId;
+        return this.backingStore.get("roleDefinitionId");
     }
     /**
      * Serializes information the current object
@@ -200,76 +156,76 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopeIds property.
      */
     public void setAppScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.appScopeIds = value;
+        this.backingStore.set("appScopeIds", value);
     }
     /**
      * Sets the appScopes property value. Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      * @param value Value to set for the appScopes property.
      */
     public void setAppScopes(@jakarta.annotation.Nullable final java.util.List<AppScope> value) {
-        this.appScopes = value;
+        this.backingStore.set("appScopes", value);
     }
     /**
      * Sets the condition property value. The condition property
      * @param value Value to set for the condition property.
      */
     public void setCondition(@jakarta.annotation.Nullable final String value) {
-        this.condition = value;
+        this.backingStore.set("condition", value);
     }
     /**
      * Sets the description property value. Description of the role assignment.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the directoryScopeIds property value. Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @param value Value to set for the directoryScopeIds property.
      */
     public void setDirectoryScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.directoryScopeIds = value;
+        this.backingStore.set("directoryScopeIds", value);
     }
     /**
      * Sets the directoryScopes property value. Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the directoryScopes property.
      */
     public void setDirectoryScopes(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.directoryScopes = value;
+        this.backingStore.set("directoryScopes", value);
     }
     /**
      * Sets the displayName property value. Name of the role assignment. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
      * @param value Value to set for the principalIds property.
      */
     public void setPrincipalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.principalIds = value;
+        this.backingStore.set("principalIds", value);
     }
     /**
      * Sets the principals property value. Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the principals property.
      */
     public void setPrincipals(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.principals = value;
+        this.backingStore.set("principals", value);
     }
     /**
      * Sets the roleDefinition property value. Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
-        this.roleDefinition = value;
+        this.backingStore.set("roleDefinition", value);
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for.
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.roleDefinitionId = value;
+        this.backingStore.set("roleDefinitionId", value);
     }
 }

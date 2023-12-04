@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InformationProtection extends Entity implements Parsable {
     /**
-     * The bitlocker property
-     */
-    private Bitlocker bitlocker;
-    /**
-     * The dataLossPreventionPolicies property
-     */
-    private java.util.List<DataLossPreventionPolicy> dataLossPreventionPolicies;
-    /**
-     * The policy property
-     */
-    private InformationProtectionPolicy policy;
-    /**
-     * The sensitivityLabels property
-     */
-    private java.util.List<SensitivityLabel> sensitivityLabels;
-    /**
-     * The sensitivityPolicySettings property
-     */
-    private SensitivityPolicySettings sensitivityPolicySettings;
-    /**
-     * The threatAssessmentRequests property
-     */
-    private java.util.List<ThreatAssessmentRequest> threatAssessmentRequests;
-    /**
-     * Instantiates a new informationProtection and sets the default values.
+     * Instantiates a new InformationProtection and sets the default values.
      */
     public InformationProtection() {
         super();
@@ -41,7 +17,7 @@ public class InformationProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtection
+     * @return a InformationProtection
      */
     @jakarta.annotation.Nonnull
     public static InformationProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +26,19 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the bitlocker property value. The bitlocker property
-     * @return a bitlocker
+     * @return a Bitlocker
      */
     @jakarta.annotation.Nullable
     public Bitlocker getBitlocker() {
-        return this.bitlocker;
+        return this.backingStore.get("bitlocker");
     }
     /**
      * Gets the dataLossPreventionPolicies property value. The dataLossPreventionPolicies property
-     * @return a dataLossPreventionPolicy
+     * @return a java.util.List<DataLossPreventionPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataLossPreventionPolicy> getDataLossPreventionPolicies() {
-        return this.dataLossPreventionPolicies;
+        return this.backingStore.get("dataLossPreventionPolicies");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +57,35 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a informationProtectionPolicy
+     * @return a InformationProtectionPolicy
      */
     @jakarta.annotation.Nullable
     public InformationProtectionPolicy getPolicy() {
-        return this.policy;
+        return this.backingStore.get("policy");
     }
     /**
      * Gets the sensitivityLabels property value. The sensitivityLabels property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
-        return this.sensitivityLabels;
+        return this.backingStore.get("sensitivityLabels");
     }
     /**
      * Gets the sensitivityPolicySettings property value. The sensitivityPolicySettings property
-     * @return a sensitivityPolicySettings
+     * @return a SensitivityPolicySettings
      */
     @jakarta.annotation.Nullable
     public SensitivityPolicySettings getSensitivityPolicySettings() {
-        return this.sensitivityPolicySettings;
+        return this.backingStore.get("sensitivityPolicySettings");
     }
     /**
      * Gets the threatAssessmentRequests property value. The threatAssessmentRequests property
-     * @return a threatAssessmentRequest
+     * @return a java.util.List<ThreatAssessmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentRequest> getThreatAssessmentRequests() {
-        return this.threatAssessmentRequests;
+        return this.backingStore.get("threatAssessmentRequests");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the bitlocker property.
      */
     public void setBitlocker(@jakarta.annotation.Nullable final Bitlocker value) {
-        this.bitlocker = value;
+        this.backingStore.set("bitlocker", value);
     }
     /**
      * Sets the dataLossPreventionPolicies property value. The dataLossPreventionPolicies property
      * @param value Value to set for the dataLossPreventionPolicies property.
      */
     public void setDataLossPreventionPolicies(@jakarta.annotation.Nullable final java.util.List<DataLossPreventionPolicy> value) {
-        this.dataLossPreventionPolicies = value;
+        this.backingStore.set("dataLossPreventionPolicies", value);
     }
     /**
      * Sets the policy property value. The policy property
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final InformationProtectionPolicy value) {
-        this.policy = value;
+        this.backingStore.set("policy", value);
     }
     /**
      * Sets the sensitivityLabels property value. The sensitivityLabels property
      * @param value Value to set for the sensitivityLabels property.
      */
     public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<SensitivityLabel> value) {
-        this.sensitivityLabels = value;
+        this.backingStore.set("sensitivityLabels", value);
     }
     /**
      * Sets the sensitivityPolicySettings property value. The sensitivityPolicySettings property
      * @param value Value to set for the sensitivityPolicySettings property.
      */
     public void setSensitivityPolicySettings(@jakarta.annotation.Nullable final SensitivityPolicySettings value) {
-        this.sensitivityPolicySettings = value;
+        this.backingStore.set("sensitivityPolicySettings", value);
     }
     /**
      * Sets the threatAssessmentRequests property value. The threatAssessmentRequests property
      * @param value Value to set for the threatAssessmentRequests property.
      */
     public void setThreatAssessmentRequests(@jakarta.annotation.Nullable final java.util.List<ThreatAssessmentRequest> value) {
-        this.threatAssessmentRequests = value;
+        this.backingStore.set("threatAssessmentRequests", value);
     }
 }

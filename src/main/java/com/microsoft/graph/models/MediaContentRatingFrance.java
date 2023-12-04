@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable {
+public class MediaContentRatingFrance implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Movies rating labels in France
-     */
-    private RatingFranceMoviesType movieRating;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * TV content rating labels in France
-     */
-    private RatingFranceTelevisionType tvRating;
-    /**
-     * Instantiates a new mediaContentRatingFrance and sets the default values.
+     * Instantiates a new MediaContentRatingFrance and sets the default values.
      */
     public MediaContentRatingFrance() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mediaContentRatingFrance
+     * @return a MediaContentRatingFrance
      */
     @jakarta.annotation.Nonnull
     public static MediaContentRatingFrance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,25 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         return new MediaContentRatingFrance();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -56,34 +62,34 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingFranceMoviesType.class)); });
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingFranceMoviesType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingFranceTelevisionType.class)); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingFranceTelevisionType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the movieRating property value. Movies rating labels in France
-     * @return a ratingFranceMoviesType
+     * @return a RatingFranceMoviesType
      */
     @jakarta.annotation.Nullable
     public RatingFranceMoviesType getMovieRating() {
-        return this.movieRating;
+        return this.backingStore.get("movieRating");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tvRating property value. TV content rating labels in France
-     * @return a ratingFranceTelevisionType
+     * @return a RatingFranceTelevisionType
      */
     @jakarta.annotation.Nullable
     public RatingFranceTelevisionType getTvRating() {
-        return this.tvRating;
+        return this.backingStore.get("tvRating");
     }
     /**
      * Serializes information the current object
@@ -97,31 +103,39 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the movieRating property value. Movies rating labels in France
      * @param value Value to set for the movieRating property.
      */
     public void setMovieRating(@jakarta.annotation.Nullable final RatingFranceMoviesType value) {
-        this.movieRating = value;
+        this.backingStore.set("movieRating", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tvRating property value. TV content rating labels in France
      * @param value Value to set for the tvRating property.
      */
     public void setTvRating(@jakarta.annotation.Nullable final RatingFranceTelevisionType value) {
-        this.tvRating = value;
+        this.backingStore.set("tvRating", value);
     }
 }

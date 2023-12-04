@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcUserSettingAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CloudPcUserSettingAssignment> value;
-    /**
-     * Instantiates a new cloudPcUserSettingAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcUserSettingAssignmentCollectionResponse and sets the default values.
      */
     public CloudPcUserSettingAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class CloudPcUserSettingAssignmentCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcUserSettingAssignmentCollectionResponse
+     * @return a CloudPcUserSettingAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcUserSettingAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class CloudPcUserSettingAssignmentCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcUserSettingAssignment
+     * @return a java.util.List<CloudPcUserSettingAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserSettingAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CloudPcUserSettingAssignmentCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CloudPcUserSettingAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

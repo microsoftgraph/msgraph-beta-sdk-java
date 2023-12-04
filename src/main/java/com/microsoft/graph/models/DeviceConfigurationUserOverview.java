@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationUserOverview extends Entity implements Parsable {
     /**
-     * Version of the policy for that overview
-     */
-    private Integer configurationVersion;
-    /**
-     * Number of users in conflict
-     */
-    private Integer conflictCount;
-    /**
-     * Number of error Users
-     */
-    private Integer errorCount;
-    /**
-     * Number of failed Users
-     */
-    private Integer failedCount;
-    /**
-     * Last update time
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * Number of not applicable users
-     */
-    private Integer notApplicableCount;
-    /**
-     * Number of pending Users
-     */
-    private Integer pendingCount;
-    /**
-     * Number of succeeded Users
-     */
-    private Integer successCount;
-    /**
-     * Instantiates a new deviceConfigurationUserOverview and sets the default values.
+     * Instantiates a new DeviceConfigurationUserOverview and sets the default values.
      */
     public DeviceConfigurationUserOverview() {
         super();
@@ -50,7 +18,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationUserOverview
+     * @return a DeviceConfigurationUserOverview
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationUserOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,35 +27,35 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
-        return this.configurationVersion;
+        return this.backingStore.get("configurationVersion");
     }
     /**
      * Gets the conflictCount property value. Number of users in conflict
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
-        return this.conflictCount;
+        return this.backingStore.get("conflictCount");
     }
     /**
      * Gets the errorCount property value. Number of error Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
-        return this.errorCount;
+        return this.backingStore.get("errorCount");
     }
     /**
      * Gets the failedCount property value. Number of failed Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
-        return this.failedCount;
+        return this.backingStore.get("failedCount");
     }
     /**
      * The deserialization information for the current model
@@ -112,31 +80,31 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.backingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this.notApplicableCount;
+        return this.backingStore.get("notApplicableCount");
     }
     /**
      * Gets the pendingCount property value. Number of pending Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
-        return this.pendingCount;
+        return this.backingStore.get("pendingCount");
     }
     /**
      * Gets the successCount property value. Number of succeeded Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {
-        return this.successCount;
+        return this.backingStore.get("successCount");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      * @param value Value to set for the configurationVersion property.
      */
     public void setConfigurationVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.configurationVersion = value;
+        this.backingStore.set("configurationVersion", value);
     }
     /**
      * Sets the conflictCount property value. Number of users in conflict
      * @param value Value to set for the conflictCount property.
      */
     public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
-        this.conflictCount = value;
+        this.backingStore.set("conflictCount", value);
     }
     /**
      * Sets the errorCount property value. Number of error Users
      * @param value Value to set for the errorCount property.
      */
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCount = value;
+        this.backingStore.set("errorCount", value);
     }
     /**
      * Sets the failedCount property value. Number of failed Users
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedCount = value;
+        this.backingStore.set("failedCount", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. Last update time
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable users
      * @param value Value to set for the notApplicableCount property.
      */
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notApplicableCount = value;
+        this.backingStore.set("notApplicableCount", value);
     }
     /**
      * Sets the pendingCount property value. Number of pending Users
      * @param value Value to set for the pendingCount property.
      */
     public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pendingCount = value;
+        this.backingStore.set("pendingCount", value);
     }
     /**
      * Sets the successCount property value. Number of succeeded Users
      * @param value Value to set for the successCount property.
      */
     public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successCount = value;
+        this.backingStore.set("successCount", value);
     }
 }

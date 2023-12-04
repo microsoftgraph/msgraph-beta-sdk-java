@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DetectionRule extends ProtectionRule implements Parsable {
     /**
-     * The detectionAction property
-     */
-    private DetectionAction detectionAction;
-    /**
-     * The lastRunDetails property
-     */
-    private RunDetails lastRunDetails;
-    /**
-     * The queryCondition property
-     */
-    private QueryCondition queryCondition;
-    /**
-     * The schedule property
-     */
-    private RuleSchedule schedule;
-    /**
-     * Instantiates a new detectionRule and sets the default values.
+     * Instantiates a new DetectionRule and sets the default values.
      */
     public DetectionRule() {
         super();
@@ -34,7 +18,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectionRule
+     * @return a DetectionRule
      */
     @jakarta.annotation.Nonnull
     public static DetectionRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,11 +27,11 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the detectionAction property value. The detectionAction property
-     * @return a detectionAction
+     * @return a DetectionAction
      */
     @jakarta.annotation.Nullable
     public DetectionAction getDetectionAction() {
-        return this.detectionAction;
+        return this.backingStore.get("detectionAction");
     }
     /**
      * The deserialization information for the current model
@@ -64,27 +48,27 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the lastRunDetails property value. The lastRunDetails property
-     * @return a runDetails
+     * @return a RunDetails
      */
     @jakarta.annotation.Nullable
     public RunDetails getLastRunDetails() {
-        return this.lastRunDetails;
+        return this.backingStore.get("lastRunDetails");
     }
     /**
      * Gets the queryCondition property value. The queryCondition property
-     * @return a queryCondition
+     * @return a QueryCondition
      */
     @jakarta.annotation.Nullable
     public QueryCondition getQueryCondition() {
-        return this.queryCondition;
+        return this.backingStore.get("queryCondition");
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a ruleSchedule
+     * @return a RuleSchedule
      */
     @jakarta.annotation.Nullable
     public RuleSchedule getSchedule() {
-        return this.schedule;
+        return this.backingStore.get("schedule");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * @param value Value to set for the detectionAction property.
      */
     public void setDetectionAction(@jakarta.annotation.Nullable final DetectionAction value) {
-        this.detectionAction = value;
+        this.backingStore.set("detectionAction", value);
     }
     /**
      * Sets the lastRunDetails property value. The lastRunDetails property
      * @param value Value to set for the lastRunDetails property.
      */
     public void setLastRunDetails(@jakarta.annotation.Nullable final RunDetails value) {
-        this.lastRunDetails = value;
+        this.backingStore.set("lastRunDetails", value);
     }
     /**
      * Sets the queryCondition property value. The queryCondition property
      * @param value Value to set for the queryCondition property.
      */
     public void setQueryCondition(@jakarta.annotation.Nullable final QueryCondition value) {
-        this.queryCondition = value;
+        this.backingStore.set("queryCondition", value);
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final RuleSchedule value) {
-        this.schedule = value;
+        this.backingStore.set("schedule", value);
     }
 }

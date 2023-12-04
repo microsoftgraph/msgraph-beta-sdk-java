@@ -13,67 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /**
-     * Additional settings that may be applied to the server
-     */
-    private java.util.List<KeyValuePair> advancedSettings;
-    /**
-     * The Default Domain appendix that will be used by the clients
-     */
-    private String defaultDomainSuffix;
-    /**
-     * The configuration's description (optional)
-     */
-    private String description;
-    /**
-     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to transfer data.
-     */
-    private Boolean disableUdpConnections;
-    /**
-     * The display name for the server configuration. This property is required when a server is created.
-     */
-    private String displayName;
-    /**
-     * The DNS servers that will be used by the clients
-     */
-    private java.util.List<String> dnsServers;
-    /**
-     * When the configuration was last updated
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * The port that both TCP and UPD will listen over on the server
-     */
-    private Integer listenPort;
-    /**
-     * The subnet that will be used to allocate virtual address for the clients
-     */
-    private String network;
-    /**
-     * List of Scope Tags for this Entity instance
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
-     * Subsets of the routes that will not be routed by the server
-     */
-    private java.util.List<String> routeExcludes;
-    /**
-     * The routes that will be routed by the server
-     */
-    private java.util.List<String> routeIncludes;
-    /**
-     * Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
-     */
-    private java.util.List<String> routesExclude;
-    /**
-     * The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
-     */
-    private java.util.List<String> routesInclude;
-    /**
-     * The domains that will be resolved using the provided dns servers
-     */
-    private java.util.List<String> splitDNS;
-    /**
-     * Instantiates a new microsoftTunnelConfiguration and sets the default values.
+     * Instantiates a new MicrosoftTunnelConfiguration and sets the default values.
      */
     public MicrosoftTunnelConfiguration() {
         super();
@@ -81,7 +21,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelConfiguration
+     * @return a MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,51 +30,51 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the advancedSettings property value. Additional settings that may be applied to the server
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAdvancedSettings() {
-        return this.advancedSettings;
+        return this.backingStore.get("advancedSettings");
     }
     /**
      * Gets the defaultDomainSuffix property value. The Default Domain appendix that will be used by the clients
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainSuffix() {
-        return this.defaultDomainSuffix;
+        return this.backingStore.get("defaultDomainSuffix");
     }
     /**
      * Gets the description property value. The configuration's description (optional)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the disableUdpConnections property value. When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to transfer data.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableUdpConnections() {
-        return this.disableUdpConnections;
+        return this.backingStore.get("disableUdpConnections");
     }
     /**
      * Gets the displayName property value. The display name for the server configuration. This property is required when a server is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the dnsServers property value. The DNS servers that will be used by the clients
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsServers() {
-        return this.dnsServers;
+        return this.backingStore.get("dnsServers");
     }
     /**
      * The deserialization information for the current model
@@ -166,71 +106,71 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.backingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the listenPort property value. The port that both TCP and UPD will listen over on the server
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getListenPort() {
-        return this.listenPort;
+        return this.backingStore.get("listenPort");
     }
     /**
      * Gets the network property value. The subnet that will be used to allocate virtual address for the clients
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetwork() {
-        return this.network;
+        return this.backingStore.get("network");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the routeExcludes property value. Subsets of the routes that will not be routed by the server
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRouteExcludes() {
-        return this.routeExcludes;
+        return this.backingStore.get("routeExcludes");
     }
     /**
      * Gets the routeIncludes property value. The routes that will be routed by the server
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRouteIncludes() {
-        return this.routeIncludes;
+        return this.backingStore.get("routeIncludes");
     }
     /**
      * Gets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoutesExclude() {
-        return this.routesExclude;
+        return this.backingStore.get("routesExclude");
     }
     /**
      * Gets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoutesInclude() {
-        return this.routesInclude;
+        return this.backingStore.get("routesInclude");
     }
     /**
      * Gets the splitDNS property value. The domains that will be resolved using the provided dns servers
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSplitDNS() {
-        return this.splitDNS;
+        return this.backingStore.get("splitDNS");
     }
     /**
      * Serializes information the current object
@@ -260,104 +200,104 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
      * @param value Value to set for the advancedSettings property.
      */
     public void setAdvancedSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.advancedSettings = value;
+        this.backingStore.set("advancedSettings", value);
     }
     /**
      * Sets the defaultDomainSuffix property value. The Default Domain appendix that will be used by the clients
      * @param value Value to set for the defaultDomainSuffix property.
      */
     public void setDefaultDomainSuffix(@jakarta.annotation.Nullable final String value) {
-        this.defaultDomainSuffix = value;
+        this.backingStore.set("defaultDomainSuffix", value);
     }
     /**
      * Sets the description property value. The configuration's description (optional)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the disableUdpConnections property value. When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to transfer data.
      * @param value Value to set for the disableUdpConnections property.
      */
     public void setDisableUdpConnections(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableUdpConnections = value;
+        this.backingStore.set("disableUdpConnections", value);
     }
     /**
      * Sets the displayName property value. The display name for the server configuration. This property is required when a server is created.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the dnsServers property value. The DNS servers that will be used by the clients
      * @param value Value to set for the dnsServers property.
      */
     public void setDnsServers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.dnsServers = value;
+        this.backingStore.set("dnsServers", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. When the configuration was last updated
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the listenPort property value. The port that both TCP and UPD will listen over on the server
      * @param value Value to set for the listenPort property.
      */
     public void setListenPort(@jakarta.annotation.Nullable final Integer value) {
-        this.listenPort = value;
+        this.backingStore.set("listenPort", value);
     }
     /**
      * Sets the network property value. The subnet that will be used to allocate virtual address for the clients
      * @param value Value to set for the network property.
      */
     public void setNetwork(@jakarta.annotation.Nullable final String value) {
-        this.network = value;
+        this.backingStore.set("network", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the routeExcludes property value. Subsets of the routes that will not be routed by the server
      * @param value Value to set for the routeExcludes property.
      */
     public void setRouteExcludes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.routeExcludes = value;
+        this.backingStore.set("routeExcludes", value);
     }
     /**
      * Sets the routeIncludes property value. The routes that will be routed by the server
      * @param value Value to set for the routeIncludes property.
      */
     public void setRouteIncludes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.routeIncludes = value;
+        this.backingStore.set("routeIncludes", value);
     }
     /**
      * Sets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
      * @param value Value to set for the routesExclude property.
      */
     public void setRoutesExclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.routesExclude = value;
+        this.backingStore.set("routesExclude", value);
     }
     /**
      * Sets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
      * @param value Value to set for the routesInclude property.
      */
     public void setRoutesInclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.routesInclude = value;
+        this.backingStore.set("routesInclude", value);
     }
     /**
      * Sets the splitDNS property value. The domains that will be resolved using the provided dns servers
      * @param value Value to set for the splitDNS property.
      */
     public void setSplitDNS(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.splitDNS = value;
+        this.backingStore.set("splitDNS", value);
     }
 }

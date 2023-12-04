@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserEvidence extends AlertEvidence implements Parsable {
     /**
-     * The user account details.
-     */
-    private UserAccount userAccount;
-    /**
-     * Instantiates a new userEvidence and sets the default values.
+     * Instantiates a new UserEvidence and sets the default values.
      */
     public UserEvidence() {
         super();
@@ -22,7 +18,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userEvidence
+     * @return a UserEvidence
      */
     @jakarta.annotation.Nonnull
     public static UserEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the userAccount property value. The user account details.
-     * @return a userAccount
+     * @return a UserAccount
      */
     @jakarta.annotation.Nullable
     public UserAccount getUserAccount() {
-        return this.userAccount;
+        return this.backingStore.get("userAccount");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the userAccount property.
      */
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
-        this.userAccount = value;
+        this.backingStore.set("userAccount", value);
     }
 }

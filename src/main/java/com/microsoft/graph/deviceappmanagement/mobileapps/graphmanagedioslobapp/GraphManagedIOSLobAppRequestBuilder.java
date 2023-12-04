@@ -46,24 +46,24 @@ public class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of managedIOSLobAppCollectionResponse
+     * @return a ManagedIOSLobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedIOSLobAppCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedIOSLobAppCollectionResponse
+     * @return a ManagedIOSLobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedIOSLobAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedIOSLobAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedIOSLobAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
@@ -80,24 +80,15 @@ public class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphManagedIOSLobAppRequestBuilder
+     * @return a GraphManagedIOSLobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphManagedIOSLobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

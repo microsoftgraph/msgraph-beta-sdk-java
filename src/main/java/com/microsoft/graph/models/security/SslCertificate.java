@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SslCertificate extends Artifact implements Parsable {
     /**
-     * The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * A hash of the certificate calculated on the data and signature.
-     */
-    private String fingerprint;
-    /**
-     * The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime issueDateTime;
-    /**
-     * The entity granting this certificate.
-     */
-    private SslCertificateEntity issuer;
-    /**
-     * The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The hosts related with this sslCertificate.
-     */
-    private java.util.List<Host> relatedHosts;
-    /**
-     * The serial number associated with an SSL certificate.
-     */
-    private String serialNumber;
-    /**
-     * A SHA-1 hash of the certificate. Note: This is not the signature.
-     */
-    private String sha1;
-    /**
-     * The person, site, machine, and so on, this certificate is for.
-     */
-    private SslCertificateEntity subject;
-    /**
-     * Instantiates a new sslCertificate and sets the default values.
+     * Instantiates a new SslCertificate and sets the default values.
      */
     public SslCertificate() {
         super();
@@ -59,7 +19,7 @@ public class SslCertificate extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sslCertificate
+     * @return a SslCertificate
      */
     @jakarta.annotation.Nonnull
     public static SslCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,12 +27,12 @@ public class SslCertificate extends Artifact implements Parsable {
         return new SslCertificate();
     }
     /**
-     * Gets the expirationDateTime property value. The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expirationDateTime property value. The date and time when a certificate expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -95,75 +55,75 @@ public class SslCertificate extends Artifact implements Parsable {
     }
     /**
      * Gets the fingerprint property value. A hash of the certificate calculated on the data and signature.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFingerprint() {
-        return this.fingerprint;
+        return this.backingStore.get("fingerprint");
     }
     /**
-     * Gets the firstSeenDateTime property value. The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the firstSeenDateTime property value. The first date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.backingStore.get("firstSeenDateTime");
     }
     /**
-     * Gets the issueDateTime property value. The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the issueDateTime property value. The date and time when a certificate was issued. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIssueDateTime() {
-        return this.issueDateTime;
+        return this.backingStore.get("issueDateTime");
     }
     /**
-     * Gets the issuer property value. The entity granting this certificate.
-     * @return a sslCertificateEntity
+     * Gets the issuer property value. The entity that grants this certificate.
+     * @return a SslCertificateEntity
      */
     @jakarta.annotation.Nullable
     public SslCertificateEntity getIssuer() {
-        return this.issuer;
+        return this.backingStore.get("issuer");
     }
     /**
-     * Gets the lastSeenDateTime property value. The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastSeenDateTime property value. The most recent date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.backingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the relatedHosts property value. The hosts related with this sslCertificate.
-     * @return a host
+     * @return a java.util.List<Host>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Host> getRelatedHosts() {
-        return this.relatedHosts;
+        return this.backingStore.get("relatedHosts");
     }
     /**
      * Gets the serialNumber property value. The serial number associated with an SSL certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.backingStore.get("serialNumber");
     }
     /**
      * Gets the sha1 property value. A SHA-1 hash of the certificate. Note: This is not the signature.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSha1() {
-        return this.sha1;
+        return this.backingStore.get("sha1");
     }
     /**
      * Gets the subject property value. The person, site, machine, and so on, this certificate is for.
-     * @return a sslCertificateEntity
+     * @return a SslCertificateEntity
      */
     @jakarta.annotation.Nullable
     public SslCertificateEntity getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -184,73 +144,73 @@ public class SslCertificate extends Artifact implements Parsable {
         writer.writeObjectValue("subject", this.getSubject());
     }
     /**
-     * Sets the expirationDateTime property value. The date and time when a certificate expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expirationDateTime property value. The date and time when a certificate expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the fingerprint property value. A hash of the certificate calculated on the data and signature.
      * @param value Value to set for the fingerprint property.
      */
     public void setFingerprint(@jakarta.annotation.Nullable final String value) {
-        this.fingerprint = value;
+        this.backingStore.set("fingerprint", value);
     }
     /**
-     * Sets the firstSeenDateTime property value. The first date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the firstSeenDateTime property value. The first date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.backingStore.set("firstSeenDateTime", value);
     }
     /**
-     * Sets the issueDateTime property value. The date and time when a certificate was issued. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the issueDateTime property value. The date and time when a certificate was issued. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the issueDateTime property.
      */
     public void setIssueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.issueDateTime = value;
+        this.backingStore.set("issueDateTime", value);
     }
     /**
-     * Sets the issuer property value. The entity granting this certificate.
+     * Sets the issuer property value. The entity that grants this certificate.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final SslCertificateEntity value) {
-        this.issuer = value;
+        this.backingStore.set("issuer", value);
     }
     /**
-     * Sets the lastSeenDateTime property value. The most recent date and time that this sslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastSeenDateTime property value. The most recent date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.backingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the relatedHosts property value. The hosts related with this sslCertificate.
      * @param value Value to set for the relatedHosts property.
      */
     public void setRelatedHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {
-        this.relatedHosts = value;
+        this.backingStore.set("relatedHosts", value);
     }
     /**
      * Sets the serialNumber property value. The serial number associated with an SSL certificate.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.backingStore.set("serialNumber", value);
     }
     /**
      * Sets the sha1 property value. A SHA-1 hash of the certificate. Note: This is not the signature.
      * @param value Value to set for the sha1 property.
      */
     public void setSha1(@jakarta.annotation.Nullable final String value) {
-        this.sha1 = value;
+        this.backingStore.set("sha1", value);
     }
     /**
      * Sets the subject property value. The person, site, machine, and so on, this certificate is for.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final SslCertificateEntity value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

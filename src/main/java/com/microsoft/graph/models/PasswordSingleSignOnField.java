@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable {
+public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Title/label override for customization.
-     */
-    private String customizedLabel;
-    /**
-     * Label that would be used if no customizedLabel is provided. Read only.
-     */
-    private String defaultLabel;
-    /**
-     * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
-     */
-    private String fieldId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Type of the credential. The values can be text, password.
-     */
-    private String type;
-    /**
-     * Instantiates a new passwordSingleSignOnField and sets the default values.
+     * Instantiates a new PasswordSingleSignOnField and sets the default values.
      */
     public PasswordSingleSignOnField() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordSingleSignOnField
+     * @return a PasswordSingleSignOnField
      */
     @jakarta.annotation.Nonnull
     public static PasswordSingleSignOnField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,28 +35,41 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         return new PasswordSingleSignOnField();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the customizedLabel property value. Title/label override for customization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedLabel() {
-        return this.customizedLabel;
+        return this.backingStore.get("customizedLabel");
     }
     /**
      * Gets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLabel() {
-        return this.defaultLabel;
+        return this.backingStore.get("defaultLabel");
     }
     /**
      * The deserialization information for the current model
@@ -88,28 +86,28 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
-     * @return a string
+     * Gets the fieldId property value. Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFieldId() {
-        return this.fieldId;
+        return this.backingStore.get("fieldId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the type property value. Type of the credential. The values can be text, password.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -125,45 +123,53 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the customizedLabel property value. Title/label override for customization.
      * @param value Value to set for the customizedLabel property.
      */
     public void setCustomizedLabel(@jakarta.annotation.Nullable final String value) {
-        this.customizedLabel = value;
+        this.backingStore.set("customizedLabel", value);
     }
     /**
      * Sets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
      * @param value Value to set for the defaultLabel property.
      */
     public void setDefaultLabel(@jakarta.annotation.Nullable final String value) {
-        this.defaultLabel = value;
+        this.backingStore.set("defaultLabel", value);
     }
     /**
-     * Sets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
+     * Sets the fieldId property value. Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
      * @param value Value to set for the fieldId property.
      */
     public void setFieldId(@jakarta.annotation.Nullable final String value) {
-        this.fieldId = value;
+        this.backingStore.set("fieldId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the type property value. Type of the credential. The values can be text, password.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

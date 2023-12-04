@@ -10,19 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedEmailDomainInvitation extends Entity implements Parsable {
     /**
-     * The expiryTime property
-     */
-    private OffsetDateTime expiryTime;
-    /**
-     * The invitationDomain property
-     */
-    private String invitationDomain;
-    /**
-     * The invitationStatus property
-     */
-    private String invitationStatus;
-    /**
-     * Instantiates a new sharedEmailDomainInvitation and sets the default values.
+     * Instantiates a new SharedEmailDomainInvitation and sets the default values.
      */
     public SharedEmailDomainInvitation() {
         super();
@@ -30,7 +18,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedEmailDomainInvitation
+     * @return a SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public static SharedEmailDomainInvitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +31,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryTime() {
-        return this.expiryTime;
+        return this.backingStore.get("expiryTime");
     }
     /**
      * The deserialization information for the current model
@@ -59,19 +47,19 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitationDomain property value. The invitationDomain property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitationDomain() {
-        return this.invitationDomain;
+        return this.backingStore.get("invitationDomain");
     }
     /**
      * Gets the invitationStatus property value. The invitationStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitationStatus() {
-        return this.invitationStatus;
+        return this.backingStore.get("invitationStatus");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * @param value Value to set for the expiryTime property.
      */
     public void setExpiryTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expiryTime = value;
+        this.backingStore.set("expiryTime", value);
     }
     /**
      * Sets the invitationDomain property value. The invitationDomain property
      * @param value Value to set for the invitationDomain property.
      */
     public void setInvitationDomain(@jakarta.annotation.Nullable final String value) {
-        this.invitationDomain = value;
+        this.backingStore.set("invitationDomain", value);
     }
     /**
      * Sets the invitationStatus property value. The invitationStatus property
      * @param value Value to set for the invitationStatus property.
      */
     public void setInvitationStatus(@jakarta.annotation.Nullable final String value) {
-        this.invitationStatus = value;
+        this.backingStore.set("invitationStatus", value);
     }
 }

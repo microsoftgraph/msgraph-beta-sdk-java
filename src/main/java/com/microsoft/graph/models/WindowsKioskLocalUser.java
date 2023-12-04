@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable {
     /**
-     * The local user that will be locked to this kiosk configuration
-     */
-    private String userName;
-    /**
-     * Instantiates a new windowsKioskLocalUser and sets the default values.
+     * Instantiates a new WindowsKioskLocalUser and sets the default values.
      */
     public WindowsKioskLocalUser() {
         super();
@@ -25,7 +21,7 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskLocalUser
+     * @return a WindowsKioskLocalUser
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskLocalUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,11 +40,11 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable 
     }
     /**
      * Gets the userName property value. The local user that will be locked to this kiosk configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable 
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
 }

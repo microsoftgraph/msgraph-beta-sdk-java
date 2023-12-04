@@ -1,5 +1,6 @@
 package com.microsoft.graph.devicelocalcredentials;
 
+import com.microsoft.graph.devicelocalcredentials.count.CountRequestBuilder;
 import com.microsoft.graph.devicelocalcredentials.item.DeviceLocalCredentialInfoItemRequestBuilder;
 import com.microsoft.graph.models.DeviceLocalCredentialInfo;
 import com.microsoft.graph.models.DeviceLocalCredentialInfoCollectionResponse;
@@ -23,6 +24,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to count the resources in the collection.
+     */
+    @jakarta.annotation.Nonnull
+    public CountRequestBuilder count() {
+        return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
      * @param deviceLocalCredentialInfoId The unique identifier of deviceLocalCredentialInfo
      * @return a DeviceLocalCredentialInfoItemRequestBuilder
@@ -40,7 +48,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
@@ -48,57 +56,55 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
-     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     * Get entities from deviceLocalCredentials
+     * @return a DeviceLocalCredentialInfoCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialInfoCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * Get entities from deviceLocalCredentials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceLocalCredentialInfoCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to deviceLocalCredentials
      * @param body The request body
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a DeviceLocalCredentialInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialInfo post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
         return post(body, null);
     }
     /**
      * Add new entity to deviceLocalCredentials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a DeviceLocalCredentialInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialInfo post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * Get entities from deviceLocalCredentials
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -106,24 +112,15 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * Get entities from deviceLocalCredentials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -144,24 +141,16 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceLocalCredentialsRequestBuilder
+     * @return a DeviceLocalCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -169,10 +158,22 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * Get entities from deviceLocalCredentials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
+        /**
+         * Include count of items
+         */
+        @QueryParameter(name = "%24count")
+        @jakarta.annotation.Nullable
+        public Boolean count;
+        /**
+         * Expand related entities
+         */
+        @QueryParameter(name = "%24expand")
+        @jakarta.annotation.Nullable
+        public String[] expand;
         /**
          * Filter items by property values
          */
@@ -197,6 +198,18 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Skip the first n items
+         */
+        @QueryParameter(name = "%24skip")
+        @jakarta.annotation.Nullable
+        public Integer skip;
+        /**
+         * Show only the first n items
+         */
+        @QueryParameter(name = "%24top")
+        @jakarta.annotation.Nullable
+        public Integer top;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScheduledActionForRuleCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceComplianceScheduledActionForRule> value;
-    /**
-     * Instantiates a new deviceComplianceScheduledActionForRuleCollectionResponse and sets the default values.
+     * Instantiates a new DeviceComplianceScheduledActionForRuleCollectionResponse and sets the default values.
      */
     public DeviceComplianceScheduledActionForRuleCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionResponse extends Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a DeviceComplianceScheduledActionForRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScheduledActionForRuleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceComplianceScheduledActionForRuleCollectionResponse extends Ba
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceComplianceScheduledActionForRule
+     * @return a java.util.List<DeviceComplianceScheduledActionForRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScheduledActionForRule> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceComplianceScheduledActionForRuleCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

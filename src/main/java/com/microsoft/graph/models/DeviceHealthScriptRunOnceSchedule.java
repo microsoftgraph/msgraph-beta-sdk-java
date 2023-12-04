@@ -13,11 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSchedule implements Parsable {
     /**
-     * The date the script is scheduled to run. This collection can contain a maximum of 20 elements.
-     */
-    private LocalDate date;
-    /**
-     * Instantiates a new deviceHealthScriptRunOnceSchedule and sets the default values.
+     * Instantiates a new DeviceHealthScriptRunOnceSchedule and sets the default values.
      */
     public DeviceHealthScriptRunOnceSchedule() {
         super();
@@ -26,7 +22,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptRunOnceSchedule
+     * @return a DeviceHealthScriptRunOnceSchedule
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptRunOnceSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +35,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      */
     @jakarta.annotation.Nullable
     public LocalDate getDate() {
-        return this.date;
+        return this.backingStore.get("date");
     }
     /**
      * The deserialization information for the current model
@@ -65,6 +61,6 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * @param value Value to set for the date property.
      */
     public void setDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.date = value;
+        this.backingStore.set("date", value);
     }
 }

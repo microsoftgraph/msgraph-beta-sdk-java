@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     */
-    private Integer limit;
-    /**
-     * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     */
-    private Integer priority;
-    /**
-     * Instantiates a new enrollmentRestrictionsConfigurationPolicySetItem and sets the default values.
+     * Instantiates a new EnrollmentRestrictionsConfigurationPolicySetItem and sets the default values.
      */
     public EnrollmentRestrictionsConfigurationPolicySetItem() {
         super();
@@ -29,7 +21,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enrollmentRestrictionsConfigurationPolicySetItem
+     * @return a EnrollmentRestrictionsConfigurationPolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentRestrictionsConfigurationPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     }
     /**
      * Gets the limit property value. Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLimit() {
-        return this.limit;
+        return this.backingStore.get("limit");
     }
     /**
      * Gets the priority property value. Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * @param value Value to set for the limit property.
      */
     public void setLimit(@jakarta.annotation.Nullable final Integer value) {
-        this.limit = value;
+        this.backingStore.set("limit", value);
     }
     /**
      * Sets the priority property value. Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
 }

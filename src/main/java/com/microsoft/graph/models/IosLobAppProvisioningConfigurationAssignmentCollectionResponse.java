@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfigurationAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<IosLobAppProvisioningConfigurationAssignment> value;
-    /**
-     * Instantiates a new iosLobAppProvisioningConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new IosLobAppProvisioningConfigurationAssignmentCollectionResponse and sets the default values.
      */
     public IosLobAppProvisioningConfigurationAssignmentCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionResponse exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosLobAppProvisioningConfigurationAssignmentCollectionResponse
+     * @return a IosLobAppProvisioningConfigurationAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IosLobAppProvisioningConfigurationAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionResponse exte
     }
     /**
      * Gets the value property value. The value property
-     * @return a iosLobAppProvisioningConfigurationAssignment
+     * @return a java.util.List<IosLobAppProvisioningConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosLobAppProvisioningConfigurationAssignment> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionResponse exte
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<IosLobAppProvisioningConfigurationAssignment> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attendee extends AttendeeBase implements Parsable {
     /**
-     * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
-     */
-    private TimeSlot proposedNewTime;
-    /**
-     * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
-     */
-    private ResponseStatus status;
-    /**
-     * Instantiates a new attendee and sets the default values.
+     * Instantiates a new Attendee and sets the default values.
      */
     public Attendee() {
         super();
@@ -26,7 +18,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendee
+     * @return a Attendee
      */
     @jakarta.annotation.Nonnull
     public static Attendee createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,19 +38,19 @@ public class Attendee extends AttendeeBase implements Parsable {
     }
     /**
      * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
-     * @return a timeSlot
+     * @return a TimeSlot
      */
     @jakarta.annotation.Nullable
     public TimeSlot getProposedNewTime() {
-        return this.proposedNewTime;
+        return this.backingStore.get("proposedNewTime");
     }
     /**
      * Gets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
-     * @return a responseStatus
+     * @return a ResponseStatus
      */
     @jakarta.annotation.Nullable
     public ResponseStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class Attendee extends AttendeeBase implements Parsable {
      * @param value Value to set for the proposedNewTime property.
      */
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
-        this.proposedNewTime = value;
+        this.backingStore.set("proposedNewTime", value);
     }
     /**
      * Sets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ResponseStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

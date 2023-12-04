@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleDefinition extends Entity implements Parsable {
     /**
-     * The display name of the role definition.
-     */
-    private String displayName;
-    /**
-     * The external id of the role definition.
-     */
-    private String externalId;
-    /**
-     * Read-only. The associated resource for the role definition.
-     */
-    private GovernanceResource resource;
-    /**
-     * Required. The id of the resource associated with the role definition.
-     */
-    private String resourceId;
-    /**
-     * The associated role setting for the role definition.
-     */
-    private GovernanceRoleSetting roleSetting;
-    /**
-     * The templateId property
-     */
-    private String templateId;
-    /**
-     * Instantiates a new governanceRoleDefinition and sets the default values.
+     * Instantiates a new GovernanceRoleDefinition and sets the default values.
      */
     public GovernanceRoleDefinition() {
         super();
@@ -41,7 +17,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRoleDefinition
+     * @return a GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,19 +26,19 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the externalId property value. The external id of the role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.backingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +57,35 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Read-only. The associated resource for the role definition.
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Gets the resourceId property value. Required. The id of the resource associated with the role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.backingStore.get("resourceId");
     }
     /**
      * Gets the roleSetting property value. The associated role setting for the role definition.
-     * @return a governanceRoleSetting
+     * @return a GovernanceRoleSetting
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleSetting getRoleSetting() {
-        return this.roleSetting;
+        return this.backingStore.get("roleSetting");
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the externalId property value. The external id of the role definition.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.backingStore.set("externalId", value);
     }
     /**
      * Sets the resource property value. Read-only. The associated resource for the role definition.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final GovernanceResource value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
     /**
      * Sets the resourceId property value. Required. The id of the resource associated with the role definition.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.backingStore.set("resourceId", value);
     }
     /**
      * Sets the roleSetting property value. The associated role setting for the role definition.
      * @param value Value to set for the roleSetting property.
      */
     public void setRoleSetting(@jakarta.annotation.Nullable final GovernanceRoleSetting value) {
-        this.roleSetting = value;
+        this.backingStore.set("roleSetting", value);
     }
     /**
      * Sets the templateId property value. The templateId property
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
 }

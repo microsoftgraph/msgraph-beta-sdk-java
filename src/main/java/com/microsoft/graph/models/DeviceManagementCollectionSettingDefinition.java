@@ -12,11 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementCollectionSettingDefinition extends DeviceManagementSettingDefinition implements Parsable {
     /**
-     * The Setting Definition ID that describes what each element of the collection looks like
-     */
-    private String elementDefinitionId;
-    /**
-     * Instantiates a new deviceManagementCollectionSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementCollectionSettingDefinition and sets the default values.
      */
     public DeviceManagementCollectionSettingDefinition() {
         super();
@@ -24,7 +20,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCollectionSettingDefinition
+     * @return a DeviceManagementCollectionSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCollectionSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,11 +29,11 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
     }
     /**
      * Gets the elementDefinitionId property value. The Setting Definition ID that describes what each element of the collection looks like
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getElementDefinitionId() {
-        return this.elementDefinitionId;
+        return this.backingStore.get("elementDefinitionId");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      * @param value Value to set for the elementDefinitionId property.
      */
     public void setElementDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.elementDefinitionId = value;
+        this.backingStore.set("elementDefinitionId", value);
     }
 }

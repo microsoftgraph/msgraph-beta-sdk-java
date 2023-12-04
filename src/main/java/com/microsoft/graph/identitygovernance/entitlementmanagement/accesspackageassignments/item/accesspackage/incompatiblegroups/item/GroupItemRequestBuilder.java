@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item.ref.RefRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
@@ -16,6 +17,13 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new GroupItemRequestBuilder and sets the default values.

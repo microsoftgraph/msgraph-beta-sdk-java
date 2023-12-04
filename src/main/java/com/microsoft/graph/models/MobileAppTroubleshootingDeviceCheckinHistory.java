@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingDeviceCheckinHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
     /**
-     * Instantiates a new mobileAppTroubleshootingDeviceCheckinHistory and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingDeviceCheckinHistory and sets the default values.
      */
     public MobileAppTroubleshootingDeviceCheckinHistory() {
         super();
@@ -20,7 +20,7 @@ public class MobileAppTroubleshootingDeviceCheckinHistory extends MobileAppTroub
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingDeviceCheckinHistory
+     * @return a MobileAppTroubleshootingDeviceCheckinHistory
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingDeviceCheckinHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

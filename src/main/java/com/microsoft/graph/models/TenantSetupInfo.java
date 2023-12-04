@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantSetupInfo extends Entity implements Parsable {
     /**
-     * The defaultRolesSettings property
-     */
-    private PrivilegedRoleSettings defaultRolesSettings;
-    /**
-     * The firstTimeSetup property
-     */
-    private Boolean firstTimeSetup;
-    /**
-     * The relevantRolesSettings property
-     */
-    private java.util.List<String> relevantRolesSettings;
-    /**
-     * The setupStatus property
-     */
-    private SetupStatus setupStatus;
-    /**
-     * The skipSetup property
-     */
-    private Boolean skipSetup;
-    /**
-     * The userRolesActions property
-     */
-    private String userRolesActions;
-    /**
-     * Instantiates a new tenantSetupInfo and sets the default values.
+     * Instantiates a new TenantSetupInfo and sets the default values.
      */
     public TenantSetupInfo() {
         super();
@@ -41,7 +17,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantSetupInfo
+     * @return a TenantSetupInfo
      */
     @jakarta.annotation.Nonnull
     public static TenantSetupInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +26,11 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the defaultRolesSettings property value. The defaultRolesSettings property
-     * @return a privilegedRoleSettings
+     * @return a PrivilegedRoleSettings
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSettings getDefaultRolesSettings() {
-        return this.defaultRolesSettings;
+        return this.backingStore.get("defaultRolesSettings");
     }
     /**
      * The deserialization information for the current model
@@ -66,50 +42,50 @@ public class TenantSetupInfo extends Entity implements Parsable {
         deserializerMap.put("defaultRolesSettings", (n) -> { this.setDefaultRolesSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("firstTimeSetup", (n) -> { this.setFirstTimeSetup(n.getBooleanValue()); });
         deserializerMap.put("relevantRolesSettings", (n) -> { this.setRelevantRolesSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("setupStatus", (n) -> { this.setSetupStatus(n.getEnumValue(SetupStatus.class)); });
+        deserializerMap.put("setupStatus", (n) -> { this.setSetupStatus(n.getEnumValue(SetupStatus::forValue)); });
         deserializerMap.put("skipSetup", (n) -> { this.setSkipSetup(n.getBooleanValue()); });
         deserializerMap.put("userRolesActions", (n) -> { this.setUserRolesActions(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the firstTimeSetup property value. The firstTimeSetup property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFirstTimeSetup() {
-        return this.firstTimeSetup;
+        return this.backingStore.get("firstTimeSetup");
     }
     /**
      * Gets the relevantRolesSettings property value. The relevantRolesSettings property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRelevantRolesSettings() {
-        return this.relevantRolesSettings;
+        return this.backingStore.get("relevantRolesSettings");
     }
     /**
      * Gets the setupStatus property value. The setupStatus property
-     * @return a setupStatus
+     * @return a SetupStatus
      */
     @jakarta.annotation.Nullable
     public SetupStatus getSetupStatus() {
-        return this.setupStatus;
+        return this.backingStore.get("setupStatus");
     }
     /**
      * Gets the skipSetup property value. The skipSetup property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSkipSetup() {
-        return this.skipSetup;
+        return this.backingStore.get("skipSetup");
     }
     /**
      * Gets the userRolesActions property value. The userRolesActions property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserRolesActions() {
-        return this.userRolesActions;
+        return this.backingStore.get("userRolesActions");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the defaultRolesSettings property.
      */
     public void setDefaultRolesSettings(@jakarta.annotation.Nullable final PrivilegedRoleSettings value) {
-        this.defaultRolesSettings = value;
+        this.backingStore.set("defaultRolesSettings", value);
     }
     /**
      * Sets the firstTimeSetup property value. The firstTimeSetup property
      * @param value Value to set for the firstTimeSetup property.
      */
     public void setFirstTimeSetup(@jakarta.annotation.Nullable final Boolean value) {
-        this.firstTimeSetup = value;
+        this.backingStore.set("firstTimeSetup", value);
     }
     /**
      * Sets the relevantRolesSettings property value. The relevantRolesSettings property
      * @param value Value to set for the relevantRolesSettings property.
      */
     public void setRelevantRolesSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.relevantRolesSettings = value;
+        this.backingStore.set("relevantRolesSettings", value);
     }
     /**
      * Sets the setupStatus property value. The setupStatus property
      * @param value Value to set for the setupStatus property.
      */
     public void setSetupStatus(@jakarta.annotation.Nullable final SetupStatus value) {
-        this.setupStatus = value;
+        this.backingStore.set("setupStatus", value);
     }
     /**
      * Sets the skipSetup property value. The skipSetup property
      * @param value Value to set for the skipSetup property.
      */
     public void setSkipSetup(@jakarta.annotation.Nullable final Boolean value) {
-        this.skipSetup = value;
+        this.backingStore.set("skipSetup", value);
     }
     /**
      * Sets the userRolesActions property value. The userRolesActions property
      * @param value Value to set for the userRolesActions property.
      */
     public void setUserRolesActions(@jakarta.annotation.Nullable final String value) {
-        this.userRolesActions = value;
+        this.backingStore.set("userRolesActions", value);
     }
 }

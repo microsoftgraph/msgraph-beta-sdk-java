@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RuleThreshold implements AdditionalDataHolder, Parsable {
+public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
-     */
-    private AggregationType aggregation;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
-     */
-    private OperatorType operator;
-    /**
-     * The target threshold value.
-     */
-    private Integer target;
-    /**
-     * Instantiates a new ruleThreshold and sets the default values.
+     * Instantiates a new RuleThreshold and sets the default values.
      */
     public RuleThreshold() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ruleThreshold
+     * @return a RuleThreshold
      */
     @jakarta.annotation.Nonnull
     public static RuleThreshold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,33 @@ public class RuleThreshold implements AdditionalDataHolder, Parsable {
         return new RuleThreshold();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the aggregation property value. Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
-     * @return a aggregationType
+     * @return a AggregationType
      */
     @jakarta.annotation.Nullable
     public AggregationType getAggregation() {
-        return this.aggregation;
+        return this.backingStore.get("aggregation");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +70,35 @@ public class RuleThreshold implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("aggregation", (n) -> { this.setAggregation(n.getEnumValue(AggregationType.class)); });
+        deserializerMap.put("aggregation", (n) -> { this.setAggregation(n.getEnumValue(AggregationType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(OperatorType.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(OperatorType::forValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the operator property value. Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
-     * @return a operatorType
+     * @return a OperatorType
      */
     @jakarta.annotation.Nullable
     public OperatorType getOperator() {
-        return this.operator;
+        return this.backingStore.get("operator");
     }
     /**
      * Gets the target property value. The target threshold value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -111,38 +113,46 @@ public class RuleThreshold implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the aggregation property value. Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      * @param value Value to set for the aggregation property.
      */
     public void setAggregation(@jakarta.annotation.Nullable final AggregationType value) {
-        this.aggregation = value;
+        this.backingStore.set("aggregation", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the operator property value. Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final OperatorType value) {
-        this.operator = value;
+        this.backingStore.set("operator", value);
     }
     /**
      * Sets the target property value. The target threshold value.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final Integer value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
-     * The review set to which items matching the source collection query are added to.
-     */
-    private ReviewSet reviewSet;
-    /**
-     * The sourceCollection that items are being added from.
-     */
-    private SourceCollection sourceCollection;
-    /**
-     * Instantiates a new addToReviewSetOperation and sets the default values.
+     * Instantiates a new AddToReviewSetOperation and sets the default values.
      */
     public AddToReviewSetOperation() {
         super();
@@ -25,7 +17,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addToReviewSetOperation
+     * @return a AddToReviewSetOperation
      */
     @jakarta.annotation.Nonnull
     public static AddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,19 +37,19 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the reviewSet property value. The review set to which items matching the source collection query are added to.
-     * @return a reviewSet
+     * @return a ReviewSet
      */
     @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {
-        return this.reviewSet;
+        return this.backingStore.get("reviewSet");
     }
     /**
      * Gets the sourceCollection property value. The sourceCollection that items are being added from.
-     * @return a sourceCollection
+     * @return a SourceCollection
      */
     @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {
-        return this.sourceCollection;
+        return this.backingStore.get("sourceCollection");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the reviewSet property.
      */
     public void setReviewSet(@jakarta.annotation.Nullable final ReviewSet value) {
-        this.reviewSet = value;
+        this.backingStore.set("reviewSet", value);
     }
     /**
      * Sets the sourceCollection property value. The sourceCollection that items are being added from.
      * @param value Value to set for the sourceCollection property.
      */
     public void setSourceCollection(@jakarta.annotation.Nullable final SourceCollection value) {
-        this.sourceCollection = value;
+        this.backingStore.set("sourceCollection", value);
     }
 }

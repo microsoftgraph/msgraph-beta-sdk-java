@@ -4,69 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ItemActionSet implements AdditionalDataHolder, Parsable {
+public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * A comment was added to the item.
-     */
-    private CommentAction comment;
-    /**
-     * An item was created.
-     */
-    private CreateAction create;
-    /**
-     * An item was deleted.
-     */
-    private DeleteAction delete;
-    /**
-     * An item was edited.
-     */
-    private EditAction edit;
-    /**
-     * A user was mentioned in the item.
-     */
-    private MentionAction mention;
-    /**
-     * An item was moved.
-     */
-    private MoveAction move;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * An item was renamed.
-     */
-    private RenameAction rename;
-    /**
-     * An item was restored.
-     */
-    private RestoreAction restore;
-    /**
-     * An item was shared.
-     */
-    private ShareAction share;
-    /**
-     * An item was versioned.
-     */
-    private VersionAction version;
-    /**
-     * Instantiates a new itemActionSet and sets the default values.
+     * Instantiates a new ItemActionSet and sets the default values.
      */
     public ItemActionSet() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemActionSet
+     * @return a ItemActionSet
      */
     @jakarta.annotation.Nonnull
     public static ItemActionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,44 +35,57 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
         return new ItemActionSet();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the comment property value. A comment was added to the item.
-     * @return a commentAction
+     * @return a CommentAction
      */
     @jakarta.annotation.Nullable
     public CommentAction getComment() {
-        return this.comment;
+        return this.backingStore.get("comment");
     }
     /**
      * Gets the create property value. An item was created.
-     * @return a createAction
+     * @return a CreateAction
      */
     @jakarta.annotation.Nullable
     public CreateAction getCreate() {
-        return this.create;
+        return this.backingStore.get("create");
     }
     /**
      * Gets the delete property value. An item was deleted.
-     * @return a deleteAction
+     * @return a DeleteAction
      */
     @jakarta.annotation.Nullable
     public DeleteAction getDelete() {
-        return this.delete;
+        return this.backingStore.get("delete");
     }
     /**
      * Gets the edit property value. An item was edited.
-     * @return a editAction
+     * @return a EditAction
      */
     @jakarta.annotation.Nullable
     public EditAction getEdit() {
-        return this.edit;
+        return this.backingStore.get("edit");
     }
     /**
      * The deserialization information for the current model
@@ -135,59 +109,59 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mention property value. A user was mentioned in the item.
-     * @return a mentionAction
+     * @return a MentionAction
      */
     @jakarta.annotation.Nullable
     public MentionAction getMention() {
-        return this.mention;
+        return this.backingStore.get("mention");
     }
     /**
      * Gets the move property value. An item was moved.
-     * @return a moveAction
+     * @return a MoveAction
      */
     @jakarta.annotation.Nullable
     public MoveAction getMove() {
-        return this.move;
+        return this.backingStore.get("move");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the rename property value. An item was renamed.
-     * @return a renameAction
+     * @return a RenameAction
      */
     @jakarta.annotation.Nullable
     public RenameAction getRename() {
-        return this.rename;
+        return this.backingStore.get("rename");
     }
     /**
      * Gets the restore property value. An item was restored.
-     * @return a restoreAction
+     * @return a RestoreAction
      */
     @jakarta.annotation.Nullable
     public RestoreAction getRestore() {
-        return this.restore;
+        return this.backingStore.get("restore");
     }
     /**
      * Gets the share property value. An item was shared.
-     * @return a shareAction
+     * @return a ShareAction
      */
     @jakarta.annotation.Nullable
     public ShareAction getShare() {
-        return this.share;
+        return this.backingStore.get("share");
     }
     /**
      * Gets the version property value. An item was versioned.
-     * @return a versionAction
+     * @return a VersionAction
      */
     @jakarta.annotation.Nullable
     public VersionAction getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -209,87 +183,95 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the comment property value. A comment was added to the item.
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final CommentAction value) {
-        this.comment = value;
+        this.backingStore.set("comment", value);
     }
     /**
      * Sets the create property value. An item was created.
      * @param value Value to set for the create property.
      */
     public void setCreate(@jakarta.annotation.Nullable final CreateAction value) {
-        this.create = value;
+        this.backingStore.set("create", value);
     }
     /**
      * Sets the delete property value. An item was deleted.
      * @param value Value to set for the delete property.
      */
     public void setDelete(@jakarta.annotation.Nullable final DeleteAction value) {
-        this.delete = value;
+        this.backingStore.set("delete", value);
     }
     /**
      * Sets the edit property value. An item was edited.
      * @param value Value to set for the edit property.
      */
     public void setEdit(@jakarta.annotation.Nullable final EditAction value) {
-        this.edit = value;
+        this.backingStore.set("edit", value);
     }
     /**
      * Sets the mention property value. A user was mentioned in the item.
      * @param value Value to set for the mention property.
      */
     public void setMention(@jakarta.annotation.Nullable final MentionAction value) {
-        this.mention = value;
+        this.backingStore.set("mention", value);
     }
     /**
      * Sets the move property value. An item was moved.
      * @param value Value to set for the move property.
      */
     public void setMove(@jakarta.annotation.Nullable final MoveAction value) {
-        this.move = value;
+        this.backingStore.set("move", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the rename property value. An item was renamed.
      * @param value Value to set for the rename property.
      */
     public void setRename(@jakarta.annotation.Nullable final RenameAction value) {
-        this.rename = value;
+        this.backingStore.set("rename", value);
     }
     /**
      * Sets the restore property value. An item was restored.
      * @param value Value to set for the restore property.
      */
     public void setRestore(@jakarta.annotation.Nullable final RestoreAction value) {
-        this.restore = value;
+        this.backingStore.set("restore", value);
     }
     /**
      * Sets the share property value. An item was shared.
      * @param value Value to set for the share property.
      */
     public void setShare(@jakarta.annotation.Nullable final ShareAction value) {
-        this.share = value;
+        this.backingStore.set("share", value);
     }
     /**
      * Sets the version property value. An item was versioned.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final VersionAction value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

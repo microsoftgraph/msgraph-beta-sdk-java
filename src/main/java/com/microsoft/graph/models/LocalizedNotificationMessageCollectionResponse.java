@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocalizedNotificationMessageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<LocalizedNotificationMessage> value;
-    /**
-     * Instantiates a new localizedNotificationMessageCollectionResponse and sets the default values.
+     * Instantiates a new LocalizedNotificationMessageCollectionResponse and sets the default values.
      */
     public LocalizedNotificationMessageCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localizedNotificationMessageCollectionResponse
+     * @return a LocalizedNotificationMessageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static LocalizedNotificationMessageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a localizedNotificationMessage
+     * @return a java.util.List<LocalizedNotificationMessage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedNotificationMessage> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class LocalizedNotificationMessageCollectionResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<LocalizedNotificationMessage> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

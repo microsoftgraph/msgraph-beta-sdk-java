@@ -59,54 +59,54 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/scopedMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
+     * @return a ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembershipCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * @return a ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembershipCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to scopedMembers for directoryRoles
      * @param body The request body
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a ScopedRoleMembership
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to scopedMembers for directoryRoles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a ScopedRoleMembership
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembership::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,24 +114,15 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -152,24 +143,16 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scopedMembersRequestBuilder
+     * @return a ScopedMembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScopedMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +160,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return new ScopedMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Retrieve a list of scopedRoleMembership objects for a directory role. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

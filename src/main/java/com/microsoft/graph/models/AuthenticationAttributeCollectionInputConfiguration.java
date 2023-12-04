@@ -4,69 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationAttributeCollectionInputConfiguration implements AdditionalDataHolder, Parsable {
+public class AuthenticationAttributeCollectionInputConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
-     * The built-in or custom attribute for which a value is being collected.
-     */
-    private String attribute;
-    /**
-     * The default value of the attribute displayed to the end user.
-     */
-    private String defaultValue;
-    /**
-     * Whether the attribute is editable by the end user.
-     */
-    private Boolean editable;
-    /**
-     * Whether the attribute is displayed to the end user.
-     */
-    private Boolean hidden;
-    /**
-     * The inputType property
-     */
-    private AuthenticationAttributeCollectionInputType inputType;
-    /**
-     * The label of the attribute field that will be displayed to end user, unless overridden.
-     */
-    private String label;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The option values for certain multiple-option input types.
-     */
-    private java.util.List<AuthenticationAttributeCollectionOptionConfiguration> options;
-    /**
-     * Whether the field is required.
-     */
-    private Boolean required;
-    /**
-     * The regex for the value of the field.
-     */
-    private String validationRegEx;
-    /**
-     * Whether the value collected will be stored.
-     */
-    private Boolean writeToDirectory;
-    /**
-     * Instantiates a new authenticationAttributeCollectionInputConfiguration and sets the default values.
+     * Instantiates a new AuthenticationAttributeCollectionInputConfiguration and sets the default values.
      */
     public AuthenticationAttributeCollectionInputConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationAttributeCollectionInputConfiguration
+     * @return a AuthenticationAttributeCollectionInputConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAttributeCollectionInputConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,36 +35,49 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return new AuthenticationAttributeCollectionInputConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attribute property value. The built-in or custom attribute for which a value is being collected.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAttribute() {
-        return this.attribute;
+        return this.backingStore.get("attribute");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the defaultValue property value. The default value of the attribute displayed to the end user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
-        return this.defaultValue;
+        return this.backingStore.get("defaultValue");
     }
     /**
      * Gets the editable property value. Whether the attribute is editable by the end user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEditable() {
-        return this.editable;
+        return this.backingStore.get("editable");
     }
     /**
      * The deserialization information for the current model
@@ -116,7 +90,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
         deserializerMap.put("editable", (n) -> { this.setEditable(n.getBooleanValue()); });
         deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
-        deserializerMap.put("inputType", (n) -> { this.setInputType(n.getEnumValue(AuthenticationAttributeCollectionInputType.class)); });
+        deserializerMap.put("inputType", (n) -> { this.setInputType(n.getEnumValue(AuthenticationAttributeCollectionInputType::forValue)); });
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("options", (n) -> { this.setOptions(n.getCollectionOfObjectValues(AuthenticationAttributeCollectionOptionConfiguration::createFromDiscriminatorValue)); });
@@ -127,67 +101,67 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the hidden property value. Whether the attribute is displayed to the end user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.backingStore.get("hidden");
     }
     /**
      * Gets the inputType property value. The inputType property
-     * @return a authenticationAttributeCollectionInputType
+     * @return a AuthenticationAttributeCollectionInputType
      */
     @jakarta.annotation.Nullable
     public AuthenticationAttributeCollectionInputType getInputType() {
-        return this.inputType;
+        return this.backingStore.get("inputType");
     }
     /**
-     * Gets the label property value. The label of the attribute field that will be displayed to end user, unless overridden.
-     * @return a string
+     * Gets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
-        return this.label;
+        return this.backingStore.get("label");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the options property value. The option values for certain multiple-option input types.
-     * @return a authenticationAttributeCollectionOptionConfiguration
+     * @return a java.util.List<AuthenticationAttributeCollectionOptionConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionOptionConfiguration> getOptions() {
-        return this.options;
+        return this.backingStore.get("options");
     }
     /**
      * Gets the required property value. Whether the field is required.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.backingStore.get("required");
     }
     /**
      * Gets the validationRegEx property value. The regex for the value of the field.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValidationRegEx() {
-        return this.validationRegEx;
+        return this.backingStore.get("validationRegEx");
     }
     /**
-     * Gets the writeToDirectory property value. Whether the value collected will be stored.
-     * @return a boolean
+     * Gets the writeToDirectory property value. Whether the value collected is stored.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWriteToDirectory() {
-        return this.writeToDirectory;
+        return this.backingStore.get("writeToDirectory");
     }
     /**
      * Serializes information the current object
@@ -209,87 +183,95 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the attribute property value. The built-in or custom attribute for which a value is being collected.
      * @param value Value to set for the attribute property.
      */
     public void setAttribute(@jakarta.annotation.Nullable final String value) {
-        this.attribute = value;
+        this.backingStore.set("attribute", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the defaultValue property value. The default value of the attribute displayed to the end user.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
-        this.defaultValue = value;
+        this.backingStore.set("defaultValue", value);
     }
     /**
      * Sets the editable property value. Whether the attribute is editable by the end user.
      * @param value Value to set for the editable property.
      */
     public void setEditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.editable = value;
+        this.backingStore.set("editable", value);
     }
     /**
      * Sets the hidden property value. Whether the attribute is displayed to the end user.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.backingStore.set("hidden", value);
     }
     /**
      * Sets the inputType property value. The inputType property
      * @param value Value to set for the inputType property.
      */
     public void setInputType(@jakarta.annotation.Nullable final AuthenticationAttributeCollectionInputType value) {
-        this.inputType = value;
+        this.backingStore.set("inputType", value);
     }
     /**
-     * Sets the label property value. The label of the attribute field that will be displayed to end user, unless overridden.
+     * Sets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.label = value;
+        this.backingStore.set("label", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the options property value. The option values for certain multiple-option input types.
      * @param value Value to set for the options property.
      */
     public void setOptions(@jakarta.annotation.Nullable final java.util.List<AuthenticationAttributeCollectionOptionConfiguration> value) {
-        this.options = value;
+        this.backingStore.set("options", value);
     }
     /**
      * Sets the required property value. Whether the field is required.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.backingStore.set("required", value);
     }
     /**
      * Sets the validationRegEx property value. The regex for the value of the field.
      * @param value Value to set for the validationRegEx property.
      */
     public void setValidationRegEx(@jakarta.annotation.Nullable final String value) {
-        this.validationRegEx = value;
+        this.backingStore.set("validationRegEx", value);
     }
     /**
-     * Sets the writeToDirectory property value. Whether the value collected will be stored.
+     * Sets the writeToDirectory property value. Whether the value collected is stored.
      * @param value Value to set for the writeToDirectory property.
      */
     public void setWriteToDirectory(@jakarta.annotation.Nullable final Boolean value) {
-        this.writeToDirectory = value;
+        this.backingStore.set("writeToDirectory", value);
     }
 }

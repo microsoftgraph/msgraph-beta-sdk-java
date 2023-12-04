@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RevokeAppleVppLicensesActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Total number of Apple Vpp licenses that failed to revoke
-     */
-    private Integer failedLicensesCount;
-    /**
-     * Total number of Apple Vpp licenses associated
-     */
-    private Integer totalLicensesCount;
-    /**
-     * Instantiates a new revokeAppleVppLicensesActionResult and sets the default values.
+     * Instantiates a new RevokeAppleVppLicensesActionResult and sets the default values.
      */
     public RevokeAppleVppLicensesActionResult() {
         super();
@@ -28,7 +20,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a revokeAppleVppLicensesActionResult
+     * @return a RevokeAppleVppLicensesActionResult
      */
     @jakarta.annotation.Nonnull
     public static RevokeAppleVppLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,11 +29,11 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     }
     /**
      * Gets the failedLicensesCount property value. Total number of Apple Vpp licenses that failed to revoke
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
-        return this.failedLicensesCount;
+        return this.backingStore.get("failedLicensesCount");
     }
     /**
      * The deserialization information for the current model
@@ -56,11 +48,11 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     }
     /**
      * Gets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {
-        return this.totalLicensesCount;
+        return this.backingStore.get("totalLicensesCount");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      * @param value Value to set for the failedLicensesCount property.
      */
     public void setFailedLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedLicensesCount = value;
+        this.backingStore.set("failedLicensesCount", value);
     }
     /**
      * Sets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
      * @param value Value to set for the totalLicensesCount property.
      */
     public void setTotalLicensesCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicensesCount = value;
+        this.backingStore.set("totalLicensesCount", value);
     }
 }

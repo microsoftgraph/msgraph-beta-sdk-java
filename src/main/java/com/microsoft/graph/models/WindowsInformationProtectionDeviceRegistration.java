@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionDeviceRegistration extends Entity implements Parsable {
     /**
-     * Device Mac address.
-     */
-    private String deviceMacAddress;
-    /**
-     * Device name.
-     */
-    private String deviceName;
-    /**
-     * Device identifier for this device registration record.
-     */
-    private String deviceRegistrationId;
-    /**
-     * Device type, for example, Windows laptop VS Windows phone.
-     */
-    private String deviceType;
-    /**
-     * Last checkin time of the device.
-     */
-    private OffsetDateTime lastCheckInDateTime;
-    /**
-     * UserId associated with this device registration record.
-     */
-    private String userId;
-    /**
-     * Instantiates a new windowsInformationProtectionDeviceRegistration and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDeviceRegistration and sets the default values.
      */
     public WindowsInformationProtectionDeviceRegistration() {
         super();
@@ -45,7 +21,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionDeviceRegistration
+     * @return a WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,35 +30,35 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceMacAddress property value. Device Mac address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceMacAddress() {
-        return this.deviceMacAddress;
+        return this.backingStore.get("deviceMacAddress");
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the deviceRegistrationId property value. Device identifier for this device registration record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
-        return this.deviceRegistrationId;
+        return this.backingStore.get("deviceRegistrationId");
     }
     /**
      * Gets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
-        return this.deviceType;
+        return this.backingStore.get("deviceType");
     }
     /**
      * The deserialization information for the current model
@@ -105,15 +81,15 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
-        return this.lastCheckInDateTime;
+        return this.backingStore.get("lastCheckInDateTime");
     }
     /**
      * Gets the userId property value. UserId associated with this device registration record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceMacAddress property.
      */
     public void setDeviceMacAddress(@jakarta.annotation.Nullable final String value) {
-        this.deviceMacAddress = value;
+        this.backingStore.set("deviceMacAddress", value);
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the deviceRegistrationId property value. Device identifier for this device registration record.
      * @param value Value to set for the deviceRegistrationId property.
      */
     public void setDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
-        this.deviceRegistrationId = value;
+        this.backingStore.set("deviceRegistrationId", value);
     }
     /**
      * Sets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {
-        this.deviceType = value;
+        this.backingStore.set("deviceType", value);
     }
     /**
      * Sets the lastCheckInDateTime property value. Last checkin time of the device.
      * @param value Value to set for the lastCheckInDateTime property.
      */
     public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastCheckInDateTime = value;
+        this.backingStore.set("lastCheckInDateTime", value);
     }
     /**
      * Sets the userId property value. UserId associated with this device registration record.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }
