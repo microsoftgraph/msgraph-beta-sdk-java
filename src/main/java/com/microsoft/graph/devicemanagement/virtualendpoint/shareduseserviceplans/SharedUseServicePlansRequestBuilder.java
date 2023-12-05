@@ -65,7 +65,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
@@ -77,7 +77,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
@@ -124,7 +124,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSharedUseServicePlan::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a RequestInformation
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
@@ -135,7 +135,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -193,7 +193,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return new SharedUseServicePlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

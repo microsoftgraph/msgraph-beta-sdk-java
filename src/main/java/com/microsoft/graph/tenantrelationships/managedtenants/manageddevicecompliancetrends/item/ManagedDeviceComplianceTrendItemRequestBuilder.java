@@ -54,7 +54,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a managedDeviceComplianceTrend object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @return a ManagedDeviceComplianceTrend
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceComplianceTrend object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedDeviceComplianceTrend
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a managedDeviceComplianceTrend object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceComplianceTrend object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a managedDeviceComplianceTrend object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

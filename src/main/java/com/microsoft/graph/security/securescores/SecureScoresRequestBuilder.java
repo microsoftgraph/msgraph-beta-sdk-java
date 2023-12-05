@@ -59,7 +59,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/secureScores{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a secureScores object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a secureScores object.
      * @return a SecureScoreCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/securescores-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a secureScores object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a secureScores object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SecureScoreCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/securescores-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SecureScore::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a secureScores object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a secureScores object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a secureScores object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a secureScores object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return new SecureScoresRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a secureScores object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a secureScores object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

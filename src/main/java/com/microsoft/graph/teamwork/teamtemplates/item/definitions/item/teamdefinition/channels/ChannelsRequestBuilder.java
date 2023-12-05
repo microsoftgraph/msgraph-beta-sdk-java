@@ -75,7 +75,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/channels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
+     * Retrieve the list of channels in this team.
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -84,7 +84,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
+     * Retrieve the list of channels in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
@@ -98,7 +98,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChannelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel. This API is available in the following national cloud deployments.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel.
      * @param body The request body
      * @return a Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel. This API is available in the following national cloud deployments.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Channel
@@ -124,7 +124,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Channel::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
+     * Retrieve the list of channels in this team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
+     * Retrieve the list of channels in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -144,7 +144,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel. This API is available in the following national cloud deployments.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel. This API is available in the following national cloud deployments.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. You can add a maximum of 200 members when you create a private channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -178,7 +178,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return new ChannelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of channels in this team. This API is available in the following national cloud deployments.
+     * Retrieve the list of channels in this team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

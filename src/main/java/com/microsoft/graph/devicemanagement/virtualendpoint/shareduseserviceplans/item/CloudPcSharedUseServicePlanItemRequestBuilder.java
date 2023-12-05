@@ -60,7 +60,7 @@ public class CloudPcSharedUseServicePlanItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a cloudPcSharedUseServicePlan object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcSharedUseServicePlan object.
      * @return a CloudPcSharedUseServicePlan
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
@@ -72,7 +72,7 @@ public class CloudPcSharedUseServicePlanItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcSharedUseServicePlan object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcSharedUseServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcSharedUseServicePlan
      * @deprecated
@@ -145,7 +145,7 @@ public class CloudPcSharedUseServicePlanItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a cloudPcSharedUseServicePlan object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcSharedUseServicePlan object.
      * @return a RequestInformation
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
@@ -156,7 +156,7 @@ public class CloudPcSharedUseServicePlanItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcSharedUseServicePlan object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcSharedUseServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -220,7 +220,7 @@ public class CloudPcSharedUseServicePlanItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a cloudPcSharedUseServicePlan object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcSharedUseServicePlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

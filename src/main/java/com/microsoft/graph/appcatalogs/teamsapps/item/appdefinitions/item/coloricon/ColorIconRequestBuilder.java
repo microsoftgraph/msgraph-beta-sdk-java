@@ -62,7 +62,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a Teams app icon associated with a specific definition of an app. This API is available in the following national cloud deployments.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @return a TeamsAppIcon
      * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a Teams app icon associated with a specific definition of an app. This API is available in the following national cloud deployments.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsAppIcon
      * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a Teams app icon associated with a specific definition of an app. This API is available in the following national cloud deployments.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a Teams app icon associated with a specific definition of an app. This API is available in the following national cloud deployments.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a Teams app icon associated with a specific definition of an app. This API is available in the following national cloud deployments.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

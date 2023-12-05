@@ -62,7 +62,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A placeholder to allow for the desired URL path for SLA.
+     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @return a ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A placeholder to allow for the desired URL path for SLA.
+     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServiceLevelAgreementRoot
      */
@@ -127,7 +127,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A placeholder to allow for the desired URL path for SLA.
+     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A placeholder to allow for the desired URL path for SLA.
+     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -187,7 +187,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A placeholder to allow for the desired URL path for SLA.
+     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

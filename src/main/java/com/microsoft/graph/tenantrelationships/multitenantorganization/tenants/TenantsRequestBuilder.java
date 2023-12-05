@@ -59,7 +59,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the tenants and their properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * List the tenants and their properties in the multi-tenant organization.
      * @return a MultiTenantOrganizationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the tenants and their properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * List the tenants and their properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganizationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-list-tenants?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization. This API is available in the following national cloud deployments.
+     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization.
      * @param body The request body
      * @return a MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-post-tenants?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization. This API is available in the following national cloud deployments.
+     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganizationMember
@@ -108,7 +108,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationMember::createFromDiscriminatorValue);
     }
     /**
-     * List the tenants and their properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * List the tenants and their properties in the multi-tenant organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the tenants and their properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * List the tenants and their properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization. This API is available in the following national cloud deployments.
+     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization. This API is available in the following national cloud deployments.
+     * Add a tenant to a multitenant organization. The administrator of an owner tenant has the permissions to add tenants to the multitenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multitenant organization by submitting a join request. A tenant can be part of only one multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return new TenantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the tenants and their properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * List the tenants and their properties in the multi-tenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,7 +35,7 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/updatePasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Update single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-updatepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         post(body, null);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Update single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-updatepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Update single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class UpdatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Update single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

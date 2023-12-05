@@ -67,7 +67,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of timeCard entries in a schedule. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeCard entries in a schedule.
      * @return a TimeCardCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of timeCard entries in a schedule. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeCard entries in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCardCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-list?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCardCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-post?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
@@ -116,7 +116,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of timeCard entries in a schedule. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeCard entries in a schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of timeCard entries in a schedule. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeCard entries in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return new TimeCardsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of timeCard entries in a schedule. This API is available in the following national cloud deployments.
+     * Retrieve a list of timeCard entries in a schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

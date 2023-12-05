@@ -26,7 +26,7 @@ public class InsightSummary extends Entity implements Parsable {
         return new InsightSummary();
     }
     /**
-     * Gets the activeUsers property value. The activeUsers property
+     * Gets the activeUsers property value. Daily active users.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("activeUsers");
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The ID of the Microsoft Entra application.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the authenticationCompletions property value. The authenticationCompletions property
+     * Gets the authenticationCompletions property value. Daily authentication completions.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("authenticationCompletions");
     }
     /**
-     * Gets the authenticationRequests property value. The authenticationRequests property
+     * Gets the authenticationRequests property value. Daily authentication requests.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("authenticationRequests");
     }
     /**
-     * Gets the factDate property value. The factDate property
+     * Gets the factDate property value. The date of the insight.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class InsightSummary extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the os property value. The os property
+     * Gets the os property value. The platform for the device that the customers used. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("os");
     }
     /**
-     * Gets the securityTextCompletions property value. The securityTextCompletions property
+     * Gets the securityTextCompletions property value. Daily MFA SMS completions.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("securityTextCompletions");
     }
     /**
-     * Gets the securityTextRequests property value. The securityTextRequests property
+     * Gets the securityTextRequests property value. Daily MFA SMS requests.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("securityTextRequests");
     }
     /**
-     * Gets the securityVoiceCompletions property value. The securityVoiceCompletions property
+     * Gets the securityVoiceCompletions property value. Daily MFA Voice completions.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class InsightSummary extends Entity implements Parsable {
         return this.backingStore.get("securityVoiceCompletions");
     }
     /**
-     * Gets the securityVoiceRequests property value. The securityVoiceRequests property
+     * Gets the securityVoiceRequests property value. Daily MFA Voice requests.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -143,70 +143,70 @@ public class InsightSummary extends Entity implements Parsable {
         writer.writeLongValue("securityVoiceRequests", this.getSecurityVoiceRequests());
     }
     /**
-     * Sets the activeUsers property value. The activeUsers property
+     * Sets the activeUsers property value. Daily active users.
      * @param value Value to set for the activeUsers property.
      */
     public void setActiveUsers(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("activeUsers", value);
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The ID of the Microsoft Entra application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the authenticationCompletions property value. The authenticationCompletions property
+     * Sets the authenticationCompletions property value. Daily authentication completions.
      * @param value Value to set for the authenticationCompletions property.
      */
     public void setAuthenticationCompletions(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("authenticationCompletions", value);
     }
     /**
-     * Sets the authenticationRequests property value. The authenticationRequests property
+     * Sets the authenticationRequests property value. Daily authentication requests.
      * @param value Value to set for the authenticationRequests property.
      */
     public void setAuthenticationRequests(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("authenticationRequests", value);
     }
     /**
-     * Sets the factDate property value. The factDate property
+     * Sets the factDate property value. The date of the insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
     }
     /**
-     * Sets the os property value. The os property
+     * Sets the os property value. The platform for the device that the customers used. Supports $filter (eq).
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("os", value);
     }
     /**
-     * Sets the securityTextCompletions property value. The securityTextCompletions property
+     * Sets the securityTextCompletions property value. Daily MFA SMS completions.
      * @param value Value to set for the securityTextCompletions property.
      */
     public void setSecurityTextCompletions(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("securityTextCompletions", value);
     }
     /**
-     * Sets the securityTextRequests property value. The securityTextRequests property
+     * Sets the securityTextRequests property value. Daily MFA SMS requests.
      * @param value Value to set for the securityTextRequests property.
      */
     public void setSecurityTextRequests(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("securityTextRequests", value);
     }
     /**
-     * Sets the securityVoiceCompletions property value. The securityVoiceCompletions property
+     * Sets the securityVoiceCompletions property value. Daily MFA Voice completions.
      * @param value Value to set for the securityVoiceCompletions property.
      */
     public void setSecurityVoiceCompletions(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("securityVoiceCompletions", value);
     }
     /**
-     * Sets the securityVoiceRequests property value. The securityVoiceRequests property
+     * Sets the securityVoiceRequests property value. Daily MFA Voice requests.
      * @param value Value to set for the securityVoiceRequests property.
      */
     public void setSecurityVoiceRequests(@jakarta.annotation.Nullable final Long value) {

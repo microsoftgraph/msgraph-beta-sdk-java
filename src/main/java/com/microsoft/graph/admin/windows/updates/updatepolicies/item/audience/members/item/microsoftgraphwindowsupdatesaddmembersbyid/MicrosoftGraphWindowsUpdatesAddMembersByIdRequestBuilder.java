@@ -35,7 +35,7 @@ public class MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/members/{updatableAsset%2Did}/microsoft.graph.windowsUpdates.addMembersById", rawUrl);
     }
     /**
-     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members. This API is available in the following national cloud deployments.
+     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-addmembersbyid?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder extends Ba
         post(body, null);
     }
     /**
-     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members. This API is available in the following national cloud deployments.
+     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-addmembersbyid?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members. This API is available in the following national cloud deployments.
+     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder extends Ba
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members. This API is available in the following national cloud deployments.
+     * Add members of the same type to an updatableAssetGroup. You can also use the method addMembers to add members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -59,7 +59,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * Retrieve the properties of all inboundSharedUserProfiles.
      * @return a InboundSharedUserProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-inboundshareduserprofiles?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * Retrieve the properties of all inboundSharedUserProfiles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundSharedUserProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-inboundshareduserprofiles?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, InboundSharedUserProfile::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * Retrieve the properties of all inboundSharedUserProfiles.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * Retrieve the properties of all inboundSharedUserProfiles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return new InboundSharedUserProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * Retrieve the properties of all inboundSharedUserProfiles.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

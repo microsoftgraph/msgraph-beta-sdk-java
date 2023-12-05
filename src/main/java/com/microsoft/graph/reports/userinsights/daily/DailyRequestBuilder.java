@@ -126,7 +126,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get daily from reports
+     * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a DailyUserInsightMetricsRoot
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get daily from reports
+     * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DailyUserInsightMetricsRoot
      */
@@ -191,7 +191,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get daily from reports
+     * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +199,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get daily from reports
+     * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -251,7 +251,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get daily from reports
+     * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

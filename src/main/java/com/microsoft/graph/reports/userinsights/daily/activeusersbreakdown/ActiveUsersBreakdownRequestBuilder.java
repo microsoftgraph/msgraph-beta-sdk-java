@@ -58,17 +58,19 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/activeUsersBreakdown{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a ActiveUsersBreakdownMetricCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActiveUsersBreakdownMetricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActiveUsersBreakdownMetricCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActiveUsersBreakdownMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersBreakdownMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +89,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +111,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return new ActiveUsersBreakdownRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

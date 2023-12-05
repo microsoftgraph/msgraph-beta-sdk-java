@@ -54,7 +54,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      * @return a TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

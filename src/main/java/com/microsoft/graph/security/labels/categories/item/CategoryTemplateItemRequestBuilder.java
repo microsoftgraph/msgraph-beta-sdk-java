@@ -45,14 +45,14 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Delete a categoryTemplate object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Delete a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a categoryTemplate object.
      * @return a CategoryTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CategoryTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CategoryTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Delete a categoryTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Delete a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a categoryTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -191,7 +191,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a categoryTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

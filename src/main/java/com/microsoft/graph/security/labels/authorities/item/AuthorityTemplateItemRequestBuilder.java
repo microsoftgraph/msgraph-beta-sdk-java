@@ -37,14 +37,14 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Delete a authorityTemplate object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Delete a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-authorities?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a authorityTemplate object.
      * @return a AuthorityTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthorityTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorityTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Delete a authorityTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Delete a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a authorityTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a authorityTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

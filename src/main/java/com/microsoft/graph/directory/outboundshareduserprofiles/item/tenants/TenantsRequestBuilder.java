@@ -59,7 +59,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * List the tenant references of an outboundSharedUserProfile.
      * @return a TenantReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * List the tenant references of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantReference::createFromDiscriminatorValue);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * List the tenant references of an outboundSharedUserProfile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * List the tenant references of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return new TenantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * List the tenant references of an outboundSharedUserProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -38,14 +38,20 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     }
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -54,21 +60,27 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @return a ContinuousAccessEvaluationPolicy
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ContinuousAccessEvaluationPolicy get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContinuousAccessEvaluationPolicy
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ContinuousAccessEvaluationPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -77,23 +89,29 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @return a ContinuousAccessEvaluationPolicy
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContinuousAccessEvaluationPolicy
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -105,8 +123,11 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -114,8 +135,11 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * Delete navigation property continuousAccessEvaluationPolicy for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -123,19 +147,25 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -143,21 +173,27 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -170,8 +206,11 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ContinuousAccessEvaluationPolicyRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ContinuousAccessEvaluationPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ContinuousAccessEvaluationPolicyRequestBuilder(rawUrl, requestAdapter);
@@ -183,7 +222,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

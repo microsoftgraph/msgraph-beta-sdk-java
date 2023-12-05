@@ -59,7 +59,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/businessFlowTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      * @return a BusinessFlowTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BusinessFlowTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessFlowTemplate::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
         return new BusinessFlowTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes. This API is available in the following [national cloud deployments.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @return a BaseSitePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes. This API is available in the following [national cloud deployments.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BaseSitePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new sitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @return a BaseSitePage
      * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new sitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BaseSitePage
@@ -108,7 +108,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePage::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes. This API is available in the following [national cloud deployments.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes. This API is available in the following [national cloud deployments.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new sitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new sitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return new PagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes. This API is available in the following [national cloud deployments.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

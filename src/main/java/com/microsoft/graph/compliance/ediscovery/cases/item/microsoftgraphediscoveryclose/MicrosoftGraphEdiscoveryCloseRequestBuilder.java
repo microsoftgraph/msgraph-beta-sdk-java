@@ -35,7 +35,7 @@ public class MicrosoftGraphEdiscoveryCloseRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/microsoft.graph.ediscovery.close", rawUrl);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case. This API is available in the following national cloud deployments.
+     * Close an eDiscovery case. For details, see Close a case.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-close?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class MicrosoftGraphEdiscoveryCloseRequestBuilder extends BaseRequestBuil
         post(null);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case. This API is available in the following national cloud deployments.
+     * Close an eDiscovery case. For details, see Close a case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -60,7 +60,7 @@ public class MicrosoftGraphEdiscoveryCloseRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case. This API is available in the following national cloud deployments.
+     * Close an eDiscovery case. For details, see Close a case.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -71,7 +71,7 @@ public class MicrosoftGraphEdiscoveryCloseRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(null);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case. This API is available in the following national cloud deployments.
+     * Close an eDiscovery case. For details, see Close a case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated

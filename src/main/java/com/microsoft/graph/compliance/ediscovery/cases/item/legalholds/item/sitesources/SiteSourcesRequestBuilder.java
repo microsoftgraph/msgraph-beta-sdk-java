@@ -65,7 +65,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds/{legalHold%2Did}/siteSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold. This API is available in the following national cloud deployments.
+     * Get the list of siteSource objecs associated with a legal hold.
      * @return a SiteSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -77,7 +77,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold. This API is available in the following national cloud deployments.
+     * Get the list of siteSource objecs associated with a legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SiteSourceCollectionResponse
      * @deprecated
@@ -94,7 +94,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Adds a siteSource to a legalHold object. This API is available in the following national cloud deployments.
+     * Adds a siteSource to a legalHold object.
      * @param body The request body
      * @return a SiteSource
      * @deprecated
@@ -107,7 +107,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a siteSource to a legalHold object. This API is available in the following national cloud deployments.
+     * Adds a siteSource to a legalHold object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SiteSource
@@ -126,7 +126,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold. This API is available in the following national cloud deployments.
+     * Get the list of siteSource objecs associated with a legal hold.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -137,7 +137,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold. This API is available in the following national cloud deployments.
+     * Get the list of siteSource objecs associated with a legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -152,7 +152,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Adds a siteSource to a legalHold object. This API is available in the following national cloud deployments.
+     * Adds a siteSource to a legalHold object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -164,7 +164,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a siteSource to a legalHold object. This API is available in the following national cloud deployments.
+     * Adds a siteSource to a legalHold object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return new SiteSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold. This API is available in the following national cloud deployments.
+     * Get the list of siteSource objecs associated with a legal hold.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

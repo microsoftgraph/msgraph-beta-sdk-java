@@ -59,7 +59,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the collection of school data synchronization profiles in the tenant.
      * @return a EducationSynchronizationProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the collection of school data synchronization profiles in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationSynchronizationProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSynchronizationProfile::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the collection of school data synchronization profiles in the tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the collection of school data synchronization profiles in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return new SynchronizationProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * Retrieve the collection of school data synchronization profiles in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

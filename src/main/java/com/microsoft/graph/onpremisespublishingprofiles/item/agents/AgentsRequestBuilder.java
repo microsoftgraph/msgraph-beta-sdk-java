@@ -59,7 +59,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/agents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of onPremisesAgent objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onPremisesAgent objects.
      * @return a OnPremisesAgentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagent-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of onPremisesAgent objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onPremisesAgent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnPremisesAgentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagent-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesAgent::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of onPremisesAgent objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onPremisesAgent objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of onPremisesAgent objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onPremisesAgent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
         return new AgentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of onPremisesAgent objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of onPremisesAgent objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

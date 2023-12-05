@@ -59,7 +59,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @return a MeetingRegistrationQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingRegistrationQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistrationQuestionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @return a MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingRegistrationQuestion
@@ -108,7 +108,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistrationQuestion::createFromDiscriminatorValue);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return new CustomQuestionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

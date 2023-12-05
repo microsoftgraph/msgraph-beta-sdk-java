@@ -59,7 +59,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/exchange/customAppScopes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a CustomAppScopeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAppScopeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScopeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAppScope
@@ -108,7 +108,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScope::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return new CustomAppScopesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

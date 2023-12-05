@@ -76,7 +76,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tag objects from an eDiscovery case. This API is available in the following national cloud deployments.
+     * Retrieve a list of tag objects from an eDiscovery case.
      * @return a TagCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -88,7 +88,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of tag objects from an eDiscovery case. This API is available in the following national cloud deployments.
+     * Retrieve a list of tag objects from an eDiscovery case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TagCollectionResponse
      * @deprecated
@@ -105,7 +105,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content. This API is available in the following national cloud deployments.
+     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content.
      * @param body The request body
      * @return a Tag
      * @deprecated
@@ -118,7 +118,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content. This API is available in the following national cloud deployments.
+     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Tag
@@ -137,7 +137,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Tag::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tag objects from an eDiscovery case. This API is available in the following national cloud deployments.
+     * Retrieve a list of tag objects from an eDiscovery case.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -148,7 +148,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tag objects from an eDiscovery case. This API is available in the following national cloud deployments.
+     * Retrieve a list of tag objects from an eDiscovery case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -163,7 +163,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content. This API is available in the following national cloud deployments.
+     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -175,7 +175,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content. This API is available in the following national cloud deployments.
+     * Create a new tag for the specified case.  The tags are used in review sets while reviewing content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -206,7 +206,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return new TagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tag objects from an eDiscovery case. This API is available in the following national cloud deployments.
+     * Retrieve a list of tag objects from an eDiscovery case.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

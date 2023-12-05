@@ -62,7 +62,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @return a PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-1.0">Find more info here</a>
@@ -85,7 +85,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @return a PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfiguration
@@ -131,7 +131,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -191,7 +191,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

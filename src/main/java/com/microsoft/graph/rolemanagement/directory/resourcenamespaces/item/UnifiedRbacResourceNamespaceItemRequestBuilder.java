@@ -70,7 +70,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @return a UnifiedRbacResourceNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRbacResourceNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

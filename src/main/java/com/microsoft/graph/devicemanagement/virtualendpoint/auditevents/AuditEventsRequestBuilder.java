@@ -67,7 +67,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant. This API is available in the following national cloud deployments.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @return a CloudPcAuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant. This API is available in the following national cloud deployments.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcAuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcAuditEvent::createFromDiscriminatorValue);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant. This API is available in the following national cloud deployments.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant. This API is available in the following national cloud deployments.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new AuditEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant. This API is available in the following national cloud deployments.
+     * List all the cloudPcAuditEvent objects for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

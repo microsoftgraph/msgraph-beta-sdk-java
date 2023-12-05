@@ -37,14 +37,14 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/addresses/{itemAddress%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an itemAddress object. This API is available in the following national cloud deployments.
+     * Deletes an itemAddress object.
      * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes an itemAddress object. This API is available in the following national cloud deployments.
+     * Deletes an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an itemAddress object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an itemAddress object.
      * @return a ItemAddress
      * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an itemAddress object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ItemAddress
      * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddress::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an itemAddress object. This API is available in the following national cloud deployments.
+     * Update the properties of an itemAddress object.
      * @param body The request body
      * @return a ItemAddress
      * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an itemAddress object. This API is available in the following national cloud deployments.
+     * Update the properties of an itemAddress object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ItemAddress
@@ -105,7 +105,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddress::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an itemAddress object. This API is available in the following national cloud deployments.
+     * Deletes an itemAddress object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an itemAddress object. This API is available in the following national cloud deployments.
+     * Deletes an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an itemAddress object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an itemAddress object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an itemAddress object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an itemAddress object. This API is available in the following national cloud deployments.
+     * Update the properties of an itemAddress object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an itemAddress object. This API is available in the following national cloud deployments.
+     * Update the properties of an itemAddress object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an itemAddress object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an itemAddress object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

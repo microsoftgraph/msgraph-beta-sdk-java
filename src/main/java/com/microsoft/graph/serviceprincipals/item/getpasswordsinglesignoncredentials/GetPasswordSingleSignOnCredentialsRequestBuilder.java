@@ -36,7 +36,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/getPasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Get a list of single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Get a list of single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @return a PasswordSingleSignOnCredentialSet
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-getpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         return post(body, null);
     }
     /**
-     * Get a list of single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Get a list of single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PasswordSingleSignOnCredentialSet
@@ -62,7 +62,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordSingleSignOnCredentialSet::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Get a list of single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get a list of single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
+     * Get a list of single sign-on credentials using a password for a user or group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

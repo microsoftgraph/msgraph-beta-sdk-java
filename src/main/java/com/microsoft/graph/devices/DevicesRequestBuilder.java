@@ -91,7 +91,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of devices registered in the directory.  This API is available in the following national cloud deployments.
+     * Retrieve a list of devices registered in the directory. 
      * @return a DeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of devices registered in the directory.  This API is available in the following national cloud deployments.
+     * Retrieve a list of devices registered in the directory. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new device. This API is available in the following national cloud deployments.
+     * Create a new device.
      * @param body The request body
      * @return a Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new device. This API is available in the following national cloud deployments.
+     * Create a new device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Device
@@ -140,7 +140,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of devices registered in the directory.  This API is available in the following national cloud deployments.
+     * Retrieve a list of devices registered in the directory. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of devices registered in the directory.  This API is available in the following national cloud deployments.
+     * Retrieve a list of devices registered in the directory. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new device. This API is available in the following national cloud deployments.
+     * Create a new device.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new device. This API is available in the following national cloud deployments.
+     * Create a new device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -194,7 +194,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return new DevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of devices registered in the directory.  This API is available in the following national cloud deployments.
+     * Retrieve a list of devices registered in the directory. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

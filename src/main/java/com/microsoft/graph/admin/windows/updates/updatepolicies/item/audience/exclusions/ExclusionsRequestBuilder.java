@@ -91,7 +91,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/exclusions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the updatableAsset resources that are excluded from a deploymentAudience. This API is available in the following national cloud deployments.
+     * List the updatableAsset resources that are excluded from a deploymentAudience.
      * @return a UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-exclusions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the updatableAsset resources that are excluded from a deploymentAudience. This API is available in the following national cloud deployments.
+     * List the updatableAsset resources that are excluded from a deploymentAudience.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-exclusions?view=graph-rest-1.0">Find more info here</a>
@@ -138,7 +138,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
-     * List the updatableAsset resources that are excluded from a deploymentAudience. This API is available in the following national cloud deployments.
+     * List the updatableAsset resources that are excluded from a deploymentAudience.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the updatableAsset resources that are excluded from a deploymentAudience. This API is available in the following national cloud deployments.
+     * List the updatableAsset resources that are excluded from a deploymentAudience.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
         return new ExclusionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the updatableAsset resources that are excluded from a deploymentAudience. This API is available in the following national cloud deployments.
+     * List the updatableAsset resources that are excluded from a deploymentAudience.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,14 +35,14 @@ public class CancelSecurityActionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/securityActions/{securityAction%2Did}/cancelSecurityAction", rawUrl);
     }
     /**
-     * Cancel a security operation. This API is available in the following national cloud deployments.
+     * Cancel a security operation.
      * @see <a href="https://learn.microsoft.com/graph/api/securityaction-cancelsecurityaction?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Cancel a security operation. This API is available in the following national cloud deployments.
+     * Cancel a security operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/securityaction-cancelsecurityaction?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CancelSecurityActionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel a security operation. This API is available in the following national cloud deployments.
+     * Cancel a security operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CancelSecurityActionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel a security operation. This API is available in the following national cloud deployments.
+     * Cancel a security operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

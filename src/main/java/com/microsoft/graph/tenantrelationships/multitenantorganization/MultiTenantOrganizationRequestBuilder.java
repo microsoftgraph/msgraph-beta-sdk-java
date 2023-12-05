@@ -53,7 +53,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get properties of the multitenant organization. This API is available in the following national cloud deployments.
+     * Get properties of the multitenant organization.
      * @return a MultiTenantOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -62,7 +62,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get properties of the multitenant organization. This API is available in the following national cloud deployments.
+     * Get properties of the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,21 +76,21 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. This API is available in the following national cloud deployments.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a MultiTenantOrganization
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
         return patch(body, null);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. This API is available in the following national cloud deployments.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganization
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +102,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Get properties of the multitenant organization. This API is available in the following national cloud deployments.
+     * Get properties of the multitenant organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get properties of the multitenant organization. This API is available in the following national cloud deployments.
+     * Get properties of the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. This API is available in the following national cloud deployments.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. This API is available in the following national cloud deployments.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -156,7 +156,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return new MultiTenantOrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get properties of the multitenant organization. This API is available in the following national cloud deployments.
+     * Get properties of the multitenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

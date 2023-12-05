@@ -66,7 +66,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class. This API is available in the following national cloud deployments.
+     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class. This API is available in the following national cloud deployments.
+     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class. This API is available in the following national cloud deployments.
+     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class. This API is available in the following national cloud deployments.
+     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class. This API is available in the following national cloud deployments.
+     * Retrieve the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

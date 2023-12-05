@@ -70,7 +70,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      * @return a UnifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is available in the following national cloud deployments.
+     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @return a UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return post(body, null);
     }
     /**
-     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is available in the following national cloud deployments.
+     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilityScheduleRequest
@@ -119,7 +119,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -139,7 +139,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is available in the following national cloud deployments.
+     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments. This API is available in the following national cloud deployments.
+     * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -173,7 +173,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return new RoleEligibilityScheduleRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

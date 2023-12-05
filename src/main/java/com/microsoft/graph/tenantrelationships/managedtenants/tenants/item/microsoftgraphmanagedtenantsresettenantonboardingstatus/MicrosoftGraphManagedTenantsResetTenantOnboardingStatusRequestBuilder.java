@@ -36,7 +36,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}/microsoft.graph.managedTenants.resetTenantOnboardingStatus", rawUrl);
     }
     /**
-     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.
      * @return a Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-resettenantonboardingstatus?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
         return post(null);
     }
     /**
-     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-resettenantonboardingstatus?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, Tenant::createFromDiscriminatorValue);
     }
     /**
-     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
         return toPostRequestInformation(null);
     }
     /**
-     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

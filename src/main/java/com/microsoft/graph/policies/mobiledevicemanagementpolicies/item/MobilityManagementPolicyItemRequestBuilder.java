@@ -45,14 +45,14 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete a mobilityManagementPolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a mobilityManagementPolicy object.
      * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @return a MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return patch(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MobilityManagementPolicy
@@ -113,7 +113,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete a mobilityManagementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Delete a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a mobilityManagementPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a mobilityManagementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -25,7 +25,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return new MonthlyUserInsightMetricsRoot();
     }
     /**
-     * Gets the activeUsers property value. The activeUsers property
+     * Gets the activeUsers property value. Insights for active users on apps registered in the tenant for a specified period.
      * @return a java.util.List<ActiveUsersMetric>
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("activeUsers");
     }
     /**
-     * Gets the activeUsersBreakdown property value. The activeUsersBreakdown property
+     * Gets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @return a java.util.List<ActiveUsersBreakdownMetric>
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("activeUsersBreakdown");
     }
     /**
-     * Gets the authentications property value. The authentications property
+     * Gets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.
      * @return a java.util.List<AuthenticationsMetric>
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("inactiveUsersByApplication");
     }
     /**
-     * Gets the mfaCompletions property value. The mfaCompletions property
+     * Gets the mfaCompletions property value. Insights for MFA usage on apps registered in the tenant for a specified period.
      * @return a java.util.List<MfaCompletionMetric>
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("mfaCompletions");
     }
     /**
-     * Gets the requests property value. The requests property
+     * Gets the requests property value. Insights for all user requests on apps registered in the tenant for a specified period.
      * @return a java.util.List<UserRequestsMetric>
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("requests");
     }
     /**
-     * Gets the signUps property value. The signUps property
+     * Gets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
      * @return a java.util.List<UserSignUpMetric>
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("signUps");
     }
     /**
-     * Gets the summary property value. The summary property
+     * Gets the summary property value. Summary of all usage insights on apps registered in the tenant for a specified period.
      * @return a java.util.List<InsightSummary>
      */
     @jakarta.annotation.Nullable
@@ -132,21 +132,21 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("summary", this.getSummary());
     }
     /**
-     * Sets the activeUsers property value. The activeUsers property
+     * Sets the activeUsers property value. Insights for active users on apps registered in the tenant for a specified period.
      * @param value Value to set for the activeUsers property.
      */
     public void setActiveUsers(@jakarta.annotation.Nullable final java.util.List<ActiveUsersMetric> value) {
         this.backingStore.set("activeUsers", value);
     }
     /**
-     * Sets the activeUsersBreakdown property value. The activeUsersBreakdown property
+     * Sets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @param value Value to set for the activeUsersBreakdown property.
      */
     public void setActiveUsersBreakdown(@jakarta.annotation.Nullable final java.util.List<ActiveUsersBreakdownMetric> value) {
         this.backingStore.set("activeUsersBreakdown", value);
     }
     /**
-     * Sets the authentications property value. The authentications property
+     * Sets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.
      * @param value Value to set for the authentications property.
      */
     public void setAuthentications(@jakarta.annotation.Nullable final java.util.List<AuthenticationsMetric> value) {
@@ -167,28 +167,28 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         this.backingStore.set("inactiveUsersByApplication", value);
     }
     /**
-     * Sets the mfaCompletions property value. The mfaCompletions property
+     * Sets the mfaCompletions property value. Insights for MFA usage on apps registered in the tenant for a specified period.
      * @param value Value to set for the mfaCompletions property.
      */
     public void setMfaCompletions(@jakarta.annotation.Nullable final java.util.List<MfaCompletionMetric> value) {
         this.backingStore.set("mfaCompletions", value);
     }
     /**
-     * Sets the requests property value. The requests property
+     * Sets the requests property value. Insights for all user requests on apps registered in the tenant for a specified period.
      * @param value Value to set for the requests property.
      */
     public void setRequests(@jakarta.annotation.Nullable final java.util.List<UserRequestsMetric> value) {
         this.backingStore.set("requests", value);
     }
     /**
-     * Sets the signUps property value. The signUps property
+     * Sets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
      * @param value Value to set for the signUps property.
      */
     public void setSignUps(@jakarta.annotation.Nullable final java.util.List<UserSignUpMetric> value) {
         this.backingStore.set("signUps", value);
     }
     /**
-     * Sets the summary property value. The summary property
+     * Sets the summary property value. Summary of all usage insights on apps registered in the tenant for a specified period.
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final java.util.List<InsightSummary> value) {

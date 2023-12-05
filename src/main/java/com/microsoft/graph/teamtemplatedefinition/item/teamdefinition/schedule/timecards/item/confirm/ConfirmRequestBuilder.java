@@ -36,7 +36,7 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}/confirm", rawUrl);
     }
     /**
-     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
+     * Confirm a specific timeCard.
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-confirm?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
+     * Confirm a specific timeCard.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-confirm?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
+     * Confirm a specific timeCard.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
+     * Confirm a specific timeCard.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

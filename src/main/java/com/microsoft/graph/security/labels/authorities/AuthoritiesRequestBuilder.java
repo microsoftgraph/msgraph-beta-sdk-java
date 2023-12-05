@@ -59,7 +59,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/authorities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the authorityTemplate objects and their properties.
      * @return a AuthorityTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the authorityTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthorityTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorityTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new authorityTemplate object. This API is available in the following national cloud deployments.
+     * Create a new authorityTemplate object.
      * @param body The request body
      * @return a AuthorityTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new authorityTemplate object. This API is available in the following national cloud deployments.
+     * Create a new authorityTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthorityTemplate
@@ -108,7 +108,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorityTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the authorityTemplate objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the authorityTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new authorityTemplate object. This API is available in the following national cloud deployments.
+     * Create a new authorityTemplate object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authorityTemplate object. This API is available in the following national cloud deployments.
+     * Create a new authorityTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return new AuthoritiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the authorityTemplate objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

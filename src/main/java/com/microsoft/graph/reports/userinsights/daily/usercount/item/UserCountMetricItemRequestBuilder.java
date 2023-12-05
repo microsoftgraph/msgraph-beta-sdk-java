@@ -37,7 +37,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount/{userCountMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get userCount from reports
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @return a UserCountMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userCount from reports
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserCountMetric
      */
@@ -58,7 +58,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserCountMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get userCount from reports
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userCount from reports
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
         return new UserCountMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get userCount from reports
+     * Insights for total users on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -53,14 +53,14 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tenantTag object. This API is available in the following national cloud deployments.
+     * Delete a tenantTag object.
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tenantTag object. This API is available in the following national cloud deployments.
+     * Delete a tenantTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a tenantTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tenantTag object.
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tenantTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tenantTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tenantTag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantTag object.
      * @param body The request body
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tenantTag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTag
@@ -121,7 +121,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tenantTag object. This API is available in the following national cloud deployments.
+     * Delete a tenantTag object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tenantTag object. This API is available in the following national cloud deployments.
+     * Delete a tenantTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tenantTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tenantTag object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tenantTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tenantTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tenantTag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantTag object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tenantTag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tenantTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class TenantTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tenantTag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tenantTag object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

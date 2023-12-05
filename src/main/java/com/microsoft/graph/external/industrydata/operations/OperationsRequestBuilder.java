@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses. This API is available in the following national cloud deployments.
+     * Get a list of long-running file validation operations and their statuses.
      * @return a LongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses. This API is available in the following national cloud deployments.
+     * Get a list of long-running file validation operations and their statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LongRunningOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses. This API is available in the following national cloud deployments.
+     * Get a list of long-running file validation operations and their statuses.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses. This API is available in the following national cloud deployments.
+     * Get a list of long-running file validation operations and their statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses. This API is available in the following national cloud deployments.
+     * Get a list of long-running file validation operations and their statuses.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,14 +35,14 @@ public class ReuploadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/deviceImages/{cloudPcDeviceImage%2Did}/reupload", rawUrl);
     }
     /**
-     * Reupload a cloudPcDeviceImage object that failed to upload. This API is available in the following national cloud deployments.
+     * Reupload a cloudPcDeviceImage object that failed to upload.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-reupload?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reupload a cloudPcDeviceImage object that failed to upload. This API is available in the following national cloud deployments.
+     * Reupload a cloudPcDeviceImage object that failed to upload.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-reupload?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ReuploadRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reupload a cloudPcDeviceImage object that failed to upload. This API is available in the following national cloud deployments.
+     * Reupload a cloudPcDeviceImage object that failed to upload.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ReuploadRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reupload a cloudPcDeviceImage object that failed to upload. This API is available in the following national cloud deployments.
+     * Reupload a cloudPcDeviceImage object that failed to upload.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

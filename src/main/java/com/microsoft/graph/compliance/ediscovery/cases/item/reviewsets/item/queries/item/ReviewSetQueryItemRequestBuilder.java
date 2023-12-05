@@ -48,7 +48,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/reviewSets/{reviewSet%2Did}/queries/{reviewSetQuery%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Delete a reviewSetQuery object.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-delete?view=graph-rest-1.0">Find more info here</a>
@@ -58,7 +58,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Delete a reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -73,7 +73,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @return a ReviewSetQuery
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -85,7 +85,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSetQuery
      * @deprecated
@@ -102,7 +102,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an eDiscovery reviewSetQuery. This API is available in the following national cloud deployments.
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @return a ReviewSetQuery
      * @deprecated
@@ -115,7 +115,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an eDiscovery reviewSetQuery. This API is available in the following national cloud deployments.
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSetQuery
@@ -134,7 +134,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Delete a reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Delete a reviewSetQuery object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -145,7 +145,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Delete a reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -160,7 +160,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -171,7 +171,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -186,7 +186,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an eDiscovery reviewSetQuery. This API is available in the following national cloud deployments.
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -198,7 +198,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an eDiscovery reviewSetQuery. This API is available in the following national cloud deployments.
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -235,7 +235,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

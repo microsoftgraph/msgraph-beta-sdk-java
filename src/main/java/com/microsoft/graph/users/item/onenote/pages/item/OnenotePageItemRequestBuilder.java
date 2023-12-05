@@ -85,14 +85,14 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/pages/{onenotePage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a OneNote page. This API is available in the following national cloud deployments.
+     * Delete a OneNote page.
      * @see <a href="https://learn.microsoft.com/graph/api/page-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a OneNote page. This API is available in the following national cloud deployments.
+     * Delete a OneNote page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/page-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -149,7 +149,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenotePage::createFromDiscriminatorValue);
     }
     /**
-     * Delete a OneNote page. This API is available in the following national cloud deployments.
+     * Delete a OneNote page.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a OneNote page. This API is available in the following national cloud deployments.
+     * Delete a OneNote page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

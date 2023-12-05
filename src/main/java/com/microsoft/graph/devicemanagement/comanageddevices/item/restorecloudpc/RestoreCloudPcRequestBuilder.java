@@ -35,7 +35,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/restoreCloudPc", rawUrl);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @deprecated
      * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
@@ -46,7 +46,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
@@ -63,7 +63,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -75,7 +75,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

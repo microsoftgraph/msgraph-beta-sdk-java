@@ -59,7 +59,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}/myDecisions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a AccessReviewDecisionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessReviewDecisionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewDecision::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return new MyDecisionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

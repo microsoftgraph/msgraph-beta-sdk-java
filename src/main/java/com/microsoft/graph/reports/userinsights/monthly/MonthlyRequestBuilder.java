@@ -126,7 +126,7 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get monthly from reports
+     * Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a MonthlyUserInsightMetricsRoot
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get monthly from reports
+     * Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MonthlyUserInsightMetricsRoot
      */
@@ -191,7 +191,7 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get monthly from reports
+     * Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +199,7 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get monthly from reports
+     * Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -251,7 +251,7 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get monthly from reports
+     * Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

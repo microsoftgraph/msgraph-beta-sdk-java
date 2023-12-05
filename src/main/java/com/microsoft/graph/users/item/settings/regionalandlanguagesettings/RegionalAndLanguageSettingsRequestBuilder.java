@@ -54,7 +54,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @return a RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, RegionalAndLanguageSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is available in the following national cloud deployments.
+     * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @return a RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is available in the following national cloud deployments.
+     * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RegionalAndLanguageSettings
@@ -123,7 +123,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is available in the following national cloud deployments.
+     * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is available in the following national cloud deployments.
+     * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a user's regionalAndLanguageSettings.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -54,7 +54,7 @@ public class TenantStatusRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the onboarding status of a specific tenant. This API is available in the following national cloud deployments.
+     * Retrieve the onboarding status of a specific tenant.
      * @return a TenantStatus
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tenantstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class TenantStatusRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the onboarding status of a specific tenant. This API is available in the following national cloud deployments.
+     * Retrieve the onboarding status of a specific tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantStatus
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tenantstatus-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class TenantStatusRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the onboarding status of a specific tenant. This API is available in the following national cloud deployments.
+     * Retrieve the onboarding status of a specific tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class TenantStatusRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the onboarding status of a specific tenant. This API is available in the following national cloud deployments.
+     * Retrieve the onboarding status of a specific tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class TenantStatusRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the onboarding status of a specific tenant. This API is available in the following national cloud deployments.
+     * Retrieve the onboarding status of a specific tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

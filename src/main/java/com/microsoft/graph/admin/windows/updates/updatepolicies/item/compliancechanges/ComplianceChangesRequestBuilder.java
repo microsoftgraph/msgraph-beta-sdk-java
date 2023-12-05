@@ -59,7 +59,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/complianceChanges{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the complianceChange objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the complianceChange objects and their properties.
      * @return a ComplianceChangeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the complianceChange objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the complianceChange objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ComplianceChangeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChangeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new contentApproval object. This API is available in the following national cloud deployments.
+     * Create a new contentApproval object.
      * @param body The request body
      * @return a ComplianceChange
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new contentApproval object. This API is available in the following national cloud deployments.
+     * Create a new contentApproval object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ComplianceChange
@@ -108,7 +108,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the complianceChange objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the complianceChange objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the complianceChange objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the complianceChange objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new contentApproval object. This API is available in the following national cloud deployments.
+     * Create a new contentApproval object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new contentApproval object. This API is available in the following national cloud deployments.
+     * Create a new contentApproval object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return new ComplianceChangesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the complianceChange objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the complianceChange objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

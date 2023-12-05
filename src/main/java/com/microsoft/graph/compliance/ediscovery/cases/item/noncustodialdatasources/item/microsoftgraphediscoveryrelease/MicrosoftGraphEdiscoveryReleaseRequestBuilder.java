@@ -35,7 +35,7 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/noncustodialDataSources/{noncustodialDataSource%2Did}/microsoft.graph.ediscovery.release", rawUrl);
     }
     /**
-     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Releases the non-custodial data source from the case.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         post(null);
     }
     /**
-     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Releases the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -60,7 +60,7 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Releases the non-custodial data source from the case.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -71,7 +71,7 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(null);
     }
     /**
-     * Releases the non-custodial data source from the case. This API is available in the following national cloud deployments.
+     * Releases the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated

@@ -54,7 +54,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a cloudPcFrontLineServicePlan object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @return a CloudPcFrontLineServicePlan
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcfrontlineserviceplan-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the properties and relationships of a cloudPcFrontLineServicePlan object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcFrontLineServicePlan
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcfrontlineserviceplan-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a cloudPcFrontLineServicePlan object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a cloudPcFrontLineServicePlan object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a cloudPcFrontLineServicePlan object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

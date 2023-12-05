@@ -69,14 +69,14 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner/tasks/{businessScenarioTask%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Delete a businessScenarioTask object.
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-delete-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Delete a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-delete-tasks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -88,7 +88,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a businessScenarioTask object.
      * @return a BusinessScenarioTask
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -97,7 +97,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BusinessScenarioTask
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-get?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenarioTask::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a businessScenarioTask object.
      * @param body The request body
      * @return a BusinessScenarioTask
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-update?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a businessScenarioTask object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BusinessScenarioTask
@@ -137,7 +137,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenarioTask::createFromDiscriminatorValue);
     }
     /**
-     * Delete a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Delete a businessScenarioTask object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Delete a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +157,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a businessScenarioTask object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -165,7 +165,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a businessScenarioTask object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +186,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Update the properties of a businessScenarioTask object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a businessScenarioTask object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a businessScenarioTask object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

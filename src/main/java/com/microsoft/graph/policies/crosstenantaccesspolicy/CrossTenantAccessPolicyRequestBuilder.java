@@ -78,7 +78,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @return a CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -87,7 +87,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -101,7 +101,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @return a CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CrossTenantAccessPolicy
@@ -147,7 +147,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cross-tenant access policy. This API is available in the following national cloud deployments.
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -207,7 +207,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

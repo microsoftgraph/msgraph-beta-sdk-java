@@ -91,7 +91,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * Get a list of sensitivityLabel objects associated with a user or organization.
      * @return a SensitivityLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * Get a list of sensitivityLabel objects associated with a user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SensitivityLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
@@ -138,7 +138,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabel::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * Get a list of sensitivityLabel objects associated with a user or organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * Get a list of sensitivityLabel objects associated with a user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * Get a list of sensitivityLabel objects associated with a user or organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

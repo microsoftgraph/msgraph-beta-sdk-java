@@ -69,14 +69,14 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Delete a timeCard instance in a schedule.
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -88,7 +88,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a timeCard object by ID. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a timeCard object by ID.
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -97,7 +97,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a timeCard object by ID. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Delete a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Delete a timeCard instance in a schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a timeCard instance in a schedule. This API is available in the following national cloud deployments.
+     * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +157,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a timeCard object by ID. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a timeCard object by ID.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -165,7 +165,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a timeCard object by ID. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a timeCard object by ID. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a timeCard object by ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

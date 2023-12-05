@@ -80,7 +80,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new userSource object. This API is available in the following national cloud deployments.
+     * Create a new userSource object.
      * @param body The request body
      * @return a UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-post-usersources?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new userSource object. This API is available in the following national cloud deployments.
+     * Create a new userSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserSource
@@ -126,7 +126,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userSource object. This API is available in the following national cloud deployments.
+     * Create a new userSource object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userSource object. This API is available in the following national cloud deployments.
+     * Create a new userSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

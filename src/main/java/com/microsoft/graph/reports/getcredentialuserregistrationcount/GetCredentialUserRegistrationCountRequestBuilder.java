@@ -36,7 +36,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/reports/getCredentialUserRegistrationCount(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
     }
     /**
-     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities. This API is available in the following national cloud deployments.
+     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      * @return a GetCredentialUserRegistrationCountGetResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialuserregistrationcount?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities. This API is available in the following national cloud deployments.
+     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetCredentialUserRegistrationCountGetResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialuserregistrationcount?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, GetCredentialUserRegistrationCountGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities. This API is available in the following national cloud deployments.
+     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities. This API is available in the following national cloud deployments.
+     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         return new GetCredentialUserRegistrationCountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities. This API is available in the following national cloud deployments.
+     * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -62,7 +62,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @return a VirtualEventRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VirtualEventRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * Get the properties and relationships of a virtualEventRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

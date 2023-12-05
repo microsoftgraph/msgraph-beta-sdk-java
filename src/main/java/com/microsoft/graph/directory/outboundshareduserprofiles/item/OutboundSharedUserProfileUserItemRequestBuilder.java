@@ -62,7 +62,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the details of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Get the details of an outboundSharedUserProfile.
      * @return a OutboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Get the details of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OutboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get the details of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Get the details of an outboundSharedUserProfile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Get the details of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Get the details of an outboundSharedUserProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

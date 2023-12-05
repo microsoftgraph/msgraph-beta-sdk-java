@@ -36,7 +36,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/impactedResources/{impactedResource%2Did}/dismiss", rawUrl);
     }
     /**
-     * Dismiss an impactedResources object and update its status to dismissed. This API is available in the following national cloud deployments.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Dismiss an impactedResources object and update its status to dismissed. This API is available in the following national cloud deployments.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ImpactedResource
@@ -62,7 +62,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Dismiss an impactedResources object and update its status to dismissed. This API is available in the following national cloud deployments.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss an impactedResources object and update its status to dismissed. This API is available in the following national cloud deployments.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

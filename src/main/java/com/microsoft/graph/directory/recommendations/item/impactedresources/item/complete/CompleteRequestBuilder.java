@@ -36,7 +36,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/impactedResources/{impactedResource%2Did}/complete", rawUrl);
     }
     /**
-     * Complete an impactedResource object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Complete an impactedResource object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Complete an impactedResource object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Complete an impactedResource object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

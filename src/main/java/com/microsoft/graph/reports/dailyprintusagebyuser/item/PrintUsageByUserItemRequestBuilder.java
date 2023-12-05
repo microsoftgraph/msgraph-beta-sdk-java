@@ -54,7 +54,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints. This API is available in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints.
      * @return a PrintUsageByUser
      * @see <a href="https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints. This API is available in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintUsageByUser
      * @see <a href="https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints. This API is available in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints. This API is available in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints. This API is available in the following national cloud deployments.
+     * Retrieve a user's usage summary for a particular time period. See the printUsageByUser documentation for descriptions of each of the endpoints.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

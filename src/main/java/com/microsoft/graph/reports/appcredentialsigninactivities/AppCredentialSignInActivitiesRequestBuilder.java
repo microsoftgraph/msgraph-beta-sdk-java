@@ -59,7 +59,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/reports/appCredentialSignInActivities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials. This API is available in the following national cloud deployments.
+     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @return a AppCredentialSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials. This API is available in the following national cloud deployments.
+     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AppCredentialSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, AppCredentialSignInActivity::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials. This API is available in the following national cloud deployments.
+     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials. This API is available in the following national cloud deployments.
+     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return new AppCredentialSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials. This API is available in the following national cloud deployments.
+     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

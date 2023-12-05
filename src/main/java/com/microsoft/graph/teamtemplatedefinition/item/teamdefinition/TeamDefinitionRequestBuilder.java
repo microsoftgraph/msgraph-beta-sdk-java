@@ -214,7 +214,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @return a Team
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
      */
@@ -223,7 +223,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Team
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
@@ -281,7 +281,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -289,7 +289,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -341,7 +341,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

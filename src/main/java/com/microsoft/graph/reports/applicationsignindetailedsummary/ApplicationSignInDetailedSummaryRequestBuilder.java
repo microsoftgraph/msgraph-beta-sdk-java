@@ -59,7 +59,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/reports/applicationSignInDetailedSummary{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the applicationSignInDetailedSummary objects. This API is available in the following national cloud deployments.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @return a ApplicationSignInDetailedSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-applicationsignindetailedsummary?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Retrieve the applicationSignInDetailedSummary objects. This API is available in the following national cloud deployments.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApplicationSignInDetailedSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-applicationsignindetailedsummary?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationSignInDetailedSummary::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the applicationSignInDetailedSummary objects. This API is available in the following national cloud deployments.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the applicationSignInDetailedSummary objects. This API is available in the following national cloud deployments.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return new ApplicationSignInDetailedSummaryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the applicationSignInDetailedSummary objects. This API is available in the following national cloud deployments.
+     * Retrieve the applicationSignInDetailedSummary objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

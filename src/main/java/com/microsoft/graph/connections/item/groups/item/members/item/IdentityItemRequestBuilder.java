@@ -37,14 +37,14 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}/members/{identity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an externalGroupMember object. This API is available in the following national cloud deployments.
+     * Delete an externalGroupMember object.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an externalGroupMember object. This API is available in the following national cloud deployments.
+     * Delete an externalGroupMember object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -101,7 +101,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Identity::createFromDiscriminatorValue);
     }
     /**
-     * Delete an externalGroupMember object. This API is available in the following national cloud deployments.
+     * Delete an externalGroupMember object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an externalGroupMember object. This API is available in the following national cloud deployments.
+     * Delete an externalGroupMember object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

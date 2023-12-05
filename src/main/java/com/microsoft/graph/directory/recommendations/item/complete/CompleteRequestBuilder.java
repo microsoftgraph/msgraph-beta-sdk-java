@@ -36,7 +36,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/complete", rawUrl);
     }
     /**
-     * Complete a recommendation object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete a recommendation object and update its status to completedByUser.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Complete a recommendation object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete a recommendation object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Recommendation::createFromDiscriminatorValue);
     }
     /**
-     * Complete a recommendation object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete a recommendation object and update its status to completedByUser.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Complete a recommendation object and update its status to completedByUser. This API is available in the following national cloud deployments.
+     * Complete a recommendation object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

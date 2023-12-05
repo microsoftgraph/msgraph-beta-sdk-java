@@ -37,14 +37,14 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks/{deviceLink%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them. This API is available in the following national cloud deployments.
+     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them. This API is available in the following national cloud deployments.
+     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve the device link associated with a specific branch.
      * @return a DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve the device link associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Update the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Update the device link associated with a specific branch.
      * @param body The request body
      * @return a DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Update the device link associated with a specific branch.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLink
@@ -105,7 +105,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them. This API is available in the following national cloud deployments.
+     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them. This API is available in the following national cloud deployments.
+     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve the device link associated with a specific branch.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve the device link associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Update the device link associated with a specific branch.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Update the device link associated with a specific branch.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the device link associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve the device link associated with a specific branch.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

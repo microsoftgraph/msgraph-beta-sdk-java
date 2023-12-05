@@ -58,17 +58,19 @@ public class AuthenticationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/authentications{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get authentications from reports
+     * Get a list of daily authentications on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a AuthenticationsMetricCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-authentications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationsMetricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get authentications from reports
+     * Get a list of daily authentications on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationsMetricCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-authentications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationsMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class AuthenticationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationsMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get authentications from reports
+     * Get a list of daily authentications on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +89,7 @@ public class AuthenticationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get authentications from reports
+     * Get a list of daily authentications on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +111,7 @@ public class AuthenticationsRequestBuilder extends BaseRequestBuilder {
         return new AuthenticationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get authentications from reports
+     * Get a list of daily authentications on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

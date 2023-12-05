@@ -54,7 +54,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceCompliance object.
      * @return a ManagedDeviceCompliance
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceCompliance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagedDeviceCompliance
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceCompliance object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceCompliance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a managedDeviceCompliance object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

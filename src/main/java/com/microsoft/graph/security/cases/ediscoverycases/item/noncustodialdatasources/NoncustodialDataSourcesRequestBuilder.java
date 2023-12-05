@@ -104,7 +104,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryNoncustodialDataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @return a EdiscoveryNoncustodialDataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EdiscoveryNoncustodialDataSource
@@ -150,7 +150,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -159,7 +159,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoveryNoncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

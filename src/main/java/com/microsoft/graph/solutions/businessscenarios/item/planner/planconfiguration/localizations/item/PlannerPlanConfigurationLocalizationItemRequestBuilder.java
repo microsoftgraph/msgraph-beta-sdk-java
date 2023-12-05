@@ -37,14 +37,14 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner/planConfiguration/localizations/{plannerPlanConfigurationLocalization%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Delete a plannerPlanConfigurationLocalization object.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Delete a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @return a PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfigurationLocalization
@@ -105,7 +105,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Delete a plannerPlanConfigurationLocalization object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Delete a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

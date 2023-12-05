@@ -26,7 +26,7 @@ public class UserCountMetric extends Entity implements Parsable {
         return new UserCountMetric();
     }
     /**
-     * Gets the count property value. The count property
+     * Gets the count property value. The total number of users in the tenant over time.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class UserCountMetric extends Entity implements Parsable {
         return this.backingStore.get("count");
     }
     /**
-     * Gets the factDate property value. The factDate property
+     * Gets the factDate property value. The date of the insight.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class UserCountMetric extends Entity implements Parsable {
         writer.writeLocalDateValue("factDate", this.getFactDate());
     }
     /**
-     * Sets the count property value. The count property
+     * Sets the count property value. The total number of users in the tenant over time.
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("count", value);
     }
     /**
-     * Sets the factDate property value. The factDate property
+     * Sets the factDate property value. The date of the insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {

@@ -59,7 +59,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/subscriptions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @return a CompanySubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompanySubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CompanySubscription::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return new SubscriptionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. This API is available in the following national cloud deployments.
+     * Get the list of commercial subscriptions that an organization has acquired.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

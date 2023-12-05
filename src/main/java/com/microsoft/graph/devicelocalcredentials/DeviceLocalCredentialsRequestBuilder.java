@@ -48,7 +48,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24search,%24filter,%24count,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
@@ -56,7 +56,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24top,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
      * Get entities from deviceLocalCredentials
@@ -169,12 +169,6 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
-         * Expand related entities
-         */
-        @QueryParameter(name = "%24expand")
-        @jakarta.annotation.Nullable
-        public String[] expand;
-        /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
@@ -198,12 +192,6 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
-        /**
-         * Skip the first n items
-         */
-        @QueryParameter(name = "%24skip")
-        @jakarta.annotation.Nullable
-        public Integer skip;
         /**
          * Show only the first n items
          */

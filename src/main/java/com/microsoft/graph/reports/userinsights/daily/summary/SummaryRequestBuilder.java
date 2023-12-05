@@ -58,7 +58,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/summary{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @return a InsightSummaryCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InsightSummaryCollectionResponse
      */
@@ -79,7 +79,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InsightSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +109,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return new SummaryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

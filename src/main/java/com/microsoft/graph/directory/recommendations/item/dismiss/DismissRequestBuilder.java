@@ -36,7 +36,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/dismiss", rawUrl);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is available in the following national cloud deployments.
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is available in the following national cloud deployments.
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Recommendation
@@ -62,7 +62,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Recommendation::createFromDiscriminatorValue);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is available in the following national cloud deployments.
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is available in the following national cloud deployments.
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

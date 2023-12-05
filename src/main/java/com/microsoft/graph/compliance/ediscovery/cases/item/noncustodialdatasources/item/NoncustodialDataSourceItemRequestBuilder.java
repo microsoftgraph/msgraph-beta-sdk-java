@@ -126,7 +126,7 @@ public class NoncustodialDataSourceItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a noncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a noncustodialDataSource object.
      * @return a NoncustodialDataSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -138,7 +138,7 @@ public class NoncustodialDataSourceItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties and relationships of a noncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a noncustodialDataSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NoncustodialDataSource
      * @deprecated
@@ -211,7 +211,7 @@ public class NoncustodialDataSourceItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a noncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a noncustodialDataSource object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -222,7 +222,7 @@ public class NoncustodialDataSourceItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a noncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a noncustodialDataSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -286,7 +286,7 @@ public class NoncustodialDataSourceItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a noncustodialDataSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a noncustodialDataSource object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

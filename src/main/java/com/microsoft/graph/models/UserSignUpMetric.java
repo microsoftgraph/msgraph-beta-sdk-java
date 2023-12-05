@@ -26,7 +26,7 @@ public class UserSignUpMetric extends Entity implements Parsable {
         return new UserSignUpMetric();
     }
     /**
-     * Gets the count property value. The count property
+     * Gets the count property value. The total number of users who signed up in the specified period. Supports $filter (eq).
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class UserSignUpMetric extends Entity implements Parsable {
         return this.backingStore.get("count");
     }
     /**
-     * Gets the factDate property value. The factDate property
+     * Gets the factDate property value. The date of the user insight.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class UserSignUpMetric extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the os property value. The os property
+     * Gets the os property value. The device plaform that the customers used. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class UserSignUpMetric extends Entity implements Parsable {
         writer.writeStringValue("os", this.getOs());
     }
     /**
-     * Sets the count property value. The count property
+     * Sets the count property value. The total number of users who signed up in the specified period. Supports $filter (eq).
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("count", value);
     }
     /**
-     * Sets the factDate property value. The factDate property
+     * Sets the factDate property value. The date of the user insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
     }
     /**
-     * Sets the os property value. The os property
+     * Sets the os property value. The device plaform that the customers used. Supports $filter (eq).
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {

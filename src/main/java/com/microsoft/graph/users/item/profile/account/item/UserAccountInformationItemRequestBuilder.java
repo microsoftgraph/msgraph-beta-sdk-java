@@ -37,14 +37,14 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/account/{userAccountInformation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an userAccountInformation object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete an userAccountInformation object from a user's profile.
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an userAccountInformation object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete an userAccountInformation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      * @return a UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformation::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
      * @return a UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserAccountInformation
@@ -105,7 +105,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformation::createFromDiscriminatorValue);
     }
     /**
-     * Delete an userAccountInformation object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete an userAccountInformation object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an userAccountInformation object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete an userAccountInformation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,7 +35,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/reprovision", rawUrl);
     }
     /**
-     * Reprovision a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reprovision a specific Cloud PC.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reprovision?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Reprovision a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reprovision a specific Cloud PC.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reprovision?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reprovision a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reprovision a specific Cloud PC.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Reprovision a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reprovision a specific Cloud PC.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

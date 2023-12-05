@@ -37,14 +37,14 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/qnas/{qna%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a qna object. This API is available in the following national cloud deployments.
+     * Delete a qna object.
      * @see <a href="https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a qna object. This API is available in the following national cloud deployments.
+     * Delete a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a qna object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a qna object.
      * @return a Qna
      * @see <a href="https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a qna object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Qna
      * @see <a href="https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Qna::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a qna object. This API is available in the following national cloud deployments.
+     * Update the properties of a qna object.
      * @param body The request body
      * @return a Qna
      * @see <a href="https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a qna object. This API is available in the following national cloud deployments.
+     * Update the properties of a qna object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Qna
@@ -105,7 +105,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Qna::createFromDiscriminatorValue);
     }
     /**
-     * Delete a qna object. This API is available in the following national cloud deployments.
+     * Delete a qna object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a qna object. This API is available in the following national cloud deployments.
+     * Delete a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a qna object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a qna object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a qna object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a qna object. This API is available in the following national cloud deployments.
+     * Update the properties of a qna object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a qna object. This API is available in the following national cloud deployments.
+     * Update the properties of a qna object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a qna object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a qna object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

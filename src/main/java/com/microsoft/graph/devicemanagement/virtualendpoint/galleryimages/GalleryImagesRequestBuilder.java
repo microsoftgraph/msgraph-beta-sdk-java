@@ -59,7 +59,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/galleryImages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the properties and relationships of the cloudPcGalleryImage objects. This API is available in the following national cloud deployments.
+     * List the properties and relationships of the cloudPcGalleryImage objects.
      * @return a CloudPcGalleryImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the properties and relationships of the cloudPcGalleryImage objects. This API is available in the following national cloud deployments.
+     * List the properties and relationships of the cloudPcGalleryImage objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcGalleryImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcGalleryImage::createFromDiscriminatorValue);
     }
     /**
-     * List the properties and relationships of the cloudPcGalleryImage objects. This API is available in the following national cloud deployments.
+     * List the properties and relationships of the cloudPcGalleryImage objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the properties and relationships of the cloudPcGalleryImage objects. This API is available in the following national cloud deployments.
+     * List the properties and relationships of the cloudPcGalleryImage objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
         return new GalleryImagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the properties and relationships of the cloudPcGalleryImage objects. This API is available in the following national cloud deployments.
+     * List the properties and relationships of the cloudPcGalleryImage objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

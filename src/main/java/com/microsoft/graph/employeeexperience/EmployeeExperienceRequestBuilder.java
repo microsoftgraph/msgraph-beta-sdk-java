@@ -1,6 +1,5 @@
 package com.microsoft.graph.employeeexperience;
 
-import com.microsoft.graph.employeeexperience.goals.GoalsRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
@@ -24,13 +23,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the goals property of the microsoft.graph.employeeExperience entity.
-     */
-    @jakarta.annotation.Nonnull
-    public GoalsRequestBuilder goals() {
-        return new GoalsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
      */
     @jakarta.annotation.Nonnull
@@ -50,7 +42,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select}", pathParameters);
     }
     /**
      * Instantiates a new EmployeeExperienceRequestBuilder and sets the default values.
@@ -58,7 +50,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience{?%24select}", rawUrl);
     }
     /**
      * Get employeeExperience
@@ -164,12 +156,6 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
-        /**
-         * Expand related entities
-         */
-        @QueryParameter(name = "%24expand")
-        @jakarta.annotation.Nullable
-        public String[] expand;
         /**
          * Select properties to be returned
          */

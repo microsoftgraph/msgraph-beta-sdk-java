@@ -35,7 +35,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/rename", rawUrl);
     }
     /**
-     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity. This API is available in the following national cloud deployments.
+     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-rename?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity. This API is available in the following national cloud deployments.
+     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-rename?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity. This API is available in the following national cloud deployments.
+     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity. This API is available in the following national cloud deployments.
+     * Rename a specific Cloud PC. Use this API to update the displayName for the Cloud PC entity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -59,7 +59,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/addresses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the itemAddress resources from the addresses navigation property. This API is available in the following national cloud deployments.
+     * Get the itemAddress resources from the addresses navigation property.
      * @return a ItemAddressCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the itemAddress resources from the addresses navigation property. This API is available in the following national cloud deployments.
+     * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ItemAddressCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddressCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new itemAddress object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @return a ItemAddress
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new itemAddress object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ItemAddress
@@ -108,7 +108,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddress::createFromDiscriminatorValue);
     }
     /**
-     * Get the itemAddress resources from the addresses navigation property. This API is available in the following national cloud deployments.
+     * Get the itemAddress resources from the addresses navigation property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the itemAddress resources from the addresses navigation property. This API is available in the following national cloud deployments.
+     * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new itemAddress object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new itemAddress object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return new AddressesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the itemAddress resources from the addresses navigation property. This API is available in the following national cloud deployments.
+     * Get the itemAddress resources from the addresses navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

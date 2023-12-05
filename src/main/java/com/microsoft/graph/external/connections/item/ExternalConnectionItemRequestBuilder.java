@@ -77,14 +77,14 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an externalConnection. This API is available in the following national cloud deployments.
+     * Delete an externalConnection.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an externalConnection. This API is available in the following national cloud deployments.
+     * Delete an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -96,7 +96,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an externalConnection. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an externalConnection.
      * @return a ExternalConnection
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -105,7 +105,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an externalConnection. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalConnection
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
@@ -119,7 +119,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnection::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an externalConnection. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection.
      * @param body The request body
      * @return a ExternalConnection
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an externalConnection. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalConnection
@@ -145,7 +145,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnection::createFromDiscriminatorValue);
     }
     /**
-     * Delete an externalConnection. This API is available in the following national cloud deployments.
+     * Delete an externalConnection.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an externalConnection. This API is available in the following national cloud deployments.
+     * Delete an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an externalConnection. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an externalConnection.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +173,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an externalConnection. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +185,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an externalConnection. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -194,7 +194,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an externalConnection. This API is available in the following national cloud deployments.
+     * Update the properties of an externalConnection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -225,7 +225,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an externalConnection. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an externalConnection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

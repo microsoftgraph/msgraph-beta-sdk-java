@@ -86,7 +86,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @return a AccessPackageAssignmentResourceRole
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageAssignmentResourceRole
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
@@ -153,7 +153,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +161,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

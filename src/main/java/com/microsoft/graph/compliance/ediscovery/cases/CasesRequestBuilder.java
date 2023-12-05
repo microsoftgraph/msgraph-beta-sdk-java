@@ -65,7 +65,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of case objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of case objects.
      * @return a CaseCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -77,7 +77,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of case objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of case objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseCollectionResponse
      * @deprecated
@@ -94,7 +94,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new case object. This API is available in the following national cloud deployments.
+     * Create a new case object.
      * @param body The request body
      * @return a CaseEscaped
      * @deprecated
@@ -107,7 +107,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new case object. This API is available in the following national cloud deployments.
+     * Create a new case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseEscaped
@@ -126,7 +126,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseEscaped::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of case objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of case objects.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -137,7 +137,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of case objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of case objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -152,7 +152,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new case object. This API is available in the following national cloud deployments.
+     * Create a new case object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -164,7 +164,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new case object. This API is available in the following national cloud deployments.
+     * Create a new case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return new CasesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of case objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of case objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

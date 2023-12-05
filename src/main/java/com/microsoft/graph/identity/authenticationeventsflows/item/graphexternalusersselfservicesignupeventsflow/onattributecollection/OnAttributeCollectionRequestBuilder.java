@@ -23,7 +23,10 @@ import java.util.Objects;
 public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to onAttributeCollectionExternalUsersSelfServiceSignUp.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder graphOnAttributeCollectionExternalUsersSelfServiceSignUp() {
         return new GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder(pathParameters, requestAdapter);
@@ -47,8 +50,11 @@ public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
     /**
      * The configuration for what to invoke when attributes are ready to be collected from the user.
      * @return a OnAttributeCollectionHandler
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnAttributeCollectionHandler get() {
         return get(null);
     }
@@ -56,8 +62,11 @@ public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
      * The configuration for what to invoke when attributes are ready to be collected from the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnAttributeCollectionHandler
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnAttributeCollectionHandler get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -68,8 +77,11 @@ public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
     /**
      * The configuration for what to invoke when attributes are ready to be collected from the user.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -77,8 +89,11 @@ public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
      * The configuration for what to invoke when attributes are ready to be collected from the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -89,8 +104,11 @@ public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a OnAttributeCollectionRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public OnAttributeCollectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OnAttributeCollectionRequestBuilder(rawUrl, requestAdapter);

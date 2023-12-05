@@ -54,7 +54,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a cloudPcConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcConnection object.
      * @return a CloudPcConnection
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcConnection
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a cloudPcConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcConnection object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a cloudPcConnection object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcConnection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

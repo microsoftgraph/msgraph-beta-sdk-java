@@ -36,7 +36,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/bulkSetCloudPcReviewStatus", rawUrl);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices. This API is available in the following national cloud deployments.
+     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @return a CloudPcBulkRemoteActionResult
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return post(body, null);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices. This API is available in the following national cloud deployments.
+     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcBulkRemoteActionResult
@@ -62,7 +62,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices. This API is available in the following national cloud deployments.
+     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices. This API is available in the following national cloud deployments.
+     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

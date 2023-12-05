@@ -36,7 +36,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getFrontlineReport", rawUrl);
     }
     /**
-     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports.
      * @param body The request body
      * @return a InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
@@ -62,7 +62,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

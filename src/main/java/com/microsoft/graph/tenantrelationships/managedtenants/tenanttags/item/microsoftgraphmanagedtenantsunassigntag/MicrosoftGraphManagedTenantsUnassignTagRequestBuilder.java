@@ -36,7 +36,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.unassignTag", rawUrl);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
+     * Un-assigns the tenant tag from the specified managed tenants.
      * @param body The request body
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-unassigntag?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return post(body, null);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
+     * Un-assigns the tenant tag from the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTag
@@ -62,7 +62,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
+     * Un-assigns the tenant tag from the specified managed tenants.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return toPostRequestInformation(body, null);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
+     * Un-assigns the tenant tag from the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

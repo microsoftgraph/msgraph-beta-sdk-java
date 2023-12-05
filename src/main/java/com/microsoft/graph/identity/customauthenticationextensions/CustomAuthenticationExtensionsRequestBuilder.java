@@ -26,14 +26,20 @@ import java.util.Objects;
 public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateAuthenticationConfiguration method.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateAuthenticationConfigurationRequestBuilder validateAuthenticationConfiguration() {
         return new ValidateAuthenticationConfigurationRequestBuilder(pathParameters, requestAdapter);
@@ -42,8 +48,11 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
      * @param customAuthenticationExtensionId The unique identifier of customAuthenticationExtension
      * @return a CustomAuthenticationExtensionItemRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CustomAuthenticationExtensionItemRequestBuilder byCustomAuthenticationExtensionId(@jakarta.annotation.Nonnull final String customAuthenticationExtensionId) {
         Objects.requireNonNull(customAuthenticationExtensionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -67,21 +76,27 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned. This API is available in the following national cloud deployments.
+     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @return a CustomAuthenticationExtensionCollectionResponse
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CustomAuthenticationExtensionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned. This API is available in the following national cloud deployments.
+     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtensionCollectionResponse
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CustomAuthenticationExtensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,23 +105,29 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported. This API is available in the following national cloud deployments.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a CustomAuthenticationExtension
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CustomAuthenticationExtension post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return post(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported. This API is available in the following national cloud deployments.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtension
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CustomAuthenticationExtension post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -116,19 +137,25 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned. This API is available in the following national cloud deployments.
+     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned. This API is available in the following national cloud deployments.
+     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -136,21 +163,27 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported. This API is available in the following national cloud deployments.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported. This API is available in the following national cloud deployments.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -163,14 +196,17 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a CustomAuthenticationExtensionsRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CustomAuthenticationExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CustomAuthenticationExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned. This API is available in the following national cloud deployments.
+     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

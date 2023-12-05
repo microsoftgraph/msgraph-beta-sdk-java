@@ -59,7 +59,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/interests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of personInterest objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personInterest objects from a user's profile.
      * @return a PersonInterestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-interests?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of personInterest objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personInterest objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonInterestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-interests?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonInterestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new personInterest. This API is available in the following national cloud deployments.
+     * Create a new personInterest.
      * @param body The request body
      * @return a PersonInterest
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-interests?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new personInterest. This API is available in the following national cloud deployments.
+     * Create a new personInterest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonInterest
@@ -108,7 +108,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonInterest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personInterest objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personInterest objects from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personInterest objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personInterest objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new personInterest. This API is available in the following national cloud deployments.
+     * Create a new personInterest.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new personInterest. This API is available in the following national cloud deployments.
+     * Create a new personInterest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
         return new InterestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personInterest objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personInterest objects from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

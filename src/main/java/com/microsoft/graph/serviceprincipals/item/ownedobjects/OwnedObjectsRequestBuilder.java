@@ -90,7 +90,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/ownedObjects{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-ownedobjects?view=graph-rest-1.0">Find more info here</a>
      */
@@ -99,7 +99,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-ownedobjects?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return new OwnedObjectsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups. This API is available in the following national cloud deployments.
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

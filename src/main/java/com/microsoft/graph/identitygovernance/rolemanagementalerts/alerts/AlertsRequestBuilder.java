@@ -67,7 +67,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alerts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the unifiedRoleManagementAlert objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @return a UnifiedRoleManagementAlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the unifiedRoleManagementAlert objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleManagementAlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementAlert::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the unifiedRoleManagementAlert objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the unifiedRoleManagementAlert objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return new AlertsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the unifiedRoleManagementAlert objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the unifiedRoleManagementAlert objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

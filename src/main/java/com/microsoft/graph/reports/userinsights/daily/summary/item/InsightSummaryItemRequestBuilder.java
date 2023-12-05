@@ -37,7 +37,7 @@ public class InsightSummaryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/summary/{insightSummary%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @return a InsightSummary
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class InsightSummaryItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InsightSummary
      */
@@ -58,7 +58,7 @@ public class InsightSummaryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InsightSummary::createFromDiscriminatorValue);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class InsightSummaryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class InsightSummaryItemRequestBuilder extends BaseRequestBuilder {
         return new InsightSummaryItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get summary from reports
+     * Summary of all usage insights on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

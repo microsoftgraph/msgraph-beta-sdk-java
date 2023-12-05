@@ -37,14 +37,14 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/labels/filePlanReferences/{filePlanReferenceTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Delete a filePlanReferenceTemplate object.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-fileplanreferences?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Delete a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-fileplanreferences?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @return a FilePlanReferenceTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FilePlanReferenceTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, FilePlanReferenceTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Delete a filePlanReferenceTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Delete a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

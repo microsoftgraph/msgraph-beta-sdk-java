@@ -76,7 +76,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the cloudPC devices in a tenant. This API is available in the following national cloud deployments.
+     * List the cloudPC devices in a tenant.
      * @return a CloudPCCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -85,7 +85,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the cloudPC devices in a tenant. This API is available in the following national cloud deployments.
+     * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPCCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
@@ -135,7 +135,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
-     * List the cloudPC devices in a tenant. This API is available in the following national cloud deployments.
+     * List the cloudPC devices in a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the cloudPC devices in a tenant. This API is available in the following national cloud deployments.
+     * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return new CloudPCsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the cloudPC devices in a tenant. This API is available in the following national cloud deployments.
+     * List the cloudPC devices in a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

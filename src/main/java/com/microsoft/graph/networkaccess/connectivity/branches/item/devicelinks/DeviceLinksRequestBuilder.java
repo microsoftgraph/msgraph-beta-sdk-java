@@ -59,7 +59,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve a list of device links associated with a specific branch.
      * @return a DeviceLinkCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLinkCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLinkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a branch site with associated device links. This API is available in the following national cloud deployments.
+     * Create a branch site with associated device links.
      * @param body The request body
      * @return a DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a branch site with associated device links. This API is available in the following national cloud deployments.
+     * Create a branch site with associated device links.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLink
@@ -108,7 +108,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve a list of device links associated with a specific branch.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a branch site with associated device links. This API is available in the following national cloud deployments.
+     * Create a branch site with associated device links.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a branch site with associated device links. This API is available in the following national cloud deployments.
+     * Create a branch site with associated device links.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return new DeviceLinksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch. This API is available in the following national cloud deployments.
+     * Retrieve a list of device links associated with a specific branch.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -65,7 +65,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a legalHold object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a legalHold object.
      * @return a LegalHoldCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -76,7 +76,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a legalHold object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LegalHoldCollectionResponse
      * @deprecated
@@ -122,7 +122,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LegalHold::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a legalHold object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a legalHold object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -133,7 +133,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a legalHold object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -191,7 +191,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return new LegalHoldsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a legalHold object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a legalHold object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
