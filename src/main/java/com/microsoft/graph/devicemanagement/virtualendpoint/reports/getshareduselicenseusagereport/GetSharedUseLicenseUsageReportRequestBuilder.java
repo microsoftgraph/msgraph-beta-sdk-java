@@ -36,7 +36,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getSharedUseLicenseUsageReport", rawUrl);
     }
     /**
-     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend. This API is available in the following national cloud deployments.
+     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @return a InputStream
      * @deprecated
@@ -49,7 +49,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         return post(body, null);
     }
     /**
-     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend. This API is available in the following national cloud deployments.
+     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
@@ -68,7 +68,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend. This API is available in the following national cloud deployments.
+     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -80,7 +80,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend. This API is available in the following national cloud deployments.
+     * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

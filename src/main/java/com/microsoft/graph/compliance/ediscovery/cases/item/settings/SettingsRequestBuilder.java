@@ -71,7 +71,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @return a CaseSettings
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -83,7 +83,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseSettings
      * @deprecated
@@ -100,7 +100,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body The request body
      * @return a CaseSettings
      * @deprecated
@@ -113,7 +113,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseSettings
@@ -158,7 +158,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -169,7 +169,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -184,7 +184,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -196,7 +196,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -233,7 +233,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an eDiscovery caseSettings object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

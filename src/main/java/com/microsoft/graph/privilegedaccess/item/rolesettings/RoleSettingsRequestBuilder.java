@@ -59,7 +59,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleSettings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @return a GovernanceRoleSettingCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GovernanceRoleSettingCollectionResponse
      */
@@ -104,7 +104,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceRoleSetting::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return new RoleSettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

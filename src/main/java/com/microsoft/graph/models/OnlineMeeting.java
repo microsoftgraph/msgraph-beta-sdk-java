@@ -141,7 +141,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("meetingAttendanceReport");
     }
     /**
-     * Gets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @return a MeetingParticipants
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("recordings");
     }
     /**
-     * Gets the registration property value. The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
+     * Gets the registration property value. The registration that is enabled for an online meeting. One online meeting can only have one registration enabled.
      * @return a MeetingRegistration
      */
     @jakarta.annotation.Nullable
@@ -291,7 +291,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("meetingAttendanceReport", value);
     }
     /**
-     * Sets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {
@@ -312,7 +312,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("recordings", value);
     }
     /**
-     * Sets the registration property value. The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
+     * Sets the registration property value. The registration that is enabled for an online meeting. One online meeting can only have one registration enabled.
      * @param value Value to set for the registration property.
      */
     public void setRegistration(@jakarta.annotation.Nullable final MeetingRegistration value) {

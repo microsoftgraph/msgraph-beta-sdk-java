@@ -83,7 +83,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a ActivityHistoryItem
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActivityHistoryItem
@@ -149,7 +149,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

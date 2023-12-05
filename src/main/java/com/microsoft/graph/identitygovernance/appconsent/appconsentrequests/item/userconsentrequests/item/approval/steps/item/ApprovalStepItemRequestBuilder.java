@@ -54,7 +54,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an approvalStep object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStep object.
      * @return a ApprovalStep
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of an approvalStep object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStep object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApprovalStep
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStep::createFromDiscriminatorValue);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object. This API is available in the following national cloud deployments.
+     * Apply approve or deny decision on an approvalStep object.
      * @param body The request body
      * @return a ApprovalStep
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object. This API is available in the following national cloud deployments.
+     * Apply approve or deny decision on an approvalStep object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApprovalStep
@@ -123,7 +123,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an approvalStep object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStep object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an approvalStep object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStep object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Apply approve or deny decision on an approvalStep object. This API is available in the following national cloud deployments.
+     * Apply approve or deny decision on an approvalStep object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object. This API is available in the following national cloud deployments.
+     * Apply approve or deny decision on an approvalStep object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an approvalStep object. This API is available in the following national cloud deployments.
+     * Retrieve the properties of an approvalStep object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

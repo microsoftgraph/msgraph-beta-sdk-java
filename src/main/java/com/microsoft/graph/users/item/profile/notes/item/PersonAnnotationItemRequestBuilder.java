@@ -37,14 +37,14 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes/{personAnnotation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAnnotation object from a user's profile.
      * @see <a href="https://learn.microsoft.com/graph/api/personannotation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAnnotation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/personannotation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAnnotation object from a user's profile.
      * @return a PersonAnnotation
      * @see <a href="https://learn.microsoft.com/graph/api/personannotation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAnnotation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAnnotation
      * @see <a href="https://learn.microsoft.com/graph/api/personannotation-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnotation::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAnnotation object in a user's profile.
      * @param body The request body
      * @return a PersonAnnotation
      * @see <a href="https://learn.microsoft.com/graph/api/personannotation-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAnnotation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAnnotation
@@ -105,7 +105,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnotation::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAnnotation object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAnnotation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAnnotation object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAnnotation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAnnotation object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAnnotation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a personAnnotation object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAnnotation object from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

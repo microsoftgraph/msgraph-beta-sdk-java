@@ -37,14 +37,20 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete ref of navigation property postAttributeCollection for identity
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete ref of navigation property postAttributeCollection for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -55,8 +61,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Get ref of postAttributeCollection from identity
      * @return a String
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public String get() {
         return get(null);
     }
@@ -64,8 +73,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Get ref of postAttributeCollection from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a String
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public String get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -76,7 +88,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the ref of navigation property postAttributeCollection in identity
      * @param body The request body
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
         put(body, null);
     }
@@ -84,7 +99,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Update the ref of navigation property postAttributeCollection in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
@@ -96,8 +114,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete ref of navigation property postAttributeCollection for identity
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -105,8 +126,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Delete ref of navigation property postAttributeCollection for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -116,8 +140,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Get ref of postAttributeCollection from identity
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -125,8 +152,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Get ref of postAttributeCollection from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -137,8 +167,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Update the ref of navigation property postAttributeCollection in identity
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
         return toPutRequestInformation(body, null);
     }
@@ -147,8 +180,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
@@ -161,8 +197,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a RefRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RefRequestBuilder(rawUrl, requestAdapter);

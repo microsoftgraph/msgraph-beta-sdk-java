@@ -37,21 +37,27 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/templates/{conditionalAccessTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @return a ConditionalAccessTemplate
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConditionalAccessTemplate get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConditionalAccessTemplate
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConditionalAccessTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -60,19 +66,25 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -83,14 +95,17 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ConditionalAccessTemplateItemRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ConditionalAccessTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ConditionalAccessTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

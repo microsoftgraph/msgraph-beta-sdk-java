@@ -49,7 +49,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationMethods");
     }
     /**
-     * Gets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Gets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a java.util.List<CredentialUserRegistrationDetails>
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("monthlyPrintUsageSummariesByUser");
     }
     /**
-     * Gets the security property value. Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Gets the security property value. Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @return a SecurityReportsRoot
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("security");
     }
     /**
-     * Gets the serviceActivity property value. A placeholder to the Microsoft Entra service activity.
+     * Gets the serviceActivity property value. Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @return a ServiceActivity
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalSignInActivities");
     }
     /**
-     * Gets the sla property value. A placeholder to allow for the desired URL path for SLA.
+     * Gets the sla property value. Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @return a ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("userCredentialUsageDetails");
     }
     /**
-     * Gets the userInsights property value. The userInsights property
+     * Gets the userInsights property value. Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @return a UserInsightsRoot
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("authenticationMethods", value);
     }
     /**
-     * Sets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Sets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param value Value to set for the credentialUserRegistrationDetails property.
      */
     public void setCredentialUserRegistrationDetails(@jakarta.annotation.Nullable final java.util.List<CredentialUserRegistrationDetails> value) {
@@ -323,14 +323,14 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("monthlyPrintUsageSummariesByUser", value);
     }
     /**
-     * Sets the security property value. Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Sets the security property value. Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @param value Value to set for the security property.
      */
     public void setSecurity(@jakarta.annotation.Nullable final SecurityReportsRoot value) {
         this.backingStore.set("security", value);
     }
     /**
-     * Sets the serviceActivity property value. A placeholder to the Microsoft Entra service activity.
+     * Sets the serviceActivity property value. Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @param value Value to set for the serviceActivity property.
      */
     public void setServiceActivity(@jakarta.annotation.Nullable final ServiceActivity value) {
@@ -344,7 +344,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("servicePrincipalSignInActivities", value);
     }
     /**
-     * Sets the sla property value. A placeholder to allow for the desired URL path for SLA.
+     * Sets the sla property value. Reports that relate to tenant-level Microsoft Entra SLA attainment.
      * @param value Value to set for the sla property.
      */
     public void setSla(@jakarta.annotation.Nullable final ServiceLevelAgreementRoot value) {
@@ -358,7 +358,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("userCredentialUsageDetails", value);
     }
     /**
-     * Sets the userInsights property value. The userInsights property
+     * Sets the userInsights property value. Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @param value Value to set for the userInsights property.
      */
     public void setUserInsights(@jakarta.annotation.Nullable final UserInsightsRoot value) {

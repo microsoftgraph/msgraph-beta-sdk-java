@@ -37,14 +37,14 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/acronyms/{acronym%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an acronym object. This API is available in the following national cloud deployments.
+     * Deletes an acronym object.
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes an acronym object. This API is available in the following national cloud deployments.
+     * Deletes an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an acronym object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an acronym object.
      * @return a Acronym
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an acronym object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Acronym
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Acronym::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an acronym object. This API is available in the following national cloud deployments.
+     * Update the properties of an acronym object.
      * @param body The request body
      * @return a Acronym
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an acronym object. This API is available in the following national cloud deployments.
+     * Update the properties of an acronym object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Acronym
@@ -105,7 +105,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Acronym::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an acronym object. This API is available in the following national cloud deployments.
+     * Deletes an acronym object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an acronym object. This API is available in the following national cloud deployments.
+     * Deletes an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an acronym object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an acronym object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an acronym object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an acronym object. This API is available in the following national cloud deployments.
+     * Update the properties of an acronym object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an acronym object. This API is available in the following national cloud deployments.
+     * Update the properties of an acronym object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an acronym object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an acronym object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -53,14 +53,14 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/userSettings/{cloudPcUserSetting%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Delete a cloudPcUserSetting object.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Delete a cloudPcUserSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcUserSetting object.
      * @return a CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcUserSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcUserSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
      * @return a CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcUserSetting
@@ -121,7 +121,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcUserSetting::createFromDiscriminatorValue);
     }
     /**
-     * Delete a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Delete a cloudPcUserSetting object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Delete a cloudPcUserSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcUserSetting object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcUserSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a cloudPcUserSetting object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcUserSetting object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

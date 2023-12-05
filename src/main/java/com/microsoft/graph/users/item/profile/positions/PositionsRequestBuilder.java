@@ -59,7 +59,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/positions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of workPosition objects from a user's profile.
      * @return a WorkPositionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of workPosition objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkPositionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkPositionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
      * @return a WorkPosition
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-positions?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkPosition
@@ -108,7 +108,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkPosition::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of workPosition objects from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of workPosition objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new workPosition in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return new PositionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of workPosition objects from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

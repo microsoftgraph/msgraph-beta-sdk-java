@@ -67,7 +67,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/resources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * Retrieve a collection of governanceResource that the requestor has access to.
      * @return a GovernanceResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * Retrieve a collection of governanceResource that the requestor has access to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GovernanceResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceResource::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * Retrieve a collection of governanceResource that the requestor has access to.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * Retrieve a collection of governanceResource that the requestor has access to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return new ResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * Retrieve a collection of governanceResource that the requestor has access to.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

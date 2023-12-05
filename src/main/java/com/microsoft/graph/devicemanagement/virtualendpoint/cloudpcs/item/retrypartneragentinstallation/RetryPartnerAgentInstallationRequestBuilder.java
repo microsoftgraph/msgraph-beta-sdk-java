@@ -35,14 +35,14 @@ public class RetryPartnerAgentInstallationRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/retryPartnerAgentInstallation", rawUrl);
     }
     /**
-     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry. This API is available in the following national cloud deployments.
+     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-retrypartneragentinstallation?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry. This API is available in the following national cloud deployments.
+     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-retrypartneragentinstallation?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RetryPartnerAgentInstallationRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry. This API is available in the following national cloud deployments.
+     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RetryPartnerAgentInstallationRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(null);
     }
     /**
-     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry. This API is available in the following national cloud deployments.
+     * Retry installation for the partner agents that failed to install on the Cloud PC. Service side checks which agent installation failed firstly and retry.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

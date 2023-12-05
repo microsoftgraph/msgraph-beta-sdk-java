@@ -65,7 +65,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/reviewSets/{reviewSet%2Did}/queries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of eDiscovery reviewSetQuery objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of eDiscovery reviewSetQuery objects.
      * @return a ReviewSetQueryCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -77,7 +77,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of eDiscovery reviewSetQuery objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of eDiscovery reviewSetQuery objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSetQueryCollectionResponse
      * @deprecated
@@ -94,7 +94,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQueryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Create a new reviewSetQuery object.
      * @param body The request body
      * @return a ReviewSetQuery
      * @deprecated
@@ -107,7 +107,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Create a new reviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSetQuery
@@ -126,7 +126,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of eDiscovery reviewSetQuery objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of eDiscovery reviewSetQuery objects.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -137,7 +137,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of eDiscovery reviewSetQuery objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of eDiscovery reviewSetQuery objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -152,7 +152,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Create a new reviewSetQuery object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -164,7 +164,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new reviewSetQuery object. This API is available in the following national cloud deployments.
+     * Create a new reviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return new QueriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of eDiscovery reviewSetQuery objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of eDiscovery reviewSetQuery objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

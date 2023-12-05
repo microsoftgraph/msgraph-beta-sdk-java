@@ -37,14 +37,14 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/bookmarks/{bookmark%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a bookmark object. This API is available in the following national cloud deployments.
+     * Delete a bookmark object.
      * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a bookmark object. This API is available in the following national cloud deployments.
+     * Delete a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a bookmark object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a bookmark object.
      * @return a Bookmark
      * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a bookmark object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Bookmark
      * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bookmark::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a bookmark object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @return a Bookmark
      * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a bookmark object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Bookmark
@@ -105,7 +105,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bookmark::createFromDiscriminatorValue);
     }
     /**
-     * Delete a bookmark object. This API is available in the following national cloud deployments.
+     * Delete a bookmark object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a bookmark object. This API is available in the following national cloud deployments.
+     * Delete a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a bookmark object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a bookmark object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a bookmark object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a bookmark object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a bookmark object. This API is available in the following national cloud deployments.
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a bookmark object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a bookmark object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

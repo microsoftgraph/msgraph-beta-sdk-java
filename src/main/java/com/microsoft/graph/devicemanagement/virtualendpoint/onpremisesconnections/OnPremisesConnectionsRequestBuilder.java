@@ -59,7 +59,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects. This API is available in the following national cloud deployments.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @return a CloudPcOnPremisesConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects. This API is available in the following national cloud deployments.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcOnPremisesConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs. This API is available in the following national cloud deployments.
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @return a CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs. This API is available in the following national cloud deployments.
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcOnPremisesConnection
@@ -108,7 +108,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnection::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects. This API is available in the following national cloud deployments.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects. This API is available in the following national cloud deployments.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs. This API is available in the following national cloud deployments.
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs. This API is available in the following national cloud deployments.
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return new OnPremisesConnectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects. This API is available in the following national cloud deployments.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

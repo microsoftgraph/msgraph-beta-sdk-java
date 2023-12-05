@@ -48,7 +48,7 @@ public class ActivitystatisticsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivitystatisticsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/activitystatistics{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/activitystatistics{?%24top,%24skip,%24search,%24filter,%24count,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ActivitystatisticsRequestBuilder and sets the default values.
@@ -56,7 +56,7 @@ public class ActivitystatisticsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivitystatisticsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/activitystatistics{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/activitystatistics{?%24top,%24skip,%24search,%24filter,%24count,%24select,%24expand}", rawUrl);
     }
     /**
      * Get entities from activitystatistics
@@ -180,12 +180,6 @@ public class ActivitystatisticsRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24filter")
         @jakarta.annotation.Nullable
         public String filter;
-        /**
-         * Order items by property values
-         */
-        @QueryParameter(name = "%24orderby")
-        @jakarta.annotation.Nullable
-        public String[] orderby;
         /**
          * Search items by search phrases
          */

@@ -36,7 +36,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/permissions/{permission%2Did}/revokeGrants", rawUrl);
     }
     /**
-     * Revoke access to a listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link. This API is available in the following [national cloud deployments.
+     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
      * @param body The request body
      * @return a Permission
      * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Revoke access to a listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link. This API is available in the following [national cloud deployments.
+     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Permission
@@ -62,7 +62,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Revoke access to a listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link. This API is available in the following [national cloud deployments.
+     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Revoke access to a listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link. This API is available in the following [national cloud deployments.
+     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

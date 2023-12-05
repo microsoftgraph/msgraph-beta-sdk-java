@@ -35,14 +35,14 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/start", rawUrl);
     }
     /**
-     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-start?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-start?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Start a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

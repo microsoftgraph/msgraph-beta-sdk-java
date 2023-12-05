@@ -25,7 +25,7 @@ public class AzureRoleDefinition extends Entity implements Parsable {
         return new AzureRoleDefinition();
     }
     /**
-     * Gets the assignableScopes property value. Scopes at which the Azure role can be assigned. Supports $filter and (eq).
+     * Gets the assignableScopes property value. Scopes at which the Azure role can be assigned. For more information about common patterns, see Understand Azure role definitions: AssignableScopes. Supports $filter (eq).
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class AzureRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("azureRoleDefinitionType");
     }
     /**
-     * Gets the displayName property value. Name of the Azure role. Supports $filter and (eq,contains).
+     * Gets the displayName property value. Name of the Azure role. Supports $filter (eq, contains).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class AzureRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalId property value. Identifier of an Azure role defined by Microsoft Azure. Alternate key. Supports $filter and eq.
+     * Gets the externalId property value. Identifier of an Azure role defined by Microsoft Azure. Alternate key. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AzureRoleDefinition extends Entity implements Parsable {
         writer.writeStringValue("externalId", this.getExternalId());
     }
     /**
-     * Sets the assignableScopes property value. Scopes at which the Azure role can be assigned. Supports $filter and (eq).
+     * Sets the assignableScopes property value. Scopes at which the Azure role can be assigned. For more information about common patterns, see Understand Azure role definitions: AssignableScopes. Supports $filter (eq).
      * @param value Value to set for the assignableScopes property.
      */
     public void setAssignableScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -96,14 +96,14 @@ public class AzureRoleDefinition extends Entity implements Parsable {
         this.backingStore.set("azureRoleDefinitionType", value);
     }
     /**
-     * Sets the displayName property value. Name of the Azure role. Supports $filter and (eq,contains).
+     * Sets the displayName property value. Name of the Azure role. Supports $filter (eq, contains).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalId property value. Identifier of an Azure role defined by Microsoft Azure. Alternate key. Supports $filter and eq.
+     * Sets the externalId property value. Identifier of an Azure role defined by Microsoft Azure. Alternate key. Supports $filter (eq).
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {

@@ -37,14 +37,14 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/awards/{personAward%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAward object from a user's profile.
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAward object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAward object from a user's profile.
      * @return a PersonAward
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAward object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAward
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAward::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAward object from a user's profile.
      * @param body The request body
      * @return a PersonAward
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAward object from a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAward
@@ -105,7 +105,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAward::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAward object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Deletes a personAward object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAward object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAward object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAward object from a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a personAward object from a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a personAward object from a user's profile. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a personAward object from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

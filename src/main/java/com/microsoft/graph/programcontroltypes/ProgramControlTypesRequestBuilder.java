@@ -59,7 +59,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControlTypes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects.
      * @return a ProgramControlTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontroltype-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProgramControlTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontroltype-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramControlType::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ProgramControlTypesRequestBuilder extends BaseRequestBuilder {
         return new ProgramControlTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControlType objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControlType objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

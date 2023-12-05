@@ -35,14 +35,14 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}/microsoft.graph.industryData.validate", rawUrl);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
+     * Perform validations applicable for the specific instance of the data connector.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-validate?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
+     * Perform validations applicable for the specific instance of the data connector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-validate?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
+     * Perform validations applicable for the specific instance of the data connector.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         return toPostRequestInformation(null);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
+     * Perform validations applicable for the specific instance of the data connector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -26,7 +26,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialInfoItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceLocalCredentialInfoItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialInfoItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24select}", rawUrl);
     }
     /**
      * Delete entity from deviceLocalCredentials
@@ -183,12 +183,6 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
-        /**
-         * Expand related entities
-         */
-        @QueryParameter(name = "%24expand")
-        @jakarta.annotation.Nullable
-        public String[] expand;
         /**
          * Select properties to be returned
          */

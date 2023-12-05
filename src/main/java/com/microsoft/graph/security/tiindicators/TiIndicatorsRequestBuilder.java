@@ -91,7 +91,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tiIndicator objects.
      * @return a TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -100,7 +100,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TiIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
+     * Create a new tiIndicator object.
      * @param body The request body
      * @return a TiIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
+     * Create a new tiIndicator object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TiIndicator
@@ -140,7 +140,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TiIndicator::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tiIndicator objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
+     * Create a new tiIndicator object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
+     * Create a new tiIndicator object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -194,7 +194,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return new TiIndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of tiIndicator objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

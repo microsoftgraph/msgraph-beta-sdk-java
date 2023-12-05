@@ -36,7 +36,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeCards/clockIn", rawUrl);
     }
     /**
-     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
+     * Clock in to start a timeCard.
      * @param body The request body
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-clockin?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
+     * Clock in to start a timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
@@ -62,7 +62,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
+     * Clock in to start a timeCard.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
+     * Clock in to start a timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

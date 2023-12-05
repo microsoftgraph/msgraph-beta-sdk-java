@@ -67,7 +67,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @return a AccessPackageAssignmentResourceRoleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageAssignmentResourceRoleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentResourceRole::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return new AccessPackageAssignmentResourceRolesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

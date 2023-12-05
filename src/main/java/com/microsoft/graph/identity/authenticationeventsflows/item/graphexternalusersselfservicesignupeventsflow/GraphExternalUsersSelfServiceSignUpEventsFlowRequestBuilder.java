@@ -25,21 +25,30 @@ import java.util.Objects;
 public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends BaseRequestBuilder {
     /**
      * The conditions property
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ConditionsRequestBuilder conditions() {
         return new ConditionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The onAttributeCollection property
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OnAttributeCollectionRequestBuilder onAttributeCollection() {
         return new OnAttributeCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The onAuthenticationMethodLoadStart property
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OnAuthenticationMethodLoadStartRequestBuilder onAuthenticationMethodLoadStart() {
         return new OnAuthenticationMethodLoadStartRequestBuilder(pathParameters, requestAdapter);
@@ -63,8 +72,11 @@ public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends
     /**
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
      * @return a ExternalUsersSelfServiceSignUpEventsFlow
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ExternalUsersSelfServiceSignUpEventsFlow get() {
         return get(null);
     }
@@ -72,8 +84,11 @@ public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalUsersSelfServiceSignUpEventsFlow
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ExternalUsersSelfServiceSignUpEventsFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -84,8 +99,11 @@ public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends
     /**
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -93,8 +111,11 @@ public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -105,8 +126,11 @@ public class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder(rawUrl, requestAdapter);

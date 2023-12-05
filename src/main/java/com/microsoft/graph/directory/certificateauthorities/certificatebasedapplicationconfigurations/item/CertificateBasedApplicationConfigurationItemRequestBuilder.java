@@ -45,14 +45,14 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @return a CertificateBasedApplicationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return get(null);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CertificateBasedApplicationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
@@ -113,7 +113,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedApplicationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

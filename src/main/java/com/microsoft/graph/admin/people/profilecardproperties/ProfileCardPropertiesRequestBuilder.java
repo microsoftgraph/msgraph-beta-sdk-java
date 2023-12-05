@@ -59,7 +59,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people/profileCardProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property. This API is available in the following national cloud deployments.
+     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      * @return a ProfileCardPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property. This API is available in the following national cloud deployments.
+     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProfileCardPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfileCardPropertyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API. This API is available in the following national cloud deployments.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
      * @param body The request body
      * @return a ProfileCardProperty
      * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API. This API is available in the following national cloud deployments.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProfileCardProperty
@@ -108,7 +108,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfileCardProperty::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property. This API is available in the following national cloud deployments.
+     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property. This API is available in the following national cloud deployments.
+     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API. This API is available in the following national cloud deployments.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API. This API is available in the following national cloud deployments.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return new ProfileCardPropertiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property. This API is available in the following national cloud deployments.
+     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

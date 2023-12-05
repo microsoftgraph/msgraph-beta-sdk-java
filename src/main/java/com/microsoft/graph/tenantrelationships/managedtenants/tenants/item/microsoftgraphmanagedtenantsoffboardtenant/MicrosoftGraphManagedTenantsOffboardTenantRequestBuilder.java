@@ -36,7 +36,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}/microsoft.graph.managedTenants.offboardTenant", rawUrl);
     }
     /**
-     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform.
      * @return a Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-offboardtenant?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
         return post(null);
     }
     /**
-     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-offboardtenant?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, Tenant::createFromDiscriminatorValue);
     }
     /**
-     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
         return toPostRequestInformation(null);
     }
     /**
-     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform. This API is available in the following national cloud deployments.
+     * Carries out the appropriate procedures to remove a managed tenant from the multitenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multitenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

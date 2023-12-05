@@ -36,7 +36,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/keySets/{trustFrameworkKeySet%2Did}/generateKey", rawUrl);
     }
     /**
-     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret. This API is available in the following national cloud deployments.
+     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
      * @return a TrustFrameworkKey
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-generatekey?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret. This API is available in the following national cloud deployments.
+     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TrustFrameworkKey
@@ -62,7 +62,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkKey::createFromDiscriminatorValue);
     }
     /**
-     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret. This API is available in the following national cloud deployments.
+     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret. This API is available in the following national cloud deployments.
+     * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

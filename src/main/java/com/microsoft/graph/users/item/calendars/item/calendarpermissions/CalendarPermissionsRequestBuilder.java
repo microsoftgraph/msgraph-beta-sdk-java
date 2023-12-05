@@ -59,7 +59,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/calendarPermissions{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a CalendarPermissionCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CalendarPermissionCollectionResponse
      */
@@ -80,7 +80,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarPermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated. This API is available in the following national cloud deployments.
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @return a CalendarPermission
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated. This API is available in the following national cloud deployments.
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CalendarPermission
@@ -106,7 +106,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarPermission::createFromDiscriminatorValue);
     }
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated. This API is available in the following national cloud deployments.
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated. This API is available in the following national cloud deployments.
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -160,7 +160,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return new CalendarPermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared. This API is available in the following national cloud deployments.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

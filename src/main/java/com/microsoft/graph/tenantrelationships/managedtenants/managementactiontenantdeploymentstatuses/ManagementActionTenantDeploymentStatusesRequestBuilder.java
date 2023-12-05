@@ -67,7 +67,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the managementActionTenantDeploymentStatus objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @return a ManagementActionTenantDeploymentStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
         return get(null);
     }
     /**
-     * Get a list of the managementActionTenantDeploymentStatus objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ManagementActionTenantDeploymentStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, ManagementActionTenantDeploymentStatus::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the managementActionTenantDeploymentStatus objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the managementActionTenantDeploymentStatus objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
         return new ManagementActionTenantDeploymentStatusesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the managementActionTenantDeploymentStatus objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

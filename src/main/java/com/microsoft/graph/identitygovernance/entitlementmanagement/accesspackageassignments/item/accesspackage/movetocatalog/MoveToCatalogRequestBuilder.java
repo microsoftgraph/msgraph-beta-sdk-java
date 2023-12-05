@@ -35,7 +35,7 @@ public class MoveToCatalogRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackage/moveToCatalog", rawUrl);
     }
     /**
-     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-movetocatalog?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class MoveToCatalogRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-movetocatalog?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class MoveToCatalogRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class MoveToCatalogRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog. This API is available in the following national cloud deployments.
+     * In Microsoft Entra entitlement management, this action moves the accessPackage to a specified target accessPackageCatalog. The resources in the access package must be present in the target catalog.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -37,7 +37,7 @@ public class MfaCompletionMetricItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/mfaCompletions/{mfaCompletionMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get mfaCompletions from reports
+     * Insights for MFA usage on apps registered in the tenant for a specified period.
      * @return a MfaCompletionMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MfaCompletionMetricItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get mfaCompletions from reports
+     * Insights for MFA usage on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MfaCompletionMetric
      */
@@ -58,7 +58,7 @@ public class MfaCompletionMetricItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MfaCompletionMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get mfaCompletions from reports
+     * Insights for MFA usage on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class MfaCompletionMetricItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get mfaCompletions from reports
+     * Insights for MFA usage on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class MfaCompletionMetricItemRequestBuilder extends BaseRequestBuilder {
         return new MfaCompletionMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mfaCompletions from reports
+     * Insights for MFA usage on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

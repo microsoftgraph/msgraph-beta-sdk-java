@@ -23,7 +23,10 @@ import java.util.Objects;
 public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userAttribute property of the microsoft.graph.identityUserFlowAttributeAssignment entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserAttributeRequestBuilder userAttribute() {
         return new UserAttributeRequestBuilder(pathParameters, requestAdapter);
@@ -45,17 +48,23 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,21 +73,27 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @return a IdentityUserFlowAttributeAssignment
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityUserFlowAttributeAssignment get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttributeAssignment
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityUserFlowAttributeAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -87,23 +102,29 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @return a IdentityUserFlowAttributeAssignment
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityUserFlowAttributeAssignment patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityUserFlowAttributeAssignment
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityUserFlowAttributeAssignment patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -113,19 +134,25 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -133,19 +160,25 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -153,21 +186,27 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -180,8 +219,11 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(rawUrl, requestAdapter);
@@ -193,7 +235,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,14 +45,14 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/complianceChanges/{complianceChange%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a complianceChange object. This API is available in the following national cloud deployments.
+     * Delete a complianceChange object.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a complianceChange object. This API is available in the following national cloud deployments.
+     * Delete a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,19 +64,19 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a contentApproval object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a complianceChange object.
      * @return a ComplianceChange
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a contentApproval object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ComplianceChange
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a complianceChange object. This API is available in the following national cloud deployments.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @return a ComplianceChange
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a complianceChange object. This API is available in the following national cloud deployments.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ComplianceChange
@@ -113,7 +113,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Delete a complianceChange object. This API is available in the following national cloud deployments.
+     * Delete a complianceChange object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a complianceChange object. This API is available in the following national cloud deployments.
+     * Delete a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a contentApproval object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a complianceChange object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a contentApproval object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a complianceChange object. This API is available in the following national cloud deployments.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a complianceChange object. This API is available in the following national cloud deployments.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a contentApproval object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a complianceChange object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

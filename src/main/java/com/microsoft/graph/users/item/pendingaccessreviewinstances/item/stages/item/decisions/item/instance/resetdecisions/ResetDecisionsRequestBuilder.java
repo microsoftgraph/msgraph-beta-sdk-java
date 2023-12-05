@@ -35,14 +35,14 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/pendingAccessReviewInstances/{accessReviewInstance%2Did}/stages/{accessReviewStage%2Did}/decisions/{accessReviewInstanceDecisionItem%2Did}/instance/resetDecisions", rawUrl);
     }
     /**
-     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
+     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
+     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
+     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
+     * Resets decisions of all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

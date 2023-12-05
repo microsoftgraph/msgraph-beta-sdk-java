@@ -36,7 +36,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/postpone", rawUrl);
     }
     /**
-     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active. This API is available in the following national cloud deployments.
+     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active.
      * @param body The request body
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-postpone?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active. This API is available in the following national cloud deployments.
+     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ImpactedResource
@@ -62,7 +62,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active. This API is available in the following national cloud deployments.
+     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active. This API is available in the following national cloud deployments.
+     * Postpone action on an impactedResource object to a specified future date and time by marking its status as postponed. On the specified date and time, Microsoft Entra ID will automatically mark the status of the impactedResource object to active.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

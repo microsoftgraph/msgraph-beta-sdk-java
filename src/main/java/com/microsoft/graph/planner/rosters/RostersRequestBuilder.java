@@ -59,7 +59,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerRoster object.
      * @return a PlannerRosterCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerRoster object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerRosterCollectionResponse
      */
@@ -80,7 +80,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerRoster object. This API is available in the following national cloud deployments.
+     * Create a new plannerRoster object.
      * @param body The request body
      * @return a PlannerRoster
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-rosters?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new plannerRoster object. This API is available in the following national cloud deployments.
+     * Create a new plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerRoster
@@ -106,7 +106,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRoster::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerRoster object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerRoster object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerRoster object. This API is available in the following national cloud deployments.
+     * Create a new plannerRoster object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerRoster object. This API is available in the following national cloud deployments.
+     * Create a new plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -160,7 +160,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return new RostersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a plannerRoster object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,14 +37,14 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/languages/{languageProficiency%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a languageProficiency object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete a languageProficiency object from a user's profile.
      * @see <a href="https://learn.microsoft.com/graph/api/languageproficiency-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a languageProficiency object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete a languageProficiency object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/languageproficiency-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a languageProficiency object within a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a languageProficiency object within a user's profile.
      * @return a LanguageProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/languageproficiency-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a languageProficiency object within a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a languageProficiency object within a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LanguageProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/languageproficiency-get?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LanguageProficiency::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a languageProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a languageProficiency object in a user's profile.
      * @param body The request body
      * @return a LanguageProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/languageproficiency-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a languageProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a languageProficiency object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a LanguageProficiency
@@ -105,7 +105,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LanguageProficiency::createFromDiscriminatorValue);
     }
     /**
-     * Delete a languageProficiency object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete a languageProficiency object from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a languageProficiency object from a user's profile. This API is available in the following national cloud deployments.
+     * Delete a languageProficiency object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a languageProficiency object within a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a languageProficiency object within a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a languageProficiency object within a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a languageProficiency object within a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a languageProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a languageProficiency object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a languageProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Update the properties of a languageProficiency object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class LanguageProficiencyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a languageProficiency object within a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a languageProficiency object within a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,14 +35,14 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/pause", rawUrl);
     }
     /**
-     * Pause the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
+     * Pause the sync of a specific school data synchronization profile in the tenant.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-pause?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Pause the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
+     * Pause the sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-pause?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Pause the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
+     * Pause the sync of a specific school data synchronization profile in the tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Pause the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
+     * Pause the sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

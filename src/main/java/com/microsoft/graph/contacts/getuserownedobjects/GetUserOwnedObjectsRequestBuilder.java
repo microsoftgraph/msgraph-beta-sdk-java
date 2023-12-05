@@ -36,7 +36,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/getUserOwnedObjects", rawUrl);
     }
     /**
-     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination. This API is available in the following national cloud deployments.
+     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
      * @return a DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directory-deleteditems-getuserownedobjects?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination. This API is available in the following national cloud deployments.
+     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DirectoryObject
@@ -62,7 +62,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination. This API is available in the following national cloud deployments.
+     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination. This API is available in the following national cloud deployments.
+     * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

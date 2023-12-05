@@ -65,7 +65,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/reviewSets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @return a ReviewSetCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -76,7 +76,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSetCollectionResponse
      * @deprecated
@@ -92,7 +92,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property. This API is available in the following national cloud deployments.
+     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property.
      * @param body The request body
      * @return a ReviewSet
      * @deprecated
@@ -105,7 +105,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property. This API is available in the following national cloud deployments.
+     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ReviewSet
@@ -124,7 +124,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSet::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -135,7 +135,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -150,7 +150,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property. This API is available in the following national cloud deployments.
+     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -162,7 +162,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property. This API is available in the following national cloud deployments.
+     * Create a new reviewSet object. The request body contains the display name of the review set, which is the only writable property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
         return new ReviewSetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a reviewSet object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

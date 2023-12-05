@@ -53,14 +53,14 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an updatePolicy object. This API is available in the following national cloud deployments.
+     * Delete an updatePolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an updatePolicy object. This API is available in the following national cloud deployments.
+     * Delete an updatePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an updatePolicy object.
      * @return a UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an updatePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an updatePolicy object.
      * @param body The request body
      * @return a UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an updatePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdatePolicy
@@ -121,7 +121,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete an updatePolicy object. This API is available in the following national cloud deployments.
+     * Delete an updatePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an updatePolicy object. This API is available in the following national cloud deployments.
+     * Delete an updatePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an updatePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an updatePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an updatePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of an updatePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an updatePolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an updatePolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

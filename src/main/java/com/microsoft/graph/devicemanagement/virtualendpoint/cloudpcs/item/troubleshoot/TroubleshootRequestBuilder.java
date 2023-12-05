@@ -35,14 +35,14 @@ public class TroubleshootRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/troubleshoot", rawUrl);
     }
     /**
-     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host. This API is available in the following national cloud deployments.
+     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-troubleshoot?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host. This API is available in the following national cloud deployments.
+     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-troubleshoot?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class TroubleshootRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host. This API is available in the following national cloud deployments.
+     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class TroubleshootRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host. This API is available in the following national cloud deployments.
+     * Troubleshoot a specific Cloud PC. Use this API to check the health status of the Cloud PC and the session host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

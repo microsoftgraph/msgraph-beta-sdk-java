@@ -35,14 +35,14 @@ public class RebootRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/reboot", rawUrl);
     }
     /**
-     * Reboot a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reboot a specific Cloud PC.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reboot?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Reboot a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reboot a specific Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reboot?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RebootRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reboot a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reboot a specific Cloud PC.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RebootRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reboot a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Reboot a specific Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

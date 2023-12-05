@@ -10,13 +10,14 @@ import com.microsoft.graph.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.models.devicemanagement.AlertRule;
 import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.graph.models.ediscovery.AddToReviewSetOperation;
+import com.microsoft.graph.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseSettings;
 import com.microsoft.graph.models.ediscovery.Custodian;
 import com.microsoft.graph.models.ediscovery.DataSource;
-import com.microsoft.graph.models.ediscovery.DataSourceContainer;
 import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.models.ediscovery.LegalHold;
@@ -25,7 +26,6 @@ import com.microsoft.graph.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.models.ediscovery.ReviewSet;
 import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
-import com.microsoft.graph.models.ediscovery.Tag;
 import com.microsoft.graph.models.ediscovery.TagOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
@@ -142,12 +142,11 @@ import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
 import com.microsoft.graph.models.security.AuthorityTemplate;
-import com.microsoft.graph.models.security.CaseEscaped;
-import com.microsoft.graph.models.security.CaseOperation;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.CategoryTemplate;
 import com.microsoft.graph.models.security.CitationTemplate;
 import com.microsoft.graph.models.security.DataSet;
+import com.microsoft.graph.models.security.DataSourceContainer;
 import com.microsoft.graph.models.security.DepartmentTemplate;
 import com.microsoft.graph.models.security.DetectionRule;
 import com.microsoft.graph.models.security.DispositionReviewStage;
@@ -210,6 +209,7 @@ import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.SslCertificate;
 import com.microsoft.graph.models.security.SubCategoryTemplate;
 import com.microsoft.graph.models.security.Subdomain;
+import com.microsoft.graph.models.security.Tag;
 import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.ThreatSubmission;
 import com.microsoft.graph.models.security.ThreatSubmissionRoot;
@@ -981,8 +981,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.gcpRole": return new GcpRole();
             case "#microsoft.graph.gcpServiceAccount": return new GcpServiceAccount();
             case "#microsoft.graph.gcpUser": return new GcpUser();
-            case "#microsoft.graph.goals": return new Goals();
-            case "#microsoft.graph.goalsExportJob": return new GoalsExportJob();
             case "#microsoft.graph.governanceInsight": return new GovernanceInsight();
             case "#microsoft.graph.governancePolicyTemplate": return new GovernancePolicyTemplate();
             case "#microsoft.graph.governanceResource": return new GovernanceResource();
@@ -1320,6 +1318,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.monthlyInactiveUsersMetric": return new MonthlyInactiveUsersMetric();
             case "#microsoft.graph.monthlyUserInsightMetricsRoot": return new MonthlyUserInsightMetricsRoot();
             case "#microsoft.graph.multiTenantOrganization": return new MultiTenantOrganization();
+            case "#microsoft.graph.multiTenantOrganizationIdentitySyncPolicyTemplate": return new MultiTenantOrganizationIdentitySyncPolicyTemplate();
+            case "#microsoft.graph.multiTenantOrganizationJoinRequestRecord": return new MultiTenantOrganizationJoinRequestRecord();
         }
         return null;
     }
@@ -1331,8 +1331,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
-            case "#microsoft.graph.multiTenantOrganizationIdentitySyncPolicyTemplate": return new MultiTenantOrganizationIdentitySyncPolicyTemplate();
-            case "#microsoft.graph.multiTenantOrganizationJoinRequestRecord": return new MultiTenantOrganizationJoinRequestRecord();
             case "#microsoft.graph.multiTenantOrganizationMember": return new MultiTenantOrganizationMember();
             case "#microsoft.graph.multiTenantOrganizationPartnerConfigurationTemplate": return new MultiTenantOrganizationPartnerConfigurationTemplate();
             case "#microsoft.graph.multiValueLegacyExtendedProperty": return new MultiValueLegacyExtendedProperty();
@@ -1831,6 +1829,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.termsAndConditionsAcceptanceStatus": return new TermsAndConditionsAcceptanceStatus();
             case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
             case "#microsoft.graph.termsAndConditionsGroupAssignment": return new TermsAndConditionsGroupAssignment();
+            case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();
+            case "#microsoft.graph.termStore.group": return new Group();
         }
         return null;
     }
@@ -1842,8 +1842,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
-            case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();
-            case "#microsoft.graph.termStore.group": return new Group();
             case "#microsoft.graph.termStore.relation": return new Relation();
             case "#microsoft.graph.termStore.set": return new Set();
             case "#microsoft.graph.termStore.store": return new Store();

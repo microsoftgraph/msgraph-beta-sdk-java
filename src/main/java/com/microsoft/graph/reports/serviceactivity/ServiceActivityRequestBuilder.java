@@ -60,7 +60,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A placeholder to the Microsoft Entra service activity.
+     * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @return a ServiceActivity
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A placeholder to the Microsoft Entra service activity.
+     * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServiceActivity
      */
@@ -185,7 +185,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A placeholder to the Microsoft Entra service activity.
+     * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A placeholder to the Microsoft Entra service activity.
+     * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -245,7 +245,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A placeholder to the Microsoft Entra service activity.
+     * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

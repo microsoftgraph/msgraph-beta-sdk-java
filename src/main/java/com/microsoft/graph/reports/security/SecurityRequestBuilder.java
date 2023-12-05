@@ -78,7 +78,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @return a SecurityReportsRoot
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SecurityReportsRoot
      */
@@ -143,7 +143,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -151,7 +151,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a simulated phishing attack that organizations can learn from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a simulated phishing attack that organizations can learn from.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

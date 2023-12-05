@@ -37,7 +37,7 @@ public class UserSignUpMetricItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/signUps/{userSignUpMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get signUps from reports
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @return a UserSignUpMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class UserSignUpMetricItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get signUps from reports
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserSignUpMetric
      */
@@ -58,7 +58,7 @@ public class UserSignUpMetricItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSignUpMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get signUps from reports
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class UserSignUpMetricItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get signUps from reports
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class UserSignUpMetricItemRequestBuilder extends BaseRequestBuilder {
         return new UserSignUpMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get signUps from reports
+     * Total sign-ups on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

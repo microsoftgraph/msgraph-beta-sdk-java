@@ -64,7 +64,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/noncustodialSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of noncustodialDataSource associated with a sourceCollection. This API is available in the following national cloud deployments.
+     * Get a list of noncustodialDataSource associated with a sourceCollection.
      * @return a NoncustodialDataSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -76,7 +76,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of noncustodialDataSource associated with a sourceCollection. This API is available in the following national cloud deployments.
+     * Get a list of noncustodialDataSource associated with a sourceCollection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NoncustodialDataSourceCollectionResponse
      * @deprecated
@@ -93,7 +93,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NoncustodialDataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of noncustodialDataSource associated with a sourceCollection. This API is available in the following national cloud deployments.
+     * Get a list of noncustodialDataSource associated with a sourceCollection.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -104,7 +104,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of noncustodialDataSource associated with a sourceCollection. This API is available in the following national cloud deployments.
+     * Get a list of noncustodialDataSource associated with a sourceCollection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -132,7 +132,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
         return new NoncustodialSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of noncustodialDataSource associated with a sourceCollection. This API is available in the following national cloud deployments.
+     * Get a list of noncustodialDataSource associated with a sourceCollection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

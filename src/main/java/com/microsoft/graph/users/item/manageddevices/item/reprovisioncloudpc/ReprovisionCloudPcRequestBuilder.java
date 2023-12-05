@@ -35,7 +35,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/reprovisionCloudPc", rawUrl);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Reprovision a Cloud PC with an Intune managed device ID.
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-reprovisioncloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Reprovision a Cloud PC with an Intune managed device ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
@@ -60,7 +60,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Reprovision a Cloud PC with an Intune managed device ID.
      * @return a RequestInformation
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
@@ -71,7 +71,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
+     * Reprovision a Cloud PC with an Intune managed device ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated

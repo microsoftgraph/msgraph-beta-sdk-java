@@ -70,7 +70,7 @@ public class UserInsightsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get userInsights from reports
+     * Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @return a UserInsightsRoot
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class UserInsightsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userInsights from reports
+     * Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserInsightsRoot
      */
@@ -135,7 +135,7 @@ public class UserInsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get userInsights from reports
+     * Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class UserInsightsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userInsights from reports
+     * Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +195,7 @@ public class UserInsightsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get userInsights from reports
+     * Represents a collection of user activities on applications in a tenant that is configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

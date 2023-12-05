@@ -70,7 +70,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @return a GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-get?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceRoleSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Update the properties of governanceRoleSetting.
      * @param body The request body
      * @return a GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-update?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return patch(body, null);
     }
     /**
-     * Update the properties of governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Update the properties of governanceRoleSetting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GovernanceRoleSetting
@@ -139,7 +139,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -159,7 +159,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Update the properties of governanceRoleSetting.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Update the properties of governanceRoleSetting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +199,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a governanceRoleSetting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

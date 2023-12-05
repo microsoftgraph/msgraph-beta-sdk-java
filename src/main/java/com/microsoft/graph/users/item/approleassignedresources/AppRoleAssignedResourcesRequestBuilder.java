@@ -58,7 +58,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/appRoleAssignedResources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership. This API is available in the following national cloud deployments.
+     * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @return a ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership. This API is available in the following national cloud deployments.
+     * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership. This API is available in the following national cloud deployments.
+     * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership. This API is available in the following national cloud deployments.
+     * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return new AppRoleAssignedResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership. This API is available in the following national cloud deployments.
+     * Get the service principals to which the user has an app role assignment either directly or through group membership.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

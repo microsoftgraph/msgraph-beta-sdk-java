@@ -35,7 +35,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/restore", rawUrl);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-restore?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-restore?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

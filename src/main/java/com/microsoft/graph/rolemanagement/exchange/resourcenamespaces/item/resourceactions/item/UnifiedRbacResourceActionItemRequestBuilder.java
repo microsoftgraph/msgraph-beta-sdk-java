@@ -70,7 +70,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceAction object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceAction object.
      * @return a UnifiedRbacResourceAction
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourceaction-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceAction object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRbacResourceAction
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourceaction-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceAction object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceAction object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceAction object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceAction object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRbacResourceAction object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

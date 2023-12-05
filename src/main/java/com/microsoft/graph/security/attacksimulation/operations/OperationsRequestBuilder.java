@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a AttackSimulationOperationCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AttackSimulationOperationCollectionResponse
      */
@@ -104,7 +104,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AttackSimulationOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

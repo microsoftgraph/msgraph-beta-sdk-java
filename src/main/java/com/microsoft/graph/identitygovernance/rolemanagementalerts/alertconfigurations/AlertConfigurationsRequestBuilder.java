@@ -59,7 +59,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object: This API is available in the following national cloud deployments.
+     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @return a UnifiedRoleManagementAlertConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object: This API is available in the following national cloud deployments.
+     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleManagementAlertConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementAlertConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object: This API is available in the following national cloud deployments.
+     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object: This API is available in the following national cloud deployments.
+     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new AlertConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object: This API is available in the following national cloud deployments.
+     * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

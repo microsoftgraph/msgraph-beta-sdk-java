@@ -45,14 +45,14 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/policies/{trustFrameworkPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
+     * Delete an existing trustFrameworkPolicy.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
+     * Delete an existing trustFrameworkPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -109,7 +109,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
+     * Delete an existing trustFrameworkPolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
+     * Delete an existing trustFrameworkPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

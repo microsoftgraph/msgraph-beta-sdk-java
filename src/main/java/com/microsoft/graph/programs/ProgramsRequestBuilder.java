@@ -59,7 +59,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the program objects.
      * @return a ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new program object. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new program object.
      * @param body The request body
      * @return a Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new program object. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new program object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Program
@@ -108,7 +108,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Program::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the program objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new program object. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new program object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new program object. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new program object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return new ProgramsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the program objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

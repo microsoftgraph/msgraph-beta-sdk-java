@@ -37,7 +37,7 @@ public class AuthenticationsMetricItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/authentications/{authenticationsMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get authentications from reports
+     * Insights for authentications on apps registered in the tenant for a specified period.
      * @return a AuthenticationsMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class AuthenticationsMetricItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Get authentications from reports
+     * Insights for authentications on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationsMetric
      */
@@ -58,7 +58,7 @@ public class AuthenticationsMetricItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationsMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get authentications from reports
+     * Insights for authentications on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class AuthenticationsMetricItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get authentications from reports
+     * Insights for authentications on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class AuthenticationsMetricItemRequestBuilder extends BaseRequestBuilder 
         return new AuthenticationsMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get authentications from reports
+     * Insights for authentications on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,7 +36,7 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/bulkReprovisionCloudPc", rawUrl);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
      * @param body The request body
      * @return a CloudPcBulkRemoteActionResult
      * @deprecated
@@ -49,7 +49,7 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcBulkRemoteActionResult
@@ -68,7 +68,7 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -80,7 +80,7 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -59,7 +59,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/bookingBusinesses/{bookingBusiness%2Did}/customers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingCustomer objects. This API is available in the following national cloud deployments.
+     * Get a list of bookingCustomer objects.
      * @return a BookingCustomerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of bookingCustomer objects. This API is available in the following national cloud deployments.
+     * Get a list of bookingCustomer objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingCustomerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomer object.
      * @param body The request body
      * @return a BookingCustomer
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BookingCustomer
@@ -108,7 +108,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomer::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingCustomer objects. This API is available in the following national cloud deployments.
+     * Get a list of bookingCustomer objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingCustomer objects. This API is available in the following national cloud deployments.
+     * Get a list of bookingCustomer objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomer object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
+     * Create a new bookingCustomer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return new CustomersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingCustomer objects. This API is available in the following national cloud deployments.
+     * Get a list of bookingCustomer objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

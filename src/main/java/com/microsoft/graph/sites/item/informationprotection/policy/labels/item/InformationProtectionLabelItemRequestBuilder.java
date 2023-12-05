@@ -60,7 +60,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an informationProtectionLabel object.
      * @return a InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
@@ -72,7 +72,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an informationProtectionLabel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InformationProtectionLabel
      * @deprecated
@@ -145,7 +145,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an informationProtectionLabel object.
      * @return a RequestInformation
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
@@ -156,7 +156,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an informationProtectionLabel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -220,7 +220,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an informationProtectionLabel object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

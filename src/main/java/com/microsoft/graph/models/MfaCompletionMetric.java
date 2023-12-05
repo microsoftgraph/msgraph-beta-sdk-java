@@ -26,7 +26,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return new MfaCompletionMetric();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The ID of the Microsoft Entra application. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the attemptsCount property value. The attemptsCount property
+     * Gets the attemptsCount property value. Number of users who attempted to sign up. Supports $filter (eq).
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return this.backingStore.get("attemptsCount");
     }
     /**
-     * Gets the factDate property value. The factDate property
+     * Gets the factDate property value. The date of the user insight.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mfaMethod property value. The mfaMethod property
+     * Gets the mfaMethod property value. The MFA authentication method used by the customers. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return this.backingStore.get("mfaMethod");
     }
     /**
-     * Gets the os property value. The os property
+     * Gets the os property value. The platform of the device that the customers used. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return this.backingStore.get("os");
     }
     /**
-     * Gets the successCount property value. The successCount property
+     * Gets the successCount property value. Number of users who signed up successfully. Supports $filter (eq).
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         writer.writeLongValue("successCount", this.getSuccessCount());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The ID of the Microsoft Entra application. Supports $filter (eq).
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the attemptsCount property value. The attemptsCount property
+     * Sets the attemptsCount property value. Number of users who attempted to sign up. Supports $filter (eq).
      * @param value Value to set for the attemptsCount property.
      */
     public void setAttemptsCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("attemptsCount", value);
     }
     /**
-     * Sets the factDate property value. The factDate property
+     * Sets the factDate property value. The date of the user insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
     }
     /**
-     * Sets the mfaMethod property value. The mfaMethod property
+     * Sets the mfaMethod property value. The MFA authentication method used by the customers. Supports $filter (eq).
      * @param value Value to set for the mfaMethod property.
      */
     public void setMfaMethod(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mfaMethod", value);
     }
     /**
-     * Sets the os property value. The os property
+     * Sets the os property value. The platform of the device that the customers used. Supports $filter (eq).
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("os", value);
     }
     /**
-     * Sets the successCount property value. The successCount property
+     * Sets the successCount property value. Number of users who signed up successfully. Supports $filter (eq).
      * @param value Value to set for the successCount property.
      */
     public void setSuccessCount(@jakarta.annotation.Nullable final Long value) {

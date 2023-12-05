@@ -54,7 +54,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the user-customizable privacy settings for itemInsights and meeting hours insights. This API is available in the following national cloud deployments.
+     * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @return a UserInsightsSettings
      * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the user-customizable privacy settings for itemInsights and meeting hours insights. This API is available in the following national cloud deployments.
+     * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserInsightsSettings
      * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserInsightsSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the privacy settings for itemInsights and meeting hours insights of a user. This API is available in the following national cloud deployments.
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a UserInsightsSettings
      * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the privacy settings for itemInsights and meeting hours insights of a user. This API is available in the following national cloud deployments.
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserInsightsSettings
@@ -123,7 +123,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the user-customizable privacy settings for itemInsights and meeting hours insights. This API is available in the following national cloud deployments.
+     * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user-customizable privacy settings for itemInsights and meeting hours insights. This API is available in the following national cloud deployments.
+     * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the privacy settings for itemInsights and meeting hours insights of a user. This API is available in the following national cloud deployments.
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the privacy settings for itemInsights and meeting hours insights of a user. This API is available in the following national cloud deployments.
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the user-customizable privacy settings for itemInsights and meeting hours insights. This API is available in the following national cloud deployments.
+     * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

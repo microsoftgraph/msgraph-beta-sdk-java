@@ -25,7 +25,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
         return new UserInsightsRoot();
     }
     /**
-     * Gets the daily property value. The daily property
+     * Gets the daily property value. Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a DailyUserInsightMetricsRoot
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the monthly property value. The monthly property
+     * Gets the monthly property value. Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @return a MonthlyUserInsightMetricsRoot
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class UserInsightsRoot extends Entity implements Parsable {
         writer.writeObjectValue("monthly", this.getMonthly());
     }
     /**
-     * Sets the daily property value. The daily property
+     * Sets the daily property value. Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param value Value to set for the daily property.
      */
     public void setDaily(@jakarta.annotation.Nullable final DailyUserInsightMetricsRoot value) {
         this.backingStore.set("daily", value);
     }
     /**
-     * Sets the monthly property value. The monthly property
+     * Sets the monthly property value. Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param value Value to set for the monthly property.
      */
     public void setMonthly(@jakarta.annotation.Nullable final MonthlyUserInsightMetricsRoot value) {

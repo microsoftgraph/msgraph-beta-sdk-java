@@ -53,14 +53,14 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/agentGroups/{onPremisesAgentGroup%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Delete an onPremisesAgentGroup object.
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Delete an onPremisesAgentGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an onPremisesAgentGroup object.
      * @return a OnPremisesAgentGroup
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an onPremisesAgentGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnPremisesAgentGroup
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesAgentGroup::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesAgentGroup object.
      * @param body The request body
      * @return a OnPremisesAgentGroup
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesAgentGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OnPremisesAgentGroup
@@ -121,7 +121,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesAgentGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Delete an onPremisesAgentGroup object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Delete an onPremisesAgentGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an onPremisesAgentGroup object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an onPremisesAgentGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesAgentGroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Update the properties of an onPremisesAgentGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class OnPremisesAgentGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an onPremisesAgentGroup object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of an onPremisesAgentGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

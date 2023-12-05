@@ -59,7 +59,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/{tag%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tag object. This API is available in the following national cloud deployments.
+     * Delete a tag object.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-delete?view=graph-rest-1.0">Find more info here</a>
@@ -69,7 +69,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a tag object. This API is available in the following national cloud deployments.
+     * Delete a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -84,7 +84,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @return a Tag
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -96,7 +96,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Tag
      * @deprecated
@@ -113,7 +113,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Tag::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a Tag
      * @deprecated
@@ -126,7 +126,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Tag
@@ -145,7 +145,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Tag::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tag object. This API is available in the following national cloud deployments.
+     * Delete a tag object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -156,7 +156,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tag object. This API is available in the following national cloud deployments.
+     * Delete a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -171,7 +171,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -182,7 +182,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -197,7 +197,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -209,7 +209,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tag object. This API is available in the following national cloud deployments.
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -246,7 +246,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tag object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a tag object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

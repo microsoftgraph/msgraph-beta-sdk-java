@@ -36,7 +36,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/allowedUsers/{user%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -61,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @return a RequestInformation
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -72,7 +72,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -100,7 +100,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
+     * Revoke the specified user's access to submit print jobs to the associated printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

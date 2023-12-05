@@ -59,7 +59,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of personAnnotation objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personAnnotation objects from a user's profile.
      * @return a PersonAnnotationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of personAnnotation objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personAnnotation objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAnnotationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnotationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personAnnotation object in a user's profile.
      * @param body The request body
      * @return a PersonAnnotation
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-notes?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personAnnotation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonAnnotation
@@ -108,7 +108,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnotation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personAnnotation objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personAnnotation objects from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personAnnotation objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personAnnotation objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personAnnotation object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new personAnnotation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personAnnotation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return new NotesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personAnnotation objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personAnnotation objects from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

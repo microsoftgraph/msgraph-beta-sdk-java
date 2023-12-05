@@ -78,7 +78,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new DeltaWithTokenRequestBuilder(pathParameters, requestAdapter, token);
     }
     /**
-     * Get the collection of items][item] in a [list][]. This API is available in the following [national cloud deployments.
+     * Get the collection of [items][item] in a [list][].
      * @return a ListItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -87,7 +87,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of items][item] in a [list][]. This API is available in the following [national cloud deployments.
+     * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ListItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
@@ -101,7 +101,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new listItem][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @return a ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new listItem][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ListItem
@@ -127,7 +127,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItem::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of items][item] in a [list][]. This API is available in the following [national cloud deployments.
+     * Get the collection of [items][item] in a [list][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of items][item] in a [list][]. This API is available in the following [national cloud deployments.
+     * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new listItem][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new listItem][] in a [list][]. This API is available in the following [national cloud deployments.
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -181,7 +181,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new ItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of items][item] in a [list][]. This API is available in the following [national cloud deployments.
+     * Get the collection of [items][item] in a [list][].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

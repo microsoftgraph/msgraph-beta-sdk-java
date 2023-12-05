@@ -35,7 +35,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators/updateTiIndicators", rawUrl);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
      * @param body The request body
      * @return a UpdateTiIndicatorsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-updatetiindicators?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdateTiIndicatorsPostResponse
@@ -61,7 +61,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdateTiIndicatorsPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

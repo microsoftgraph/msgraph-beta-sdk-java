@@ -59,7 +59,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * Get a list of all businessScenario objects in an organization.
      * @return a BusinessScenarioCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * Get a list of all businessScenario objects in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BusinessScenarioCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenarioCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new businessScenario object. This API is available in the following national cloud deployments.
+     * Create a new businessScenario object.
      * @param body The request body
      * @return a BusinessScenario
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new businessScenario object. This API is available in the following national cloud deployments.
+     * Create a new businessScenario object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BusinessScenario
@@ -108,7 +108,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * Get a list of all businessScenario objects in an organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * Get a list of all businessScenario objects in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new businessScenario object. This API is available in the following national cloud deployments.
+     * Create a new businessScenario object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new businessScenario object. This API is available in the following national cloud deployments.
+     * Create a new businessScenario object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return new BusinessScenariosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * Get a list of all businessScenario objects in an organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

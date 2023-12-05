@@ -37,7 +37,7 @@ public class ActiveUsersMetricItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/activeUsers/{activeUsersMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get activeUsers from reports
+     * Insights for active users on apps registered in the tenant for a specified period.
      * @return a ActiveUsersMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class ActiveUsersMetricItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get activeUsers from reports
+     * Insights for active users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActiveUsersMetric
      */
@@ -58,7 +58,7 @@ public class ActiveUsersMetricItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get activeUsers from reports
+     * Insights for active users on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ActiveUsersMetricItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get activeUsers from reports
+     * Insights for active users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ActiveUsersMetricItemRequestBuilder extends BaseRequestBuilder {
         return new ActiveUsersMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get activeUsers from reports
+     * Insights for active users on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

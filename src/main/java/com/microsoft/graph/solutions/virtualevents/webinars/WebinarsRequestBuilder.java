@@ -61,17 +61,19 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * Get the list of all virtualEventWebinar objects created in a tenant.
      * @return a VirtualEventWebinarCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * Get the list of all virtualEventWebinar objects created in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VirtualEventWebinarCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +130,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * Get the list of all virtualEventWebinar objects created in a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +138,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * Get the list of all virtualEventWebinar objects created in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +184,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return new WebinarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * Get the list of all virtualEventWebinar objects created in a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -54,7 +54,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @return a B2cAuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a B2cAuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a b2cAuthenticationMethodsPolicy object.
      * @param body The request body
      * @return a B2cAuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a b2cAuthenticationMethodsPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a B2cAuthenticationMethodsPolicy
@@ -123,7 +123,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a b2cAuthenticationMethodsPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a b2cAuthenticationMethodsPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties of a b2cAuthenticationMethodsPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

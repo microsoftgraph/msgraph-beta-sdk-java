@@ -53,14 +53,14 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/registration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @return a MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingRegistration
@@ -121,7 +121,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

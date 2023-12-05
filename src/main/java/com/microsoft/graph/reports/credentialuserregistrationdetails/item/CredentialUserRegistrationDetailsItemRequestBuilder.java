@@ -60,7 +60,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
@@ -71,7 +71,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CredentialUserRegistrationDetails
      * @deprecated
@@ -143,7 +143,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a RequestInformation
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
@@ -154,7 +154,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -218,7 +218,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

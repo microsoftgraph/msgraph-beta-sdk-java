@@ -45,7 +45,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/group{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass. This API is available in the following national cloud deployments.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @return a Group
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass. This API is available in the following national cloud deployments.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Group
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
@@ -68,7 +68,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass. This API is available in the following national cloud deployments.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass. This API is available in the following national cloud deployments.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return new GroupRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass. This API is available in the following national cloud deployments.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

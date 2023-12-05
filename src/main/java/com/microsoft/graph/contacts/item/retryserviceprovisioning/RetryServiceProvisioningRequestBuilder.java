@@ -35,14 +35,14 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/retryServiceProvisioning", rawUrl);
     }
     /**
-     * Retry the orgContact service provisioning. This API is available in the following national cloud deployments.
+     * Retry the orgContact service provisioning.
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Retry the orgContact service provisioning. This API is available in the following national cloud deployments.
+     * Retry the orgContact service provisioning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retry the orgContact service provisioning. This API is available in the following national cloud deployments.
+     * Retry the orgContact service provisioning.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Retry the orgContact service provisioning. This API is available in the following national cloud deployments.
+     * Retry the orgContact service provisioning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

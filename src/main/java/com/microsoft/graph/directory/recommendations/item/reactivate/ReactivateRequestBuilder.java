@@ -36,7 +36,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/reactivate", rawUrl);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed. This API is available in the following national cloud deployments.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed. This API is available in the following national cloud deployments.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Recommendation::createFromDiscriminatorValue);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed. This API is available in the following national cloud deployments.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed. This API is available in the following national cloud deployments.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -43,10 +43,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         deserializerMap.put("draftOpenShift", (n) -> { this.setDraftOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
-        deserializerMap.put("schedulingGroupName", (n) -> { this.setSchedulingGroupName(n.getStringValue()); });
         deserializerMap.put("sharedOpenShift", (n) -> { this.setSharedOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
-        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
-        deserializerMap.put("teamName", (n) -> { this.setTeamName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -66,36 +63,12 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the schedulingGroupName property value. The schedulingGroupName property
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getSchedulingGroupName() {
-        return this.backingStore.get("schedulingGroupName");
-    }
-    /**
      * Gets the sharedOpenShift property value. A published open shift.
      * @return a OpenShiftItem
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {
         return this.backingStore.get("sharedOpenShift");
-    }
-    /**
-     * Gets the teamId property value. The teamId property
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getTeamId() {
-        return this.backingStore.get("teamId");
-    }
-    /**
-     * Gets the teamName property value. The teamName property
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getTeamName() {
-        return this.backingStore.get("teamName");
     }
     /**
      * Serializes information the current object
@@ -131,31 +104,10 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the schedulingGroupName property value. The schedulingGroupName property
-     * @param value Value to set for the schedulingGroupName property.
-     */
-    public void setSchedulingGroupName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("schedulingGroupName", value);
-    }
-    /**
      * Sets the sharedOpenShift property value. A published open shift.
      * @param value Value to set for the sharedOpenShift property.
      */
     public void setSharedOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.backingStore.set("sharedOpenShift", value);
-    }
-    /**
-     * Sets the teamId property value. The teamId property
-     * @param value Value to set for the teamId property.
-     */
-    public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("teamId", value);
-    }
-    /**
-     * Sets the teamName property value. The teamName property
-     * @param value Value to set for the teamName property.
-     */
-    public void setTeamName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("teamName", value);
     }
 }

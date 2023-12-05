@@ -59,7 +59,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner/planConfiguration/localizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the plannerPlanConfigurationLocalization objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @return a PlannerPlanConfigurationLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the plannerPlanConfigurationLocalization objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfigurationLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Create a new plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Create a new plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlanConfigurationLocalization
@@ -108,7 +108,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the plannerPlanConfigurationLocalization objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the plannerPlanConfigurationLocalization objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Create a new plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object. This API is available in the following national cloud deployments.
+     * Create a new plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the plannerPlanConfigurationLocalization objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

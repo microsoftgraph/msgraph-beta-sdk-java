@@ -37,14 +37,14 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed. This API is available in the following national cloud deployments.
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed. This API is available in the following national cloud deployments.
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a tenant and its properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * Get a tenant and its properties in the multi-tenant organization.
      * @return a MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get a tenant and its properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * Get a tenant and its properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
@@ -103,7 +103,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationMember::createFromDiscriminatorValue);
     }
     /**
-     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed. This API is available in the following national cloud deployments.
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed. This API is available in the following national cloud deployments.
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get a tenant and its properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * Get a tenant and its properties in the multi-tenant organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a tenant and its properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * Get a tenant and its properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a tenant and its properties in the multi-tenant organization. This API is available in the following national cloud deployments.
+     * Get a tenant and its properties in the multi-tenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

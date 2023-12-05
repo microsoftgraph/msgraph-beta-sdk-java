@@ -59,7 +59,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/account{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile. This API is available in the following national cloud deployments.
+     * Retrieves properties related to the user's accounts from the profile.
      * @return a UserAccountInformationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile. This API is available in the following national cloud deployments.
+     * Retrieves properties related to the user's accounts from the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserAccountInformationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new userAccountInformation object in a user's profile.
      * @param body The request body
      * @return a UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new userAccountInformation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserAccountInformation
@@ -108,7 +108,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile. This API is available in the following national cloud deployments.
+     * Retrieves properties related to the user's accounts from the profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile. This API is available in the following national cloud deployments.
+     * Retrieves properties related to the user's accounts from the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new userAccountInformation object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new userAccountInformation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return new AccountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile. This API is available in the following national cloud deployments.
+     * Retrieves properties related to the user's accounts from the profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,14 +45,14 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenIssuancePolicies/{tokenIssuancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object.
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -64,7 +64,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenIssuancePolicy object.
      * @return a TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @return a TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -97,7 +97,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TokenIssuancePolicy
@@ -113,7 +113,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Delete a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenIssuancePolicy object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a tokenIssuancePolicy object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a tokenIssuancePolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

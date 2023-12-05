@@ -36,7 +36,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.assignTag", rawUrl);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
+     * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
+     * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTag
@@ -62,7 +62,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
+     * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants. This API is available in the following national cloud deployments.
+     * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

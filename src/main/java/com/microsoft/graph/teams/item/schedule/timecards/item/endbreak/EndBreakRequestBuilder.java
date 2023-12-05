@@ -36,7 +36,7 @@ public class EndBreakRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timeCards/{timeCard%2Did}/endBreak", rawUrl);
     }
     /**
-     * End the open break in a specific timeCard. This API is available in the following national cloud deployments.
+     * End the open break in a specific timeCard.
      * @param body The request body
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-endbreak?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class EndBreakRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * End the open break in a specific timeCard. This API is available in the following national cloud deployments.
+     * End the open break in a specific timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
@@ -62,7 +62,7 @@ public class EndBreakRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * End the open break in a specific timeCard. This API is available in the following national cloud deployments.
+     * End the open break in a specific timeCard.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class EndBreakRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * End the open break in a specific timeCard. This API is available in the following national cloud deployments.
+     * End the open break in a specific timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

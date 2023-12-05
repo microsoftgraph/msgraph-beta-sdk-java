@@ -36,7 +36,7 @@ public class ClockOutRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}/clockOut", rawUrl);
     }
     /**
-     * Clock out to end an open timeCard. This API is available in the following national cloud deployments.
+     * Clock out to end an open timeCard.
      * @param body The request body
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-clockout?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class ClockOutRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Clock out to end an open timeCard. This API is available in the following national cloud deployments.
+     * Clock out to end an open timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
@@ -62,7 +62,7 @@ public class ClockOutRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Clock out to end an open timeCard. This API is available in the following national cloud deployments.
+     * Clock out to end an open timeCard.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class ClockOutRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Clock out to end an open timeCard. This API is available in the following national cloud deployments.
+     * Clock out to end an open timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

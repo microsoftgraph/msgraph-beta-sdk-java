@@ -37,7 +37,7 @@ public class UserRequestsMetricItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/requests/{userRequestsMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get requests from reports
+     * Insights for all user requests on apps registered in the tenant for a specified period.
      * @return a UserRequestsMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class UserRequestsMetricItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get requests from reports
+     * Insights for all user requests on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserRequestsMetric
      */
@@ -58,7 +58,7 @@ public class UserRequestsMetricItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserRequestsMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get requests from reports
+     * Insights for all user requests on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class UserRequestsMetricItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get requests from reports
+     * Insights for all user requests on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class UserRequestsMetricItemRequestBuilder extends BaseRequestBuilder {
         return new UserRequestsMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get requests from reports
+     * Insights for all user requests on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

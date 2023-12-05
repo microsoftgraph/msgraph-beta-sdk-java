@@ -59,7 +59,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24top,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials.  This API is available in the following national cloud deployments.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @return a DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials.  This API is available in the following national cloud deployments.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials.  This API is available in the following national cloud deployments.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials.  This API is available in the following national cloud deployments.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials.  This API is available in the following national cloud deployments.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

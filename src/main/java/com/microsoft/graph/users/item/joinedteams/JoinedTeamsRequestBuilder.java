@@ -58,7 +58,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return new JoinedTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of. This API is available in the following national cloud deployments.
+     * Get the teams in Microsoft Teams that the user is a direct member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

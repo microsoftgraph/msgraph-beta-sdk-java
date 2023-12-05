@@ -70,7 +70,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve information about a specific forwarding policy. This API is available in the following national cloud deployments.
+     * Retrieve information about a specific forwarding policy.
      * @return a ForwardingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve information about a specific forwarding policy. This API is available in the following national cloud deployments.
+     * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ForwardingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve information about a specific forwarding policy. This API is available in the following national cloud deployments.
+     * Retrieve information about a specific forwarding policy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve information about a specific forwarding policy. This API is available in the following national cloud deployments.
+     * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve information about a specific forwarding policy. This API is available in the following national cloud deployments.
+     * Retrieve information about a specific forwarding policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

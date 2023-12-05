@@ -70,7 +70,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use. This API is available in the following national cloud deployments.
+     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-delete?view=graph-rest-1.0">Find more info here</a>
@@ -80,7 +80,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         delete(null);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use. This API is available in the following national cloud deployments.
+     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
@@ -95,7 +95,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      * @return a CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
@@ -107,7 +107,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcProvisioningPolicy
      * @deprecated
@@ -124,7 +124,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
      * @return a CloudPcProvisioningPolicy
      * @deprecated
@@ -137,7 +137,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcProvisioningPolicy
@@ -156,7 +156,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use. This API is available in the following national cloud deployments.
+     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
      * @return a RequestInformation
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
@@ -167,7 +167,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use. This API is available in the following national cloud deployments.
+     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -182,7 +182,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      * @return a RequestInformation
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
@@ -193,7 +193,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -208,7 +208,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -220,7 +220,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -257,7 +257,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

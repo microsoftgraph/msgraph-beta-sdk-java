@@ -36,7 +36,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/reactivate", rawUrl);
     }
     /**
-     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser.  This API is available in the following national cloud deployments.
+     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser. 
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser.  This API is available in the following national cloud deployments.
+     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ImpactedResource
      * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-reactivate?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser.  This API is available in the following national cloud deployments.
+     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser.  This API is available in the following national cloud deployments.
+     * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

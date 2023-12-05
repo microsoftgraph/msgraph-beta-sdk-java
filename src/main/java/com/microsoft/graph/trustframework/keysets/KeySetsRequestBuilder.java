@@ -59,7 +59,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/keySets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of trustFrameworkKeySets. This API is available in the following national cloud deployments.
+     * Retrieve a list of trustFrameworkKeySets.
      * @return a TrustFrameworkKeySetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of trustFrameworkKeySets. This API is available in the following national cloud deployments.
+     * Retrieve a list of trustFrameworkKeySets.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TrustFrameworkKeySetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkKeySetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header. This API is available in the following national cloud deployments.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @return a TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header. This API is available in the following national cloud deployments.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TrustFrameworkKeySet
@@ -108,7 +108,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkKeySet::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of trustFrameworkKeySets. This API is available in the following national cloud deployments.
+     * Retrieve a list of trustFrameworkKeySets.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of trustFrameworkKeySets. This API is available in the following national cloud deployments.
+     * Retrieve a list of trustFrameworkKeySets.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header. This API is available in the following national cloud deployments.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header. This API is available in the following national cloud deployments.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return new KeySetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of trustFrameworkKeySets. This API is available in the following national cloud deployments.
+     * Retrieve a list of trustFrameworkKeySets.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

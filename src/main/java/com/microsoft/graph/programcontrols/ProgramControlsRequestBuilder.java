@@ -59,7 +59,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControls{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a ProgramControlCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProgramControlCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramControlCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @return a ProgramControl
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ProgramControl
@@ -108,7 +108,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramControl::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return new ProgramControlsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

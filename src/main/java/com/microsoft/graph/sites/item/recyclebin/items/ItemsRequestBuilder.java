@@ -59,7 +59,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/recycleBin/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site. This API is available in the following national cloud deployments.
+     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @return a RecycleBinItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/recyclebin-list-items?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site. This API is available in the following national cloud deployments.
+     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RecycleBinItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/recyclebin-list-items?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecycleBinItem::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site. This API is available in the following national cloud deployments.
+     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site. This API is available in the following national cloud deployments.
+     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new ItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site. This API is available in the following national cloud deployments.
+     * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

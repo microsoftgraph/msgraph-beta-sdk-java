@@ -32,7 +32,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
         return new DeviceManagementConfigurationSettingGroupDefinition();
     }
     /**
-     * Gets the childIds property value. Dependent child settings to this group of settings.
+     * Gets the childIds property value. Dependent child settings to this group of settings
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
         writer.writeCollectionOfObjectValues("dependentOn", this.getDependentOn());
     }
     /**
-     * Sets the childIds property value. Dependent child settings to this group of settings.
+     * Sets the childIds property value. Dependent child settings to this group of settings
      * @param value Value to set for the childIds property.
      */
     public void setChildIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

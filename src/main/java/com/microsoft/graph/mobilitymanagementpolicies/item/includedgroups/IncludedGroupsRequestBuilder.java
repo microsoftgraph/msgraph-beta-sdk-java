@@ -66,7 +66,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/mobilityManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy. This API is available in the following national cloud deployments.
+     * Get the list of groups that are included in a mobile app management policy.
      * @return a GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list-includedgroups?view=graph-rest-1.0">Find more info here</a>
      */
@@ -75,7 +75,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy. This API is available in the following national cloud deployments.
+     * Get the list of groups that are included in a mobile app management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list-includedgroups?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy. This API is available in the following national cloud deployments.
+     * Get the list of groups that are included in a mobile app management policy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy. This API is available in the following national cloud deployments.
+     * Get the list of groups that are included in a mobile app management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return new IncludedGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy. This API is available in the following national cloud deployments.
+     * Get the list of groups that are included in a mobile app management policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

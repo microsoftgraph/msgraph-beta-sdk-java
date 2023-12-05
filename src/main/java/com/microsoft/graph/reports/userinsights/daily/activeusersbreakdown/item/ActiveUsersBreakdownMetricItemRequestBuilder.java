@@ -37,7 +37,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @return a ActiveUsersBreakdownMetric
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ActiveUsersBreakdownMetric
      */
@@ -58,7 +58,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersBreakdownMetric::createFromDiscriminatorValue);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         return new ActiveUsersBreakdownMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get activeUsersBreakdown from reports
+     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

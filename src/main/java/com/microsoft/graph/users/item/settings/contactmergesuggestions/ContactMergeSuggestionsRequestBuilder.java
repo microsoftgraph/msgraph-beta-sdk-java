@@ -54,7 +54,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a contactMergeSuggestions object.
      * @return a ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a contactMergeSuggestions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
@@ -77,7 +77,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContactMergeSuggestions::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @return a ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ContactMergeSuggestions
@@ -123,7 +123,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a contactMergeSuggestions object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a contactMergeSuggestions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -143,7 +143,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -183,7 +183,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a contactMergeSuggestions object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a contactMergeSuggestions object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

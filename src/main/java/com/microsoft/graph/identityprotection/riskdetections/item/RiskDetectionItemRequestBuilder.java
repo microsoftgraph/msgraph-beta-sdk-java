@@ -54,7 +54,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a RiskDetection
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RiskDetection
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects. This API is available in the following national cloud deployments.
+     * Retrieve the properties of a collection of riskDetection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

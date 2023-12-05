@@ -53,7 +53,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an industryDataRun object.
      * @return a IndustryDataRun
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -62,7 +62,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an industryDataRun object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IndustryDataRun
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,7 +76,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataRun::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an industryDataRun object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an industryDataRun object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +106,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return new IndustryDataRunItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an industryDataRun object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

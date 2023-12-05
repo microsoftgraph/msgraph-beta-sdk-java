@@ -59,7 +59,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/skills{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of skillProficiency objects in a user's profile.
      * @return a SkillProficiencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-skills?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of skillProficiency objects in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SkillProficiencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-skills?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SkillProficiencyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new skillProficiency object in a user's profile.
      * @param body The request body
      * @return a SkillProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-skills?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new skillProficiency object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SkillProficiency
@@ -108,7 +108,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SkillProficiency::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of skillProficiency objects in a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of skillProficiency objects in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new skillProficiency object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile. This API is available in the following national cloud deployments.
+     * Use this API to create a new skillProficiency object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return new SkillsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of skillProficiency objects in a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

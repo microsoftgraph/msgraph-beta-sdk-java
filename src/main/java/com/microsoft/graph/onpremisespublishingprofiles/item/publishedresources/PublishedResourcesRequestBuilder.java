@@ -59,7 +59,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/publishedResources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of publishedResource objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of publishedResource objects.
      * @return a PublishedResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of publishedResource objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of publishedResource objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PublishedResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PublishedResourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new publishedResource object. This API is available in the following national cloud deployments.
+     * Create a new publishedResource object.
      * @param body The request body
      * @return a PublishedResource
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new publishedResource object. This API is available in the following national cloud deployments.
+     * Create a new publishedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PublishedResource
@@ -108,7 +108,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PublishedResource::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of publishedResource objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of publishedResource objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of publishedResource objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of publishedResource objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new publishedResource object. This API is available in the following national cloud deployments.
+     * Create a new publishedResource object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new publishedResource object. This API is available in the following national cloud deployments.
+     * Create a new publishedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
         return new PublishedResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of publishedResource objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of publishedResource objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

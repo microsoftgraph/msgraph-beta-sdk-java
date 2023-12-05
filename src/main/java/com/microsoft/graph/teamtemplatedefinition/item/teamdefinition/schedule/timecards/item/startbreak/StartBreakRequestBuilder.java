@@ -36,7 +36,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}/startBreak", rawUrl);
     }
     /**
-     * Start a break in a specific timeCard. This API is available in the following national cloud deployments.
+     * Start a break in a specific timeCard.
      * @param body The request body
      * @return a TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-startbreak?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Start a break in a specific timeCard. This API is available in the following national cloud deployments.
+     * Start a break in a specific timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TimeCard
@@ -62,7 +62,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Start a break in a specific timeCard. This API is available in the following national cloud deployments.
+     * Start a break in a specific timeCard.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Start a break in a specific timeCard. This API is available in the following national cloud deployments.
+     * Start a break in a specific timeCard.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

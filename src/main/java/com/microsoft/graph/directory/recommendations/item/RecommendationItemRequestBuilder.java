@@ -94,7 +94,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a recommendation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a recommendation object.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -103,7 +103,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a recommendation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a recommendation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a recommendation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a recommendation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a recommendation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a recommendation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a recommendation object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a recommendation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

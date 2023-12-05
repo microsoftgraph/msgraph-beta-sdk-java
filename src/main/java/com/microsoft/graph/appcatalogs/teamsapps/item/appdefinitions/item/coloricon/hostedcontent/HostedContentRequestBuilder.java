@@ -62,7 +62,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the hosted content in an app's icon. This API is available in the following national cloud deployments.
+     * Retrieve the hosted content in an app's icon.
      * @return a TeamworkHostedContent
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the hosted content in an app's icon. This API is available in the following national cloud deployments.
+     * Retrieve the hosted content in an app's icon.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkHostedContent
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the hosted content in an app's icon. This API is available in the following national cloud deployments.
+     * Retrieve the hosted content in an app's icon.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the hosted content in an app's icon. This API is available in the following national cloud deployments.
+     * Retrieve the hosted content in an app's icon.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the hosted content in an app's icon. This API is available in the following national cloud deployments.
+     * Retrieve the hosted content in an app's icon.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

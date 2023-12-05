@@ -65,7 +65,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get all the Outlook task folders in the user's mailbox. This API is available in the following national cloud deployments.
+     * Get all the Outlook task folders in the user's mailbox.
      * @return a OutlookTaskFolderCollectionResponse
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
@@ -77,7 +77,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the Outlook task folders in the user's mailbox. This API is available in the following national cloud deployments.
+     * Get all the Outlook task folders in the user's mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OutlookTaskFolderCollectionResponse
      * @deprecated
@@ -94,7 +94,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a task folder in the default task group (My Tasks) of the user's mailbox. This API is available in the following national cloud deployments.
+     * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @return a OutlookTaskFolder
      * @deprecated
@@ -107,7 +107,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a task folder in the default task group (My Tasks) of the user's mailbox. This API is available in the following national cloud deployments.
+     * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a OutlookTaskFolder
@@ -126,7 +126,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
-     * Get all the Outlook task folders in the user's mailbox. This API is available in the following national cloud deployments.
+     * Get all the Outlook task folders in the user's mailbox.
      * @return a RequestInformation
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
@@ -137,7 +137,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the Outlook task folders in the user's mailbox. This API is available in the following national cloud deployments.
+     * Get all the Outlook task folders in the user's mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -152,7 +152,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a task folder in the default task group (My Tasks) of the user's mailbox. This API is available in the following national cloud deployments.
+     * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -164,7 +164,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a task folder in the default task group (My Tasks) of the user's mailbox. This API is available in the following national cloud deployments.
+     * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return new TaskFoldersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the Outlook task folders in the user's mailbox. This API is available in the following national cloud deployments.
+     * Get all the Outlook task folders in the user's mailbox.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

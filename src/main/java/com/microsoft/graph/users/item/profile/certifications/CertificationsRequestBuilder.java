@@ -59,7 +59,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/certifications{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personCertification objects from a user's profile.
      * @return a PersonCertificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personCertification objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonCertificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertificationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new personCertification object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @return a PersonCertification
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new personCertification object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PersonCertification
@@ -108,7 +108,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertification::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personCertification objects from a user's profile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personCertification objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new personCertification object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new personCertification object in a user's profile. This API is available in the following national cloud deployments.
+     * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return new CertificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile. This API is available in the following national cloud deployments.
+     * Retrieve a list of personCertification objects from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -53,14 +53,14 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names/{workbookNamedItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a workbookNamedItem object. This API is available in the following national cloud deployments.
+     * Delete a workbookNamedItem object.
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a workbookNamedItem object. This API is available in the following national cloud deployments.
+     * Delete a workbookNamedItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -72,7 +72,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -81,7 +81,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @return a WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a WorkbookNamedItem
@@ -121,7 +121,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Delete a workbookNamedItem object. This API is available in the following national cloud deployments.
+     * Delete a workbookNamedItem object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a workbookNamedItem object. This API is available in the following national cloud deployments.
+     * Delete a workbookNamedItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of nameditem object. This API is available in the following national cloud deployments.
+     * Update the properties of nameditem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of nameditem object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of nameditem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

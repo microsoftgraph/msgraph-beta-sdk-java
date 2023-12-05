@@ -59,7 +59,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster. This API is available in the following national cloud deployments.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @return a PlannerRosterMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster. This API is available in the following national cloud deployments.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerRosterMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-members?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a member to the plannerRoster object. This API is available in the following national cloud deployments.
+     * Add a member to the plannerRoster object.
      * @param body The request body
      * @return a PlannerRosterMember
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-post-members?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a member to the plannerRoster object. This API is available in the following national cloud deployments.
+     * Add a member to the plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerRosterMember
@@ -108,7 +108,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterMember::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster. This API is available in the following national cloud deployments.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster. This API is available in the following national cloud deployments.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a member to the plannerRoster object. This API is available in the following national cloud deployments.
+     * Add a member to the plannerRoster object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a member to the plannerRoster object. This API is available in the following national cloud deployments.
+     * Add a member to the plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster. This API is available in the following national cloud deployments.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

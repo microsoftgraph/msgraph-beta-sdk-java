@@ -176,7 +176,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("timeClockEnabled");
     }
     /**
-     * Gets the timeClockSettings property value. The timeClockSettings property
+     * Gets the timeClockSettings property value. The time clock location settings for this schedule.
      * @return a TimeClockSettings
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("timeZone");
     }
     /**
-     * Gets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Gets the workforceIntegrationIds property value. The Ids for the workforce integrations associated with this schedule.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("timeClockEnabled", value);
     }
     /**
-     * Sets the timeClockSettings property value. The timeClockSettings property
+     * Sets the timeClockSettings property value. The time clock location settings for this schedule.
      * @param value Value to set for the timeClockSettings property.
      */
     public void setTimeClockSettings(@jakarta.annotation.Nullable final TimeClockSettings value) {
@@ -407,7 +407,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("timeZone", value);
     }
     /**
-     * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Sets the workforceIntegrationIds property value. The Ids for the workforce integrations associated with this schedule.
      * @param value Value to set for the workforceIntegrationIds property.
      */
     public void setWorkforceIntegrationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

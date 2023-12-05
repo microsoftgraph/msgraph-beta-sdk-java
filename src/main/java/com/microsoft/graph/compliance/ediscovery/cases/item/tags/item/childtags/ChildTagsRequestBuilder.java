@@ -64,7 +64,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/{tag%2Did}/childTags{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of child tag objects associated with a tag. This API is available in the following national cloud deployments.
+     * Get a list of child tag objects associated with a tag.
      * @return a TagCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -76,7 +76,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of child tag objects associated with a tag. This API is available in the following national cloud deployments.
+     * Get a list of child tag objects associated with a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TagCollectionResponse
      * @deprecated
@@ -93,7 +93,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of child tag objects associated with a tag. This API is available in the following national cloud deployments.
+     * Get a list of child tag objects associated with a tag.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -104,7 +104,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of child tag objects associated with a tag. This API is available in the following national cloud deployments.
+     * Get a list of child tag objects associated with a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -132,7 +132,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return new ChildTagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of child tag objects associated with a tag. This API is available in the following national cloud deployments.
+     * Get a list of child tag objects associated with a tag.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

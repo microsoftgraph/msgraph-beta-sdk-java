@@ -59,7 +59,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate.  This API is available in the following national cloud deployments.
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @return a TeamTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate.  This API is available in the following national cloud deployments.
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplate::createFromDiscriminatorValue);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate.  This API is available in the following national cloud deployments.
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate.  This API is available in the following national cloud deployments.
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return new TeamTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate.  This API is available in the following national cloud deployments.
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

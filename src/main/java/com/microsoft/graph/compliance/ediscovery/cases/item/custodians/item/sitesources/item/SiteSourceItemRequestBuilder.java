@@ -48,7 +48,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/custodians/{custodian%2Did}/siteSources/{siteSource%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a siteSource object. This API is available in the following national cloud deployments.
+     * Delete a siteSource object.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sitesource-delete?view=graph-rest-1.0">Find more info here</a>
@@ -58,7 +58,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a siteSource object. This API is available in the following national cloud deployments.
+     * Delete a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -73,7 +73,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a siteSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a siteSource object.
      * @return a SiteSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -85,7 +85,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a siteSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SiteSource
      * @deprecated
@@ -132,7 +132,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
-     * Delete a siteSource object. This API is available in the following national cloud deployments.
+     * Delete a siteSource object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -143,7 +143,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a siteSource object. This API is available in the following national cloud deployments.
+     * Delete a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -158,7 +158,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a siteSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a siteSource object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -169,7 +169,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a siteSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -233,7 +233,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a siteSource object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a siteSource object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

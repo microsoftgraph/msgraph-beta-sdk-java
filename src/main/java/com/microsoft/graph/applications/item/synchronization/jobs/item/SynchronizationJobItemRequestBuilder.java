@@ -93,14 +93,14 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -112,7 +112,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties.
      * @return a SynchronizationJob
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -121,7 +121,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SynchronizationJob
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
@@ -159,7 +159,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -167,7 +167,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is. This API is available in the following national cloud deployments.
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -239,7 +239,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the existing synchronization job and its properties. This API is available in the following national cloud deployments.
+     * Retrieve the existing synchronization job and its properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

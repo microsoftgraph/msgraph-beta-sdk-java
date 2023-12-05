@@ -59,7 +59,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/channels/{channel%2Did}/tabs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @return a TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return new TabsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
+     * Retrieve the list of tabs in the specified channel within a team. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

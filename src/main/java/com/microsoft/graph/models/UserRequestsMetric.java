@@ -26,7 +26,7 @@ public class UserRequestsMetric extends Entity implements Parsable {
         return new UserRequestsMetric();
     }
     /**
-     * Gets the factDate property value. The factDate property
+     * Gets the factDate property value. The date of the user insight.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class UserRequestsMetric extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the requestCount property value. The requestCount property
+     * Gets the requestCount property value. Number of requests to the tenant. Supports $filter (eq).
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class UserRequestsMetric extends Entity implements Parsable {
         writer.writeLongValue("requestCount", this.getRequestCount());
     }
     /**
-     * Sets the factDate property value. The factDate property
+     * Sets the factDate property value. The date of the user insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
     }
     /**
-     * Sets the requestCount property value. The requestCount property
+     * Sets the requestCount property value. Number of requests to the tenant. Supports $filter (eq).
      * @param value Value to set for the requestCount property.
      */
     public void setRequestCount(@jakarta.annotation.Nullable final Long value) {

@@ -147,7 +147,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a case object. This API is available in the following national cloud deployments.
+     * Delete a case object.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-delete?view=graph-rest-1.0">Find more info here</a>
@@ -157,7 +157,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a case object. This API is available in the following national cloud deployments.
+     * Delete a case object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -172,7 +172,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a case object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a case object.
      * @return a CaseEscaped
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -184,7 +184,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a case object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a case object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseEscaped
      * @deprecated
@@ -201,7 +201,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseEscaped::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a case object. This API is available in the following national cloud deployments.
+     * Update the properties of a case object.
      * @param body The request body
      * @return a CaseEscaped
      * @deprecated
@@ -214,7 +214,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a case object. This API is available in the following national cloud deployments.
+     * Update the properties of a case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseEscaped
@@ -233,7 +233,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseEscaped::createFromDiscriminatorValue);
     }
     /**
-     * Delete a case object. This API is available in the following national cloud deployments.
+     * Delete a case object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -244,7 +244,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a case object. This API is available in the following national cloud deployments.
+     * Delete a case object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -259,7 +259,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a case object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a case object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -270,7 +270,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a case object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a case object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -285,7 +285,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a case object. This API is available in the following national cloud deployments.
+     * Update the properties of a case object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -297,7 +297,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a case object. This API is available in the following national cloud deployments.
+     * Update the properties of a case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -334,7 +334,7 @@ public class CaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a case object. This API is available in the following national cloud deployments.
+     * Retrieve the properties and relationships of a case object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

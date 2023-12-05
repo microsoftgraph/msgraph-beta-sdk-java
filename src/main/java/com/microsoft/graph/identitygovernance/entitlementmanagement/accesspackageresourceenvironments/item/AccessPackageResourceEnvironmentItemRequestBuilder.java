@@ -62,7 +62,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an accessPackageResourceEnvironment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @return a AccessPackageResourceEnvironment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresourceenvironment-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessPackageResourceEnvironment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageResourceEnvironment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresourceenvironment-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessPackageResourceEnvironment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessPackageResourceEnvironment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessPackageResourceEnvironment object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

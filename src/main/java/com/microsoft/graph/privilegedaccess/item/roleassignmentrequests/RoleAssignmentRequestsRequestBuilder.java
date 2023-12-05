@@ -80,7 +80,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceRoleAssignmentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations. This API is available in the following national cloud deployments.
+     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations.
      * @param body The request body
      * @return a GovernanceRoleAssignmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/governanceroleassignmentrequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations. This API is available in the following national cloud deployments.
+     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GovernanceRoleAssignmentRequest
@@ -126,7 +126,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations. This API is available in the following national cloud deployments.
+     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations. This API is available in the following national cloud deployments.
+     * Create a role assignment request to represent the operation you want on a role assignment. The following table lists the operations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

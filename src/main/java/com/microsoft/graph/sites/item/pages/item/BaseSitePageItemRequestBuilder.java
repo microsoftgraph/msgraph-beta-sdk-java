@@ -70,7 +70,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @return a BaseSitePage
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a BaseSitePage
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

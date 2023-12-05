@@ -33,7 +33,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return new OnlineMeetingBase();
     }
     /**
-     * Gets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * Gets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowAttendeeToEnableCamera");
     }
     /**
-     * Gets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * Gets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowAttendeeToEnableMic");
     }
     /**
-     * Gets the allowedPresenters property value. The allowedPresenters property
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @return a OnlineMeetingPresenters
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowedPresenters");
     }
     /**
-     * Gets the allowMeetingChat property value. The allowMeetingChat property
+     * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
      * @return a MeetingChatMode
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowMeetingChat");
     }
     /**
-     * Gets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowParticipantsToChangeName");
     }
     /**
-     * Gets the allowRecording property value. The allowRecording property
+     * Gets the allowRecording property value. Indicates whether recording is enabled for the meeting.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowRecording");
     }
     /**
-     * Gets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowTeamworkReactions");
     }
     /**
-     * Gets the allowTranscription property value. The allowTranscription property
+     * Gets the allowTranscription property value. Indicates whether transcription is enabled for the meeting.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowTranscription");
     }
     /**
-     * Gets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
+     * Gets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can't be removed through a PATCH operation once added.
      * @return a java.util.List<OnlineMeetingRole>
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("anonymizeIdentityForRoles");
     }
     /**
-     * Gets the attendanceReports property value. The attendanceReports property
+     * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
      * @return a java.util.List<MeetingAttendanceReport>
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("attendanceReports");
     }
     /**
-     * Gets the audioConferencing property value. The audioConferencing property
+     * Gets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
      * @return a AudioConferencing
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("audioConferencing");
     }
     /**
-     * Gets the chatInfo property value. The chatInfo property
+     * Gets the chatInfo property value. The chat information associated with this online meeting.
      * @return a ChatInfo
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("isEndToEndEncryptionEnabled");
     }
     /**
-     * Gets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * Gets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("isEntryExitAnnounced");
     }
     /**
-     * Gets the joinInformation property value. The joinInformation property
+     * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      * @return a ItemBody
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("joinInformation");
     }
     /**
-     * Gets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
      * @return a JoinMeetingIdSettings
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("joinMeetingIdSettings");
     }
     /**
-     * Gets the joinWebUrl property value. The joinWebUrl property
+     * Gets the joinWebUrl property value. The join URL of the online meeting. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("joinWebUrl");
     }
     /**
-     * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      * @return a LobbyBypassSettings
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("lobbyBypassSettings");
     }
     /**
-     * Gets the recordAutomatically property value. The recordAutomatically property
+     * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("shareMeetingChatHistoryDefault");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the online meeting.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -242,7 +242,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("videoTeleconferenceId");
     }
     /**
-     * Gets the watermarkProtection property value. The watermarkProtection property
+     * Gets the watermarkProtection property value. Specifies whether the client application should apply a watermark to a content type.
      * @return a WatermarkProtectionValues
      */
     @jakarta.annotation.Nullable
@@ -290,84 +290,84 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("watermarkProtection", this.getWatermarkProtection());
     }
     /**
-     * Sets the allowAttendeeToEnableCamera property value. The allowAttendeeToEnableCamera property
+     * Sets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
      * @param value Value to set for the allowAttendeeToEnableCamera property.
      */
     public void setAllowAttendeeToEnableCamera(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowAttendeeToEnableCamera", value);
     }
     /**
-     * Sets the allowAttendeeToEnableMic property value. The allowAttendeeToEnableMic property
+     * Sets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
      * @param value Value to set for the allowAttendeeToEnableMic property.
      */
     public void setAllowAttendeeToEnableMic(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowAttendeeToEnableMic", value);
     }
     /**
-     * Sets the allowedPresenters property value. The allowedPresenters property
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @param value Value to set for the allowedPresenters property.
      */
     public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
         this.backingStore.set("allowedPresenters", value);
     }
     /**
-     * Sets the allowMeetingChat property value. The allowMeetingChat property
+     * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
      * @param value Value to set for the allowMeetingChat property.
      */
     public void setAllowMeetingChat(@jakarta.annotation.Nullable final MeetingChatMode value) {
         this.backingStore.set("allowMeetingChat", value);
     }
     /**
-     * Sets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * Sets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
      * @param value Value to set for the allowParticipantsToChangeName property.
      */
     public void setAllowParticipantsToChangeName(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowParticipantsToChangeName", value);
     }
     /**
-     * Sets the allowRecording property value. The allowRecording property
+     * Sets the allowRecording property value. Indicates whether recording is enabled for the meeting.
      * @param value Value to set for the allowRecording property.
      */
     public void setAllowRecording(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowRecording", value);
     }
     /**
-     * Sets the allowTeamworkReactions property value. The allowTeamworkReactions property
+     * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @param value Value to set for the allowTeamworkReactions property.
      */
     public void setAllowTeamworkReactions(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowTeamworkReactions", value);
     }
     /**
-     * Sets the allowTranscription property value. The allowTranscription property
+     * Sets the allowTranscription property value. Indicates whether transcription is enabled for the meeting.
      * @param value Value to set for the allowTranscription property.
      */
     public void setAllowTranscription(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowTranscription", value);
     }
     /**
-     * Sets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
+     * Sets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can't be removed through a PATCH operation once added.
      * @param value Value to set for the anonymizeIdentityForRoles property.
      */
     public void setAnonymizeIdentityForRoles(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingRole> value) {
         this.backingStore.set("anonymizeIdentityForRoles", value);
     }
     /**
-     * Sets the attendanceReports property value. The attendanceReports property
+     * Sets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
      * @param value Value to set for the attendanceReports property.
      */
     public void setAttendanceReports(@jakarta.annotation.Nullable final java.util.List<MeetingAttendanceReport> value) {
         this.backingStore.set("attendanceReports", value);
     }
     /**
-     * Sets the audioConferencing property value. The audioConferencing property
+     * Sets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
      * @param value Value to set for the audioConferencing property.
      */
     public void setAudioConferencing(@jakarta.annotation.Nullable final AudioConferencing value) {
         this.backingStore.set("audioConferencing", value);
     }
     /**
-     * Sets the chatInfo property value. The chatInfo property
+     * Sets the chatInfo property value. The chat information associated with this online meeting.
      * @param value Value to set for the chatInfo property.
      */
     public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
@@ -388,42 +388,42 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("isEndToEndEncryptionEnabled", value);
     }
     /**
-     * Sets the isEntryExitAnnounced property value. The isEntryExitAnnounced property
+     * Sets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
      * @param value Value to set for the isEntryExitAnnounced property.
      */
     public void setIsEntryExitAnnounced(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEntryExitAnnounced", value);
     }
     /**
-     * Sets the joinInformation property value. The joinInformation property
+     * Sets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      * @param value Value to set for the joinInformation property.
      */
     public void setJoinInformation(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("joinInformation", value);
     }
     /**
-     * Sets the joinMeetingIdSettings property value. The joinMeetingIdSettings property
+     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
      * @param value Value to set for the joinMeetingIdSettings property.
      */
     public void setJoinMeetingIdSettings(@jakarta.annotation.Nullable final JoinMeetingIdSettings value) {
         this.backingStore.set("joinMeetingIdSettings", value);
     }
     /**
-     * Sets the joinWebUrl property value. The joinWebUrl property
+     * Sets the joinWebUrl property value. The join URL of the online meeting. Read-only.
      * @param value Value to set for the joinWebUrl property.
      */
     public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("joinWebUrl", value);
     }
     /**
-     * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
+     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      * @param value Value to set for the lobbyBypassSettings property.
      */
     public void setLobbyBypassSettings(@jakarta.annotation.Nullable final LobbyBypassSettings value) {
         this.backingStore.set("lobbyBypassSettings", value);
     }
     /**
-     * Sets the recordAutomatically property value. The recordAutomatically property
+     * Sets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @param value Value to set for the recordAutomatically property.
      */
     public void setRecordAutomatically(@jakarta.annotation.Nullable final Boolean value) {
@@ -437,21 +437,21 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("shareMeetingChatHistoryDefault", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the online meeting.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Sets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @param value Value to set for the videoTeleconferenceId property.
      */
     public void setVideoTeleconferenceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("videoTeleconferenceId", value);
     }
     /**
-     * Sets the watermarkProtection property value. The watermarkProtection property
+     * Sets the watermarkProtection property value. Specifies whether the client application should apply a watermark to a content type.
      * @param value Value to set for the watermarkProtection property.
      */
     public void setWatermarkProtection(@jakarta.annotation.Nullable final WatermarkProtectionValues value) {

@@ -70,7 +70,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Read the properties of an inboundSharedUserProfile.
      * @return a InboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -79,7 +79,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Read the properties of an inboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
@@ -137,7 +137,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties of an inboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Read the properties of an inboundSharedUserProfile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Read the properties of an inboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of an inboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Read the properties of an inboundSharedUserProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

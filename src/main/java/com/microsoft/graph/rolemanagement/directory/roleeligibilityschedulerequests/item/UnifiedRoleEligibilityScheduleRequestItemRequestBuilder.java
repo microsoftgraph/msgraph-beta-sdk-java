@@ -102,7 +102,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @return a UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -111,7 +111,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -169,7 +169,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +177,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +229,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

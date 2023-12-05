@@ -59,7 +59,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @return a TeamTemplateDefinitionCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamTemplateDefinitionCollectionResponse
      */
@@ -104,7 +104,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplateDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new DefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object. This API is available in the following national cloud deployments.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

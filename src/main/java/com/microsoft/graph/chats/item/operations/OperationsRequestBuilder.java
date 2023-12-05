@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat. This API is available in the following national cloud deployments.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @return a TeamsAsyncOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat. This API is available in the following national cloud deployments.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamsAsyncOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAsyncOperation::createFromDiscriminatorValue);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat. This API is available in the following national cloud deployments.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat. This API is available in the following national cloud deployments.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat. This API is available in the following national cloud deployments.
+     * List all Teams async operations that ran or are running on the specified chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

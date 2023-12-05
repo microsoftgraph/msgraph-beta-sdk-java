@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/microsoft.graph.security.updateIndex", rawUrl);
     }
     /**
-     * Trigger an indexOperation This API is available in the following national cloud deployments.
+     * Trigger an indexOperation
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         post(body, null);
     }
     /**
-     * Trigger an indexOperation This API is available in the following national cloud deployments.
+     * Trigger an indexOperation
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Trigger an indexOperation This API is available in the following national cloud deployments.
+     * Trigger an indexOperation
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         return toPostRequestInformation(body, null);
     }
     /**
-     * Trigger an indexOperation This API is available in the following national cloud deployments.
+     * Trigger an indexOperation
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -7,8 +7,8 @@ import java.util.Objects;
 public enum OnlineMeetingRole implements ValuedEnum {
     Attendee("attendee"),
     Presenter("presenter"),
-    UnknownFutureValue("unknownFutureValue"),
     Producer("producer"),
+    UnknownFutureValue("unknownFutureValue"),
     Coorganizer("coorganizer");
     public final String value;
     OnlineMeetingRole(final String value) {
@@ -22,8 +22,8 @@ public enum OnlineMeetingRole implements ValuedEnum {
         switch(searchValue) {
             case "attendee": return Attendee;
             case "presenter": return Presenter;
-            case "unknownFutureValue": return UnknownFutureValue;
             case "producer": return Producer;
+            case "unknownFutureValue": return UnknownFutureValue;
             case "coorganizer": return Coorganizer;
             default: return null;
         }

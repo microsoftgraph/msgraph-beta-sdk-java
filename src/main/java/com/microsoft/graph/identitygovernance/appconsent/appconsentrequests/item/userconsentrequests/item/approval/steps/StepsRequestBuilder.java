@@ -59,7 +59,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/appConsent/appConsentRequests/{appConsentRequest%2Did}/userConsentRequests/{userConsentRequest%2Did}/approval/steps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios: This API is available in the following national cloud deployments.
+     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @return a ApprovalStepCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios: This API is available in the following national cloud deployments.
+     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ApprovalStepCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStep::createFromDiscriminatorValue);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios: This API is available in the following national cloud deployments.
+     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios: This API is available in the following national cloud deployments.
+     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return new StepsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios: This API is available in the following national cloud deployments.
+     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

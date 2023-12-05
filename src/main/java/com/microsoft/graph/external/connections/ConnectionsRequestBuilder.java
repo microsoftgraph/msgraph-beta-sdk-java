@@ -59,7 +59,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of externalConnections. This API is available in the following national cloud deployments.
+     * Retrieve a list of externalConnections.
      * @return a ExternalConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of externalConnections. This API is available in the following national cloud deployments.
+     * Retrieve a list of externalConnections.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new externalConnection. This API is available in the following national cloud deployments.
+     * Create a new externalConnection.
      * @param body The request body
      * @return a ExternalConnection
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new externalConnection. This API is available in the following national cloud deployments.
+     * Create a new externalConnection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ExternalConnection
@@ -108,7 +108,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnection::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of externalConnections. This API is available in the following national cloud deployments.
+     * Retrieve a list of externalConnections.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of externalConnections. This API is available in the following national cloud deployments.
+     * Retrieve a list of externalConnections.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalConnection. This API is available in the following national cloud deployments.
+     * Create a new externalConnection.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new externalConnection. This API is available in the following national cloud deployments.
+     * Create a new externalConnection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return new ConnectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of externalConnections. This API is available in the following national cloud deployments.
+     * Retrieve a list of externalConnections.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

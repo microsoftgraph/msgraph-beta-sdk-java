@@ -87,7 +87,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/custodians{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the custodian objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the custodian objects and their properties.
      * @return a CustodianCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -99,7 +99,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the custodian objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the custodian objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustodianCollectionResponse
      * @deprecated
@@ -116,7 +116,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustodianCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site. This API is available in the following national cloud deployments.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @return a Custodian
      * @deprecated
@@ -129,7 +129,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site. This API is available in the following national cloud deployments.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Custodian
@@ -148,7 +148,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Custodian::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the custodian objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the custodian objects and their properties.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -159,7 +159,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the custodian objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the custodian objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -174,7 +174,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site. This API is available in the following national cloud deployments.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -186,7 +186,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site. This API is available in the following national cloud deployments.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return new CustodiansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the custodian objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the custodian objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

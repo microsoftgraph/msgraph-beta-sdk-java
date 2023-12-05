@@ -35,7 +35,7 @@ public class ChangeUserAccountTypeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/changeUserAccountType", rawUrl);
     }
     /**
-     * Change the account type of the user on a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Change the account type of the user on a specific Cloud PC.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-changeuseraccounttype?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class ChangeUserAccountTypeRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Change the account type of the user on a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Change the account type of the user on a specific Cloud PC.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-changeuseraccounttype?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class ChangeUserAccountTypeRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Change the account type of the user on a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Change the account type of the user on a specific Cloud PC.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -66,7 +66,7 @@ public class ChangeUserAccountTypeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Change the account type of the user on a specific Cloud PC. This API is available in the following national cloud deployments.
+     * Change the account type of the user on a specific Cloud PC.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

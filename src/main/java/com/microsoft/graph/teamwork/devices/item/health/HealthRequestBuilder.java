@@ -54,7 +54,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters. This API is available in the following national cloud deployments.
+     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @return a TeamworkDeviceHealth
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters. This API is available in the following national cloud deployments.
+     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkDeviceHealth
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters. This API is available in the following national cloud deployments.
+     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters. This API is available in the following national cloud deployments.
+     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters. This API is available in the following national cloud deployments.
+     * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

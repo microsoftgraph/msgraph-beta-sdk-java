@@ -59,7 +59,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/logs/traffic{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of log events for traffic routed through the Global Secure Access services. This API is available in the following national cloud deployments.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @return a NetworkAccessTrafficCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of log events for traffic routed through the Global Secure Access services. This API is available in the following national cloud deployments.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a NetworkAccessTrafficCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NetworkAccessTraffic::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of log events for traffic routed through the Global Secure Access services. This API is available in the following national cloud deployments.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of log events for traffic routed through the Global Secure Access services. This API is available in the following national cloud deployments.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return new TrafficRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of log events for traffic routed through the Global Secure Access services. This API is available in the following national cloud deployments.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,14 +45,14 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -109,7 +109,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramControl::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

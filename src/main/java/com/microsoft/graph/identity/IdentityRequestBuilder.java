@@ -33,77 +33,110 @@ import java.util.Objects;
 public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ApiConnectorsRequestBuilder apiConnectors() {
         return new ApiConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationEventListenersRequestBuilder authenticationEventListeners() {
         return new AuthenticationEventListenersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authenticationEventsFlows property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationEventsFlowsRequestBuilder authenticationEventsFlows() {
         return new AuthenticationEventsFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the b2cUserFlows property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public B2cUserFlowsRequestBuilder b2cUserFlows() {
         return new B2cUserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public B2xUserFlowsRequestBuilder b2xUserFlows() {
         return new B2xUserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder conditionalAccess() {
         return new ConditionalAccessRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the continuousAccessEvaluationPolicy property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
         return new ContinuousAccessEvaluationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CustomAuthenticationExtensionsRequestBuilder customAuthenticationExtensions() {
         return new CustomAuthenticationExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserFlowAttributesRequestBuilder userFlowAttributes() {
         return new UserFlowAttributesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userFlows property of the microsoft.graph.identityContainer entity.
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserFlowsRequestBuilder userFlows() {
         return new UserFlowsRequestBuilder(pathParameters, requestAdapter);
@@ -127,8 +160,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identity
      * @return a IdentityContainer
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityContainer get() {
         return get(null);
     }
@@ -136,8 +172,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityContainer
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -149,8 +188,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Update identity
      * @param body The request body
      * @return a IdentityContainer
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
         return patch(body, null);
     }
@@ -159,8 +201,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityContainer
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -172,8 +217,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identity
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -181,8 +229,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -193,8 +244,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Update identity
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body) {
         return toPatchRequestInformation(body, null);
     }
@@ -203,8 +257,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -217,8 +274,11 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a IdentityRequestBuilder
+     * @deprecated
+     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public IdentityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new IdentityRequestBuilder(rawUrl, requestAdapter);

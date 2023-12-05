@@ -35,7 +35,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/validateBulkResize", rawUrl);
     }
     /**
-     * Validate that a set of cloudPC devices meet the requirements to be bulk resized. This API is available in the following national cloud deployments.
+     * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
      * @return a ValidateBulkResizePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Validate that a set of cloudPC devices meet the requirements to be bulk resized. This API is available in the following national cloud deployments.
+     * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ValidateBulkResizePostResponse
@@ -61,7 +61,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ValidateBulkResizePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Validate that a set of cloudPC devices meet the requirements to be bulk resized. This API is available in the following national cloud deployments.
+     * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Validate that a set of cloudPC devices meet the requirements to be bulk resized. This API is available in the following national cloud deployments.
+     * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

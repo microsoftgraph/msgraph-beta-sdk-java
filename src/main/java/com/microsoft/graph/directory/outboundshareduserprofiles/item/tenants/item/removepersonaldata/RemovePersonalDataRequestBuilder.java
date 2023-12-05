@@ -35,14 +35,14 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants/{tenantReference%2DtenantId}/removePersonalData", rawUrl);
     }
     /**
-     * Create a request to remove the personal data for an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Create a request to remove the personal data for an outboundSharedUserProfile.
      * @see <a href="https://learn.microsoft.com/graph/api/tenantreference-removepersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Create a request to remove the personal data for an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Create a request to remove the personal data for an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tenantreference-removepersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Create a request to remove the personal data for an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Create a request to remove the personal data for an outboundSharedUserProfile.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Create a request to remove the personal data for an outboundSharedUserProfile. This API is available in the following national cloud deployments.
+     * Create a request to remove the personal data for an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

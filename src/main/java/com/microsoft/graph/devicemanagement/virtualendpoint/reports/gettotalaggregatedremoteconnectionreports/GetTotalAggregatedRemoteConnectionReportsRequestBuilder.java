@@ -36,7 +36,7 @@ public class GetTotalAggregatedRemoteConnectionReportsRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getTotalAggregatedRemoteConnectionReports", rawUrl);
     }
     /**
-     * Get the total aggregated remote connection usage of a Cloud PC during a given time span. This API is available in the following national cloud deployments.
+     * Get the total aggregated remote connection usage of a Cloud PC during a given time span.
      * @param body The request body
      * @return a InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-gettotalaggregatedremoteconnectionreports?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetTotalAggregatedRemoteConnectionReportsRequestBuilder extends Bas
         return post(body, null);
     }
     /**
-     * Get the total aggregated remote connection usage of a Cloud PC during a given time span. This API is available in the following national cloud deployments.
+     * Get the total aggregated remote connection usage of a Cloud PC during a given time span.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
@@ -62,7 +62,7 @@ public class GetTotalAggregatedRemoteConnectionReportsRequestBuilder extends Bas
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the total aggregated remote connection usage of a Cloud PC during a given time span. This API is available in the following national cloud deployments.
+     * Get the total aggregated remote connection usage of a Cloud PC during a given time span.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GetTotalAggregatedRemoteConnectionReportsRequestBuilder extends Bas
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the total aggregated remote connection usage of a Cloud PC during a given time span. This API is available in the following national cloud deployments.
+     * Get the total aggregated remote connection usage of a Cloud PC during a given time span.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -114,7 +114,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a sourceCollection object. This API is available in the following national cloud deployments.
+     * Delete a sourceCollection object.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a sourceCollection object. This API is available in the following national cloud deployments.
+     * Delete a sourceCollection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -166,7 +166,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SourceCollection::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a sourceCollection object. This API is available in the following national cloud deployments.
+     * Update the properties of a sourceCollection object.
      * @param body The request body
      * @return a SourceCollection
      * @deprecated
@@ -179,7 +179,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a sourceCollection object. This API is available in the following national cloud deployments.
+     * Update the properties of a sourceCollection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a SourceCollection
@@ -198,7 +198,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SourceCollection::createFromDiscriminatorValue);
     }
     /**
-     * Delete a sourceCollection object. This API is available in the following national cloud deployments.
+     * Delete a sourceCollection object.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -209,7 +209,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a sourceCollection object. This API is available in the following national cloud deployments.
+     * Delete a sourceCollection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -250,7 +250,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a sourceCollection object. This API is available in the following national cloud deployments.
+     * Update the properties of a sourceCollection object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -262,7 +262,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a sourceCollection object. This API is available in the following national cloud deployments.
+     * Update the properties of a sourceCollection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

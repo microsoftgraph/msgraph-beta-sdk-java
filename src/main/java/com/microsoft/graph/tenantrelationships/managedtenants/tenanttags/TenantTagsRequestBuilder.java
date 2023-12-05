@@ -59,7 +59,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the tenantTag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tenantTag objects and their properties.
      * @return a TenantTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the tenantTag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tenantTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new tenantTag object. This API is available in the following national cloud deployments.
+     * Create a new tenantTag object.
      * @param body The request body
      * @return a TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new tenantTag object. This API is available in the following national cloud deployments.
+     * Create a new tenantTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TenantTag
@@ -108,7 +108,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the tenantTag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tenantTag objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the tenantTag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tenantTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new tenantTag object. This API is available in the following national cloud deployments.
+     * Create a new tenantTag object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tenantTag object. This API is available in the following national cloud deployments.
+     * Create a new tenantTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
         return new TenantTagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the tenantTag objects and their properties. This API is available in the following national cloud deployments.
+     * Get a list of the tenantTag objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

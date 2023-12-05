@@ -35,14 +35,14 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/stop", rawUrl);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-stop?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-stop?view=graph-rest-1.0">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported. This API is available in the following national cloud deployments.
+     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
