@@ -61,11 +61,20 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("goals", (n) -> { this.setGoals(n.getObjectValue(Goals::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("learningProviders", (n) -> { this.setLearningProviders(n.getCollectionOfObjectValues(LearningProvider::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the goals property value. Represents a collection of goals in a Viva Goals organization.
+     * @return a Goals
+     */
+    @jakarta.annotation.Nullable
+    public Goals getGoals() {
+        return this.backingStore.get("goals");
     }
     /**
      * Gets the learningCourseActivities property value. The learningCourseActivities property
@@ -97,6 +106,7 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeCollectionOfObjectValues("learningProviders", this.getLearningProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,6 +126,13 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the goals property value. Represents a collection of goals in a Viva Goals organization.
+     * @param value Value to set for the goals property.
+     */
+    public void setGoals(@jakarta.annotation.Nullable final Goals value) {
+        this.backingStore.set("goals", value);
     }
     /**
      * Sets the learningCourseActivities property value. The learningCourseActivities property

@@ -1,28 +1,18 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import com.microsoft.kiota.store.BackedModel;
-import com.microsoft.kiota.store.BackingStore;
-import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
-    /**
-     * Stores model information.
-     */
-    @jakarta.annotation.Nonnull
-    protected BackingStore backingStore;
+public class PolicyRoot extends Entity implements Parsable {
     /**
      * Instantiates a new PolicyRoot and sets the default values.
      */
     public PolicyRoot() {
-        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,19 +39,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getActivityBasedTimeoutPolicies() {
         return this.backingStore.get("activityBasedTimeoutPolicies");
-    }
-    /**
-     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @jakarta.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        Map<String, Object> value = this.backingStore.get("additionalData");
-        if(value == null) {
-            value = new HashMap<>();
-            this.setAdditionalData(value);
-        }
-        return value;
     }
     /**
      * Gets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
@@ -118,14 +95,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy getB2cAuthenticationMethodsPolicy() {
         return this.backingStore.get("b2cAuthenticationMethodsPolicy");
-    }
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
-     */
-    @jakarta.annotation.Nonnull
-    public BackingStore getBackingStore() {
-        return this.backingStore;
     }
     /**
      * Gets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
@@ -205,7 +174,7 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessReviewPolicy", (n) -> { this.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("activityBasedTimeoutPolicies", (n) -> { this.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("adminConsentRequestPolicy", (n) -> { this.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
@@ -228,7 +197,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicyAssignments", (n) -> { this.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
@@ -268,14 +236,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileDeviceManagementPolicies() {
         return this.backingStore.get("mobileDeviceManagementPolicies");
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -331,6 +291,7 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeObjectValue("accessReviewPolicy", this.getAccessReviewPolicy());
         writer.writeCollectionOfObjectValues("activityBasedTimeoutPolicies", this.getActivityBasedTimeoutPolicies());
         writer.writeObjectValue("adminConsentRequestPolicy", this.getAdminConsentRequestPolicy());
@@ -353,14 +314,12 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
         writer.writeCollectionOfObjectValues("mobileAppManagementPolicies", this.getMobileAppManagementPolicies());
         writer.writeCollectionOfObjectValues("mobileDeviceManagementPolicies", this.getMobileDeviceManagementPolicies());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicyAssignments", this.getRoleManagementPolicyAssignments());
         writer.writeCollectionOfObjectValues("servicePrincipalCreationPolicies", this.getServicePrincipalCreationPolicies());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the accessReviewPolicy property value. The policy that contains directory-level access review settings.
@@ -375,13 +334,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setActivityBasedTimeoutPolicies(@jakarta.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
         this.backingStore.set("activityBasedTimeoutPolicies", value);
-    }
-    /**
-     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     */
-    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
@@ -431,14 +383,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setB2cAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final B2cAuthenticationMethodsPolicy value) {
         this.backingStore.set("b2cAuthenticationMethodsPolicy", value);
-    }
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param value Value to set for the backingStore property.
-     */
-    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
-        Objects.requireNonNull(value);
-        this.backingStore = value;
     }
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
@@ -530,13 +474,6 @@ public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setMobileDeviceManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
         this.backingStore.set("mobileDeviceManagementPolicies", value);
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
-     */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.

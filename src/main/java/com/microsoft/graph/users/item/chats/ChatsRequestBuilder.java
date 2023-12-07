@@ -6,6 +6,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.chats.allmessages.AllMessagesRequestBuilder;
 import com.microsoft.graph.users.item.chats.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.chats.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.users.item.chats.getallretainedmessages.GetAllRetainedMessagesRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -45,6 +46,13 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRetainedMessages method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRetainedMessagesRequestBuilder getAllRetainedMessages() {
+        return new GetAllRetainedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the chats property of the microsoft.graph.user entity.

@@ -62,11 +62,13 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("lastNonInteractiveSignInDateTime", (n) -> { this.setLastNonInteractiveSignInDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastNonInteractiveSignInRequestId", (n) -> { this.setLastNonInteractiveSignInRequestId(n.getStringValue()); });
         deserializerMap.put("lastSignInDateTime", (n) -> { this.setLastSignInDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSignInRequestId", (n) -> { this.setLastSignInRequestId(n.getStringValue()); });
+        deserializerMap.put("lastSuccessfulSignInDateTime", (n) -> { this.setLastSuccessfulSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSuccessfulSignInRequestId", (n) -> { this.setLastSuccessfulSignInRequestId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -103,6 +105,22 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("lastSignInRequestId");
     }
     /**
+     * Gets the lastSuccessfulSignInDateTime property value. The datetime of the user's most recent successful sign in activity.
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastSuccessfulSignInDateTime() {
+        return this.backingStore.get("lastSuccessfulSignInDateTime");
+    }
+    /**
+     * Gets the lastSuccessfulSignInRequestId property value. The requestID of the last successful signIn.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getLastSuccessfulSignInRequestId() {
+        return this.backingStore.get("lastSuccessfulSignInRequestId");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a String
      */
@@ -120,6 +138,8 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
         writer.writeStringValue("lastNonInteractiveSignInRequestId", this.getLastNonInteractiveSignInRequestId());
         writer.writeOffsetDateTimeValue("lastSignInDateTime", this.getLastSignInDateTime());
         writer.writeStringValue("lastSignInRequestId", this.getLastSignInRequestId());
+        writer.writeOffsetDateTimeValue("lastSuccessfulSignInDateTime", this.getLastSuccessfulSignInDateTime());
+        writer.writeStringValue("lastSuccessfulSignInRequestId", this.getLastSuccessfulSignInRequestId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -165,6 +185,20 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setLastSignInRequestId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastSignInRequestId", value);
+    }
+    /**
+     * Sets the lastSuccessfulSignInDateTime property value. The datetime of the user's most recent successful sign in activity.
+     * @param value Value to set for the lastSuccessfulSignInDateTime property.
+     */
+    public void setLastSuccessfulSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastSuccessfulSignInDateTime", value);
+    }
+    /**
+     * Sets the lastSuccessfulSignInRequestId property value. The requestID of the last successful signIn.
+     * @param value Value to set for the lastSuccessfulSignInRequestId property.
+     */
+    public void setLastSuccessfulSignInRequestId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("lastSuccessfulSignInRequestId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

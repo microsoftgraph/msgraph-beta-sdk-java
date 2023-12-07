@@ -38,12 +38,9 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
      * @return a AuthenticationConfigurationValidation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationConfigurationValidation post() {
         return post(null);
     }
@@ -51,12 +48,9 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationConfigurationValidation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationConfigurationValidation post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -67,11 +61,8 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
@@ -79,11 +70,8 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -94,11 +82,8 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ValidateAuthenticationConfigurationRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ValidateAuthenticationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ValidateAuthenticationConfigurationRequestBuilder(rawUrl, requestAdapter);

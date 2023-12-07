@@ -28,60 +28,42 @@ import java.util.Objects;
 public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationContextClassReferencesRequestBuilder authenticationContextClassReferences() {
         return new AuthenticationContextClassReferencesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder authenticationStrength() {
         return new AuthenticationStrengthRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authenticationStrengths property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthsRequestBuilder authenticationStrengths() {
         return new AuthenticationStrengthsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public NamedLocationsRequestBuilder namedLocations() {
         return new NamedLocationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
@@ -104,20 +86,14 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property conditionalAccess for identity
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete navigation property conditionalAccess for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -128,11 +104,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * the entry point for the Conditional Access (CA) object model.
      * @return a ConditionalAccessRoot
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ConditionalAccessRoot get() {
         return get(null);
     }
@@ -140,11 +113,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * the entry point for the Conditional Access (CA) object model.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConditionalAccessRoot
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ConditionalAccessRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -156,11 +126,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property conditionalAccess in identity
      * @param body The request body
      * @return a ConditionalAccessRoot
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ConditionalAccessRoot patch(@jakarta.annotation.Nonnull final ConditionalAccessRoot body) {
         return patch(body, null);
     }
@@ -169,11 +136,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConditionalAccessRoot
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ConditionalAccessRoot patch(@jakarta.annotation.Nonnull final ConditionalAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -185,11 +149,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property conditionalAccess for identity
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -197,11 +158,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property conditionalAccess for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -211,11 +169,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * the entry point for the Conditional Access (CA) object model.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -223,11 +178,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * the entry point for the Conditional Access (CA) object model.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -238,11 +190,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property conditionalAccess in identity
      * @param body The request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConditionalAccessRoot body) {
         return toPatchRequestInformation(body, null);
     }
@@ -251,11 +200,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConditionalAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -268,11 +214,8 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ConditionalAccessRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ConditionalAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ConditionalAccessRequestBuilder(rawUrl, requestAdapter);

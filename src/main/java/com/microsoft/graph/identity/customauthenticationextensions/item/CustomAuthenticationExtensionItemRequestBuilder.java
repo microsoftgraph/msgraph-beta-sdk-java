@@ -23,10 +23,7 @@ import java.util.Objects;
 public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validateAuthenticationConfiguration method.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateAuthenticationConfigurationRequestBuilder validateAuthenticationConfiguration() {
         return new ValidateAuthenticationConfigurationRequestBuilder(pathParameters, requestAdapter);
@@ -49,22 +46,16 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     }
     /**
      * Delete a customAuthenticationExtension object.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -75,12 +66,9 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a customAuthenticationExtension object.
      * @return a CustomAuthenticationExtension
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CustomAuthenticationExtension get() {
         return get(null);
     }
@@ -88,12 +76,9 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Read the properties and relationships of a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtension
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CustomAuthenticationExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,11 +90,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
      * @return a CustomAuthenticationExtension
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return patch(body, null);
     }
@@ -118,11 +100,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtension
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -134,11 +113,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Delete a customAuthenticationExtension object.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -146,11 +122,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Delete a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -160,11 +133,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a customAuthenticationExtension object.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -172,11 +142,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Read the properties and relationships of a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -187,11 +154,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return toPatchRequestInformation(body, null);
     }
@@ -200,11 +164,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -217,11 +178,8 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a CustomAuthenticationExtensionItemRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CustomAuthenticationExtensionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CustomAuthenticationExtensionItemRequestBuilder(rawUrl, requestAdapter);

@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.models.security.AuditCoreRoot;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.InformationProtection;
@@ -58,6 +59,14 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("attackSimulation");
     }
     /**
+     * Gets the auditLog property value. The auditLog property
+     * @return a AuditCoreRoot
+     */
+    @jakarta.annotation.Nullable
+    public AuditCoreRoot getAuditLog() {
+        return this.backingStore.get("auditLog");
+    }
+    /**
      * Gets the cases property value. The cases property
      * @return a CasesRoot
      */
@@ -91,6 +100,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("auditLog", (n) -> { this.setAuditLog(n.getObjectValue(AuditCoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
@@ -268,6 +278,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
+        writer.writeObjectValue("auditLog", this.getAuditLog());
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
@@ -310,6 +321,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setAttackSimulation(@jakarta.annotation.Nullable final AttackSimulationRoot value) {
         this.backingStore.set("attackSimulation", value);
+    }
+    /**
+     * Sets the auditLog property value. The auditLog property
+     * @param value Value to set for the auditLog property.
+     */
+    public void setAuditLog(@jakarta.annotation.Nullable final AuditCoreRoot value) {
+        this.backingStore.set("auditLog", value);
     }
     /**
      * Sets the cases property value. The cases property

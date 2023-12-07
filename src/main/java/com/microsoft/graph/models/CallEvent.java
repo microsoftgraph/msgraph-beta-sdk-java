@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -33,12 +34,12 @@ public class CallEvent extends Entity implements Parsable {
         return this.backingStore.get("callEventType");
     }
     /**
-     * Gets the direction property value. The direction property
-     * @return a CallDirection
+     * Gets the eventDateTime property value. The eventDateTime property
+     * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
-    public CallDirection getDirection() {
-        return this.backingStore.get("direction");
+    public OffsetDateTime getEventDateTime() {
+        return this.backingStore.get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -48,17 +49,17 @@ public class CallEvent extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEventType::forValue)); });
-        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(CallDirection::forValue)); });
-        deserializerMap.put("joinCallUrl", (n) -> { this.setJoinCallUrl(n.getStringValue()); });
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the joinCallUrl property value. The joinCallUrl property
-     * @return a String
+     * Gets the participants property value. The participants property
+     * @return a java.util.List<Participant>
      */
     @jakarta.annotation.Nullable
-    public String getJoinCallUrl() {
-        return this.backingStore.get("joinCallUrl");
+    public java.util.List<Participant> getParticipants() {
+        return this.backingStore.get("participants");
     }
     /**
      * Serializes information the current object
@@ -68,8 +69,8 @@ public class CallEvent extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("callEventType", this.getCallEventType());
-        writer.writeEnumValue("direction", this.getDirection());
-        writer.writeStringValue("joinCallUrl", this.getJoinCallUrl());
+        writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
+        writer.writeCollectionOfObjectValues("participants", this.getParticipants());
     }
     /**
      * Sets the callEventType property value. The callEventType property
@@ -79,17 +80,17 @@ public class CallEvent extends Entity implements Parsable {
         this.backingStore.set("callEventType", value);
     }
     /**
-     * Sets the direction property value. The direction property
-     * @param value Value to set for the direction property.
+     * Sets the eventDateTime property value. The eventDateTime property
+     * @param value Value to set for the eventDateTime property.
      */
-    public void setDirection(@jakarta.annotation.Nullable final CallDirection value) {
-        this.backingStore.set("direction", value);
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the joinCallUrl property value. The joinCallUrl property
-     * @param value Value to set for the joinCallUrl property.
+     * Sets the participants property value. The participants property
+     * @param value Value to set for the participants property.
      */
-    public void setJoinCallUrl(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("joinCallUrl", value);
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
+        this.backingStore.set("participants", value);
     }
 }

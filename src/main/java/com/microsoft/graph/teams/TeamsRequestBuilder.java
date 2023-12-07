@@ -6,6 +6,7 @@ import com.microsoft.graph.models.TeamCollectionResponse;
 import com.microsoft.graph.teams.allmessages.AllMessagesRequestBuilder;
 import com.microsoft.graph.teams.count.CountRequestBuilder;
 import com.microsoft.graph.teams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.teams.getopenshifts.GetOpenShiftsRequestBuilder;
 import com.microsoft.graph.teams.item.TeamItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -45,6 +46,13 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getOpenShifts method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetOpenShiftsRequestBuilder getOpenShifts() {
+        return new GetOpenShiftsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of team entities.

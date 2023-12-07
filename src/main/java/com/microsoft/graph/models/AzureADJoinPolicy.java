@@ -48,28 +48,12 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         return value;
     }
     /**
-     * Gets the allowedGroups property value. The identifiers of the groups that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @return a java.util.List<String>
+     * Gets the allowedToJoin property value. The allowedToJoin property
+     * @return a DeviceRegistrationMembership
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getAllowedGroups() {
-        return this.backingStore.get("allowedGroups");
-    }
-    /**
-     * Gets the allowedUsers property value. The identifiers of users that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @return a java.util.List<String>
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<String> getAllowedUsers() {
-        return this.backingStore.get("allowedUsers");
-    }
-    /**
-     * Gets the appliesTo property value. Specifies whether to block or allow fine-grained control of the policy scope. The possible values are: 0 (meaning none), 1 (meaning all), 2 (meaning selected), 3 (meaning unknownFutureValue). The default value is 1. When set to 2, at least one user or group identifier must be specified in either allowedUsers or allowedGroups.  Setting this property to 0 or 1 removes all identifiers in both allowedUsers and allowedGroups.
-     * @return a PolicyScope
-     */
-    @jakarta.annotation.Nullable
-    public PolicyScope getAppliesTo() {
-        return this.backingStore.get("appliesTo");
+    public DeviceRegistrationMembership getAllowedToJoin() {
+        return this.backingStore.get("allowedToJoin");
     }
     /**
      * Gets the backingStore property value. Stores model information.
@@ -85,10 +69,8 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("allowedGroups", (n) -> { this.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("allowedUsers", (n) -> { this.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(PolicyScope::forValue)); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("allowedToJoin", (n) -> { this.setAllowedToJoin(n.getObjectValue(DeviceRegistrationMembership::createFromDiscriminatorValue)); });
         deserializerMap.put("isAdminConfigurable", (n) -> { this.setIsAdminConfigurable(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -115,9 +97,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedGroups", this.getAllowedGroups());
-        writer.writeCollectionOfPrimitiveValues("allowedUsers", this.getAllowedUsers());
-        writer.writeEnumValue("appliesTo", this.getAppliesTo());
+        writer.writeObjectValue("allowedToJoin", this.getAllowedToJoin());
         writer.writeBooleanValue("isAdminConfigurable", this.getIsAdminConfigurable());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -130,25 +110,11 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedGroups property value. The identifiers of the groups that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @param value Value to set for the allowedGroups property.
+     * Sets the allowedToJoin property value. The allowedToJoin property
+     * @param value Value to set for the allowedToJoin property.
      */
-    public void setAllowedGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("allowedGroups", value);
-    }
-    /**
-     * Sets the allowedUsers property value. The identifiers of users that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @param value Value to set for the allowedUsers property.
-     */
-    public void setAllowedUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("allowedUsers", value);
-    }
-    /**
-     * Sets the appliesTo property value. Specifies whether to block or allow fine-grained control of the policy scope. The possible values are: 0 (meaning none), 1 (meaning all), 2 (meaning selected), 3 (meaning unknownFutureValue). The default value is 1. When set to 2, at least one user or group identifier must be specified in either allowedUsers or allowedGroups.  Setting this property to 0 or 1 removes all identifiers in both allowedUsers and allowedGroups.
-     * @param value Value to set for the appliesTo property.
-     */
-    public void setAppliesTo(@jakarta.annotation.Nullable final PolicyScope value) {
-        this.backingStore.set("appliesTo", value);
+    public void setAllowedToJoin(@jakarta.annotation.Nullable final DeviceRegistrationMembership value) {
+        this.backingStore.set("allowedToJoin", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

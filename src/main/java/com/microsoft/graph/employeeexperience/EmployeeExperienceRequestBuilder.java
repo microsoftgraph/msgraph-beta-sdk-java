@@ -1,5 +1,6 @@
 package com.microsoft.graph.employeeexperience;
 
+import com.microsoft.graph.employeeexperience.goals.GoalsRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
@@ -22,6 +23,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the goals property of the microsoft.graph.employeeExperience entity.
+     */
+    @jakarta.annotation.Nonnull
+    public GoalsRequestBuilder goals() {
+        return new GoalsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
      */

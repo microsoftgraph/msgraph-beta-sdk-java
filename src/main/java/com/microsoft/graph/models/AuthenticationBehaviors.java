@@ -56,12 +56,21 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
+     * Gets the blockAzureADGraphAccess property value. The blockAzureADGraphAccess property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getBlockAzureADGraphAccess() {
+        return this.backingStore.get("blockAzureADGraphAccess");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("blockAzureADGraphAccess", (n) -> { this.setBlockAzureADGraphAccess(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("removeUnverifiedEmailClaim", (n) -> { this.setRemoveUnverifiedEmailClaim(n.getBooleanValue()); });
         deserializerMap.put("requireClientServicePrincipal", (n) -> { this.setRequireClientServicePrincipal(n.getBooleanValue()); });
@@ -97,6 +106,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("blockAzureADGraphAccess", this.getBlockAzureADGraphAccess());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("removeUnverifiedEmailClaim", this.getRemoveUnverifiedEmailClaim());
         writer.writeBooleanValue("requireClientServicePrincipal", this.getRequireClientServicePrincipal());
@@ -116,6 +126,13 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the blockAzureADGraphAccess property value. The blockAzureADGraphAccess property
+     * @param value Value to set for the blockAzureADGraphAccess property.
+     */
+    public void setBlockAzureADGraphAccess(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("blockAzureADGraphAccess", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

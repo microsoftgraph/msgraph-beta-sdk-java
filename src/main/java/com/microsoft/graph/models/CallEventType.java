@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CallEventType implements ValuedEnum {
     CallStarted("callStarted"),
     CallEnded("callEnded"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RosterUpdated("rosterUpdated");
     public final String value;
     CallEventType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CallEventType implements ValuedEnum {
             case "callStarted": return CallStarted;
             case "callEnded": return CallEnded;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "rosterUpdated": return RosterUpdated;
             default: return null;
         }
     }
