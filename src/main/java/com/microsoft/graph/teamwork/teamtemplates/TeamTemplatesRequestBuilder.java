@@ -59,19 +59,19 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @return a TeamTemplateCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamTemplateCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplate::createFromDiscriminatorValue);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return new TeamTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

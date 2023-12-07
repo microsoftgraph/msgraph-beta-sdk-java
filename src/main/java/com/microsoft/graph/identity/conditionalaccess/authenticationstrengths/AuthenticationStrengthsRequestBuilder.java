@@ -25,7 +25,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authenticationMethodModes property of the microsoft.graph.authenticationStrengthRoot entity.
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -35,7 +35,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policies property of the microsoft.graph.authenticationStrengthRoot entity.
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property authenticationStrengths for identity
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @Deprecated
     public void delete() {
@@ -71,7 +71,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property authenticationStrengths for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -85,7 +85,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * Get authenticationStrengths from identity
      * @return a AuthenticationStrengthRoot
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -97,7 +97,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationStrengthRoot
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,7 +113,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a AuthenticationStrengthRoot
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -126,7 +126,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationStrengthRoot
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -142,7 +142,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property authenticationStrengths for identity
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -154,7 +154,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -168,7 +168,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * Get authenticationStrengths from identity
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -180,7 +180,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -195,7 +195,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -208,7 +208,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -225,7 +225,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a AuthenticationStrengthsRequestBuilder
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

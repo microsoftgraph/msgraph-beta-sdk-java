@@ -25,6 +25,14 @@ public class Schedule extends Entity implements Parsable {
         return new Schedule();
     }
     /**
+     * Gets the activitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts should include the activities.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getActivitiesIncludedWhenCopyingShiftsEnabled() {
+        return this.backingStore.get("activitiesIncludedWhenCopyingShiftsEnabled");
+    }
+    /**
      * Gets the dayNotes property value. The dayNotes property
      * @return a java.util.List<DayNote>
      */
@@ -47,6 +55,7 @@ public class Schedule extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activitiesIncludedWhenCopyingShiftsEnabled", (n) -> { this.setActivitiesIncludedWhenCopyingShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("dayNotes", (n) -> { this.setDayNotes(n.getCollectionOfObjectValues(DayNote::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
         deserializerMap.put("offerShiftRequests", (n) -> { this.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
@@ -58,6 +67,7 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("provisionStatusCode", (n) -> { this.setProvisionStatusCode(n.getStringValue()); });
         deserializerMap.put("schedulingGroups", (n) -> { this.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("shifts", (n) -> { this.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDayOfWeek", (n) -> { this.setStartDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
         deserializerMap.put("swapShiftsChangeRequests", (n) -> { this.setSwapShiftsChangeRequests(n.getCollectionOfObjectValues(SwapShiftsChangeRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("swapShiftsRequestsEnabled", (n) -> { this.setSwapShiftsRequestsEnabled(n.getBooleanValue()); });
         deserializerMap.put("timeCards", (n) -> { this.setTimeCards(n.getCollectionOfObjectValues(TimeCard::createFromDiscriminatorValue)); });
@@ -142,6 +152,14 @@ public class Schedule extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Shift> getShifts() {
         return this.backingStore.get("shifts");
+    }
+    /**
+     * Gets the startDayOfWeek property value. Indicates the start day of the week.
+     * @return a DayOfWeek
+     */
+    @jakarta.annotation.Nullable
+    public DayOfWeek getStartDayOfWeek() {
+        return this.backingStore.get("startDayOfWeek");
     }
     /**
      * Gets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
@@ -238,6 +256,7 @@ public class Schedule extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("activitiesIncludedWhenCopyingShiftsEnabled", this.getActivitiesIncludedWhenCopyingShiftsEnabled());
         writer.writeCollectionOfObjectValues("dayNotes", this.getDayNotes());
         writer.writeBooleanValue("enabled", this.getEnabled());
         writer.writeCollectionOfObjectValues("offerShiftRequests", this.getOfferShiftRequests());
@@ -247,6 +266,7 @@ public class Schedule extends Entity implements Parsable {
         writer.writeBooleanValue("openShiftsEnabled", this.getOpenShiftsEnabled());
         writer.writeCollectionOfObjectValues("schedulingGroups", this.getSchedulingGroups());
         writer.writeCollectionOfObjectValues("shifts", this.getShifts());
+        writer.writeEnumValue("startDayOfWeek", this.getStartDayOfWeek());
         writer.writeCollectionOfObjectValues("swapShiftsChangeRequests", this.getSwapShiftsChangeRequests());
         writer.writeBooleanValue("swapShiftsRequestsEnabled", this.getSwapShiftsRequestsEnabled());
         writer.writeCollectionOfObjectValues("timeCards", this.getTimeCards());
@@ -258,6 +278,13 @@ public class Schedule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("timesOff", this.getTimesOff());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeCollectionOfPrimitiveValues("workforceIntegrationIds", this.getWorkforceIntegrationIds());
+    }
+    /**
+     * Sets the activitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts should include the activities.
+     * @param value Value to set for the activitiesIncludedWhenCopyingShiftsEnabled property.
+     */
+    public void setActivitiesIncludedWhenCopyingShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("activitiesIncludedWhenCopyingShiftsEnabled", value);
     }
     /**
      * Sets the dayNotes property value. The dayNotes property
@@ -335,6 +362,13 @@ public class Schedule extends Entity implements Parsable {
      */
     public void setShifts(@jakarta.annotation.Nullable final java.util.List<Shift> value) {
         this.backingStore.set("shifts", value);
+    }
+    /**
+     * Sets the startDayOfWeek property value. Indicates the start day of the week.
+     * @param value Value to set for the startDayOfWeek property.
+     */
+    public void setStartDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
+        this.backingStore.set("startDayOfWeek", value);
     }
     /**
      * Sets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.

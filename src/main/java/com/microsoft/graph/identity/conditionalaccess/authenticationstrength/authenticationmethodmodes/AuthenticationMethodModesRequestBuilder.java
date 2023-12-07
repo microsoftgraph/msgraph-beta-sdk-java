@@ -25,10 +25,7 @@ import java.util.Objects;
 public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Provides operations to manage the authenticationMethodModes property of the microsoft.graph.authenticationStrengthRoot entity.
      * @param authenticationMethodModeDetailId The unique identifier of authenticationMethodModeDetail
      * @return a AuthenticationMethodModeDetailItemRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AuthenticationMethodModeDetailItemRequestBuilder byAuthenticationMethodModeDetailId(@jakarta.annotation.Nonnull final String authenticationMethodModeDetailId) {
         Objects.requireNonNull(authenticationMethodModeDetailId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -67,12 +61,9 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
     /**
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
      * @return a AuthenticationMethodModeDetailCollectionResponse
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationMethodModeDetailCollectionResponse get() {
         return get(null);
     }
@@ -80,12 +71,9 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationMethodModeDetailCollectionResponse
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationMethodModeDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,11 +85,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to authenticationMethodModes for identity
      * @param body The request body
      * @return a AuthenticationMethodModeDetail
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationMethodModeDetail post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body) {
         return post(body, null);
     }
@@ -110,11 +95,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationMethodModeDetail
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationMethodModeDetail post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -126,11 +108,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
     /**
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -138,11 +117,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -153,11 +129,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to authenticationMethodModes for identity
      * @param body The request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body) {
         return toPostRequestInformation(body, null);
     }
@@ -166,11 +139,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -183,11 +153,8 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a AuthenticationMethodModesRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AuthenticationMethodModesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AuthenticationMethodModesRequestBuilder(rawUrl, requestAdapter);

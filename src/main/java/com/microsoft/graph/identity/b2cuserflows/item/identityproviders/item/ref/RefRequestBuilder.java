@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -49,7 +49,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -64,7 +64,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -76,7 +76,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a RefRequestBuilder
      * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

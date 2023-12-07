@@ -22,10 +22,7 @@ import java.util.Objects;
 public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attributes property of the microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AttributesRequestBuilder attributes() {
         return new AttributesRequestBuilder(pathParameters, requestAdapter);
@@ -49,11 +46,8 @@ public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuil
     /**
      * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
      * @return a InputStream
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InputStream get() {
         return get(null);
     }
@@ -61,11 +55,8 @@ public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuil
      * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -76,11 +67,8 @@ public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuil
     /**
      * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -88,11 +76,8 @@ public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuil
      * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -103,11 +88,8 @@ public class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuil
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder(rawUrl, requestAdapter);

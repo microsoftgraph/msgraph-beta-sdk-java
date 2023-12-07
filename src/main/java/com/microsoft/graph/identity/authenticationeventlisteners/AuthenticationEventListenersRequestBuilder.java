@@ -25,10 +25,7 @@ import java.util.Objects;
 public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity.
      * @param authenticationEventListenerId The unique identifier of authenticationEventListener
      * @return a AuthenticationEventListenerItemRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AuthenticationEventListenerItemRequestBuilder byAuthenticationEventListenerId(@jakarta.annotation.Nonnull final String authenticationEventListenerId) {
         Objects.requireNonNull(authenticationEventListenerId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -67,12 +61,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @return a AuthenticationEventListenerCollectionResponse
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationEventListenerCollectionResponse get() {
         return get(null);
     }
@@ -80,12 +71,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationEventListenerCollectionResponse
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationEventListenerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,12 +85,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @return a AuthenticationEventListener
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationEventListener post(@jakarta.annotation.Nonnull final AuthenticationEventListener body) {
         return post(body, null);
     }
@@ -111,12 +96,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationEventListener
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AuthenticationEventListener post(@jakarta.annotation.Nonnull final AuthenticationEventListener body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -128,11 +110,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -140,11 +119,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -155,11 +131,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationEventListener body) {
         return toPostRequestInformation(body, null);
     }
@@ -168,11 +141,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthenticationEventListener body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -185,11 +155,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a AuthenticationEventListenersRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AuthenticationEventListenersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AuthenticationEventListenersRequestBuilder(rawUrl, requestAdapter);

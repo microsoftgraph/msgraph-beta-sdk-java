@@ -25,30 +25,21 @@ import java.util.Objects;
 public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the postAttributeCollection property of the microsoft.graph.userFlowApiConnectorConfiguration entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PostAttributeCollectionRequestBuilder postAttributeCollection() {
         return new PostAttributeCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the postFederationSignup property of the microsoft.graph.userFlowApiConnectorConfiguration entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PostFederationSignupRequestBuilder postFederationSignup() {
         return new PostFederationSignupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the preTokenIssuance property of the microsoft.graph.userFlowApiConnectorConfiguration entity.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PreTokenIssuanceRequestBuilder preTokenIssuance() {
         return new PreTokenIssuanceRequestBuilder(pathParameters, requestAdapter);
@@ -72,11 +63,8 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a UserFlowApiConnectorConfiguration
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserFlowApiConnectorConfiguration get() {
         return get(null);
     }
@@ -84,11 +72,8 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UserFlowApiConnectorConfiguration
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserFlowApiConnectorConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -99,11 +84,8 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -111,11 +93,8 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -126,11 +105,8 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ApiConnectorConfigurationRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ApiConnectorConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ApiConnectorConfigurationRequestBuilder(rawUrl, requestAdapter);

@@ -38,22 +38,16 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,12 +58,9 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @return a IdentityProviderBase
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public IdentityProviderBase get() {
         return get(null);
     }
@@ -77,12 +68,9 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityProviderBase
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public IdentityProviderBase get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -94,12 +82,9 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently update a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently update a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
      * @return a IdentityProviderBase
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public IdentityProviderBase patch(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
         return patch(body, null);
     }
@@ -108,12 +93,9 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a IdentityProviderBase
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public IdentityProviderBase patch(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -125,11 +107,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -137,11 +116,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -151,11 +127,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -163,11 +136,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -178,11 +148,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently update a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently update a socialIdentityProvider, openIdConnectIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param body The request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
         return toPatchRequestInformation(body, null);
     }
@@ -191,11 +158,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -208,11 +172,8 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a IdentityProviderBaseItemRequestBuilder
-     * @deprecated
-     *  as of 2023-08/PrivatePreview:changeManagement on 2023-08-23 and will be removed 2023-08-23
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public IdentityProviderBaseItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new IdentityProviderBaseItemRequestBuilder(rawUrl, requestAdapter);
