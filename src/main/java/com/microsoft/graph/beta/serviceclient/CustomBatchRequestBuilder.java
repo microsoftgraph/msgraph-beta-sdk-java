@@ -1,11 +1,11 @@
 package com.microsoft.graph.beta.serviceclient;
 
-import com.microsoft.graph.content.BatchRequestContent;
-import com.microsoft.graph.content.BatchRequestContentCollection;
-import com.microsoft.graph.content.BatchResponseContent;
-import com.microsoft.graph.content.BatchResponseContentCollection;
+import com.microsoft.graph.core.content.BatchRequestContent;
+import com.microsoft.graph.core.content.BatchRequestContentCollection;
+import com.microsoft.graph.core.content.BatchResponseContent;
+import com.microsoft.graph.core.content.BatchResponseContentCollection;
+import com.microsoft.graph.core.requests.BatchRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.requests.BatchRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;

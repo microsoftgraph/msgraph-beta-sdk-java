@@ -1,11 +1,10 @@
 package com.microsoft.graph.beta.serviceclient;
 
-import com.azure.core.credential.TokenCredential;
-import com.microsoft.graph.CoreConstants;
-import com.microsoft.graph.requests.BaseGraphRequestAdapter;
-import com.microsoft.graph.requests.BatchRequestBuilder;
-import com.microsoft.graph.requests.options.GraphClientOption;
-import com.microsoft.graph.requests.IBaseClient;
+import com.microsoft.graph.core.CoreConstants;
+import com.microsoft.graph.core.requests.BaseGraphRequestAdapter;
+import com.microsoft.graph.core.requests.BatchRequestBuilder;
+import com.microsoft.graph.core.requests.options.GraphClientOption;
+import com.microsoft.graph.core.requests.IBaseClient;
 import com.microsoft.graph.beta.users.UsersRequestBuilder;
 import com.microsoft.graph.beta.users.item.UserItemRequestBuilder;
 import com.microsoft.graph.beta.info.Constants;
@@ -13,9 +12,11 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-
 import com.microsoft.kiota.store.BackingStoreFactory;
 import com.microsoft.kiota.store.InMemoryBackingStoreFactory;
+
+import com.azure.core.credential.TokenCredential;
+
 import okhttp3.OkHttpClient;
 
 import jakarta.annotation.Nonnull;
