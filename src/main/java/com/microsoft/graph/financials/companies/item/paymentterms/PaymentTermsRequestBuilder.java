@@ -1,0 +1,232 @@
+package com.microsoft.graph.financials.companies.item.paymentterms;
+
+import com.microsoft.graph.financials.companies.item.paymentterms.count.CountRequestBuilder;
+import com.microsoft.graph.financials.companies.item.paymentterms.item.PaymentTermItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PaymentTerm;
+import com.microsoft.graph.models.PaymentTermCollectionResponse;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
+import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParsableFactory;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
+/**
+ * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
+ */
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to count the resources in the collection.
+     */
+    @jakarta.annotation.Nonnull
+    public CountRequestBuilder count() {
+        return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
+     * @param paymentTermId The unique identifier of paymentTerm
+     * @return a PaymentTermItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PaymentTermItemRequestBuilder byPaymentTermId(@jakarta.annotation.Nonnull final UUID paymentTermId) {
+        Objects.requireNonNull(paymentTermId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("paymentTerm%2Did", paymentTermId);
+        return new PaymentTermItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Instantiates a new PaymentTermsRequestBuilder and sets the default values.
+     * @param pathParameters Path parameters for the request
+     * @param requestAdapter The request adapter to use to execute the requests.
+     */
+    public PaymentTermsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/paymentTerms{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+    }
+    /**
+     * Instantiates a new PaymentTermsRequestBuilder and sets the default values.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @param requestAdapter The request adapter to use to execute the requests.
+     */
+    public PaymentTermsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/paymentTerms{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+    }
+    /**
+     * Get paymentTerms from financials
+     * @return a PaymentTermCollectionResponse
+     */
+    @jakarta.annotation.Nullable
+    public PaymentTermCollectionResponse get() {
+        return get(null);
+    }
+    /**
+     * Get paymentTerms from financials
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a PaymentTermCollectionResponse
+     */
+    @jakarta.annotation.Nullable
+    public PaymentTermCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, PaymentTermCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Create new navigation property to paymentTerms for financials
+     * @param body The request body
+     * @return a PaymentTerm
+     */
+    @jakarta.annotation.Nullable
+    public PaymentTerm post(@jakarta.annotation.Nonnull final PaymentTerm body) {
+        return post(body, null);
+    }
+    /**
+     * Create new navigation property to paymentTerms for financials
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a PaymentTerm
+     */
+    @jakarta.annotation.Nullable
+    public PaymentTerm post(@jakarta.annotation.Nonnull final PaymentTerm body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, PaymentTerm::createFromDiscriminatorValue);
+    }
+    /**
+     * Get paymentTerms from financials
+     * @return a RequestInformation
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get paymentTerms from financials
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /**
+     * Create new navigation property to paymentTerms for financials
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PaymentTerm body) {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create new navigation property to paymentTerms for financials
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PaymentTerm body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PaymentTermsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PaymentTermsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PaymentTermsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Get paymentTerms from financials
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class GetQueryParameters {
+        /**
+         * Include count of items
+         */
+        @QueryParameter(name = "%24count")
+        @jakarta.annotation.Nullable
+        public Boolean count;
+        /**
+         * Expand related entities
+         */
+        @QueryParameter(name = "%24expand")
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
+         * Filter items by property values
+         */
+        @QueryParameter(name = "%24filter")
+        @jakarta.annotation.Nullable
+        public String filter;
+        /**
+         * Order items by property values
+         */
+        @QueryParameter(name = "%24orderby")
+        @jakarta.annotation.Nullable
+        public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @QueryParameter(name = "%24search")
+        @jakarta.annotation.Nullable
+        public String search;
+        /**
+         * Select properties to be returned
+         */
+        @QueryParameter(name = "%24select")
+        @jakarta.annotation.Nullable
+        public String[] select;
+        /**
+         * Skip the first n items
+         */
+        @QueryParameter(name = "%24skip")
+        @jakarta.annotation.Nullable
+        public Integer skip;
+        /**
+         * Show only the first n items
+         */
+        @QueryParameter(name = "%24top")
+        @jakarta.annotation.Nullable
+        public Integer top;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
+        /**
+         * Request query parameters
+         */
+        @jakarta.annotation.Nullable
+        public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
+    }
+}
