@@ -59,7 +59,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/subjectRightsRequests/{subjectRightsRequest%2Did}/notes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of authored notes associated with a subject rights request.
+     * Get the list of authored notes associated with a subject rights request. 
      * @return a AuthoredNoteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of authored notes associated with a subject rights request.
+     * Get the list of authored notes associated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthoredNoteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNote::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of authored notes associated with a subject rights request.
+     * Get the list of authored notes associated with a subject rights request. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of authored notes associated with a subject rights request.
+     * Get the list of authored notes associated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return new NotesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of authored notes associated with a subject rights request.
+     * Get the list of authored notes associated with a subject rights request. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

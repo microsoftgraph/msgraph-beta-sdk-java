@@ -38,8 +38,8 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
-     * @param appManagementPolicyId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.applications.item.appManagementPolicies.item collection
+     * @param appManagementPolicyId The unique identifier of appManagementPolicy
      * @return a AppManagementPolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

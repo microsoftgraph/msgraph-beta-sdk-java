@@ -66,18 +66,18 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren't satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
-     * @return a java.util.List<ConditionalAccessConditions>
+     * @return a EnumSet<ConditionalAccessConditions>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ConditionalAccessConditions> getConditionsNotSatisfied() {
+    public EnumSet<ConditionalAccessConditions> getConditionsNotSatisfied() {
         return this.backingStore.get("conditionsNotSatisfied");
     }
     /**
      * Gets the conditionsSatisfied property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
-     * @return a java.util.List<ConditionalAccessConditions>
+     * @return a EnumSet<ConditionalAccessConditions>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ConditionalAccessConditions> getConditionsSatisfied() {
+    public EnumSet<ConditionalAccessConditions> getConditionsSatisfied() {
         return this.backingStore.get("conditionsSatisfied");
     }
     /**
@@ -120,8 +120,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrength::createFromDiscriminatorValue)); });
-        deserializerMap.put("conditionsNotSatisfied", (n) -> { this.setConditionsNotSatisfied(n.getCollectionOfEnumValues(ConditionalAccessConditions::forValue)); });
-        deserializerMap.put("conditionsSatisfied", (n) -> { this.setConditionsSatisfied(n.getCollectionOfEnumValues(ConditionalAccessConditions::forValue)); });
+        deserializerMap.put("conditionsNotSatisfied", (n) -> { this.setConditionsNotSatisfied(n.getEnumSetValue(ConditionalAccessConditions::forValue)); });
+        deserializerMap.put("conditionsSatisfied", (n) -> { this.setConditionsSatisfied(n.getEnumSetValue(ConditionalAccessConditions::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enforcedGrantControls", (n) -> { this.setEnforcedGrantControls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("enforcedSessionControls", (n) -> { this.setEnforcedSessionControls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -180,8 +180,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
-        writer.writeCollectionOfEnumValues("conditionsNotSatisfied", this.getConditionsNotSatisfied());
-        writer.writeCollectionOfEnumValues("conditionsSatisfied", this.getConditionsSatisfied());
+        writer.writeEnumSetValue("conditionsNotSatisfied", this.getConditionsNotSatisfied());
+        writer.writeEnumSetValue("conditionsSatisfied", this.getConditionsSatisfied());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("enforcedGrantControls", this.getEnforcedGrantControls());
         writer.writeCollectionOfPrimitiveValues("enforcedSessionControls", this.getEnforcedSessionControls());
@@ -219,14 +219,14 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
      * Sets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren't satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
      * @param value Value to set for the conditionsNotSatisfied property.
      */
-    public void setConditionsNotSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
+    public void setConditionsNotSatisfied(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessConditions> value) {
         this.backingStore.set("conditionsNotSatisfied", value);
     }
     /**
      * Sets the conditionsSatisfied property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
      * @param value Value to set for the conditionsSatisfied property.
      */
-    public void setConditionsSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
+    public void setConditionsSatisfied(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessConditions> value) {
         this.backingStore.set("conditionsSatisfied", value);
     }
     /**

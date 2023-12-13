@@ -103,7 +103,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
+     * Gets the partnerAgentName property value. The name of the first-party or third-party partner agent. Possible values for third-party partners are Citrix, VMware and HP. Read-Only.
      * @return a CloudPcPartnerAgentName
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
+     * Sets the partnerAgentName property value. The name of the first-party or third-party partner agent. Possible values for third-party partners are Citrix, VMware and HP. Read-Only.
      * @param value Value to set for the partnerAgentName property.
      */
     public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentName value) {

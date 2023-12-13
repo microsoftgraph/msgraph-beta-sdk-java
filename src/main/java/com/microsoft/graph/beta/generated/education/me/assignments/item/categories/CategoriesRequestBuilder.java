@@ -47,8 +47,8 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.me.assignments.item.categories.item collection
-     * @param educationCategoryId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.education.me.assignments.item.categories.item collection
+     * @param educationCategoryId The unique identifier of educationCategory
      * @return a EducationCategoryItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

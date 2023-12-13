@@ -61,14 +61,14 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -129,7 +129,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status.
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

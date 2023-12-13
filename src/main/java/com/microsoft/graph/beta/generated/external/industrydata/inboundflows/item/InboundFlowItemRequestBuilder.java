@@ -95,21 +95,21 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow patch(@jakarta.annotation.Nonnull final InboundFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow patch(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

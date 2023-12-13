@@ -37,7 +37,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordMethods/{passwordAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a password authentication method object.
+     * Retrieve the properties and relationships of a password authentication method object. 
      * @return a PasswordAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/passwordauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -46,7 +46,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a password authentication method object.
+     * Retrieve the properties and relationships of a password authentication method object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PasswordAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/passwordauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -60,7 +60,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a password authentication method object.
+     * Retrieve the properties and relationships of a password authentication method object. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a password authentication method object.
+     * Retrieve the properties and relationships of a password authentication method object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return new PasswordAuthenticationMethodItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a password authentication method object.
+     * Retrieve the properties and relationships of a password authentication method object. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

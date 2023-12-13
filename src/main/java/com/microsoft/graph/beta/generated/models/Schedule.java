@@ -33,7 +33,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("activitiesIncludedWhenCopyingShiftsEnabled");
     }
     /**
-     * Gets the dayNotes property value. The dayNotes property
+     * Gets the dayNotes property value. The day notes in the schedule.
      * @return a java.util.List<DayNote>
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("swapShiftsRequestsEnabled");
     }
     /**
-     * Gets the timeCards property value. The timeCards property
+     * Gets the timeCards property value. The time cards in the schedule.
      * @return a java.util.List<TimeCard>
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("activitiesIncludedWhenCopyingShiftsEnabled", value);
     }
     /**
-     * Sets the dayNotes property value. The dayNotes property
+     * Sets the dayNotes property value. The day notes in the schedule.
      * @param value Value to set for the dayNotes property.
      */
     public void setDayNotes(@jakarta.annotation.Nullable final java.util.List<DayNote> value) {
@@ -385,7 +385,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("swapShiftsRequestsEnabled", value);
     }
     /**
-     * Sets the timeCards property value. The timeCards property
+     * Sets the timeCards property value. The time cards in the schedule.
      * @param value Value to set for the timeCards property.
      */
     public void setTimeCards(@jakarta.annotation.Nullable final java.util.List<TimeCard> value) {

@@ -59,7 +59,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get all the threads in a group conversation.Note: You can also get all the threads of a group.
+     * Get all the threads in a group conversation.Note: You can also get all the threads of a group. 
      * @return a ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the threads in a group conversation.Note: You can also get all the threads of a group.
+     * Get all the threads in a group conversation.Note: You can also get all the threads of a group. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationThread::createFromDiscriminatorValue);
     }
     /**
-     * Get all the threads in a group conversation.Note: You can also get all the threads of a group.
+     * Get all the threads in a group conversation.Note: You can also get all the threads of a group. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the threads in a group conversation.Note: You can also get all the threads of a group.
+     * Get all the threads in a group conversation.Note: You can also get all the threads of a group. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
         return new ThreadsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the threads in a group conversation.Note: You can also get all the threads of a group.
+     * Get all the threads in a group conversation.Note: You can also get all the threads of a group. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

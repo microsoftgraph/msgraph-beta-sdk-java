@@ -38,8 +38,8 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.authenticationEventsFlows.item.graphExternalUsersSelfServiceSignUpEventsFlow.onAuthenticationMethodLoadStart.graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.identityProviders.item collection
-     * @param identityProviderBaseId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.identity.authenticationEventsFlows.item.graphExternalUsersSelfServiceSignUpEventsFlow.onAuthenticationMethodLoadStart.graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.identityProviders.item collection
+     * @param identityProviderBaseId The unique identifier of identityProviderBase
      * @return a IdentityProviderBaseItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

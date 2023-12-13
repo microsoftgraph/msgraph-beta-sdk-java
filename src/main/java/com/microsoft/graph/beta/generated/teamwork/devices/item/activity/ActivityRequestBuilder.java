@@ -54,7 +54,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the activity status of a Microsoft Teams-enabled device.
+     * Get the activity status of a Microsoft Teams-enabled device. 
      * @return a TeamworkDeviceActivity
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the activity status of a Microsoft Teams-enabled device.
+     * Get the activity status of a Microsoft Teams-enabled device. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkDeviceActivity
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceactivity-get?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the activity status of a Microsoft Teams-enabled device.
+     * Get the activity status of a Microsoft Teams-enabled device. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the activity status of a Microsoft Teams-enabled device.
+     * Get the activity status of a Microsoft Teams-enabled device. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the activity status of a Microsoft Teams-enabled device.
+     * Get the activity status of a Microsoft Teams-enabled device. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

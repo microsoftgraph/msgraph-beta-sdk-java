@@ -38,8 +38,8 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.authenticationEventsFlows.item.graphExternalUsersSelfServiceSignUpEventsFlow.onAttributeCollection.graphOnAttributeCollectionExternalUsersSelfServiceSignUp.attributes.item collection
-     * @param identityUserFlowAttributeId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.identity.authenticationEventsFlows.item.graphExternalUsersSelfServiceSignUpEventsFlow.onAttributeCollection.graphOnAttributeCollectionExternalUsersSelfServiceSignUp.attributes.item collection
+     * @param identityUserFlowAttributeId The unique identifier of identityUserFlowAttribute
      * @return a IdentityUserFlowAttributeItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

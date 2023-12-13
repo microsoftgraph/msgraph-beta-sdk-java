@@ -56,7 +56,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. 
      * @return a TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -65,7 +65,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
@@ -123,7 +123,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +183,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a member of a standard tag in a team.
+     * Get the properties and relationships of a member of a standard tag in a team. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

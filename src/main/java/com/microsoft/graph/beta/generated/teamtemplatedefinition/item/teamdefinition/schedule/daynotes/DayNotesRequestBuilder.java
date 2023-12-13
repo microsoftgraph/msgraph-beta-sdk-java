@@ -59,7 +59,7 @@ public class DayNotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/dayNotes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get dayNotes from teamTemplateDefinition
+     * The day notes in the schedule.
      * @return a DayNoteCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class DayNotesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get dayNotes from teamTemplateDefinition
+     * The day notes in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DayNoteCollectionResponse
      */
@@ -104,7 +104,7 @@ public class DayNotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DayNote::createFromDiscriminatorValue);
     }
     /**
-     * Get dayNotes from teamTemplateDefinition
+     * The day notes in the schedule.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DayNotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dayNotes from teamTemplateDefinition
+     * The day notes in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class DayNotesRequestBuilder extends BaseRequestBuilder {
         return new DayNotesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get dayNotes from teamTemplateDefinition
+     * The day notes in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

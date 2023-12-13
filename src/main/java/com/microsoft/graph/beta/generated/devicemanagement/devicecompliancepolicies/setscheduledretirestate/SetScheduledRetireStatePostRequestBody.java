@@ -85,7 +85,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
         return this.backingStore.get("scopedToAllDevices");
     }
     /**
-     * Gets the state property value. Cancel or confirm scheduled retire
+     * Gets the state property value. Cancel or confirm scheduled retire 
      * @return a ScheduledRetireState
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
         this.backingStore.set("scopedToAllDevices", value);
     }
     /**
-     * Sets the state property value. Cancel or confirm scheduled retire
+     * Sets the state property value. Cancel or confirm scheduled retire 
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ScheduledRetireState value) {
