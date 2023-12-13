@@ -38,8 +38,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.members.item collection
-     * @param connectorId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.onPremisesPublishingProfiles.item.connectorGroups.item.members.item collection
+     * @param connectorId The unique identifier of connector
      * @return a ConnectorItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

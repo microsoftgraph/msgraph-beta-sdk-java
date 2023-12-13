@@ -39,8 +39,8 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item.publishedResources.item.agentGroups.item collection
-     * @param onPremisesAgentGroupId1 Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.onPremisesPublishingProfiles.item.agentGroups.item.publishedResources.item.agentGroups.item collection
+     * @param onPremisesAgentGroupId1 The unique identifier of onPremisesAgentGroup
      * @return a OnPremisesAgentGroupItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

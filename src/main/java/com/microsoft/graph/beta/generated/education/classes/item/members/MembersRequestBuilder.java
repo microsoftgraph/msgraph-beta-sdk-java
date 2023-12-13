@@ -38,8 +38,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.members.item collection
-     * @param educationUserId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.education.classes.item.members.item collection
+     * @param educationUserId The unique identifier of educationUser
      * @return a EducationUserItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -53,14 +53,14 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -95,7 +95,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param body The request body
      * @return a UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-update?view=graph-rest-1.0">Find more info here</a>
@@ -105,7 +105,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return patch(body, null);
     }
     /**
-     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UnifiedRoleDefinition
@@ -121,7 +121,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID)
+     * Update the properties of a unifiedRoleDefinition object for an RBAC provider. You cannot update built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- directory (Microsoft Entra ID) 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

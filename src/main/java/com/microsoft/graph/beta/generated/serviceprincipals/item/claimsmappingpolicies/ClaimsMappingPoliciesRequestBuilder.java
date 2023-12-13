@@ -38,8 +38,8 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
-     * @param claimsMappingPolicyId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.servicePrincipals.item.claimsMappingPolicies.item collection
+     * @param claimsMappingPolicyId The unique identifier of claimsMappingPolicy
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -94,7 +94,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAccessPackageWorkflowExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @return a CustomAccessPackageWorkflowExtension
      * @deprecated
@@ -107,7 +107,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAccessPackageWorkflowExtension
@@ -152,7 +152,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -164,7 +164,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

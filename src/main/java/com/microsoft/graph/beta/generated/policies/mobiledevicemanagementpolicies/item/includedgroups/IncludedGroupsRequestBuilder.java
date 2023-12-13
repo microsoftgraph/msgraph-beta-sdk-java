@@ -38,8 +38,8 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.mobileDeviceManagementPolicies.item.includedGroups.item collection
-     * @param groupId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.policies.mobileDeviceManagementPolicies.item.includedGroups.item collection
+     * @param groupId The unique identifier of group
      * @return a GroupItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

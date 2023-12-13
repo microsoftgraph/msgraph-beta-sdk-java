@@ -77,7 +77,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PronounsSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a pronounsSettings in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @return a PronounsSettings
      * @see <a href="https://learn.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a pronounsSettings in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PronounsSettings
@@ -143,7 +143,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a pronounsSettings in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -152,7 +152,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a pronounsSettings in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
+     * Update the properties of a pronounsSettings object in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

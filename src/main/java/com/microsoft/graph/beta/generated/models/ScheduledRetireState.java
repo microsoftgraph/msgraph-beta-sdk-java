@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Cancel or confirm scheduled retire
+ * Cancel or confirm scheduled retire 
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ScheduledRetireState implements ValuedEnum {

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Graph properties for Device Firmware Configuration Interface
+ * Graph properties for Device Firmware Configuration Interface 
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration implements Parsable {

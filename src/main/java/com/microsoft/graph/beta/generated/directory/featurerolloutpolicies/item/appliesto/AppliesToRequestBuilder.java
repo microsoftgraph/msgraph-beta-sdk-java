@@ -45,8 +45,8 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.featureRolloutPolicies.item.appliesTo.item collection
-     * @param directoryObjectId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.directory.featureRolloutPolicies.item.appliesTo.item collection
+     * @param directoryObjectId The unique identifier of directoryObject
      * @return a DirectoryObjectItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

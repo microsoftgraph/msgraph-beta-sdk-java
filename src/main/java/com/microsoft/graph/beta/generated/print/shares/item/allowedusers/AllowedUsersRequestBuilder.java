@@ -38,8 +38,8 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedUsers.item collection
-     * @param userId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.print.shares.item.allowedUsers.item collection
+     * @param userId The unique identifier of user
      * @return a UserItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

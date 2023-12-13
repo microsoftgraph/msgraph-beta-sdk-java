@@ -38,8 +38,8 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
-     * @param tokenLifetimePolicyId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.applications.item.tokenLifetimePolicies.item collection
+     * @param tokenLifetimePolicyId The unique identifier of tokenLifetimePolicy
      * @return a TokenLifetimePolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

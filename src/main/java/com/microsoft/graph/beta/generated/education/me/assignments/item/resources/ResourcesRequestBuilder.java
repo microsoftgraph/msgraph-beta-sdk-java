@@ -82,7 +82,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentResourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
      * @return a EducationAssignmentResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-post-resources?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationAssignmentResource
@@ -128,7 +128,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

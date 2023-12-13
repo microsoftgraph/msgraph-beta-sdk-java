@@ -38,8 +38,8 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
-     * @param tokenIssuancePolicyId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.applications.item.tokenIssuancePolicies.item collection
+     * @param tokenIssuancePolicyId The unique identifier of tokenIssuancePolicy
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -35,7 +35,7 @@ public class EvaluateRemovalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/informationProtection/policy/labels/evaluateRemoval", rawUrl);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body The request body
      * @return a EvaluateRemovalPostResponse
      * @deprecated
@@ -48,7 +48,7 @@ public class EvaluateRemovalRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EvaluateRemovalPostResponse
@@ -67,7 +67,7 @@ public class EvaluateRemovalRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EvaluateRemovalPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -79,7 +79,7 @@ public class EvaluateRemovalRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

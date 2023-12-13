@@ -38,8 +38,8 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
-     * @param directoryObjectId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
+     * @param directoryObjectId The unique identifier of directoryObject
      * @return a DirectoryObjectItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

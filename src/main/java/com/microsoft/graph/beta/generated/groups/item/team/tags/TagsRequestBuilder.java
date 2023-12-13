@@ -82,7 +82,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a standard tag for members in the team.
+     * Create a standard tag for members in the team. 
      * @param body The request body
      * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a standard tag for members in the team.
+     * Create a standard tag for members in the team. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamworkTag
@@ -128,7 +128,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a standard tag for members in the team.
+     * Create a standard tag for members in the team. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a standard tag for members in the team.
+     * Create a standard tag for members in the team. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

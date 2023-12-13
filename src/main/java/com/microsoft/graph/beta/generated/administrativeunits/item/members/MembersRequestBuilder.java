@@ -87,8 +87,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.administrativeUnits.item.members.item collection
-     * @param directoryObjectId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.administrativeUnits.item.members.item collection
+     * @param directoryObjectId The unique identifier of directoryObject
      * @return a DirectoryObjectItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

@@ -35,16 +35,18 @@ public class SendVirtualAppointmentSmsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/sendVirtualAppointmentSms", rawUrl);
     }
     /**
-     * Invoke action sendVirtualAppointmentSms
+     * Send an SMS notification to external attendees when a Teams Virtual Appointment is confirmed, rescheduled, or canceled. This feature requires Teams Premium. Attendees must have a valid United States phone number to receive these SMS notifications.
      * @param body The request body
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentsms?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SendVirtualAppointmentSmsPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action sendVirtualAppointmentSms
+     * Send an SMS notification to external attendees when a Teams Virtual Appointment is confirmed, rescheduled, or canceled. This feature requires Teams Premium. Attendees must have a valid United States phone number to receive these SMS notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentsms?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SendVirtualAppointmentSmsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -55,7 +57,7 @@ public class SendVirtualAppointmentSmsRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action sendVirtualAppointmentSms
+     * Send an SMS notification to external attendees when a Teams Virtual Appointment is confirmed, rescheduled, or canceled. This feature requires Teams Premium. Attendees must have a valid United States phone number to receive these SMS notifications.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -64,7 +66,7 @@ public class SendVirtualAppointmentSmsRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action sendVirtualAppointmentSms
+     * Send an SMS notification to external attendees when a Teams Virtual Appointment is confirmed, rescheduled, or canceled. This feature requires Teams Premium. Attendees must have a valid United States phone number to receive these SMS notifications.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

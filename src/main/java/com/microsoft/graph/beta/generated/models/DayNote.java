@@ -27,7 +27,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
         return new DayNote();
     }
     /**
-     * Gets the dayNoteDate property value. The dayNoteDate property
+     * Gets the dayNoteDate property value. The date of the day note.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("dayNoteDate");
     }
     /**
-     * Gets the draftDayNote property value. The draftDayNote property
+     * Gets the draftDayNote property value. The draft version of this day note that is viewable by managers. Only contentType text is supported.
      * @return a ItemBody
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sharedDayNote property value. The sharedDayNote property
+     * Gets the sharedDayNote property value. The shared version of this day note that is viewable by both employees and managers. Only contentType text is supported.
      * @return a ItemBody
      */
     @jakarta.annotation.Nullable
@@ -74,21 +74,21 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedDayNote", this.getSharedDayNote());
     }
     /**
-     * Sets the dayNoteDate property value. The dayNoteDate property
+     * Sets the dayNoteDate property value. The date of the day note.
      * @param value Value to set for the dayNoteDate property.
      */
     public void setDayNoteDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("dayNoteDate", value);
     }
     /**
-     * Sets the draftDayNote property value. The draftDayNote property
+     * Sets the draftDayNote property value. The draft version of this day note that is viewable by managers. Only contentType text is supported.
      * @param value Value to set for the draftDayNote property.
      */
     public void setDraftDayNote(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("draftDayNote", value);
     }
     /**
-     * Sets the sharedDayNote property value. The sharedDayNote property
+     * Sets the sharedDayNote property value. The shared version of this day note that is viewable by both employees and managers. Only contentType text is supported.
      * @param value Value to set for the sharedDayNote property.
      */
     public void setSharedDayNote(@jakarta.annotation.Nullable final ItemBody value) {

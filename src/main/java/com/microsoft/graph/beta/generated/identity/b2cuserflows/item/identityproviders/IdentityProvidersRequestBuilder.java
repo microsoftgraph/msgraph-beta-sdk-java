@@ -44,8 +44,8 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.identityProviders.item collection
-     * @param identityProviderId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.identity.b2cUserFlows.item.identityProviders.item collection
+     * @param identityProviderId The unique identifier of identityProvider
      * @return a IdentityProviderItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

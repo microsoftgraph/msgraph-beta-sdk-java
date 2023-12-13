@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels/microsoft.graph.security.evaluateRemoval", rawUrl);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @return a EvaluateRemovalPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EvaluateRemovalPostResponse
@@ -61,7 +61,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, EvaluateRemovalPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following:
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -67,7 +67,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of all class objects.
+     * Retrieve a list of all class objects. 
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of all class objects.
+     * Retrieve a list of all class objects. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-classes?view=graph-rest-1.0">Find more info here</a>
@@ -116,7 +116,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClass::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of all class objects.
+     * Retrieve a list of all class objects. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of all class objects.
+     * Retrieve a list of all class objects. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return new ClassesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of all class objects.
+     * Retrieve a list of all class objects. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -62,8 +62,8 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.owners.item collection
-     * @param directoryObjectId Unique identifier of the item
+     * Gets an item from the com.Microsoft.Graph.Beta.applications.item.owners.item collection
+     * @param directoryObjectId The unique identifier of directoryObject
      * @return a DirectoryObjectItemRequestBuilder
      */
     @jakarta.annotation.Nonnull

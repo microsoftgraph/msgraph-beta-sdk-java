@@ -59,7 +59,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant.
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @return a TeamTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant.
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a TeamTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant.
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant.
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return new TeamTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant.
+     * Get the list of teamTemplate objects that are available for a tenant. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
