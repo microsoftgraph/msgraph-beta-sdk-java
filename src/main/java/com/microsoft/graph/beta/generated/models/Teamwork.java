@@ -58,10 +58,28 @@ public class Teamwork extends Entity implements Parsable {
         deserializerMap.put("deletedChats", (n) -> { this.setDeletedChats(n.getCollectionOfObjectValues(DeletedChat::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedTeams", (n) -> { this.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
         deserializerMap.put("devices", (n) -> { this.setDevices(n.getCollectionOfObjectValues(TeamworkDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTeamsEnabled", (n) -> { this.setIsTeamsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
         deserializerMap.put("teamsAppSettings", (n) -> { this.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("teamTemplates", (n) -> { this.setTeamTemplates(n.getCollectionOfObjectValues(TeamTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("workforceIntegrations", (n) -> { this.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isTeamsEnabled property value. Indicates whether Microsoft Teams is enabled for the organization.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsTeamsEnabled() {
+        return this.backingStore.get("isTeamsEnabled");
+    }
+    /**
+     * Gets the region property value. Represents the region of the organization.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getRegion() {
+        return this.backingStore.get("region");
     }
     /**
      * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
@@ -97,6 +115,8 @@ public class Teamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deletedChats", this.getDeletedChats());
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
+        writer.writeBooleanValue("isTeamsEnabled", this.getIsTeamsEnabled());
+        writer.writeStringValue("region", this.getRegion());
         writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
         writer.writeCollectionOfObjectValues("teamTemplates", this.getTeamTemplates());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
@@ -121,6 +141,20 @@ public class Teamwork extends Entity implements Parsable {
      */
     public void setDevices(@jakarta.annotation.Nullable final java.util.List<TeamworkDevice> value) {
         this.backingStore.set("devices", value);
+    }
+    /**
+     * Sets the isTeamsEnabled property value. Indicates whether Microsoft Teams is enabled for the organization.
+     * @param value Value to set for the isTeamsEnabled property.
+     */
+    public void setIsTeamsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isTeamsEnabled", value);
+    }
+    /**
+     * Sets the region property value. Represents the region of the organization.
+     * @param value Value to set for the region property.
+     */
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("region", value);
     }
     /**
      * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.

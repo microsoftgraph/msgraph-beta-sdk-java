@@ -69,6 +69,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
@@ -88,6 +89,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public DriveItem getFilesFolder() {
         return this.backingStore.get("filesFolder");
+    }
+    /**
+     * Gets the isArchived property value. The isArchived property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsArchived() {
+        return this.backingStore.get("isArchived");
     }
     /**
      * Gets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
@@ -181,6 +190,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
+        writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
@@ -226,6 +236,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setFilesFolder(@jakarta.annotation.Nullable final DriveItem value) {
         this.backingStore.set("filesFolder", value);
+    }
+    /**
+     * Sets the isArchived property value. The isArchived property
+     * @param value Value to set for the isArchived property.
+     */
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isArchived", value);
     }
     /**
      * Sets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.

@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum PlannerTaskCompletionRequirements implements ValuedEnum {
     None("none"),
     ChecklistCompletion("checklistCompletion"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    FormCompletion("formCompletion");
     public final String value;
     PlannerTaskCompletionRequirements(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum PlannerTaskCompletionRequirements implements ValuedEnum {
             case "none": return None;
             case "checklistCompletion": return ChecklistCompletion;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "formCompletion": return FormCompletion;
             default: return null;
         }
     }

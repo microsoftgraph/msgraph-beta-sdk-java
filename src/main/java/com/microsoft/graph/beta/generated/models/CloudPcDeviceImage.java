@@ -35,6 +35,14 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the errorCode property value. The errorCode property
+     * @return a CloudPcDeviceImageErrorCode
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDeviceImageErrorCode getErrorCode() {
+        return this.backingStore.get("errorCode");
+    }
+    /**
      * Gets the expirationDate property value. The date the image became unavailable.
      * @return a LocalDate
      */
@@ -50,6 +58,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(CloudPcDeviceImageErrorCode::forValue)); });
         deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
@@ -142,6 +151,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("errorCode", this.getErrorCode());
         writer.writeLocalDateValue("expirationDate", this.getExpirationDate());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
@@ -159,6 +169,13 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the errorCode property value. The errorCode property
+     * @param value Value to set for the errorCode property.
+     */
+    public void setErrorCode(@jakarta.annotation.Nullable final CloudPcDeviceImageErrorCode value) {
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the expirationDate property value. The date the image became unavailable.

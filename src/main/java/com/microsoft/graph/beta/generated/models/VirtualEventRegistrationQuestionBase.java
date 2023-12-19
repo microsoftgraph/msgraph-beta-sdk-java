@@ -26,7 +26,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.virtualEventRegistratioCustomQuestion": return new VirtualEventRegistratioCustomQuestion();
+                case "#microsoft.graph.virtualEventRegistrationCustomQuestion": return new VirtualEventRegistrationCustomQuestion();
                 case "#microsoft.graph.virtualEventRegistrationPredefinedQuestion": return new VirtualEventRegistrationPredefinedQuestion();
             }
         }

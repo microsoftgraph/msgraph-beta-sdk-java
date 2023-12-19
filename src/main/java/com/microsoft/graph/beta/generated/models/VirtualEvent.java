@@ -33,7 +33,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return new VirtualEvent();
     }
     /**
-     * Gets the createdBy property value. Identity information of who created the virtual event. Inherited from virtualEvent.
+     * Gets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @return a CommunicationsIdentitySet
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Display name of the virtual event
+     * Gets the displayName property value. Display name of the virtual event.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the presenters property value. Presenters' information of the virtual event.
+     * Gets the presenters property value. The virtual event presenters.
      * @return a java.util.List<VirtualEventPresenter>
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("presenters");
     }
     /**
-     * Gets the sessions property value. Sessions of the virtual event.
+     * Gets the sessions property value. Sessions for the virtual event.
      * @return a java.util.List<VirtualEventSession>
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the createdBy property value. Identity information of who created the virtual event. Inherited from virtualEvent.
+     * Sets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final CommunicationsIdentitySet value) {
@@ -144,7 +144,7 @@ public class VirtualEvent extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Display name of the virtual event
+     * Sets the displayName property value. Display name of the virtual event.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -158,14 +158,14 @@ public class VirtualEvent extends Entity implements Parsable {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the presenters property value. Presenters' information of the virtual event.
+     * Sets the presenters property value. The virtual event presenters.
      * @param value Value to set for the presenters property.
      */
     public void setPresenters(@jakarta.annotation.Nullable final java.util.List<VirtualEventPresenter> value) {
         this.backingStore.set("presenters", value);
     }
     /**
-     * Sets the sessions property value. Sessions of the virtual event.
+     * Sets the sessions property value. Sessions for the virtual event.
      * @param value Value to set for the sessions property.
      */
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<VirtualEventSession> value) {

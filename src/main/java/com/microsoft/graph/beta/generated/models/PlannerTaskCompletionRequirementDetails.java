@@ -69,10 +69,19 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("checklistRequirement", (n) -> { this.setChecklistRequirement(n.getObjectValue(PlannerChecklistRequirement::createFromDiscriminatorValue)); });
+        deserializerMap.put("formsRequirement", (n) -> { this.setFormsRequirement(n.getObjectValue(PlannerFormsRequirement::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the formsRequirement property value. The formsRequirement property
+     * @return a PlannerFormsRequirement
+     */
+    @jakarta.annotation.Nullable
+    public PlannerFormsRequirement getFormsRequirement() {
+        return this.backingStore.get("formsRequirement");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,6 +98,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("checklistRequirement", this.getChecklistRequirement());
+        writer.writeObjectValue("formsRequirement", this.getFormsRequirement());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -113,6 +123,13 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
      */
     public void setChecklistRequirement(@jakarta.annotation.Nullable final PlannerChecklistRequirement value) {
         this.backingStore.set("checklistRequirement", value);
+    }
+    /**
+     * Sets the formsRequirement property value. The formsRequirement property
+     * @param value Value to set for the formsRequirement property.
+     */
+    public void setFormsRequirement(@jakarta.annotation.Nullable final PlannerFormsRequirement value) {
+        this.backingStore.set("formsRequirement", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

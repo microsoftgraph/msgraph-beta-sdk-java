@@ -86,6 +86,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         deserializerMap.put("completionRequirements", (n) -> { this.setCompletionRequirements(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("delete", (n) -> { this.setDelete(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("forms", (n) -> { this.setForms(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
         deserializerMap.put("move", (n) -> { this.setMove(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("order", (n) -> { this.setOrder(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -96,6 +97,14 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the forms property value. The forms property
+     * @return a PlannerFieldRules
+     */
+    @jakarta.annotation.Nullable
+    public PlannerFieldRules getForms() {
+        return this.backingStore.get("forms");
     }
     /**
      * Gets the move property value. Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
@@ -182,6 +191,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         writer.writeCollectionOfPrimitiveValues("completionRequirements", this.getCompletionRequirements());
         writer.writeCollectionOfPrimitiveValues("delete", this.getDelete());
         writer.writeCollectionOfPrimitiveValues("dueDate", this.getDueDate());
+        writer.writeObjectValue("forms", this.getForms());
         writer.writeCollectionOfPrimitiveValues("move", this.getMove());
         writer.writeCollectionOfPrimitiveValues("notes", this.getNotes());
         writer.writeCollectionOfPrimitiveValues("order", this.getOrder());
@@ -233,6 +243,13 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
      */
     public void setDueDate(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("dueDate", value);
+    }
+    /**
+     * Sets the forms property value. The forms property
+     * @param value Value to set for the forms property.
+     */
+    public void setForms(@jakarta.annotation.Nullable final PlannerFieldRules value) {
+        this.backingStore.set("forms", value);
     }
     /**
      * Sets the move property value. Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.

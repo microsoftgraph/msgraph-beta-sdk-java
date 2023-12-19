@@ -34,6 +34,14 @@ public class AlertRule extends Entity implements Parsable {
         return this.backingStore.get("alertRuleTemplate");
     }
     /**
+     * Gets the conditions property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs.
+     * @return a java.util.List<RuleCondition>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RuleCondition> getConditions() {
+        return this.backingStore.get("conditions");
+    }
+    /**
      * Gets the description property value. The rule description.
      * @return a String
      */
@@ -65,6 +73,7 @@ public class AlertRule extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleTemplate::forValue)); });
+        deserializerMap.put("conditions", (n) -> { this.setConditions(n.getCollectionOfObjectValues(RuleCondition::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
@@ -114,6 +123,7 @@ public class AlertRule extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("alertRuleTemplate", this.getAlertRuleTemplate());
+        writer.writeCollectionOfObjectValues("conditions", this.getConditions());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("enabled", this.getEnabled());
@@ -128,6 +138,13 @@ public class AlertRule extends Entity implements Parsable {
      */
     public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
         this.backingStore.set("alertRuleTemplate", value);
+    }
+    /**
+     * Sets the conditions property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs.
+     * @param value Value to set for the conditions property.
+     */
+    public void setConditions(@jakarta.annotation.Nullable final java.util.List<RuleCondition> value) {
+        this.backingStore.set("conditions", value);
     }
     /**
      * Sets the description property value. The rule description.

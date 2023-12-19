@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -48,6 +49,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public PlannerAppliedCategories getAppliedCategories() {
         return this.backingStore.get("appliedCategories");
+    }
+    /**
+     * Gets the archivalInfo property value. The archivalInfo property
+     * @return a PlannerArchivalInfo
+     */
+    @jakarta.annotation.Nullable
+    public PlannerArchivalInfo getArchivalInfo() {
+        return this.backingStore.get("archivalInfo");
     }
     /**
      * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
@@ -170,6 +179,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeChecklistItemCount", (n) -> { this.setActiveChecklistItemCount(n.getIntegerValue()); });
         deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
+        deserializerMap.put("archivalInfo", (n) -> { this.setArchivalInfo(n.getObjectValue(PlannerArchivalInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("assignedToTaskBoardFormat", (n) -> { this.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("assigneePriority", (n) -> { this.setAssigneePriority(n.getStringValue()); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
@@ -185,6 +195,9 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
+        deserializerMap.put("isOnMyDay", (n) -> { this.setIsOnMyDay(n.getBooleanValue()); });
+        deserializerMap.put("isOnMyDayLastModifiedDate", (n) -> { this.setIsOnMyDayLastModifiedDate(n.getLocalDateValue()); });
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
@@ -205,6 +218,30 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getHasDescription() {
         return this.backingStore.get("hasDescription");
+    }
+    /**
+     * Gets the isArchived property value. The isArchived property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsArchived() {
+        return this.backingStore.get("isArchived");
+    }
+    /**
+     * Gets the isOnMyDay property value. The isOnMyDay property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsOnMyDay() {
+        return this.backingStore.get("isOnMyDay");
+    }
+    /**
+     * Gets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * @return a LocalDate
+     */
+    @jakarta.annotation.Nullable
+    public LocalDate getIsOnMyDayLastModifiedDate() {
+        return this.backingStore.get("isOnMyDayLastModifiedDate");
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
@@ -303,6 +340,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         super.serialize(writer);
         writer.writeIntegerValue("activeChecklistItemCount", this.getActiveChecklistItemCount());
         writer.writeObjectValue("appliedCategories", this.getAppliedCategories());
+        writer.writeObjectValue("archivalInfo", this.getArchivalInfo());
         writer.writeObjectValue("assignedToTaskBoardFormat", this.getAssignedToTaskBoardFormat());
         writer.writeStringValue("assigneePriority", this.getAssigneePriority());
         writer.writeObjectValue("assignments", this.getAssignments());
@@ -318,6 +356,9 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("details", this.getDetails());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeBooleanValue("hasDescription", this.getHasDescription());
+        writer.writeBooleanValue("isArchived", this.getIsArchived());
+        writer.writeBooleanValue("isOnMyDay", this.getIsOnMyDay());
+        writer.writeLocalDateValue("isOnMyDayLastModifiedDate", this.getIsOnMyDayLastModifiedDate());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeIntegerValue("percentComplete", this.getPercentComplete());
         writer.writeStringValue("planId", this.getPlanId());
@@ -343,6 +384,13 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
         this.backingStore.set("appliedCategories", value);
+    }
+    /**
+     * Sets the archivalInfo property value. The archivalInfo property
+     * @param value Value to set for the archivalInfo property.
+     */
+    public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
+        this.backingStore.set("archivalInfo", value);
     }
     /**
      * Sets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
@@ -448,6 +496,27 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public void setHasDescription(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasDescription", value);
+    }
+    /**
+     * Sets the isArchived property value. The isArchived property
+     * @param value Value to set for the isArchived property.
+     */
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isArchived", value);
+    }
+    /**
+     * Sets the isOnMyDay property value. The isOnMyDay property
+     * @param value Value to set for the isOnMyDay property.
+     */
+    public void setIsOnMyDay(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isOnMyDay", value);
+    }
+    /**
+     * Sets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * @param value Value to set for the isOnMyDayLastModifiedDate property.
+     */
+    public void setIsOnMyDayLastModifiedDate(@jakarta.annotation.Nullable final LocalDate value) {
+        this.backingStore.set("isOnMyDayLastModifiedDate", value);
     }
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.

@@ -58,6 +58,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("alternateResourceUrl");
     }
     /**
+     * Gets the connectionType property value. The connectionType property
+     * @return a CloudPcOnPremisesConnectionType
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcOnPremisesConnectionType getConnectionType() {
+        return this.backingStore.get("connectionType");
+    }
+    /**
      * Gets the displayName property value. The display name for the Azure network connection.
      * @return a String
      */
@@ -76,8 +84,10 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("adDomainPassword", (n) -> { this.setAdDomainPassword(n.getStringValue()); });
         deserializerMap.put("adDomainUsername", (n) -> { this.setAdDomainUsername(n.getStringValue()); });
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
+        deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(CloudPcOnPremisesConnectionType::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus::forValue)); });
+        deserializerMap.put("healthCheckStatusDetail", (n) -> { this.setHealthCheckStatusDetail(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("healthCheckStatusDetails", (n) -> { this.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("inUse", (n) -> { this.setInUse(n.getBooleanValue()); });
         deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService::forValue)); });
@@ -99,6 +109,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getHealthCheckStatus() {
         return this.backingStore.get("healthCheckStatus");
+    }
+    /**
+     * Gets the healthCheckStatusDetail property value. The healthCheckStatusDetail property
+     * @return a CloudPcOnPremisesConnectionStatusDetail
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcOnPremisesConnectionStatusDetail getHealthCheckStatusDetail() {
+        return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
      * Gets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
@@ -207,8 +225,10 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("adDomainPassword", this.getAdDomainPassword());
         writer.writeStringValue("adDomainUsername", this.getAdDomainUsername());
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
+        writer.writeEnumValue("connectionType", this.getConnectionType());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
+        writer.writeObjectValue("healthCheckStatusDetail", this.getHealthCheckStatusDetail());
         writer.writeObjectValue("healthCheckStatusDetails", this.getHealthCheckStatusDetails());
         writer.writeBooleanValue("inUse", this.getInUse());
         writer.writeEnumSetValue("managedBy", this.getManagedBy());
@@ -251,6 +271,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("alternateResourceUrl", value);
     }
     /**
+     * Sets the connectionType property value. The connectionType property
+     * @param value Value to set for the connectionType property.
+     */
+    public void setConnectionType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
+        this.backingStore.set("connectionType", value);
+    }
+    /**
      * Sets the displayName property value. The display name for the Azure network connection.
      * @param value Value to set for the displayName property.
      */
@@ -263,6 +290,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public void setHealthCheckStatus(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
         this.backingStore.set("healthCheckStatus", value);
+    }
+    /**
+     * Sets the healthCheckStatusDetail property value. The healthCheckStatusDetail property
+     * @param value Value to set for the healthCheckStatusDetail property.
+     */
+    public void setHealthCheckStatusDetail(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetail value) {
+        this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
      * Sets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.

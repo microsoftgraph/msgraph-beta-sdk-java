@@ -48,7 +48,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         return value;
     }
     /**
-     * Gets the allowedToJoin property value. The allowedToJoin property
+     * Gets the allowedToJoin property value. Determines if Microsoft Entra join is allowed.
      * @return a DeviceRegistrationMembership
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the isAdminConfigurable property value. Specifies whether this policy scope is configurable by the admin. The default value is false. When an admin has enabled Intune (MEM) to manage devices, this property is set to false and appliesTo defaults to 1 (meaning all).
+     * Gets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedToJoin property value. The allowedToJoin property
+     * Sets the allowedToJoin property value. Determines if Microsoft Entra join is allowed.
      * @param value Value to set for the allowedToJoin property.
      */
     public void setAllowedToJoin(@jakarta.annotation.Nullable final DeviceRegistrationMembership value) {
@@ -125,7 +125,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the isAdminConfigurable property value. Specifies whether this policy scope is configurable by the admin. The default value is false. When an admin has enabled Intune (MEM) to manage devices, this property is set to false and appliesTo defaults to 1 (meaning all).
+     * Sets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @param value Value to set for the isAdminConfigurable property.
      */
     public void setIsAdminConfigurable(@jakarta.annotation.Nullable final Boolean value) {

@@ -1,9 +1,11 @@
 package com.microsoft.graph.beta.groups.item.planner.plans.item;
 
+import com.microsoft.graph.beta.groups.item.planner.plans.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.planner.plans.item.details.DetailsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.beta.groups.item.planner.plans.item.tasks.TasksRequestBuilder;
+import com.microsoft.graph.beta.groups.item.planner.plans.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PlannerPlan;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -24,6 +26,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the archive method.
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
      */
@@ -51,6 +60,13 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.

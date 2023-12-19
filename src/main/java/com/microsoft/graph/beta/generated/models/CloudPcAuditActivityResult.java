@@ -9,7 +9,7 @@ public enum CloudPcAuditActivityResult implements ValuedEnum {
     ClientError("clientError"),
     Failure("failure"),
     Timeout("timeout"),
-    Other("other");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcAuditActivityResult(final String value) {
         this.value = value;
@@ -24,7 +24,7 @@ public enum CloudPcAuditActivityResult implements ValuedEnum {
             case "clientError": return ClientError;
             case "failure": return Failure;
             case "timeout": return Timeout;
-            case "other": return Other;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -123,6 +123,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("windowsSetting", (n) -> { this.setWindowsSetting(n.getObjectValue(CloudPcWindowsSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -207,6 +208,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
+     * Gets the windowsSetting property value. The windowsSetting property
+     * @return a CloudPcWindowsSetting
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcWindowsSetting getWindowsSetting() {
+        return this.backingStore.get("windowsSetting");
+    }
+    /**
      * Gets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
      * @return a CloudPcWindowsSettings
      */
@@ -240,6 +249,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
+        writer.writeObjectValue("windowsSetting", this.getWindowsSetting());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
     /**
@@ -374,6 +384,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("scopeIds", value);
+    }
+    /**
+     * Sets the windowsSetting property value. The windowsSetting property
+     * @param value Value to set for the windowsSetting property.
+     */
+    public void setWindowsSetting(@jakarta.annotation.Nullable final CloudPcWindowsSetting value) {
+        this.backingStore.set("windowsSetting", value);
     }
     /**
      * Sets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.

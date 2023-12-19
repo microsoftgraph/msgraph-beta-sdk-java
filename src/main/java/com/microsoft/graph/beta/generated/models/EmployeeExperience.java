@@ -56,12 +56,30 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
+     * Gets the communities property value. A collection of communities in Viva Engage.
+     * @return a java.util.List<Community>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Community> getCommunities() {
+        return this.backingStore.get("communities");
+    }
+    /**
+     * Gets the engagementAsyncOperations property value. A collection of long-running, asynchronous operations related to Viva Engage.
+     * @return a java.util.List<EngagementAsyncOperation>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EngagementAsyncOperation> getEngagementAsyncOperations() {
+        return this.backingStore.get("engagementAsyncOperations");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("communities", (n) -> { this.setCommunities(n.getCollectionOfObjectValues(Community::createFromDiscriminatorValue)); });
+        deserializerMap.put("engagementAsyncOperations", (n) -> { this.setEngagementAsyncOperations(n.getCollectionOfObjectValues(EngagementAsyncOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("goals", (n) -> { this.setGoals(n.getObjectValue(Goals::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("learningProviders", (n) -> { this.setLearningProviders(n.getCollectionOfObjectValues(LearningProvider::createFromDiscriminatorValue)); });
@@ -106,6 +124,8 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("communities", this.getCommunities());
+        writer.writeCollectionOfObjectValues("engagementAsyncOperations", this.getEngagementAsyncOperations());
         writer.writeObjectValue("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeCollectionOfObjectValues("learningProviders", this.getLearningProviders());
@@ -126,6 +146,20 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the communities property value. A collection of communities in Viva Engage.
+     * @param value Value to set for the communities property.
+     */
+    public void setCommunities(@jakarta.annotation.Nullable final java.util.List<Community> value) {
+        this.backingStore.set("communities", value);
+    }
+    /**
+     * Sets the engagementAsyncOperations property value. A collection of long-running, asynchronous operations related to Viva Engage.
+     * @param value Value to set for the engagementAsyncOperations property.
+     */
+    public void setEngagementAsyncOperations(@jakarta.annotation.Nullable final java.util.List<EngagementAsyncOperation> value) {
+        this.backingStore.set("engagementAsyncOperations", value);
     }
     /**
      * Sets the goals property value. Represents a collection of goals in a Viva Goals organization.

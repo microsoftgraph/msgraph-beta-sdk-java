@@ -13,7 +13,9 @@ public enum TeamsAsyncOperationType implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     TeamifyGroup("teamifyGroup"),
     CreateChannel("createChannel"),
-    CreateChat("createChat");
+    CreateChat("createChat"),
+    ArchiveChannel("archiveChannel"),
+    UnarchiveChannel("unarchiveChannel");
     public final String value;
     TeamsAsyncOperationType(final String value) {
         this.value = value;
@@ -33,6 +35,8 @@ public enum TeamsAsyncOperationType implements ValuedEnum {
             case "teamifyGroup": return TeamifyGroup;
             case "createChannel": return CreateChannel;
             case "createChat": return CreateChat;
+            case "archiveChannel": return ArchiveChannel;
+            case "unarchiveChannel": return UnarchiveChannel;
             default: return null;
         }
     }
